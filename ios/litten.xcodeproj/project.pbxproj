@@ -161,7 +161,6 @@
 				7D4344B7D22CDB75DF6E9633 /* Pods-litten-tvOSTests.debug.xcconfig */,
 				8FECC377D43A613C7EF1192E /* Pods-litten-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -285,7 +284,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1140;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
@@ -584,6 +583,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E433F6EA74652D325D7D122A /* Pods-litten-littenTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -607,6 +607,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 761AB6A656C0B5C3E07EAECD /* Pods-litten-littenTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = littenTests/Info.plist;
