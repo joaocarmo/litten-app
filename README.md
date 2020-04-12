@@ -2,6 +2,27 @@
 
 litten app iOS repository using React Native
 
+## Development Commands
+
+```sh
+# Install dependencies
+yarn install
+
+# Install the cocoapods dependencies
+cd ios/
+pod install
+cd -
+
+# Run the simulator
+yarn ios
+
+# Run the ES linter
+yarn lint
+
+# Run the tests
+yarn test
+```
+
 ## License
 
 The project's source code is licensed as [AGPL-3.0][1], but the images are

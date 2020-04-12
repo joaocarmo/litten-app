@@ -21,7 +21,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest",
+    "test": "jest --forceExit",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -48,12 +48,20 @@
     "@react-native-community/eslint-config": "^1.0.0",
     "babel-jest": "^25.2.6",
     "eslint": "^6.5.1",
+    "eslint-plugin-jest": "^23.8.2",
     "jest": "^25.2.7",
     "metro-react-native-babel-preset": "^0.59.0",
     "react-test-renderer": "16.13.1",
     "remote-redux-devtools": "^0.5.16"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "setupFiles": [
+      "<rootDir>/node_modules/react-native-gesture-handler/jestSetup.js",
+      "<rootDir>/jest.setup.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/lib/__mocks__/file-mock.js"
+    }
   }
 }
