@@ -21,6 +21,9 @@ yarn lint
 
 # Run the tests
 yarn test
+
+# Generate the data dependencies
+yarn generate-data
 ```
 
 ## License
