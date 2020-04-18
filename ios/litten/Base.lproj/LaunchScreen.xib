@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -13,27 +13,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="litten" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V95-Qj-zwu">
-                    <rect key="frame" x="27" y="334" width="321" height="90"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="90" id="N3G-c5-SQs"/>
-                    </constraints>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AppLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="m3z-vz-xzk">
+                    <rect key="frame" x="112" y="339" width="150" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.22352941176470587" green="0.64313725490196072" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <constraints>
-                <constraint firstItem="V95-Qj-zwu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="27" id="REg-FL-fhO"/>
-                <constraint firstItem="V95-Qj-zwu" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="YbB-G5-DUv"/>
-                <constraint firstItem="V95-Qj-zwu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dLO-fG-jPP"/>
-            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="454.43349753694582"/>
         </view>
     </objects>
+    <resources>
+        <image name="AppLogoWhite" width="1000" height="282"/>
+    </resources>
 </document>
