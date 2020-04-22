@@ -5,7 +5,7 @@ COMPOSER_BIN=$(which composer)
 WORKING_DIR=$(pwd)
 MODULE_DIR=$WORKING_DIR/node_modules/world-countries
 OUTPUT_DIR=$WORKING_DIR/lib/data
-CONVERT_FLAGS="-i name -i cca2 -i idd -f json --output-dir=$OUTPUT_DIR"
+CONVERT_FLAGS="-i name -i cca2 -f json --output-dir=$OUTPUT_DIR"
 
 function main() {
   if [ ! -d $OUTPUT_DIR ]; then
