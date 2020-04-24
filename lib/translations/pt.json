@@ -1,0 +1,74 @@
+{
+  "welcome": {
+    "newAccount": "Novo utilizador?",
+    "hasAccount": "Já tens uma conta?",
+    "carousel": {
+      "stepOne": {
+        "header": "Bem-vindo à app litten",
+        "footer": "Um lugar para encontrares o teu melhor amigo."
+      },
+      "stepTwo": {
+        "header": "Encontra e adopta um animal",
+        "footer": "Para adoção, acasalamento, um animal em cada momento."
+      },
+      "stepThree": {
+        "header": "Um animal para acasalar",
+        "footer": "Encontra o teu animal, cresce a tua família."
+      }
+    },
+    "screens": {
+      "headers": {
+        "register": "Nova Conta",
+        "login": "Conta Existente",
+        "recover": "Recuperar Conta"
+      }
+    }
+  },
+  "forms": {
+    "name": "Nome",
+    "email": "E-mail",
+    "password": "Senha",
+    "newPassword": "Cria a tua senha",
+    "confirmPassword": "Confirma a tua senha",
+    "callingCode": "Código",
+    "phoneNumber": "Telemóvel",
+    "capturePhoto": "Tira uma fotografia",
+    "capturePhotoOr": "ou",
+    "fromLibrary": "Do arquivo",
+    "changePhoto": "Alterar fotografia",
+    "changePhotoDescription": "Queres alterar a fotografia atual?",
+    "registrationSuccess": "Registo concluído",
+    "registrationError": "O registo falhou"
+  },
+  "feedback": {
+    "pleaseWait": "Aguarda...",
+    "errorMessages": {
+      "blankEmail": "O e-mail não pode ser vazio",
+      "invalidEmail": "O e-mail deve ser válido",
+      "blankName": "O nome não pode ser vazio",
+      "blankPassword": "A senha não pode ser vazia",
+      "invalidPassword": "A senha deve ter, pelo menos, 10 caracteres",
+      "unmatchedPassword": "As senhas não condizem",
+      "blankCountry": "O país não pode ser vazio",
+      "blankPhoneNumber": "O telemóvel não pode ser vazio",
+      "invalidPhoneNumber": "O telemóvel deve ser válido",
+      "invalidPhoto": "Escolhe uma fotografia válida"
+    }
+  },
+  "cta": {
+    "getStarted": "Iniciar",
+    "signUp": "Registar",
+    "signIn": "Entrar",
+    "forgotPassword": "Esqueceste a senha?",
+    "recoverPassword": "Recuperar",
+    "continue": "Continuar",
+    "done": "Pronto",
+    "skip": "Próximo",
+    "change": "Alterar",
+    "choose": "Escolher",
+    "cancel": "Cancelar"
+  },
+  "easterEggs": {
+    "simulation": "Estamos dentro de uma enorme câmara de simulação numa nave alienígena."
+  }
+}

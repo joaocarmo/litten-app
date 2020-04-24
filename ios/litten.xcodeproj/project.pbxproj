@@ -54,6 +54,8 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = litten/main.m; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* litten-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "litten-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* litten-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "litten-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52A2AFCC245242C00065F649 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		52A2AFCD245242F70065F649 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		52EB3716EFDF06142790E5FB /* Pods-litten.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-litten.release.xcconfig"; path = "Target Support Files/Pods-litten/Pods-litten.release.xcconfig"; sourceTree = "<group>"; };
 		567ACF32D18B2CC7B73BFF15 /* libPods-litten.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-litten.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6109A665963ECA0D33ACEC7B /* Pods-litten.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-litten.debug.xcconfig"; path = "Target Support Files/Pods-litten/Pods-litten.debug.xcconfig"; sourceTree = "<group>"; };
@@ -314,6 +316,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-PT",
+				"en-US",
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
@@ -614,6 +618,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				13B07FB21A68108700A75B9A /* Base */,
+				52A2AFCC245242C00065F649 /* pt-PT */,
+				52A2AFCD245242F70065F649 /* en-US */,
 			);
 			name = LaunchScreen.xib;
 			path = litten;

@@ -1,0 +1,74 @@
+{
+  "welcome": {
+    "newAccount": "New user?",
+    "hasAccount": "Already have an account?",
+    "carousel": {
+      "stepOne": {
+        "header": "Welcome to the litten app",
+        "footer": "A space when you can find your best friend"
+      },
+      "stepTwo": {
+        "header": "Find and adopt an animal",
+        "footer": "For adoption, mating, add pet at any moment"
+      },
+      "stepThree": {
+        "header": "Choose an animal to mate",
+        "footer": "Find your pet, to grow your family."
+      }
+    },
+    "screens": {
+      "headers": {
+        "register": "Create Account",
+        "login": "Existing Account",
+        "recover": "Recover Account"
+      }
+    }
+  },
+  "forms": {
+    "name": "Name",
+    "email": "E-mail",
+    "password": "Password",
+    "newPassword": "Create your password",
+    "confirmPassword": "Confirm your password",
+    "callingCode": "Code",
+    "phoneNumber": "Phone number",
+    "capturePhoto": "Take a profile picture",
+    "capturePhotoOr": "or",
+    "fromLibrary": "From library",
+    "changePhoto": "Change photo",
+    "changePhotoDescription": "Do you want to replace the current photo?",
+    "registrationSuccess": "Registration successful",
+    "registrationError": "Registration failed"
+  },
+  "feedback": {
+    "pleaseWait": "Please wait...",
+    "errorMessages": {
+      "blankEmail": "E-mail can't be blank",
+      "invalidEmail": "E-mail should be in a valid format",
+      "blankName": "Name can't be blank",
+      "blankPassword": "Password can't be blank",
+      "invalidPassword": "Password should have, at least, 10 characters",
+      "unmatchedPassword": "The passwords don't match",
+      "blankCountry": "Country can't be blank",
+      "blankPhoneNumber": "Phone number can't be blank",
+      "invalidPhoneNumber": "Phone number should be in a valid format",
+      "invalidPhoto": "Select a valid photo"
+    }
+  },
+  "cta": {
+    "getStarted": "Get started",
+    "signUp": "Sign up",
+    "signIn": "Sign in",
+    "forgotPassword": "Forgot password?",
+    "recoverPassword": "Recover",
+    "continue": "Continue",
+    "done": "Done",
+    "skip": "Skip",
+    "change": "Change",
+    "choose": "Choose",
+    "cancel": "Cancel"
+  },
+  "easterEggs": {
+    "simulation": "We're inside a huge simulation chamber on an alien spaceship."
+  }
+}
