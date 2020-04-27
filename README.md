@@ -32,8 +32,8 @@ Currently, the project relies on a [Firebase][firebase] infrastructure.
 
 ## License
 
-The project's source code is licensed as [AGPL-3.0][1], but the images are
-[not licensed][2].
+The project's source code is licensed as [AGPL-3.0][license], but the images are
+[not licensed][licenseimgs].
 
 <!-- References -->
 
