@@ -26,7 +26,7 @@
   },
   "forms": {
     "name": "Name",
-    "email": "E-mail",
+    "email": "Email",
     "password": "Password",
     "newPassword": "Create your password",
     "confirmPassword": "Confirm your password",
@@ -39,13 +39,13 @@
     "changePhotoDescription": "Do you want to replace the current photo?",
     "registrationSuccess": "Registration successful",
     "registrationError": "Registration failed",
-    "recoverSentSuccess": "Please follow the instructions on your e-mail."
+    "recoverSentSuccess": "Please follow the instructions on your email."
   },
   "feedback": {
     "pleaseWait": "Please wait...",
     "errorMessages": {
-      "blankEmail": "E-mail can't be blank",
-      "invalidEmail": "E-mail should be in a valid format",
+      "blankEmail": "Email can't be blank",
+      "invalidEmail": "Email should be in a valid format",
       "blankName": "Name can't be blank",
       "blankPassword": "Password can't be blank",
       "invalidPassword": "Password should have, at least, 10 characters",
@@ -54,6 +54,14 @@
       "blankPhoneNumber": "Phone number can't be blank",
       "invalidPhoneNumber": "Phone number should be in a valid format",
       "invalidPhoto": "Select a valid photo"
+    },
+    "firebaseErrorMessages": {
+      "auth/email-already-exists": "The provided email already exists",
+      "auth/email-already-in-use": "The provided email is already in use",
+      "auth/network-request-failed": "There is a network problem",
+      "auth/invalid-email": "The provided email is invalid",
+      "auth/invalid-password": "The provided password is invalid",
+      "auth/user-not-found": "There is no such existing user record"
     }
   },
   "cta": {

@@ -26,7 +26,7 @@
   },
   "forms": {
     "name": "Nome",
-    "email": "E-mail",
+    "email": "Email",
     "password": "Senha",
     "newPassword": "Cria a tua senha",
     "confirmPassword": "Confirma a tua senha",
@@ -39,13 +39,13 @@
     "changePhotoDescription": "Queres alterar a fotografia atual?",
     "registrationSuccess": "Registo concluído",
     "registrationError": "O registo falhou",
-    "recoverSentSuccess": "Por favor, segue as instruções no teu e-mail."
+    "recoverSentSuccess": "Por favor, segue as instruções no teu email."
   },
   "feedback": {
     "pleaseWait": "Aguarda...",
     "errorMessages": {
-      "blankEmail": "O e-mail não pode ser vazio",
-      "invalidEmail": "O e-mail deve ser válido",
+      "blankEmail": "O email não pode ser vazio",
+      "invalidEmail": "O email deve ser válido",
       "blankName": "O nome não pode ser vazio",
       "blankPassword": "A senha não pode ser vazia",
       "invalidPassword": "A senha deve ter, pelo menos, 10 caracteres",
@@ -54,6 +54,14 @@
       "blankPhoneNumber": "O telemóvel não pode ser vazio",
       "invalidPhoneNumber": "O telemóvel deve ser válido",
       "invalidPhoto": "Escolhe uma fotografia válida"
+    },
+    "firebaseErrorMessages": {
+      "auth/email-already-exists": "O email fornecido já existe",
+      "auth/email-already-in-use": "O email fornecido está em uso",
+      "auth/network-request-failed": "Existe um problema de ligação",
+      "auth/invalid-email": "O email fornecido é inválido",
+      "auth/invalid-password": "A senha fornecida é inválida",
+      "auth/user-not-found": "Não existe o utilizador especificado"
     }
   },
   "cta": {
