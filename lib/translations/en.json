@@ -38,7 +38,8 @@
     "changePhoto": "Change photo",
     "changePhotoDescription": "Do you want to replace the current photo?",
     "registrationSuccess": "Registration successful",
-    "registrationError": "Registration failed"
+    "registrationError": "Registration failed",
+    "recoverSentSuccess": "Please follow the instructions on your e-mail."
   },
   "feedback": {
     "pleaseWait": "Please wait...",

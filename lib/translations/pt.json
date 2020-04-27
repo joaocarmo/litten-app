@@ -38,7 +38,8 @@
     "changePhoto": "Alterar fotografia",
     "changePhotoDescription": "Queres alterar a fotografia atual?",
     "registrationSuccess": "Registo concluído",
-    "registrationError": "O registo falhou"
+    "registrationError": "O registo falhou",
+    "recoverSentSuccess": "Por favor, segue as instruções no teu e-mail."
   },
   "feedback": {
     "pleaseWait": "Aguarda...",
