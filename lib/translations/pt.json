@@ -39,7 +39,10 @@
     "changePhotoDescription": "Queres alterar a fotografia atual?",
     "registrationSuccess": "Registo concluído",
     "registrationError": "O registo falhou",
-    "recoverSentSuccess": "Por favor, segue as instruções no teu email."
+    "recoverSentSuccess": "Por favor, segue as instruções no teu email.",
+    "reportErrorTitle": "Reportar erro",
+    "reportErrorMessage": "Queres enviar o relatório deste erro?",
+    "reportErrorMessageDone": "Obrigado pelo teu contributo!"
   },
   "feedback": {
     "pleaseWait": "Aguarda...",
@@ -75,7 +78,10 @@
     "skip": "Próximo",
     "change": "Alterar",
     "choose": "Escolher",
-    "cancel": "Cancelar"
+    "cancel": "Cancelar",
+    "report": "Reportar",
+    "yes": "Sim",
+    "no": "Não"
   },
   "easterEggs": {
     "simulation": "Estamos dentro de uma enorme câmara de simulação numa nave alienígena."

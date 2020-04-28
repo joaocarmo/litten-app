@@ -39,7 +39,10 @@
     "changePhotoDescription": "Do you want to replace the current photo?",
     "registrationSuccess": "Registration successful",
     "registrationError": "Registration failed",
-    "recoverSentSuccess": "Please follow the instructions on your email."
+    "recoverSentSuccess": "Please follow the instructions on your email.",
+    "reportErrorTitle": "Error report",
+    "reportErrorMessage": "Do you want to report this error?",
+    "reportErrorMessageDone": "Thank you for your feedback!"
   },
   "feedback": {
     "pleaseWait": "Please wait...",
@@ -75,7 +78,10 @@
     "skip": "Skip",
     "change": "Change",
     "choose": "Choose",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "report": "Report",
+    "yes": "Yes",
+    "no": "No"
   },
   "easterEggs": {
     "simulation": "We're inside a huge simulation chamber on an alien spaceship."
