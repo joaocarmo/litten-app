@@ -61,10 +61,11 @@
     "firebaseErrorMessages": {
       "auth/email-already-exists": "The provided email already exists",
       "auth/email-already-in-use": "The provided email is already in use",
-      "auth/network-request-failed": "There is a network problem",
       "auth/invalid-email": "The provided email is invalid",
       "auth/invalid-password": "The provided password is invalid",
-      "auth/user-not-found": "There is no such existing user record"
+      "auth/network-request-failed": "There is a network problem",
+      "auth/user-not-found": "There is no such existing user record",
+      "auth/wrong-password": "The provided password is wrong"
     }
   },
   "cta": {
