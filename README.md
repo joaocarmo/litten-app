@@ -28,7 +28,9 @@ yarn prepare-data
 
 ## Backend
 
-Currently, the project relies on a [Firebase][firebase] infrastructure.
+Currently, the project relies on a [Firebase][firebase] infrastructure. The app
+will fail to build until a new project is [setup][setupfirebase] and the
+`GoogleService-Info.plist` configutarion file is added to the `ios` directory.
 
 ## License
 
@@ -38,5 +40,6 @@ The project's source code is licensed as [AGPL-3.0][license], but the images are
 <!-- References -->
 
 [firebase]: https://firebase.google.com/
+[setupfirebase]: https://firebase.google.com/docs/ios/setup
 [license]: ./LICENSE
 [licenseimgs]: ./lib/images/README.md
