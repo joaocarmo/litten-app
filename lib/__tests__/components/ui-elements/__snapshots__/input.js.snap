@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for the "UIInput" component renders correctly 1`] = `
+<TextInput
+  allowFontScaling={true}
+  onBlur={[Function]}
+  onFocus={[Function]}
+  placeholder="Some text here"
+  placeholderTextColor="#C4C4C4"
+  rejectResponderTermination={true}
+  style={
+    Array [
+      Object {
+        "borderBottomWidth": 2,
+        "color": "#263238",
+        "fontSize": 20,
+        "fontWeight": "600",
+        "height": 60,
+        "marginBottom": 10,
+        "marginTop": 10,
+        "width": "100%",
+      },
+      Object {
+        "borderBottomColor": "#C4C4C4",
+      },
+    ]
+  }
+  underlineColorAndroid="transparent"
+/>
+`;

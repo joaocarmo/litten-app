@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for the "UILink" component renders correctly 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#39A4F2",
+      "textDecorationLine": "underline",
+    }
+  }
+>
+  Some text here
+</Text>
+`;

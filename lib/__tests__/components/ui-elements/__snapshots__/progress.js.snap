@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for the "UIProgress" component renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "row",
+      "height": 60,
+      "justifyContent": "center",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderColor": "#39A4F2",
+        "borderRadius": 5,
+        "borderWidth": 2.5,
+        "height": 10,
+        "width": 10,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#39A4F2",
+        "height": 3,
+        "width": 150,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#39A4F2",
+        "borderRadius": 8,
+        "height": 17,
+        "width": 17,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#C4C4C4",
+        "height": 3,
+        "width": 150,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "borderColor": "#C4C4C4",
+        "borderRadius": 5,
+        "borderWidth": 2.5,
+        "height": 10,
+        "width": 10,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#C4C4C4",
+        "height": 3,
+        "width": 150,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "borderColor": "#C4C4C4",
+        "borderRadius": 5,
+        "borderWidth": 2.5,
+        "height": 10,
+        "width": 10,
+      }
+    }
+  />
+</View>
+`;
