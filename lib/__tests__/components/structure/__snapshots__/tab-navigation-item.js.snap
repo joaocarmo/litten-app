@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for the "TabNavigationItem" component renders correctly 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "justifyContent": "center",
+      "paddingBottom": 16,
+    }
+  }
+>
+  <Image
+    resizeMode="contain"
+    style={
+      Object {
+        "height": 28,
+        "width": 28,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 3,
+        "height": 6,
+        "marginTop": 8,
+        "width": 6,
+      }
+    }
+  />
+</View>
+`;
