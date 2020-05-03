@@ -24,6 +24,21 @@
       }
     }
   },
+  "screens": {
+    "profile": {
+      "edit": "Editar",
+      "firstHeader": "Os teus posts",
+      "secondHeader": "Outras coisas",
+      "newPost": "Novo post",
+      "activePosts": "Posts activos",
+      "pastPosts": "Posts antigos",
+      "definitions": "Definições",
+      "contactUs": "Contacta-nos",
+      "help": "Ajuda",
+      "termsAndConditions": "Termos e condições",
+      "privacyPolicy": "Política de privacidade"
+    }
+  },
   "forms": {
     "name": "Nome",
     "email": "Email",
@@ -46,6 +61,9 @@
   },
   "feedback": {
     "pleaseWait": "Aguarda...",
+    "confirmMessages": {
+      "signOut": "Tens a certeza que queres sair da app?"
+    },
     "errorMessages": {
       "blankEmail": "O email não pode ser vazio",
       "invalidEmail": "O email deve ser válido",
@@ -72,6 +90,7 @@
     "getStarted": "Iniciar",
     "signUp": "Registar",
     "signIn": "Entrar",
+    "signOut": "Sair",
     "forgotPassword": "Esqueceste a senha?",
     "recoverPassword": "Recuperar",
     "continue": "Continuar",

@@ -24,6 +24,21 @@
       }
     }
   },
+  "screens": {
+    "profile": {
+      "edit": "Edit",
+      "firstHeader": "Your posts",
+      "secondHeader": "Other stuff",
+      "newPost": "New post",
+      "activePosts": "Active posts",
+      "pastPosts": "Past posts",
+      "definitions": "Definitions",
+      "contactUs": "Contact us",
+      "help": "Help",
+      "termsAndConditions": "Terms and conditions",
+      "privacyPolicy": "Privacy policy"
+    }
+  },
   "forms": {
     "name": "Name",
     "email": "Email",
@@ -46,6 +61,9 @@
   },
   "feedback": {
     "pleaseWait": "Please wait...",
+    "confirmMessages": {
+      "signOut": "Are you sure you want to sign out of the app?"
+    },
     "errorMessages": {
       "blankEmail": "Email can't be blank",
       "invalidEmail": "Email should be in a valid format",
@@ -72,6 +90,7 @@
     "getStarted": "Get started",
     "signUp": "Sign up",
     "signIn": "Sign in",
+    "signOut": "Sign out",
     "forgotPassword": "Forgot password?",
     "recoverPassword": "Recover",
     "continue": "Continue",

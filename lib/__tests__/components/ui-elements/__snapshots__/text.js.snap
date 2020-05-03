@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
+<Text
+  style={
+    Object {
+      "color": "#263238",
+      "marginBottom": 8,
+      "marginTop": 8,
+      "paddingBottom": 6,
+      "paddingTop": 6,
+    }
+  }
+>
+  Some text here
+</Text>
+`;
