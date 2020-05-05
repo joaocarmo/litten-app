@@ -26,17 +26,18 @@
   },
   "screens": {
     "profile": {
+      "about": "Sobre",
+      "activePosts": "Posts activos",
+      "contactUs": "Contacta-nos",
+      "definitions": "Definições",
       "edit": "Editar",
       "firstHeader": "Os teus posts",
-      "secondHeader": "Outras coisas",
-      "newPost": "Novo post",
-      "activePosts": "Posts activos",
-      "pastPosts": "Posts antigos",
-      "definitions": "Definições",
-      "contactUs": "Contacta-nos",
       "help": "Ajuda",
-      "termsAndConditions": "Termos e condições",
-      "privacyPolicy": "Política de privacidade"
+      "newPost": "Novo post",
+      "pastPosts": "Posts antigos",
+      "privacyPolicy": "Política de privacidade",
+      "secondHeader": "Outras coisas",
+      "termsAndConditions": "Termos e condições"
     }
   },
   "forms": {
