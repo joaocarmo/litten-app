@@ -17,7 +17,7 @@ Array [
         Array [
           Object {
             "borderBottomWidth": 2,
-            "color": "#263238",
+            "color": "#000000",
             "fontSize": 20,
             "fontWeight": "600",
             "height": 60,

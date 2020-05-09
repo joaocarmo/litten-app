@@ -25,6 +25,14 @@
     }
   },
   "screens": {
+    "messages": {
+      "title": "Messages",
+      "options": {
+        "all": "Todas as mensagens",
+        "read": "Messagens lidas",
+        "unread": "Mensagens por ler"
+      }
+    },
     "profile": {
       "about": "Sobre",
       "activePosts": "Posts activos",
