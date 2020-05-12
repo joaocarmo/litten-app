@@ -24,7 +24,16 @@
       }
     }
   },
+  "ui": {
+    "elements": {
+      "imagePlaceholder": "Adicionar"
+    }
+  },
   "screens": {
+    "new": {
+      "title": "Novo animal",
+      "addPhotos": "Adicionar imagens"
+    },
     "messages": {
       "title": "Messages",
       "options": {
