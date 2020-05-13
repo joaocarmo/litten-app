@@ -32,7 +32,11 @@
   "screens": {
     "new": {
       "title": "Novo animal",
-      "addPhotos": "Adicionar imagens"
+      "addPhotos": "Adicionar imagens",
+      "addTitle": "Título do litten",
+      "addType": "Tipo de litten",
+      "addStory": "História do litten",
+      "addLocation": "Localização do litten"
     },
     "messages": {
       "title": "Messages",

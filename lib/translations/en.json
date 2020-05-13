@@ -32,7 +32,11 @@
   "screens": {
     "new": {
       "title": "Add pet",
-      "addPhotos": "Add images"
+      "addPhotos": "Add images",
+      "addTitle": "Post title",
+      "addType": "Looking for",
+      "addStory": "Pet story",
+      "addLocation": "Location"
     },
     "messages": {
       "title": "Messages",
