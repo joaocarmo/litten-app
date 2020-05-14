@@ -36,7 +36,11 @@
       "addTitle": "Post title",
       "addType": "Looking for",
       "addStory": "Pet story",
-      "addLocation": "Location"
+      "addLocation": "Location",
+      "openCamera": "Open camera",
+      "fromLibrary": "From library",
+      "changePhoto": "Change photo",
+      "removePhoto": "Remove photo"
     },
     "messages": {
       "title": "Messages",
