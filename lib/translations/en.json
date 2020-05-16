@@ -99,7 +99,8 @@
       "blankCountry": "Country can't be blank",
       "blankPhoneNumber": "Phone number can't be blank",
       "invalidPhoneNumber": "Phone number should be in a valid format",
-      "invalidPhoto": "Select a valid photo"
+      "invalidPhoto": "Select a valid photo",
+      "notImplemented": "That feature isn't active yet"
     },
     "firebaseErrorMessages": {
       "auth/email-already-exists": "The provided email already exists",
@@ -109,6 +110,12 @@
       "auth/network-request-failed": "There is a network problem",
       "auth/user-not-found": "There is no such existing user record",
       "auth/wrong-password": "The provided password is wrong"
+    }
+  },
+  "litten": {
+    "type": {
+      "adopt": "Adopt",
+      "mate": "Mate"
     }
   },
   "cta": {

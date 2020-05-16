@@ -1148,10 +1148,10 @@
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
 
-"@react-native-firebase/auth@^7.0.1":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/auth/-/auth-7.0.1.tgz#f689b247ac3b7c627552b7ea8f6e08cfce4d1497"
-  integrity sha512-5HuSVaYvjYYs78tmrXwM6huyl+U6nOZM7BgpuiR0XVUE4CyMNc8XcA8L43Crt6QaUqip9bqBQ/01v6tciOqbZg==
+"@react-native-firebase/auth@^7.0.2":
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/auth/-/auth-7.0.2.tgz#032da9da7302461557edc0e3aae0806660efc43c"
+  integrity sha512-1JPgzeaNve5QXaZD4OrUtmstFEbuZBiAl50RSSgnRPNkMxgjHxMlZvGKX53OeOoOVaG6JDZoG8hTHjSn1G4VXA==
 
 "@react-native-firebase/firestore@^7.0.1":
   version "7.0.1"
@@ -1197,10 +1197,10 @@
   dependencies:
     nanoid "^3.1.5"
 
-"@react-navigation/stack@^5.3.5":
-  version "5.3.5"
-  resolved "https://registry.yarnpkg.com/@react-navigation/stack/-/stack-5.3.5.tgz#ab9a4dff8a6ec2828bde02a5ee5e73ec80dd1a98"
-  integrity sha512-b+yxDmx0t09keJ1CaYUe8Xvo+7mJ4MATc9ns/3tbqDpdiFY+mxBq2Y20WvnMroUyJQo2CIQwVUrfNSArImXPIA==
+"@react-navigation/stack@^5.3.6":
+  version "5.3.6"
+  resolved "https://registry.yarnpkg.com/@react-navigation/stack/-/stack-5.3.6.tgz#7a1bf2f6b77dd92a0aa7befb4f3263215bed58f5"
+  integrity sha512-6uE9pWMa9tdvDSbMV9o6/1cFrT60c2S3CTKIR5mZWJbyanIGFdu/ScbjIvplnG5kLG24rIpc3rtC0FgqTsBVXQ==
   dependencies:
     color "^3.1.2"
     react-native-iphone-x-helper "^1.2.1"
@@ -1275,9 +1275,9 @@
   integrity sha512-7TUK/k2/QGpEAv/BCwSHlYu3NXZhQ9ZwBYpzr9tjlPIL2C5BeGhH3DmVavRx3ZNyELX5TLC91JTz/cen6AAtIQ==
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0", "@types/istanbul-lib-coverage@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.1.tgz#42995b446db9a48a11a07ec083499a860e9138ff"
-  integrity sha512-hRJD2ahnnpLgsj6KWMYSrmXkM3rm2Dl1qkx6IOFD5FnuNPXJIG5L0dhgKXCYTRMGzU4n0wImQ/xfmRc4POUFlg==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.2.tgz#79d7a78bad4219f4c03d6557a1c72d9ca6ba62d5"
+  integrity sha512-rsZg7eL+Xcxsxk2XlBt9KcG8nOp9iYdKCOikY9x2RFJCyOdNj4MKPQty0e8oZr29vVAzKXr1BmR+kZauti3o1w==
 
 "@types/istanbul-lib-report@*":
   version "3.0.0"
@@ -1287,9 +1287,9 @@
     "@types/istanbul-lib-coverage" "*"
 
 "@types/istanbul-reports@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@types/istanbul-reports/-/istanbul-reports-1.1.1.tgz#7a8cbf6a406f36c8add871625b278eaf0b0d255a"
-  integrity sha512-UpYjBi8xefVChsCoBpKShdxTllC9pwISirfoZsUa2AAdQg/Jd2KQGtSbw+ya7GPo7x/wAPlH6JBhKhAsXUEZNA==
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@types/istanbul-reports/-/istanbul-reports-1.1.2.tgz#e875cc689e47bce549ec81f3df5e6f6f11cfaeb2"
+  integrity sha512-P/W9yOX/3oPZSpaYOCQzGqgCQRXn0FFO/V8bWrCQs+wLmvVVxk6CRBXALEvNs9OHIatlnlFokfhuDo2ug01ciw==
   dependencies:
     "@types/istanbul-lib-coverage" "*"
     "@types/istanbul-lib-report" "*"
@@ -2693,10 +2693,10 @@ eslint-plugin-jest@22.4.1:
   resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.4.1.tgz#a5fd6f7a2a41388d16f527073b778013c5189a9c"
   integrity sha512-gcLfn6P2PrFAVx3AobaOzlIEevpAEf9chTpFZz7bYfc7pz8XRv7vuKTIE4hxPKZSha6XWKKplDQ0x9Pq8xX2mg==
 
-eslint-plugin-jest@^23.11.0:
-  version "23.11.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-23.11.0.tgz#6e01d83ea74c1eefd60811655bbc288bd8ab2e7d"
-  integrity sha512-qedvh6mcMgoLFHjITtG40yKOCu5Fa1GMYesDOclU30ZvtVkf+DaH0fnCn1ysOX/QMdk2SGhQvxvYLowcLaM0GA==
+eslint-plugin-jest@^23.12.0:
+  version "23.12.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-23.12.0.tgz#12eed51f43dc478a46c49093973878e863f4b585"
+  integrity sha512-lHA8D3TfDqhO5sPEEp3k87Ljo6Ci09lMmWrNhrAReWs04VBgTar8UAKKFKpA+zTKHG7s5IqKRwZlrdEeq6JE2A==
   dependencies:
     "@typescript-eslint/experimental-utils" "^2.5.0"
 
@@ -5263,9 +5263,9 @@ node-notifier@^7.0.0:
     which "^2.0.2"
 
 node-stream-zip@^1.9.1:
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/node-stream-zip/-/node-stream-zip-1.11.0.tgz#7e72a29a26d528e8dea0dcd32d1b88939b590dbe"
-  integrity sha512-IFO3dCRehnC/C57Gpk7tzhJnw3HL1AN4OdQMwUH5d1h2x6OPz3QI0gxWERURmHToujLUz/d8rHhbTpBJ9aa91Q==
+  version "1.11.1"
+  resolved "https://registry.yarnpkg.com/node-stream-zip/-/node-stream-zip-1.11.1.tgz#7af41e2622f1dc354db602e53f7a62e21a69308e"
+  integrity sha512-eiNM9UJ26OkbOLfv4VI8X94KRw28xMq2cpWapRsR/aWXGu+hNFvEY889Glm6qi43wtbjcMSU1oFxv5XZ0OKhbA==
 
 normalize-package-data@^2.5.0:
   version "2.5.0"
