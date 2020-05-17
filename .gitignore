@@ -63,3 +63,6 @@ GoogleService-Info.plist
 
 # Firebase access (Android)
 google-services.json
+
+# Environment variables
+.env
