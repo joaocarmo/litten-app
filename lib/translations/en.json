@@ -39,6 +39,8 @@
       "addLocation": "Location",
       "addLocationDescription": "Select the location using the map",
       "useCurrentLocation": "Use current location",
+      "useExistingLocation": "Use existing location",
+      "useProfileLocation": "Use profile location",
       "unknownLocation": "Unknown location",
       "openCamera": "Open camera",
       "fromLibrary": "From library",

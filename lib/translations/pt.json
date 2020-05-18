@@ -39,6 +39,8 @@
       "addLocation": "Localização do litten",
       "addLocationDescription": "Escolhe a localização usando o mapa",
       "useCurrentLocation": "Usar localização actual",
+      "useExistingLocation": "Usar localização existente",
+      "useProfileLocation": "Usar localização actual",
       "unknownLocation": "Localização desconhecida",
       "openCamera": "Abrir câmera",
       "fromLibrary": "Escolher",
