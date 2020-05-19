@@ -39,6 +39,7 @@
       "addLocation": "Location",
       "addLocationDescription": "Select the location using the map",
       "useCurrentLocation": "Use current location",
+      "useCustomLocation": "Enter manually",
       "useExistingLocation": "Use existing location",
       "useProfileLocation": "Use profile location",
       "unknownLocation": "Unknown location",
@@ -105,6 +106,7 @@
       "blankPhoneNumber": "Phone number can't be blank",
       "invalidPhoneNumber": "Phone number should be in a valid format",
       "invalidPhoto": "Select a valid photo",
+      "invalidLocation": "The provided location is invalid, try choosing another or use a different method",
       "notImplemented": "That feature isn't active yet"
     },
     "firebaseErrorMessages": {

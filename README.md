@@ -47,8 +47,8 @@ will fail to build until a new project is [setup][setupfirebase] and the
 
 ## License
 
-The project's source code is licensed as [AGPL-3.0][license], but the images are
-[not licensed][licenseimgs].
+The project's source code is licensed as [AGPL-3.0][license], but the images and
+the design are [not licensed][licenseimgs].
 
 <!-- References -->
 
