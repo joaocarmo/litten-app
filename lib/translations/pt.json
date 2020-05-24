@@ -106,7 +106,7 @@
       "blankPhoneNumber": "O telemóvel não pode ser vazio",
       "invalidPhoneNumber": "O telemóvel deve ser válido",
       "invalidPhoto": "Escolhe uma fotografia válida",
-      "invalidLocation": "A lcoalização escolhida é inválida, tenta escolher outra ou usar outro método",
+      "invalidLocation": "A localização escolhida é inválida, tenta escolher outra ou usar outro método",
       "notImplemented": "Essa funcionalidade está inactiva"
     },
     "firebaseErrorMessages": {
