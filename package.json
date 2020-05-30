@@ -18,6 +18,7 @@
   "homepage": "https://github.com/joaocarmo/litten-ios#readme",
   "contributors": [],
   "scripts": {
+    "react-devtools": "react-devtools",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
@@ -79,6 +80,7 @@
     "jest": "^26.0.1",
     "jest-fetch-mock": "^3.0.3",
     "metro-react-native-babel-preset": "^0.59.0",
+    "react-devtools": "^4.7.0",
     "react-test-renderer": "16.13.1",
     "remote-redux-devtools": "^0.5.16",
     "world-countries": "^4.0.0"
