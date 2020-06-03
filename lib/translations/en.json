@@ -41,6 +41,7 @@
       "useCurrentLocation": "Use current location",
       "useCustomLocation": "Enter manually",
       "useExistingLocation": "Use existing location",
+      "useMapLocation": "Select using the map",
       "useProfileLocation": "Use profile location",
       "unknownLocation": "Unknown location",
       "openCamera": "Open camera",

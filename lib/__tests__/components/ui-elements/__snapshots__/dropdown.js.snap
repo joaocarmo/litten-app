@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "row",
+      "marginBottom": 6,
+      "marginTop": 6,
+    }
+  }
+>
+  <Menu
+    onSelect={[Function]}
+    renderer={[Function]}
+  >
+    <MenuTrigger>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 20,
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "padding": 12,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#39A4F2",
+              "fontWeight": "600",
+            }
+          }
+        >
+          All
+        </Text>
+        <Image
+          resizeMode="contain"
+          source={
+            Object {
+              "uri": "",
+            }
+          }
+          style={
+            Object {
+              "maxHeight": 12,
+              "maxWidth": 12,
+              "transform": Array [
+                Object {
+                  "rotateZ": "90deg",
+                },
+              ],
+            }
+          }
+        />
+      </View>
+    </MenuTrigger>
+    <MenuOptions
+      customStyles={
+        Object {
+          "optionsContainer": Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 20,
+            "borderWidth": 0,
+            "padding": 10,
+            "shadowOffset": Object {
+              "height": 0,
+              "width": 0,
+            },
+            "shadowRadius": 0,
+          },
+        }
+      }
+    >
+      <MenuOption
+        value="all"
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#6A6767",
+                "fontWeight": "600",
+                "padding": 2,
+              },
+              Object {
+                "color": "#39A4F2",
+              },
+            ]
+          }
+        >
+          All
+        </Text>
+      </MenuOption>
+      <MenuOption
+        value="read"
+      >
+        <Text
+          style={
+            Object {
+              "color": "#6A6767",
+              "fontWeight": "600",
+              "padding": 2,
+            }
+          }
+        >
+          Read
+        </Text>
+      </MenuOption>
+      <MenuOption
+        value="unread"
+      >
+        <Text
+          style={
+            Object {
+              "color": "#6A6767",
+              "fontWeight": "600",
+              "padding": 2,
+            }
+          }
+        >
+          Unread
+        </Text>
+      </MenuOption>
+    </MenuOptions>
+  </Menu>
+</View>
+`;

@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "row",
+      "flexWrap": "wrap",
+      "justifyContent": "space-between",
+      "margin": -3,
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Array [
+            Object {
+              "aspectRatio": 1,
+              "borderColor": "#E5E5E5",
+              "borderRadius": 10,
+              "borderWidth": 2,
+              "height": 157.5,
+              "margin": 3,
+            },
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "justifyContent": "center",
+            },
+          ],
+          Object {
+            "backgroundColor": "#39A4F2",
+          },
+        ]
+      }
+    >
+      <Image
+        resizeMode="contain"
+        source={
+          Object {
+            "uri": "",
+          }
+        }
+        style={
+          Object {
+            "height": 32,
+            "margin": 8,
+            "tintColor": "#FFFFFF",
+            "width": 36,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 10,
+            "fontWeight": "600",
+          }
+        }
+      >
+        Add photo
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "aspectRatio": 1,
+          "borderColor": "#E5E5E5",
+          "borderRadius": 10,
+          "borderWidth": 2,
+          "height": 157.5,
+          "margin": 3,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "center",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "aspectRatio": 1,
+          "borderColor": "#E5E5E5",
+          "borderRadius": 10,
+          "borderWidth": 2,
+          "height": 157.5,
+          "margin": 3,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "center",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "aspectRatio": 1,
+          "borderColor": "#E5E5E5",
+          "borderRadius": 10,
+          "borderWidth": 2,
+          "height": 157.5,
+          "margin": 3,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "center",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "aspectRatio": 1,
+          "borderColor": "#E5E5E5",
+          "borderRadius": 10,
+          "borderWidth": 2,
+          "height": 157.5,
+          "margin": 3,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "center",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "aspectRatio": 1,
+          "borderColor": "#E5E5E5",
+          "borderRadius": 10,
+          "borderWidth": 2,
+          "height": 157.5,
+          "margin": 3,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "center",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "aspectRatio": 1,
+          "borderColor": "#E5E5E5",
+          "borderRadius": 10,
+          "borderWidth": 2,
+          "height": 157.5,
+          "margin": 3,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "center",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "aspectRatio": 1,
+          "borderColor": "#E5E5E5",
+          "borderRadius": 10,
+          "borderWidth": 2,
+          "height": 157.5,
+          "margin": 3,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "center",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />
+</View>
+`;
