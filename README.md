@@ -24,6 +24,9 @@ yarn test
 
 # Prepare the data dependencies
 yarn prepare-data
+
+# This will start the Firebase Emulator UI
+yarn start:firebase
 ```
 
 ## Environment
@@ -41,6 +44,9 @@ Currently, the project relies on a [Firebase][firebase] infrastructure. The app
 will fail to build until a new project is [setup][setupfirebase] and the
 `GoogleService-Info.plist` configutarion file is added to the `ios` directory.
 
+Additionally, you shoul install, configure and integrate the
+[Local Emulator Suite][emulator].
+
 ### Current dependecies
 
 * [Google Maps (Geocoding)][googleapikey]
@@ -54,6 +60,7 @@ the design are [not licensed][licenseimgs].
 
 [firebase]: https://firebase.google.com
 [setupfirebase]: https://firebase.google.com/docs/ios/setup
+[emulator]: https://firebase.google.com/docs/emulator-suite/install_and_configure
 [googleapikey]: https://developers.google.com/maps/documentation/geocoding/get-api-key
 [license]: ./LICENSE
 [licenseimgs]: ./lib/images/README.md
