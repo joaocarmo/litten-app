@@ -59,6 +59,8 @@
     },
     "profile": {
       "about": "Sobre",
+      "aboutVersion": "Versão actual:",
+      "buildEnvironment": "Ambiente da build:",
       "activePosts": "Posts activos",
       "contactUs": "Contacta-nos",
       "definitions": "Definições",
