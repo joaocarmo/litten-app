@@ -70,7 +70,9 @@
       "pastPosts": "Posts antigos",
       "privacyPolicy": "Política de privacidade",
       "secondHeader": "Outras coisas",
-      "termsAndConditions": "Termos e condições"
+      "termsAndConditions": "Termos e condições",
+      "storybook": "Storybook",
+      "storybookIntro": "Podes navegar pelos elementos visuais do Litten aqui"
     }
   },
   "forms": {

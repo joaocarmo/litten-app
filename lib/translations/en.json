@@ -70,7 +70,9 @@
       "pastPosts": "Past posts",
       "privacyPolicy": "Privacy policy",
       "secondHeader": "Other stuff",
-      "termsAndConditions": "Terms and conditions"
+      "termsAndConditions": "Terms and conditions",
+      "storybook": "Storybook",
+      "storybookIntro": "You can browse through Litten's UI Elements in this screen"
     }
   },
   "forms": {
