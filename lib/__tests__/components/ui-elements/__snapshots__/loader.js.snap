@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for the "UILoader" component renders correctly when active 1`] = `
+<View
+  opacity={null}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#EFF1F3",
+      "display": "flex",
+      "flex": 0,
+      "height": "100%",
+      "justifyContent": "center",
+      "left": 0,
+      "position": "absolute",
+      "top": 0,
+      "width": "100%",
+      "zIndex": 1,
+    }
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="#999999"
+    hidesWhenStopped={true}
+    size="small"
+  />
+</View>
+`;

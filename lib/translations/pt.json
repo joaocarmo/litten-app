@@ -60,9 +60,16 @@
     "profile": {
       "about": "Sobre",
       "aboutVersion": "Versão actual:",
-      "buildEnvironment": "Ambiente da build:",
+      "aboutLicense": "Licença:",
+      "aboutAuthors": "Autores:",
+      "aboutEnvironment": "Ambiente da build:",
+      "aboutOS": "SO:",
+      "aboutOSVersion": "Versão do SO:",
       "activePosts": "Posts activos",
       "contactUs": "Contacta-nos",
+      "contactUsAbuse": "Spam ou abuso",
+      "contactUsBroken": "Algo não funciona",
+      "contactUsFeedback": "Outros comentários",
       "definitions": "Definições",
       "firstHeader": "Os teus posts",
       "help": "Ajuda",
@@ -70,7 +77,9 @@
       "pastPosts": "Posts antigos",
       "privacyPolicy": "Política de privacidade",
       "secondHeader": "Outras coisas",
-      "termsAndConditions": "Termos e condições",
+      "termsAndConditions": "Termos e condições"
+    },
+    "dev": {
       "storybook": "Storybook",
       "storybookIntro": "Podes navegar pelos elementos visuais do Litten aqui"
     }

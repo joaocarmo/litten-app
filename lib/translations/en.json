@@ -60,9 +60,16 @@
     "profile": {
       "about": "About",
       "aboutVersion": "Current version:",
-      "buildEnvironment": "Build environment:",
+      "aboutLicense": "License:",
+      "aboutAuthors": "Authors:",
+      "aboutEnvironment": "Build environment:",
+      "aboutOS": "OS:",
+      "aboutOSVersion": "OS Version:",
       "activePosts": "Active posts",
-      "contactUs": "Contact us",
+      "contactUs": "Report a Problem",
+      "contactUsAbuse": "Spam or abuse",
+      "contactUsBroken": "Something is broken",
+      "contactUsFeedback": "General feedback",
       "definitions": "Definitions",
       "firstHeader": "Your posts",
       "help": "Help",
@@ -70,7 +77,9 @@
       "pastPosts": "Past posts",
       "privacyPolicy": "Privacy policy",
       "secondHeader": "Other stuff",
-      "termsAndConditions": "Terms and conditions",
+      "termsAndConditions": "Terms and conditions"
+    },
+    "dev": {
       "storybook": "Storybook",
       "storybookIntro": "You can browse through Litten's UI Elements in this screen"
     }

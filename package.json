@@ -8,7 +8,7 @@
     "react-native"
   ],
   "author": {
-    "name": "Joao Carmo",
+    "name": "João Carmo",
     "email": "17721880+joaocarmo@users.noreply.github.com"
   },
   "license": "AGPL-3.0",
@@ -16,20 +16,25 @@
     "url": "https://github.com/joaocarmo/litten-ios/issues"
   },
   "homepage": "https://github.com/joaocarmo/litten-ios#readme",
-  "contributors": [],
+  "contributors": [
+    {
+      "name": "Tânia Matos"
+    }
+  ],
   "scripts": {
-    "storybook": "(adb reverse tcp:7007 tcp:7007 || true) && start-storybook",
-    "react-devtools": "react-devtools",
     "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "start": "react-native start",
-    "test": "jest --forceExit",
-    "lint": "eslint .",
-    "start:firebase": "firebase emulators:start",
+    "clear-cache": "watchman watch-del-all && rm -rf node_modules/ && yarn install && rm -rf /tmp/metro-* && yarn start --reset-cache",
     "generate-data": "./scripts/generate-data",
-    "sort-data": "./scripts/sort-data",
+    "ios": "react-native run-ios",
+    "lint": "eslint .",
     "prepare-data": "yarn generate-data && yarn sort-data",
-    "clear-cache": "watchman watch-del-all && rm -rf node_modules/ && yarn install && rm -rf /tmp/metro-* && yarn start --reset-cache"
+    "push": "git add . && gitmoji -c && git push",
+    "react-devtools": "react-devtools",
+    "sort-data": "./scripts/sort-data",
+    "start:firebase": "firebase emulators:start",
+    "start": "react-native start",
+    "storybook": "(adb reverse tcp:7007 tcp:7007 || true) && start-storybook",
+    "test": "jest --forceExit"
   },
   "husky": {
     "hooks": {
@@ -47,11 +52,9 @@
     "@react-navigation/bottom-tabs": "^5.7.1",
     "@react-navigation/native": "^5.7.0",
     "@react-navigation/stack": "^5.7.0",
-    "@storybook/addon-knobs": "^6.0.0-rc.8",
-    "@storybook/addon-notes": "^6.0.0-alpha.6",
+    "@storybook/addon-knobs": "^5.3.19",
     "@storybook/addon-ondevice-knobs": "^6.0.0-alpha.0",
-    "@storybook/addon-ondevice-notes": "^6.0.0-alpha.0",
-    "@storybook/addons": "^6.0.0-rc.8",
+    "@storybook/addons": "^5.3.19",
     "@storybook/react-native": "^6.0.0-alpha.0",
     "@storybook/react-native-server": "^6.0.0-alpha.0",
     "babel-plugin-dotenv-import": "^2.1.0",
@@ -79,7 +82,7 @@
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
     "redux-persist": "^6.0.0",
-    "storybook": "^6.0.0-rc.8"
+    "storybook": "^5.3.19"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
