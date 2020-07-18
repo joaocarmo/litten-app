@@ -59,24 +59,25 @@
     },
     "profile": {
       "about": "Sobre",
-      "aboutVersion": "Versão actual:",
-      "aboutLicense": "Licença:",
       "aboutAuthors": "Autores:",
       "aboutEnvironment": "Ambiente da build:",
+      "aboutLicense": "Licença:",
       "aboutOS": "SO:",
       "aboutOSVersion": "Versão do SO:",
+      "aboutVersion": "Versão actual:",
       "activePosts": "Posts activos",
       "contactUs": "Contacta-nos",
       "contactUsAbuse": "Spam ou abuso",
       "contactUsBroken": "Algo não funciona",
       "contactUsFeedback": "Outros comentários",
-      "definitions": "Definições",
+      "edit": "Editar perfil",
       "firstHeader": "Os teus posts",
       "help": "Ajuda",
       "newPost": "Novo post",
       "pastPosts": "Posts antigos",
       "privacyPolicy": "Política de privacidade",
-      "secondHeader": "Outras coisas",
+      "secondHeader": "As tuas definições",
+      "settings": "Opções",
       "termsAndConditions": "Termos e condições"
     },
     "dev": {
@@ -136,7 +137,9 @@
   "litten": {
     "type": {
       "adopt": "Adoptar",
-      "mate": "Acasalar"
+      "breed": "Acasalar",
+      "lost": "Perdido",
+      "found": "Encontrado"
     }
   },
   "cta": {

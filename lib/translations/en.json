@@ -59,24 +59,25 @@
     },
     "profile": {
       "about": "About",
-      "aboutVersion": "Current version:",
-      "aboutLicense": "License:",
       "aboutAuthors": "Authors:",
       "aboutEnvironment": "Build environment:",
+      "aboutLicense": "License:",
       "aboutOS": "OS:",
       "aboutOSVersion": "OS Version:",
+      "aboutVersion": "Current version:",
       "activePosts": "Active posts",
       "contactUs": "Report a Problem",
       "contactUsAbuse": "Spam or abuse",
       "contactUsBroken": "Something is broken",
       "contactUsFeedback": "General feedback",
-      "definitions": "Definitions",
+      "edit": "Edit profile",
       "firstHeader": "Your posts",
       "help": "Help",
       "newPost": "New post",
       "pastPosts": "Past posts",
       "privacyPolicy": "Privacy policy",
-      "secondHeader": "Other stuff",
+      "secondHeader": "Your definitions",
+      "settings": "Settings",
       "termsAndConditions": "Terms and conditions"
     },
     "dev": {
@@ -136,7 +137,9 @@
   "litten": {
     "type": {
       "adopt": "Adopt",
-      "mate": "Mate"
+      "breed": "Breed",
+      "lost": "Lost",
+      "found": "Found"
     }
   },
   "cta": {
