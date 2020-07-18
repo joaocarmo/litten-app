@@ -44,10 +44,10 @@ Currently, the project relies on a [Firebase][firebase] infrastructure. The app
 will fail to build until a new project is [setup][setupfirebase] and the
 `GoogleService-Info.plist` configutarion file is added to the `ios` directory.
 
-Additionally, you shoul install, configure and integrate the
+Additionally, you should install, configure and integrate the
 [Local Emulator Suite][emulator].
 
-### Current dependecies
+### Current API dependecies
 
 * [Google Maps (Geocoding)][googleapikey]
 
