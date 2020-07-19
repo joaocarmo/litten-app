@@ -51,11 +51,8 @@
     },
     "messages": {
       "title": "Messages",
-      "options": {
-        "all": "All messages",
-        "read": "Read messages",
-        "unread": "Unread messages"
-      }
+      "emptyTitle": "Are you feeling shy?",
+      "emptyText": "Start conversations and they will show up in here"
     },
     "profile": {
       "about": "About",

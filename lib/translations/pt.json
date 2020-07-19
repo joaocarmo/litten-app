@@ -51,11 +51,8 @@
     },
     "messages": {
       "title": "Messages",
-      "options": {
-        "all": "Todas as mensagens",
-        "read": "Messagens lidas",
-        "unread": "Mensagens por ler"
-      }
+      "emptyTitle": "Estás com vergonha?",
+      "emptyText": "Inicia conversas e elas vão aparecer aqui"
     },
     "profile": {
       "about": "Sobre",
