@@ -49,6 +49,12 @@
       "changePhoto": "Change photo",
       "removePhoto": "Remove photo"
     },
+    "searches": {
+      "emptyTitle": "Are you feeling lost?",
+      "emptyText": "Try to start a new search, you never know where it will lead",
+      "headerSearchPlaceholder": "Search",
+      "filters": "Filters"
+    },
     "messages": {
       "title": "Messages",
       "emptyTitle": "Are you feeling shy?",

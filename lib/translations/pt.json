@@ -49,6 +49,12 @@
       "changePhoto": "Alterar",
       "removePhoto": "Remover"
     },
+    "searches": {
+      "emptyTitle": "Não sabes onde começar?",
+      "emptyText": "Experimenta uma nova procura, nunca sabes onde irá dar",
+      "headerSearchPlaceholder": "Procurar",
+      "filters": "Filtros"
+    },
     "messages": {
       "title": "Messages",
       "emptyTitle": "Estás com vergonha?",

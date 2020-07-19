@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for the "UISearch" component renders correctly 1`] = `
+<TextInput
+  allowFontScaling={true}
+  autoCapitalize="none"
+  enablesReturnKeyAutomatically={true}
+  onChangeText={[Function]}
+  onSubmitEditing={[Function]}
+  placeholder="Search"
+  rejectResponderTermination={true}
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 24,
+      "minHeight": 36,
+      "padding": 8,
+      "paddingLeft": 24,
+    }
+  }
+  underlineColorAndroid="transparent"
+/>
+`;
