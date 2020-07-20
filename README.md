@@ -1,6 +1,6 @@
-# litten-ios
+# Litten
 
-litten app iOS repository using React Native
+Litten app iOS repository using React Native
 
 ## Development Commands
 
@@ -27,6 +27,18 @@ yarn prepare-data
 
 # This will start the Firebase Emulator UI
 yarn start:firebase
+```
+
+## UI Components
+
+The UI Components catalog can be viewed inside the app, through the
+developer-only `Storybook` screen available in the `Profile` tab.
+
+Additionally, a server can be started in order to browse the components using
+a browser.
+
+```sh
+yarn storybook
 ```
 
 ## Environment

@@ -30,6 +30,17 @@
     }
   },
   "screens": {
+    "searches": {
+      "emptyTitle": "Não sabes onde começar?",
+      "emptyText": "Experimenta uma nova procura, nunca sabes onde irá dar",
+      "headerSearchPlaceholder": "Procurar",
+      "filters": "Filtros"
+    },
+    "favourites": {
+      "title": "Favoritos",
+      "emptyPostsTitle": "Começa a aproximar-te do teu animal",
+      "emptyPostsText": "Quando gostas de uma publicação, ela aparece aqui para dares seguimento"
+    },
     "new": {
       "title": "Novo animal",
       "addPhotos": "Adicionar imagens",
@@ -48,12 +59,6 @@
       "fromLibrary": "Escolher",
       "changePhoto": "Alterar",
       "removePhoto": "Remover"
-    },
-    "searches": {
-      "emptyTitle": "Não sabes onde começar?",
-      "emptyText": "Experimenta uma nova procura, nunca sabes onde irá dar",
-      "headerSearchPlaceholder": "Procurar",
-      "filters": "Filtros"
     },
     "messages": {
       "title": "Messages",
@@ -125,7 +130,9 @@
       "invalidPhoneNumber": "O telemóvel deve ser válido",
       "invalidPhoto": "Escolhe uma fotografia válida",
       "invalidLocation": "A localização escolhida é inválida, tenta escolher outra ou usar outro método",
-      "notImplemented": "Essa funcionalidade está inactiva"
+      "notImplemented": "Essa funcionalidade está inactiva",
+      "checkConnectionTitle": "Verifica a tua conectividade",
+      "checkConnectionText": "Aqui é necessária uma ligação activa à internet"
     },
     "firebaseErrorMessages": {
       "auth/email-already-exists": "O email fornecido já existe",

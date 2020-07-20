@@ -30,6 +30,17 @@
     }
   },
   "screens": {
+    "searches": {
+      "emptyTitle": "Are you feeling lost?",
+      "emptyText": "Try to start a new search, you never know where it will lead",
+      "headerSearchPlaceholder": "Search",
+      "filters": "Filters"
+    },
+    "favourites": {
+      "title": "Favourites",
+      "emptyPostsTitle": "Start cherishing your favourite pet",
+      "emptyPostsText": "When you heart a post, they will show up in here where you can keep track"
+    },
     "new": {
       "title": "Add pet",
       "addPhotos": "Add images",
@@ -48,12 +59,6 @@
       "fromLibrary": "From library",
       "changePhoto": "Change photo",
       "removePhoto": "Remove photo"
-    },
-    "searches": {
-      "emptyTitle": "Are you feeling lost?",
-      "emptyText": "Try to start a new search, you never know where it will lead",
-      "headerSearchPlaceholder": "Search",
-      "filters": "Filters"
     },
     "messages": {
       "title": "Messages",
@@ -125,7 +130,9 @@
       "invalidPhoneNumber": "Phone number should be in a valid format",
       "invalidPhoto": "Select a valid photo",
       "invalidLocation": "The provided location is invalid, try choosing another or use a different method",
-      "notImplemented": "That feature isn't active yet"
+      "notImplemented": "That feature isn't active yet",
+      "checkConnectionTitle": "Check your connectivity",
+      "checkConnectionText": "This requires an active internet connection"
     },
     "firebaseErrorMessages": {
       "auth/email-already-exists": "The provided email already exists",
