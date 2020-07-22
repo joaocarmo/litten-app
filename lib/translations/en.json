@@ -38,8 +38,12 @@
     },
     "favourites": {
       "title": "Favourites",
+      "tabNavPosts": "Saved Posts",
+      "tabNavSearches": "Saved Searches",
       "emptyPostsTitle": "Start cherishing your favourite pet",
-      "emptyPostsText": "When you heart a post, they will show up in here where you can keep track"
+      "emptyPostsText": "When you heart a post, they will show up in here where you can keep track",
+      "emptySearchesTitle": "Looking for something very specific?",
+      "emptySearchesText": "Save a frequent search criteria and they will show up in here"
     },
     "new": {
       "title": "Add pet",

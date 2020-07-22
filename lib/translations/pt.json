@@ -38,8 +38,12 @@
     },
     "favourites": {
       "title": "Favoritos",
+      "tabNavPosts": "Publicações",
+      "tabNavSearches": "Pesquisas",
       "emptyPostsTitle": "Começa a aproximar-te do teu animal",
-      "emptyPostsText": "Quando gostas de uma publicação, ela aparece aqui para dares seguimento"
+      "emptyPostsText": "Quando gostas de uma publicação, ela aparece aqui para dares seguimento",
+      "emptySearchesTitle": "Procuras algo muito específico?",
+      "emptySearchesText": "Guarda as tuas pesquisas frequentes e elas vão aparecer aqui"
     },
     "new": {
       "title": "Novo animal",
