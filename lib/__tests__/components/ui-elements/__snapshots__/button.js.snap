@@ -19,14 +19,18 @@ exports[`Snapshot test for the "UIButton" component renders correctly 1`] = `
 >
   <View
     style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#7239F2",
-        "borderRadius": 20,
-        "height": 40,
-        "justifyContent": "center",
-        "width": 577.5,
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#7239F2",
+          "borderRadius": 20,
+          "height": 40,
+          "justifyContent": "center",
+        },
+        Object {
+          "width": 577.5,
+        },
+      ]
     }
   >
     <Text
