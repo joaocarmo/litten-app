@@ -38,6 +38,18 @@ munge_underscores=true
 
 module.name_mapper='^react-native/\(.*\)$' -> '<PROJECT_ROOT>/node_modules/react-native/\1'
 module.name_mapper='^@?[./a-zA-Z0-9$_-]+\.\(bmp\|gif\|jpg\|jpeg\|png\|psd\|svg\|webp\|m4v\|mov\|mp4\|mpeg\|mpg\|webm\|aac\|aiff\|caf\|m4a\|mp3\|wav\|html\|pdf\)$' -> '<PROJECT_ROOT>/node_modules/react-native/Libraries/Image/RelativeImageStub'
+; Other mappers
+module.name_mapper='^@env/\(.*\)$' -> '<PROJECT_ROOT>/node_modules/react-native-dotenv/\1'
+module.name_mapper='^components\(.*\)$' -> '<PROJECT_ROOT>/lib/components/\1'
+module.name_mapper='^db\(.*\)$' -> '<PROJECT_ROOT>/lib/db/\1'
+module.name_mapper='^images\(.*\)$' -> '<PROJECT_ROOT>/lib/images/\1'
+module.name_mapper='^screens\(.*\)$' -> '<PROJECT_ROOT>/lib/components/screens/\1'
+module.name_mapper='^store\(.*\)$' -> '<PROJECT_ROOT>/lib/store/\1'
+module.name_mapper='^styles\(.*\)$' -> '<PROJECT_ROOT>/lib/styles/\1'
+module.name_mapper='^templates\(.*\)$' -> '<PROJECT_ROOT>/lib/components/templates/\1'
+module.name_mapper='^translations\(.*\)$' -> '<PROJECT_ROOT>/lib/translations/\1'
+module.name_mapper='^ui-elements\(.*\)$' -> '<PROJECT_ROOT>/lib/components/ui-elements/\1'
+module.name_mapper='^utils\(.*\)$' -> '<PROJECT_ROOT>/lib/utils/\1'
 
 suppress_type=$FlowIssue
 suppress_type=$FlowFixMe
