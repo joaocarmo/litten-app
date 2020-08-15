@@ -53,6 +53,7 @@
       "addTitle": "Litten title",
       "addType": "What's this litten for?",
       "changePhoto": "Change photo",
+      "clear": "Clear",
       "fromLibrary": "From library",
       "openCamera": "Open camera",
       "post": "Create litten",
@@ -122,6 +123,7 @@
   "feedback": {
     "pleaseWait": "Please wait...",
     "confirmMessages": {
+      "clearForm": "Are you sure you want to clear the form?",
       "signOut": "Are you sure you want to sign out of the app?"
     },
     "errorMessages": {
@@ -159,21 +161,22 @@
     }
   },
   "cta": {
-    "getStarted": "Get started",
-    "signUp": "Sign up",
-    "signIn": "Sign in",
-    "signOut": "Sign out",
-    "forgotPassword": "Forgot password?",
-    "recoverPassword": "Recover",
-    "continue": "Continue",
-    "done": "Done",
-    "skip": "Skip",
+    "cancel": "Cancel",
     "change": "Change",
     "choose": "Choose",
-    "cancel": "Cancel",
+    "clearForm": "Clear form",
+    "continue": "Continue",
+    "done": "Done",
+    "forgotPassword": "Forgot password?",
+    "getStarted": "Get started",
+    "no": "No",
+    "recoverPassword": "Recover",
     "report": "Report",
-    "yes": "Yes",
-    "no": "No"
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "signUp": "Sign up",
+    "skip": "Skip",
+    "yes": "Yes"
   },
   "easterEggs": {
     "simulation": "We're inside a huge simulation chamber on an alien spaceship."

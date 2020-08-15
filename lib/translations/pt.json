@@ -53,6 +53,7 @@
       "addTitle": "Título do litten",
       "addType": "Tipo de litten",
       "changePhoto": "Alterar",
+      "clear": "Limpar",
       "fromLibrary": "Escolher",
       "openCamera": "Abrir câmera",
       "post": "Criar litten",
@@ -122,6 +123,7 @@
   "feedback": {
     "pleaseWait": "Aguarda...",
     "confirmMessages": {
+      "clearForm": "Tens a certeza que queres limpar o formulário?",
       "signOut": "Tens a certeza que queres sair da app?"
     },
     "errorMessages": {
@@ -159,21 +161,22 @@
     }
   },
   "cta": {
-    "getStarted": "Iniciar",
-    "signUp": "Registar",
-    "signIn": "Entrar",
-    "signOut": "Sair",
-    "forgotPassword": "Esqueceste a senha?",
-    "recoverPassword": "Recuperar",
-    "continue": "Continuar",
-    "done": "Pronto",
-    "skip": "Próximo",
+    "cancel": "Cancelar",
     "change": "Alterar",
     "choose": "Escolher",
-    "cancel": "Cancelar",
+    "clearForm": "Limpar formulário",
+    "continue": "Continuar",
+    "done": "Pronto",
+    "forgotPassword": "Esqueceste a senha?",
+    "getStarted": "Iniciar",
+    "no": "Não",
+    "recoverPassword": "Recuperar",
     "report": "Reportar",
-    "yes": "Sim",
-    "no": "Não"
+    "signIn": "Entrar",
+    "signOut": "Sair",
+    "signUp": "Registar",
+    "skip": "Próximo",
+    "yes": "Sim"
   },
   "easterEggs": {
     "simulation": "Estamos dentro de uma enorme câmara de simulação numa nave alienígena."

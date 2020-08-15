@@ -100,7 +100,7 @@
     "husky": "^4.2.5",
     "jest": "^26.1.0",
     "jest-fetch-mock": "^3.0.3",
-    "metro-react-native-babel-preset": "^0.61.0",
+    "metro-react-native-babel-preset": "^0.62.0",
     "react-devtools": "^4.8.2",
     "react-test-renderer": "16.13.1",
     "remote-redux-devtools": "^0.5.16",
