@@ -34,7 +34,11 @@
       "emptyTitle": "Are you feeling lost?",
       "emptyText": "Try to start a new search, you never know where it will lead",
       "headerSearchPlaceholder": "Search",
-      "filters": "Filters"
+      "filters": "Filters",
+      "filtersClear": "Clear all filters",
+      "filterSpecies": "Animal species",
+      "filterType": "Looking for",
+      "filterLocation": "Location"
     },
     "favourites": {
       "title": "Favourites",
@@ -123,6 +127,7 @@
   "feedback": {
     "pleaseWait": "Please wait...",
     "confirmMessages": {
+      "clearFilters": "Are you sure you want to clear the filters?",
       "clearForm": "Are you sure you want to clear the form?",
       "signOut": "Are you sure you want to sign out of the app?"
     },
@@ -153,6 +158,14 @@
     }
   },
   "litten": {
+    "species": {
+      "bird": "Bird",
+      "cat": "Cat",
+      "dog": "Dog",
+      "other": "Other",
+      "rabbit": "Rabbit",
+      "rodent": "Rodent"
+    },
     "type": {
       "adopt": "Adopt",
       "breed": "Breed",
@@ -164,6 +177,7 @@
     "cancel": "Cancel",
     "change": "Change",
     "choose": "Choose",
+    "clearFilters": "Clear filters",
     "clearForm": "Clear form",
     "continue": "Continue",
     "done": "Done",

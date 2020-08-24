@@ -34,7 +34,11 @@
       "emptyTitle": "Não sabes onde começar?",
       "emptyText": "Experimenta uma nova procura, nunca sabes onde irá dar",
       "headerSearchPlaceholder": "Procurar",
-      "filters": "Filtros"
+      "filters": "Filtros",
+      "filtersClear": "Limpar todos os filtros",
+      "filterSpecies": "Espécie animal",
+      "filterType": "Tipo de litten",
+      "filterLocation": "Localização"
     },
     "favourites": {
       "title": "Favoritos",
@@ -123,6 +127,7 @@
   "feedback": {
     "pleaseWait": "Aguarda...",
     "confirmMessages": {
+      "clearFilters": "Tens a certeza que queres limpar os filtros?",
       "clearForm": "Tens a certeza que queres limpar o formulário?",
       "signOut": "Tens a certeza que queres sair da app?"
     },
@@ -153,6 +158,14 @@
     }
   },
   "litten": {
+    "species": {
+      "bird": "Pássaro",
+      "cat": "Gato",
+      "dog": "Cão",
+      "other": "Outro",
+      "rabbit": "Coelho",
+      "rodent": "Roedor"
+    },
     "type": {
       "adopt": "Adoptar",
       "breed": "Acasalar",
@@ -164,6 +177,7 @@
     "cancel": "Cancelar",
     "change": "Alterar",
     "choose": "Escolher",
+    "clearFilters": "Limpar filtros",
     "clearForm": "Limpar formulário",
     "continue": "Continuar",
     "done": "Pronto",
