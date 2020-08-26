@@ -38,7 +38,7 @@
       "filtersClear": "Clear all filters",
       "filterSpecies": "Animal species",
       "filterType": "Looking for",
-      "filterLocation": "Location"
+      "filterLocationRadius": "Location"
     },
     "favourites": {
       "title": "Favourites",

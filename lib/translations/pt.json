@@ -38,7 +38,7 @@
       "filtersClear": "Limpar todos os filtros",
       "filterSpecies": "Espécie animal",
       "filterType": "Tipo de litten",
-      "filterLocation": "Localização"
+      "filterLocationRadius": "Localização"
     },
     "favourites": {
       "title": "Favoritos",
