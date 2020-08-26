@@ -159,12 +159,36 @@
   },
   "litten": {
     "species": {
-      "bird": "Bird",
-      "cat": "Cat",
-      "dog": "Dog",
-      "other": "Other",
-      "rabbit": "Rabbit",
-      "rodent": "Rodent"
+      "bird": {
+        "one": "Bird",
+        "other": "Birds",
+        "zero": "Birds"
+      },
+      "cat": {
+        "one": "Cat",
+        "other": "Cats",
+        "zero": "Cats"
+      },
+      "dog": {
+        "one": "Dog",
+        "other": "Dogs",
+        "zero": "Dogs"
+      },
+      "other": {
+        "one": "Other",
+        "other": "Others",
+        "zero": "Others"
+      },
+      "rabbit": {
+        "one": "Rabbit",
+        "other": "Rabbits",
+        "zero": "Rabbits"
+      },
+      "rodent": {
+        "one": "Rodent",
+        "other": "Rodents",
+        "zero": "Rodents"
+      }
     },
     "type": {
       "adopt": "Adopt",

@@ -159,12 +159,36 @@
   },
   "litten": {
     "species": {
-      "bird": "Pássaro",
-      "cat": "Gato",
-      "dog": "Cão",
-      "other": "Outro",
-      "rabbit": "Coelho",
-      "rodent": "Roedor"
+      "bird": {
+        "one": "Pássaro",
+        "other": "Pássaros",
+        "zero": "Pássaros"
+      },
+      "cat": {
+        "one": "Gato",
+        "other": "Gatos",
+        "zero": "Gatos"
+      },
+      "dog": {
+        "one": "Cão",
+        "other": "Cães",
+        "zero": "Cães"
+      },
+      "other": {
+        "one": "Outro",
+        "other": "Outros",
+        "zero": "Outros"
+      },
+      "rabbit": {
+        "one": "Coelho",
+        "other": "Coelhos",
+        "zero": "Coelhos"
+      },
+      "rodent": {
+        "one": "Roedor",
+        "other": "Roedores",
+        "zero": "Roedores"
+      }
     },
     "type": {
       "adopt": "Adoptar",
