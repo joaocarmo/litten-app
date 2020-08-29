@@ -38,7 +38,8 @@
       "filtersClear": "Clear all filters",
       "filterSpecies": "Animal species",
       "filterType": "Looking for",
-      "filterLocationRadius": "Location"
+      "filterLocationRadius": "Location",
+      "filterLocationRadiusValue": "Find littens within {{value}} {{unit}} of me"
     },
     "favourites": {
       "title": "Favourites",
@@ -98,6 +99,9 @@
       "secondHeader": "Your definitions",
       "settings": "Settings",
       "termsAndConditions": "Terms and conditions"
+    },
+    "settings": {
+      "unitOfLength": "Unit of length"
     },
     "dev": {
       "storybook": "Storybook",

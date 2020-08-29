@@ -38,7 +38,8 @@
       "filtersClear": "Limpar todos os filtros",
       "filterSpecies": "Espécie animal",
       "filterType": "Tipo de litten",
-      "filterLocationRadius": "Localização"
+      "filterLocationRadius": "Localização",
+      "filterLocationRadiusValue": "Encontrar littens até {{value}} {{unit}} de mim"
     },
     "favourites": {
       "title": "Favoritos",
@@ -98,6 +99,9 @@
       "secondHeader": "As tuas definições",
       "settings": "Opções",
       "termsAndConditions": "Termos e condições"
+    },
+    "settings": {
+      "unitOfLength": "Unidade de comprimento"
     },
     "dev": {
       "storybook": "Storybook",
