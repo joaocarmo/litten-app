@@ -37,7 +37,8 @@
     "start:firebase": "firebase emulators:start",
     "start": "react-native start",
     "storybook": "(adb reverse tcp:7007 tcp:7007 || true) && start-storybook",
-    "test": "jest --forceExit"
+    "test": "jest --forceExit",
+    "type-check": "yarn flow"
   },
   "husky": {
     "hooks": {
@@ -70,7 +71,7 @@
     "md5-hex": "^3.0.1",
     "react": "16.13.1",
     "react-native": "0.63.2",
-    "react-native-device-info": "^5.6.3",
+    "react-native-device-info": "^6.0.0",
     "react-native-dotenv": "^2.2.0",
     "react-native-expo-viewport-units": "^0.0.8",
     "react-native-gesture-handler": "^1.7.0",

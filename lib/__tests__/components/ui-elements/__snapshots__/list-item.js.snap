@@ -23,19 +23,30 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
     ]
   }
 >
-  <Text
+  <View
     style={
       Object {
-        "color": "#000000",
-        "fontSize": 12,
-        "fontWeight": "500",
-        "paddingBottom": 12,
-        "paddingTop": 12,
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
       }
     }
   >
-    Some text here
-  </Text>
+    <Text
+      style={
+        Object {
+          "color": "#000000",
+          "fontSize": 14,
+          "fontWeight": "500",
+          "paddingBottom": 12,
+          "paddingTop": 12,
+        }
+      }
+    >
+      Some text here
+    </Text>
+  </View>
   <View
     style={
       Object {

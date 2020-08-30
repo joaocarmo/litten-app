@@ -12227,10 +12227,10 @@ react-native-color-picker@^0.4.0:
     prop-types "^15.5.10"
     tinycolor2 "^1.4.1"
 
-react-native-device-info@^5.6.3:
-  version "5.6.5"
-  resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-5.6.5.tgz#3f18d7c38b21cfc475163351a9aae6e9037a43a0"
-  integrity sha512-l457wv7gYXSRnm38AH+NpCgKYa1zxxfN0EL8mTBxo+TnasXtk0FZ86zWDLhm4eqpcSH8xpT/+z2MQrATfqCaoA==
+react-native-device-info@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-6.0.0.tgz#c281749ea257c0cd87166ebec682b93d1f5e220a"
+  integrity sha512-aB0NFzct/bBsXH8/6Zzz659dmsnbLZHCtSnKKP9sw+3he9o4jWEjPhirtcZsVwPAYeIqGewauqRAYoTMmFXTtg==
 
 react-native-dotenv@^2.2.0:
   version "2.3.0"
