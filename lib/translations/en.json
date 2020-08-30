@@ -101,7 +101,7 @@
       "termsAndConditions": "Terms and conditions"
     },
     "settings": {
-      "unitOfLength": "Unit of length"
+      "useMetricUnits": "Use metric units"
     },
     "dev": {
       "storybook": "Storybook",

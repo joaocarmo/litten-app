@@ -78,9 +78,7 @@ Array [
         }
       }
     >
-      <View
-        style={Object {}}
-      >
+      <View>
         <RNCPicker
           items={
             Array [
@@ -103,7 +101,7 @@ Array [
               Object {
                 "height": 216,
               },
-              Object {},
+              undefined,
             ]
           }
         />

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for the "UISlider" component renders correctly 1`] = `
+<RNCSlider
+  disabled={false}
+  enabled={true}
+  inverted={false}
+  maximumValue={100}
+  minimumTrackTintColor="#7239F2"
+  minimumValue={1}
+  onChange={null}
+  onRNCSliderSlidingComplete={null}
+  onRNCSliderSlidingStart={null}
+  onRNCSliderValueChange={null}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  step={1}
+  style={
+    Array [
+      Object {
+        "height": 40,
+      },
+      Object {
+        "height": 80,
+      },
+    ]
+  }
+  thumbImage={null}
+  value={35}
+/>
+`;
