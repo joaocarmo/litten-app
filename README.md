@@ -61,7 +61,7 @@ Additionally, you should install, configure and integrate the
 
 ### Current API dependecies
 
-* [Google Maps (Geocoding)][googleapikey]
+- [Google Maps (Geocoding)][googleapikey]
 
 ## License
 

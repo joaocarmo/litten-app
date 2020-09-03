@@ -4,20 +4,24 @@ module.exports = {
     '@react-native-community',
     'plugin:jest/recommended',
     'plugin:jest/style',
+    'prettier',
   ],
   plugins: ['jest'],
   env: {
     'jest/globals': true,
   },
   rules: {
-    semi: 0,
+    semi: ['error', 'never'],
     'object-curly-spacing': ['error', 'always'],
-    'jest/expect-expect': 0,
-    /* Enable to catch strings not going through the translation framework
-    'react/jsx-no-literals': [
-      'error',
-      { noStrings: true, allowedStrings: ['&bull;'] },
-    ],
-    */
+    'jest/expect-expect': 'off',
+    'react/jsx-no-literals': ['error', { noStrings: false, ignoreProps: true }],
   },
+  overrides: [
+    {
+      files: ['**/__tests__/**/*.js', '**/storybook/**/*.js'],
+      rules: {
+        'react/jsx-no-literals': 'off',
+      },
+    },
+  ],
 }
