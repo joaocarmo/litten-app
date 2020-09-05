@@ -9,15 +9,16 @@ Litten app iOS repository using React Native
 yarn install
 
 # Install the cocoapods dependencies
-cd ios/
-pod install
-cd -
+yarn pods
 
 # Run the simulator
 yarn ios
 
 # Run the ES linter
 yarn lint
+
+# Run the Flow type checker
+yarn type-check
 
 # Run the tests
 yarn test

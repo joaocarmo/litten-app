@@ -39,7 +39,8 @@
       "filterSpecies": "Animal species",
       "filterType": "Looking for",
       "filterLocationRadius": "Location",
-      "filterLocationRadiusValue": "Find littens within {{value}} {{unit}} of me"
+      "filterLocationRadiusValue": "Find littens within {{value}} {{unit}} of me",
+      "filterLocationRadiusValueShort": "Within {{value}} {{unit}}"
     },
     "favourites": {
       "title": "Favourites",

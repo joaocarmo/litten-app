@@ -39,8 +39,6 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
           "color": "#000000",
           "fontSize": 14,
           "fontWeight": "500",
-          "paddingBottom": 12,
-          "paddingTop": 12,
         }
       }
     >

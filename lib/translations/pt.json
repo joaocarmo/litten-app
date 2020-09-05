@@ -39,7 +39,8 @@
       "filterSpecies": "Espécie animal",
       "filterType": "Tipo de litten",
       "filterLocationRadius": "Localização",
-      "filterLocationRadiusValue": "Encontrar littens até {{value}} {{unit}} de mim"
+      "filterLocationRadiusValue": "Encontrar littens até {{value}} {{unit}} de mim",
+      "filterLocationRadiusValueShort": "Até {{value}} {{unit}}"
     },
     "favourites": {
       "title": "Favoritos",

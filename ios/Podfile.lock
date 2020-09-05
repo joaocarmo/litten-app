@@ -620,16 +620,16 @@ PODS:
     - React
   - RNCPicker (1.6.6):
     - React
-  - RNDeviceInfo (6.0.1):
+  - RNDeviceInfo (6.0.2):
     - React
   - RNFBApp (8.4.1):
     - Firebase/CoreOnly (~> 6.30.0)
     - React
-  - RNFBAuth (9.2.0):
+  - RNFBAuth (9.2.1):
     - Firebase/Auth (~> 6.30.0)
     - React
     - RNFBApp
-  - RNFBFirestore (7.7.0):
+  - RNFBFirestore (7.8.0):
     - Firebase/Firestore (~> 6.30.0)
     - React
     - RNFBApp
@@ -637,14 +637,14 @@ PODS:
     - Firebase/Storage (~> 6.30.0)
     - React
     - RNFBApp
-  - RNGestureHandler (1.7.0):
+  - RNGestureHandler (1.8.0):
     - React
-  - RNImageCropPicker (0.33.2):
+  - RNImageCropPicker (0.33.3):
     - React-Core
     - React-RCTImage
-    - RNImageCropPicker/QBImagePickerController (= 0.33.2)
+    - RNImageCropPicker/QBImagePickerController (= 0.33.3)
     - TOCropViewController
-  - RNImageCropPicker/QBImagePickerController (0.33.2):
+  - RNImageCropPicker/QBImagePickerController (0.33.3):
     - React-Core
     - React-RCTImage
     - TOCropViewController
@@ -909,13 +909,13 @@ SPEC CHECKSUMS:
   RNCAsyncStorage: 2a692bcb9b69b76a2f1a95f33db057129700af64
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
   RNCPicker: 494015f2b7ec4bee5484b6f235aa19691426dcdb
-  RNDeviceInfo: 6dd5c07a482f2a5e4a29fe8a9d99eadd4277175a
+  RNDeviceInfo: bdd61e8b070d13a1dd9d022091981075ed4cde16
   RNFBApp: e4321cad5dd23b43b3b4f0ca060300b9f85cb7a4
-  RNFBAuth: 72ccfbe7546d85f9fadeda1c0c66435e0f8be748
-  RNFBFirestore: c413090ba61ce5c887d4660a5400bb37480b1606
+  RNFBAuth: 09c6ceda66777758b6ffebf464f3226399e5732a
+  RNFBFirestore: e19737a64f9c46b00b1179b45c5cb20cf0c7c3ee
   RNFBStorage: 86cbaa653806e23b34dde6645edf349a0cd51e82
-  RNGestureHandler: b6b359bb800ae399a9c8b27032bdbf7c18f08a08
-  RNImageCropPicker: 82f4caef16a37c07cbb0171be95aa5584f99bd9d
+  RNGestureHandler: 7a5833d0f788dbd107fbb913e09aa0c1ff333c39
+  RNImageCropPicker: c7858ca10612c16594b1b4771f0f344b28aa8faf
   RNLocalize: 49634a6a605dcdeb319e9c42a5c2f1aec508694b
   RNReanimated: 89f5e0a04d1dd52fbf27e7e7030d8f80a646a3fc
   RNScreens: b748efec66e095134c7166ca333b628cd7e6f3e2
