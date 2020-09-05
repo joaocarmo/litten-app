@@ -1,9 +1,7 @@
 # OSX
-#
 .DS_Store
 
 # Xcode
-#
 build/
 *.pbxuser
 !default.pbxuser
@@ -22,7 +20,6 @@ DerivedData
 *.xcuserstate
 
 # Android/IntelliJ
-#
 build/
 .idea
 .gradle
@@ -30,7 +27,6 @@ local.properties
 *.iml
 
 # node.js
-#
 node_modules/
 *-debug.log
 yarn-error.log
@@ -66,3 +62,7 @@ google-services.json
 
 # Environment variables
 .env
+
+# Flow typed
+flow-typed/
+!flow-typed/npm/react-native-dotenv_vx.x.x.js

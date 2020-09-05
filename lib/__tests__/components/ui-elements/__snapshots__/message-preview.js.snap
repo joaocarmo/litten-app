@@ -3,54 +3,62 @@
 exports[`Snapshot test for the "UIMessagePreview" component renders correctly 1`] = `
 Array [
   <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "opacity": 1,
-      }
+      Array [
+        Array [
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 10,
+            "flex": 1,
+            "marginBottom": 8,
+            "marginTop": 8,
+            "minHeight": 64,
+            "paddingLeft": 20,
+            "paddingRight": 20,
+          },
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          },
+        ],
+        Object {
+          "backgroundColor": "#39A4F2",
+        },
+      ]
     }
   >
     <View
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
         }
       }
     >
       <View
         style={
           Object {
-            "alignItems": "center",
-            "display": "flex",
             "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
           }
         }
       >
         <Text
-          numberOfLines={1}
           style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
+            Array [
+              Object {
+                "color": "#000000",
+                "fontSize": 14,
+                "fontWeight": "500",
+                "paddingBottom": 3,
+              },
+              Object {
+                "color": "#FFFFFF",
+              },
+            ]
           }
         >
           Cat: Snowball
@@ -58,739 +66,43 @@ Array [
         <View
           style={
             Object {
-              "alignItems": "center",
-              "display": "flex",
               "flexDirection": "row",
-              "justifyContent": "flex-end",
+              "paddingTop": 3,
             }
           }
         >
           <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
+            numberOfLines={1}
             style={
               Array [
                 Object {
-                  "backgroundColor": "#6A6767",
-                  "borderRadius": 5,
-                  "height": 10,
-                  "marginLeft": 12,
-                  "width": 10,
+                  "fontSize": 12,
+                  "marginRight": 6,
                 },
                 Object {
-                  "backgroundColor": "#7239F2",
+                  "color": "#FFFFFF",
                 },
               ]
             }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
-        </View>
-      </View>
-    </View>
-  </View>,
-  <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-            }
-          }
-        >
+          >
+            @johnnyeyelash
+          </Text>
           <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
-        </View>
-      </View>
-    </View>
-  </View>,
-  <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
-        </View>
-      </View>
-    </View>
-  </View>,
-  <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
-        </View>
-      </View>
-    </View>
-  </View>,
-  <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
+            numberOfLines={1}
             style={
               Array [
                 Object {
-                  "backgroundColor": "#6A6767",
-                  "borderRadius": 5,
-                  "height": 10,
-                  "marginLeft": 12,
-                  "width": 10,
+                  "flex": 1,
+                  "fontSize": 12,
+                  "fontWeight": "200",
                 },
                 Object {
-                  "backgroundColor": "#7239F2",
+                  "color": "#FFFFFF",
                 },
               ]
             }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
+          >
+            It is a long established fact that a reader will be distracted by 
 the readable content of a page when looking at its layout. The 
 point of using Lorem Ipsum is that it has a more-or-less normal 
 distribution of letters, as opposed to using 'Content here, 
@@ -800,91 +112,67 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
+          </Text>
         </View>
       </View>
     </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
   </View>,
   <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "opacity": 1,
-      }
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
     }
   >
     <View
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
         }
       }
     >
       <View
         style={
           Object {
-            "alignItems": "center",
-            "display": "flex",
             "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
           }
         }
       >
         <Text
-          numberOfLines={1}
           style={
             Object {
               "color": "#000000",
               "fontSize": 14,
-              "fontWeight": "600",
+              "fontWeight": "500",
+              "paddingBottom": 3,
             }
           }
         >
@@ -893,69 +181,33 @@ purpose (injected humour and the like).
         <View
           style={
             Object {
-              "alignItems": "center",
-              "display": "flex",
               "flexDirection": "row",
-              "justifyContent": "flex-end",
+              "paddingTop": 3,
             }
           }
         >
           <Text
+            numberOfLines={1}
             style={
               Object {
-                "color": "#000000",
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
                 "fontSize": 12,
                 "fontWeight": "200",
               }
             }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
+          >
+            It is a long established fact that a reader will be distracted by 
 the readable content of a page when looking at its layout. The 
 point of using Lorem Ipsum is that it has a more-or-less normal 
 distribution of letters, as opposed to using 'Content here, 
@@ -965,91 +217,67 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
+          </Text>
         </View>
       </View>
     </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
   </View>,
   <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "opacity": 1,
-      }
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
     }
   >
     <View
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
         }
       }
     >
       <View
         style={
           Object {
-            "alignItems": "center",
-            "display": "flex",
             "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
           }
         }
       >
         <Text
-          numberOfLines={1}
           style={
             Object {
               "color": "#000000",
               "fontSize": 14,
-              "fontWeight": "600",
+              "fontWeight": "500",
+              "paddingBottom": 3,
             }
           }
         >
@@ -1058,69 +286,33 @@ purpose (injected humour and the like).
         <View
           style={
             Object {
-              "alignItems": "center",
-              "display": "flex",
               "flexDirection": "row",
-              "justifyContent": "flex-end",
+              "paddingTop": 3,
             }
           }
         >
           <Text
+            numberOfLines={1}
             style={
               Object {
-                "color": "#000000",
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
                 "fontSize": 12,
                 "fontWeight": "200",
               }
             }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
+          >
+            It is a long established fact that a reader will be distracted by 
 the readable content of a page when looking at its layout. The 
 point of using Lorem Ipsum is that it has a more-or-less normal 
 distribution of letters, as opposed to using 'Content here, 
@@ -1130,91 +322,67 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
+          </Text>
         </View>
       </View>
     </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
   </View>,
   <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "opacity": 1,
-      }
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
     }
   >
     <View
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
         }
       }
     >
       <View
         style={
           Object {
-            "alignItems": "center",
-            "display": "flex",
             "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
           }
         }
       >
         <Text
-          numberOfLines={1}
           style={
             Object {
               "color": "#000000",
               "fontSize": 14,
-              "fontWeight": "600",
+              "fontWeight": "500",
+              "paddingBottom": 3,
             }
           }
         >
@@ -1223,69 +391,33 @@ purpose (injected humour and the like).
         <View
           style={
             Object {
-              "alignItems": "center",
-              "display": "flex",
               "flexDirection": "row",
-              "justifyContent": "flex-end",
+              "paddingTop": 3,
             }
           }
         >
           <Text
+            numberOfLines={1}
             style={
               Object {
-                "color": "#000000",
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
                 "fontSize": 12,
                 "fontWeight": "200",
               }
             }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
+          >
+            It is a long established fact that a reader will be distracted by 
 the readable content of a page when looking at its layout. The 
 point of using Lorem Ipsum is that it has a more-or-less normal 
 distribution of letters, as opposed to using 'Content here, 
@@ -1295,92 +427,78 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
+          </Text>
         </View>
       </View>
     </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
   </View>,
   <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "opacity": 1,
-      }
+      Array [
+        Array [
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 10,
+            "flex": 1,
+            "marginBottom": 8,
+            "marginTop": 8,
+            "minHeight": 64,
+            "paddingLeft": 20,
+            "paddingRight": 20,
+          },
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          },
+        ],
+        Object {
+          "backgroundColor": "#39A4F2",
+        },
+      ]
     }
   >
     <View
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
         }
       }
     >
       <View
         style={
           Object {
-            "alignItems": "center",
-            "display": "flex",
             "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
           }
         }
       >
         <Text
-          numberOfLines={1}
           style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
+            Array [
+              Object {
+                "color": "#000000",
+                "fontSize": 14,
+                "fontWeight": "500",
+                "paddingBottom": 3,
+              },
+              Object {
+                "color": "#FFFFFF",
+              },
+            ]
           }
         >
           Cat: Snowball
@@ -1388,739 +506,43 @@ purpose (injected humour and the like).
         <View
           style={
             Object {
-              "alignItems": "center",
-              "display": "flex",
               "flexDirection": "row",
-              "justifyContent": "flex-end",
+              "paddingTop": 3,
             }
           }
         >
           <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
+            numberOfLines={1}
             style={
               Array [
                 Object {
-                  "backgroundColor": "#6A6767",
-                  "borderRadius": 5,
-                  "height": 10,
-                  "marginLeft": 12,
-                  "width": 10,
+                  "fontSize": 12,
+                  "marginRight": 6,
                 },
                 Object {
-                  "backgroundColor": "#7239F2",
+                  "color": "#FFFFFF",
                 },
               ]
             }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
-        </View>
-      </View>
-    </View>
-  </View>,
-  <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-            }
-          }
-        >
+          >
+            @johnnyeyelash
+          </Text>
           <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
-        </View>
-      </View>
-    </View>
-  </View>,
-  <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
-        </View>
-      </View>
-    </View>
-  </View>,
-  <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
-        </View>
-      </View>
-    </View>
-  </View>,
-  <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
+            numberOfLines={1}
             style={
               Array [
                 Object {
-                  "backgroundColor": "#6A6767",
-                  "borderRadius": 5,
-                  "height": 10,
-                  "marginLeft": 12,
-                  "width": 10,
+                  "flex": 1,
+                  "fontSize": 12,
+                  "fontWeight": "200",
                 },
                 Object {
-                  "backgroundColor": "#7239F2",
+                  "color": "#FFFFFF",
                 },
               ]
             }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
+          >
+            It is a long established fact that a reader will be distracted by 
 the readable content of a page when looking at its layout. The 
 point of using Lorem Ipsum is that it has a more-or-less normal 
 distribution of letters, as opposed to using 'Content here, 
@@ -2130,91 +552,67 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
+          </Text>
         </View>
       </View>
     </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
   </View>,
   <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "opacity": 1,
-      }
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
     }
   >
     <View
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
         }
       }
     >
       <View
         style={
           Object {
-            "alignItems": "center",
-            "display": "flex",
             "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
           }
         }
       >
         <Text
-          numberOfLines={1}
           style={
             Object {
               "color": "#000000",
               "fontSize": 14,
-              "fontWeight": "600",
+              "fontWeight": "500",
+              "paddingBottom": 3,
             }
           }
         >
@@ -2223,69 +621,33 @@ purpose (injected humour and the like).
         <View
           style={
             Object {
-              "alignItems": "center",
-              "display": "flex",
               "flexDirection": "row",
-              "justifyContent": "flex-end",
+              "paddingTop": 3,
             }
           }
         >
           <Text
+            numberOfLines={1}
             style={
               Object {
-                "color": "#000000",
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
                 "fontSize": 12,
                 "fontWeight": "200",
               }
             }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
+          >
+            It is a long established fact that a reader will be distracted by 
 the readable content of a page when looking at its layout. The 
 point of using Lorem Ipsum is that it has a more-or-less normal 
 distribution of letters, as opposed to using 'Content here, 
@@ -2295,91 +657,67 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
+          </Text>
         </View>
       </View>
     </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
   </View>,
   <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "opacity": 1,
-      }
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
     }
   >
     <View
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
         }
       }
     >
       <View
         style={
           Object {
-            "alignItems": "center",
-            "display": "flex",
             "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
           }
         }
       >
         <Text
-          numberOfLines={1}
           style={
             Object {
               "color": "#000000",
               "fontSize": 14,
-              "fontWeight": "600",
+              "fontWeight": "500",
+              "paddingBottom": 3,
             }
           }
         >
@@ -2388,69 +726,33 @@ purpose (injected humour and the like).
         <View
           style={
             Object {
-              "alignItems": "center",
-              "display": "flex",
               "flexDirection": "row",
-              "justifyContent": "flex-end",
+              "paddingTop": 3,
             }
           }
         >
           <Text
+            numberOfLines={1}
             style={
               Object {
-                "color": "#000000",
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
                 "fontSize": 12,
                 "fontWeight": "200",
               }
             }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
+          >
+            It is a long established fact that a reader will be distracted by 
 the readable content of a page when looking at its layout. The 
 point of using Lorem Ipsum is that it has a more-or-less normal 
 distribution of letters, as opposed to using 'Content here, 
@@ -2460,91 +762,67 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
+          </Text>
         </View>
       </View>
     </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
   </View>,
   <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "opacity": 1,
-      }
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
     }
   >
     <View
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
         }
       }
     >
       <View
         style={
           Object {
-            "alignItems": "center",
-            "display": "flex",
             "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
           }
         }
       >
         <Text
-          numberOfLines={1}
           style={
             Object {
               "color": "#000000",
               "fontSize": 14,
-              "fontWeight": "600",
+              "fontWeight": "500",
+              "paddingBottom": 3,
             }
           }
         >
@@ -2553,69 +831,33 @@ purpose (injected humour and the like).
         <View
           style={
             Object {
-              "alignItems": "center",
-              "display": "flex",
               "flexDirection": "row",
-              "justifyContent": "flex-end",
+              "paddingTop": 3,
             }
           }
         >
           <Text
+            numberOfLines={1}
             style={
               Object {
-                "color": "#000000",
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
                 "fontSize": 12,
                 "fontWeight": "200",
               }
             }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
+          >
+            It is a long established fact that a reader will be distracted by 
 the readable content of a page when looking at its layout. The 
 point of using Lorem Ipsum is that it has a more-or-less normal 
 distribution of letters, as opposed to using 'Content here, 
@@ -2625,92 +867,78 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
+          </Text>
         </View>
       </View>
     </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
   </View>,
   <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "opacity": 1,
-      }
+      Array [
+        Array [
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 10,
+            "flex": 1,
+            "marginBottom": 8,
+            "marginTop": 8,
+            "minHeight": 64,
+            "paddingLeft": 20,
+            "paddingRight": 20,
+          },
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          },
+        ],
+        Object {
+          "backgroundColor": "#39A4F2",
+        },
+      ]
     }
   >
     <View
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
         }
       }
     >
       <View
         style={
           Object {
-            "alignItems": "center",
-            "display": "flex",
             "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
           }
         }
       >
         <Text
-          numberOfLines={1}
           style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
+            Array [
+              Object {
+                "color": "#000000",
+                "fontSize": 14,
+                "fontWeight": "500",
+                "paddingBottom": 3,
+              },
+              Object {
+                "color": "#FFFFFF",
+              },
+            ]
           }
         >
           Cat: Snowball
@@ -2718,739 +946,43 @@ purpose (injected humour and the like).
         <View
           style={
             Object {
-              "alignItems": "center",
-              "display": "flex",
               "flexDirection": "row",
-              "justifyContent": "flex-end",
+              "paddingTop": 3,
             }
           }
         >
           <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
+            numberOfLines={1}
             style={
               Array [
                 Object {
-                  "backgroundColor": "#6A6767",
-                  "borderRadius": 5,
-                  "height": 10,
-                  "marginLeft": 12,
-                  "width": 10,
+                  "fontSize": 12,
+                  "marginRight": 6,
                 },
                 Object {
-                  "backgroundColor": "#7239F2",
+                  "color": "#FFFFFF",
                 },
               ]
             }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
-        </View>
-      </View>
-    </View>
-  </View>,
-  <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-            }
-          }
-        >
+          >
+            @johnnyeyelash
+          </Text>
           <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
-        </View>
-      </View>
-    </View>
-  </View>,
-  <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
-        </View>
-      </View>
-    </View>
-  </View>,
-  <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
-        </View>
-      </View>
-    </View>
-  </View>,
-  <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
+            numberOfLines={1}
             style={
               Array [
                 Object {
-                  "backgroundColor": "#6A6767",
-                  "borderRadius": 5,
-                  "height": 10,
-                  "marginLeft": 12,
-                  "width": 10,
+                  "flex": 1,
+                  "fontSize": 12,
+                  "fontWeight": "200",
                 },
                 Object {
-                  "backgroundColor": "#7239F2",
+                  "color": "#FFFFFF",
                 },
               ]
             }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
+          >
+            It is a long established fact that a reader will be distracted by 
 the readable content of a page when looking at its layout. The 
 point of using Lorem Ipsum is that it has a more-or-less normal 
 distribution of letters, as opposed to using 'Content here, 
@@ -3460,91 +992,67 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
+          </Text>
         </View>
       </View>
     </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
   </View>,
   <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "opacity": 1,
-      }
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
     }
   >
     <View
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
         }
       }
     >
       <View
         style={
           Object {
-            "alignItems": "center",
-            "display": "flex",
             "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
           }
         }
       >
         <Text
-          numberOfLines={1}
           style={
             Object {
               "color": "#000000",
               "fontSize": 14,
-              "fontWeight": "600",
+              "fontWeight": "500",
+              "paddingBottom": 3,
             }
           }
         >
@@ -3553,69 +1061,33 @@ purpose (injected humour and the like).
         <View
           style={
             Object {
-              "alignItems": "center",
-              "display": "flex",
               "flexDirection": "row",
-              "justifyContent": "flex-end",
+              "paddingTop": 3,
             }
           }
         >
           <Text
+            numberOfLines={1}
             style={
               Object {
-                "color": "#000000",
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
                 "fontSize": 12,
                 "fontWeight": "200",
               }
             }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
+          >
+            It is a long established fact that a reader will be distracted by 
 the readable content of a page when looking at its layout. The 
 point of using Lorem Ipsum is that it has a more-or-less normal 
 distribution of letters, as opposed to using 'Content here, 
@@ -3625,91 +1097,67 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
+          </Text>
         </View>
       </View>
     </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
   </View>,
   <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "opacity": 1,
-      }
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
     }
   >
     <View
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
         }
       }
     >
       <View
         style={
           Object {
-            "alignItems": "center",
-            "display": "flex",
             "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
           }
         }
       >
         <Text
-          numberOfLines={1}
           style={
             Object {
               "color": "#000000",
               "fontSize": 14,
-              "fontWeight": "600",
+              "fontWeight": "500",
+              "paddingBottom": 3,
             }
           }
         >
@@ -3718,69 +1166,33 @@ purpose (injected humour and the like).
         <View
           style={
             Object {
-              "alignItems": "center",
-              "display": "flex",
               "flexDirection": "row",
-              "justifyContent": "flex-end",
+              "paddingTop": 3,
             }
           }
         >
           <Text
+            numberOfLines={1}
             style={
               Object {
-                "color": "#000000",
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
                 "fontSize": 12,
                 "fontWeight": "200",
               }
             }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
+          >
+            It is a long established fact that a reader will be distracted by 
 the readable content of a page when looking at its layout. The 
 point of using Lorem Ipsum is that it has a more-or-less normal 
 distribution of letters, as opposed to using 'Content here, 
@@ -3790,91 +1202,67 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
+          </Text>
         </View>
       </View>
     </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
   </View>,
   <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "opacity": 1,
-      }
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
     }
   >
     <View
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
         }
       }
     >
       <View
         style={
           Object {
-            "alignItems": "center",
-            "display": "flex",
             "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
           }
         }
       >
         <Text
-          numberOfLines={1}
           style={
             Object {
               "color": "#000000",
               "fontSize": 14,
-              "fontWeight": "600",
+              "fontWeight": "500",
+              "paddingBottom": 3,
             }
           }
         >
@@ -3883,69 +1271,33 @@ purpose (injected humour and the like).
         <View
           style={
             Object {
-              "alignItems": "center",
-              "display": "flex",
               "flexDirection": "row",
-              "justifyContent": "flex-end",
+              "paddingTop": 3,
             }
           }
         >
           <Text
+            numberOfLines={1}
             style={
               Object {
-                "color": "#000000",
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
                 "fontSize": 12,
                 "fontWeight": "200",
               }
             }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
+          >
+            It is a long established fact that a reader will be distracted by 
 the readable content of a page when looking at its layout. The 
 point of using Lorem Ipsum is that it has a more-or-less normal 
 distribution of letters, as opposed to using 'Content here, 
@@ -3955,92 +1307,78 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
+          </Text>
         </View>
       </View>
     </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
   </View>,
   <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "opacity": 1,
-      }
+      Array [
+        Array [
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 10,
+            "flex": 1,
+            "marginBottom": 8,
+            "marginTop": 8,
+            "minHeight": 64,
+            "paddingLeft": 20,
+            "paddingRight": 20,
+          },
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          },
+        ],
+        Object {
+          "backgroundColor": "#39A4F2",
+        },
+      ]
     }
   >
     <View
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
         }
       }
     >
       <View
         style={
           Object {
-            "alignItems": "center",
-            "display": "flex",
             "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
           }
         }
       >
         <Text
-          numberOfLines={1}
           style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
+            Array [
+              Object {
+                "color": "#000000",
+                "fontSize": 14,
+                "fontWeight": "500",
+                "paddingBottom": 3,
+              },
+              Object {
+                "color": "#FFFFFF",
+              },
+            ]
           }
         >
           Cat: Snowball
@@ -4048,739 +1386,43 @@ purpose (injected humour and the like).
         <View
           style={
             Object {
-              "alignItems": "center",
-              "display": "flex",
               "flexDirection": "row",
-              "justifyContent": "flex-end",
+              "paddingTop": 3,
             }
           }
         >
           <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
+            numberOfLines={1}
             style={
               Array [
                 Object {
-                  "backgroundColor": "#6A6767",
-                  "borderRadius": 5,
-                  "height": 10,
-                  "marginLeft": 12,
-                  "width": 10,
+                  "fontSize": 12,
+                  "marginRight": 6,
                 },
                 Object {
-                  "backgroundColor": "#7239F2",
+                  "color": "#FFFFFF",
                 },
               ]
             }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
-        </View>
-      </View>
-    </View>
-  </View>,
-  <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-            }
-          }
-        >
+          >
+            @johnnyeyelash
+          </Text>
           <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
-        </View>
-      </View>
-    </View>
-  </View>,
-  <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
-        </View>
-      </View>
-    </View>
-  </View>,
-  <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
-        </View>
-      </View>
-    </View>
-  </View>,
-  <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "600",
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-              "flexDirection": "row",
-              "justifyContent": "flex-end",
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "color": "#000000",
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
-            }
-          />
-          <View
+            numberOfLines={1}
             style={
               Array [
                 Object {
-                  "backgroundColor": "#6A6767",
-                  "borderRadius": 5,
-                  "height": 10,
-                  "marginLeft": 12,
-                  "width": 10,
+                  "flex": 1,
+                  "fontSize": 12,
+                  "fontWeight": "200",
                 },
                 Object {
-                  "backgroundColor": "#7239F2",
+                  "color": "#FFFFFF",
                 },
               ]
             }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
+          >
+            It is a long established fact that a reader will be distracted by 
 the readable content of a page when looking at its layout. The 
 point of using Lorem Ipsum is that it has a more-or-less normal 
 distribution of letters, as opposed to using 'Content here, 
@@ -4790,91 +1432,67 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
-        </Text>
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              },
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
-              },
-            ]
-          }
-        >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
-            }
-            style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
-            }
-          />
+          </Text>
         </View>
       </View>
     </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
   </View>,
   <View
-    accessible={true}
-    focusable={false}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "opacity": 1,
-      }
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
     }
   >
     <View
       style={
         Object {
-          "backgroundColor": "#FFFFFF",
-          "borderRadius": 10,
-          "height": 52,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "paddingLeft": 20,
-          "paddingRight": 20,
-          "width": "100%",
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
         }
       }
     >
       <View
         style={
           Object {
-            "alignItems": "center",
-            "display": "flex",
             "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
           }
         }
       >
         <Text
-          numberOfLines={1}
           style={
             Object {
               "color": "#000000",
               "fontSize": 14,
-              "fontWeight": "600",
+              "fontWeight": "500",
+              "paddingBottom": 3,
             }
           }
         >
@@ -4883,69 +1501,33 @@ purpose (injected humour and the like).
         <View
           style={
             Object {
-              "alignItems": "center",
-              "display": "flex",
               "flexDirection": "row",
-              "justifyContent": "flex-end",
+              "paddingTop": 3,
             }
           }
         >
           <Text
+            numberOfLines={1}
             style={
               Object {
-                "color": "#000000",
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
                 "fontSize": 12,
                 "fontWeight": "200",
               }
             }
-          />
-          <View
-            style={
-              Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
-              }
-            }
-          />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 12,
-              "fontWeight": "600",
-              "marginRight": 6,
-            }
-          }
-        >
-          @João Carmo
-        </Text>
-        <Text
-          numberOfLines={1}
-          style={
-            Object {
-              "color": "#000000",
-              "flex": 1,
-              "fontSize": 12,
-            }
-          }
-        >
-          It is a long established fact that a reader will be distracted by 
+          >
+            It is a long established fact that a reader will be distracted by 
 the readable content of a page when looking at its layout. The 
 point of using Lorem Ipsum is that it has a more-or-less normal 
 distribution of letters, as opposed to using 'Content here, 
@@ -4955,42 +1537,1780 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "paddingBottom": 3,
+            }
+          }
+        >
+          Cat: Snowball
         </Text>
         <View
           style={
+            Object {
+              "flexDirection": "row",
+              "paddingTop": 3,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 12,
+                "fontWeight": "200",
+              }
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "paddingBottom": 3,
+            }
+          }
+        >
+          Cat: Snowball
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "paddingTop": 3,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 12,
+                "fontWeight": "200",
+              }
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Array [
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 10,
+            "flex": 1,
+            "marginBottom": 8,
+            "marginTop": 8,
+            "minHeight": 64,
+            "paddingLeft": 20,
+            "paddingRight": 20,
+          },
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          },
+        ],
+        Object {
+          "backgroundColor": "#39A4F2",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Text
+          style={
             Array [
               Object {
-                "backgroundColor": "#6A6767",
-                "borderRadius": 5,
-                "height": 10,
-                "marginLeft": 12,
-                "width": 10,
+                "color": "#000000",
+                "fontSize": 14,
+                "fontWeight": "500",
+                "paddingBottom": 3,
               },
               Object {
-                "alignItems": "center",
-                "backgroundColor": "#EFF1F3",
-                "justifyContent": "center",
+                "color": "#FFFFFF",
               },
             ]
           }
         >
-          <Image
-            resizeMode="contain"
-            source={
-              Object {
-                "uri": "",
-              }
+          Cat: Snowball
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "paddingTop": 3,
             }
+          }
+        >
+          <Text
+            numberOfLines={1}
             style={
-              Object {
-                "height": 7,
-                "width": 7,
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "marginRight": 6,
+                },
+                Object {
+                  "color": "#FFFFFF",
+                },
+              ]
             }
-          />
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "flex": 1,
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "color": "#FFFFFF",
+                },
+              ]
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
         </View>
       </View>
     </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "paddingBottom": 3,
+            }
+          }
+        >
+          Cat: Snowball
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "paddingTop": 3,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 12,
+                "fontWeight": "200",
+              }
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "paddingBottom": 3,
+            }
+          }
+        >
+          Cat: Snowball
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "paddingTop": 3,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 12,
+                "fontWeight": "200",
+              }
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "paddingBottom": 3,
+            }
+          }
+        >
+          Cat: Snowball
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "paddingTop": 3,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 12,
+                "fontWeight": "200",
+              }
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Array [
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 10,
+            "flex": 1,
+            "marginBottom": 8,
+            "marginTop": 8,
+            "minHeight": 64,
+            "paddingLeft": 20,
+            "paddingRight": 20,
+          },
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          },
+        ],
+        Object {
+          "backgroundColor": "#39A4F2",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#000000",
+                "fontSize": 14,
+                "fontWeight": "500",
+                "paddingBottom": 3,
+              },
+              Object {
+                "color": "#FFFFFF",
+              },
+            ]
+          }
+        >
+          Cat: Snowball
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "paddingTop": 3,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "marginRight": 6,
+                },
+                Object {
+                  "color": "#FFFFFF",
+                },
+              ]
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "flex": 1,
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "color": "#FFFFFF",
+                },
+              ]
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "paddingBottom": 3,
+            }
+          }
+        >
+          Cat: Snowball
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "paddingTop": 3,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 12,
+                "fontWeight": "200",
+              }
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "paddingBottom": 3,
+            }
+          }
+        >
+          Cat: Snowball
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "paddingTop": 3,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 12,
+                "fontWeight": "200",
+              }
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "paddingBottom": 3,
+            }
+          }
+        >
+          Cat: Snowball
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "paddingTop": 3,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 12,
+                "fontWeight": "200",
+              }
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Array [
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 10,
+            "flex": 1,
+            "marginBottom": 8,
+            "marginTop": 8,
+            "minHeight": 64,
+            "paddingLeft": 20,
+            "paddingRight": 20,
+          },
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          },
+        ],
+        Object {
+          "backgroundColor": "#39A4F2",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#000000",
+                "fontSize": 14,
+                "fontWeight": "500",
+                "paddingBottom": 3,
+              },
+              Object {
+                "color": "#FFFFFF",
+              },
+            ]
+          }
+        >
+          Cat: Snowball
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "paddingTop": 3,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "marginRight": 6,
+                },
+                Object {
+                  "color": "#FFFFFF",
+                },
+              ]
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "flex": 1,
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "color": "#FFFFFF",
+                },
+              ]
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "paddingBottom": 3,
+            }
+          }
+        >
+          Cat: Snowball
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "paddingTop": 3,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 12,
+                "fontWeight": "200",
+              }
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "paddingBottom": 3,
+            }
+          }
+        >
+          Cat: Snowball
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "paddingTop": 3,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 12,
+                "fontWeight": "200",
+              }
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "paddingBottom": 3,
+            }
+          }
+        >
+          Cat: Snowball
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "paddingTop": 3,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 12,
+                "fontWeight": "200",
+              }
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Array [
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 10,
+            "flex": 1,
+            "marginBottom": 8,
+            "marginTop": 8,
+            "minHeight": 64,
+            "paddingLeft": 20,
+            "paddingRight": 20,
+          },
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          },
+        ],
+        Object {
+          "backgroundColor": "#39A4F2",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#000000",
+                "fontSize": 14,
+                "fontWeight": "500",
+                "paddingBottom": 3,
+              },
+              Object {
+                "color": "#FFFFFF",
+              },
+            ]
+          }
+        >
+          Cat: Snowball
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "paddingTop": 3,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "marginRight": 6,
+                },
+                Object {
+                  "color": "#FFFFFF",
+                },
+              ]
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "flex": 1,
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "color": "#FFFFFF",
+                },
+              ]
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 10,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "paddingBottom": 3,
+            }
+          }
+        >
+          Cat: Snowball
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "paddingTop": 3,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "fontSize": 12,
+                "marginRight": 6,
+              }
+            }
+          >
+            @johnnyeyelash
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Object {
+                "flex": 1,
+                "fontSize": 12,
+                "fontWeight": "200",
+              }
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
   </View>,
 ]
 `;
