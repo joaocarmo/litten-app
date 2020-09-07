@@ -618,7 +618,7 @@ PODS:
     - React
   - RNCMaskedView (0.1.10):
     - React
-  - RNCPicker (1.6.6):
+  - RNCPicker (1.7.1):
     - React
   - RNDeviceInfo (6.0.2):
     - React
@@ -639,12 +639,12 @@ PODS:
     - RNFBApp
   - RNGestureHandler (1.8.0):
     - React
-  - RNImageCropPicker (0.33.3):
+  - RNImageCropPicker (0.34.1):
     - React-Core
     - React-RCTImage
-    - RNImageCropPicker/QBImagePickerController (= 0.33.3)
+    - RNImageCropPicker/QBImagePickerController (= 0.34.1)
     - TOCropViewController
-  - RNImageCropPicker/QBImagePickerController (0.33.3):
+  - RNImageCropPicker/QBImagePickerController (0.34.1):
     - React-Core
     - React-RCTImage
     - TOCropViewController
@@ -908,14 +908,14 @@ SPEC CHECKSUMS:
   ReactCommon: a0a1edbebcac5e91338371b72ffc66aa822792ce
   RNCAsyncStorage: 2a692bcb9b69b76a2f1a95f33db057129700af64
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
-  RNCPicker: 494015f2b7ec4bee5484b6f235aa19691426dcdb
+  RNCPicker: a2bf7bad059f23de52add203c3c5a3bc5b5239d8
   RNDeviceInfo: bdd61e8b070d13a1dd9d022091981075ed4cde16
   RNFBApp: e4321cad5dd23b43b3b4f0ca060300b9f85cb7a4
   RNFBAuth: 09c6ceda66777758b6ffebf464f3226399e5732a
   RNFBFirestore: e19737a64f9c46b00b1179b45c5cb20cf0c7c3ee
   RNFBStorage: 86cbaa653806e23b34dde6645edf349a0cd51e82
   RNGestureHandler: 7a5833d0f788dbd107fbb913e09aa0c1ff333c39
-  RNImageCropPicker: c7858ca10612c16594b1b4771f0f344b28aa8faf
+  RNImageCropPicker: 39ec170dc53c227ea352b706c76f7960070309a8
   RNLocalize: 49634a6a605dcdeb319e9c42a5c2f1aec508694b
   RNReanimated: 89f5e0a04d1dd52fbf27e7e7030d8f80a646a3fc
   RNScreens: b748efec66e095134c7166ca333b628cd7e6f3e2
