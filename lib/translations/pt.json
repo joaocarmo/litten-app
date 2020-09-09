@@ -76,7 +76,12 @@
     "messages": {
       "title": "Messages",
       "emptyTitle": "Estás com vergonha?",
-      "emptyText": "Inicia conversas e elas vão aparecer aqui"
+      "emptyText": "Inicia conversas e elas vão aparecer aqui",
+      "options": {
+        "viewProfile": "Ver perfil",
+        "deleteConversation": "Apagar conversa",
+        "blockUser": "Bloquear utilizador"
+      }
     },
     "profile": {
       "about": "Sobre",
@@ -99,7 +104,8 @@
       "privacyPolicy": "Política de privacidade",
       "secondHeader": "As tuas definições",
       "settings": "Opções",
-      "termsAndConditions": "Termos e condições"
+      "termsAndConditions": "Termos e condições",
+      "view": ""
     },
     "settings": {
       "useMetricUnits": "Usar medidas métricas"
@@ -132,8 +138,10 @@
   "feedback": {
     "pleaseWait": "Aguarda...",
     "confirmMessages": {
+      "blockUser": "Tens a certeza que queres bloquear {{user}}?",
       "clearFilters": "Tens a certeza que queres limpar os filtros?",
       "clearForm": "Tens a certeza que queres limpar o formulário?",
+      "deleteConversation": "Tens a certeza que queres apagar a conversa com {{user}}?",
       "signOut": "Tens a certeza que queres sair da app?"
     },
     "errorMessages": {
@@ -203,12 +211,14 @@
     }
   },
   "cta": {
+    "blockUser": "Bloquear utilizador",
     "cancel": "Cancelar",
     "change": "Alterar",
     "choose": "Escolher",
     "clearFilters": "Limpar filtros",
     "clearForm": "Limpar formulário",
     "continue": "Continuar",
+    "deleteConversation": "Apagar conversa",
     "done": "Pronto",
     "forgotPassword": "Esqueceste a senha?",
     "getStarted": "Iniciar",

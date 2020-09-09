@@ -65,8 +65,9 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
         Object {
           "optionsContainer": Object {
             "backgroundColor": "#FFFFFF",
-            "borderRadius": 20,
-            "borderWidth": 0,
+            "borderColor": "#C4C4C4",
+            "borderRadius": 6,
+            "borderWidth": 0.5,
             "padding": 10,
             "shadowOffset": Object {
               "height": 0,
@@ -78,6 +79,16 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
       }
     >
       <MenuOption
+        customStyles={
+          Object {
+            "optionWrapper": Object {
+              "paddingBottom": 10,
+              "paddingRight": 64,
+              "paddingTop": 10,
+            },
+          }
+        }
+        onSelect={[Function]}
         value="all"
       >
         <Text
@@ -85,7 +96,7 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
             Array [
               Object {
                 "color": "#6A6767",
-                "fontWeight": "600",
+                "fontWeight": "400",
                 "padding": 2,
               },
               Object {
@@ -98,13 +109,23 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
         </Text>
       </MenuOption>
       <MenuOption
+        customStyles={
+          Object {
+            "optionWrapper": Object {
+              "paddingBottom": 10,
+              "paddingRight": 64,
+              "paddingTop": 10,
+            },
+          }
+        }
+        onSelect={[Function]}
         value="read"
       >
         <Text
           style={
             Object {
               "color": "#6A6767",
-              "fontWeight": "600",
+              "fontWeight": "400",
               "padding": 2,
             }
           }
@@ -113,13 +134,23 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
         </Text>
       </MenuOption>
       <MenuOption
+        customStyles={
+          Object {
+            "optionWrapper": Object {
+              "paddingBottom": 10,
+              "paddingRight": 64,
+              "paddingTop": 10,
+            },
+          }
+        }
+        onSelect={[Function]}
         value="unread"
       >
         <Text
           style={
             Object {
               "color": "#6A6767",
-              "fontWeight": "600",
+              "fontWeight": "400",
               "padding": 2,
             }
           }

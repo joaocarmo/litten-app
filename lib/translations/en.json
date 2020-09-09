@@ -76,7 +76,12 @@
     "messages": {
       "title": "Messages",
       "emptyTitle": "Are you feeling shy?",
-      "emptyText": "Start conversations and they will show up in here"
+      "emptyText": "Start conversations and they will show up in here",
+      "options": {
+        "viewProfile": "View profile",
+        "deleteConversation": "Delete conversation",
+        "blockUser": "Block user"
+      }
     },
     "profile": {
       "about": "About",
@@ -99,7 +104,8 @@
       "privacyPolicy": "Privacy policy",
       "secondHeader": "Your definitions",
       "settings": "Settings",
-      "termsAndConditions": "Terms and conditions"
+      "termsAndConditions": "Terms and conditions",
+      "view": ""
     },
     "settings": {
       "useMetricUnits": "Use metric units"
@@ -132,8 +138,10 @@
   "feedback": {
     "pleaseWait": "Please wait...",
     "confirmMessages": {
+      "blockUser": "Are you sure you want to block {{user}}?",
       "clearFilters": "Are you sure you want to clear the filters?",
       "clearForm": "Are you sure you want to clear the form?",
+      "deleteConversation": "Are you sure you want to delete the conversation with {{user}}?",
       "signOut": "Are you sure you want to sign out of the app?"
     },
     "errorMessages": {
@@ -203,12 +211,14 @@
     }
   },
   "cta": {
+    "blockUser": "Block user",
     "cancel": "Cancel",
     "change": "Change",
     "choose": "Choose",
     "clearFilters": "Clear filters",
     "clearForm": "Clear form",
     "continue": "Continue",
+    "deleteConversation": "Delete conversation",
     "done": "Done",
     "forgotPassword": "Forgot password?",
     "getStarted": "Get started",
