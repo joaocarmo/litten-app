@@ -11,6 +11,7 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
         "marginBottom": 8,
         "marginTop": 8,
         "minHeight": 64,
+        "overflow": "hidden",
         "paddingLeft": 20,
         "paddingRight": 20,
       },
