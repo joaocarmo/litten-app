@@ -232,6 +232,15 @@
     "skip": "Próximo",
     "yes": "Sim"
   },
+  "accessibility": {
+    "tabBar": {
+      "home": "Procurar e filtrar",
+      "favourites": "Favoritos",
+      "newPost": "Novo litten",
+      "messages": "Mensagens",
+      "profile": "Perfil e definições"
+    }
+  },
   "easterEggs": {
     "simulation": "Estamos dentro de uma enorme câmara de simulação numa nave alienígena."
   }

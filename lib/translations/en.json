@@ -92,7 +92,7 @@
       "aboutOSVersion": "OS Version:",
       "aboutVersion": "Current version:",
       "activePosts": "Active posts",
-      "contactUs": "Report a Problem",
+      "contactUs": "Report a problem",
       "contactUsAbuse": "Spam or abuse",
       "contactUsBroken": "Something is broken",
       "contactUsFeedback": "General feedback",
@@ -231,6 +231,15 @@
     "signUp": "Sign up",
     "skip": "Skip",
     "yes": "Yes"
+  },
+  "accessibility": {
+    "tabBar": {
+      "home": "Search and filter",
+      "favourites": "Favourites",
+      "newPost": "New post",
+      "messages": "Messages",
+      "profile": "Profile and settings"
+    }
   },
   "easterEggs": {
     "simulation": "We're inside a huge simulation chamber on an alien spaceship."
