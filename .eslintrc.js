@@ -1,12 +1,14 @@
 module.exports = {
   root: true,
+  parser: 'babel-eslint',
   extends: [
     '@react-native-community',
     'plugin:jest/recommended',
     'plugin:jest/style',
+    'plugin:flowtype/recommended',
     'prettier',
   ],
-  plugins: ['jest'],
+  plugins: ['jest', 'flowtype'],
   env: {
     'jest/globals': true,
   },
@@ -24,4 +26,9 @@ module.exports = {
       },
     },
   ],
+  settings: {
+    flowtype: {
+      onlyFilesWithFlowAnnotation: true,
+    },
+  },
 }
