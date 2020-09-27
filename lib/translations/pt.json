@@ -70,6 +70,7 @@
       "useCurrentLocation": "Usar localização actual",
       "useCustomLocation": "Inserir manualmente",
       "useExistingLocation": "Usar localização existente",
+      "useExtraInfo": "Incluir mais detalhes sobre este litten",
       "useMapLocation": "Escolher no mapa",
       "useProfileLocation": "Usar localização actual"
     },
@@ -242,6 +243,7 @@
     }
   },
   "easterEggs": {
+    "placeholder": "Há dias de manhã em que, um homem à tarde, não deveria sair à noite.",
     "simulation": "Estamos dentro de uma enorme câmara de simulação numa nave alienígena."
   }
 }

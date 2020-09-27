@@ -70,6 +70,7 @@
       "useCurrentLocation": "Use current location",
       "useCustomLocation": "Enter manually",
       "useExistingLocation": "Use existing location",
+      "useExtraInfo": "Include more details about this litten",
       "useMapLocation": "Select using the map",
       "useProfileLocation": "Use profile location"
     },
@@ -242,6 +243,7 @@
     }
   },
   "easterEggs": {
+    "placeholder": "If you're seeing this, you are a very special person. This is a development placeholder and should have been removed from the final build.",
     "simulation": "We're inside a huge simulation chamber on an alien spaceship."
   }
 }
