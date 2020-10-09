@@ -75,6 +75,10 @@
       "useMapLocation": "Select using the map",
       "useProfileLocation": "Use profile location"
     },
+    "littenPost": {
+      "story": "Story",
+      "preview": "PREVIEW"
+    },
     "messages": {
       "title": "Messages",
       "emptyTitle": "Are you feeling shy?",

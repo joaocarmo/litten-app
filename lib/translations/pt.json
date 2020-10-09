@@ -75,6 +75,10 @@
       "useMapLocation": "Escolher no mapa",
       "useProfileLocation": "Usar localização actual"
     },
+    "littenPost": {
+      "story": "História",
+      "preview": "PRÉ-VISUALIZAÇÃO"
+    },
     "messages": {
       "title": "Messages",
       "emptyTitle": "Estás com vergonha?",

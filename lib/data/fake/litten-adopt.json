@@ -22,5 +22,8 @@
   "species": "LITTEN_SPECIES_CAT",
   "story": "He was a nameless cat, born with five siblings. They were all were cute and fluffy and a week old. Seven days old.  They were round and fluffy like a cotton ball. The nameless cat had gray and white fur.",
   "title": "Matty",
-  "type": "LITTEN_TYPE_ADOPT"
+  "type": "LITTEN_TYPE_ADOPT",
+  "metadata": {
+    "creationTime": 1588354084499
+  }
 }
