@@ -76,6 +76,7 @@
       "useProfileLocation": "Usar localização do perfil"
     },
     "littenPost": {
+      "emptyStory": "Era uma vez...",
       "story": "História",
       "preview": "PRÉ-VISUALIZAÇÃO"
     },

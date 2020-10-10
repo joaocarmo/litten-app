@@ -76,8 +76,9 @@
       "useProfileLocation": "Use profile location"
     },
     "littenPost": {
-      "story": "Story",
-      "preview": "PREVIEW"
+      "emptyStory": "Once upon a time...",
+      "preview": "PREVIEW",
+      "story": "Story"
     },
     "messages": {
       "title": "Messages",

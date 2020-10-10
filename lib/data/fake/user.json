@@ -1,5 +1,7 @@
 {
   "_id": 2,
+  "avatar": "https://placeimg.com/140/140/people",
+  "displayName": "Obi-Wan Kenobi",
   "name": "Obi-Wan Kenobi",
-  "avatar": "https://placeimg.com/140/140/people"
+  "photoURL": "https://placeimg.com/140/140/people"
 }
