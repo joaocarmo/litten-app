@@ -153,20 +153,26 @@
       "signOut": "Tens a certeza que queres sair da app?"
     },
     "errorMessages": {
+      "blankCountry": "O país não pode ser vazio",
       "blankEmail": "O email não pode ser vazio",
-      "invalidEmail": "O email deve ser válido",
       "blankName": "O nome não pode ser vazio",
       "blankPassword": "A senha não pode ser vazia",
-      "invalidPassword": "A senha deve ter, pelo menos, 10 caracteres",
-      "unmatchedPassword": "As senhas não condizem",
-      "blankCountry": "O país não pode ser vazio",
       "blankPhoneNumber": "O telemóvel não pode ser vazio",
+      "checkConnectionText": "Aqui é necessária uma ligação activa à internet",
+      "checkConnectionTitle": "Verifica a tua conectividade",
+      "invalidEmail": "O email deve ser válido",
+      "invalidLittenLocation": "Seria de grande ajuda saber onde se encontra o teu litten!",
+      "invalidLittenPhoto": "Considera adicionar, pelo menos, uma fotografia",
+      "invalidLittenSpecies": "Diz-nos a espécie do teu litten!",
+      "invalidLittenStory": "Porque não nos contas um pouco mais sobre o teu litten?",
+      "invalidLittenTitle": "O teu litten deve ter um nome, não?",
+      "invalidLittenType": "Diz-nos porque estás a criar um novo litten",
+      "invalidLocation": "A localização escolhida é inválida, tenta escolher outra ou usar outro método",
+      "invalidPassword": "A senha deve ter, pelo menos, 10 caracteres",
       "invalidPhoneNumber": "O telemóvel deve ser válido",
       "invalidPhoto": "Escolhe uma fotografia válida",
-      "invalidLocation": "A localização escolhida é inválida, tenta escolher outra ou usar outro método",
       "notImplemented": "Essa funcionalidade está inactiva",
-      "checkConnectionTitle": "Verifica a tua conectividade",
-      "checkConnectionText": "Aqui é necessária uma ligação activa à internet"
+      "unmatchedPassword": "As senhas não condizem"
     },
     "firebaseErrorMessages": {
       "auth/email-already-exists": "O email fornecido já existe",

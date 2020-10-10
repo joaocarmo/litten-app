@@ -9,7 +9,7 @@ exports[`Snapshot test for the "UISeparator" component renders correctly 1`] = `
         "marginTop": 20,
       },
       Object {
-        "backgroundColor": "#C4C4C4",
+        "backgroundColor": "#c4c4c4",
         "height": 0.5,
       },
     ]

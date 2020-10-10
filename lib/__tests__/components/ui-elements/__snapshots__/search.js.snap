@@ -11,7 +11,7 @@ exports[`Snapshot test for the "UISearch" component renders correctly 1`] = `
   rejectResponderTermination={true}
   style={
     Object {
-      "backgroundColor": "#FFFFFF",
+      "backgroundColor": "#ffffff",
       "borderRadius": 24,
       "minHeight": 36,
       "padding": 8,

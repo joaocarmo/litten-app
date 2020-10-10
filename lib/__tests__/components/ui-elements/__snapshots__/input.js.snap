@@ -6,7 +6,7 @@ exports[`Snapshot test for the "UIInput" component renders correctly 1`] = `
   onBlur={[Function]}
   onFocus={[Function]}
   placeholder="Some text here"
-  placeholderTextColor="#C4C4C4"
+  placeholderTextColor="#c4c4c4"
   rejectResponderTermination={true}
   style={
     Array [
@@ -21,7 +21,7 @@ exports[`Snapshot test for the "UIInput" component renders correctly 1`] = `
         "width": "100%",
       },
       Object {
-        "borderBottomColor": "#C4C4C4",
+        "borderBottomColor": "#c4c4c4",
       },
     ]
   }

@@ -22,7 +22,7 @@ exports[`Snapshot test for the "UIButton" component renders correctly 1`] = `
       Array [
         Object {
           "alignItems": "center",
-          "backgroundColor": "#7239F2",
+          "backgroundColor": "#7239f2",
           "borderRadius": 20,
           "height": 40,
           "justifyContent": "center",
@@ -36,7 +36,7 @@ exports[`Snapshot test for the "UIButton" component renders correctly 1`] = `
     <Text
       style={
         Object {
-          "color": "#FFFFFF",
+          "color": "#ffffff",
           "fontSize": 16,
           "fontWeight": "600",
         }

@@ -32,7 +32,7 @@ exports[`Snapshot test for the "TabNavigationItem" component renders correctly 1
   <View
     style={
       Object {
-        "backgroundColor": "#FFFFFF",
+        "backgroundColor": "#ffffff",
         "borderRadius": 3,
         "height": 6,
         "marginTop": 8,

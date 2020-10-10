@@ -153,20 +153,26 @@
       "signOut": "Are you sure you want to sign out of the app?"
     },
     "errorMessages": {
+      "blankCountry": "Country can't be blank",
       "blankEmail": "Email can't be blank",
-      "invalidEmail": "Email should be in a valid format",
       "blankName": "Name can't be blank",
       "blankPassword": "Password can't be blank",
-      "invalidPassword": "Password should have, at least, 10 characters",
-      "unmatchedPassword": "The passwords don't match",
-      "blankCountry": "Country can't be blank",
       "blankPhoneNumber": "Phone number can't be blank",
+      "checkConnectionText": "This requires an active internet connection",
+      "checkConnectionTitle": "Check your connectivity",
+      "invalidEmail": "Email should be in a valid format",
+      "invalidLittenLocation": "It would really help to know where your litten is!",
+      "invalidLittenPhoto": "Consider adding, at least, one photo",
+      "invalidLittenSpecies": "Tell us what species is your litten!",
+      "invalidLittenStory": "Why not tell us a bit more about your litten?",
+      "invalidLittenTitle": "Your litten must have a name, no?",
+      "invalidLittenType": "Tell us why you're creating a new litten",
+      "invalidLocation": "The provided location is invalid, try choosing another or use a different method",
+      "invalidPassword": "Password should have, at least, 10 characters",
       "invalidPhoneNumber": "Phone number should be in a valid format",
       "invalidPhoto": "Select a valid photo",
-      "invalidLocation": "The provided location is invalid, try choosing another or use a different method",
       "notImplemented": "That feature isn't active yet",
-      "checkConnectionTitle": "Check your connectivity",
-      "checkConnectionText": "This requires an active internet connection"
+      "unmatchedPassword": "The passwords don't match"
     },
     "firebaseErrorMessages": {
       "auth/email-already-exists": "The provided email already exists",

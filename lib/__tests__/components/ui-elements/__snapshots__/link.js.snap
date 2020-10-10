@@ -4,7 +4,7 @@ exports[`Snapshot test for the "UILink" component renders correctly 1`] = `
 <Text
   style={
     Object {
-      "color": "#39A4F2",
+      "color": "#39a4f2",
       "textDecorationLine": "underline",
     }
   }

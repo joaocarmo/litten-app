@@ -8,7 +8,7 @@ exports[`Snapshot test for the "UITextArea" component renders correctly 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "#FFFFFF",
+        "backgroundColor": "#ffffff",
         "borderRadius": 10,
         "flex": 1,
         "marginBottom": 8,

@@ -7,7 +7,7 @@ Array [
       Array [
         Array [
           Object {
-            "backgroundColor": "#FFFFFF",
+            "backgroundColor": "#ffffff",
             "borderRadius": 10,
             "flex": 1,
             "marginBottom": 8,
@@ -25,7 +25,7 @@ Array [
           },
         ],
         Object {
-          "backgroundColor": "#39A4F2",
+          "backgroundColor": "#39a4f2",
         },
       ]
     }
@@ -57,7 +57,7 @@ Array [
                 "paddingBottom": 3,
               },
               Object {
-                "color": "#FFFFFF",
+                "color": "#ffffff",
               },
             ]
           }
@@ -81,7 +81,7 @@ Array [
                   "marginRight": 6,
                 },
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#ffffff",
                 },
               ]
             }
@@ -98,7 +98,7 @@ Array [
                   "fontWeight": "200",
                 },
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#ffffff",
                 },
               ]
             }
@@ -132,7 +132,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -238,7 +238,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -344,7 +344,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -451,7 +451,7 @@ purpose (injected humour and the like).
       Array [
         Array [
           Object {
-            "backgroundColor": "#FFFFFF",
+            "backgroundColor": "#ffffff",
             "borderRadius": 10,
             "flex": 1,
             "marginBottom": 8,
@@ -469,7 +469,7 @@ purpose (injected humour and the like).
           },
         ],
         Object {
-          "backgroundColor": "#39A4F2",
+          "backgroundColor": "#39a4f2",
         },
       ]
     }
@@ -501,7 +501,7 @@ purpose (injected humour and the like).
                 "paddingBottom": 3,
               },
               Object {
-                "color": "#FFFFFF",
+                "color": "#ffffff",
               },
             ]
           }
@@ -525,7 +525,7 @@ purpose (injected humour and the like).
                   "marginRight": 6,
                 },
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#ffffff",
                 },
               ]
             }
@@ -542,7 +542,7 @@ purpose (injected humour and the like).
                   "fontWeight": "200",
                 },
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#ffffff",
                 },
               ]
             }
@@ -576,7 +576,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -682,7 +682,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -788,7 +788,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -895,7 +895,7 @@ purpose (injected humour and the like).
       Array [
         Array [
           Object {
-            "backgroundColor": "#FFFFFF",
+            "backgroundColor": "#ffffff",
             "borderRadius": 10,
             "flex": 1,
             "marginBottom": 8,
@@ -913,7 +913,7 @@ purpose (injected humour and the like).
           },
         ],
         Object {
-          "backgroundColor": "#39A4F2",
+          "backgroundColor": "#39a4f2",
         },
       ]
     }
@@ -945,7 +945,7 @@ purpose (injected humour and the like).
                 "paddingBottom": 3,
               },
               Object {
-                "color": "#FFFFFF",
+                "color": "#ffffff",
               },
             ]
           }
@@ -969,7 +969,7 @@ purpose (injected humour and the like).
                   "marginRight": 6,
                 },
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#ffffff",
                 },
               ]
             }
@@ -986,7 +986,7 @@ purpose (injected humour and the like).
                   "fontWeight": "200",
                 },
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#ffffff",
                 },
               ]
             }
@@ -1020,7 +1020,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -1126,7 +1126,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -1232,7 +1232,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -1339,7 +1339,7 @@ purpose (injected humour and the like).
       Array [
         Array [
           Object {
-            "backgroundColor": "#FFFFFF",
+            "backgroundColor": "#ffffff",
             "borderRadius": 10,
             "flex": 1,
             "marginBottom": 8,
@@ -1357,7 +1357,7 @@ purpose (injected humour and the like).
           },
         ],
         Object {
-          "backgroundColor": "#39A4F2",
+          "backgroundColor": "#39a4f2",
         },
       ]
     }
@@ -1389,7 +1389,7 @@ purpose (injected humour and the like).
                 "paddingBottom": 3,
               },
               Object {
-                "color": "#FFFFFF",
+                "color": "#ffffff",
               },
             ]
           }
@@ -1413,7 +1413,7 @@ purpose (injected humour and the like).
                   "marginRight": 6,
                 },
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#ffffff",
                 },
               ]
             }
@@ -1430,7 +1430,7 @@ purpose (injected humour and the like).
                   "fontWeight": "200",
                 },
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#ffffff",
                 },
               ]
             }
@@ -1464,7 +1464,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -1570,7 +1570,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -1676,7 +1676,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -1783,7 +1783,7 @@ purpose (injected humour and the like).
       Array [
         Array [
           Object {
-            "backgroundColor": "#FFFFFF",
+            "backgroundColor": "#ffffff",
             "borderRadius": 10,
             "flex": 1,
             "marginBottom": 8,
@@ -1801,7 +1801,7 @@ purpose (injected humour and the like).
           },
         ],
         Object {
-          "backgroundColor": "#39A4F2",
+          "backgroundColor": "#39a4f2",
         },
       ]
     }
@@ -1833,7 +1833,7 @@ purpose (injected humour and the like).
                 "paddingBottom": 3,
               },
               Object {
-                "color": "#FFFFFF",
+                "color": "#ffffff",
               },
             ]
           }
@@ -1857,7 +1857,7 @@ purpose (injected humour and the like).
                   "marginRight": 6,
                 },
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#ffffff",
                 },
               ]
             }
@@ -1874,7 +1874,7 @@ purpose (injected humour and the like).
                   "fontWeight": "200",
                 },
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#ffffff",
                 },
               ]
             }
@@ -1908,7 +1908,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -2014,7 +2014,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -2120,7 +2120,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -2227,7 +2227,7 @@ purpose (injected humour and the like).
       Array [
         Array [
           Object {
-            "backgroundColor": "#FFFFFF",
+            "backgroundColor": "#ffffff",
             "borderRadius": 10,
             "flex": 1,
             "marginBottom": 8,
@@ -2245,7 +2245,7 @@ purpose (injected humour and the like).
           },
         ],
         Object {
-          "backgroundColor": "#39A4F2",
+          "backgroundColor": "#39a4f2",
         },
       ]
     }
@@ -2277,7 +2277,7 @@ purpose (injected humour and the like).
                 "paddingBottom": 3,
               },
               Object {
-                "color": "#FFFFFF",
+                "color": "#ffffff",
               },
             ]
           }
@@ -2301,7 +2301,7 @@ purpose (injected humour and the like).
                   "marginRight": 6,
                 },
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#ffffff",
                 },
               ]
             }
@@ -2318,7 +2318,7 @@ purpose (injected humour and the like).
                   "fontWeight": "200",
                 },
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#ffffff",
                 },
               ]
             }
@@ -2352,7 +2352,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -2458,7 +2458,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -2564,7 +2564,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -2671,7 +2671,7 @@ purpose (injected humour and the like).
       Array [
         Array [
           Object {
-            "backgroundColor": "#FFFFFF",
+            "backgroundColor": "#ffffff",
             "borderRadius": 10,
             "flex": 1,
             "marginBottom": 8,
@@ -2689,7 +2689,7 @@ purpose (injected humour and the like).
           },
         ],
         Object {
-          "backgroundColor": "#39A4F2",
+          "backgroundColor": "#39a4f2",
         },
       ]
     }
@@ -2721,7 +2721,7 @@ purpose (injected humour and the like).
                 "paddingBottom": 3,
               },
               Object {
-                "color": "#FFFFFF",
+                "color": "#ffffff",
               },
             ]
           }
@@ -2745,7 +2745,7 @@ purpose (injected humour and the like).
                   "marginRight": 6,
                 },
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#ffffff",
                 },
               ]
             }
@@ -2762,7 +2762,7 @@ purpose (injected humour and the like).
                   "fontWeight": "200",
                 },
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#ffffff",
                 },
               ]
             }
@@ -2796,7 +2796,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -2902,7 +2902,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -3008,7 +3008,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,
@@ -3115,7 +3115,7 @@ purpose (injected humour and the like).
       Array [
         Array [
           Object {
-            "backgroundColor": "#FFFFFF",
+            "backgroundColor": "#ffffff",
             "borderRadius": 10,
             "flex": 1,
             "marginBottom": 8,
@@ -3133,7 +3133,7 @@ purpose (injected humour and the like).
           },
         ],
         Object {
-          "backgroundColor": "#39A4F2",
+          "backgroundColor": "#39a4f2",
         },
       ]
     }
@@ -3165,7 +3165,7 @@ purpose (injected humour and the like).
                 "paddingBottom": 3,
               },
               Object {
-                "color": "#FFFFFF",
+                "color": "#ffffff",
               },
             ]
           }
@@ -3189,7 +3189,7 @@ purpose (injected humour and the like).
                   "marginRight": 6,
                 },
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#ffffff",
                 },
               ]
             }
@@ -3206,7 +3206,7 @@ purpose (injected humour and the like).
                   "fontWeight": "200",
                 },
                 Object {
-                  "color": "#FFFFFF",
+                  "color": "#ffffff",
                 },
               ]
             }
@@ -3240,7 +3240,7 @@ purpose (injected humour and the like).
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "#ffffff",
           "borderRadius": 10,
           "flex": 1,
           "marginBottom": 8,

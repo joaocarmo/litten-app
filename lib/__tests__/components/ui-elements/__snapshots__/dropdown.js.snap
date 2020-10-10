@@ -20,7 +20,7 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
+            "backgroundColor": "#ffffff",
             "borderRadius": 20,
             "display": "flex",
             "flexDirection": "row",
@@ -32,7 +32,7 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
         <Text
           style={
             Object {
-              "color": "#39A4F2",
+              "color": "#39a4f2",
               "fontWeight": "600",
             }
           }
@@ -64,8 +64,8 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
       customStyles={
         Object {
           "optionsContainer": Object {
-            "backgroundColor": "#FFFFFF",
-            "borderColor": "#C4C4C4",
+            "backgroundColor": "#ffffff",
+            "borderColor": "#c4c4c4",
             "borderRadius": 6,
             "borderWidth": 0.5,
             "padding": 10,
@@ -95,12 +95,12 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
           style={
             Array [
               Object {
-                "color": "#6A6767",
+                "color": "#6a6767",
                 "fontWeight": "400",
                 "padding": 2,
               },
               Object {
-                "color": "#39A4F2",
+                "color": "#39a4f2",
               },
             ]
           }
@@ -124,7 +124,7 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
         <Text
           style={
             Object {
-              "color": "#6A6767",
+              "color": "#6a6767",
               "fontWeight": "400",
               "padding": 2,
             }
@@ -149,7 +149,7 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
         <Text
           style={
             Object {
-              "color": "#6A6767",
+              "color": "#6a6767",
               "fontWeight": "400",
               "padding": 2,
             }

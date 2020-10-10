@@ -10,7 +10,7 @@ Array [
     onFocus={[Function]}
     onTouchStart={[Function]}
     placeholder="Some text here"
-    placeholderTextColor="#C4C4C4"
+    placeholderTextColor="#c4c4c4"
     rejectResponderTermination={true}
     style={
       Array [
@@ -26,7 +26,7 @@ Array [
             "width": "100%",
           },
           Object {
-            "borderBottomColor": "#C4C4C4",
+            "borderBottomColor": "#c4c4c4",
           },
         ],
         Array [
@@ -72,7 +72,7 @@ Array [
     <View
       style={
         Object {
-          "backgroundColor": "#D0D4DA",
+          "backgroundColor": "#d0d4da",
           "height": 215,
           "justifyContent": "center",
         }
