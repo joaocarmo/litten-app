@@ -87,7 +87,8 @@
         "viewProfile": "View profile",
         "deleteConversation": "Delete conversation",
         "blockUser": "Block user"
-      }
+      },
+      "inputPlaceholder": "Type a message..."
     },
     "profile": {
       "about": "About",
