@@ -3,15 +3,18 @@
 exports[`Snapshot test for the "UIHeader" component renders correctly 1`] = `
 <Text
   style={
-    Object {
-      "color": "#000000",
-      "fontSize": 24,
-      "fontWeight": "600",
-      "marginBottom": 2,
-      "marginTop": 2,
-      "paddingBottom": 2,
-      "paddingTop": 2,
-    }
+    Array [
+      Object {
+        "color": "#000000",
+        "fontSize": 24,
+        "fontWeight": "600",
+        "marginBottom": 2,
+        "marginTop": 2,
+        "paddingBottom": 2,
+        "paddingTop": 2,
+      },
+      undefined,
+    ]
   }
 >
   Some text here

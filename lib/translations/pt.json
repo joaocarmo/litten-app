@@ -73,14 +73,14 @@
       "useExistingLocation": "Usar localização existente",
       "useExtraInfo": "Incluir mais detalhes sobre este litten",
       "useMapLocation": "Escolher no mapa",
-      "useProfileLocation": "Usar localização actual"
+      "useProfileLocation": "Usar localização do perfil"
     },
     "littenPost": {
       "story": "História",
       "preview": "PRÉ-VISUALIZAÇÃO"
     },
     "messages": {
-      "title": "Messages",
+      "title": "Mensagens",
       "emptyTitle": "Estás com vergonha?",
       "emptyText": "Inicia conversas e elas vão aparecer aqui",
       "options": {
@@ -249,6 +249,7 @@
   },
   "easterEggs": {
     "placeholder": "Há dias de manhã em que, um homem à tarde, não deveria sair à noite.",
-    "simulation": "Estamos dentro de uma enorme câmara de simulação numa nave alienígena."
+    "simulation": "Estamos dentro de uma enorme câmara de simulação numa nave alienígena.",
+    "tribute": "Esta não é a melhor publicação do mundo, não. É apenas uma pré-visualização."
   }
 }
