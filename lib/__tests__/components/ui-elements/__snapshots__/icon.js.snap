@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#ffffff",
+        "borderRadius": 4,
+        "height": 40,
+        "padding": 8,
+      },
+      Object {
+        "borderRadius": 20,
+      },
+      Object {
+        "elevation": 8,
+        "shadowColor": "#000000",
+        "shadowOffset": Object {
+          "height": 10,
+          "width": 0,
+        },
+        "shadowOpacity": 0.1,
+        "shadowRadius": 6,
+      },
+    ]
+  }
+>
+  <Image
+    resizeMode="contain"
+    source={
+      Object {
+        "uri": "",
+      }
+    }
+    style={
+      Object {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  />
+</View>
+`;
