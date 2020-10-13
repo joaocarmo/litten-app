@@ -2,6 +2,7 @@
 
 exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
 <View
+  elevated={true}
   style={
     Array [
       Object {
@@ -26,6 +27,7 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
         "shadowOpacity": 0.1,
         "shadowRadius": 6,
       },
+      undefined,
     ]
   }
 >
@@ -37,10 +39,13 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
       }
     }
     style={
-      Object {
-        "height": "100%",
-        "width": "100%",
-      }
+      Array [
+        Object {
+          "height": "100%",
+          "width": "100%",
+        },
+        undefined,
+      ]
     }
   />
 </View>
