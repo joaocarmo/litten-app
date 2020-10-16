@@ -28,6 +28,7 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
         "shadowRadius": 6,
       },
       undefined,
+      undefined,
     ]
   }
 >
@@ -44,6 +45,7 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
           "height": "100%",
           "width": "100%",
         },
+        undefined,
         undefined,
       ]
     }
