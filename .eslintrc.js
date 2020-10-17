@@ -17,6 +17,8 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     'jest/expect-expect': 'off',
     'react/jsx-no-literals': ['error', { noStrings: false, ignoreProps: true }],
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
   },
   overrides: [
     {

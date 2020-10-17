@@ -7,5 +7,11 @@ module.exports = {
         safe: true,
       },
     ],
+    [
+      '@babel/plugin-transform-react-jsx',
+      {
+        runtime: 'automatic',
+      },
+    ],
   ],
 }
