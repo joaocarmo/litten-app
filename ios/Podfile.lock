@@ -230,32 +230,32 @@ PODS:
     - React-Core (= 0.63.3)
     - React-jsi (= 0.63.3)
     - ReactCommon/turbomodule/core (= 0.63.3)
-  - Firebase/Auth (6.30.0):
+  - Firebase/Auth (6.34.0):
     - Firebase/CoreOnly
-    - FirebaseAuth (~> 6.8.0)
-  - Firebase/CoreOnly (6.30.0):
-    - FirebaseCore (= 6.10.0)
-  - Firebase/Firestore (6.30.0):
+    - FirebaseAuth (~> 6.9.2)
+  - Firebase/CoreOnly (6.34.0):
+    - FirebaseCore (= 6.10.4)
+  - Firebase/Firestore (6.34.0):
     - Firebase/CoreOnly
-    - FirebaseFirestore (~> 1.16.4)
-  - Firebase/Storage (6.30.0):
+    - FirebaseFirestore (~> 1.19.0)
+  - Firebase/Storage (6.34.0):
     - Firebase/CoreOnly
-    - FirebaseStorage (~> 3.9.0)
-  - FirebaseAuth (6.8.0):
+    - FirebaseStorage (~> 3.9.1)
+  - FirebaseAuth (6.9.2):
     - FirebaseCore (~> 6.10)
     - GoogleUtilities/AppDelegateSwizzler (~> 6.7)
     - GoogleUtilities/Environment (~> 6.7)
     - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseCore (6.10.0):
-    - FirebaseCoreDiagnostics (~> 1.3)
+  - FirebaseCore (6.10.4):
+    - FirebaseCoreDiagnostics (~> 1.6)
     - GoogleUtilities/Environment (~> 6.7)
     - GoogleUtilities/Logger (~> 6.7)
-  - FirebaseCoreDiagnostics (1.5.0):
-    - GoogleDataTransport (~> 7.0)
+  - FirebaseCoreDiagnostics (1.7.0):
+    - GoogleDataTransport (~> 7.4)
     - GoogleUtilities/Environment (~> 6.7)
     - GoogleUtilities/Logger (~> 6.7)
-    - nanopb (~> 1.30905.0)
-  - FirebaseFirestore (1.16.4):
+    - nanopb (~> 1.30906.0)
+  - FirebaseFirestore (1.19.0):
     - abseil/algorithm (= 0.20200225.0)
     - abseil/base (= 0.20200225.0)
     - abseil/memory (= 0.20200225.0)
@@ -266,20 +266,20 @@ PODS:
     - FirebaseCore (~> 6.10)
     - "gRPC-C++ (~> 1.28.0)"
     - leveldb-library (~> 1.22)
-    - nanopb (~> 1.30905.0)
-  - FirebaseStorage (3.9.0):
+    - nanopb (~> 1.30906.0)
+  - FirebaseStorage (3.9.1):
     - FirebaseCore (~> 6.10)
     - GTMSessionFetcher/Core (~> 1.1)
   - Flipper (0.54.0):
     - Flipper-Folly (~> 2.2)
     - Flipper-RSocket (~> 1.1)
   - Flipper-DoubleConversion (1.1.7)
-  - Flipper-Folly (2.2.0):
+  - Flipper-Folly (2.3.0):
     - boost-for-react-native
     - CocoaLibEvent (~> 1.0)
     - Flipper-DoubleConversion
     - Flipper-Glog
-    - OpenSSL-Universal (= 1.0.2.19)
+    - OpenSSL-Universal (= 1.0.2.20)
   - Flipper-Glog (0.3.6)
   - Flipper-PeerTalk (0.0.4)
   - Flipper-RSocket (1.1.0):
@@ -326,8 +326,8 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.5)
-  - GoogleDataTransport (7.2.0):
-    - nanopb (~> 1.30905.0)
+  - GoogleDataTransport (7.5.1):
+    - nanopb (~> 1.30906.0)
   - GoogleUtilities/AppDelegateSwizzler (6.7.2):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -369,15 +369,15 @@ PODS:
   - gRPC-Core/Interface (1.28.2)
   - GTMSessionFetcher/Core (1.4.0)
   - leveldb-library (1.22)
-  - nanopb (1.30905.0):
-    - nanopb/decode (= 1.30905.0)
-    - nanopb/encode (= 1.30905.0)
-  - nanopb/decode (1.30905.0)
-  - nanopb/encode (1.30905.0)
-  - OpenSSL-Universal (1.0.2.19):
-    - OpenSSL-Universal/Static (= 1.0.2.19)
-  - OpenSSL-Universal/Static (1.0.2.19)
-  - PromisesObjC (1.2.10)
+  - nanopb (1.30906.0):
+    - nanopb/decode (= 1.30906.0)
+    - nanopb/encode (= 1.30906.0)
+  - nanopb/decode (1.30906.0)
+  - nanopb/encode (1.30906.0)
+  - OpenSSL-Universal (1.0.2.20):
+    - OpenSSL-Universal/Static (= 1.0.2.20)
+  - OpenSSL-Universal/Static (1.0.2.20)
+  - PromisesObjC (1.2.11)
   - RCTRequired (0.63.3)
   - RCTTypeSafety (0.63.3):
     - FBLazyVector (= 0.63.3)
@@ -622,19 +622,19 @@ PODS:
     - React-Core
   - RNDeviceInfo (6.2.1):
     - React-Core
-  - RNFBApp (8.4.5):
-    - Firebase/CoreOnly (~> 6.30.0)
+  - RNFBApp (8.4.6):
+    - Firebase/CoreOnly (~> 6.34.0)
     - React-Core
-  - RNFBAuth (9.3.0):
-    - Firebase/Auth (~> 6.30.0)
-    - React-Core
-    - RNFBApp
-  - RNFBFirestore (7.8.6):
-    - Firebase/Firestore (~> 6.30.0)
+  - RNFBAuth (9.3.1):
+    - Firebase/Auth (~> 6.34.0)
     - React-Core
     - RNFBApp
-  - RNFBStorage (7.4.9):
-    - Firebase/Storage (~> 6.30.0)
+  - RNFBFirestore (7.8.7):
+    - Firebase/Firestore (~> 6.34.0)
+    - React-Core
+    - RNFBApp
+  - RNFBStorage (7.4.10):
+    - Firebase/Storage (~> 6.34.0)
     - React-Core
     - RNFBApp
   - RNGestureHandler (1.8.0):
@@ -654,7 +654,7 @@ PODS:
     - React
   - RNScreens (2.11.0):
     - React
-  - TOCropViewController (2.5.4)
+  - TOCropViewController (2.5.5)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -857,30 +857,30 @@ SPEC CHECKSUMS:
   DoubleConversion: cde416483dac037923206447da6e1454df403714
   FBLazyVector: 878b59e31113e289e275165efbe4b54fa614d43d
   FBReactNativeSpec: 7da9338acfb98d4ef9e5536805a0704572d33c2f
-  Firebase: 210f41ca352067d83b1ba4fd2e7fb49a0c017397
-  FirebaseAuth: 300433de340c1b058dbb8aec224a3f1bcfda5184
-  FirebaseCore: 9a41e2de78fef10f63cee30ab10e2945266bc1fc
-  FirebaseCoreDiagnostics: 7535fe695737f8c5b350584292a70b7f8ff0357b
-  FirebaseFirestore: ff82cd15f8ed3b417c307eb729e3e2e68aad0bdd
-  FirebaseStorage: 33b92875a9b556824886cc7a65120c7d2cb3a8d8
+  Firebase: c23a36d9e4cdf7877dfcba8dd0c58add66358999
+  FirebaseAuth: c92d49ada7948d1a23466e3db17bc4c2039dddc3
+  FirebaseCore: d3a978a3cfa3240bf7e4ba7d137fdf5b22b628ec
+  FirebaseCoreDiagnostics: 770ac5958e1372ce67959ae4b4f31d8e127c3ac1
+  FirebaseFirestore: 9b2f1b9b9a6f2f0b6fb7484b9e32ab7e39243554
+  FirebaseStorage: 15e0f15ef3c7fec3d1899d68623e47d4447066b4
   Flipper: be611d4b742d8c87fbae2ca5f44603a02539e365
   Flipper-DoubleConversion: 38631e41ef4f9b12861c67d17cb5518d06badc41
-  Flipper-Folly: c12092ea368353b58e992843a990a3225d4533c3
+  Flipper-Folly: e4493b013c02d9347d5e0cb4d128680239f6c78a
   Flipper-Glog: 1dfd6abf1e922806c52ceb8701a3599a79a200a6
   Flipper-PeerTalk: 116d8f857dc6ef55c7a5a75ea3ceaafe878aadc9
   Flipper-RSocket: 64e7431a55835eb953b0bf984ef3b90ae9fdddd7
   FlipperKit: ab353d41aea8aae2ea6daaf813e67496642f3d7d
   Folly: b73c3869541e86821df3c387eb0af5f65addfab4
   glog: 40a13f7840415b9a77023fbcae0f1e6f43192af3
-  GoogleDataTransport: 672fb0ce96fe7f7f31d43672fca62ad2c9c86f7b
+  GoogleDataTransport: f56af7caa4ed338dc8e138a5d7c5973e66440833
   GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
-  nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
-  OpenSSL-Universal: 8b48cc0d10c1b2923617dfe5c178aa9ed2689355
-  PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
+  nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
+  OpenSSL-Universal: ff34003318d5e1163e9529b08470708e389ffcdd
+  PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   RCTRequired: 48884c74035a0b5b76dbb7a998bd93bcfc5f2047
   RCTTypeSafety: edf4b618033c2f1c5b7bc3d90d8e085ed95ba2ab
   React: f36e90f3ceb976546e97df3403e37d226f79d0e3
@@ -910,16 +910,16 @@ SPEC CHECKSUMS:
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
   RNCPicker: 914b557e20b3b8317b084aca9ff4b4edb95f61e4
   RNDeviceInfo: 9b6aba9ffaed69ecb72bd13c7bcb0debf277bc9f
-  RNFBApp: 570b136767f588b7eef0ab918284e9fe364d0c3e
-  RNFBAuth: 7fb279b3d3dfbe1499b92c842722d9343fb522c1
-  RNFBFirestore: af1be97b4fa9cede20b34f724c8e3260c6e2540d
-  RNFBStorage: f7d269f1ca0035995d573dfd0b892c0ecba8fbfb
+  RNFBApp: 7eacc7da7ab19f96c05e434017d44a9f09410da8
+  RNFBAuth: 552aa1fe908c433e12a59ed167a7c2695efa19e7
+  RNFBFirestore: 09a65d56413b9e11ab550f5f7e27106312c5fb7e
+  RNFBStorage: 02246c1b6d3ea79fad3e91d278c094dc9c61662c
   RNGestureHandler: 7a5833d0f788dbd107fbb913e09aa0c1ff333c39
   RNImageCropPicker: 16951bc02411f50c4d197488ed6406a23dc3b5f1
   RNLocalize: 452d4118e338dee1e5ca3fac4d5a11a4ab26a46a
   RNReanimated: dd8c286ab5dd4ba36d3a7fef8bff7e08711b5476
   RNScreens: 0e91da98ab26d5d04c7b59a9b6bd694124caf88c
-  TOCropViewController: 2a1ae1242600b1f2d996fd91a5268b2309a33b5c
+  TOCropViewController: da59f531f8ac8a94ef6d6c0fc34009350f9e8bfe
   Yoga: 7d13633d129fd179e01b8953d38d47be90db185a
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 

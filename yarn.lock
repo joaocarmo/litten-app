@@ -44,15 +44,15 @@
     source-map "^0.5.0"
 
 "@babel/core@^7.0.0", "@babel/core@^7.1.0", "@babel/core@^7.1.6", "@babel/core@^7.10.5", "@babel/core@^7.4.5", "@babel/core@^7.7.5":
-  version "7.12.1"
-  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.12.1.tgz#980b115a05929ef3ce1b6af9bf50e5a5cf668667"
-  integrity sha512-6bGmltqzIJrinwRRdczQsMhruSi9Sqty9Te+/5hudn4Izx/JYRhW1QELpR+CIL0gC/c9A7WroH6FmkDGxmWx3w==
+  version "7.12.3"
+  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.12.3.tgz#1b436884e1e3bff6fb1328dc02b208759de92ad8"
+  integrity sha512-0qXcZYKZp3/6N2jKYVxZv0aNCsxTSVCiK72DTiTYZAu7sjg73W0/aynWjMbiGd87EQL4WyA8reiJVh92AVla9g==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/generator" "^7.12.1"
     "@babel/helper-module-transforms" "^7.12.1"
     "@babel/helpers" "^7.12.1"
-    "@babel/parser" "^7.12.1"
+    "@babel/parser" "^7.12.3"
     "@babel/template" "^7.10.4"
     "@babel/traverse" "^7.12.1"
     "@babel/types" "^7.12.1"
@@ -274,9 +274,9 @@
   integrity sha512-YpJabsXlJVWP0USHjnC/AQDTLlZERbON577YUVO/wLpqyj6HAtVYnWaQaN0iUN+1/tWn3c+uKKXjRut5115Y2A==
 
 "@babel/helper-wrap-function@^7.10.4":
-  version "7.10.4"
-  resolved "https://registry.yarnpkg.com/@babel/helper-wrap-function/-/helper-wrap-function-7.10.4.tgz#8a6f701eab0ff39f765b5a1cfef409990e624b87"
-  integrity sha512-6py45WvEF0MhiLrdxtRjKjufwLL1/ob2qDJgg5JgNdojBAZSAKnAjkyOCNug6n+OBl4VW76XjvgSFTdaMcW0Ug==
+  version "7.12.3"
+  resolved "https://registry.yarnpkg.com/@babel/helper-wrap-function/-/helper-wrap-function-7.12.3.tgz#3332339fc4d1fbbf1c27d7958c27d34708e990d9"
+  integrity sha512-Cvb8IuJDln3rs6tzjW3Y8UeelAOdnpB8xtQ4sme2MSZ9wOxrbThporC0y/EtE16VAtoyEfLM404Xr1e0OOp+ow==
   dependencies:
     "@babel/helper-function-name" "^7.10.4"
     "@babel/template" "^7.10.4"
@@ -301,10 +301,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.0.0", "@babel/parser@^7.1.0", "@babel/parser@^7.1.6", "@babel/parser@^7.10.4", "@babel/parser@^7.11.5", "@babel/parser@^7.12.1", "@babel/parser@^7.7.0":
-  version "7.12.2"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.2.tgz#9d2fcf24cafe85333ab0aff9f26b81bba356004d"
-  integrity sha512-LMN+SqTiZEonUw4hQA0A3zG8DnN0E1F4K107LbDDUnC+0chML1rvWgsHloC9weB4RmZweE0uhFq0eGX7Nr/PBQ==
+"@babel/parser@^7.0.0", "@babel/parser@^7.1.0", "@babel/parser@^7.1.6", "@babel/parser@^7.10.4", "@babel/parser@^7.11.5", "@babel/parser@^7.12.1", "@babel/parser@^7.12.3", "@babel/parser@^7.7.0":
+  version "7.12.3"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.3.tgz#a305415ebe7a6c7023b40b5122a0662d928334cd"
+  integrity sha512-kFsOS0IbsuhO5ojF8Hc8z/8vEIOkylVBrjiZUbLTE3XFe0Qi+uu6HjzQixkFaqr0ZPAMZcBVxEwmsnsLPZ2Xsw==
 
 "@babel/plugin-external-helpers@^7.0.0":
   version "7.12.1"
@@ -1850,27 +1850,27 @@
   integrity sha512-8IeHfDwJ9/CTUwFs6x90VlobV3BfuPgNLjTgC6dRZovfCWigaZwVNIFFJnHBakK3pW2xErAPwhdvNR4JeNoYbw==
 
 "@react-native-firebase/app@^8.2.0":
-  version "8.4.5"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-8.4.5.tgz#a5194c34a1f75af8641153163700305ae578d31d"
-  integrity sha512-27qsFzX2Z1GPDyU8tUhYYCUkMlhYYCd/XJvteprTAjC8R6zPGdn/Y9Xxdrwkvhpj8Ply19lsxZ8UfvYIUbgOIQ==
+  version "8.4.6"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-8.4.6.tgz#05b4a48f2cd452acc88dd7b816a4ca934140927f"
+  integrity sha512-4eZR133QuScvGs4IQQd6qMvQ5E1mtydVTy3DtuBCeiIqtvN8ZxBYoSMgcUmYGS4VafbS2nPh85g4e3BlaIJ2XA==
   dependencies:
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
 
 "@react-native-firebase/auth@^9.0.0":
-  version "9.3.0"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/auth/-/auth-9.3.0.tgz#b539fffc56bbdfa8faa0039939b8e32bc13c71b4"
-  integrity sha512-1lpsYW8dwaBKqMNYroIvOcawWqXDwnK1LgEFHBTkvKqisJ8MVY3+0DpBmrg+ZzEUGOe+KFiFhPQCVO2uUYKezQ==
+  version "9.3.1"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/auth/-/auth-9.3.1.tgz#269d4755cb398e049b5014bf35adcc631a87d6d6"
+  integrity sha512-TtCEwyO5+ZRvmlKMLz54qFshIWaDT9U162CjQX0mzybmogYKRM9UoB+mFnZLh7rKZQQgvVzzMfF+h2DUgN+9xQ==
 
 "@react-native-firebase/firestore@^7.4.3":
-  version "7.8.6"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/firestore/-/firestore-7.8.6.tgz#6b9cfeec006f5b5a07a8135ebe6cdf302570aa90"
-  integrity sha512-IoLsNyAmPJzoEGLrz4iGWBtGCxGWdZQuo5lmfpFyamF2HmMLM+ZkoEPpfEqwPZQi/Ddjz8UhRjWzcdVIRO/0qg==
+  version "7.8.7"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/firestore/-/firestore-7.8.7.tgz#2bc4227b51dc8b788e4538168f7ec60670401e92"
+  integrity sha512-UuQHvzadFszs3cphDsUZ/t7XGo0wW48+SVVHe20HBz42bU6EiN7YgmdBTqwEI8P2go+0Uj9LLLDayhND7JSSyQ==
 
 "@react-native-firebase/storage@^7.2.2":
-  version "7.4.9"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/storage/-/storage-7.4.9.tgz#0ea924a4e2acc2f5c51def80bef9df77058c1fe2"
-  integrity sha512-lqNdKESSb4Lr1CrWGF3vr7Xbi0ekF5zQvQnOpExV2aLvkUKs+MAwkq2DysnLf5w4RDYr+2Uq0vld8BGgR1XfJA==
+  version "7.4.10"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/storage/-/storage-7.4.10.tgz#f860febf74e9f5980b142ccc4e75f46af992f5d5"
+  integrity sha512-HYDJ3nqWfxx6rglTDNeZUnWcg875TXlA0pO41gmbFZVG2U7fvCFPiECNn9QPtQwyqs4BfbtdfM0a8CZt/de+1w==
 
 "@react-navigation/bottom-tabs@^5.7.2":
   version "5.9.2"
@@ -5866,9 +5866,9 @@ elliptic@^6.5.3:
     minimalistic-crypto-utils "^1.0.0"
 
 emittery@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/emittery/-/emittery-0.7.1.tgz#c02375a927a40948c0345cc903072597f5270451"
-  integrity sha512-d34LN4L6h18Bzz9xpoku2nPwKxCPlPMr3EEKTkoEBi+1/+b0lcRkRJ1UVyyZaKNeqGR3swcGl6s390DNO4YVgQ==
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/emittery/-/emittery-0.7.2.tgz#25595908e13af0f5674ab419396e2fb394cdfa82"
+  integrity sha512-A8OG5SR/ij3SsJdWDJdkkSYUjQdCUx6APQXem0SaEePBSRg4eymGYwBkKo1Y6DU+af/Jn2dBQqDBvjnr9Vi8nQ==
 
 emoji-regex@^7.0.1:
   version "7.0.3"
@@ -5940,9 +5940,9 @@ entities@^1.1.1, entities@^1.1.2:
   integrity sha512-f2LZMYl1Fzu7YSBKg+RoROelpOaNrcGmE9AZubeDfrCEia483oW4MI4VyFd5VNHIgQ/7qm1I0wUHK1eJnn2y2w==
 
 entities@^2.0.0:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/entities/-/entities-2.0.3.tgz#5c487e5742ab93c15abb5da22759b8590ec03b7f"
-  integrity sha512-MyoZ0jgnLvB2X3Lg5HqpFmn1kybDiIfEQmKzTb5apr51Rb+T3KdmMiqa70T+bhGnyv7bQ6WMj2QMHpGMmlrUYQ==
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/entities/-/entities-2.1.0.tgz#992d3129cf7df6870b96c57858c249a120f8b8b5"
+  integrity sha512-hCx1oky9PFrJ611mf0ifBLBRW8lUUVRlFolb5gWRfIELabBlbp9xZvrqZLZAs+NxFnbfQoeGd8wDkygjg7U85w==
 
 env-paths@^2.2.0:
   version "2.2.0"
@@ -12579,10 +12579,10 @@ react-syntax-highlighter@^11.0.2:
     prismjs "^1.8.4"
     refractor "^2.4.1"
 
-react-test-renderer@16.13.1:
-  version "16.13.1"
-  resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.13.1.tgz#de25ea358d9012606de51e012d9742e7f0deabc1"
-  integrity sha512-Sn2VRyOK2YJJldOqoh8Tn/lWQ+ZiKhyZTPtaO0Q6yNj+QDbmRkVFap6pZPy3YQk8DScRDfyqm/KxKYP9gCMRiQ==
+react-test-renderer@16.14.0:
+  version "16.14.0"
+  resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.14.0.tgz#e98360087348e260c56d4fe2315e970480c228ae"
+  integrity sha512-L8yPjqPE5CZO6rKsKXRO/rVPiaCOy0tQQJbC+UjPNlobl5mad59lvPjwFsQHTvL03caVDIVr9x9/OSgDe6I5Eg==
   dependencies:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
@@ -12607,16 +12607,7 @@ react-transition-group@^4.3.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@16.13.1:
-  version "16.13.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
-  integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-
-react@^16.6.0, react@^16.8.3:
+react@16.14.0, react@^16.6.0, react@^16.8.3:
   version "16.14.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
   integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
