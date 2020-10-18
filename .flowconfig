@@ -67,6 +67,8 @@ suppress_type=$FlowFixMeState
 # suppress_comment=\\(.\\|\n\\)*\\$FlowIssue\\((\\(<VERSION>\\)? *\\(site=[a-z,_]*react_native\\(_ios\\)?_\\(oss\\|fb\\)[a-z,_]*\\)?)\\)?:? #[0-9]+
 # suppress_comment=\\(.\\|\n\\)*\\$FlowExpectedError
 
+types_first=false
+
 [lints]
 sketchy-null-number=warn
 sketchy-null-mixed=warn
@@ -89,4 +91,4 @@ untyped-import
 untyped-type-import
 
 [version]
-^0.131.0
+^0.136.0
