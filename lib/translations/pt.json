@@ -31,16 +31,18 @@
   },
   "screens": {
     "searches": {
-      "emptyTitle": "Não sabes onde começar?",
       "emptyText": "Experimenta uma nova procura, nunca sabes onde irá dar",
-      "headerSearchPlaceholder": "Procurar",
+      "emptyTitle": "Não sabes onde começar?",
+      "filterLocationRadius": "Localização",
+      "filterLocationRadiusValue": "Encontrar littens até {{value}} {{unit}} de mim",
+      "filterLocationRadiusValueShort": "Até {{value}} {{unit}}",
       "filters": "Filtros",
       "filtersClear": "Limpar todos os filtros",
       "filterSpecies": "Espécie animal",
       "filterType": "Tipo de litten",
-      "filterLocationRadius": "Localização",
-      "filterLocationRadiusValue": "Encontrar littens até {{value}} {{unit}} de mim",
-      "filterLocationRadiusValueShort": "Até {{value}} {{unit}}"
+      "headerSearchPlaceholder": "Procurar",
+      "noFilterLocationRadiusValue": "Não excluir littens com base na distância",
+      "searchEverywhere": "Procurar em todo o lado"
     },
     "favourites": {
       "title": "Favoritos",

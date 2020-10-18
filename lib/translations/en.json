@@ -31,16 +31,18 @@
   },
   "screens": {
     "searches": {
-      "emptyTitle": "Are you feeling lost?",
       "emptyText": "Try to start a new search, you never know where it will lead",
-      "headerSearchPlaceholder": "Search",
+      "emptyTitle": "Are you feeling lost?",
+      "filterLocationRadius": "Location",
+      "filterLocationRadiusValue": "Find littens within {{value}} {{unit}} of me",
+      "filterLocationRadiusValueShort": "Within {{value}} {{unit}}",
       "filters": "Filters",
       "filtersClear": "Clear all filters",
       "filterSpecies": "Animal species",
       "filterType": "Looking for",
-      "filterLocationRadius": "Location",
-      "filterLocationRadiusValue": "Find littens within {{value}} {{unit}} of me",
-      "filterLocationRadiusValueShort": "Within {{value}} {{unit}}"
+      "headerSearchPlaceholder": "Search",
+      "noFilterLocationRadiusValue": "Don't filter littens based on distance",
+      "searchEverywhere": "Search everywhere"
     },
     "favourites": {
       "title": "Favourites",

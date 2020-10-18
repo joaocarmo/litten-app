@@ -15,10 +15,10 @@
     }
   },
   "photos": [
-    "https://placeimg.com/400/400/animals",
-    "https://placeimg.com/400/400/animals",
-    "https://placeimg.com/400/400/animals",
-    "https://placeimg.com/400/400/animals"
+    "https://placeimg.com/400/400/animals?v=5",
+    "https://placeimg.com/400/400/animals?v=6",
+    "https://placeimg.com/400/400/animals?v=7",
+    "https://placeimg.com/400/400/animals?v=8"
   ],
   "species": "LITTEN_SPECIES_DOG",
   "story": "People can get very angry when driving, usually for silly reasons. One driver started shouting at Mum today when she stopped to let some children cross the road. I soon made him stop.",
