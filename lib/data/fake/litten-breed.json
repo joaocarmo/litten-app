@@ -25,7 +25,7 @@
   "title": "Foxtrot",
   "type": "LITTEN_TYPE_BREED",
   "metadata": {
-    "creationTime": 1598454084499
+    "createdAt": 1598454084499
   },
   "user": {
     "_id": "e5b40f46-8a23-42c4-ba41-bd52fbda1a81",

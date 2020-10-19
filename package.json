@@ -36,7 +36,7 @@
     "push": "git add . && gitmoji -c && git push",
     "react-devtools": "react-devtools",
     "sort-data": "./scripts/sort-data",
-    "start:firebase": "firebase emulators:start",
+    "start:firestore": "firebase emulators:start --only firestore",
     "start": "react-native start",
     "storybook": "(adb reverse tcp:7007 tcp:7007 || true) && start-storybook",
     "test": "jest --forceExit",
