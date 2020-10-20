@@ -27,7 +27,7 @@ yarn test
 yarn prepare-data
 
 # This will start the Firebase Emulator UI
-yarn start:firebase
+yarn start:firestore
 ```
 
 ## UI Components
