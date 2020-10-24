@@ -111,7 +111,10 @@
       "firstHeader": "Your posts",
       "help": "Help",
       "newPost": "New post",
-      "pastPosts": "Past posts",
+      "pastPosts": "Archived posts",
+      "postsDelete": "Delete",
+      "postsMarkActive": "Mark As Active",
+      "postsMarkInactive": "Archive",
       "privacyPolicy": "Privacy policy",
       "secondHeader": "Your definitions",
       "settings": "Settings",
@@ -155,6 +158,7 @@
       "clearFilters": "Are you sure you want to clear the filters?",
       "clearForm": "Are you sure you want to clear the form?",
       "deleteConversation": "Are you sure you want to delete the conversation with {{user}}?",
+      "deleteLitten": "Are you sure you want to delete the litten {{title}}?",
       "signOut": "Are you sure you want to sign out of the app?"
     },
     "errorMessages": {
@@ -239,6 +243,7 @@
     "continue": "Continue",
     "delete": "Delete",
     "deleteConversation": "Delete conversation",
+    "deleteLitten": "Delete litten",
     "done": "Done",
     "forgotPassword": "Forgot password?",
     "getStarted": "Get started",

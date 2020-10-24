@@ -111,7 +111,10 @@
       "firstHeader": "Os teus posts",
       "help": "Ajuda",
       "newPost": "Novo post",
-      "pastPosts": "Posts antigos",
+      "pastPosts": "Posts arquivados",
+      "postsDelete": "Apagar",
+      "postsMarkActive": "Marcar Como Activo",
+      "postsMarkInactive": "Arquivar",
       "privacyPolicy": "Política de privacidade",
       "secondHeader": "As tuas definições",
       "settings": "Opções",
@@ -155,6 +158,7 @@
       "clearFilters": "Tens a certeza que queres limpar os filtros?",
       "clearForm": "Tens a certeza que queres limpar o formulário?",
       "deleteConversation": "Tens a certeza que queres apagar a conversa com {{user}}?",
+      "deleteLitten": "Tens a certeza que queres apagar o litten {{title}}?",
       "signOut": "Tens a certeza que queres sair da app?"
     },
     "errorMessages": {
@@ -239,6 +243,7 @@
     "continue": "Continuar",
     "delete": "Apagar",
     "deleteConversation": "Apagar conversa",
+    "deleteLitten": "Apagar litten",
     "done": "Pronto",
     "forgotPassword": "Esqueceste a senha?",
     "getStarted": "Iniciar",
