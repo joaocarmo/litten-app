@@ -18,9 +18,11 @@ exports[`Snapshot test for the "UISwitch" component renders correctly 1`] = `
   }
 >
   <Text
+    numberOfLines={1}
     style={
       Object {
         "color": "#000000",
+        "flex": 1,
         "fontSize": 16,
         "fontWeight": "400",
       }
