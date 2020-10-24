@@ -119,7 +119,9 @@
       "view": ""
     },
     "settings": {
-      "useMetricUnits": "Use metric units"
+      "useMetricUnits": "Use Metric Units",
+      "shareMetrics": "Share Litten Analytics",
+      "shareMetricsDesc": "Analytics are anonymous and allow us to receive automated error reports which we use to improve the overall user experience."
     },
     "dev": {
       "storybook": "Storybook",
