@@ -108,6 +108,7 @@
       "contactUsBroken": "Something is broken",
       "contactUsFeedback": "General feedback",
       "edit": "Edit profile",
+      "editDelete": "DELETE PROFILE",
       "firstHeader": "Your posts",
       "help": "Help",
       "newPost": "New post",
@@ -159,6 +160,8 @@
       "clearForm": "Are you sure you want to clear the form?",
       "deleteConversation": "Are you sure you want to delete the conversation with {{user}}?",
       "deleteLitten": "Are you sure you want to delete the litten {{title}}?",
+      "deleteProfile": "All of your littens will be removed and this action is irreversible. Are you sure you want to delete your profile?",
+      "enterPassword": "Your password is required for this operation",
       "signOut": "Are you sure you want to sign out of the app?"
     },
     "errorMessages": {
@@ -244,7 +247,9 @@
     "delete": "Delete",
     "deleteConversation": "Delete conversation",
     "deleteLitten": "Delete litten",
+    "deleteProfile": "Delete profile",
     "done": "Done",
+    "enterPassword": "Enter password",
     "forgotPassword": "Forgot password?",
     "getStarted": "Get started",
     "no": "No",

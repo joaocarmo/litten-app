@@ -108,6 +108,7 @@
       "contactUsBroken": "Algo não funciona",
       "contactUsFeedback": "Outros comentários",
       "edit": "Editar perfil",
+      "editDelete": "APAGAR PERFIL",
       "firstHeader": "Os teus posts",
       "help": "Ajuda",
       "newPost": "Novo post",
@@ -159,6 +160,8 @@
       "clearForm": "Tens a certeza que queres limpar o formulário?",
       "deleteConversation": "Tens a certeza que queres apagar a conversa com {{user}}?",
       "deleteLitten": "Tens a certeza que queres apagar o litten {{title}}?",
+      "deleteProfile": "Todos os teus littens serão apagados e esta acção é irreversível. Queres mesmo eliminar o perfil?",
+      "enterPassword": "A tua senha é necessária para esta operação",
       "signOut": "Tens a certeza que queres sair da app?"
     },
     "errorMessages": {
@@ -244,7 +247,9 @@
     "delete": "Apagar",
     "deleteConversation": "Apagar conversa",
     "deleteLitten": "Apagar litten",
+    "deleteProfile": "Apagar perfil",
     "done": "Pronto",
+    "enterPassword": "Introduzir senha",
     "forgotPassword": "Esqueceste a senha?",
     "getStarted": "Iniciar",
     "no": "Não",

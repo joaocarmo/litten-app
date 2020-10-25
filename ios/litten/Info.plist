@@ -41,8 +41,6 @@
 	<string>$(PRODUCT_NAME) would like to use your camera to capture your profile picture and capture your images for posts</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>$(PRODUCT_NAME) would like to use your location to provide an easier way to add location information (for posts) and to filter posts by distance (for search)</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>$(PRODUCT_NAME) would like to use your microphone (for videos) if you wish to submit videos for posts</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>$(PRODUCT_NAME) would like to save the photos you captured within the app to your photo gallery</string>
 	<key>NSPhotoLibraryUsageDescription</key>

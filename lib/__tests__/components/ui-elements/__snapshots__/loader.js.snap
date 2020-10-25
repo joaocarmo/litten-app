@@ -6,15 +6,16 @@ exports[`Snapshot test for the "UILoader" component renders correctly when activ
   style={
     Object {
       "alignItems": "center",
+      "alignSelf": "center",
       "backgroundColor": "#eff1f3",
       "display": "flex",
       "flex": 0,
       "height": "100%",
       "justifyContent": "center",
-      "left": 0,
+      "maxWidth": 750,
+      "minWidth": "100%",
       "position": "absolute",
       "top": 0,
-      "width": 750,
       "zIndex": 1,
     }
   }
