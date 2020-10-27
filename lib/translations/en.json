@@ -108,7 +108,6 @@
       "contactUsBroken": "Something is broken",
       "contactUsFeedback": "General feedback",
       "edit": "Edit profile",
-      "editDelete": "DELETE PROFILE",
       "firstHeader": "Your posts",
       "help": "Help",
       "newPost": "New post",
@@ -121,6 +120,11 @@
       "settings": "Settings",
       "termsAndConditions": "Terms and conditions",
       "view": ""
+    },
+    "edit": {
+      "delete": "DELETE PROFILE",
+      "isOrganization": "Organization profile",
+      "isOrganizationDesc": "Set this option if you're using on behalf of an organization. It will label your profile as such and let other users know."
     },
     "settings": {
       "useMetricUnits": "Use Metric Units",

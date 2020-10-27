@@ -108,7 +108,6 @@
       "contactUsBroken": "Algo não funciona",
       "contactUsFeedback": "Outros comentários",
       "edit": "Editar perfil",
-      "editDelete": "APAGAR PERFIL",
       "firstHeader": "Os teus posts",
       "help": "Ajuda",
       "newPost": "Novo post",
@@ -121,6 +120,11 @@
       "settings": "Opções",
       "termsAndConditions": "Termos e condições",
       "view": ""
+    },
+    "edit": {
+      "delete": "APAGAR PERFIL",
+      "isOrganization": "Perfil organizacional",
+      "isOrganizationDesc": "Activa esta opção se estas a utilizar em nome de uma organização. O perfil será marcado como tal e os outros utilizadores saberão."
     },
     "settings": {
       "useMetricUnits": "Utilizar Sistema Métrico",
