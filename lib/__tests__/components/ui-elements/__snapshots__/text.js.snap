@@ -8,6 +8,8 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
         "color": "#000000",
         "fontSize": 14,
         "fontWeight": "200",
+      },
+      Object {
         "marginBottom": 8,
         "marginTop": 8,
         "paddingBottom": 6,
