@@ -127,9 +127,19 @@
       "isOrganizationDesc": "Activa esta opção se estas a utilizar em nome de uma organização. O perfil será marcado como tal e os outros utilizadores saberão."
     },
     "settings": {
-      "useMetricUnits": "Utilizar Sistema Métrico",
+      "contactCall": "Chamada Telefónica",
+      "contactCallDesc": "O teu número de telemóvel será partilhado com quem estiver interessado no teu litten",
+      "contactEmail": "Email",
+      "contactEmailDesc": "O teu email será partilhado com quem estiver interessado no teu litten",
+      "contactInApp": "Messagens Na App",
+      "contactInAppDesc": "Esta é a opção que melhor preserva a tua privacidade",
+      "contactOptions": "Contacto",
+      "contactSMS": "SMS",
+      "contactSMSDesc": "O teu número de telemóvel será partilhado com quem estiver interessado no teu litten",
+      "miscOptions": "Outros",
       "shareMetrics": "Partilhar Estatísticas",
-      "shareMetricsDesc": "As estatísticas são dados anónimos e permitem-nos receber relatórios de erros automaticamente que usamos para melhorar a tua experiência."
+      "shareMetricsDesc": "As estatísticas são dados anónimos e permitem-nos receber relatórios de erros automaticamente que usamos para melhorar a tua experiência.",
+      "useMetricUnits": "Utilizar Sistema Métrico"
     },
     "dev": {
       "storybook": "Storybook",

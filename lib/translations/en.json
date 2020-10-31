@@ -127,9 +127,19 @@
       "isOrganizationDesc": "Set this option if you're using on behalf of an organization. It will label your profile as such and let other users know."
     },
     "settings": {
-      "useMetricUnits": "Use Metric Units",
+      "contactCall": "Phone Call",
+      "contactCallDesc": "Your phone number will be shared when someone is interested in your litten",
+      "contactEmail": "Email",
+      "contactEmailDesc": "Your email will be shared when someone is interested in your litten",
+      "contactInApp": "In-App Messages",
+      "contactInAppDesc": "This option preserves your privacy the most",
+      "contactOptions": "Contact",
+      "contactSMS": "SMS",
+      "contactSMSDesc": "Your phone number will be shared when someone is interested in your litten",
+      "miscOptions": "Other",
       "shareMetrics": "Share Litten Analytics",
-      "shareMetricsDesc": "Analytics are anonymous and allow us to receive automated error reports which we use to improve the overall user experience."
+      "shareMetricsDesc": "Analytics are anonymous and allow us to receive automated error reports which we use to improve the overall user experience.",
+      "useMetricUnits": "Use Metric Units"
     },
     "dev": {
       "storybook": "Storybook",
