@@ -624,18 +624,18 @@ PODS:
     - React-Core
   - RNDeviceInfo (7.0.2):
     - React-Core
-  - RNFBApp (8.4.6):
+  - RNFBApp (8.4.7):
     - Firebase/CoreOnly (~> 6.34.0)
     - React-Core
-  - RNFBAuth (9.3.1):
+  - RNFBAuth (9.3.2):
     - Firebase/Auth (~> 6.34.0)
     - React-Core
     - RNFBApp
-  - RNFBFirestore (7.8.7):
+  - RNFBFirestore (7.9.1):
     - Firebase/Firestore (~> 6.34.0)
     - React-Core
     - RNFBApp
-  - RNFBStorage (7.4.10):
+  - RNFBStorage (7.4.11):
     - Firebase/Storage (~> 6.34.0)
     - React-Core
     - RNFBApp
@@ -916,10 +916,10 @@ SPEC CHECKSUMS:
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
   RNCPicker: 914b557e20b3b8317b084aca9ff4b4edb95f61e4
   RNDeviceInfo: e1d82a27d0c1ea6278e3b141784dc38e51fc90f4
-  RNFBApp: 7eacc7da7ab19f96c05e434017d44a9f09410da8
-  RNFBAuth: 552aa1fe908c433e12a59ed167a7c2695efa19e7
-  RNFBFirestore: 09a65d56413b9e11ab550f5f7e27106312c5fb7e
-  RNFBStorage: 02246c1b6d3ea79fad3e91d278c094dc9c61662c
+  RNFBApp: 804b98033f45c3a3e35b56de8c894f85ef5e4388
+  RNFBAuth: 4cfe4dabd91775346ee41f0bde60262e827033c5
+  RNFBFirestore: 3fe90c352fdbbff5a822c43f571cf8d9fdf38029
+  RNFBStorage: 70f4fd4eaf43de4563498fc97c8479cb12ffdf60
   RNGestureHandler: 7a5833d0f788dbd107fbb913e09aa0c1ff333c39
   RNImageCropPicker: 16951bc02411f50c4d197488ed6406a23dc3b5f1
   RNLocalize: 7c7aeda16c01db7a0918981c14875c0a53be9b79

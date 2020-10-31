@@ -19,7 +19,6 @@ Array [
           },
           Object {
             "alignItems": "center",
-            "display": "flex",
             "flexDirection": "row",
             "justifyContent": "space-between",
           },
@@ -121,7 +120,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -144,7 +142,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -227,7 +224,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -250,7 +246,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -333,7 +328,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -356,7 +350,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -439,7 +432,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -463,7 +455,6 @@ purpose (injected humour and the like).
           },
           Object {
             "alignItems": "center",
-            "display": "flex",
             "flexDirection": "row",
             "justifyContent": "space-between",
           },
@@ -565,7 +556,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -588,7 +578,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -671,7 +660,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -694,7 +682,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -777,7 +764,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -800,7 +786,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -883,7 +868,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -907,7 +891,6 @@ purpose (injected humour and the like).
           },
           Object {
             "alignItems": "center",
-            "display": "flex",
             "flexDirection": "row",
             "justifyContent": "space-between",
           },
@@ -1009,7 +992,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -1032,7 +1014,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -1115,7 +1096,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -1138,7 +1118,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -1221,7 +1200,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -1244,7 +1222,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -1327,7 +1304,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -1351,7 +1327,6 @@ purpose (injected humour and the like).
           },
           Object {
             "alignItems": "center",
-            "display": "flex",
             "flexDirection": "row",
             "justifyContent": "space-between",
           },
@@ -1453,7 +1428,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -1476,7 +1450,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -1559,7 +1532,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -1582,7 +1554,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -1665,7 +1636,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -1688,7 +1658,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -1771,7 +1740,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -1795,7 +1763,6 @@ purpose (injected humour and the like).
           },
           Object {
             "alignItems": "center",
-            "display": "flex",
             "flexDirection": "row",
             "justifyContent": "space-between",
           },
@@ -1897,7 +1864,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -1920,7 +1886,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -2003,7 +1968,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -2026,7 +1990,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -2109,7 +2072,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -2132,7 +2094,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -2215,7 +2176,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -2239,7 +2199,6 @@ purpose (injected humour and the like).
           },
           Object {
             "alignItems": "center",
-            "display": "flex",
             "flexDirection": "row",
             "justifyContent": "space-between",
           },
@@ -2341,7 +2300,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -2364,7 +2322,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -2447,7 +2404,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -2470,7 +2426,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -2553,7 +2508,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -2576,7 +2530,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -2659,7 +2612,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -2683,7 +2635,6 @@ purpose (injected humour and the like).
           },
           Object {
             "alignItems": "center",
-            "display": "flex",
             "flexDirection": "row",
             "justifyContent": "space-between",
           },
@@ -2785,7 +2736,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -2808,7 +2758,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -2891,7 +2840,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -2914,7 +2862,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -2997,7 +2944,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -3020,7 +2966,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -3103,7 +3048,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -3127,7 +3071,6 @@ purpose (injected humour and the like).
           },
           Object {
             "alignItems": "center",
-            "display": "flex",
             "flexDirection": "row",
             "justifyContent": "space-between",
           },
@@ -3229,7 +3172,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }
@@ -3252,7 +3194,6 @@ purpose (injected humour and the like).
         },
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
@@ -3335,7 +3276,6 @@ purpose (injected humour and the like).
       style={
         Object {
           "alignItems": "center",
-          "display": "flex",
           "flexDirection": "row",
           "justifyContent": "center",
         }

@@ -14,7 +14,6 @@ exports[`Snapshot test for the "TabNavigationItem" component renders correctly 1
   style={
     Object {
       "alignItems": "center",
-      "display": "flex",
       "justifyContent": "center",
       "paddingBottom": 16,
     }

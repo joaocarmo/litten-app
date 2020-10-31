@@ -8,7 +8,6 @@ exports[`Snapshot test for the "UILoader" component renders correctly when activ
       "alignItems": "center",
       "alignSelf": "center",
       "backgroundColor": "#eff1f3",
-      "display": "flex",
       "flex": 0,
       "height": "100%",
       "justifyContent": "center",

@@ -4,7 +4,6 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
 <View
   style={
     Object {
-      "display": "flex",
       "flexDirection": "row",
       "marginBottom": 6,
       "marginTop": 6,
@@ -22,7 +21,6 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
             "alignItems": "center",
             "backgroundColor": "#ffffff",
             "borderRadius": 20,
-            "display": "flex",
             "flexDirection": "row",
             "justifyContent": "space-between",
             "padding": 12,

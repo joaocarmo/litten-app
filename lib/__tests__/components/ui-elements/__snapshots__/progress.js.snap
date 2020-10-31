@@ -5,7 +5,6 @@ exports[`Snapshot test for the "UIProgress" component renders correctly 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "display": "flex",
       "flexDirection": "row",
       "height": 60,
       "justifyContent": "center",

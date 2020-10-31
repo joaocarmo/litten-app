@@ -79,6 +79,8 @@
       "useProfileLocation": "Use profile location"
     },
     "littenPost": {
+      "contactOptionsHeader": "Contact {{name}}",
+      "emptyContactOptions": "It appears {{name}} has no contact options available at this moment. Why don't you add this litten to your favourites and check back later?",
       "emptyStory": "Once upon a time...",
       "preview": "PREVIEW",
       "story": "Story"
