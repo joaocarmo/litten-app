@@ -81,6 +81,7 @@
     "i18n-js": "^3.7.1",
     "immer": "^7.0.7",
     "libphonenumber-js": "^1.7.55",
+    "lodash.debounce": "^4.0.8",
     "lodash.isempty": "^4.4.0",
     "lodash.memoize": "^4.1.2",
     "md5-hex": "^3.0.1",
