@@ -79,6 +79,7 @@
       "useProfileLocation": "Usar localização do perfil"
     },
     "littenPost": {
+      "cantOpenURL": "Parece que o teu dispositivo não suporta esta acção",
       "contactOptionsHeader": "Contactar {{name}}",
       "emptyContactOptions": "Parece que {{name}} não tem opções de contact disponíveis de moment. Porque não adicionas este litten aos teus favoritos e voltas a verificar mais tarde?",
       "emptyStory": "Era uma vez...",

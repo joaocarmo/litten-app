@@ -79,6 +79,7 @@
       "useProfileLocation": "Use profile location"
     },
     "littenPost": {
+      "cantOpenURL": "It seems your device is unable to handle this action",
       "contactOptionsHeader": "Contact {{name}}",
       "emptyContactOptions": "It appears {{name}} has no contact options available at this moment. Why don't you add this litten to your favourites and check back later?",
       "emptyStory": "Once upon a time...",
