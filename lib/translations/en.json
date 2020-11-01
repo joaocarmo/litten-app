@@ -83,6 +83,7 @@
       "emptyContactOptions": "It appears {{name}} has no contact options available at this moment. Why don't you add this litten to your favourites and check back later?",
       "emptyStory": "Once upon a time...",
       "preview": "PREVIEW",
+      "selfContactOptions": "This is your own litten! You can perform edits in your profile and settings tab.",
       "story": "Story"
     },
     "messages": {
@@ -144,6 +145,7 @@
       "useMetricUnits": "Use Metric Units"
     },
     "dev": {
+      "clearAsyncStorage": "Clear AsyncStorage",
       "storybook": "Storybook",
       "storybookIntro": "You can browse through Litten's UI Elements in this screen"
     }

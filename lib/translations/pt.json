@@ -82,8 +82,9 @@
       "contactOptionsHeader": "Contactar {{name}}",
       "emptyContactOptions": "Parece que {{name}} não tem opções de contact disponíveis de moment. Porque não adicionas este litten aos teus favoritos e voltas a verificar mais tarde?",
       "emptyStory": "Era uma vez...",
-      "story": "História",
-      "preview": "PRÉ-VISUALIZAÇÃO"
+      "preview": "PRÉ-VISUALIZAÇÃO",
+      "selfContactOptions": "This is your own litten! You can perform edits in your profile and settings tab.",
+      "story": "História"
     },
     "messages": {
       "title": "Mensagens",
@@ -144,6 +145,7 @@
       "useMetricUnits": "Utilizar Sistema Métrico"
     },
     "dev": {
+      "clearAsyncStorage": "Limpar AsyncStorage",
       "storybook": "Storybook",
       "storybookIntro": "Podes navegar pelos elementos visuais do Litten aqui"
     }
