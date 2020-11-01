@@ -199,6 +199,7 @@
       "invalidPassword": "A senha deve ter, pelo menos, 10 caracteres",
       "invalidPhoneNumber": "O telemóvel deve ser válido",
       "invalidPhoto": "Escolhe uma fotografia válida",
+      "noPhoneNumber": "Ainda não introduziste um número de telemóvel, mas podes fazê-lo no teu perfil",
       "notImplemented": "Essa funcionalidade está inactiva",
       "unmatchedPassword": "As senhas não condizem"
     },

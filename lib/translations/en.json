@@ -199,6 +199,7 @@
       "invalidPassword": "Password should have, at least, 10 characters",
       "invalidPhoneNumber": "Phone number should be in a valid format",
       "invalidPhoto": "Select a valid photo",
+      "noPhoneNumber": "You haven't specified a phone number yet, but you can do so in your profile",
       "notImplemented": "That feature isn't active yet",
       "unmatchedPassword": "The passwords don't match"
     },
