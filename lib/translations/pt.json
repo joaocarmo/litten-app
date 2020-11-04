@@ -88,9 +88,10 @@
       "story": "História"
     },
     "messages": {
-      "title": "Mensagens",
-      "emptyTitle": "Estás com vergonha?",
       "emptyText": "Inicia conversas e elas vão aparecer aqui",
+      "emptyTitle": "Estás com vergonha?",
+      "littenTitle": "{{type}} {{species}}: {{title}}",
+      "title": "Mensagens",
       "options": {
         "viewProfile": "Ver perfil",
         "deleteConversation": "Apagar conversa",

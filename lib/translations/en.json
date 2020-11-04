@@ -88,9 +88,10 @@
       "story": "Story"
     },
     "messages": {
-      "title": "Messages",
-      "emptyTitle": "Are you feeling shy?",
       "emptyText": "Start conversations and they will show up in here",
+      "emptyTitle": "Are you feeling shy?",
+      "littenTitle": "{{type}} {{species}}: {{title}}",
+      "title": "Messages",
       "options": {
         "viewProfile": "View profile",
         "deleteConversation": "Delete conversation",
