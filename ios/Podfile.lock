@@ -654,7 +654,7 @@ PODS:
     - React-Core
   - RNReanimated (1.13.1):
     - React
-  - RNScreens (2.12.0):
+  - RNScreens (2.13.0):
     - React-Core
   - TOCropViewController (2.5.5)
   - Yoga (1.14.0)
@@ -924,7 +924,7 @@ SPEC CHECKSUMS:
   RNImageCropPicker: 16951bc02411f50c4d197488ed6406a23dc3b5f1
   RNLocalize: 7c7aeda16c01db7a0918981c14875c0a53be9b79
   RNReanimated: dd8c286ab5dd4ba36d3a7fef8bff7e08711b5476
-  RNScreens: 4b488fdf9537bbce829e2910c8cce1d17f6d9be8
+  RNScreens: 13f23e5498fb4aa749d19a5eda7f8792fbb9d01f
   TOCropViewController: da59f531f8ac8a94ef6d6c0fc34009350f9e8bfe
   Yoga: 7d13633d129fd179e01b8953d38d47be90db185a
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
