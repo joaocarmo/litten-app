@@ -94,8 +94,7 @@
       "title": "Mensagens",
       "options": {
         "viewProfile": "Ver perfil",
-        "deleteConversation": "Apagar conversa",
-        "blockUser": "Bloquear utilizador"
+        "deleteConversation": "Apagar conversa"
       },
       "inputPlaceholder": "Escreve uma mensagem..."
     },
@@ -282,6 +281,9 @@
     "signUp": "Registar",
     "skip": "Próximo",
     "yes": "Sim"
+  },
+  "placeholders": {
+    "user": "Utilizador"
   },
   "accessibility": {
     "tabBar": {

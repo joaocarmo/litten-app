@@ -94,8 +94,7 @@
       "title": "Messages",
       "options": {
         "viewProfile": "View profile",
-        "deleteConversation": "Delete conversation",
-        "blockUser": "Block user"
+        "deleteConversation": "Delete conversation"
       },
       "inputPlaceholder": "Type a message..."
     },
@@ -282,6 +281,9 @@
     "signUp": "Sign up",
     "skip": "Skip",
     "yes": "Yes"
+  },
+  "placeholders": {
+    "user": "User"
   },
   "accessibility": {
     "tabBar": {

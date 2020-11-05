@@ -1903,44 +1903,44 @@
   integrity sha512-2YnfIHdIuf+PrK3Jlsewqw3Sqe/HPxmTBQY5l5ow7qVbVLIgARMxeV2EQf4XtxbUTFe1WkeDQEplHnPRjJiHjA==
 
 "@react-navigation/bottom-tabs@^5.7.2":
-  version "5.10.5"
-  resolved "https://registry.yarnpkg.com/@react-navigation/bottom-tabs/-/bottom-tabs-5.10.5.tgz#3325b2384a02f8680f3fc39ed12833f3b98110f6"
-  integrity sha512-h082KTS/TaT+WADyYCiMnQ6wj9zMHkAZK0IuAI/dBst6SpBkMNk0CL7xxjBDIepSmwnyrX90hVD1uX/aaH9acg==
+  version "5.10.6"
+  resolved "https://registry.yarnpkg.com/@react-navigation/bottom-tabs/-/bottom-tabs-5.10.6.tgz#bdc6d424c78bf757a08fe768723b20a66e8c17c2"
+  integrity sha512-dpzfEoQCsgURToEfEBRCTXgw30FXnzE8hW+rad3gu618HHfQErivrweLT6hMzA6vsG7Gi7RYaVsefL8G3XwPwA==
   dependencies:
     color "^3.1.3"
     react-native-iphone-x-helper "^1.3.0"
 
-"@react-navigation/core@^5.13.5":
-  version "5.13.5"
-  resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-5.13.5.tgz#6d7df178200da45a46b6a438358580bf462043c1"
-  integrity sha512-YYXvkQWL3fH2YOWPIqRA0XMv2kamF3b2rHdEIvoxXTuZ61wSpYQvNfn5A7EeuYClmlVeKVylokQey1bn//geFg==
+"@react-navigation/core@^5.14.0":
+  version "5.14.0"
+  resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-5.14.0.tgz#7cfba86ca3042ddc4542bd3422b73b3cf3553f61"
+  integrity sha512-FAF7pFxqUtpkY7ylod5IYmwz0rbuYul4qqn0jKc8LHzHdZJd9pbKrJb9GIjx9Y0Zucj8XUEyE8S0SEM0JiF9PA==
   dependencies:
-    "@react-navigation/routers" "^5.5.1"
+    "@react-navigation/routers" "^5.6.0"
     escape-string-regexp "^4.0.0"
     nanoid "^3.1.15"
     query-string "^6.13.6"
     react-is "^16.13.0"
 
 "@react-navigation/native@^5.7.1":
-  version "5.8.5"
-  resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-5.8.5.tgz#4cadb2220211477d99ac96d05e76a2a623f02129"
-  integrity sha512-p6Z7mQGgKS285dQoluxe1XwaDx3k3iA0ECfJM9meB6ZKr2BQ03w0YEnTx8hrHMuI57eqj3bWeJhoOhH/FBdMTg==
+  version "5.8.6"
+  resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-5.8.6.tgz#a853a93a7daf995beb0bb1051693caf9efc4c31e"
+  integrity sha512-MCfOF1gZaugElyT0KxSA15VXGBt5RBCIW2SevZwIy41juKBxJeiCa41HTE7o5tbasp1EHtE0SzgIYz/0tneoxQ==
   dependencies:
-    "@react-navigation/core" "^5.13.5"
+    "@react-navigation/core" "^5.14.0"
     escape-string-regexp "^4.0.0"
     nanoid "^3.1.15"
 
-"@react-navigation/routers@^5.5.1":
-  version "5.5.1"
-  resolved "https://registry.yarnpkg.com/@react-navigation/routers/-/routers-5.5.1.tgz#ece34180e0734e453a7f30dbeeaf3856f25afa00"
-  integrity sha512-Unn2T5+xnolyGzEhiuFnHEGfgvh7+1OJ5KzBY7T65e4gHWT7E1CO8unRbDxRI0KYkXflmRPCfuDjobVTj5xepw==
+"@react-navigation/routers@^5.6.0":
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/@react-navigation/routers/-/routers-5.6.0.tgz#90f56691b68cbab8d144503a66fa2a1742234d7e"
+  integrity sha512-sQRJVv5g0Zou1wouEnX/zKQi5QJEIccTd7oLy9ex2MJKjALTsfWUMWaFCZQLZjBJqT7Hz2GKp+VKlep6Dzq7Wg==
   dependencies:
     nanoid "^3.1.15"
 
 "@react-navigation/stack@^5.7.1":
-  version "5.12.2"
-  resolved "https://registry.yarnpkg.com/@react-navigation/stack/-/stack-5.12.2.tgz#ea22428494f39d38e679b17d111c75d8135495f6"
-  integrity sha512-4RfZl7+vS9mY1Owy3fdn1G6VKjl17S0lesfS6/b0HwV7K6WVqQcDdgiSfoIl5ht6aUdX2c2eQiMnT0VsgoK8lg==
+  version "5.12.3"
+  resolved "https://registry.yarnpkg.com/@react-navigation/stack/-/stack-5.12.3.tgz#a9ad55b9ab8c2337a6298e92d5c38dc376cdfe83"
+  integrity sha512-qJBX6+3JKFi252b/98eijCM2yB+t5GVvZjod3lWpl+44By5EAo4gMGlAVTXbLBLqDEE+LDtHRFE3AMt1IjLVmw==
   dependencies:
     color "^3.1.3"
     react-native-iphone-x-helper "^1.3.0"
@@ -4312,9 +4312,9 @@ buffer@^4.3.0:
     isarray "^1.0.0"
 
 buffer@^5.2.1:
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.7.0.tgz#88afbd29fc89fa7b58e82b39206f31f2cf34feed"
-  integrity sha512-cd+5r1VLBwUqTrmnzW+D7ABkJUM6mr7uv1dv+6jRw4Rcl7tFIFHDqHPL98LhpGFn3dbAt3gtLxtrWp4m1kFrqg==
+  version "5.7.1"
+  resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.7.1.tgz#ba62e7c13133053582197160851a8f648e99eed0"
+  integrity sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==
   dependencies:
     base64-js "^1.3.1"
     ieee754 "^1.1.13"
@@ -4539,9 +4539,9 @@ can-use-dom@^0.1.0:
   integrity sha1-IsxKNKCrxDlQ9CxkEQJKP2NmtFo=
 
 caniuse-lite@^1.0.30000989, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001154:
-  version "1.0.30001154"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001154.tgz#f3bbc245ce55e4c1cd20fa731b097880181a7f17"
-  integrity sha512-y9DvdSti8NnYB9Be92ddMZQrcOe04kcQtcxtBx4NkB04+qZ+JUWotnXBJTmxlKudhxNTQ3RRknMwNU2YQl/Org==
+  version "1.0.30001156"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001156.tgz#75c20937b6012fe2b02ab58b30d475bf0718de97"
+  integrity sha512-z7qztybA2eFZTB6Z3yvaQBIoJpQtsewRD74adw2UbRWwsRq3jIPvgrQGawBMbfafekQaD21FWuXNcywtTDGGCw==
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -5428,9 +5428,9 @@ data-urls@^2.0.0:
     whatwg-url "^8.0.0"
 
 dayjs@^1.8.15, dayjs@^1.8.26, dayjs@^1.9.1:
-  version "1.9.4"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.9.4.tgz#fcde984e227f4296f04e7b05720adad2e1071f1b"
-  integrity sha512-ABSF3alrldf7nM9sQ2U+Ln67NRwmzlLOqG7kK03kck0mw3wlSSEKv/XhKGGxUjQcS57QeiCyNdrFgtj9nWlrng==
+  version "1.9.5"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.9.5.tgz#fd49994ebe71639d2ce9575e97186642dfce9808"
+  integrity sha512-WULIw7UpW/E0y6VywewpbXAMH3d5cZijEhoHLwM+OMVbk/NtchKS/W+57H/0P1rqU7gHrAArjiRLHCUhgMQl6w==
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
   version "2.6.9"
@@ -5876,9 +5876,9 @@ ejs@^2.7.4:
   integrity sha512-7vmuyh5+kuUyJKePhQfRQBhXV5Ce+RnaeeQArKu1EAMpL3WbgMt5WG6uQZpEVvYSSsxMXRKOewtDk9RaTKXRlA==
 
 electron-to-chromium@^1.3.247, electron-to-chromium@^1.3.585:
-  version "1.3.587"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.587.tgz#de570df7320eb259c0511f284c2d6008094edbf7"
-  integrity sha512-8XFNxzNj0R8HpTQslWAw6UWpGSuOKSP3srhyFHVbGUGb8vTHckZGCyWi+iQlaXJx5DNeTQTQLd6xN11WSckkmA==
+  version "1.3.588"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.588.tgz#c6515571737bfb42678115a5eaa818384593a9a5"
+  integrity sha512-0zr+ZfytnLeJZxGgmEpPTcItu5Mm4A5zHPZXLfHcGp0mdsk95rmD7ePNewYtK1yIdLbk8Z1U2oTRRfOtR4gbYg==
 
 electron@^9.1.0:
   version "9.3.3"
@@ -7121,9 +7121,9 @@ fsevents@^1.2.7:
     nan "^2.12.1"
 
 fsevents@^2.1.2:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.2.0.tgz#4150396a427ecb5baa747725b70270a72b17bc17"
-  integrity sha512-pKnaUh2TNvk+/egJdBw1h46LwyLx8BzEq+MGCf/RMCVfEHHsGOCWG00dqk91kUPPArIIwMBg9T/virxwzP03cA==
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.2.1.tgz#1fb02ded2036a8ac288d507a65962bd87b97628d"
+  integrity sha512-bTLYHSeC0UH/EFXS9KqWnXuOl/wHK5Z/d+ghd5AsFMYN7wIGkUCOJyzy88+wJKkZPGON8u4Z9f6U4FdgURE9qA==
 
 fsevents@~2.1.2:
   version "2.1.3"
@@ -8242,9 +8242,9 @@ is-ci@^2.0.0:
     ci-info "^2.0.0"
 
 is-core-module@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.0.0.tgz#58531b70aed1db7c0e8d4eb1a0a2d1ddd64bd12d"
-  integrity sha512-jq1AH6C8MuteOoBPwkxHafmByhL9j5q4OaPGdbuD+ZtQJVzH+i6E3BJDQcBA09k57i2Hh2yQbEG8yObZ0jdlWw==
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.1.0.tgz#a4cc031d9b1aca63eecbd18a650e13cb4eeab946"
+  integrity sha512-YcV7BgVMRFRua2FqQzKtTDMz8iCuLEyGKjr70q8Zm1yy2qKcurbFEd79PAdHV77oL3NrAaOVQIbMmiHQCHB7ZA==
   dependencies:
     has "^1.0.3"
 
@@ -9629,9 +9629,9 @@ libnpmteam@^1.0.1:
     npm-registry-fetch "^4.0.0"
 
 libphonenumber-js@^1.7.55:
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.8.5.tgz#8d11ac37c2088986d34f6e5aa0ef13f3ead0b3db"
-  integrity sha512-oYRkg5ghcNLSesLvoUKaoGGTym2genpgfgUmMY/fLSnb22I9FmOwLxefGx73XgbAPzeqoqiLmGnsByhb7N4+/w==
+  version "1.8.6"
+  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.8.6.tgz#8bcc4d273374162cddfc7c50557c3ae05a0b0f22"
+  integrity sha512-V/s26l6zsjUFqNApd6qgkfdePwftUdAOZzf/JwsWlx8dPqtABamHmKy90cDb4trIv1Cp5lilH5jr+5FOVbLdGg==
   dependencies:
     minimist "^1.2.5"
     xml2js "^0.4.17"
@@ -10860,9 +10860,9 @@ node-releases@^1.1.29, node-releases@^1.1.65:
   integrity sha512-YpzJOe2WFIW0V4ZkJQd/DGR/zdVwc/pI4Nl1CZrBO19FdRcSTmsuhdttw9rsTzzJLrNcSloLiBbEYx1C4f6gpA==
 
 node-stream-zip@^1.9.1:
-  version "1.11.5"
-  resolved "https://registry.yarnpkg.com/node-stream-zip/-/node-stream-zip-1.11.5.tgz#2fd6b925f485009ce67344319d0af156cb233b0e"
-  integrity sha512-kfcYvscosV8X+ozqi+IugTpaNMdS4v0XZTOtxGP/luDLWXFhtpx22HZ2iU/aS0+Mv3AKgnkaDAGMTgSVOvJhFA==
+  version "1.11.6"
+  resolved "https://registry.yarnpkg.com/node-stream-zip/-/node-stream-zip-1.11.6.tgz#67f73f460afc6eafcefc3f4f8308349b798fdb42"
+  integrity sha512-AJHTKqgUM7nruh3vkZlRml9shq6ArhtCjRFxzdo2N2iBH3PxXQ/Le7iD3xjMOIeV6A2OvDLIM3OaDN0aYLdnQQ==
 
 "nopt@2 || 3":
   version "3.0.6"
