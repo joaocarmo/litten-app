@@ -206,6 +206,14 @@
       "notImplemented": "That feature isn't active yet",
       "unmatchedPassword": "The passwords don't match"
     },
+    "system": {
+      "allowLocation": "Turn on Location Services to allow {{appName}} to determine your location",
+      "cantOpenSettings": "Unable to open settings",
+      "dontUseLocation": "Don't Use Location",
+      "goToSettings": "Go to Settings",
+      "locationDeniedByUser": "Location permission denied by user",
+      "locationRevokedByUser": "Location permission revoked by user"
+    },
     "firebaseErrorMessages": {
       "auth/email-already-exists": "The provided email already exists",
       "auth/email-already-in-use": "The provided email is already in use",

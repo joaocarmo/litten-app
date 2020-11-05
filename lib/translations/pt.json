@@ -46,7 +46,7 @@
     },
     "favourites": {
       "title": "Favoritos",
-      "tabNavPosts": "Publicações",
+      "tabNavPosts": "Littens",
       "tabNavSearches": "Pesquisas",
       "emptyPostsTitle": "Começa a aproximar-te do teu animal",
       "emptyPostsText": "Quando gostas de uma publicação, ela aparece aqui para dares seguimento",
@@ -205,6 +205,14 @@
       "noPhoneNumber": "Ainda não introduziste um número de telemóvel, mas podes fazê-lo no teu perfil",
       "notImplemented": "Essa funcionalidade está inactiva",
       "unmatchedPassword": "As senhas não condizem"
+    },
+    "system": {
+      "allowLocation": "Activa os Serviços de localização para permitir que {{appName}} determine a tua localização",
+      "cantOpenSettings": "Não foi possível abrir as Definições",
+      "dontUseLocation": "Não utilizar a localização",
+      "goToSettings": "Ir a Definições",
+      "locationDeniedByUser": "Permissão de localização negada pelo utilizador",
+      "locationRevokedByUser": "Permissão de localização revogada pelo utilizador"
     },
     "firebaseErrorMessages": {
       "auth/email-already-exists": "O email fornecido já existe",
