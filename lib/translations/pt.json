@@ -27,6 +27,9 @@
   "ui": {
     "elements": {
       "imagePlaceholder": "Adicionar"
+    },
+    "placeholders": {
+      "user": "Utilizador"
     }
   },
   "screens": {
@@ -289,9 +292,6 @@
     "signUp": "Registar",
     "skip": "Próximo",
     "yes": "Sim"
-  },
-  "placeholders": {
-    "user": "Utilizador"
   },
   "accessibility": {
     "tabBar": {

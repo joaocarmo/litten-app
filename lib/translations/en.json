@@ -27,6 +27,9 @@
   "ui": {
     "elements": {
       "imagePlaceholder": "Add photo"
+    },
+    "placeholders": {
+      "user": "User"
     }
   },
   "screens": {
@@ -289,9 +292,6 @@
     "signUp": "Sign up",
     "skip": "Skip",
     "yes": "Yes"
-  },
-  "placeholders": {
-    "user": "User"
   },
   "accessibility": {
     "tabBar": {

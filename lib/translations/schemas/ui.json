@@ -1,0 +1,23 @@
+{
+  "id": "/Ui",
+  "type": "object",
+  "properties": {
+    "elements": {
+      "type": "object",
+      "properties": {
+        "imagePlaceholder": {
+          "type": "string"
+        }
+      }
+    },
+    "placeholders": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": ["elements", "placeholders"]
+}

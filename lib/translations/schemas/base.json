@@ -1,0 +1,44 @@
+{
+  "id": "/Translation",
+  "type": "object",
+  "properties": {
+    "welcome": {
+      "type": "object"
+    },
+    "ui": {
+      "$ref": "/Ui"
+    },
+    "screens": {
+      "type": "object"
+    },
+    "forms": {
+      "type": "object"
+    },
+    "feedback": {
+      "type": "object"
+    },
+    "litten": {
+      "type": "object"
+    },
+    "cta": {
+      "type": "object"
+    },
+    "accessibility": {
+      "type": "object"
+    },
+    "easterEggs": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "welcome",
+    "ui",
+    "screens",
+    "forms",
+    "feedback",
+    "litten",
+    "cta",
+    "accessibility",
+    "easterEggs"
+  ]
+}
