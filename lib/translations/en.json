@@ -126,7 +126,12 @@
       "secondHeader": "Your definitions",
       "settings": "Settings",
       "termsAndConditions": "Terms and conditions",
-      "view": ""
+      "view": "Member profile",
+      "viewEmptyUserPosts": "This user doesn't have active littens at the moment.",
+      "viewMemberSince": "Joined {{memberSince}}",
+      "viewPostsByUser": "Littens",
+      "viewUserTypeIndividual": "Individual",
+      "viewUserTypeOrganization": "Organization"
     },
     "edit": {
       "delete": "DELETE PROFILE",

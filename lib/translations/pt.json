@@ -126,7 +126,12 @@
       "secondHeader": "As tuas definições",
       "settings": "Opções",
       "termsAndConditions": "Termos e condições",
-      "view": ""
+      "view": "Perfil de membro",
+      "viewEmptyUserPosts": "Este utilizador não tem littens activos, de momento.",
+      "viewMemberSince": "Registado {{memberSince}}",
+      "viewPostsByUser": "Littens",
+      "viewUserTypeIndividual": "Individual",
+      "viewUserTypeOrganization": "Organização"
     },
     "edit": {
       "delete": "APAGAR PERFIL",
