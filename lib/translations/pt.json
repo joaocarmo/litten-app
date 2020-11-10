@@ -106,10 +106,7 @@
     "profile": {
       "about": "Sobre",
       "aboutAuthors": "Autores",
-      "aboutEnvironment": "Ambiente da build",
       "aboutLicense": "Licença",
-      "aboutOS": "SO",
-      "aboutOSVersion": "Versão do SO",
       "aboutVersion": "Versão",
       "activePosts": "Posts activos",
       "contactUs": "Contacta-nos",
@@ -156,7 +153,12 @@
       "useMetricUnits": "Utilizar Sistema Métrico"
     },
     "dev": {
+      "aboutEnvironment": "Ambiente da build",
+      "aboutOS": "SO",
+      "aboutOSVersion": "Versão do SO",
       "clearAsyncStorage": "Limpar AsyncStorage",
+      "hacks": "Hacks",
+      "hacksIntro": "Esta é uma secção dedicada apenas para desenvolvedores",
       "storybook": "Storybook",
       "storybookIntro": "Podes navegar pelos elementos visuais do Litten aqui"
     }

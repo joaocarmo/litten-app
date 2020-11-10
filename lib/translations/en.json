@@ -106,10 +106,7 @@
     "profile": {
       "about": "About",
       "aboutAuthors": "Authors",
-      "aboutEnvironment": "Build environment",
       "aboutLicense": "License",
-      "aboutOS": "OS",
-      "aboutOSVersion": "OS Version",
       "aboutVersion": "Version",
       "activePosts": "Active posts",
       "contactUs": "Report a problem",
@@ -156,7 +153,12 @@
       "useMetricUnits": "Use Metric Units"
     },
     "dev": {
+      "aboutEnvironment": "Build environment",
+      "aboutOS": "OS",
+      "aboutOSVersion": "OS Version",
       "clearAsyncStorage": "Clear AsyncStorage",
+      "hacks": "Hacks",
+      "hacksIntro": "This is a developer-only screen with useful hacks",
       "storybook": "Storybook",
       "storybookIntro": "You can browse through Litten's UI Elements in this screen"
     }
