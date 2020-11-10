@@ -93,11 +93,13 @@
     "messages": {
       "emptyText": "Start conversations and they will show up in here",
       "emptyTitle": "Are you feeling shy?",
+      "littenRemoved": "Litten removed",
       "littenTitle": "{{type}} {{species}}: {{title}}",
       "title": "Messages",
       "options": {
-        "viewProfile": "View profile",
-        "deleteConversation": "Delete conversation"
+        "deleteConversation": "Delete Conversation",
+        "viewLitten": "View Litten",
+        "viewProfile": "View Profile"
       },
       "inputPlaceholder": "Type a message..."
     },
@@ -126,7 +128,7 @@
       "secondHeader": "Your definitions",
       "settings": "Settings",
       "termsAndConditions": "Terms and conditions",
-      "view": "Member profile",
+      "view": "Profile",
       "viewEmptyUserPosts": "This user doesn't have active littens at the moment.",
       "viewMemberSince": "Joined {{memberSince}}",
       "viewPostsByUser": "Littens",

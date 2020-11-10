@@ -93,11 +93,13 @@
     "messages": {
       "emptyText": "Inicia conversas e elas vão aparecer aqui",
       "emptyTitle": "Estás com vergonha?",
+      "littenRemoved": "Litten removed",
       "littenTitle": "{{type}} {{species}}: {{title}}",
       "title": "Mensagens",
       "options": {
-        "viewProfile": "Ver perfil",
-        "deleteConversation": "Apagar conversa"
+        "deleteConversation": "Apagar Conversa",
+        "viewLitten": "Ver Litten",
+        "viewProfile": "Ver Perfil"
       },
       "inputPlaceholder": "Escreve uma mensagem..."
     },
@@ -126,7 +128,7 @@
       "secondHeader": "As tuas definições",
       "settings": "Opções",
       "termsAndConditions": "Termos e condições",
-      "view": "Perfil de membro",
+      "view": "Perfil",
       "viewEmptyUserPosts": "Este utilizador não tem littens activos, de momento.",
       "viewMemberSince": "Registado {{memberSince}}",
       "viewPostsByUser": "Littens",
