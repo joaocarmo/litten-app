@@ -20,6 +20,9 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
         "flexDirection": "row",
         "justifyContent": "space-between",
       },
+      undefined,
+      undefined,
+      undefined,
     ]
   }
 >
@@ -35,11 +38,16 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
   >
     <Text
       style={
-        Object {
-          "color": "#000000",
-          "fontSize": 14,
-          "fontWeight": "500",
-        }
+        Array [
+          Object {
+            "color": "#000000",
+            "fontSize": 14,
+            "fontWeight": "500",
+          },
+          undefined,
+          undefined,
+          undefined,
+        ]
       }
     >
       Some text here
@@ -70,11 +78,14 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
     >
       <Text
         style={
-          Object {
-            "color": "#000000",
-            "fontSize": 10,
-            "fontWeight": "600",
-          }
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 10,
+              "fontWeight": "600",
+            },
+            undefined,
+          ]
         }
       >
         2
