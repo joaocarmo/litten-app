@@ -164,24 +164,25 @@
     }
   },
   "forms": {
-    "name": "Name",
-    "email": "Email",
-    "password": "Password",
-    "newPassword": "Create your password",
-    "confirmPassword": "Confirm your password",
     "callingCode": "Code",
-    "phoneNumber": "Phone number",
     "capturePhoto": "Take a profile picture",
     "capturePhotoOr": "or",
-    "fromLibrary": "From library",
     "changePhoto": "Change photo",
     "changePhotoDescription": "Do you want to replace the current photo?",
-    "registrationSuccess": "Registration successful",
-    "registrationError": "Registration failed",
+    "confirmPassword": "Confirm your password",
+    "email": "Email",
+    "fromLibrary": "From library",
+    "location": "Location",
+    "name": "Name",
+    "newPassword": "Create your password",
+    "password": "Password",
+    "phoneNumber": "Phone number",
     "recoverSentSuccess": "Please follow the instructions on your email.",
-    "reportErrorTitle": "Error report",
+    "registrationError": "Registration failed",
+    "registrationSuccess": "Registration successful",
     "reportErrorMessage": "Do you want to report this error?",
-    "reportErrorMessageDone": "Thank you for your feedback!"
+    "reportErrorMessageDone": "Thank you for your feedback!",
+    "reportErrorTitle": "Error report"
   },
   "feedback": {
     "pleaseWait": "Please wait...",
@@ -232,6 +233,7 @@
       "auth/invalid-email": "The provided email is invalid",
       "auth/invalid-password": "The provided password is invalid",
       "auth/network-request-failed": "There is a network problem",
+      "auth/too-many-requests": "Access to this account has been temporarily disabled due to many failed login attempts. You can immediately restore it by resetting your password or you can try again later.",
       "auth/user-not-found": "There is no such existing user record",
       "auth/wrong-password": "The provided password is wrong"
     }
