@@ -548,7 +548,7 @@ PODS:
     - React
   - react-native-maps (0.27.1):
     - React
-  - react-native-safe-area-context (3.1.8):
+  - react-native-safe-area-context (3.1.9):
     - React-Core
   - react-native-slider (3.0.3):
     - React
@@ -631,7 +631,7 @@ PODS:
     - Firebase/Auth (~> 7.0.0)
     - React-Core
     - RNFBApp
-  - RNFBFirestore (7.10.2):
+  - RNFBFirestore (7.10.3):
     - Firebase/Firestore (~> 7.0.0)
     - React-Core
     - RNFBApp
@@ -898,7 +898,7 @@ SPEC CHECKSUMS:
   React-jsinspector: 8e68ffbfe23880d3ee9bafa8be2777f60b25cbe2
   react-native-geolocation-service: 141e33bdb179bcba10b216ee13962611e21f2be4
   react-native-maps: f4b89da81626ad7f151a8bfcb79733295d31ce5c
-  react-native-safe-area-context: 79fea126c6830c85f65947c223a5e3058a666937
+  react-native-safe-area-context: b6e0e284002381d2ff29fa4fff42b4d8282e3c94
   react-native-slider: e99fc201cefe81270fc9d81714a7a0f5e566b168
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   react-native-webview: 0aa2cde4ee7e3e1c5fffdf64dbce9c709aa18155
@@ -918,7 +918,7 @@ SPEC CHECKSUMS:
   RNDeviceInfo: e1d82a27d0c1ea6278e3b141784dc38e51fc90f4
   RNFBApp: 2810471bdc092151f20f16a9f8915b1ad70325b2
   RNFBAuth: 005fc073e59f272bac33a5b5a2f9ffd77dbeebc9
-  RNFBFirestore: 2e2d0ec551db66eaf42b5a1dc4fe76262ae4c9c5
+  RNFBFirestore: be5e266c0134a30766bf0568e258e6692c50294a
   RNFBStorage: 79d66023b614b79bc360e2e0fa7d3067f6728827
   RNGestureHandler: 7a5833d0f788dbd107fbb913e09aa0c1ff333c39
   RNImageCropPicker: 16951bc02411f50c4d197488ed6406a23dc3b5f1
