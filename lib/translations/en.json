@@ -154,6 +154,9 @@
       "shareMetricsDesc": "Analytics are anonymous and allow us to receive automated error reports which we use to improve the overall user experience.",
       "useMetricUnits": "Use Metric Units"
     },
+    "selectLocation": {
+      "title": "Select location"
+    },
     "dev": {
       "aboutEnvironment": "Build environment",
       "aboutOS": "OS",

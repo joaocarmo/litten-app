@@ -154,6 +154,9 @@
       "shareMetricsDesc": "As estatísticas são dados anónimos e permitem-nos receber relatórios de erros automaticamente que usamos para melhorar a tua experiência.",
       "useMetricUnits": "Utilizar Sistema Métrico"
     },
+    "selectLocation": {
+      "title": "Escolher localização"
+    },
     "dev": {
       "aboutEnvironment": "Ambiente da build",
       "aboutOS": "SO",
