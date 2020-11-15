@@ -13,19 +13,16 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
 >
   <View
     accessible={true}
-    focusable={false}
+    focusable={true}
+    onBlur={[Function]}
     onClick={[Function]}
+    onFocus={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
   >
     <View
       style={
