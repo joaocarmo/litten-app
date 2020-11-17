@@ -230,23 +230,23 @@ PODS:
     - React-Core (= 0.63.3)
     - React-jsi (= 0.63.3)
     - ReactCommon/turbomodule/core (= 0.63.3)
-  - Firebase/Auth (7.0.0):
+  - Firebase/Auth (7.1.0):
     - Firebase/CoreOnly
-    - FirebaseAuth (~> 7.0.0)
-  - Firebase/CoreOnly (7.0.0):
-    - FirebaseCore (= 7.0.0)
-  - Firebase/Firestore (7.0.0):
+    - FirebaseAuth (~> 7.1.0)
+  - Firebase/CoreOnly (7.1.0):
+    - FirebaseCore (= 7.1.0)
+  - Firebase/Firestore (7.1.0):
     - Firebase/CoreOnly
-    - FirebaseFirestore (~> 7.0.0)
-  - Firebase/Storage (7.0.0):
+    - FirebaseFirestore (~> 7.1.0)
+  - Firebase/Storage (7.1.0):
     - Firebase/CoreOnly
-    - FirebaseStorage (~> 7.0.0)
-  - FirebaseAuth (7.0.0):
+    - FirebaseStorage (~> 7.1.0)
+  - FirebaseAuth (7.1.0):
     - FirebaseCore (~> 7.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
     - GoogleUtilities/Environment (~> 7.0)
     - GTMSessionFetcher/Core (~> 1.4)
-  - FirebaseCore (7.0.0):
+  - FirebaseCore (7.1.0):
     - FirebaseCoreDiagnostics (~> 7.0)
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Logger (~> 7.0)
@@ -255,7 +255,7 @@ PODS:
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Logger (~> 7.0)
     - nanopb (~> 2.30906.0)
-  - FirebaseFirestore (7.0.0):
+  - FirebaseFirestore (7.1.0):
     - abseil/algorithm (= 0.20200225.0)
     - abseil/base (= 0.20200225.0)
     - abseil/memory (= 0.20200225.0)
@@ -267,7 +267,7 @@ PODS:
     - "gRPC-C++ (~> 1.28.0)"
     - leveldb-library (~> 1.22)
     - nanopb (~> 2.30906.0)
-  - FirebaseStorage (7.0.0):
+  - FirebaseStorage (7.1.0):
     - FirebaseCore (~> 7.0)
     - GTMSessionFetcher/Core (~> 1.4)
   - Flipper (0.54.0):
@@ -622,21 +622,21 @@ PODS:
     - React
   - RNCPicker (1.8.1):
     - React-Core
-  - RNDeviceInfo (7.0.2):
+  - RNDeviceInfo (7.1.0):
     - React-Core
-  - RNFBApp (9.0.0):
-    - Firebase/CoreOnly (~> 7.0.0)
+  - RNFBApp (10.0.0):
+    - Firebase/CoreOnly (~> 7.1.0)
     - React-Core
-  - RNFBAuth (9.3.5):
-    - Firebase/Auth (~> 7.0.0)
-    - React-Core
-    - RNFBApp
-  - RNFBFirestore (7.10.3):
-    - Firebase/Firestore (~> 7.0.0)
+  - RNFBAuth (10.0.0):
+    - Firebase/Auth (~> 7.1.0)
     - React-Core
     - RNFBApp
-  - RNFBStorage (7.4.14):
-    - Firebase/Storage (~> 7.0.0)
+  - RNFBFirestore (10.0.0):
+    - Firebase/Firestore (~> 7.1.0)
+    - React-Core
+    - RNFBApp
+  - RNFBStorage (10.0.0):
+    - Firebase/Storage (~> 7.1.0)
     - React-Core
     - RNFBApp
   - RNGestureHandler (1.8.0):
@@ -862,12 +862,12 @@ SPEC CHECKSUMS:
   DoubleConversion: cde416483dac037923206447da6e1454df403714
   FBLazyVector: 878b59e31113e289e275165efbe4b54fa614d43d
   FBReactNativeSpec: 7da9338acfb98d4ef9e5536805a0704572d33c2f
-  Firebase: 50be68416f50eb4eb2ecb0e78acab9a051ef95df
-  FirebaseAuth: 228dd0faa5b5263eaa8c63518b16faef438289a3
-  FirebaseCore: cf3122185fce1cf71cedbbc498ea84d2b3e7cb69
+  Firebase: 78e8dd2e39d653de6270432ad84fe8b59f7bf4e8
+  FirebaseAuth: f82c2cfcc1c107bb0a97735cdbce4eb2a601f710
+  FirebaseCore: 20046127eef0fcb8fa25df7fc12f7b97d4e48611
   FirebaseCoreDiagnostics: 872cdb9b749b23346dddd5c1014d1babd2257de3
-  FirebaseFirestore: 969dd448250bee681d0e2d0af89cbb76ef955bb0
-  FirebaseStorage: ea52bc7a1cb540406ed1e1acfc2bf3946621ed34
+  FirebaseFirestore: bbf303f0638a93e6ecb38433aad283cebdfece5f
+  FirebaseStorage: 80e2cd5200791540ca544f4dcac5e6b56994fc97
   Flipper: be611d4b742d8c87fbae2ca5f44603a02539e365
   Flipper-DoubleConversion: 38631e41ef4f9b12861c67d17cb5518d06badc41
   Flipper-Folly: e4493b013c02d9347d5e0cb4d128680239f6c78a
@@ -915,11 +915,11 @@ SPEC CHECKSUMS:
   RNCAsyncStorage: b03032fdbdb725bea0bd9e5ec5a7272865ae7398
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
   RNCPicker: 914b557e20b3b8317b084aca9ff4b4edb95f61e4
-  RNDeviceInfo: e1d82a27d0c1ea6278e3b141784dc38e51fc90f4
-  RNFBApp: 2810471bdc092151f20f16a9f8915b1ad70325b2
-  RNFBAuth: 005fc073e59f272bac33a5b5a2f9ffd77dbeebc9
-  RNFBFirestore: be5e266c0134a30766bf0568e258e6692c50294a
-  RNFBStorage: 79d66023b614b79bc360e2e0fa7d3067f6728827
+  RNDeviceInfo: 6cf87235aa11e675b93b31aa9b88a825753eea2f
+  RNFBApp: dd793eec42bce8d09391bd95e42f2ed7511e7fef
+  RNFBAuth: 55efed3bceda1d53196bb1671a446ec4f0a7bfd7
+  RNFBFirestore: ee3188e5434bb9dbc6ff99d22be72acf10f0c238
+  RNFBStorage: 4a54067b318427ec4741ebca6d9e88b138149202
   RNGestureHandler: 7a5833d0f788dbd107fbb913e09aa0c1ff333c39
   RNImageCropPicker: 16951bc02411f50c4d197488ed6406a23dc3b5f1
   RNLocalize: 830a53d14a7a70a5ae034487f76f11a6e036562b
