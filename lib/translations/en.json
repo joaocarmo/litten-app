@@ -193,7 +193,6 @@
   "feedback": {
     "pleaseWait": "Please wait...",
     "confirmMessages": {
-      "blockUser": "Are you sure you want to block {{user}}?",
       "clearFilters": "Are you sure you want to clear the filters?",
       "clearForm": "Are you sure you want to clear the form?",
       "deleteConversation": "Are you sure you want to delete the conversation with {{user}}?",
@@ -285,7 +284,6 @@
     }
   },
   "cta": {
-    "blockUser": "Block user",
     "cancel": "Cancel",
     "change": "Change",
     "changePhoto": "Change photo",
@@ -294,6 +292,7 @@
     "clearForm": "Clear form",
     "clearLocation": "Clear location",
     "continue": "Continue",
+    "copy": "Copy",
     "delete": "Delete",
     "deleteConversation": "Delete conversation",
     "deleteLitten": "Delete litten",

@@ -61,6 +61,7 @@
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.11.0",
+    "@react-native-community/clipboard": "^1.5.1",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-native-community/picker": "^1.6.5",
     "@react-native-community/slider": "^3.0.3",
@@ -71,9 +72,9 @@
     "@react-navigation/bottom-tabs": "^5.7.2",
     "@react-navigation/native": "^5.7.1",
     "@react-navigation/stack": "^5.7.1",
-    "@storybook/addon-knobs": "^6.0.28",
+    "@storybook/addon-knobs": "^6.1.1",
     "@storybook/addon-ondevice-knobs": "^5.3.19",
-    "@storybook/addons": "^6.0.28",
+    "@storybook/addons": "^6.1.1",
     "@storybook/react-native": "^5.3.19",
     "@storybook/react-native-server": "^5.3.19",
     "babel-plugin-dotenv-import": "^2.1.0",
@@ -105,7 +106,7 @@
     "react-redux": "^7.2.1",
     "redux": "^4.0.5",
     "redux-persist": "^6.0.0",
-    "storybook": "^6.0.28"
+    "storybook": "^6.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",

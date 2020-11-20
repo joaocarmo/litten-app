@@ -193,7 +193,6 @@
   "feedback": {
     "pleaseWait": "Aguarda...",
     "confirmMessages": {
-      "blockUser": "Tens a certeza que queres bloquear {{user}}?",
       "clearFilters": "Tens a certeza que queres limpar os filtros?",
       "clearForm": "Tens a certeza que queres limpar o formulário?",
       "deleteConversation": "Tens a certeza que queres apagar a conversa com {{user}}?",
@@ -285,7 +284,6 @@
     }
   },
   "cta": {
-    "blockUser": "Bloquear utilizador",
     "cancel": "Cancelar",
     "change": "Alterar",
     "changePhoto": "Alterar",
@@ -294,6 +292,7 @@
     "clearForm": "Limpar formulário",
     "clearLocation": "Limpar localização",
     "continue": "Continuar",
+    "copy": "Copiar",
     "delete": "Apagar",
     "deleteConversation": "Apagar conversa",
     "deleteLitten": "Apagar litten",
