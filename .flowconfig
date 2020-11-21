@@ -8,6 +8,10 @@
 ; Ignore polyfills
 node_modules/react-native/Libraries/polyfills/.*
 
+; Ignore builds
+node_modules/*.*/build/*
+node_modules/*.*/dist/*
+
 ; These should not be required directly
 ; require from fbjs/lib instead: require('fbjs/lib/warning')
 node_modules/warning/.*
@@ -16,8 +20,12 @@ node_modules/warning/.*
 .*/Libraries/Utilities/LoadingView.js
 
 [untyped]
+.*/node_modules/@react-native-community/cli/.*/.*
 
 [include]
+
+[declarations]
+.*/node_modules/.*
 
 [libs]
 node_modules/react-native/interface.js
@@ -62,6 +70,7 @@ suppress_type=$FlowIssue
 suppress_type=$FlowFixMe
 suppress_type=$FlowFixMeProps
 suppress_type=$FlowFixMeState
+suppress_type=$FlowFixMeEmpty
 
 types_first=false
 
