@@ -58,6 +58,9 @@ The `GOOGLE_API_KEY` needs to be available in order for the Android gradle build
 to be able to pick it up. Consider exporting it in your shell's run commands
 file (e.g., `.bash_profile`).
 
+Detailed instructions on how to setup the environment are available
+[here][env-setup].
+
 ## Backend
 
 Currently, the project relies on a [Firebase][firebase] infrastructure. The app
@@ -79,6 +82,7 @@ the design are [not licensed][licenseimgs].
 
 <!-- References -->
 
+[env-setup]: https://reactnative.dev/docs/environment-setup
 [firebase]: https://firebase.google.com
 [setupfirebase]: https://firebase.google.com/docs/ios/setup
 [emulator]: https://firebase.google.com/docs/emulator-suite/install_and_configure
