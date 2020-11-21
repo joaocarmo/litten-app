@@ -70,3 +70,6 @@ flow-typed/
 
 # Firebase persistence
 firebase/
+
+# Java heap dump
+java_pid*.hprof

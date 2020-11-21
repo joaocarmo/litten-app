@@ -62,7 +62,8 @@ file (e.g., `.bash_profile`).
 
 Currently, the project relies on a [Firebase][firebase] infrastructure. The app
 will fail to build until a new project is [setup][setupfirebase] and the
-`GoogleService-Info.plist` configutarion file is added to the `ios` directory.
+`GoogleService-Info.plist` configutarion file is added to the `ios` directory,
+as well as the `google-services.json` file to `android/app`.
 
 Additionally, you should install, configure and integrate the
 [Local Emulator Suite][emulator].

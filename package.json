@@ -48,6 +48,7 @@
     "react-devtools": "react-devtools",
     "sanity-check": "yarn lint && yarn pretty && yarn type-check && yarn test",
     "sort-data": "./scripts/sort-data",
+    "start:android": "yarn android && yarn start:firestore",
     "start:firestore": "firebase emulators:start --only firestore --import=./firebase --export-on-exit",
     "start:ios": "yarn ios && yarn start:firestore",
     "start": "react-native start",
