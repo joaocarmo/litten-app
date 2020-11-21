@@ -17,6 +17,9 @@ yarn ios
 # Run the ES linter
 yarn lint
 
+# Run Prettier
+yarn pretty
+
 # Run the Flow type checker
 yarn type-check
 
@@ -50,6 +53,10 @@ certain API keys.
 ```sh
 cp .env.example .env
 ```
+
+The `GOOGLE_API_KEY` needs to be available in order for the Android gradle build
+to be able to pick it up. Consider exporting it in your shell's run commands
+file (e.g., `.bash_profile`).
 
 ## Backend
 

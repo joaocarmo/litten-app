@@ -120,6 +120,8 @@ def jscFlavor = 'org.webkit:android-jsc:+'
  */
 def enableHermes = project.ext.react.get("enableHermes", false);
 
+def googleMapApiKey = System.getenv("GOOGLE_API_KEY")
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 

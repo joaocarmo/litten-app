@@ -38,13 +38,13 @@
 		</dict>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>$(PRODUCT_NAME) would like to use your camera to capture your profile picture and capture your images for posts</string>
+	<string>$(PRODUCT_NAME) would like to use your camera to capture your profile picture and photos for yours posts</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>$(PRODUCT_NAME) would like to use your location to provide an easier way to add location information (for posts) and to filter posts by distance (for search)</string>
+	<string>$(PRODUCT_NAME) would like to use your location to filter posts by distance as well as setup your posts' location</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>$(PRODUCT_NAME) would like to save the photos you captured within the app to your photo gallery</string>
+	<string>$(PRODUCT_NAME) would like to use your photo gallery in case you want to save the photos your capture within the app</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>$(PRODUCT_NAME) would like access to your photo gallery to change your profile picture and submit your images for posts</string>
+	<string>$(PRODUCT_NAME) would like access to your photo gallery to select your profile picture and submit photos for your posts</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
