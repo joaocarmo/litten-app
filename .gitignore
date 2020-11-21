@@ -65,6 +65,7 @@ google-services.json
 
 # Flow typed
 flow-typed/
+!flow-typed/npm/dayjs_v1.x.x.js
 !flow-typed/npm/react-native-dotenv_vx.x.x.js
 
 # Firebase persistence

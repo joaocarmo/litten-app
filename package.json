@@ -46,6 +46,7 @@
     "pretty": "prettier --check .",
     "push": "git add . && gitmoji -c && git push",
     "react-devtools": "react-devtools",
+    "sanity-check": "yarn lint && yarn pretty && yarn type-check && yarn test",
     "sort-data": "./scripts/sort-data",
     "start:firestore": "firebase emulators:start --only firestore --import=./firebase --export-on-exit",
     "start:ios": "yarn ios && yarn start:firestore",
