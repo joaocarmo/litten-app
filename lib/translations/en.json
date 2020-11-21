@@ -89,15 +89,16 @@
     "messages": {
       "emptyText": "Start conversations and they will show up in here",
       "emptyTitle": "Are you feeling shy?",
+      "inputPlaceholder": "Type a message...",
       "littenRemoved": "Litten removed",
       "littenTitle": "{{type}} {{species}}: {{title}}",
+      "loadEarlier": "Load earlier messages",
       "title": "Messages",
       "options": {
         "deleteConversation": "Delete Conversation",
         "viewLitten": "View Litten",
         "viewProfile": "View Profile"
-      },
-      "inputPlaceholder": "Type a message..."
+      }
     },
     "profile": {
       "about": "About",

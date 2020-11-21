@@ -89,15 +89,16 @@
     "messages": {
       "emptyText": "Inicia conversas e elas vão aparecer aqui",
       "emptyTitle": "Estás com vergonha?",
+      "inputPlaceholder": "Escreve uma mensagem...",
       "littenRemoved": "Litten removed",
       "littenTitle": "{{type}} {{species}}: {{title}}",
+      "loadEarlier": "Carregar mensagens anteriores",
       "title": "Mensagens",
       "options": {
         "deleteConversation": "Apagar Conversa",
         "viewLitten": "Ver Litten",
         "viewProfile": "Ver Perfil"
-      },
-      "inputPlaceholder": "Escreve uma mensagem..."
+      }
     },
     "profile": {
       "about": "Sobre",
