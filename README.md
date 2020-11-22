@@ -1,6 +1,6 @@
 # Litten
 
-Litten app iOS repository using React Native
+Litten mobile app repository using React Native
 
 ## Development Commands
 
@@ -11,7 +11,10 @@ yarn install
 # Install the cocoapods dependencies
 yarn pods
 
-# Run the simulator
+# Run the Android simulator
+yarn android
+
+# Run the iOS simulator
 yarn ios
 
 # Run the ES linter
