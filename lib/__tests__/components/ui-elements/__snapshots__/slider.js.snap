@@ -20,12 +20,16 @@ exports[`Snapshot test for the "UISlider" component renders correctly 1`] = `
       Object {
         "height": 40,
       },
-      Object {
-        "height": 80,
-      },
+      Array [
+        Object {
+          "height": 80,
+        },
+        undefined,
+      ],
     ]
   }
   thumbImage={null}
+  thumbTintColor="#ffffff"
   value={35}
 />
 `;

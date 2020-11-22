@@ -42,6 +42,8 @@ exports[`Snapshot test for the "UISwitch" component renders correctly 1`] = `
         "width": 51,
       }
     }
+    thumbTintColor="#ffffff"
+    tintColor="#dcdee1"
     value={true}
   />
 </View>
