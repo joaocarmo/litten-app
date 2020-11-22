@@ -1,46 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot test for the "UISelect" component renders correctly 1`] = `
-Array [
-  <TextInput
-    active={false}
-    allowFontScaling={true}
-    editable={false}
-    onBlur={[Function]}
-    onFocus={[Function]}
-    onTouchStart={[Function]}
-    placeholder="Some text here"
-    placeholderTextColor="#c4c4c4"
-    rejectResponderTermination={true}
-    style={
-      Array [
-        Array [
-          Object {
-            "borderBottomWidth": 2,
-            "color": "#000000",
-            "fontSize": 20,
-            "fontWeight": "600",
-            "height": 60,
-            "marginBottom": 10,
-            "marginTop": 10,
-            "width": "100%",
-          },
-          Object {
-            "borderBottomColor": "#c4c4c4",
-          },
-        ],
-        Array [
-          Object {
-            "height": 60,
-            "width": "100%",
-          },
-          Object {},
-        ],
-      ]
+<View
+  style={
+    Object {
+      "borderWidth": 0,
+      "width": "100%",
     }
-    underlineColorAndroid="transparent"
-    value="One"
-  />,
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onTouchStart={[Function]}
+  >
+    <TextInput
+      active={false}
+      allowFontScaling={true}
+      editable={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder="Some text here"
+      placeholderTextColor="#c4c4c4"
+      rejectResponderTermination={true}
+      style={
+        Array [
+          Array [
+            Object {
+              "borderBottomWidth": 2,
+              "color": "#000000",
+              "fontSize": 20,
+              "fontWeight": "600",
+              "height": 60,
+              "marginBottom": 10,
+              "marginTop": 10,
+              "width": "100%",
+            },
+            Object {
+              "borderBottomColor": "#c4c4c4",
+            },
+          ],
+          Array [
+            Object {
+              "height": 60,
+              "width": "100%",
+            },
+            Object {},
+          ],
+        ]
+      }
+      underlineColorAndroid="transparent"
+      value="One"
+    />
+  </View>
   <Modal
     animationType="slide"
     hardwareAccelerated={false}
@@ -55,7 +76,9 @@ Array [
     <View
       accessible={true}
       focusable={true}
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -65,10 +88,17 @@ Array [
       style={
         Object {
           "flex": 1,
-          "opacity": 1,
         }
       }
-    />
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+    </View>
     <View
       style={
         Object {
@@ -107,6 +137,6 @@ Array [
         />
       </View>
     </View>
-  </Modal>,
-]
+  </Modal>
+</View>
 `;
