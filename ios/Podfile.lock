@@ -641,8 +641,8 @@ PODS:
     - Firebase/Storage (~> 7.1.0)
     - React-Core
     - RNFBApp
-  - RNGestureHandler (1.8.0):
-    - React
+  - RNGestureHandler (1.9.0):
+    - React-Core
   - RNImageCropPicker (0.35.1):
     - React-Core
     - React-RCTImage
@@ -926,7 +926,7 @@ SPEC CHECKSUMS:
   RNFBAuth: 55efed3bceda1d53196bb1671a446ec4f0a7bfd7
   RNFBFirestore: ee3188e5434bb9dbc6ff99d22be72acf10f0c238
   RNFBStorage: 4a54067b318427ec4741ebca6d9e88b138149202
-  RNGestureHandler: 7a5833d0f788dbd107fbb913e09aa0c1ff333c39
+  RNGestureHandler: 9b7e605a741412e20e13c512738a31bd1611759b
   RNImageCropPicker: 16951bc02411f50c4d197488ed6406a23dc3b5f1
   RNLocalize: 41026b7c14878f1a1b381bc79f668f1fbf841adb
   RNReanimated: e03f7425cb7a38dcf1b644d680d1bfc91c3337ad

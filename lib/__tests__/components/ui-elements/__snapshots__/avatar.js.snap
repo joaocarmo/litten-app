@@ -6,6 +6,9 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
     Array [
       undefined,
       Object {
+        "overflow": "hidden",
+      },
+      Object {
         "borderRadius": 18,
         "height": 36,
         "width": 36,
@@ -23,9 +26,6 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
     }
     style={
       Array [
-        Object {
-          "overflow": "hidden",
-        },
         Object {
           "borderRadius": 18,
           "height": 36,
