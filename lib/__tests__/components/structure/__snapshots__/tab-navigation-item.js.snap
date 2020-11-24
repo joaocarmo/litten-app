@@ -3,8 +3,10 @@
 exports[`Snapshot test for the "TabNavigationItem" component renders correctly 1`] = `
 <View
   accessible={true}
-  focusable={false}
+  focusable={true}
+  onBlur={[Function]}
   onClick={[Function]}
+  onFocus={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -12,11 +14,16 @@ exports[`Snapshot test for the "TabNavigationItem" component renders correctly 1
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Object {
-      "alignItems": "center",
-      "justifyContent": "center",
-      "paddingBottom": 16,
-    }
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "paddingBottom": 0,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
   }
 >
   <Image
@@ -24,6 +31,7 @@ exports[`Snapshot test for the "TabNavigationItem" component renders correctly 1
     style={
       Object {
         "height": 28,
+        "tintColor": "#6a6767",
         "width": 28,
       }
     }
