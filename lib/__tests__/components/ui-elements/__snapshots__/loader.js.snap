@@ -2,26 +2,30 @@
 
 exports[`Snapshot test for the "UILoader" component renders correctly when active 1`] = `
 <View
-  opacity={null}
   style={
-    Object {
-      "alignItems": "center",
-      "alignSelf": "center",
-      "backgroundColor": "#eff1f3",
-      "flex": 0,
-      "height": "100%",
-      "justifyContent": "center",
-      "maxWidth": 750,
-      "minWidth": "100%",
-      "position": "absolute",
-      "top": 0,
-      "zIndex": 1,
-    }
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": "#eff1f3",
+        "flex": 0,
+        "height": "100%",
+        "justifyContent": "center",
+        "maxWidth": 750,
+        "minWidth": "100%",
+        "opacity": 1,
+        "position": "absolute",
+        "top": 0,
+        "zIndex": 1,
+      },
+      undefined,
+      undefined,
+    ]
   }
 >
   <ActivityIndicator
     animating={true}
-    color="#999999"
+    color="#39a4f2"
     hidesWhenStopped={true}
     size="small"
   />

@@ -7,7 +7,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
       "flexDirection": "row",
       "flexWrap": "wrap",
       "justifyContent": "space-between",
-      "margin": -3,
+      "margin": -4.5,
     }
   }
 >
@@ -34,7 +34,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
               "borderRadius": 10,
               "borderWidth": 2,
               "height": 157.5,
-              "margin": 3,
+              "margin": 4.5,
             },
             Object {
               "alignItems": "center",
@@ -85,7 +85,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
           "borderRadius": 10,
           "borderWidth": 2,
           "height": 157.5,
-          "margin": 3,
+          "margin": 4.5,
         },
         Object {
           "alignItems": "center",
@@ -103,7 +103,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
           "borderRadius": 10,
           "borderWidth": 2,
           "height": 157.5,
-          "margin": 3,
+          "margin": 4.5,
         },
         Object {
           "alignItems": "center",
@@ -121,7 +121,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
           "borderRadius": 10,
           "borderWidth": 2,
           "height": 157.5,
-          "margin": 3,
+          "margin": 4.5,
         },
         Object {
           "alignItems": "center",
@@ -139,7 +139,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
           "borderRadius": 10,
           "borderWidth": 2,
           "height": 157.5,
-          "margin": 3,
+          "margin": 4.5,
         },
         Object {
           "alignItems": "center",
@@ -157,7 +157,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
           "borderRadius": 10,
           "borderWidth": 2,
           "height": 157.5,
-          "margin": 3,
+          "margin": 4.5,
         },
         Object {
           "alignItems": "center",
@@ -175,7 +175,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
           "borderRadius": 10,
           "borderWidth": 2,
           "height": 157.5,
-          "margin": 3,
+          "margin": 4.5,
         },
         Object {
           "alignItems": "center",
@@ -193,20 +193,13 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
           "borderRadius": 10,
           "borderWidth": 2,
           "height": 157.5,
-          "margin": 3,
+          "margin": 4.5,
         },
         Object {
           "alignItems": "center",
           "justifyContent": "center",
         },
       ]
-    }
-  />
-  <View
-    style={
-      Object {
-        "flex": 1,
-      }
     }
   />
 </View>

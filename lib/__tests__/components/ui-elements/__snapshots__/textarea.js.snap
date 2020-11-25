@@ -18,10 +18,12 @@ exports[`Snapshot test for the "UITextArea" component renders correctly 1`] = `
         "paddingLeft": 20,
         "paddingRight": 20,
         "paddingTop": 20,
+        "textAlignVertical": "top",
       },
       Object {
         "minHeight": 256,
       },
+      undefined,
     ]
   }
   underlineColorAndroid="transparent"
