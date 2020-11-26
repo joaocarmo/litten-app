@@ -91,6 +91,7 @@
     "react": "17.0.1",
     "react-native": "0.63.3",
     "react-native-device-info": "^7.1.0",
+    "react-native-dialog": "^6.1.2",
     "react-native-dotenv": "^2.2.0",
     "react-native-expo-viewport-units": "^0.0.8",
     "react-native-geolocation-service": "^5.0.0",
