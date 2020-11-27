@@ -7,7 +7,7 @@ Array [
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -46,27 +46,38 @@ Array [
           }
         }
       >
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#000000",
-                "fontSize": 14,
-                "fontWeight": "500",
-                "paddingBottom": 3,
-              },
-              Object {
-                "color": "#ffffff",
-              },
-            ]
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -76,23 +87,6 @@ Array [
             style={
               Array [
                 Object {
-                  "fontSize": 12,
-                  "marginRight": 6,
-                },
-                Object {
-                  "color": "#ffffff",
-                },
-              ]
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "flex": 1,
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -113,6 +107,21 @@ uncover many web sites still in their infancy. Various versions
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            johnnyeyelash
+          </Text>
         </View>
       </View>
     </View>
@@ -131,7 +140,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -168,22 +177,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -191,22 +214,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -219,6 +233,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -238,7 +265,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -275,22 +302,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -298,22 +339,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -326,6 +358,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -345,7 +390,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -382,22 +427,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -405,22 +464,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -433,6 +483,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -452,7 +515,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -491,27 +554,38 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#000000",
-                "fontSize": 14,
-                "fontWeight": "500",
-                "paddingBottom": 3,
-              },
-              Object {
-                "color": "#ffffff",
-              },
-            ]
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -521,23 +595,6 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
-                  "fontSize": 12,
-                  "marginRight": 6,
-                },
-                Object {
-                  "color": "#ffffff",
-                },
-              ]
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "flex": 1,
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -558,6 +615,21 @@ uncover many web sites still in their infancy. Various versions
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            johnnyeyelash
+          </Text>
         </View>
       </View>
     </View>
@@ -576,7 +648,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -613,22 +685,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -636,22 +722,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -664,6 +741,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -683,7 +773,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -720,22 +810,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -743,22 +847,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -771,6 +866,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -790,7 +898,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -827,22 +935,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -850,22 +972,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -878,6 +991,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -897,7 +1023,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -936,27 +1062,38 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#000000",
-                "fontSize": 14,
-                "fontWeight": "500",
-                "paddingBottom": 3,
-              },
-              Object {
-                "color": "#ffffff",
-              },
-            ]
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -966,23 +1103,6 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
-                  "fontSize": 12,
-                  "marginRight": 6,
-                },
-                Object {
-                  "color": "#ffffff",
-                },
-              ]
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "flex": 1,
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -1003,6 +1123,21 @@ uncover many web sites still in their infancy. Various versions
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            johnnyeyelash
+          </Text>
         </View>
       </View>
     </View>
@@ -1021,7 +1156,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -1058,22 +1193,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -1081,22 +1230,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -1109,6 +1249,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -1128,7 +1281,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -1165,22 +1318,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -1188,22 +1355,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -1216,6 +1374,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -1235,7 +1406,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -1272,22 +1443,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -1295,22 +1480,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -1323,6 +1499,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -1342,7 +1531,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -1381,27 +1570,38 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#000000",
-                "fontSize": 14,
-                "fontWeight": "500",
-                "paddingBottom": 3,
-              },
-              Object {
-                "color": "#ffffff",
-              },
-            ]
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -1411,23 +1611,6 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
-                  "fontSize": 12,
-                  "marginRight": 6,
-                },
-                Object {
-                  "color": "#ffffff",
-                },
-              ]
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "flex": 1,
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -1448,6 +1631,21 @@ uncover many web sites still in their infancy. Various versions
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            johnnyeyelash
+          </Text>
         </View>
       </View>
     </View>
@@ -1466,7 +1664,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -1503,22 +1701,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -1526,22 +1738,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -1554,6 +1757,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -1573,7 +1789,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -1610,22 +1826,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -1633,22 +1863,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -1661,6 +1882,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -1680,7 +1914,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -1717,22 +1951,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -1740,22 +1988,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -1768,6 +2007,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -1787,7 +2039,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -1826,27 +2078,38 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#000000",
-                "fontSize": 14,
-                "fontWeight": "500",
-                "paddingBottom": 3,
-              },
-              Object {
-                "color": "#ffffff",
-              },
-            ]
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -1856,23 +2119,6 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
-                  "fontSize": 12,
-                  "marginRight": 6,
-                },
-                Object {
-                  "color": "#ffffff",
-                },
-              ]
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "flex": 1,
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -1893,6 +2139,21 @@ uncover many web sites still in their infancy. Various versions
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            johnnyeyelash
+          </Text>
         </View>
       </View>
     </View>
@@ -1911,7 +2172,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -1948,22 +2209,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -1971,22 +2246,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -1999,6 +2265,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -2018,7 +2297,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -2055,22 +2334,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -2078,22 +2371,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -2106,6 +2390,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -2125,7 +2422,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -2162,22 +2459,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -2185,22 +2496,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -2213,6 +2515,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -2232,7 +2547,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -2271,27 +2586,38 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#000000",
-                "fontSize": 14,
-                "fontWeight": "500",
-                "paddingBottom": 3,
-              },
-              Object {
-                "color": "#ffffff",
-              },
-            ]
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -2301,23 +2627,6 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
-                  "fontSize": 12,
-                  "marginRight": 6,
-                },
-                Object {
-                  "color": "#ffffff",
-                },
-              ]
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "flex": 1,
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -2338,6 +2647,21 @@ uncover many web sites still in their infancy. Various versions
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            johnnyeyelash
+          </Text>
         </View>
       </View>
     </View>
@@ -2356,7 +2680,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -2393,22 +2717,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -2416,22 +2754,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -2444,6 +2773,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -2463,7 +2805,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -2500,22 +2842,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -2523,22 +2879,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -2551,6 +2898,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -2570,7 +2930,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -2607,22 +2967,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -2630,22 +3004,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -2658,6 +3023,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -2677,7 +3055,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -2716,27 +3094,38 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#000000",
-                "fontSize": 14,
-                "fontWeight": "500",
-                "paddingBottom": 3,
-              },
-              Object {
-                "color": "#ffffff",
-              },
-            ]
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -2746,23 +3135,6 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
-                  "fontSize": 12,
-                  "marginRight": 6,
-                },
-                Object {
-                  "color": "#ffffff",
-                },
-              ]
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "flex": 1,
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -2783,6 +3155,21 @@ uncover many web sites still in their infancy. Various versions
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            johnnyeyelash
+          </Text>
         </View>
       </View>
     </View>
@@ -2801,7 +3188,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -2838,22 +3225,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -2861,22 +3262,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -2889,6 +3281,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -2908,7 +3313,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -2945,22 +3350,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -2968,22 +3387,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -2996,6 +3406,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -3015,7 +3438,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -3052,22 +3475,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -3075,22 +3512,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -3103,6 +3531,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>
@@ -3122,7 +3563,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -3161,27 +3602,38 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#000000",
-                "fontSize": 14,
-                "fontWeight": "500",
-                "paddingBottom": 3,
-              },
-              Object {
-                "color": "#ffffff",
-              },
-            ]
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -3191,23 +3643,6 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
-                  "fontSize": 12,
-                  "marginRight": 6,
-                },
-                Object {
-                  "color": "#ffffff",
-                },
-              ]
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "flex": 1,
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -3228,6 +3663,21 @@ uncover many web sites still in their infancy. Various versions
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            johnnyeyelash
+          </Text>
         </View>
       </View>
     </View>
@@ -3246,7 +3696,7 @@ purpose (injected humour and the like).
       Array [
         Object {
           "backgroundColor": "#ffffff",
-          "borderRadius": 10,
+          "borderRadius": 6,
           "flex": 1,
           "marginBottom": 8,
           "marginTop": 8,
@@ -3283,22 +3733,36 @@ purpose (injected humour and the like).
           }
         }
       >
-        <Text
-          style={
-            Object {
-              "color": "#000000",
-              "fontSize": 14,
-              "fontWeight": "500",
-              "paddingBottom": 3,
-            }
-          }
-        >
-          Cat: Snowball
-        </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
               "paddingTop": 3,
             }
           }
@@ -3306,22 +3770,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Object {
-                "fontSize": 12,
-                "marginRight": 6,
-              }
-            }
-          >
-            johnnyeyelash
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "flex": 1,
-                "fontSize": 12,
-                "fontWeight": "200",
-              }
+              Array [
+                Object {
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
             }
           >
             It is a long established fact that a reader will be distracted by 
@@ -3334,6 +3789,19 @@ their default model text, and a search for 'lorem ipsum' will
 uncover many web sites still in their infancy. Various versions 
 have evolved over the years, sometimes by accident, sometimes on 
 purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "fontSize": 12,
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
           </Text>
         </View>
       </View>

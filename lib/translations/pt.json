@@ -92,7 +92,7 @@
       "inputPlaceholder": "Escreve uma mensagem...",
       "littenRemoved": "Litten removed",
       "littenTitle": "{{type}} {{species}}: {{title}}",
-      "loadEarlier": "Carregar mensagens anteriores",
+      "loadEarlier": "Carregar mensagens anteriores...",
       "title": "Mensagens",
       "options": {
         "deleteConversation": "Apagar Conversa",
