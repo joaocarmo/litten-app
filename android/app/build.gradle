@@ -1,7 +1,16 @@
 apply plugin: "com.android.application"
-apply plugin: 'com.google.gms.google-services'
+apply plugin: "com.google.gms.google-services"
 
 import com.android.build.OutputFile
+
+// Load keystore
+def keystoreProperties = new Properties()
+try {
+    def keystorePropertiesFile = rootProject.file("keystore.properties");
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+} catch(IOException e) {
+    // We don't have release keys, ignoring
+}
 
 /**
  * The react.gradle file registers a task for each build variant (e.g. bundleDebugJsAndAssets
@@ -159,6 +168,14 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            if (keystoreProperties['LITTEN_UPLOAD_STORE_FILE']) {
+                storeFile file(keystoreProperties['LITTEN_UPLOAD_STORE_FILE'])
+                storePassword keystoreProperties['LITTEN_UPLOAD_STORE_PASSWORD']
+                keyAlias keystoreProperties['LITTEN_UPLOAD_KEY_ALIAS']
+                keyPassword keystoreProperties['LITTEN_UPLOAD_KEY_PASSWORD']
+            }
+        }
     }
     buildTypes {
         debug {
@@ -167,7 +184,7 @@ android {
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }

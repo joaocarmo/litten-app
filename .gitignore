@@ -62,6 +62,9 @@ google-services.json
 
 # Environment variables
 .env
+
+# Android build config
+keystore.properties
 secure.properties
 
 # Flow typed

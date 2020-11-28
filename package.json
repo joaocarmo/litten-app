@@ -34,6 +34,8 @@
   ],
   "scripts": {
     "android": "react-native run-android",
+    "build:android": "cd android && ./gradlew bundleRelease; cd -",
+    "build:android:test": "react-native run-android --variant=release",
     "clear-cache": "watchman watch-del-all && rm -rf node_modules/ && yarn install && rm -rf /tmp/metro-* && yarn start --reset-cache",
     "generate-data": "./scripts/generate-data",
     "ios": "react-native run-ios",
