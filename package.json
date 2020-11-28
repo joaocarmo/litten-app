@@ -54,6 +54,7 @@
     "start": "react-native start",
     "storybook": "(adb reverse tcp:7007 tcp:7007 || true) && start-storybook",
     "test": "jest --forceExit",
+    "translations-check": "./scripts/validate-translations",
     "type-check": "yarn flow"
   },
   "husky": {

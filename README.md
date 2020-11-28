@@ -55,11 +55,11 @@ certain API keys.
 
 ```sh
 cp .env.example .env
+
+cp android/secure.properties.example android/secure.properties
 ```
 
-The `GOOGLE_API_KEY` needs to be available in order for the Android gradle build
-to be able to pick it up. Consider exporting it in your shell's run commands
-file (e.g., `.bash_profile`).
+The `GOOGLE_API_KEY` needs to be available for the location functions.
 
 Detailed instructions on how to setup the environment are available
 [here][env-setup].
