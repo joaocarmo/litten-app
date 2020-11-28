@@ -62,6 +62,7 @@ google-services.json
 
 # Environment variables
 .env
+secure.properties
 
 # Flow typed
 flow-typed/

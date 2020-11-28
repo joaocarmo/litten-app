@@ -121,8 +121,6 @@ def jscFlavor = 'org.webkit:android-jsc:+'
  */
 def enableHermes = project.ext.react.get("enableHermes", false);
 
-def googleMapApiKey = System.getenv("GOOGLE_API_KEY")
-
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
@@ -139,7 +137,12 @@ android {
         versionName "1.0"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
-        manifestPlaceholders = [googleMapApiKey: 'googleMapApiKey']
+        // Read the API key from ./secure.properties into R.string.maps_api_key
+        def secureProps = new Properties()
+        if (file("../secure.properties").exists()) {
+                file("../secure.properties")?.withInputStream { secureProps.load(it) }
+        }
+        resValue "string", "maps_api_key", (secureProps.getProperty("MAPS_API_KEY") ?: "")
     }
     splits {
         abi {
