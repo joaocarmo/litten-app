@@ -75,9 +75,9 @@
     "@react-navigation/bottom-tabs": "^5.11.2",
     "@react-navigation/native": "^5.8.10",
     "@react-navigation/stack": "^5.12.8",
-    "@storybook/addon-knobs": "^6.1.7",
+    "@storybook/addon-knobs": "^6.1.8",
     "@storybook/addon-ondevice-knobs": "^5.3.19",
-    "@storybook/addons": "^6.1.7",
+    "@storybook/addons": "^6.1.8",
     "@storybook/react-native": "^5.3.19",
     "@storybook/react-native-server": "^5.3.19",
     "babel-plugin-dotenv-import": "^2.1.0",
@@ -110,7 +110,7 @@
     "react-redux": "^7.2.1",
     "redux": "^4.0.5",
     "redux-persist": "^6.0.0",
-    "storybook": "^6.1.7"
+    "storybook": "^6.1.8"
   },
   "devDependencies": {
     "@babel/core": "^7.12.8",
@@ -136,7 +136,7 @@
     "metro-react-native-babel-preset": "^0.64.0",
     "patch-package": "^6.2.2",
     "postinstall-postinstall": "^2.1.0",
-    "prettier": "^2.2.0",
+    "prettier": "^2.2.1",
     "react-devtools": "^4.8.2",
     "react-test-renderer": "17.0.1",
     "remote-redux-devtools": "^0.5.16",

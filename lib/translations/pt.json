@@ -96,6 +96,7 @@
       "title": "Mensagens",
       "options": {
         "deleteConversation": "Apagar Conversa",
+        "reportConversation": "Denunciar Conversation",
         "viewLitten": "Ver Litten",
         "viewProfile": "Ver Perfil"
       }
