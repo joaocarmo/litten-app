@@ -29,13 +29,16 @@ exports[`Snapshot test for the "TabNavigationItem" component renders correctly 1
   <View />
   <View
     style={
-      Object {
-        "backgroundColor": "#ffffff",
-        "borderRadius": 3,
-        "height": 6,
-        "marginTop": 8,
-        "width": 6,
-      }
+      Array [
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderRadius": 3,
+          "height": 6,
+          "marginTop": 8,
+          "width": 6,
+        },
+        undefined,
+      ]
     }
   />
 </View>
