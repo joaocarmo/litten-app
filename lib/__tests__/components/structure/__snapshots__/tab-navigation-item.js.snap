@@ -26,16 +26,7 @@ exports[`Snapshot test for the "TabNavigationItem" component renders correctly 1
     ]
   }
 >
-  <Image
-    resizeMode="contain"
-    style={
-      Object {
-        "height": 28,
-        "tintColor": "#6a6767",
-        "width": 28,
-      }
-    }
-  />
+  <View />
   <View
     style={
       Object {
