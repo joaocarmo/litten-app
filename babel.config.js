@@ -4,6 +4,7 @@ module.exports = {
     [
       'dotenv-import',
       {
+        allowUndefined: false,
         moduleName: '@env',
         path: '.env',
         safe: true,
