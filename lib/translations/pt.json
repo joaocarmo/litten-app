@@ -188,10 +188,12 @@
     "recoverSentSuccess": "Por favor, segue as instruções no teu email",
     "registrationError": "O registo falhou",
     "registrationSuccess": "Registo concluído",
+    "reportDisclaimer": "A informação que enviares é completamente anónima. Se esperas uma resposta, o melhor será contactar-nos de outra maneira.",
     "reportErrorMessage": "Queres enviar o relatório deste erro?",
     "reportErrorMessageDone": "Obrigado pelo teu contributo!",
     "reportErrorMessageFail": "Não foi possível enviar o teu contributo, por favor, tenta mais tarde",
-    "reportErrorTitle": "Reportar erro"
+    "reportErrorTitle": "Reportar erro",
+    "reportHasExtraInfo": "Este relatório inclui informações sobre a tua conversa."
   },
   "feedback": {
     "pleaseWait": "Aguarda...",

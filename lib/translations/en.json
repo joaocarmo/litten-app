@@ -188,10 +188,12 @@
     "recoverSentSuccess": "Please follow the instructions on your email",
     "registrationError": "Registration failed",
     "registrationSuccess": "Registration successful",
+    "reportDisclaimer": "The information you submit is completely anonymous. If you expect a response, please use another way to contact us.",
     "reportErrorMessage": "Do you want to report this error?",
     "reportErrorMessageDone": "Thank you for your feedback!",
     "reportErrorMessageFail": "Couldn't submit your feedback, please try again later",
-    "reportErrorTitle": "Error report"
+    "reportErrorTitle": "Error report",
+    "reportHasExtraInfo": "This report includes information about your conversation."
   },
   "feedback": {
     "pleaseWait": "Please wait...",
