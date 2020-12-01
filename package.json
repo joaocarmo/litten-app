@@ -49,6 +49,7 @@
     "pretty": "prettier --check .",
     "push": "git add . && gitmoji -c && git push",
     "react-devtools": "react-devtools",
+    "redux-devtools": "(adb reverse tcp:8000 tcp:8000 || true) && redux-devtools --hostname=localhost --port=8000",
     "sanity-check": "yarn lint && yarn pretty && yarn type-check && yarn test",
     "sort-data": "./scripts/sort-data",
     "start:android": "yarn android && yarn start:firebase",
@@ -132,6 +133,7 @@
     "eslint-plugin-flowtype": "^5.2.0",
     "eslint-plugin-jest": "^24.0.0",
     "firebase-admin": "^9.4.1",
+    "firebase-tools": "^8.16.2",
     "flow-bin": "0.138.0",
     "flow-typed": "^3.2.1",
     "husky": "^4.2.5",
@@ -145,6 +147,7 @@
     "react-devtools": "^4.8.2",
     "react-native-svg-transformer": "^0.14.3",
     "react-test-renderer": "17.0.1",
+    "redux-devtools-cli": "^1.0.0-4",
     "remote-redux-devtools": "^0.5.16",
     "typescript": "^4.1.2",
     "world-countries": "^4.0.0"

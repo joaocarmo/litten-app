@@ -47,13 +47,9 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
         ]
       }
     >
-      <Image
-        resizeMode="contain"
-        source={
-          Object {
-            "uri": "",
-          }
-        }
+      <SvgMock
+        fill="#ffffff"
+        height={32}
         style={
           Object {
             "height": 32,
@@ -62,6 +58,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
             "width": 36,
           }
         }
+        width={36}
       />
       <Text
         style={

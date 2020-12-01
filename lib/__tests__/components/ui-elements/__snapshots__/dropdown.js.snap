@@ -37,24 +37,19 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
         >
           All
         </Text>
-        <Image
-          resizeMode="contain"
-          source={
-            Object {
-              "uri": "",
-            }
-          }
+        <SvgMock
+          fill="#474545"
+          height={12}
           style={
             Object {
-              "height": 12,
               "transform": Array [
                 Object {
                   "rotateZ": "90deg",
                 },
               ],
-              "width": 12,
             }
           }
+          width={12}
         />
       </View>
     </MenuTrigger>

@@ -91,19 +91,10 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
         2
       </Text>
     </View>
-    <Image
-      resizeMode="contain"
-      source={
-        Object {
-          "uri": "",
-        }
-      }
-      style={
-        Object {
-          "maxHeight": 12,
-          "maxWidth": 12,
-        }
-      }
+    <SvgMock
+      fill="#474545"
+      height={12}
+      width={12}
     />
   </View>
 </View>
