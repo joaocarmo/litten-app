@@ -185,11 +185,12 @@
     "newPassword": "Create your password",
     "password": "Password",
     "phoneNumber": "Phone number",
-    "recoverSentSuccess": "Please follow the instructions on your email.",
+    "recoverSentSuccess": "Please follow the instructions on your email",
     "registrationError": "Registration failed",
     "registrationSuccess": "Registration successful",
     "reportErrorMessage": "Do you want to report this error?",
     "reportErrorMessageDone": "Thank you for your feedback!",
+    "reportErrorMessageFail": "Couldn't submit your feedback, please try again later",
     "reportErrorTitle": "Error report"
   },
   "feedback": {
@@ -206,6 +207,7 @@
     "errorMessages": {
       "blankCountry": "Country can't be blank",
       "blankEmail": "Email can't be blank",
+      "blankMessage": "Please, write a meaningful message",
       "blankName": "Name can't be blank",
       "blankPassword": "Password can't be blank",
       "blankPhoneNumber": "Phone number can't be blank",
