@@ -3,18 +3,34 @@
 exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
 <View
   style={
-    Object {
-      "flexDirection": "row",
-      "marginBottom": 6,
-      "marginTop": 6,
-    }
+    Array [
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 6,
+        "marginTop": 6,
+      },
+      undefined,
+    ]
   }
 >
   <Menu
     onSelect={[Function]}
     renderer={[Function]}
   >
-    <MenuTrigger>
+    <MenuTrigger
+      customStyles={
+        Object {
+          "TriggerTouchableComponent": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            },
+          },
+        }
+      }
+    >
       <View
         style={
           Object {
