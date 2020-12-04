@@ -3,8 +3,10 @@
 exports[`Snapshot test for the "UIButton" component renders correctly 1`] = `
 <View
   accessible={true}
-  focusable={false}
+  focusable={true}
+  onBlur={[Function]}
   onClick={[Function]}
+  onFocus={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -12,38 +14,32 @@ exports[`Snapshot test for the "UIButton" component renders correctly 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Object {
-      "opacity": 1,
-    }
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#7239f2",
+        "borderRadius": 20,
+        "justifyContent": "center",
+        "minHeight": 44,
+      },
+      Object {
+        "width": 577.5,
+      },
+      undefined,
+      undefined,
+    ]
   }
 >
-  <View
+  <Text
     style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#7239f2",
-          "borderRadius": 20,
-          "height": 40,
-          "justifyContent": "center",
-        },
-        Object {
-          "width": 577.5,
-        },
-      ]
+      Object {
+        "color": "#ffffff",
+        "fontSize": 16,
+        "fontWeight": "600",
+      }
     }
   >
-    <Text
-      style={
-        Object {
-          "color": "#ffffff",
-          "fontSize": 16,
-          "fontWeight": "600",
-        }
-      }
-    >
-      Some text here
-    </Text>
-  </View>
+    Some text here
+  </Text>
 </View>
 `;

@@ -1,0 +1,251 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for the "UIBadge" component renders correctly a positive number 1`] = `
+<View
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#e30000",
+        "borderRadius": 10,
+        "justifyContent": "center",
+        "minHeight": 20,
+        "minWidth": 20,
+        "padding": 5,
+        "position": "absolute",
+        "right": -15,
+        "top": -7.5,
+        "zIndex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "600",
+          "textAlign": "center",
+        }
+      }
+    >
+      10
+    </Text>
+  </View>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000000",
+          "fontSize": 14,
+          "fontWeight": "200",
+        },
+        Object {
+          "marginBottom": 8,
+          "marginTop": 8,
+          "paddingBottom": 6,
+          "paddingTop": 6,
+        },
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    Text
+  </Text>
+</View>
+`;
+
+exports[`Snapshot test for the "UIBadge" component renders correctly with a negative number 1`] = `
+<View
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#e30000",
+        "borderRadius": 10,
+        "justifyContent": "center",
+        "minHeight": 20,
+        "minWidth": 20,
+        "padding": 5,
+        "position": "absolute",
+        "right": -15,
+        "top": -7.5,
+        "zIndex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "600",
+          "textAlign": "center",
+        }
+      }
+    >
+      -10
+    </Text>
+  </View>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000000",
+          "fontSize": 14,
+          "fontWeight": "200",
+        },
+        Object {
+          "marginBottom": 8,
+          "marginTop": 8,
+          "paddingBottom": 6,
+          "paddingTop": 6,
+        },
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    Text
+  </Text>
+</View>
+`;
+
+exports[`Snapshot test for the "UIBadge" component renders correctly with zero 1`] = `
+<View
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#e30000",
+        "borderRadius": 10,
+        "justifyContent": "center",
+        "minHeight": 20,
+        "minWidth": 20,
+        "padding": 5,
+        "position": "absolute",
+        "right": -15,
+        "top": -7.5,
+        "zIndex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#ffffff",
+          "fontSize": 10,
+          "fontWeight": "600",
+          "textAlign": "center",
+        }
+      }
+    >
+      0
+    </Text>
+  </View>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000000",
+          "fontSize": 14,
+          "fontWeight": "200",
+        },
+        Object {
+          "marginBottom": 8,
+          "marginTop": 8,
+          "paddingBottom": 6,
+          "paddingTop": 6,
+        },
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    Text
+  </Text>
+</View>
+`;
+
+exports[`Snapshot test for the "UIBadge" component renders correctly without a negative number 1`] = `
+<View
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000000",
+          "fontSize": 14,
+          "fontWeight": "200",
+        },
+        Object {
+          "marginBottom": 8,
+          "marginTop": 8,
+          "paddingBottom": 6,
+          "paddingTop": 6,
+        },
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    Text
+  </Text>
+</View>
+`;
+
+exports[`Snapshot test for the "UIBadge" component renders correctly without zero 1`] = `
+<View
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000000",
+          "fontSize": 14,
+          "fontWeight": "200",
+        },
+        Object {
+          "marginBottom": 8,
+          "marginTop": 8,
+          "paddingBottom": 6,
+          "paddingTop": 6,
+        },
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    Text
+  </Text>
+</View>
+`;
