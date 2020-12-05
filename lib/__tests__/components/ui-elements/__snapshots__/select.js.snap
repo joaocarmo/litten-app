@@ -39,7 +39,7 @@ exports[`Snapshot test for the "UISelect" component renders correctly 1`] = `
               "borderBottomWidth": 2,
               "color": "#000000",
               "fontSize": 20,
-              "fontWeight": "600",
+              "fontWeight": "700",
               "height": 60,
               "marginBottom": 10,
               "marginTop": 10,

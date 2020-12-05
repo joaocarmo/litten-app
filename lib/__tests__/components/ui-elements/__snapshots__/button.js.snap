@@ -35,7 +35,7 @@ exports[`Snapshot test for the "UIButton" component renders correctly 1`] = `
       Object {
         "color": "#ffffff",
         "fontSize": 16,
-        "fontWeight": "600",
+        "fontWeight": "700",
       }
     }
   >

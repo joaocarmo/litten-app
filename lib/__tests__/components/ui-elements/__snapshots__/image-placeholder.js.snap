@@ -65,7 +65,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
           Object {
             "color": "#ffffff",
             "fontSize": 10,
-            "fontWeight": "600",
+            "fontWeight": "700",
           }
         }
       >

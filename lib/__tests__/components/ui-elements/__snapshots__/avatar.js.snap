@@ -11,7 +11,7 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
         "overflow": "hidden",
       },
       Object {
-        "borderRadius": 18,
+        "borderRadius": 36,
         "height": 36,
         "width": 36,
       },
@@ -19,17 +19,20 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
   }
 >
   <Image
+    progressiveRenderingEnabled={true}
     resizeMode="contain"
     source={
       Object {
         "cache": "force-cache",
+        "heigth": undefined,
         "uri": "https://placeimg.com/140/140/people",
+        "width": undefined,
       }
     }
     style={
       Array [
         Object {
-          "borderRadius": 18,
+          "borderRadius": 36,
           "height": 36,
           "width": 36,
         },

@@ -51,7 +51,7 @@ exports[`Snapshot test for the "UITooltip" component renders correctly 1`] = `
       style={
         Object {
           "color": "#ffffff",
-          "fontWeight": "600",
+          "fontWeight": "700",
         }
       }
     >

@@ -82,7 +82,7 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
             Object {
               "color": "#000000",
               "fontSize": 10,
-              "fontWeight": "600",
+              "fontWeight": "700",
             },
             undefined,
           ]

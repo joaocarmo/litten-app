@@ -65,6 +65,9 @@ Array [
                   "paddingBottom": 3,
                 },
                 Object {
+                  "fontWeight": "700",
+                },
+                Object {
                   "color": "#ffffff",
                 },
               ]
@@ -87,6 +90,7 @@ Array [
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -112,7 +116,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 Object {
                   "color": "#ffffff",
@@ -195,6 +201,9 @@ purpose (injected humour and the like).
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
+                Object {
+                  "fontWeight": "700",
+                },
                 undefined,
               ]
             }
@@ -216,6 +225,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -239,7 +249,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 undefined,
               ]
@@ -320,6 +332,9 @@ purpose (injected humour and the like).
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
+                Object {
+                  "fontWeight": "700",
+                },
                 undefined,
               ]
             }
@@ -341,6 +356,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -364,7 +380,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 undefined,
               ]
@@ -445,6 +463,9 @@ purpose (injected humour and the like).
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
+                Object {
+                  "fontWeight": "700",
+                },
                 undefined,
               ]
             }
@@ -466,6 +487,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -489,7 +511,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 undefined,
               ]
@@ -573,6 +597,9 @@ purpose (injected humour and the like).
                   "paddingBottom": 3,
                 },
                 Object {
+                  "fontWeight": "700",
+                },
+                Object {
                   "color": "#ffffff",
                 },
               ]
@@ -595,6 +622,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -620,7 +648,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 Object {
                   "color": "#ffffff",
@@ -703,6 +733,9 @@ purpose (injected humour and the like).
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
+                Object {
+                  "fontWeight": "700",
+                },
                 undefined,
               ]
             }
@@ -724,6 +757,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -747,7 +781,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 undefined,
               ]
@@ -828,6 +864,9 @@ purpose (injected humour and the like).
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
+                Object {
+                  "fontWeight": "700",
+                },
                 undefined,
               ]
             }
@@ -849,6 +888,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -872,7 +912,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 undefined,
               ]
@@ -953,6 +995,9 @@ purpose (injected humour and the like).
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
+                Object {
+                  "fontWeight": "700",
+                },
                 undefined,
               ]
             }
@@ -974,6 +1019,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -997,7 +1043,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 undefined,
               ]
@@ -1081,6 +1129,9 @@ purpose (injected humour and the like).
                   "paddingBottom": 3,
                 },
                 Object {
+                  "fontWeight": "700",
+                },
+                Object {
                   "color": "#ffffff",
                 },
               ]
@@ -1103,6 +1154,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -1128,7 +1180,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 Object {
                   "color": "#ffffff",
@@ -1211,6 +1265,9 @@ purpose (injected humour and the like).
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
+                Object {
+                  "fontWeight": "700",
+                },
                 undefined,
               ]
             }
@@ -1232,6 +1289,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -1255,7 +1313,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 undefined,
               ]
@@ -1336,6 +1396,9 @@ purpose (injected humour and the like).
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
+                Object {
+                  "fontWeight": "700",
+                },
                 undefined,
               ]
             }
@@ -1357,6 +1420,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -1380,7 +1444,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 undefined,
               ]
@@ -1461,6 +1527,9 @@ purpose (injected humour and the like).
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
+                Object {
+                  "fontWeight": "700",
+                },
                 undefined,
               ]
             }
@@ -1482,6 +1551,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -1505,7 +1575,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 undefined,
               ]
@@ -1589,6 +1661,9 @@ purpose (injected humour and the like).
                   "paddingBottom": 3,
                 },
                 Object {
+                  "fontWeight": "700",
+                },
+                Object {
                   "color": "#ffffff",
                 },
               ]
@@ -1611,6 +1686,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -1636,7 +1712,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 Object {
                   "color": "#ffffff",
@@ -1719,6 +1797,9 @@ purpose (injected humour and the like).
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
+                Object {
+                  "fontWeight": "700",
+                },
                 undefined,
               ]
             }
@@ -1740,6 +1821,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -1763,7 +1845,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 undefined,
               ]
@@ -1844,6 +1928,9 @@ purpose (injected humour and the like).
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
+                Object {
+                  "fontWeight": "700",
+                },
                 undefined,
               ]
             }
@@ -1865,6 +1952,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -1888,7 +1976,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 undefined,
               ]
@@ -1969,6 +2059,9 @@ purpose (injected humour and the like).
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
+                Object {
+                  "fontWeight": "700",
+                },
                 undefined,
               ]
             }
@@ -1990,6 +2083,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -2013,7 +2107,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 undefined,
               ]
@@ -2097,6 +2193,9 @@ purpose (injected humour and the like).
                   "paddingBottom": 3,
                 },
                 Object {
+                  "fontWeight": "700",
+                },
+                Object {
                   "color": "#ffffff",
                 },
               ]
@@ -2119,6 +2218,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -2144,7 +2244,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 Object {
                   "color": "#ffffff",
@@ -2227,6 +2329,9 @@ purpose (injected humour and the like).
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
+                Object {
+                  "fontWeight": "700",
+                },
                 undefined,
               ]
             }
@@ -2248,6 +2353,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -2271,7 +2377,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 undefined,
               ]
@@ -2352,6 +2460,9 @@ purpose (injected humour and the like).
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
+                Object {
+                  "fontWeight": "700",
+                },
                 undefined,
               ]
             }
@@ -2373,6 +2484,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -2396,7 +2508,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 undefined,
               ]
@@ -2477,6 +2591,9 @@ purpose (injected humour and the like).
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
+                Object {
+                  "fontWeight": "700",
+                },
                 undefined,
               ]
             }
@@ -2498,6 +2615,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -2521,7 +2639,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 undefined,
               ]
@@ -2605,6 +2725,9 @@ purpose (injected humour and the like).
                   "paddingBottom": 3,
                 },
                 Object {
+                  "fontWeight": "700",
+                },
+                Object {
                   "color": "#ffffff",
                 },
               ]
@@ -2619,109 +2742,6 @@ purpose (injected humour and the like).
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
-            }
-          }
-        >
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "fontSize": 12,
-                  "fontWeight": "200",
-                },
-                Object {
-                  "color": "#ffffff",
-                },
-              ]
-            }
-          >
-            It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "fontSize": 12,
-                },
-                Object {
-                  "color": "#ffffff",
-                },
-              ]
-            }
-          >
-            johnnyeyelash
-          </Text>
-        </View>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "justifyContent": "center",
-        }
-      }
-    />
-  </View>,
-  <View
-    style={
-      Array [
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderRadius": 6,
-          "flex": 1,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "minHeight": 64,
-          "overflow": "hidden",
-          "paddingLeft": 20,
-          "paddingRight": 20,
-        },
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "justifyContent": "space-between",
-        },
-        undefined,
-        undefined,
-        undefined,
-      ]
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flex": 1,
-          "flexDirection": "row",
-          "justifyContent": "flex-start",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "flex": 1,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "flexDirection": "row",
-              "justifyContent": "space-between",
             }
           }
         >
@@ -2731,410 +2751,6 @@ purpose (injected humour and the like).
               Array [
                 Object {
                   "color": "#000000",
-                  "fontSize": 14,
-                  "fontWeight": "500",
-                  "paddingBottom": 3,
-                },
-                undefined,
-              ]
-            }
-          >
-            Cat: Snowball
-          </Text>
-        </View>
-        <View
-          style={
-            Object {
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-              "paddingTop": 3,
-            }
-          }
-        >
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "fontSize": 12,
-                  "fontWeight": "200",
-                },
-                undefined,
-              ]
-            }
-          >
-            It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "fontSize": 12,
-                },
-                undefined,
-              ]
-            }
-          >
-            johnnyeyelash
-          </Text>
-        </View>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "justifyContent": "center",
-        }
-      }
-    />
-  </View>,
-  <View
-    style={
-      Array [
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderRadius": 6,
-          "flex": 1,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "minHeight": 64,
-          "overflow": "hidden",
-          "paddingLeft": 20,
-          "paddingRight": 20,
-        },
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "justifyContent": "space-between",
-        },
-        undefined,
-        undefined,
-        undefined,
-      ]
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flex": 1,
-          "flexDirection": "row",
-          "justifyContent": "flex-start",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "flex": 1,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-            }
-          }
-        >
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "color": "#000000",
-                  "fontSize": 14,
-                  "fontWeight": "500",
-                  "paddingBottom": 3,
-                },
-                undefined,
-              ]
-            }
-          >
-            Cat: Snowball
-          </Text>
-        </View>
-        <View
-          style={
-            Object {
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-              "paddingTop": 3,
-            }
-          }
-        >
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "fontSize": 12,
-                  "fontWeight": "200",
-                },
-                undefined,
-              ]
-            }
-          >
-            It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "fontSize": 12,
-                },
-                undefined,
-              ]
-            }
-          >
-            johnnyeyelash
-          </Text>
-        </View>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "justifyContent": "center",
-        }
-      }
-    />
-  </View>,
-  <View
-    style={
-      Array [
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderRadius": 6,
-          "flex": 1,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "minHeight": 64,
-          "overflow": "hidden",
-          "paddingLeft": 20,
-          "paddingRight": 20,
-        },
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "justifyContent": "space-between",
-        },
-        undefined,
-        undefined,
-        undefined,
-      ]
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flex": 1,
-          "flexDirection": "row",
-          "justifyContent": "flex-start",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "flex": 1,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-            }
-          }
-        >
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "color": "#000000",
-                  "fontSize": 14,
-                  "fontWeight": "500",
-                  "paddingBottom": 3,
-                },
-                undefined,
-              ]
-            }
-          >
-            Cat: Snowball
-          </Text>
-        </View>
-        <View
-          style={
-            Object {
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-              "paddingTop": 3,
-            }
-          }
-        >
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "fontSize": 12,
-                  "fontWeight": "200",
-                },
-                undefined,
-              ]
-            }
-          >
-            It is a long established fact that a reader will be distracted by 
-the readable content of a page when looking at its layout. The 
-point of using Lorem Ipsum is that it has a more-or-less normal 
-distribution of letters, as opposed to using 'Content here, 
-content here', making it look like readable English. Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as 
-their default model text, and a search for 'lorem ipsum' will 
-uncover many web sites still in their infancy. Various versions 
-have evolved over the years, sometimes by accident, sometimes on 
-purpose (injected humour and the like). 
-          </Text>
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "fontSize": 12,
-                },
-                undefined,
-              ]
-            }
-          >
-            johnnyeyelash
-          </Text>
-        </View>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "justifyContent": "center",
-        }
-      }
-    />
-  </View>,
-  <View
-    style={
-      Array [
-        Object {
-          "backgroundColor": "#ffffff",
-          "borderRadius": 6,
-          "flex": 1,
-          "marginBottom": 8,
-          "marginTop": 8,
-          "minHeight": 64,
-          "overflow": "hidden",
-          "paddingLeft": 20,
-          "paddingRight": 20,
-        },
-        Object {
-          "alignItems": "center",
-          "flexDirection": "row",
-          "justifyContent": "space-between",
-        },
-        undefined,
-        Object {
-          "backgroundColor": "#39a4f2",
-        },
-        undefined,
-      ]
-    }
-  >
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "flex": 1,
-          "flexDirection": "row",
-          "justifyContent": "flex-start",
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "flex": 1,
-          }
-        }
-      >
-        <View
-          style={
-            Object {
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-            }
-          }
-        >
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "color": "#000000",
-                  "fontSize": 14,
-                  "fontWeight": "500",
-                  "paddingBottom": 3,
-                },
-                Object {
-                  "color": "#ffffff",
-                },
-              ]
-            }
-          >
-            Cat: Snowball
-          </Text>
-        </View>
-        <View
-          style={
-            Object {
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-              "paddingTop": 3,
-            }
-          }
-        >
-          <Text
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -3160,7 +2776,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 Object {
                   "color": "#ffffff",
@@ -3243,6 +2861,9 @@ purpose (injected humour and the like).
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
+                Object {
+                  "fontWeight": "700",
+                },
                 undefined,
               ]
             }
@@ -3264,6 +2885,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -3287,7 +2909,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 undefined,
               ]
@@ -3368,6 +2992,9 @@ purpose (injected humour and the like).
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
+                Object {
+                  "fontWeight": "700",
+                },
                 undefined,
               ]
             }
@@ -3389,6 +3016,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -3412,7 +3040,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 undefined,
               ]
@@ -3493,6 +3123,9 @@ purpose (injected humour and the like).
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
+                Object {
+                  "fontWeight": "700",
+                },
                 undefined,
               ]
             }
@@ -3514,6 +3147,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -3537,7 +3171,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 undefined,
               ]
@@ -3621,6 +3257,9 @@ purpose (injected humour and the like).
                   "paddingBottom": 3,
                 },
                 Object {
+                  "fontWeight": "700",
+                },
+                Object {
                   "color": "#ffffff",
                 },
               ]
@@ -3643,6 +3282,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -3668,7 +3308,9 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 Object {
                   "color": "#ffffff",
@@ -3751,6 +3393,9 @@ purpose (injected humour and the like).
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
+                Object {
+                  "fontWeight": "700",
+                },
                 undefined,
               ]
             }
@@ -3772,6 +3417,7 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
                   "fontWeight": "200",
                 },
@@ -3795,7 +3441,541 @@ purpose (injected humour and the like).
             style={
               Array [
                 Object {
+                  "color": "#000000",
                   "fontSize": 12,
+                  "fontWeight": "700",
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderRadius": 6,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "overflow": "hidden",
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+        undefined,
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                Object {
+                  "fontWeight": "700",
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingTop": 3,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 12,
+                  "fontWeight": "700",
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderRadius": 6,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "overflow": "hidden",
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+        undefined,
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                Object {
+                  "fontWeight": "700",
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingTop": 3,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 12,
+                  "fontWeight": "700",
+                },
+                undefined,
+              ]
+            }
+          >
+            johnnyeyelash
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderRadius": 6,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "overflow": "hidden",
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+        undefined,
+        Object {
+          "backgroundColor": "#39a4f2",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                Object {
+                  "fontWeight": "700",
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingTop": 3,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 12,
+                  "fontWeight": "700",
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            johnnyeyelash
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderRadius": 6,
+          "flex": 1,
+          "marginBottom": 8,
+          "marginTop": 8,
+          "minHeight": 64,
+          "overflow": "hidden",
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+        undefined,
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "paddingBottom": 3,
+                },
+                Object {
+                  "fontWeight": "700",
+                },
+                undefined,
+              ]
+            }
+          >
+            Cat: Snowball
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingTop": 3,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 12,
+                  "fontWeight": "200",
+                },
+                undefined,
+              ]
+            }
+          >
+            It is a long established fact that a reader will be distracted by 
+the readable content of a page when looking at its layout. The 
+point of using Lorem Ipsum is that it has a more-or-less normal 
+distribution of letters, as opposed to using 'Content here, 
+content here', making it look like readable English. Many desktop 
+publishing packages and web page editors now use Lorem Ipsum as 
+their default model text, and a search for 'lorem ipsum' will 
+uncover many web sites still in their infancy. Various versions 
+have evolved over the years, sometimes by accident, sometimes on 
+purpose (injected humour and the like). 
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "fontSize": 12,
+                  "fontWeight": "700",
                 },
                 undefined,
               ]

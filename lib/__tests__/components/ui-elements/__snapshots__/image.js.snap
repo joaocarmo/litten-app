@@ -2,11 +2,14 @@
 
 exports[`Snapshot test for the "UIImage" component renders correctly 1`] = `
 <Image
+  progressiveRenderingEnabled={true}
   resizeMode="contain"
   source={
     Object {
       "cache": "force-cache",
+      "heigth": undefined,
       "uri": "https://placeimg.com/140/140/people",
+      "width": undefined,
     }
   }
 />

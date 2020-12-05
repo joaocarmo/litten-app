@@ -7,7 +7,7 @@ exports[`Snapshot test for the "UIHeader" component renders correctly 1`] = `
       Object {
         "color": "#000000",
         "fontSize": 24,
-        "fontWeight": "600",
+        "fontWeight": "700",
         "marginBottom": 2,
         "marginTop": 2,
         "paddingBottom": 2,

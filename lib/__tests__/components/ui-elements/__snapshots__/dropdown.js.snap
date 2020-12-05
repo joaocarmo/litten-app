@@ -47,7 +47,7 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
           style={
             Object {
               "color": "#39a4f2",
-              "fontWeight": "600",
+              "fontWeight": "700",
             }
           }
         >

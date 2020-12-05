@@ -30,7 +30,7 @@ exports[`Snapshot test for the "UIBadge" component renders correctly a positive 
         Object {
           "color": "#ffffff",
           "fontSize": 10,
-          "fontWeight": "600",
+          "fontWeight": "700",
           "textAlign": "center",
         }
       }
@@ -92,7 +92,7 @@ exports[`Snapshot test for the "UIBadge" component renders correctly with a nega
         Object {
           "color": "#ffffff",
           "fontSize": 10,
-          "fontWeight": "600",
+          "fontWeight": "700",
           "textAlign": "center",
         }
       }
@@ -154,7 +154,7 @@ exports[`Snapshot test for the "UIBadge" component renders correctly with zero 1
         Object {
           "color": "#ffffff",
           "fontSize": 10,
-          "fontWeight": "600",
+          "fontWeight": "700",
           "textAlign": "center",
         }
       }
