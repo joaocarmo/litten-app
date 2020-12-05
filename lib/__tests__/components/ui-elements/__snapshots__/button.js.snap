@@ -18,7 +18,7 @@ exports[`Snapshot test for the "UIButton" component renders correctly 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "#7239f2",
-        "borderRadius": 20,
+        "borderRadius": 24,
         "justifyContent": "center",
         "minHeight": 44,
       },

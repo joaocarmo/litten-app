@@ -87,6 +87,10 @@
       "story": "História"
     },
     "messages": {
+      "emptyChatTitle1": "Gostas do litten",
+      "emptyChatTitle2": " {{name}} ",
+      "emptyChatTitle3": "?",
+      "emptyChatTitle4": "Estes são os primeiros passos...",
       "emptyText": "Inicia conversas e elas vão aparecer aqui",
       "emptyTitle": "Estás com vergonha?",
       "inputPlaceholder": "Escreve uma mensagem...",

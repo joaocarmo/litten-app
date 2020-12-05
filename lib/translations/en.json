@@ -87,6 +87,10 @@
       "story": "Story"
     },
     "messages": {
+      "emptyChatTitle1": "Do you like",
+      "emptyChatTitle2": " {{name}} ",
+      "emptyChatTitle3": "?",
+      "emptyChatTitle4": "These are your first steps...",
       "emptyText": "Start conversations and they will show up in here",
       "emptyTitle": "Are you feeling shy?",
       "inputPlaceholder": "Type a message...",

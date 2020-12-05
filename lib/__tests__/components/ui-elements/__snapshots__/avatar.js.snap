@@ -6,6 +6,8 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
     Array [
       undefined,
       Object {
+        "alignItems": "center",
+        "justifyContent": "center",
         "overflow": "hidden",
       },
       Object {
