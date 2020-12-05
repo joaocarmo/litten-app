@@ -28,7 +28,15 @@ exports[`Snapshot test for the "TabNavigationItem" component renders correctly 1
     ]
   }
 >
-  <View />
+  <View
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <View />
+  </View>
   <View
     style={
       Array [
