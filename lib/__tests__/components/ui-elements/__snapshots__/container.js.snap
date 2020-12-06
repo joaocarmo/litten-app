@@ -3,9 +3,13 @@
 exports[`Snapshot test for the "UIContainer" component renders correctly 1`] = `
 <View
   style={
-    Object {
-      "width": "75%",
-    }
+    Array [
+      Object {
+        "width": "75%",
+      },
+      undefined,
+      undefined,
+    ]
   }
 >
   Some text here
