@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">litten</string>
+    <string name="app_name">Litten</string>
+    <string name="filter_view_http_litten">Litten</string>
+    <string name="filter_view_litten_app">Litten</string>
 </resources>
