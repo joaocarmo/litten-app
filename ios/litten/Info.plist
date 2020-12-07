@@ -26,7 +26,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>litten</string>
+			<string>com.joaocarmo.litten</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>litten</string>
