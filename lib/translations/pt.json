@@ -84,6 +84,8 @@
       "emptyStory": "Era uma vez...",
       "preview": "PRÉ-VISUALIZAÇÃO",
       "selfContactOptions": "This is your own litten! You can perform edits in your profile and settings tab.",
+      "share": "Acho que podes ter interesse em {{name}} ! Porque não espreitas na Litten ? {{uri}}",
+      "shareTitle": "Espreita este Litten",
       "story": "História"
     },
     "messages": {
@@ -230,6 +232,7 @@
       "invalidPassword": "A senha deve ter, pelo menos, 10 caracteres",
       "invalidPhoneNumber": "O telemóvel deve ser válido",
       "invalidPhoto": "Escolhe uma fotografia válida",
+      "littenPostMissing": "Parece que há um problema com este litten!",
       "noPhoneNumber": "Ainda não introduziste um número de telemóvel, mas podes fazê-lo no teu perfil",
       "notImplemented": "Essa funcionalidade está inactiva",
       "unmatchedPassword": "As senhas não condizem"
