@@ -57,6 +57,7 @@
 		2D02E47B1E0B4A5D006451C7 /* litten-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "litten-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* litten-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "litten-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F7ED3B7971BE374F7B8635 /* Pods-litten.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-litten.debug.xcconfig"; path = "Target Support Files/Pods-litten/Pods-litten.debug.xcconfig"; sourceTree = "<group>"; };
+		5285F679257FBD6900283F21 /* litten.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = litten.entitlements; path = litten/litten.entitlements; sourceTree = "<group>"; };
 		52AF6BD5257D8E6C001F0EA7 /* LinkingIOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LinkingIOS; path = "../node_modules/react-native/Libraries/LinkingIOS"; sourceTree = "<group>"; };
 		52AF6BDB257D8F09001F0EA7 /* RCTLinkingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTLinkingManager.h; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinkingManager.h"; sourceTree = "<group>"; };
 		52CB39FE2576663C0086A303 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -131,6 +132,7 @@
 		13B07FAE1A68108700A75B9A /* litten */ = {
 			isa = PBXGroup;
 			children = (
+				5285F679257FBD6900283F21 /* litten.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -672,6 +674,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = litten/litten.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P5MX362AFR;
 				ENABLE_BITCODE = NO;
@@ -773,6 +776,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = litten/litten.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P5MX362AFR;
 				HEADER_SEARCH_PATHS = (

@@ -36,12 +36,14 @@
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
-        <intent-filter android:label="@string/filter_view_http_litten">
+        <intent-filter
+          android:autoVerify="true"
+          android:label="@string/filter_view_http_litten">
             <action android:name="android.intent.action.VIEW" />
             <category android:name="android.intent.category.DEFAULT" />
             <category android:name="android.intent.category.BROWSABLE" />
-            <!-- Accepts URIs that begin with "http://litten.app/open” -->
-            <data android:scheme="http"
+            <!-- Accepts URIs that begin with "https://litten.app/open” -->
+            <data android:scheme="https"
                   android:host="litten.app"
                   android:pathPrefix="/open" />
             <!-- note that the leading "/" is required for pathPrefix-->
