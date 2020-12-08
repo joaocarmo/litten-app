@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot test for the "UIBaloon" component renders correctly 1`] = `
+exports[`Snapshot test for the "UIBalloon" component renders correctly 1`] = `
 <View
   style={
     Array [
@@ -26,9 +26,14 @@ exports[`Snapshot test for the "UIBaloon" component renders correctly 1`] = `
             "fontSize": 14,
             "fontWeight": "200",
           },
-          Object {
-            "color": "#000000",
-          },
+          Array [
+            Object {
+              "fontWeight": "400",
+            },
+            Object {
+              "color": "#000000",
+            },
+          ],
         ],
         Object {
           "marginBottom": 8,

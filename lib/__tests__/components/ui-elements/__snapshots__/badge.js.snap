@@ -13,7 +13,7 @@ exports[`Snapshot test for the "UIBadge" component renders correctly a positive 
       Object {
         "alignItems": "center",
         "backgroundColor": "#e30000",
-        "borderRadius": 10,
+        "borderRadius": 20,
         "justifyContent": "center",
         "minHeight": 20,
         "minWidth": 20,
@@ -75,7 +75,7 @@ exports[`Snapshot test for the "UIBadge" component renders correctly with a nega
       Object {
         "alignItems": "center",
         "backgroundColor": "#e30000",
-        "borderRadius": 10,
+        "borderRadius": 20,
         "justifyContent": "center",
         "minHeight": 20,
         "minWidth": 20,
@@ -137,7 +137,7 @@ exports[`Snapshot test for the "UIBadge" component renders correctly with zero 1
       Object {
         "alignItems": "center",
         "backgroundColor": "#e30000",
-        "borderRadius": 10,
+        "borderRadius": 20,
         "justifyContent": "center",
         "minHeight": 20,
         "minWidth": 20,

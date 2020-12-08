@@ -191,6 +191,7 @@
     "newPassword": "Create your password",
     "password": "Password",
     "phoneNumber": "Phone number",
+    "profileEmailVerificationSuccess": "You email was verified!",
     "recoverSentSuccess": "Please follow the instructions on your email",
     "registrationError": "Registration failed",
     "registrationSuccess": "Registration successful",
@@ -206,6 +207,7 @@
     "confirmMessages": {
       "clearFilters": "Are you sure you want to clear the filters?",
       "clearForm": "Are you sure you want to clear the form?",
+      "confirmationEmail": "Are you sure you want to verify your email?",
       "deleteConversation": "Are you sure you want to delete the conversation with {{user}}?",
       "deleteLitten": "Are you sure you want to delete the litten {{title}}?",
       "deleteProfile": "All of your littens will be removed and this action is irreversible. Are you sure you want to delete your profile?",
@@ -233,8 +235,12 @@
       "invalidPhoneNumber": "Phone number should be in a valid format",
       "invalidPhoto": "Select a valid photo",
       "littenPostMissing": "It seems there is a problem with this litten!",
+      "newUnverifiefEmail": "You need to verify your email address before you can create a new litten! This can be done in your profile definitions.",
       "noPhoneNumber": "You haven't specified a phone number yet, but you can do so in your profile",
       "notImplemented": "That feature isn't active yet",
+      "profileUnverifiefEmail": "Your email has not been verified. Click here to resend a confirmation email.",
+      "profileUnverifiefEmailError": "Could not verify your email at this time.",
+      "profileUnverifiefEmailSent": "A confirmation email has been sent to the provided email. Please, check both your inbox and spam folders.",
       "unmatchedPassword": "The passwords don't match"
     },
     "system": {
@@ -304,6 +310,8 @@
     "clearFilters": "Clear filters",
     "clearForm": "Clear form",
     "clearLocation": "Clear location",
+    "clickHere": "Click here",
+    "confirmationEmail": "Confirmation email",
     "continue": "Continue",
     "copy": "Copy",
     "delete": "Delete",

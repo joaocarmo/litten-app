@@ -191,6 +191,7 @@
     "newPassword": "Cria a tua senha",
     "password": "Senha",
     "phoneNumber": "Telemóvel",
+    "profileEmailVerificationSuccess": "O teu email foi confirmado!",
     "recoverSentSuccess": "Por favor, segue as instruções no teu email",
     "registrationError": "O registo falhou",
     "registrationSuccess": "Registo concluído",
@@ -206,6 +207,7 @@
     "confirmMessages": {
       "clearFilters": "Tens a certeza que queres limpar os filtros?",
       "clearForm": "Tens a certeza que queres limpar o formulário?",
+      "confirmationEmail": "Tens a certeza que queres confirmar o teu email?",
       "deleteConversation": "Tens a certeza que queres apagar a conversa com {{user}}?",
       "deleteLitten": "Tens a certeza que queres apagar o litten {{title}}?",
       "deleteProfile": "Todos os teus littens serão apagados e esta acção é irreversível. Queres mesmo eliminar o perfil?",
@@ -233,8 +235,12 @@
       "invalidPhoneNumber": "O telemóvel deve ser válido",
       "invalidPhoto": "Escolhe uma fotografia válida",
       "littenPostMissing": "Parece que há um problema com este litten!",
+      "newUnverifiefEmail": "Precisas de verificar o teu endereço de email antes de criar um novo litten! Isto por ser feito nas tuas definições de perfil.",
       "noPhoneNumber": "Ainda não introduziste um número de telemóvel, mas podes fazê-lo no teu perfil",
       "notImplemented": "Essa funcionalidade está inactiva",
+      "profileUnverifiefEmail": "O teu email não foi confirmado. Clica aqui para enviar um novo email de confirmação.",
+      "profileUnverifiefEmailError": "De momento, não foi possível confirmar o teu email.",
+      "profileUnverifiefEmailSent": "Um email de confirmação foi enviado para o email fornecido. Por favor, verifica ambas as caixas de entrada e spam.",
       "unmatchedPassword": "As senhas não condizem"
     },
     "system": {
@@ -304,6 +310,8 @@
     "clearFilters": "Limpar filtros",
     "clearForm": "Limpar formulário",
     "clearLocation": "Limpar localização",
+    "clickHere": "Clica aqui",
+    "confirmationEmail": "Email de verificação",
     "continue": "Continuar",
     "copy": "Copiar",
     "delete": "Apagar",
