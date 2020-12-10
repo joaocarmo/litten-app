@@ -624,7 +624,7 @@ PODS:
     - React
   - RNCPicker (1.9.4):
     - React-Core
-  - RNDeviceInfo (7.3.0):
+  - RNDeviceInfo (7.3.1):
     - React-Core
   - RNFBApp (10.1.0):
     - Firebase/CoreOnly (~> 7.1.0)
@@ -656,7 +656,7 @@ PODS:
     - React-Core
   - RNReanimated (1.13.2):
     - React-Core
-  - RNScreens (2.15.0):
+  - RNScreens (2.16.1):
     - React-Core
   - RNSVG (12.1.0):
     - React
@@ -926,7 +926,7 @@ SPEC CHECKSUMS:
   RNCClipboard: 41d8d918092ae8e676f18adada19104fa3e68495
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
   RNCPicker: 2c31098349f499e7ab4da6c1ce26f7537d271062
-  RNDeviceInfo: 2392152a6082f106af50ae9002b094fcc769f922
+  RNDeviceInfo: 6ecb1d1c87d20e4c62354be0348de23362824dcd
   RNFBApp: 2b4e07dfca4cf780b9e2d61bcc21e34d890cd654
   RNFBAuth: 349a8d96d6ecc91d690c65ec0425cbb21b5831ed
   RNFBFirestore: 316c7a1ffa979dba7d1e940c51dcf3d3860e8a91
@@ -935,7 +935,7 @@ SPEC CHECKSUMS:
   RNImageCropPicker: 16951bc02411f50c4d197488ed6406a23dc3b5f1
   RNLocalize: 41026b7c14878f1a1b381bc79f668f1fbf841adb
   RNReanimated: e03f7425cb7a38dcf1b644d680d1bfc91c3337ad
-  RNScreens: 2ad555d4d9fa10b91bb765ca07fe9b29d59573f0
+  RNScreens: 45c457af3d2ee9e08fc01e70da87e653d46b1198
   RNSVG: ce9d996113475209013317e48b05c21ee988d42e
   TOCropViewController: da59f531f8ac8a94ef6d6c0fc34009350f9e8bfe
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
