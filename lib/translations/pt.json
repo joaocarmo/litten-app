@@ -73,7 +73,7 @@
       "useCurrentLocation": "Usar localização actual",
       "useCustomLocation": "Inserir manualmente",
       "useExistingLocation": "Usar localização existente",
-      "useExtraInfo": "Incluir mais detalhes sobre este litten",
+      "useExtraInfo": "Incluir mais detalhes",
       "useMapLocation": "Escolher no mapa",
       "useProfileLocation": "Usar localização do perfil"
     },
@@ -109,7 +109,9 @@
     },
     "profile": {
       "about": "Sobre",
-      "aboutAuthors": "Autores",
+      "aboutAuthors": "Equipa",
+      "aboutBetaRelease": "Tem em atenção que esta é uma versão beta da app que ainda está em fase de teste antes de seu lançamento oficial. A app, o seu software e todo o conteúdo encontrado nela são fornecidos \"como estão\" e \"conforme disponível\". A equipa não dá nenhuma garantia, expressa ou implícita, quanto à adequação ou usabilidade da app, o seu software ou qualquer seu conteúdo. A equipa não será responsável por qualquer perda, seja direta, indireta, especial ou consequente, sofrida por qualquer parte como resultado do uso da app, do seu software ou conteúdo. Qualquer download ou upload de material para a app é feito por conta e risco do usuário e o usuário será o único responsável por qualquer dano a qualquer sistema de computador ou perda de dados que resulte de tais atividades. Se encontrares quaisquer bugs, falhas, falta de funcionalidade ou outros problemas na app, informa-nos imediatamente para que possamos corrigi-los. A tua ajuda a este respeito é muito apreciada.",
+      "aboutBetaReleaseTitle": "Aviso legal",
       "aboutLicense": "Licença",
       "aboutVersion": "Versão",
       "activePosts": "Littens activos",

@@ -3,6 +3,7 @@ declare module '@env' {
   declare export var FIRESTORE_EMULATOR_HOST: string;
   declare export var FIRESTORE_EMULATOR_PERSISTENCE: string;
   declare export var GOOGLE_API_KEY: string;
+  declare export var IS_BETA_RELASE: String;
   declare export var JIRA_API_KEY: string;
   declare export var JIRA_EMAIL: string;
   declare export var JIRA_TICKET_URL: string;
