@@ -68,6 +68,8 @@
       "createSuccess": "O teu novo litten foi criado!",
       "post": "Criar litten",
       "preview": "Pré-visualizar litten",
+      "selectLocationMap": "Escolher no mapa",
+      "selectLocationProfile": "Usar localização do perfil",
       "title": "Novo litten",
       "unknownLocation": "Localização desconhecida",
       "useCurrentLocation": "Usar localização actual",
