@@ -40,8 +40,8 @@
       "filterLocationRadiusValue": "Encontrar littens até {{value}} {{unit}} de mim",
       "filterLocationRadiusValueShort": "Até {{value}} {{unit}}",
       "filters": "Filtros",
-      "filtersClear": "Limpar todos os filtros",
       "filterSpecies": "Espécie animal",
+      "filtersReset": "Repor todos os filtros",
       "filterType": "Tipo de litten",
       "headerSearchPlaceholder": "Procurar",
       "noFilterLocationRadiusValue": "Não excluir littens com base na distância",
@@ -210,13 +210,13 @@
   "feedback": {
     "pleaseWait": "Aguarda...",
     "confirmMessages": {
-      "clearFilters": "Tens a certeza que queres limpar os filtros?",
       "clearForm": "Tens a certeza que queres limpar o formulário?",
       "confirmationEmail": "Tens a certeza que queres confirmar o teu email?",
       "deleteConversation": "Tens a certeza que queres apagar a conversa com {{user}}?",
       "deleteLitten": "Tens a certeza que queres apagar o litten {{title}}?",
       "deleteProfile": "Todos os teus littens serão apagados e esta acção é irreversível. Queres mesmo eliminar o perfil?",
       "enterPassword": "A tua senha é necessária para esta operação",
+      "resetFilters": "Tens a certeza que queres repor os filtros?",
       "signOut": "Tens a certeza que queres sair da app?"
     },
     "errorMessages": {
@@ -313,7 +313,7 @@
     "change": "Alterar",
     "changePhoto": "Alterar",
     "choose": "Escolher",
-    "clearFilters": "Limpar filtros",
+    "clear": "Limpar",
     "clearForm": "Limpar formulário",
     "clearLocation": "Limpar localização",
     "clickHere": "Clica aqui",
@@ -337,6 +337,7 @@
     "refresh": "Actualizar",
     "removePhoto": "Remover",
     "report": "Reportar",
+    "resetFilters": "Repor filtros",
     "save": "Guardar",
     "send": "Enviar",
     "signIn": "Entrar",

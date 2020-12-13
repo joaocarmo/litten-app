@@ -1,27 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot test for the "UISearch" component renders correctly 1`] = `
-<TextInput
-  allowFontScaling={true}
-  autoCapitalize="none"
-  enablesReturnKeyAutomatically={true}
-  onChangeText={[Function]}
-  onSubmitEditing={[Function]}
-  placeholder="Search"
-  placeholderTextColor="#c4c4c4"
-  rejectResponderTermination={true}
+<View
   style={
     Array [
       Object {
-        "backgroundColor": "#ffffff",
-        "borderRadius": 24,
-        "minHeight": 44,
-        "padding": 8,
-        "paddingLeft": 24,
+        "position": "relative",
       },
       undefined,
     ]
   }
-  underlineColorAndroid="transparent"
-/>
+>
+  <TextInput
+    allowFontScaling={true}
+    autoCapitalize="none"
+    enablesReturnKeyAutomatically={true}
+    onChangeText={[Function]}
+    onSubmitEditing={[Function]}
+    placeholder="Search"
+    placeholderTextColor="#c4c4c4"
+    rejectResponderTermination={true}
+    returnKeyType="search"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#ffffff",
+          "borderRadius": 24,
+          "minHeight": 44,
+          "padding": 8,
+          "paddingLeft": 24,
+        },
+        undefined,
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+</View>
 `;
