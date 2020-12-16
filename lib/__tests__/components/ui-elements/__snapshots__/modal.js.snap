@@ -6,8 +6,9 @@ exports[`Snapshot test for the "UIModal" component renders correctly 1`] = `
     Array [
       Object {
         "height": "100%",
+        "minWidth": "100%",
         "position": "absolute",
-        "width": "100%",
+        "width": 750,
       },
       Object {
         "backgroundColor": "#00000050",
