@@ -87,7 +87,7 @@
       "emptyContactOptions": "Parece que {{name}} não tem opções de contact disponíveis de moment. Porque não adicionas este litten aos teus favoritos e voltas a verificar mais tarde?",
       "emptyStory": "Era uma vez...",
       "preview": "PRÉ-VISUALIZAÇÃO",
-      "selfContactOptions": "This is your own litten! You can perform edits in your profile and settings tab.",
+      "selfContactOptions": "Este litten é teu! Podes fazer alterações no ecrã do teu perfil e definições.",
       "share": "Acho que podes ter interesse em {{name}} ! Porque não espreitas na Litten ? {{uri}}",
       "shareTitle": "Espreita este Litten",
       "story": "História"
@@ -100,7 +100,7 @@
       "emptyText": "Inicia conversas e elas vão aparecer aqui",
       "emptyTitle": "Estás com vergonha?",
       "inputPlaceholder": "Escreve uma mensagem...",
-      "littenRemoved": "Litten removed",
+      "littenRemoved": "Litten removido",
       "littenTitle": "{{type}} {{species}}: {{title}}",
       "loadEarlier": "Carregar mensagens anteriores...",
       "title": "Mensagens",
