@@ -45,7 +45,9 @@
       "filterType": "Looking for",
       "headerSearchPlaceholder": "Search",
       "noFilterLocationRadiusValue": "Don't filter littens based on distance",
-      "searchEverywhere": "Search everywhere"
+      "searchEverywhere": "Search everywhere",
+      "searchHistoryTitle": "Your search history",
+      "searchHistoryTitleClear": "Clear search history"
     },
     "favourites": {
       "title": "Favourites",

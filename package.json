@@ -122,7 +122,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
-    "@babel/plugin-transform-react-jsx": "^7.12.10",
+    "@babel/plugin-transform-react-jsx": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "@babel/runtime": "^7.10.5",
     "@react-native-community/eslint-config": "^2.0.0",
@@ -137,7 +137,7 @@
     "eslint-plugin-flowtype": "^5.2.0",
     "eslint-plugin-jest": "^24.0.0",
     "firebase-admin": "^9.4.2",
-    "firebase-tools": "^8.20.0",
+    "firebase-tools": "^9.0.1",
     "flow-bin": "0.140.0",
     "flow-typed": "^3.2.1",
     "husky": "^4.3.6",

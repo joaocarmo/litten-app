@@ -45,7 +45,9 @@
       "filterType": "Tipo de litten",
       "headerSearchPlaceholder": "Procurar",
       "noFilterLocationRadiusValue": "Não excluir littens com base na distância",
-      "searchEverywhere": "Procurar em todo o lado"
+      "searchEverywhere": "Procurar em todo o lado",
+      "searchHistoryTitle": "O teu histórico de pesquisas",
+      "searchHistoryTitleClear": "Limpar o histórico de pesquisas"
     },
     "favourites": {
       "title": "Favoritos",
