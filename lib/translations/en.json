@@ -202,6 +202,8 @@
     "recoverSentSuccess": "Please follow the instructions on your email",
     "registrationError": "Registration failed",
     "registrationSuccess": "Registration successful",
+    "registrationTermsAndConditionsMessage": "By proceeding to create an account and use Litten, you are agreeing to our Terms and Conditions and Privacy Policy.",
+    "registrationTermsAndConditionsTitle": "Terms and Conditions",
     "reportDisclaimer": "The information you submit is completely anonymous. If you expect a response, please use another way to contact us.",
     "reportErrorMessage": "Do you want to report this error?",
     "reportErrorMessageDone": "Thank you for your feedback!",
@@ -311,6 +313,7 @@
     }
   },
   "cta": {
+    "agree": "Agree",
     "cancel": "Cancel",
     "change": "Change",
     "changePhoto": "Change photo",
@@ -335,6 +338,7 @@
     "no": "No",
     "openCamera": "Open camera",
     "password": "Password",
+    "read": "Read now",
     "recoverPassword": "Recover",
     "refresh": "Refresh",
     "removePhoto": "Remove photo",
