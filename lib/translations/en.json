@@ -262,8 +262,9 @@
       "locationRevokedByUser": "Location permission revoked by user"
     },
     "firebaseErrorMessages": {
-      "auth/email-already-exists": "The provided email already exists",
-      "auth/email-already-in-use": "The provided email is already in use",
+      "auth/email-already-exists": "The provided email is invalid",
+      "auth/email-already-in-use": "The provided email is invalid",
+      "auth/invalid-action-code": "The code is invalid",
       "auth/invalid-email": "The provided email is invalid",
       "auth/invalid-password": "The provided password is invalid",
       "auth/network-request-failed": "There is a network problem",

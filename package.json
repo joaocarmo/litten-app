@@ -34,8 +34,9 @@
   ],
   "scripts": {
     "android": "react-native run-android",
+    "build:android:apk": "bundletool build-apks --bundle=android/app/build/outputs/bundle/release/app-release.aab --output=dist/litten.apks --ks=android/app/litten.keystore --ks-key-alias=litten-android --ks-pass=pass:$KEYSTORE_PWD --key-pass=pass:$KEYSTORE_PWD",
     "build:android:test": "react-native run-android --variant=release",
-    "build:android": "cd android && ./gradlew bundleRelease; cd -",
+    "build:android": "cd android && ./gradlew bundleRelease; cd - && yarn build:android:apk",
     "clear-cache": "watchman watch-del-all && rm -rf node_modules/ && yarn install && rm -rf /tmp/metro-* && yarn start --reset-cache",
     "generate-data": "./scripts/generate-data",
     "ios:device:production": "react-native run-ios --configuration Release --device $IOS_DEVICE_NAME",
@@ -43,6 +44,7 @@
     "ios": "react-native run-ios",
     "link:android:litten": "adb shell am start -W -a android.intent.action.VIEW -d \"https://litten.app/open/litten/$LITTEN_UID\" com.litten",
     "link:ios:litten": "xcrun simctl openurl booted https://litten.app/open/litten/$LITTEN_UID",
+    "link:ios:verification": "xcrun simctl openurl booted 'https://litten.app/open/verification?mode=action&oobCode=code'",
     "lint:fix": "eslint . --fix",
     "lint": "eslint .",
     "pods": "npx pod-install",

@@ -76,3 +76,6 @@ firebase/
 
 # Java heap dump
 java_pid*.hprof
+
+# Dist apks files
+dist/*.apks

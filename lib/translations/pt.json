@@ -262,8 +262,9 @@
       "locationRevokedByUser": "Permissão de localização revogada pelo utilizador"
     },
     "firebaseErrorMessages": {
-      "auth/email-already-exists": "O email fornecido já existe",
-      "auth/email-already-in-use": "O email fornecido está em uso",
+      "auth/email-already-exists": "O email fornecido é inválido",
+      "auth/email-already-in-use": "O email fornecido é inválido",
+      "auth/invalid-action-code": "O código é inválido",
       "auth/invalid-email": "O email fornecido é inválido",
       "auth/invalid-password": "A senha fornecida é inválida",
       "auth/network-request-failed": "Existe um problema de ligação",
