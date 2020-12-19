@@ -171,6 +171,10 @@
     "selectLocation": {
       "title": "Select location"
     },
+    "maintenance": {
+      "title": "Under maintenance",
+      "description": "We're sorry about this inconvenience, but the app is currently under maintenance."
+    },
     "dev": {
       "aboutEnvironment": "Build environment",
       "aboutOS": "OS",

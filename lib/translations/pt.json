@@ -171,6 +171,10 @@
     "selectLocation": {
       "title": "Escolher localização"
     },
+    "maintenance": {
+      "title": "Em manutenção",
+      "description": "Pedimos desculpa pelo incómodo, mas a app está em manutenção."
+    },
     "dev": {
       "aboutEnvironment": "Ambiente da build",
       "aboutOS": "SO",
