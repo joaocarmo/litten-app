@@ -114,11 +114,13 @@ exports[`Snapshot test for the "UISelect" component renders correctly 1`] = `
             Array [
               Object {
                 "label": "One",
+                "testID": undefined,
                 "textColor": undefined,
                 "value": "one",
               },
               Object {
                 "label": "Two",
+                "testID": undefined,
                 "textColor": undefined,
                 "value": "two",
               },
