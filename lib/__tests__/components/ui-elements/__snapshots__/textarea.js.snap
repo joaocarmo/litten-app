@@ -9,7 +9,7 @@ exports[`Snapshot test for the "UITextArea" component renders correctly 1`] = `
     Array [
       Object {
         "backgroundColor": "#ffffff",
-        "borderRadius": 10,
+        "borderRadius": 6,
         "flex": 1,
         "marginBottom": 8,
         "marginTop": 8,
