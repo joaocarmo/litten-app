@@ -172,13 +172,19 @@
       "title": "Select location"
     },
     "maintenance": {
-      "title": "Under maintenance",
-      "description": "We're sorry about this inconvenience, but the app is currently under maintenance."
+      "crashDescription": "Litten encountered an unexpected error. If you've enabled Sharing Litten Analytics, we have received this report automatically. In the meanwhile, try restarting the app.",
+      "crashTitle": "Unexpected error",
+      "description": "We're sorry about this inconvenience, but the app is currently under maintenance.",
+      "title": "Under maintenance"
     },
     "dev": {
       "aboutEnvironment": "Build environment",
       "aboutOS": "OS",
       "aboutOSVersion": "OS Version",
+      "abruptChaos": "Crash the app",
+      "abruptChaosJS": "JavaScript",
+      "abruptChaosNative": "Native",
+      "abruptChaosReact": "React",
       "clearAsyncStorage": "Clear AsyncStorage",
       "hacks": "Hacks",
       "hacksIntro": "This is a developer-only screen with useful hacks",

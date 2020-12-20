@@ -172,13 +172,19 @@
       "title": "Escolher localização"
     },
     "maintenance": {
-      "title": "Em manutenção",
-      "description": "Pedimos desculpa pelo incómodo, mas a app está em manutenção."
+      "crashDescription": "A Litten encontrou um erro inesperado. Se activaste Partilhar Estatísticas, recebemos o relatório automaticamente. Entretanto, experimenta reiniciar a app.",
+      "crashTitle": "Erro inesperado",
+      "description": "Pedimos desculpa pelo incómodo, mas a app está em manutenção.",
+      "title": "Em manutenção"
     },
     "dev": {
       "aboutEnvironment": "Ambiente da build",
       "aboutOS": "SO",
       "aboutOSVersion": "Versão do SO",
+      "abruptChaos": "Provocar erro",
+      "abruptChaosJS": "JavaScript",
+      "abruptChaosNative": "Native",
+      "abruptChaosReact": "React",
       "clearAsyncStorage": "Limpar AsyncStorage",
       "hacks": "Hacks",
       "hacksIntro": "Esta é uma secção dedicada apenas para desenvolvedores",
