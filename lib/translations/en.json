@@ -44,19 +44,21 @@
       "filtersReset": "Reset all filters",
       "filterType": "Looking for",
       "headerSearchPlaceholder": "Search",
+      "noActiveFiltersToSave": "You don't have active filters to save",
       "noFilterLocationRadiusValue": "Don't filter littens based on distance",
+      "saveFilters": "Save this set",
       "searchEverywhere": "Search everywhere",
       "searchHistoryTitle": "Your search history",
       "searchHistoryTitleClear": "Clear search history"
     },
     "favourites": {
-      "title": "Favourites",
-      "tabNavPosts": "Saved Posts",
-      "tabNavSearches": "Saved Searches",
-      "emptyPostsTitle": "Start cherishing your favourite pet",
+      "emptyFiltersText": "Save a frequent filter criteria and they will show up in here",
+      "emptyFiltersTitle": "Looking for something very specific?",
       "emptyPostsText": "When you heart a post, they will show up in here where you can keep track",
-      "emptySearchesTitle": "Looking for something very specific?",
-      "emptySearchesText": "Save a frequent search criteria and they will show up in here"
+      "emptyPostsTitle": "Start cherishing your favourite pet",
+      "tabNavFilters": "Saved Filters",
+      "tabNavPosts": "Saved Posts",
+      "title": "Favourites"
     },
     "new": {
       "addLocation": "Where is this litten?",
@@ -229,6 +231,7 @@
       "deleteConversation": "Are you sure you want to delete the conversation with {{user}}?",
       "deleteLitten": "Are you sure you want to delete the litten {{title}}?",
       "deleteProfile": "All of your littens will be removed and this action is irreversible. Are you sure you want to delete your profile?",
+      "enterFilterName": "Choose a name to identify this set",
       "enterPassword": "Your password is required for this operation",
       "resetFilters": "Are you sure you want to reset the filters?",
       "signOut": "Are you sure you want to sign out of the app?"
@@ -341,6 +344,7 @@
     "deleteLitten": "Delete litten",
     "deleteProfile": "Delete profile",
     "done": "Done",
+    "enterFilterName": "Enter filter name",
     "enterPassword": "Enter password",
     "error": "Error",
     "forgotPassword": "Forgot password?",

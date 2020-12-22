@@ -44,19 +44,21 @@
       "filtersReset": "Repor todos os filtros",
       "filterType": "Tipo de litten",
       "headerSearchPlaceholder": "Procurar",
+      "noActiveFiltersToSave": "Não tens filtros activos para guardar",
       "noFilterLocationRadiusValue": "Não excluir littens com base na distância",
+      "saveFilters": "Guardar este conjunto",
       "searchEverywhere": "Procurar em todo o lado",
       "searchHistoryTitle": "O teu histórico de pesquisas",
       "searchHistoryTitleClear": "Limpar o histórico de pesquisas"
     },
     "favourites": {
-      "title": "Favoritos",
-      "tabNavPosts": "Littens",
-      "tabNavSearches": "Pesquisas",
-      "emptyPostsTitle": "Começa a aproximar-te do teu animal",
+      "emptyFiltersText": "Guarda os teus filtros frequentes e eles vão aparecer aqui",
+      "emptyFiltersTitle": "Procuras algo muito específico?",
       "emptyPostsText": "Quando gostas de uma publicação, ela aparece aqui para dares seguimento",
-      "emptySearchesTitle": "Procuras algo muito específico?",
-      "emptySearchesText": "Guarda as tuas pesquisas frequentes e elas vão aparecer aqui"
+      "emptyPostsTitle": "Começa a aproximar-te do teu animal",
+      "tabNavFilters": "Filtros",
+      "tabNavPosts": "Littens",
+      "title": "Favoritos"
     },
     "new": {
       "addLocation": "Localização do litten",
@@ -229,6 +231,7 @@
       "deleteConversation": "Tens a certeza que queres apagar a conversa com {{user}}?",
       "deleteLitten": "Tens a certeza que queres apagar o litten {{title}}?",
       "deleteProfile": "Todos os teus littens serão apagados e esta acção é irreversível. Queres mesmo eliminar o perfil?",
+      "enterFilterName": "Escolhe um nome para identificar este conjunto",
       "enterPassword": "A tua senha é necessária para esta operação",
       "resetFilters": "Tens a certeza que queres repor os filtros?",
       "signOut": "Tens a certeza que queres sair da app?"
@@ -342,6 +345,7 @@
     "deleteProfile": "Apagar perfil",
     "done": "Pronto",
     "enterPassword": "Introduzir senha",
+    "enterFilterName": "Introduzir nome do filtro",
     "error": "Erro",
     "forgotPassword": "Esqueceste a senha?",
     "fromLibrary": "Escolher",
