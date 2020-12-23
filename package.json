@@ -82,7 +82,7 @@
     "@react-native-firebase/crashlytics": "^10.3.1",
     "@react-native-firebase/firestore": "^10.3.1",
     "@react-native-firebase/storage": "^10.3.1",
-    "@react-native-picker/picker": "^1.9.7",
+    "@react-native-picker/picker": "^1.9.8",
     "@react-navigation/bottom-tabs": "^5.11.2",
     "@react-navigation/native": "^5.8.10",
     "@react-navigation/stack": "^5.12.8",
@@ -125,7 +125,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
-    "@babel/plugin-transform-react-jsx": "^7.12.11",
+    "@babel/plugin-transform-react-jsx": "^7.12.12",
     "@babel/preset-react": "^7.12.10",
     "@babel/runtime": "^7.10.5",
     "@react-native-community/eslint-config": "^2.0.0",
