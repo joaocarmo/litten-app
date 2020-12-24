@@ -16,5 +16,6 @@ module.exports = {
         runtime: 'automatic',
       },
     ],
+    ['macros'],
   ],
 }
