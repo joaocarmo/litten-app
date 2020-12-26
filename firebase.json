@@ -12,7 +12,7 @@
     }
   },
   "firestore": {
-    "rules": "./firestore.rules"
+    "rules": "firestore.rules"
   },
   "react-native": {
     "crashlytics_auto_collection_enabled": true,

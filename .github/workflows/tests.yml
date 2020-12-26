@@ -38,3 +38,5 @@ jobs:
       run: yarn translations-check
     - name: Execute the tests
       run: yarn test
+    - name: Execute the firebase rules tests
+      run: yarn test:firestore:rules
