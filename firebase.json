@@ -11,6 +11,9 @@
       "port": 4000
     }
   },
+  "firestore": {
+    "rules": "./firestore.rules"
+  },
   "react-native": {
     "crashlytics_auto_collection_enabled": true,
     "crashlytics_debug_enabled": false,

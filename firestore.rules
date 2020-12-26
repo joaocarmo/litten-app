@@ -1,0 +1,45 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function emailIsVerified() {
+      return request.auth.token.email_verified == true;
+    }
+
+    function littenExists(littenUid) {
+      return exists(/databases/$(database)/documents/littens/$(littenUid));
+    }
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isSameUser(userUid) {
+      return request.auth.uid == userUid;
+    }
+
+    match /chats/{chatUid} {
+      allow read, update, delete: if isAuthenticated();
+      allow create: if isAuthenticated() && littenExists(request.resource.data.littenUid);
+    }
+
+    match /littens/{littenUid} {
+      function isLittenOwner() {
+        return request.auth.uid == resource.data.userUid;
+      }
+
+      allow create: if isAuthenticated() && emailIsVerified();
+      allow read: if isAuthenticated();
+      allow update, delete: if isAuthenticated() && isLittenOwner();
+    }
+
+    match /messages/{messageUid} {
+      allow create, read, delete: if isAuthenticated();
+      allow update: if false
+    }
+
+    match /users/{userUid} {
+      allow create, read: if isAuthenticated();
+      allow update, delete: if isAuthenticated() && isSameUser(userUid);
+    }
+  }
+}
