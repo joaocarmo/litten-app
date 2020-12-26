@@ -192,7 +192,6 @@
       "clearAsyncStorage": "Limpar AsyncStorage",
       "hacks": "Hacks",
       "hacksIntro": "Esta é uma secção dedicada apenas para desenvolvedores",
-      "storybook": "Storybook",
       "storybookIntro": "Podes navegar pelos elementos visuais do Litten aqui"
     }
   },

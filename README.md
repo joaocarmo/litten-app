@@ -36,18 +36,6 @@ yarn prepare-data
 yarn start:firebase
 ```
 
-## UI Components
-
-The UI Components catalog can be viewed inside the app, through the
-developer-only `Storybook` screen available in the `Profile` tab.
-
-Additionally, a server can be started in order to browse the components using
-a browser.
-
-```sh
-yarn storybook
-```
-
 ## Environment
 
 Customize the environment variables, some functions might fail due to lack of

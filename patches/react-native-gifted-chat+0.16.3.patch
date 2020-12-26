@@ -1,82 +1,12 @@
-diff --git a/node_modules/react-native-gifted-chat/lib/Day.js b/node_modules/react-native-gifted-chat/lib/Day.js
-index 7829a72..c7e4e39 100644
---- a/node_modules/react-native-gifted-chat/lib/Day.js
-+++ b/node_modules/react-native-gifted-chat/lib/Day.js
-@@ -1,7 +1,7 @@
- import PropTypes from 'prop-types';
- import React, { PureComponent } from 'react';
- import { StyleSheet, Text, View, } from 'react-native';
--import dayjs from 'dayjs';
-+import dayjs from '../../../lib/utils/day';
- import Color from './Color';
- import { StylePropType, isSameDay } from './utils';
- import { DATE_FORMAT } from './Constant';
-@@ -26,9 +26,7 @@ export default class Day extends PureComponent {
-             return (<View style={[styles.container, containerStyle]}>
-           <View style={wrapperStyle}>
-             <Text style={[styles.text, textStyle]}>
--              {dayjs(currentMessage.createdAt)
--                .locale(this.context.getLocale())
--                .format(dateFormat)}
-+              {dayjs(currentMessage.createdAt).format(DATE_FORMAT)}
-             </Text>
-           </View>
-         </View>);
-diff --git a/node_modules/react-native-gifted-chat/lib/GiftedChat.js b/node_modules/react-native-gifted-chat/lib/GiftedChat.js
-index 73ba4ee..6726551 100644
---- a/node_modules/react-native-gifted-chat/lib/GiftedChat.js
-+++ b/node_modules/react-native-gifted-chat/lib/GiftedChat.js
-@@ -4,8 +4,7 @@ import { Platform, StyleSheet, View, SafeAreaView, KeyboardAvoidingView, } from
- import { ActionSheetProvider, } from '@expo/react-native-action-sheet';
- import uuid from 'uuid';
- import { getBottomSpace } from 'react-native-iphone-x-helper';
--import dayjs from 'dayjs';
--import localizedFormat from 'dayjs/plugin/localizedFormat';
-+import dayjs from '../../../lib/utils/day';
- import * as utils from './utils';
- import Actions from './Actions';
- import Avatar from './Avatar';
-@@ -23,7 +22,6 @@ import Send from './Send';
- import Time from './Time';
- import GiftedAvatar from './GiftedAvatar';
- import { MIN_COMPOSER_HEIGHT, MAX_COMPOSER_HEIGHT, DEFAULT_PLACEHOLDER, TIME_FORMAT, DATE_FORMAT, } from './Constant';
--dayjs.extend(localizedFormat);
- class GiftedChat extends React.Component {
-     constructor(props) {
-         super(props);
 diff --git a/node_modules/react-native-gifted-chat/lib/GiftedChat.js.flow b/node_modules/react-native-gifted-chat/lib/GiftedChat.js.flow
-index 414eefc..fde160b 100644
+index 414eefc..7cf98e3 100644
 --- a/node_modules/react-native-gifted-chat/lib/GiftedChat.js.flow
 +++ b/node_modules/react-native-gifted-chat/lib/GiftedChat.js.flow
-@@ -93,6 +93,7 @@ export type GiftedChatProps<TMessage: IMessage = IMessage> = $ReadOnly<{|
-   renderBubble?: (BubbleProps<TMessage>) => React.Node,
-   renderSystemMessage?: (SystemMessageProps<TMessage>) => React.Node,
-   onLongPress?: (context: any, message: any) => void,
+@@ -100,6 +100,7 @@ export type GiftedChatProps<TMessage: IMessage = IMessage> = $ReadOnly<{|
+   renderDay?: (DayProps<TMessage>) => React.Node,
+   renderTime?: (TimeProps<TMessage>) => React.Node,
+   renderFooter?: () => React.Node,
 +  renderChatEmpty?: () => React.Node,
-   renderMessage?: (MessageProps<TMessage>) => React.Node,
-   renderMessageText?: (MessageTextProps<TMessage>) => React.Node,
-   renderMessageImage?: (MessageImageProps<TMessage>) => React.Node,
-diff --git a/node_modules/react-native-gifted-chat/lib/Time.js b/node_modules/react-native-gifted-chat/lib/Time.js
-index 24b06cc..917b4ef 100644
---- a/node_modules/react-native-gifted-chat/lib/Time.js
-+++ b/node_modules/react-native-gifted-chat/lib/Time.js
-@@ -1,7 +1,7 @@
- import PropTypes from 'prop-types';
- import React, { Component } from 'react';
- import { StyleSheet, Text, View } from 'react-native';
--import dayjs from 'dayjs';
-+import dayjs from '../../../lib/utils/day';
- import Color from './Color';
- import { TIME_FORMAT } from './Constant';
- import { StylePropType } from './utils';
-diff --git a/node_modules/react-native-gifted-chat/lib/utils.js b/node_modules/react-native-gifted-chat/lib/utils.js
-index cf91b98..9a90558 100644
---- a/node_modules/react-native-gifted-chat/lib/utils.js
-+++ b/node_modules/react-native-gifted-chat/lib/utils.js
-@@ -1,5 +1,5 @@
- import PropTypes from 'prop-types';
--import dayjs from 'dayjs';
-+import dayjs from '../../../lib/utils/day';
- export const StylePropType = PropTypes.oneOfType([
-     PropTypes.array,
-     PropTypes.object,
+   renderChatFooter?: () => React.Node,
+   renderInputToolbar?: InputToolbarProps => React.Node,
+   renderComposer?: ComposerProps => React.Node,

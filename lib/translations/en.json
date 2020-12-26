@@ -192,7 +192,6 @@
       "clearAsyncStorage": "Clear AsyncStorage",
       "hacks": "Hacks",
       "hacksIntro": "This is a developer-only screen with useful hacks",
-      "storybook": "Storybook",
       "storybookIntro": "You can browse through Litten's UI Elements in this screen"
     }
   },
