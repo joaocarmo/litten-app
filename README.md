@@ -34,6 +34,9 @@ yarn prepare-data
 
 # This will start the Firebase Emulator
 yarn start:firebase
+
+# This will seed the Firestore DB with some data
+yarn firestore:seed
 ```
 
 ## Environment
