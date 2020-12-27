@@ -1,17 +1,11 @@
 #!/usr/bin/env node
-
-import fs from 'fs'
-import path from 'path'
 import {
   apps,
   assertFails,
   assertSucceeds,
   clearFirestoreData,
   initializeTestApp,
-  loadFirestoreRules,
 } from '@firebase/rules-unit-testing'
-
-const rules = fs.readFileSync(path.resolve('firestore.rules'), 'utf8')
 
 const projectId = 'litten-app'
 const fakeUser = {
@@ -44,9 +38,6 @@ const auth2 = {
 const verifiedAuth = { ...auth, email_verified: true }
 
 const main = async () => {
-  console.log('Loading rules...')
-  await loadFirestoreRules({ projectId, rules })
-
   const anonymousApp = initializeTestApp({ projectId })
   const authenticatedApp = initializeTestApp({ auth, projectId })
   const authenticatedApp2 = initializeTestApp({ auth: auth2, projectId })
