@@ -20,7 +20,7 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
 >
   <Image
     progressiveRenderingEnabled={true}
-    resizeMode="contain"
+    resizeMode="cover"
     source={
       Object {
         "cache": "force-cache",
