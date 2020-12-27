@@ -10,7 +10,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  test:
 
     environment: development
 
@@ -42,3 +42,5 @@ jobs:
       run: yarn test
     - name: Execute the firebase rules tests
       run: yarn test:firestore:rules
+    - name: Execute the firebase model tests
+      run: yarn test:firestore:model

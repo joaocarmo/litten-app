@@ -1,4 +1,4 @@
-module.exports = {
+const globalConfig = {
   preset: 'react-native',
   timers: 'fake',
   setupFiles: ['<rootDir>/jest.setup.js'],
@@ -10,4 +10,24 @@ module.exports = {
       '<rootDir>/lib/__mocks__/fileMock.js',
     '\\.svg$': '<rootDir>/lib/__mocks__/svgMock.js',
   },
+}
+
+module.exports = {
+  projects: [
+    {
+      ...globalConfig,
+      displayName: 'default',
+    },
+    {
+      ...globalConfig,
+      displayName: 'serial',
+      runner: 'jest-serial-runner',
+      testMatch: [
+        '**/__serial__tests__/**/*.[jt]s?(x)',
+        '**/?(*.)+(serial-spec|serial-test).[jt]s?(x)',
+      ],
+      preset: undefined,
+      setupFiles: undefined,
+    },
+  ],
 }
