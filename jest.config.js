@@ -20,11 +20,11 @@ module.exports = {
     },
     {
       ...globalConfig,
-      displayName: 'serial',
+      displayName: 'model',
       runner: 'jest-serial-runner',
       testMatch: [
-        '**/__serial__tests__/**/*.[jt]s?(x)',
-        '**/?(*.)+(serial-spec|serial-test).[jt]s?(x)',
+        '**/__model__tests__/**/*.[jt]s?(x)',
+        '**/?(*.)+(model-spec|serial-test).[jt]s?(x)',
       ],
       preset: undefined,
       setupFiles: undefined,

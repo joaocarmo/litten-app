@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const admin = require('firebase-admin')
+const { apps, clearFirestoreData } = require('@firebase/rules-unit-testing')
 const { chats, littens, messages, users } = require('../lib/fixtures/seed')
 
 const projectId = 'litten-app'
@@ -36,6 +37,12 @@ const main = async () => {
   const dbUsers = db.collection(DB_USER_COLLECTION)
 
   console.log(`Seeding the Firestore DB project '${projectId}'...`)
+
+  console.log('Clearing existing apps...')
+  await Promise.all(apps().map((app) => app.delete()))
+
+  console.log('Clearing previous data...')
+  await clearFirestoreData({ projectId })
 
   for (const user of users) {
     const { id: userId, ...userObj } = user

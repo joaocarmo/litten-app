@@ -65,7 +65,7 @@
     "start:ios": "yarn ios && yarn start:firebase",
     "start": "react-native start",
     "storybook": "(adb reverse tcp:7007 tcp:7007 || true) && start-storybook",
-    "test:firestore:model": "firebase emulators:exec 'jest --selectProjects serial'",
+    "test:firestore:model": "firebase emulators:exec 'jest --selectProjects model'",
     "test:firestore:rules": "firebase emulators:exec './scripts/firestore-rules-test.mjs'",
     "test": "jest --selectProjects default --forceExit",
     "translations-check": "./scripts/validate-translations",
