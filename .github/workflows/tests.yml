@@ -12,6 +12,8 @@ on:
 jobs:
   build:
 
+    environment: development
+
     runs-on: ubuntu-latest
 
     strategy:
