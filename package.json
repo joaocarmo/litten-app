@@ -64,7 +64,7 @@
     "start:ios": "yarn ios && yarn start:firebase",
     "start": "react-native start",
     "storybook": "(adb reverse tcp:7007 tcp:7007 || true) && start-storybook",
-    "test:firestore:rules": "firebase use default && firebase emulators:exec './scripts/firestore-rules-test.mjs'",
+    "test:firestore:rules": "firebase emulators:exec './scripts/firestore-rules-test.mjs'",
     "test": "jest --forceExit",
     "translations-check": "./scripts/validate-translations",
     "type-check": "yarn flow"
