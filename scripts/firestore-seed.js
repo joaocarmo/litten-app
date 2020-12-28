@@ -1,7 +1,14 @@
 #!/usr/bin/env node
 const admin = require('firebase-admin')
 const { apps, clearFirestoreData } = require('@firebase/rules-unit-testing')
-const { chats, littens, messages, users } = require('../lib/fixtures/seed')
+const {
+  authUser,
+  authUserRecord,
+  chats,
+  littens,
+  messages,
+  users,
+} = require('../lib/fixtures/seed')
 
 const projectId = 'litten-app'
 const DB_CHAT_COLLECTION = 'chats'
@@ -30,7 +37,9 @@ const parseDataDoc = (origObj) => {
 }
 
 const main = async () => {
+  const auth = admin.auth()
   const db = admin.firestore()
+  db.settings({ ignoreUndefinedProperties: true })
   const dbChats = db.collection(DB_CHAT_COLLECTION)
   const dbLittens = db.collection(DB_LITTEN_COLLECTION)
   const dbMessages = db.collection(DB_MESSAGE_COLLECTION)
@@ -43,6 +52,23 @@ const main = async () => {
 
   console.log('Clearing previous data...')
   await clearFirestoreData({ projectId })
+
+  console.log('Clearing previous auth accounts...')
+  const authList = await admin.auth().listUsers()
+  const usersToDelete = []
+  authList.users.forEach((user) => {
+    usersToDelete.push(user.uid)
+  })
+  for (const userUidToDelete of usersToDelete) {
+    await admin.auth().deleteUser(userUidToDelete)
+  }
+
+  console.log(`Creating the auth account '${authUser.displayName}'...`)
+  const createdAuthUser = await auth.createUser(authUser)
+  const authUserUid = createdAuthUser.uid
+
+  console.log(`Adding the user account '${authUserRecord.displayName}'...`)
+  users.push({ ...authUserRecord, id: authUserUid })
 
   for (const user of users) {
     const { id: userId, ...userObj } = user

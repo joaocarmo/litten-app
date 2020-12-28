@@ -39,6 +39,15 @@ yarn start:firebase
 yarn firestore:seed
 ```
 
+## Generic account
+
+After seeding the Firestore DB, a generic account can be used right away.
+
+```txt
+   email: team@litten.app
+password: thisisthepassword
+```
+
 ## Environment
 
 Customize the environment variables, some functions might fail due to lack of
