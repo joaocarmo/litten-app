@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-import {
+const {
   apps,
   assertFails,
   assertSucceeds,
   clearFirestoreData,
   initializeTestApp,
-} from '@firebase/rules-unit-testing'
+} = require('@firebase/rules-unit-testing')
 
 const projectId = 'litten-app'
 const fakeUser = {

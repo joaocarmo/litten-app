@@ -68,7 +68,7 @@
     "start:ios": "yarn ios && yarn start:firebase",
     "start": "react-native start",
     "test:firestore:model": "firebase emulators:exec 'jest --selectProjects model'",
-    "test:firestore:rules": "firebase emulators:exec './scripts/firestore-rules-test.mjs'",
+    "test:firestore:rules": "firebase emulators:exec './scripts/firestore-rules-test.js'",
     "test": "jest --selectProjects default --forceExit",
     "translations-check": "./scripts/validate-translations",
     "type-check": "yarn flow"
