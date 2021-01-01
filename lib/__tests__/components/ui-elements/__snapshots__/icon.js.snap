@@ -40,6 +40,10 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
         },
         Array [
           Object {
+            "height": undefined,
+            "width": undefined,
+          },
+          Object {
             "height": "100%",
             "tintColor": "#39a4f2",
             "width": "100%",

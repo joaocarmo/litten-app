@@ -51,7 +51,8 @@
       "searchEverywhere": "Procurar em todo o lado",
       "searchHistoryTitle": "O teu histórico de pesquisas",
       "searchHistoryTitleClear": "Limpar o histórico de pesquisas",
-      "selectUserType": "Tipo de utilizador"
+      "selectUserType": "Tipo de utilizador",
+      "selectUserTypeDesc": "Podes utilizar esta opção para filtrar pelo tipo de perfil, sejam indivíduos privados ou organizações"
     },
     "favourites": {
       "emptyFiltersText": "Guarda os teus filtros frequentes e eles vão aparecer aqui",

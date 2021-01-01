@@ -51,7 +51,8 @@
       "searchEverywhere": "Search everywhere",
       "searchHistoryTitle": "Your search history",
       "searchHistoryTitleClear": "Clear search history",
-      "selectUserType": "User Type"
+      "selectUserType": "User Type",
+      "selectUserTypeDesc": "You can use this to filter by the type of user, either private individuals or organization"
     },
     "favourites": {
       "emptyFiltersText": "Save a frequent filter criteria and they will show up in here",
