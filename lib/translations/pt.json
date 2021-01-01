@@ -43,13 +43,15 @@
       "filterSpecies": "Espécie animal",
       "filtersReset": "Repor todos os filtros",
       "filterType": "Tipo de litten",
+      "filterUserType": "Utilizador",
       "headerSearchPlaceholder": "Procurar",
       "noActiveFiltersToSave": "Não tens filtros activos para guardar",
       "noFilterLocationRadiusValue": "Não excluir littens com base na distância",
       "saveFilters": "Guardar este conjunto",
       "searchEverywhere": "Procurar em todo o lado",
       "searchHistoryTitle": "O teu histórico de pesquisas",
-      "searchHistoryTitleClear": "Limpar o histórico de pesquisas"
+      "searchHistoryTitleClear": "Limpar o histórico de pesquisas",
+      "selectUserType": "Tipo de utilizador"
     },
     "favourites": {
       "emptyFiltersText": "Guarda os teus filtros frequentes e eles vão aparecer aqui",
@@ -329,6 +331,7 @@
   },
   "cta": {
     "agree": "Concordo",
+    "all": "Todos",
     "cancel": "Cancelar",
     "change": "Alterar",
     "changePhoto": "Alterar",

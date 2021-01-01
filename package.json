@@ -106,6 +106,7 @@
     "react-native-device-info": "^7.3.1",
     "react-native-dialog": "^6.1.2",
     "react-native-expo-viewport-units": "^0.0.8",
+    "react-native-fast-image": "^8.3.4",
     "react-native-geolocation-service": "^5.1.1",
     "react-native-gesture-handler": "^1.9.0",
     "react-native-gifted-chat": "^0.16.3",

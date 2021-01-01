@@ -43,13 +43,15 @@
       "filterSpecies": "Animal species",
       "filtersReset": "Reset all filters",
       "filterType": "Looking for",
+      "filterUserType": "User",
       "headerSearchPlaceholder": "Search",
       "noActiveFiltersToSave": "You don't have active filters to save",
       "noFilterLocationRadiusValue": "Don't filter littens based on distance",
       "saveFilters": "Save this set",
       "searchEverywhere": "Search everywhere",
       "searchHistoryTitle": "Your search history",
-      "searchHistoryTitleClear": "Clear search history"
+      "searchHistoryTitleClear": "Clear search history",
+      "selectUserType": "User Type"
     },
     "favourites": {
       "emptyFiltersText": "Save a frequent filter criteria and they will show up in here",
@@ -329,6 +331,7 @@
   },
   "cta": {
     "agree": "Agree",
+    "all": "All",
     "cancel": "Cancel",
     "change": "Change",
     "changePhoto": "Change photo",

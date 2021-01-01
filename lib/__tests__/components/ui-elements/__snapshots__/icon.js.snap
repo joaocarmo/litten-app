@@ -32,25 +32,41 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
     ]
   }
 >
-  <Image
-    progressiveRenderingEnabled={true}
-    resizeMode="contain"
-    source={
-      Object {
-        "uri": "",
-      }
-    }
+  <View
     style={
       Array [
         Object {
-          "height": "100%",
-          "tintColor": "#39a4f2",
-          "width": "100%",
+          "overflow": "hidden",
         },
-        undefined,
-        undefined,
+        Array [
+          Object {
+            "height": "100%",
+            "tintColor": "#39a4f2",
+            "width": "100%",
+          },
+          undefined,
+          undefined,
+        ],
       ]
     }
-  />
+  >
+    <FastImageView
+      resizeMode="contain"
+      source={
+        Object {
+          "uri": "",
+        }
+      }
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    />
+  </View>
 </View>
 `;
