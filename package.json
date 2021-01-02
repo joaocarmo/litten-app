@@ -138,7 +138,7 @@
     "babel-plugin-dotenv-import": "^2.1.0",
     "babel-plugin-macros": "^3.0.1",
     "camelcase": "^6.2.0",
-    "eslint": "^7.16.0",
+    "eslint": "^7.17.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-flowtype": "^5.2.0",
     "eslint-plugin-jest": "^24.0.0",
