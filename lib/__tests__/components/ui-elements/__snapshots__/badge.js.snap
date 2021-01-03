@@ -54,6 +54,7 @@ exports[`Snapshot test for the "UIBadge" component renders correctly a positive 
         },
         undefined,
         undefined,
+        undefined,
       ]
     }
   >
@@ -114,6 +115,7 @@ exports[`Snapshot test for the "UIBadge" component renders correctly with a nega
           "paddingBottom": 6,
           "paddingTop": 6,
         },
+        undefined,
         undefined,
         undefined,
       ]
@@ -178,6 +180,7 @@ exports[`Snapshot test for the "UIBadge" component renders correctly with zero 1
         },
         undefined,
         undefined,
+        undefined,
       ]
     }
   >
@@ -210,6 +213,7 @@ exports[`Snapshot test for the "UIBadge" component renders correctly without a n
         },
         undefined,
         undefined,
+        undefined,
       ]
     }
   >
@@ -240,6 +244,7 @@ exports[`Snapshot test for the "UIBadge" component renders correctly without zer
           "paddingBottom": 6,
           "paddingTop": 6,
         },
+        undefined,
         undefined,
         undefined,
       ]

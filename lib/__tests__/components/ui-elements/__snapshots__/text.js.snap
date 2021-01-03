@@ -17,6 +17,7 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
       },
       undefined,
       undefined,
+      undefined,
     ]
   }
 >

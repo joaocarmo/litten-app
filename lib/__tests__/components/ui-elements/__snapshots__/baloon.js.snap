@@ -43,6 +43,7 @@ exports[`Snapshot test for the "UIBalloon" component renders correctly 1`] = `
         },
         undefined,
         undefined,
+        undefined,
       ]
     }
   >

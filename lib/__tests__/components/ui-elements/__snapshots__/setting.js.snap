@@ -47,6 +47,7 @@ Array [
           },
           undefined,
           undefined,
+          undefined,
         ]
       }
     >
@@ -66,6 +67,7 @@ Array [
             "marginTop": 8,
           },
         ],
+        undefined,
         undefined,
         undefined,
         undefined,
@@ -121,6 +123,7 @@ exports[`Snapshot test for the "UISwitch" component renders correctly without de
           "paddingBottom": 6,
           "paddingTop": 6,
         },
+        undefined,
         undefined,
         undefined,
       ]
