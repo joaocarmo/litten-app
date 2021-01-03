@@ -97,7 +97,7 @@
     "@react-navigation/native": "^5.8.10",
     "@react-navigation/stack": "^5.12.8",
     "base-64": "^1.0.0",
-    "dayjs": "^1.10.0",
+    "dayjs": "^1.10.1",
     "i18n-js": "^3.7.1",
     "immer": "^8.0.0",
     "libphonenumber-js": "^1.9.6",
