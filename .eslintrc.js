@@ -22,7 +22,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/__tests__/**/*.js', '**/storybook/**/*.js'],
+      files: ['**/__tests__/**/*.js'],
       rules: {
         'react/jsx-no-literals': 'off',
       },
