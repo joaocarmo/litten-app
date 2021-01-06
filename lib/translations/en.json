@@ -367,12 +367,13 @@
     "report": "Report",
     "resetFilters": "Reset filters",
     "save": "Save",
+    "selectLocation": "Select",
     "send": "Send",
     "signIn": "Sign in",
     "signOut": "Sign out",
     "signUp": "Sign up",
     "skip": "Skip",
-    "useCurrent": "Use current",
+    "useCurrentLocation": "Use current",
     "yes": "Yes"
   },
   "accessibility": {
