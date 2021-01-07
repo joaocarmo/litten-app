@@ -4,16 +4,16 @@
     "hasAccount": "Already have an account?",
     "carousel": {
       "stepOne": {
-        "header": "Welcome to the litten app",
-        "footer": "A space when you can find your best friend"
+        "header": "Welcome to Litten",
+        "footer": "A place where you can find your new best friend."
       },
       "stepTwo": {
-        "header": "Find and adopt an animal",
-        "footer": "For adoption, mating, add pet at any moment"
+        "header": "Find the right match for you",
+        "footer": "Find a pet to grow your family or theirs!"
       },
       "stepThree": {
-        "header": "Choose an animal to mate",
-        "footer": "Find your pet, to grow your family."
+        "header": "Help them get back home",
+        "footer": "Post your missing pet or one that you've found."
       }
     },
     "screens": {

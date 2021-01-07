@@ -4,16 +4,16 @@
     "hasAccount": "Já tens uma conta?",
     "carousel": {
       "stepOne": {
-        "header": "Bem-vindo à app litten",
-        "footer": "Um lugar para encontrares o teu melhor amigo."
+        "header": "Bem-vindx à Litten",
+        "footer": "Um lugar para encontrares o teu novo melhor amigo."
       },
       "stepTwo": {
-        "header": "Encontra e adopta um animal",
-        "footer": "Para adoção, acasalamento, um animal em cada momento."
+        "header": "Encontra o teu par ideal",
+        "footer": "Para aumentares a tua família ou a deles!"
       },
       "stepThree": {
-        "header": "Um animal para acasalar",
-        "footer": "Encontra o teu animal, cresce a tua família."
+        "header": "Ajuda-os a regressar a casa",
+        "footer": "Para o teu animal perdido ou um que encontraste."
       }
     },
     "screens": {
