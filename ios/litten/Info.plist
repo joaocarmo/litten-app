@@ -59,13 +59,15 @@
 		</dict>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>$(PRODUCT_NAME) would like to use your camera to capture your profile picture and photos for yours posts</string>
+	<string>$(PRODUCT_NAME) would like to use your camera to capture your profile picture and photos of your littens</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>$(PRODUCT_NAME) would like to use your location to filter littens by distance as well as determine your littens' location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>$(PRODUCT_NAME) would like to use your location to filter posts by distance as well as setup your posts' location</string>
+	<string>$(PRODUCT_NAME) would like to use your location to filter littens by distance as well as determine your littens' location</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>$(PRODUCT_NAME) would like to use your photo gallery in case you want to save the photos your capture within the app</string>
+	<string>$(PRODUCT_NAME) would like to use your photo gallery in case you want to save the photos you capture while using the app</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>$(PRODUCT_NAME) would like access to your photo gallery to select your profile picture and submit photos for your posts</string>
+	<string>$(PRODUCT_NAME) would like access to your photo gallery to select your profile picture and select photos of your littens</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
