@@ -1,5 +1,8 @@
+const mockRNCNetInfo = '@react-native-community/netinfo/jest/netinfo-mock.js'
 require('react-native-gesture-handler/jestSetup')
 require('jest-fetch-mock').enableMocks()
+
+jest.mock('@react-native-community/netinfo', () => mockRNCNetInfo)
 
 jest.mock('react-native-reanimated', () => {
   const Reanimated = require('react-native-reanimated/mock')

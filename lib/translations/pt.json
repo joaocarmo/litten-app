@@ -186,16 +186,17 @@
     },
     "dev": {
       "aboutEnvironment": "Ambiente da build",
-      "aboutOS": "SO",
       "aboutOSVersion": "Versão do SO",
       "abruptChaos": "Provocar erro",
       "abruptChaosJS": "JavaScript",
       "abruptChaosNative": "Native",
       "abruptChaosReact": "React",
       "clearAsyncStorage": "Limpar AsyncStorage",
-      "hacks": "Hacks",
-      "hacksIntro": "Esta é uma secção dedicada apenas para desenvolvedores",
-      "storybookIntro": "Podes navegar pelos elementos visuais do Litten aqui"
+      "firestoreNetwork": "Rede Firestore",
+      "hacks": "Desenvolvimento",
+      "network": "Rede",
+      "storybookIntro": "Podes navegar pelos elementos visuais do Litten aqui",
+      "toggleFirebaseNetwork": "Alternar Firebase Network"
     }
   },
   "forms": {
@@ -333,6 +334,7 @@
     }
   },
   "cta": {
+    "active": "Activo",
     "agree": "Concordo",
     "all": "Todos",
     "cancel": "Cancelar",
@@ -357,6 +359,7 @@
     "forgotPassword": "Esqueceste a senha?",
     "fromLibrary": "Escolher",
     "getStarted": "Iniciar",
+    "inactive": "Inactive",
     "no": "Não",
     "openCamera": "Abrir câmera",
     "password": "Senha",

@@ -186,16 +186,17 @@
     },
     "dev": {
       "aboutEnvironment": "Build environment",
-      "aboutOS": "OS",
       "aboutOSVersion": "OS Version",
       "abruptChaos": "Crash the app",
       "abruptChaosJS": "JavaScript",
       "abruptChaosNative": "Native",
       "abruptChaosReact": "React",
       "clearAsyncStorage": "Clear AsyncStorage",
-      "hacks": "Hacks",
-      "hacksIntro": "This is a developer-only screen with useful hacks",
-      "storybookIntro": "You can browse through Litten's UI Elements in this screen"
+      "firestoreNetwork": "Firestore Network",
+      "hacks": "Developer",
+      "network": "Network",
+      "storybookIntro": "You can browse through Litten's UI Elements in this screen",
+      "toggleFirebaseNetwork": "Toggle Firebase Network"
     }
   },
   "forms": {
@@ -333,6 +334,7 @@
     }
   },
   "cta": {
+    "active": "Active",
     "agree": "Agree",
     "all": "All",
     "cancel": "Cancel",
@@ -357,6 +359,7 @@
     "forgotPassword": "Forgot password?",
     "fromLibrary": "From library",
     "getStarted": "Get started",
+    "inactive": "Inactive",
     "no": "No",
     "openCamera": "Open camera",
     "password": "Password",
