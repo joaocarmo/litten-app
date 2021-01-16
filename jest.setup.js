@@ -4,6 +4,10 @@ require('jest-fetch-mock').enableMocks()
 
 jest.mock('@react-native-community/netinfo', () => mockRNCNetInfo)
 
+jest.mock('react-native-simple-toast', () => ({
+  SHORT: jest.fn(),
+}))
+
 jest.mock('react-native-reanimated', () => {
   const Reanimated = require('react-native-reanimated/mock')
 
