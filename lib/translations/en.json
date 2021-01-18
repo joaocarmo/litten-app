@@ -196,7 +196,8 @@
       "hacks": "Developer",
       "network": "Network",
       "storybookIntro": "You can browse through Litten's UI Elements in this screen",
-      "toggleFirebaseNetwork": "Toggle Firebase Network"
+      "toggleFirebaseNetwork": "Toggle Firebase Network",
+      "triggerLocalNotification": "Local Push Notification"
     }
   },
   "forms": {
@@ -389,6 +390,8 @@
     }
   },
   "easterEggs": {
+    "obiWan": "Obi-Wan Kenobi",
+    "obiWanHello": "Hello there !",
     "placeholder": "If you're seeing this, you are a very special person. This is a development placeholder and should have been removed from the final build.",
     "simulation": "We're inside a huge simulation chamber on an alien spaceship.",
     "tribute": "This is not The Greatest Post in the World, no. This is just a preview."

@@ -196,7 +196,8 @@
       "hacks": "Desenvolvimento",
       "network": "Rede",
       "storybookIntro": "Podes navegar pelos elementos visuais do Litten aqui",
-      "toggleFirebaseNetwork": "Alternar Firebase Network"
+      "toggleFirebaseNetwork": "Alternar Firebase Network",
+      "triggerLocalNotification": "Notificação Push Local"
     }
   },
   "forms": {
@@ -389,6 +390,8 @@
     }
   },
   "easterEggs": {
+    "obiWan": "Obi-Wan Kenobi",
+    "obiWanHello": "Hello there !",
     "placeholder": "Há dias de manhã em que, um homem à tarde, não deveria sair à noite.",
     "simulation": "Estamos dentro de uma enorme câmara de simulação numa nave alienígena.",
     "tribute": "Esta não é a melhor publicação do mundo, não. É apenas uma pré-visualização."
