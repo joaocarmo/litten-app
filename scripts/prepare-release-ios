@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+PlistBuddy=/usr/libexec/PlistBuddy
+InfoPList=ios/litten/Info.plist
+
+function edit_info_plist {
+  /bin/sh -c "$PlistBuddy -c \"$*\" $InfoPList"
+}
+
+if [ ! -x $PlistBuddy ]; then
+  >&2 echo "ERROR: PlistBuddy not available"
+  exit 1;
+fi
+
+if [ ! -f $InfoPList ]; then
+  >&2 echo "ERROR: Info.plist not available"
+  exit 1;
+fi
+
+# Re-enable ATS prior to building the app
+edit_info_plist Set NSAppTransportSecurity:NSAllowsArbitraryLoads true
+# edit_info_plist Delete NSAppTransportSecurity:NSExceptionDomains:0
