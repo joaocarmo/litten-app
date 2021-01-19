@@ -34,7 +34,7 @@
   },
   "screens": {
     "searches": {
-      "emptyText": "Try to start a new search, you never know where it will lead",
+      "emptyText": "Try a new search, you never know where it will lead",
       "emptyTitle": "Are you feeling lost?",
       "filterLocationRadius": "Location",
       "filterLocationRadiusValue": "Find littens within {{value}} {{unit}} of me",
@@ -52,7 +52,7 @@
       "searchHistoryTitle": "Your search history",
       "searchHistoryTitleClear": "Clear search history",
       "selectUserType": "User Type",
-      "selectUserTypeDesc": "You can use this to filter by the type of user, either private individuals or organization"
+      "selectUserTypeDesc": "You can use this to filter by the type of user, either private individuals or organizations"
     },
     "favourites": {
       "emptyFiltersText": "Save a frequent filter criteria and they will show up in here",
@@ -90,11 +90,11 @@
     "littenPost": {
       "cantOpenURL": "It seems your device is unable to handle this action",
       "contactOptionsHeader": "Contact {{name}}",
-      "emptyContactOptions": "It appears {{name}} has no contact options available at this moment. Why don't you add this litten to your favourites and check back later?",
+      "emptyContactOptions": "It appears {{name}} has no contact options available at this moment. Why not add this litten to your favourites and check back later?",
       "emptyStory": "Once upon a time...",
       "preview": "PREVIEW",
-      "selfContactOptions": "This is your own litten! You can perform edits in your profile and settings tab.",
-      "share": "I think you might be interested in {{name}} ! Why don't you check it out on Litten ? {{uri}}",
+      "selfContactOptions": "This is your litten! You can perform edits in your profile and settings tab.",
+      "share": "I think you might be interested in {{name}} ! Why don't you check them out on Litten ? {{uri}} ",
       "shareTitle": "Check out this Litten",
       "story": "Story"
     },
@@ -120,7 +120,7 @@
     "profile": {
       "about": "About",
       "aboutAuthors": "Team",
-      "aboutBetaRelease": "Please note that this is a beta version of the app which is still undergoing final testing before its official release. The app, its software and all content found on it are provided on an \"as is\" and \"as available\" basis. The team does not give any warranties, whether express or implied, as to the suitability or usability of the app, its software or any of its content. The team will not be liable for any loss, whether such loss is direct, indirect, special or consequential, suffered by any party as a result of their use of the app, its software or content. Any downloading or uploading of material to the app is done at the user’s own risk and the user will be solely responsible for any damage to any computer system or loss of data that results from such activities. Should you encounter any bugs, glitches, lack of functionality or other problems on the app, please let us know immediately so we can rectify these accordingly. Your help in this regard is greatly appreciated.",
+      "aboutBetaRelease": "Please note that this is a beta version of the app which is still undergoing final testing before its official release. The app, its software and all content found on it are provided on an \"as is\" and \"as available\" basis. The team does not give any warranties, whether express or implied, as to the suitability or usability of the app, its software or any of its content. The team will not be liable for any loss, whether such loss is direct, indirect, special or consequential, suffered by any party as a result of their use of the app, its software or content. Any downloading or uploading of material to the app is done at the user's own risk and the user will be solely responsible for any damage to any computer system or loss of data that results from such activities. Should you encounter any bugs, glitches, lack of functionality or other problems on the app, please let us know immediately so we can rectify these accordingly. Your help in this regard is greatly appreciated.",
       "aboutBetaReleaseTitle": "Disclaimer",
       "aboutBuildTime": "Build",
       "aboutLicense": "License",
@@ -179,7 +179,7 @@
       "title": "Select location"
     },
     "maintenance": {
-      "crashDescription": "Litten encountered an unexpected error. If you've enabled Sharing Litten Analytics, we have received this report automatically. In the meanwhile, try restarting the app.",
+      "crashDescription": "Litten encountered an unexpected error. If you've enabled Sharing Litten Analytics, we have received this report automatically. In the meantime, try restarting the app.",
       "crashTitle": "Unexpected error",
       "description": "We're sorry about this inconvenience, but the app is currently under maintenance.",
       "title": "Under maintenance"
@@ -196,8 +196,7 @@
       "hacks": "Developer",
       "network": "Network",
       "storybookIntro": "You can browse through Litten's UI Elements in this screen",
-      "toggleFirebaseNetwork": "Toggle Firebase Network",
-      "triggerLocalNotification": "Local Push Notification"
+      "toggleFirebaseNetwork": "Toggle Firebase Network"
     }
   },
   "forms": {
@@ -222,7 +221,7 @@
     "registrationSuccess": "Registration successful",
     "registrationTermsAndConditionsMessage": "By proceeding to create an account and use Litten, you are agreeing to our Terms and Conditions and Privacy Policy.",
     "registrationTermsAndConditionsTitle": "Terms and Conditions",
-    "reportDisclaimer": "The information you submit is completely anonymous. If you expect a response, please use another way to contact us.",
+    "reportDisclaimer": "The information you submit is completely anonymous. If you would like a response, please use another way to contact us.",
     "reportErrorMessage": "Do you want to report this error?",
     "reportErrorMessageDone": "Thank you for your feedback!",
     "reportErrorMessageFail": "Couldn't submit your feedback, please try again later",
@@ -245,7 +244,7 @@
     "errorMessages": {
       "blankCountry": "Country can't be blank",
       "blankEmail": "Email can't be blank",
-      "blankMessage": "Please, write a meaningful message",
+      "blankMessage": "Please write a meaningful message",
       "blankName": "Name can't be blank",
       "blankPassword": "Password can't be blank",
       "blankPhoneNumber": "Phone number can't be blank",
@@ -253,25 +252,25 @@
       "checkConnectionTitle": "Check your connectivity",
       "invalidEmail": "Email should be in a valid format",
       "invalidLittenLocation": "It would really help to know where your litten is!",
-      "invalidLittenPhoto": "Consider adding, at least, one photo.",
-      "invalidLittenSpecies": "Tell us what species is your litten!",
+      "invalidLittenPhoto": "Consider adding at least one photo.",
+      "invalidLittenSpecies": "Tell us what species your litten is!",
       "invalidLittenStory": "Why not tell us a bit more about your litten?",
       "invalidLittenTitle": "Your litten must have a name, no?",
       "invalidLittenType": "Tell us why you're creating a new litten.",
       "invalidLocation": "The provided location is invalid, try choosing a different one.",
-      "invalidPassword": "Password should have, at least, 10 characters",
+      "invalidPassword": "Password should have at least 10 characters",
       "invalidPhoneNumber": "Phone number should be in a valid format",
       "invalidPhoto": "Select a valid photo",
       "littenPostMissing": "It seems there is a problem with this litten!",
       "networkProblem": "There is a network problem",
       "newErrorTitle": "Error creating",
-      "newUnverifiefEmail": "You need to verify your email address before you can create a new litten! This can be done in your profile definitions.",
+      "newUnverifiefEmail": "You need to verify your email address before you can create a new litten! This can be done in your profile settings. You can click this message to go there now.",
       "noPhoneNumberDesc": "You haven't specified a phone number yet, but you can do so in your profile.",
       "noPhoneNumberTitle": "No Phone Number",
       "notImplemented": "That feature isn't active yet",
       "profileUnverifiefEmail": "Your email has not been verified. Click here to resend a confirmation email.",
       "profileUnverifiefEmailError": "Could not verify your email at this time.",
-      "profileUnverifiefEmailSent": "A confirmation email has been sent to the provided email. Please, check both your inbox and spam folders.",
+      "profileUnverifiefEmailSent": "A confirmation email has been sent to the provided email. Please check both your inbox and spam folders.",
       "unmatchedPassword": "The passwords don't match"
     },
     "system": {
