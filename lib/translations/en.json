@@ -196,7 +196,8 @@
       "hacks": "Developer",
       "network": "Network",
       "storybookIntro": "You can browse through Litten's UI Elements in this screen",
-      "toggleFirebaseNetwork": "Toggle Firebase Network"
+      "toggleFirebaseNetwork": "Toggle Firebase Network",
+      "triggerLocalNotification": "Trigger Local Notification"
     }
   },
   "forms": {
