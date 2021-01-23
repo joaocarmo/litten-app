@@ -43,6 +43,8 @@
     "build:android:aab-to-apk": "bundletool build-apks --bundle=android/app/build/outputs/bundle/release/app-release.aab --output=dist/litten.apks --ks=android/app/litten.keystore --ks-key-alias=litten-android --ks-pass=pass:$KEYSTORE_PWD --key-pass=pass:$KEYSTORE_PWD",
     "build:android:test": "react-native run-android --variant=release",
     "build:android": "cd android && ./gradlew clean bundleRelease assembleRelease; cd -",
+    "bundle:android": "react-native bundle --dev false --platform android --entry-file index.android.js --bundle-output index.android.bundle --sourcemap-output dist/index.android.bundle.map",
+    "bundle:ios": "react-native bundle --dev false --platform ios --entry-file index.ios.js --bundle-output index.ios.bundle --sourcemap-output dist/index.ios.bundle.map",
     "clear-cache:all": "watchman watch-del-all && rm -rf node_modules/ && yarn install && rm -rf /tmp/metro-* && yarn start --reset-cache",
     "clear-cache:babel": "rm -rf node_modules/.cache/babel-loader/*",
     "clear-cache:xcode": "rm -rf ios/litten.xcworkspace/xcshareddata/ ios/litten.xcworkspace/xcuserdata/",
@@ -77,7 +79,7 @@
     "test:firestore:rules": "firebase emulators:exec './scripts/firestore-rules-test.js'",
     "test": "jest --selectProjects default --forceExit",
     "translations-check": "./scripts/validate-translations",
-    "type-check": "yarn flow"
+    "type-check": "yarn flow || true"
   },
   "husky": {
     "hooks": {
