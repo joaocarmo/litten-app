@@ -70,6 +70,9 @@ secure.properties
 # Flow typed
 flow-typed/npm/
 !flow-typed/npm/dayjs_v1.x.x.js
+!flow-typed/npm/@react-navigation/bottom-tabs_v5.x.x.js
+!flow-typed/npm/@react-navigation/native_v5.x.x.js
+!flow-typed/npm/@react-navigation/stack_v5.x.x.js
 
 # Firebase persistence
 firebase/
