@@ -79,7 +79,7 @@
     "test:firestore:rules": "firebase emulators:exec './scripts/firestore-rules-test.js'",
     "test": "jest --selectProjects default --forceExit",
     "translations-check": "./scripts/validate-translations",
-    "type-check": "yarn flow || true"
+    "type-check": "yarn flow"
   },
   "husky": {
     "hooks": {
@@ -114,6 +114,7 @@
     "md5-hex": "^3.0.1",
     "react": "^17.0.1",
     "react-native": "0.63.4",
+    "react-native-background-fetch": "^3.1.0",
     "react-native-device-info": "^8.0.1",
     "react-native-dialog": "^6.1.2",
     "react-native-expo-viewport-units": "^0.0.8",

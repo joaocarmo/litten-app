@@ -20,6 +20,7 @@
 		52AF6BD6257D8E6C001F0EA7 /* LinkingIOS in Resources */ = {isa = PBXBuildFile; fileRef = 52AF6BD5257D8E6C001F0EA7 /* LinkingIOS */; };
 		52AF6BDC257D8F09001F0EA7 /* RCTLinkingManager.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 52AF6BDB257D8F09001F0EA7 /* RCTLinkingManager.h */; };
 		52CB39FF2576663C0086A303 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52CB39FE2576663C0086A303 /* GoogleService-Info.plist */; };
+		52FCE32A25BCEC7300CAD0F7 /* RNBackgroundFetch+AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE32925BCEC7300CAD0F7 /* RNBackgroundFetch+AppDelegate.m */; };
 		69AF7E46C79455F135C08478 /* libPods-litten-littenTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7533C965B72700ED5E109803 /* libPods-litten-littenTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		52AF6BD5257D8E6C001F0EA7 /* LinkingIOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LinkingIOS; path = "../node_modules/react-native/Libraries/LinkingIOS"; sourceTree = "<group>"; };
 		52AF6BDB257D8F09001F0EA7 /* RCTLinkingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTLinkingManager.h; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinkingManager.h"; sourceTree = "<group>"; };
 		52CB39FE2576663C0086A303 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		52FCE32925BCEC7300CAD0F7 /* RNBackgroundFetch+AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RNBackgroundFetch+AppDelegate.m"; path = "../node_modules/react-native-background-fetch/ios/RNBackgroundFetch/RNBackgroundFetch+AppDelegate.m"; sourceTree = "<group>"; };
 		6F6A20A3A2D31400635C17C3 /* libPods-litten-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-litten-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7533C965B72700ED5E109803 /* libPods-litten-littenTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-litten-littenTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = litten/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		13B07FAE1A68108700A75B9A /* litten */ = {
 			isa = PBXGroup;
 			children = (
+				52FCE32925BCEC7300CAD0F7 /* RNBackgroundFetch+AppDelegate.m */,
 				5285F679257FBD6900283F21 /* litten.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -600,6 +603,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FCE32A25BCEC7300CAD0F7 /* RNBackgroundFetch+AppDelegate.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
