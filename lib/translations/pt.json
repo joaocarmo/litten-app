@@ -34,7 +34,7 @@
   },
   "screens": {
     "searches": {
-      "emptyText": "Experimenta uma nova procura, nunca sabes onde irá dar",
+      "emptyText": "Experimenta uma nova procura! Nunca sabes onde irá dar. ",
       "emptyTitle": "Não sabes onde começar?",
       "filterLocationRadius": "Localização",
       "filterLocationRadiusValue": "Encontrar littens até {{value}} {{unit}} de mim",
@@ -55,7 +55,7 @@
       "selectUserTypeDesc": "Podes utilizar esta opção para filtrar pelo tipo de perfil, sejam indivíduos privados ou organizações"
     },
     "favourites": {
-      "emptyFiltersText": "Guarda os teus filtros frequentes e eles vão aparecer aqui",
+      "emptyFiltersText": "Guarda os teus filtros frequentes que eles aparecerão aqui",
       "emptyFiltersTitle": "Procuras algo muito específico?",
       "emptyPostsText": "Quando gostas de uma publicação, ela aparece aqui para dares seguimento",
       "emptyPostsTitle": "Começa a aproximar-te do teu animal",
@@ -88,9 +88,9 @@
       "useProfileLocation": "Usar localização do perfil"
     },
     "littenPost": {
-      "cantOpenURL": "Parece que o teu dispositivo não suporta esta acção",
+      "cantOpenURL": "Parece que o teu dispositivo não suporta esta ação",
       "contactOptionsHeader": "Contactar {{name}}",
-      "emptyContactOptions": "Parece que {{name}} não tem opções de contact disponíveis de moment. Porque não adicionas este litten aos teus favoritos e voltas a verificar mais tarde?",
+      "emptyContactOptions": "Parece que {{name}} não tem opções de contacto disponíveis de momento. Porque não adicionas este litten aos teus favoritos e voltas a verificar mais tarde?",
       "emptyStory": "Era uma vez...",
       "preview": "PRÉ-VISUALIZAÇÃO",
       "selfContactOptions": "Este litten é teu! Podes fazer alterações no ecrã do teu perfil e definições.",
@@ -103,7 +103,7 @@
       "emptyChatTitle2": " {{name}} ",
       "emptyChatTitle3": "?",
       "emptyChatTitle4": "Estes são os primeiros passos...",
-      "emptyText": "Inicia conversas e elas vão aparecer aqui",
+      "emptyText": "Inicia conversas que elas aparecerão qui",
       "emptyTitle": "Estás com vergonha?",
       "inputPlaceholder": "Escreve uma mensagem...",
       "littenRemoved": "Litten removido",
@@ -120,7 +120,7 @@
     "profile": {
       "about": "Sobre",
       "aboutAuthors": "Equipa",
-      "aboutBetaRelease": "Tem em atenção que esta é uma versão beta da app que ainda está em fase de teste antes de seu lançamento oficial. A app, o seu software e todo o conteúdo encontrado nela são fornecidos \"como estão\" e \"conforme disponível\". A equipa não dá nenhuma garantia, expressa ou implícita, quanto à adequação ou usabilidade da app, o seu software ou qualquer seu conteúdo. A equipa não será responsável por qualquer perda, seja direta, indireta, especial ou consequente, sofrida por qualquer parte como resultado do uso da app, do seu software ou conteúdo. Qualquer download ou upload de material para a app é feito por conta e risco do usuário e o usuário será o único responsável por qualquer dano a qualquer sistema de computador ou perda de dados que resulte de tais atividades. Se encontrares quaisquer bugs, falhas, falta de funcionalidade ou outros problemas na app, informa-nos imediatamente para que possamos corrigi-los. A tua ajuda a este respeito é muito apreciada.",
+      "aboutBetaRelease": "Tem em atenção que esta é uma versão beta da app que ainda está em fase de teste antes do seu lançamento oficial. A app, o seu software, e todo o conteúdo encontrado nela são fornecidos \"como estão\" e \"conforme disponível\". A equipa não dá nenhuma garantia, expressa ou implícita, quanto à adequação ou usabilidade da app, o seu software, ou qualquer do seu conteúdo. A equipa não será responsável por qualquer perda, seja direta, indireta, especial ou consequente, sofrida por qualquer parte como resultado do uso da app, do seu software ou conteúdo. Qualquer download ou upload de material para a app é feito por conta e risco do usuário, e o mesmo será o único responsável por qualquer dano a qualquer sistema de computador ou perda de dados que resulte de tais atividades. Se encontrares quaisquer bugs, falhas, falta de funcionalidade ou outros problemas na app, informa-nos imediatamente para que possamos corrigi-los. A tua ajuda a este respeito é muito apreciada.",
       "aboutBetaReleaseTitle": "Aviso legal",
       "aboutBuildTime": "Construção",
       "aboutLicense": "Licença",
@@ -136,20 +136,20 @@
       "newPost": "Novo litten",
       "pastPosts": "Littens arquivados",
       "postsDelete": "Apagar",
-      "postsEmptyText": "Quando {{createOrArchive}} littens, eles vão aparecer aqui",
+      "postsEmptyText": "Quando {{createOrArchive}} littens, eles aparecerão aqui",
       "postsEmptyTextArchive": "arquivares",
       "postsEmptyTextCreate": "criares",
       "postsEmptyTitle": "Não há littens {{activeOrArchived}}",
-      "postsEmptyTitleActive": "activos",
+      "postsEmptyTitleActive": "ativos",
       "postsEmptyTitleArchived": "arquivados",
-      "postsMarkActive": "Marcar Como Activo",
+      "postsMarkActive": "Marcar Como Ativo",
       "postsMarkInactive": "Arquivar",
       "privacyPolicy": "Política de privacidade",
       "secondHeader": "As tuas definições",
       "settings": "Opções",
       "termsAndConditions": "Termos e condições",
       "view": "Perfil",
-      "viewEmptyUserPosts": "Este utilizador não tem littens activos, de momento.",
+      "viewEmptyUserPosts": "Este utilizador não tem littens activos de momento.",
       "viewMemberSince": "Registado {{memberSince}}",
       "viewPostsByUser": "Littens",
       "viewUserTypeIndividual": "Individual",
@@ -158,7 +158,7 @@
     "edit": {
       "delete": "APAGAR PERFIL",
       "isOrganization": "Perfil organizacional",
-      "isOrganizationDesc": "Activa esta opção se estas a utilizar em nome de uma organização. O perfil será marcado como tal e os outros utilizadores saberão."
+      "isOrganizationDesc": "Ativa esta opção se estás a utilizar a app em nome de uma organização. O perfil será marcado como tal e os outros utilizadores saberão."
     },
     "settings": {
       "contactCall": "Chamada Telefónica",
@@ -172,14 +172,14 @@
       "contactSMSDesc": "O teu número de telemóvel será partilhado com quem estiver interessado no teu litten",
       "miscOptions": "Outros",
       "shareMetrics": "Partilhar Estatísticas",
-      "shareMetricsDesc": "As estatísticas são dados anónimos e permitem-nos receber relatórios de erros automaticamente que usamos para melhorar a tua experiência.",
+      "shareMetricsDesc": "As estatísticas são dados anónimos que nos permitem receber relatórios de erros automaticamente e usá-los para melhorar a tua experiência.",
       "useMetricUnits": "Utilizar Sistema Métrico"
     },
     "selectLocation": {
       "title": "Escolher localização"
     },
     "maintenance": {
-      "crashDescription": "A Litten encontrou um erro inesperado. Se activaste Partilhar Estatísticas, recebemos o relatório automaticamente. Entretanto, experimenta reiniciar a app.",
+      "crashDescription": "A Litten encontrou um erro inesperado. Se ativaste Partilhar Estatísticas, recebemos o relatório automaticamente. Entretanto, experimenta reiniciar a app.",
       "crashTitle": "Erro inesperado",
       "description": "Pedimos desculpa pelo incómodo, mas a app está em manutenção.",
       "title": "Em manutenção"
@@ -211,7 +211,7 @@
     "email": "Email",
     "fromLibrary": "Do arquivo",
     "location": "Localização",
-    "mapInstructions": "Para alterar a localização no mapa, clica e arrasca o marcador para a posição desejada.",
+    "mapInstructions": "Para alterar a localização no mapa, clica e arrasta o marcador para a posição desejada.",
     "name": "Nome",
     "newPassword": "Cria a tua senha",
     "password": "Senha",
@@ -222,10 +222,10 @@
     "registrationSuccess": "Registo concluído",
     "registrationTermsAndConditionsMessage": "Ao criares uma conta para usar a Litten, estás a concordar com os nossos Termos e Condições e Política de Privacidade.",
     "registrationTermsAndConditionsTitle": "Termos e Condições",
-    "reportDisclaimer": "A informação que enviares é completamente anónima. Se esperas uma resposta, o melhor será contactar-nos de outra maneira.",
+    "reportDisclaimer": "A informação que enviares é completamente anónima. Se esperas uma resposta, o melhor será contactar-nos de outra forma. ",
     "reportErrorMessage": "Queres enviar o relatório deste erro?",
     "reportErrorMessageDone": "Obrigado pelo teu contributo!",
-    "reportErrorMessageFail": "Não foi possível enviar o teu contributo, por favor, tenta mais tarde",
+    "reportErrorMessageFail": "Não foi possível enviar o teu contributo. Por favor, tenta mais tarde.",
     "reportErrorTitle": "Reportar erro",
     "reportHasExtraInfo": "Este relatório inclui informações sobre a tua conversa."
   },
@@ -236,46 +236,46 @@
       "confirmationEmail": "Tens a certeza que queres confirmar o teu email?",
       "deleteConversation": "Tens a certeza que queres apagar a conversa com {{user}}?",
       "deleteLitten": "Tens a certeza que queres apagar o litten {{title}}?",
-      "deleteProfile": "Todos os teus littens serão apagados e esta acção é irreversível. Queres mesmo eliminar o perfil?",
+      "deleteProfile": "Todos os teus littens serão apagados e esta ação é irreversível. Queres mesmo eliminar o perfil?",
       "enterFilterName": "Escolhe um nome para identificar este conjunto",
       "enterPassword": "A tua senha é necessária para esta operação",
       "resetFilters": "Tens a certeza que queres repor os filtros?",
       "signOut": "Tens a certeza que queres sair da app?"
     },
     "errorMessages": {
-      "blankCountry": "O país não pode ser vazio",
-      "blankEmail": "O email não pode ser vazio",
+      "blankCountry": "O país não pode estar vazio",
+      "blankEmail": "O email não pode estar vazio",
       "blankMessage": "Por favor, escreve uma mensagem relevante",
-      "blankName": "O nome não pode ser vazio",
-      "blankPassword": "A senha não pode ser vazia",
-      "blankPhoneNumber": "O telemóvel não pode ser vazio",
-      "checkConnectionText": "Parece que não tens uma ligação activa à internet.",
+      "blankName": "O nome não pode estar vazio",
+      "blankPassword": "A senha não pode estar vazia",
+      "blankPhoneNumber": "O telemóvel não pode estar vazio",
+      "checkConnectionText": "Parece que não tens uma ligação ativa à internet.",
       "checkConnectionTitle": "Verifica a tua conectividade",
       "invalidEmail": "O email deve ser válido",
-      "invalidLittenLocation": "Seria de grande ajuda saber onde se encontra o teu litten!",
+      "invalidLittenLocation": "Seria uma grande ajuda saber onde se encontra o teu litten!",
       "invalidLittenPhoto": "Considera adicionar, pelo menos, uma fotografia.",
       "invalidLittenSpecies": "Diz-nos a espécie do teu litten!",
       "invalidLittenStory": "Porque não nos contas um pouco mais sobre o teu litten?",
       "invalidLittenTitle": "O teu litten deve ter um nome, não?",
       "invalidLittenType": "Diz-nos porque estás a criar um novo litten.",
-      "invalidLocation": "A localização escolhida é inválida, tenta escolher outra.",
+      "invalidLocation": "A localização escolhida é inválida. Tenta escolher outra.",
       "invalidPassword": "A senha deve ter, pelo menos, 10 caracteres",
       "invalidPhoneNumber": "O telemóvel deve ser válido",
       "invalidPhoto": "Escolhe uma fotografia válida",
       "littenPostMissing": "Parece que há um problema com este litten!",
       "networkProblem": "Existe um problema de ligação",
       "newErrorTitle": "Erro ao criar",
-      "newUnverifiefEmail": "Precisas de verificar o teu endereço de email antes de criar um novo litten! Isto por ser feito nas tuas definições de perfil. Clica nesta mensagem para ir lá agora.",
+      "newUnverifiefEmail": "Precisas de verificar o teu endereço de email antes de criar um novo litten! Isto pode ser feito nas tuas definições de perfil.",
       "noPhoneNumberDesc": "Ainda não introduziste um número de telemóvel, mas podes fazê-lo no teu perfil",
       "noPhoneNumberTitle": "Sem telemóvel",
       "notImplemented": "Essa funcionalidade está inactiva",
       "profileUnverifiefEmail": "O teu email não foi confirmado. Clica aqui para enviar um novo email de confirmação.",
       "profileUnverifiefEmailError": "De momento, não foi possível confirmar o teu email.",
       "profileUnverifiefEmailSent": "Um email de confirmação foi enviado para o email fornecido. Por favor, verifica ambas as caixas de entrada e spam.",
-      "unmatchedPassword": "As senhas não condizem"
+      "unmatchedPassword": "As senhas não coincidem "
     },
     "system": {
-      "allowLocation": "Activa os Serviços de localização para permitir que {{appName}} determine a tua localização",
+      "allowLocation": "Ativa os Serviços de localização para permitir que {{appName}} determine a tua localização",
       "cantOpenSettings": "Não foi possível abrir as Definições",
       "dontUseLocation": "Não utilizar a localização",
       "goToSettings": "Ir a Definições",
@@ -289,7 +289,7 @@
       "auth/invalid-email": "O email fornecido é inválido",
       "auth/invalid-password": "A senha fornecida é inválida",
       "auth/network-request-failed": "Existe um problema de ligação",
-      "auth/too-many-requests": "O acesso a esta conta foi temporariamente bloqueado devido ao número de tentativas falhadas. Podes restaurar imediatamente ao criar uma nova senha ou tentar mais tarde.",
+      "auth/too-many-requests": "O acesso a esta conta foi temporariamente bloqueado devido ao número de tentativas falhadas. Podes restaurar imediatamente o acesso ao criar uma nova senha ou tentar mais tarde.",
       "auth/user-not-found": "Não existe o utilizador especificado",
       "auth/wrong-password": "A senha fornecida está incorrecta"
     }
@@ -328,14 +328,14 @@
       }
     },
     "type": {
-      "adopt": "Adoptar",
+      "adopt": "Adotar",
       "breed": "Acasalar",
       "lost": "Perdido",
       "found": "Encontrado"
     }
   },
   "cta": {
-    "active": "Activo",
+    "active": "Ativo",
     "agree": "Concordo",
     "all": "Todos",
     "cancel": "Cancelar",
@@ -366,7 +366,7 @@
     "password": "Senha",
     "read": "Ler agora",
     "recoverPassword": "Recuperar",
-    "refresh": "Actualizar",
+    "refresh": "Atualizar",
     "removePhoto": "Remover",
     "report": "Reportar",
     "resetFilters": "Repor filtros",
@@ -392,7 +392,7 @@
   "easterEggs": {
     "obiWan": "Obi-Wan Kenobi",
     "obiWanHello": "Hello there !",
-    "placeholder": "Há dias de manhã em que, um homem à tarde, não deveria sair à noite.",
+    "placeholder": "Há dias de manhã em que um homem à tarde não deveria sair à noite.",
     "simulation": "Estamos dentro de uma enorme câmara de simulação numa nave alienígena.",
     "tribute": "Esta não é a melhor publicação do mundo, não. É apenas uma pré-visualização."
   }
