@@ -45,7 +45,7 @@
       "filterType": "Tipo de litten",
       "filterUserType": "Utilizador",
       "headerSearchPlaceholder": "Procurar",
-      "noActiveFiltersToSave": "Não tens filtros activos para guardar",
+      "noActiveFiltersToSave": "Não tens filtros ativos para guardar",
       "noFilterLocationRadiusValue": "Não excluir littens com base na distância",
       "saveFilters": "Guardar este conjunto",
       "searchEverywhere": "Procurar em todo o lado",
@@ -272,7 +272,7 @@
       "profileUnverifiefEmail": "O teu email não foi confirmado. Clica aqui para enviar um novo email de confirmação.",
       "profileUnverifiefEmailError": "De momento, não foi possível confirmar o teu email.",
       "profileUnverifiefEmailSent": "Um email de confirmação foi enviado para o email fornecido. Por favor, verifica ambas as caixas de entrada e spam.",
-      "unmatchedPassword": "As senhas não coincidem "
+      "unmatchedPassword": "As senhas não coincidem"
     },
     "system": {
       "allowLocation": "Ativa os Serviços de localização para permitir que {{appName}} determine a tua localização",
