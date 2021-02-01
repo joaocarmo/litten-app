@@ -569,7 +569,7 @@ PODS:
     - React-cxxreact (= 0.63.4)
     - React-jsi (= 0.63.4)
   - React-jsinspector (0.63.4)
-  - react-native-geolocation-service (5.1.1):
+  - react-native-geolocation-service (5.2.0):
     - React
   - react-native-maps (0.27.1):
     - React
@@ -685,12 +685,12 @@ PODS:
     - RNFBApp
   - RNGestureHandler (1.9.0):
     - React-Core
-  - RNImageCropPicker (0.35.2):
+  - RNImageCropPicker (0.35.3):
     - React-Core
     - React-RCTImage
-    - RNImageCropPicker/QBImagePickerController (= 0.35.2)
+    - RNImageCropPicker/QBImagePickerController (= 0.35.3)
     - TOCropViewController
-  - RNImageCropPicker/QBImagePickerController (0.35.2):
+  - RNImageCropPicker/QBImagePickerController (0.35.3):
     - React-Core
     - React-RCTImage
     - TOCropViewController
@@ -982,7 +982,7 @@ SPEC CHECKSUMS:
   React-jsi: a0418934cf48f25b485631deb27c64dc40fb4c31
   React-jsiexecutor: 93bd528844ad21dc07aab1c67cb10abae6df6949
   React-jsinspector: 58aef7155bc9a9683f5b60b35eccea8722a4f53a
-  react-native-geolocation-service: f33626f1ae12381ca2ae60f98b2f5edd676bf95a
+  react-native-geolocation-service: 7c9436da6dfdecd9526c62eac62ea2bc3f0cc8ea
   react-native-maps: f4b89da81626ad7f151a8bfcb79733295d31ce5c
   react-native-netinfo: 30fb89fa913c342be82a887b56e96be6d71201dd
   react-native-safe-area-context: b6e0e284002381d2ff29fa4fff42b4d8282e3c94
@@ -1014,7 +1014,7 @@ SPEC CHECKSUMS:
   RNFBFirestore: b596de5f7cb73ec799cf0eb24db5be69540be25f
   RNFBStorage: 32d141885bc7688ec85b217f12e11dec7693eb21
   RNGestureHandler: 9b7e605a741412e20e13c512738a31bd1611759b
-  RNImageCropPicker: 9e0bf18cf4184a846fed55747c8e622208b39947
+  RNImageCropPicker: 08ba3a2e2f4f8833d606f01906c371e382c4dea9
   RNLocalize: 41026b7c14878f1a1b381bc79f668f1fbf841adb
   RNReanimated: e03f7425cb7a38dcf1b644d680d1bfc91c3337ad
   RNScreens: b6c9607e6fe47c1b6e2f1910d2acd46dd7ecea3a
