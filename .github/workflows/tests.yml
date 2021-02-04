@@ -30,12 +30,14 @@ jobs:
       run: cp .env.example .env
     - name: Install dependencies
       run: yarn --frozen-lockfile
-    # - name: Install typings
-    #   run: yarn flow-typed install
+    - name: Install typings
+      run: yarn flow-typed install
+    - name: Temporary workaround (for the @react-navigation types)
+      run: rm -rf flow-typed/npm/@react-navigation/
     - name: Lint the source files
       run: yarn lint
-    # - name: Type check
-    #   run: yarn type-check
+    - name: Type check
+      run: yarn type-check
     - name: Validate the translations
       run: yarn translations-check
     - name: Execute the tests
