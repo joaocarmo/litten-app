@@ -23,12 +23,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      with:
-        ref: ${{ github.event.inputs.tag }}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Checkout ${{ github.event.inputs.tag }}
+      if: ${{ github.event.inputs.tag != '' }}
+      run: git checkout tags/${{ github.event.inputs.tag }}
     - name: Create .env file
       run: cp .env.example .env
     - name: Install dependencies
