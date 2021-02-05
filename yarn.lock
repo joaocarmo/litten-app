@@ -1109,9 +1109,9 @@
     teeny-request "^7.0.0"
 
 "@google-cloud/firestore@^4.5.0":
-  version "4.9.1"
-  resolved "https://registry.yarnpkg.com/@google-cloud/firestore/-/firestore-4.9.1.tgz#ce56e3df9c10aaa32522efd6c871b476bc44f651"
-  integrity sha512-lmg9xXGq56uS/T2PxyYWZCJ4FeCMgWPwx5iNU/IjLvru90qXRlxVcT4pg2acxng+MC7RntnZJQaExWvJR7Jgsg==
+  version "4.9.2"
+  resolved "https://registry.yarnpkg.com/@google-cloud/firestore/-/firestore-4.9.2.tgz#733cfe15c2ef7bb188cf02931bc9b74894353ace"
+  integrity sha512-sbPs7N1iPTG1++htc3KIcGbDmQm8oVNt7DIqIjR8ozNn4KlgFEpWWPg1SoA6aGkDBKPnownSdvtI9XJH1xMANQ==
   dependencies:
     fast-deep-equal "^3.1.1"
     functional-red-black-tree "^1.0.1"
@@ -1933,35 +1933,35 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/slider/-/slider-3.0.3.tgz#830167fd757ba70ac638747ba3169b2dbae60330"
   integrity sha512-8IeHfDwJ9/CTUwFs6x90VlobV3BfuPgNLjTgC6dRZovfCWigaZwVNIFFJnHBakK3pW2xErAPwhdvNR4JeNoYbw==
 
-"@react-native-firebase/app@^10.6.1":
-  version "10.6.1"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-10.6.1.tgz#f4b71b9c23627e78e8d21dc3f897c8c98ea722e1"
-  integrity sha512-mLhDi7tGlpfX6rFydVZxVJ4c2U1hCcNWZzYcRjvZ+1Pp2f4V8tCVZxL5cuS2UvMi9NAprZNZUkhftMW1G5FWow==
+"@react-native-firebase/app@^10.6.3":
+  version "10.6.3"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-10.6.3.tgz#9f79a3ad6ab8aa7b7ac3604d70f3fc9335ecc54b"
+  integrity sha512-lSuAkdjvqJeBYkJ6idnlnsDuUYpHJTs2LiWOd7m58w+eNwn+wfkjE5UITxjNfIlnIEabWVSHOrkLBv1gPs2BXA==
   dependencies:
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
 
-"@react-native-firebase/auth@^10.6.1":
-  version "10.6.1"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/auth/-/auth-10.6.1.tgz#9215db001499c885024db88cf0cee2cdc21456f9"
-  integrity sha512-OEx6rXc/1LwDcnvP2sYpHHP27Swpus2XiHPzYr2QNWR0AFjUCNQcfC82mM+1lnwuCt/G4GyUhC/FCT0RTrdYjQ==
+"@react-native-firebase/auth@^10.6.3":
+  version "10.6.3"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/auth/-/auth-10.6.3.tgz#8fa0192868d607e734165cf559d7658e843cf251"
+  integrity sha512-HUx0n0YhWmqJwrdoH/VvN5z++JSWAZMGAU6vgdrvZI+bG7ElbCX3cQW2Q6/eTnu4UMVQqwlMBblvVMh3nFxRDA==
 
-"@react-native-firebase/crashlytics@^10.6.1":
-  version "10.6.1"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/crashlytics/-/crashlytics-10.6.1.tgz#85d9327761e53f1571b2a8408be91dccfafe1be8"
-  integrity sha512-sAqiHk9Qgw8+loVxXhoxNyFkWrxGg4hL46Fc6ER1ar5g5HJ3XHaqktXx2kry+jiuIE8vD2dmrE2DL5rZiorsJQ==
+"@react-native-firebase/crashlytics@^10.6.3":
+  version "10.6.3"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/crashlytics/-/crashlytics-10.6.3.tgz#65c1b215ef0739593508daefbe9fe50feca9ef31"
+  integrity sha512-ruqNmapHu6i/VxwpdVzn1HTb7+Wciqeuk6AydICtASC+FKVGQY9vf1CzSBSsR2D+3FvxfFccZVDY9ZV1wGZheQ==
   dependencies:
     stacktrace-js "^2.0.0"
 
-"@react-native-firebase/firestore@^10.6.1":
-  version "10.6.1"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/firestore/-/firestore-10.6.1.tgz#505a589b7291e7fa6b2835246e0b3b142208d762"
-  integrity sha512-NotESNMYl5QiaXjJxytI0Ou2r6jQ7xoU1UUKF1JJoSMvxHzYERYUPFQnyHPddy6eCz5Z5TVLjst0IEUg9PskfQ==
+"@react-native-firebase/firestore@^10.6.3":
+  version "10.6.3"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/firestore/-/firestore-10.6.3.tgz#6ec380acfb1d149f551d44a179230f040b8786a1"
+  integrity sha512-JWmhyna3jU2wYMQJTSQLaICTJnShFwB6O54Hg+CqmN2x/dtgm7HGR6OlAi3xYmbQUpZyUYGnvTRA5LHdPc30pQ==
 
-"@react-native-firebase/storage@^10.6.1":
-  version "10.6.1"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/storage/-/storage-10.6.1.tgz#2064b0ffde4ef23fc3c0f59e41911592b6ab97dd"
-  integrity sha512-KLEqJJMX132fqRnNw5ISYouqf/i7msxaOBgKYMyERTCDQeR5df9SVcTyrnZjgeNc7CWuHyHoVYjFTdTvf39+5w==
+"@react-native-firebase/storage@^10.6.3":
+  version "10.6.3"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/storage/-/storage-10.6.3.tgz#899e9b8472f08267cdae64e1eb84d27bf738168f"
+  integrity sha512-oRpaNexxk31FGsaU3K9utk9tjQD2ZDml8N2Pl4oOf4UEOZAaqRbzZT0VLsytZ5tvERMCGw2t1D6B/EQ/WpANMw==
 
 "@react-native-picker/picker@^1.9.10":
   version "1.9.10"
@@ -6413,9 +6413,9 @@ fsevents@^1.2.7:
     nan "^2.12.1"
 
 fsevents@^2.1.2, fsevents@~2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.1.tgz#b209ab14c61012636c8863507edf7fb68cc54e9f"
-  integrity sha512-YR47Eg4hChJGAB1O3yEAOkGO+rlzutoICGqGo9EZ4lKWokzZRSyIW1QmTzqjtw8MJdj9srP869CuWw/hyzSiBw==
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
+  integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
 
 fstream@^1.0.0, fstream@^1.0.12:
   version "1.0.12"

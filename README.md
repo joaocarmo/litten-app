@@ -1,6 +1,6 @@
 # Litten
 
-Litten mobile app repository using React Native
+Litten mobile app repository using React Native.
 
 ## Development Commands
 
@@ -85,10 +85,10 @@ the design are [not licensed][licenseimgs].
 
 <!-- References -->
 
+[emulator]: https://firebase.google.com/docs/emulator-suite/install_and_configure
 [env-setup]: https://reactnative.dev/docs/environment-setup
 [firebase]: https://firebase.google.com
-[setupfirebase]: https://firebase.google.com/docs/ios/setup
-[emulator]: https://firebase.google.com/docs/emulator-suite/install_and_configure
 [googleapikey]: https://developers.google.com/maps/documentation/geocoding/get-api-key
 [license]: ./LICENSE
 [licenseimgs]: ./lib/images/README.md
+[setupfirebase]: https://firebase.google.com/docs/ios/setup

@@ -24,7 +24,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        fetch-depth: 0
         ref: ${{ github.event.inputs.tag }}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
@@ -41,5 +40,5 @@ jobs:
     - name: Archive production artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: dist
+        name: dist-${{ github.event.inputs.tag }}
         path: dist
