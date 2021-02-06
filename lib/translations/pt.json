@@ -280,7 +280,8 @@
       "dontUseLocation": "Não utilizar a localização",
       "goToSettings": "Ir a Definições",
       "locationDeniedByUser": "Permissão de localização negada pelo utilizador",
-      "locationRevokedByUser": "Permissão de localização revogada pelo utilizador"
+      "locationRevokedByUser": "Permissão de localização revogada pelo utilizador",
+      "noInternetConnection": "Sem ligação à internet"
     },
     "firebaseErrorMessages": {
       "auth/email-already-exists": "O email fornecido é inválido",

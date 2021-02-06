@@ -280,7 +280,8 @@
       "dontUseLocation": "Don't Use Location",
       "goToSettings": "Go to Settings",
       "locationDeniedByUser": "Location permission denied by user",
-      "locationRevokedByUser": "Location permission revoked by user"
+      "locationRevokedByUser": "Location permission revoked by user",
+      "noInternetConnection": "No Internet Connection"
     },
     "firebaseErrorMessages": {
       "auth/email-already-exists": "The provided email is invalid",
