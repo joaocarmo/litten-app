@@ -664,22 +664,22 @@ PODS:
     - React-Core
     - SDWebImage (~> 5.8)
     - SDWebImageWebPCoder (~> 0.6.1)
-  - RNFBApp (10.6.3):
+  - RNFBApp (10.6.4):
     - Firebase/CoreOnly (~> 7.5.0)
     - React-Core
-  - RNFBAuth (10.6.3):
+  - RNFBAuth (10.6.4):
     - Firebase/Auth (~> 7.5.0)
     - React-Core
     - RNFBApp
-  - RNFBCrashlytics (10.6.3):
+  - RNFBCrashlytics (10.6.4):
     - Firebase/Crashlytics (~> 7.5.0)
     - React-Core
     - RNFBApp
-  - RNFBFirestore (10.6.3):
+  - RNFBFirestore (10.6.4):
     - Firebase/Firestore (~> 7.5.0)
     - React-Core
     - RNFBApp
-  - RNFBStorage (10.6.3):
+  - RNFBStorage (10.6.4):
     - Firebase/Storage (~> 7.5.0)
     - React-Core
     - RNFBApp
@@ -1008,11 +1008,11 @@ SPEC CHECKSUMS:
   RNCPushNotificationIOS: 61a7c72bd1ebad3568025957d001e0f0e7b32191
   RNDeviceInfo: 921a809eaf9de79645a24de1c6ca90db6cb91786
   RNFastImage: d4870d58f5936111c56218dbd7fcfc18e65b58ff
-  RNFBApp: 2ea68d6e69ba19e28061c8d1b3f3c90c989a9a50
-  RNFBAuth: 05cf1e310423c6481e4a75971a8dc0c8002d1932
-  RNFBCrashlytics: b80fe7b2b1cf7fb08505151057ba4569745c34e6
-  RNFBFirestore: 5a160223a3563103390e2d428330610e2c2f61c4
-  RNFBStorage: dcc694dddeed22e4897752ff32cf00cbd289fe30
+  RNFBApp: 6664dfccd0c93a194767e1c64af14a08074a087d
+  RNFBAuth: 93150e2728871b422c9083120d075dd4e12e881f
+  RNFBCrashlytics: d4d95997c9a7bbb89d64d6bc2ed9a778166d4760
+  RNFBFirestore: a28db4cc78c7ad54fa670b11215ec02c1379329d
+  RNFBStorage: 71e9120f5ea2aac82072ef25b3605d4b2111597c
   RNGestureHandler: 9b7e605a741412e20e13c512738a31bd1611759b
   RNImageCropPicker: 08ba3a2e2f4f8833d606f01906c371e382c4dea9
   RNLocalize: 41026b7c14878f1a1b381bc79f668f1fbf841adb
@@ -1026,6 +1026,6 @@ SPEC CHECKSUMS:
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 532d1f7371828cbc65d0add7f52b03f0328ae241
+PODFILE CHECKSUM: 170f10c3e13498367052b1131745cacbaddb7894
 
 COCOAPODS: 1.10.1
