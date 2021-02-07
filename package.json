@@ -40,6 +40,7 @@
   ],
   "scripts": {
     "android": "react-native run-android",
+    "background-fetch:android": "adb shell cmd jobscheduler run -f com.litten 999",
     "build:android:aab-to-apk": "bundletool build-apks --bundle=android/app/build/outputs/bundle/release/app-release.aab --output=dist/litten.apks --ks=android/app/litten.keystore --ks-key-alias=litten-android --ks-pass=pass:$KEYSTORE_PWD --key-pass=pass:$KEYSTORE_PWD",
     "build:android:test": "react-native run-android --variant=release",
     "build:android": "cd android && ./gradlew clean bundleRelease assembleRelease; cd -",

@@ -281,6 +281,8 @@
       "goToSettings": "Ir a Definições",
       "locationDeniedByUser": "Permissão de localização negada pelo utilizador",
       "locationRevokedByUser": "Permissão de localização revogada pelo utilizador",
+      "newMessagesText": "Tens mensagens por ler",
+      "newMessagesTitle": "Novas mensagens",
       "noInternetConnection": "Sem ligação à internet"
     },
     "firebaseErrorMessages": {

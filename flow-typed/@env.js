@@ -11,6 +11,7 @@ declare module '@env' {
   declare export var JIRA_UPLOAD_ATTACHMENT: string;
   declare export var SLACK_WEBHOOK_URL: string;
   declare export var USE_FIREBASE_EMULATOR: string;
+  declare export var USE_GRAVATAR: string;
   declare export var USE_REDUX_DEVTOOLS_LOCAL_SERVER: string;
   declare export var WEB_APP_BASE: string;
 }
