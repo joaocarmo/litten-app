@@ -1,10 +1,16 @@
-const mockRNCNetInfo = '@react-native-community/netinfo/jest/netinfo-mock.js'
-require('react-native-gesture-handler/jestSetup')
 require('jest-fetch-mock').enableMocks()
+
+const mockRNGestureHandlerModule =
+  'react-native-gesture-handler/dist/src/__mocks__/RNGestureHandlerModule.js'
+
+const mockRNCNetInfo = '@react-native-community/netinfo/jest/netinfo-mock.js'
+
+jest.mock('react-native-gesture-handler', () => mockRNGestureHandlerModule)
 
 jest.mock('@react-native-community/netinfo', () => mockRNCNetInfo)
 
 jest.mock('react-native-simple-toast', () => ({
+  LONG: jest.fn(),
   SHORT: jest.fn(),
 }))
 
