@@ -281,7 +281,7 @@
       "goToSettings": "Go to Settings",
       "locationDeniedByUser": "Location permission denied by user",
       "locationRevokedByUser": "Location permission revoked by user",
-      "newMessagesText": "You have unread messages",
+      "newMessagesText": "You have {{unreadChatsNum}} unread messages",
       "newMessagesTitle": "New messages",
       "noInternetConnection": "No Internet Connection"
     },
