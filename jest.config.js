@@ -1,7 +1,5 @@
 const globalConfig = {
-  preset: 'react-native',
   timers: 'fake',
-  setupFiles: ['<rootDir>/jest.setup.js'],
   transformIgnorePatterns: [
     'node_modules/(?!react-native|@react-native-community/*|@react-native-picker/.*)',
   ],
@@ -15,19 +13,20 @@ const globalConfig = {
 module.exports = {
   projects: [
     {
-      ...globalConfig,
+      preset: 'react-native',
       displayName: 'default',
+      setupFiles: ['<rootDir>/jest.setup.js'],
+      ...globalConfig,
     },
     {
-      ...globalConfig,
       displayName: 'model',
+      testEnvironment: 'node',
       runner: 'jest-serial-runner',
       testMatch: [
         '**/__model__tests__/**/*.[jt]s?(x)',
         '**/?(*.)+(model-spec|serial-test).[jt]s?(x)',
       ],
-      preset: undefined,
-      setupFiles: undefined,
+      ...globalConfig,
     },
   ],
 }
