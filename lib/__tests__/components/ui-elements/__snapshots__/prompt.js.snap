@@ -51,9 +51,14 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
     <View
       onLayout={[Function]}
       style={
-        Object {
-          "marginTop": 22,
-        }
+        Array [
+          Object {
+            "marginTop": 22,
+          },
+          Object {
+            "paddingBottom": 0,
+          },
+        ]
       }
     >
       <View
