@@ -143,8 +143,8 @@ android {
         applicationId "com.litten"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 8
-        versionName "1.0.0-beta.6"
+        versionCode 9
+        versionName "1.0.0-beta.7"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
         // Read the API key from ./secure.properties into R.string.maps_api_key
