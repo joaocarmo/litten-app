@@ -6237,6 +6237,11 @@ firebase@8.2.9:
     "@firebase/storage" "0.4.3"
     "@firebase/util" "0.3.4"
 
+firestore-jest-mock@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/firestore-jest-mock/-/firestore-jest-mock-0.8.0.tgz#7aa78fd04b15854cee4033ebf4f4c94f28b359dc"
+  integrity sha512-ZlZ3l60pzM9uGvq5YVWYBx8IkjWTs77OJLiWAi+t9LQnokwhaYVYfjzvU0O7xmGFXlBsmXJ49pYtvKOVMjPDOA==
+
 flagged-respawn@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/flagged-respawn/-/flagged-respawn-1.0.1.tgz#e7de6f1279ddd9ca9aac8a5971d618606b3aab41"

@@ -5,6 +5,7 @@
 REQUIRED_FILES=(
   .env
   android/app/google-services.json
+  android/app/litten.keystore
   android/keystore.properties
   android/secure.properties
   ios/GoogleService-Info.plist
