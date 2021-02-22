@@ -211,6 +211,8 @@
     "email": "Email",
     "fromLibrary": "Do arquivo",
     "location": "Localização",
+    "mapHasNoPermissionsText": "Não conseguimos determinar a tua localização. Por favor, concede acesso à Litten para aceder à tua localização. Podes fazê-lo nas definições do teu dispositivo.",
+    "mapHasNoPermissionsTitle": "Sem Permissões de Localização",
     "mapInstructions": "Para alterar a localização no mapa, clica e arrasta o marcador para a posição desejada.",
     "name": "Nome",
     "newPassword": "Cria a tua senha",
@@ -272,6 +274,7 @@
       "profileUnverifiefEmail": "O teu email não foi confirmado. Clica aqui para enviar um novo email de confirmação.",
       "profileUnverifiefEmailError": "De momento, não foi possível confirmar o teu email.",
       "profileUnverifiefEmailSent": "Um email de confirmação foi enviado para o email fornecido. Por favor, verifica ambas as caixas de entrada e spam.",
+      "tryAgainLater": "Há um problema. Por favor, tenta mais tarde.",
       "unmatchedPassword": "As senhas não coincidem"
     },
     "system": {

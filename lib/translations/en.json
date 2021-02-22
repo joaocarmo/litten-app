@@ -211,6 +211,8 @@
     "email": "Email",
     "fromLibrary": "From library",
     "location": "Location",
+    "mapHasNoPermissionsText": "We can't access your location. Please give Litten access to your location. You can do so on your device's definitions.",
+    "mapHasNoPermissionsTitle": "No Location Permissions",
     "mapInstructions": "To change the location on the map, click and drag the marker to the desired position.",
     "name": "Name",
     "newPassword": "Create your password",
@@ -272,6 +274,7 @@
       "profileUnverifiefEmail": "Your email has not been verified. Click here to resend a confirmation email.",
       "profileUnverifiefEmailError": "Could not verify your email at this time.",
       "profileUnverifiefEmailSent": "A confirmation email has been sent to the provided email. Please check both your inbox and spam folders.",
+      "tryAgainLater": "There is a problem. Please try again later.",
       "unmatchedPassword": "The passwords don't match"
     },
     "system": {
