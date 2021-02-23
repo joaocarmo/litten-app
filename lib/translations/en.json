@@ -281,9 +281,7 @@
       "allowLocation": "Turn on Location Services to allow {{appName}} to determine your location",
       "cantOpenSettings": "Unable to open settings",
       "dontUseLocation": "Don't Use Location",
-      "goToSettings": "Go to Settings",
-      "locationDeniedByUser": "Location permission denied by user",
-      "locationRevokedByUser": "Location permission revoked by user",
+      "goToSettings": "Go To Settings",
       "newMessagesText": "You have {{unreadChatsNum}} unread messages",
       "newMessagesTitle": "New messages",
       "noInternetConnection": "No Internet Connection"

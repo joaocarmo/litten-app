@@ -281,9 +281,7 @@
       "allowLocation": "Ativa os Serviços de localização para permitir que {{appName}} determine a tua localização",
       "cantOpenSettings": "Não foi possível abrir as Definições",
       "dontUseLocation": "Não utilizar a localização",
-      "goToSettings": "Ir a Definições",
-      "locationDeniedByUser": "Permissão de localização negada pelo utilizador",
-      "locationRevokedByUser": "Permissão de localização revogada pelo utilizador",
+      "goToSettings": "Ir Às Definições",
       "newMessagesText": "Tens {{unreadChatsNum}} mensagens por ler",
       "newMessagesTitle": "Novas mensagens",
       "noInternetConnection": "Sem ligação à internet"
