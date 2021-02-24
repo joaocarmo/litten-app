@@ -181,8 +181,18 @@
     "maintenance": {
       "crashDescription": "Litten encountered an unexpected error. If you've enabled Sharing Litten Analytics, we have received this report automatically. In the meantime, try restarting the app.",
       "crashTitle": "Unexpected error",
-      "description": "We're sorry about this inconvenience, but the app is currently under maintenance.",
-      "title": "Under maintenance"
+      "betaEnabled": {
+        "description": "We're sorry about this inconvenience, but this beta version of the app is no longer available.",
+        "title": "Beta unavailable"
+      },
+      "maintenanceMode": {
+        "description": "We're sorry about this inconvenience, but the app is currently under maintenance.",
+        "title": "Under maintenance"
+      },
+      "versionDisabled": {
+        "description": "We're sorry about this inconvenience, but this version of the app is no longer available. Please update.",
+        "title": "Version outdated"
+      }
     },
     "dev": {
       "aboutEnvironment": "Build environment",

@@ -181,8 +181,18 @@
     "maintenance": {
       "crashDescription": "A Litten encontrou um erro inesperado. Se ativaste Partilhar Estatísticas, recebemos o relatório automaticamente. Entretanto, experimenta reiniciar a app.",
       "crashTitle": "Erro inesperado",
-      "description": "Pedimos desculpa pelo incómodo, mas a app está em manutenção.",
-      "title": "Em manutenção"
+      "betaEnabled": {
+        "description": "Pedimos desculpa pelo incómodo, mas esta versão beta já não está disponível.",
+        "title": "Beta indisponível"
+      },
+      "maintenanceMode": {
+        "description": "Pedimos desculpa pelo incómodo, mas a app está em manutenção.",
+        "title": "Em manutenção"
+      },
+      "versionDisabled": {
+        "description": "Pedimos desculpa pelo incómodo, esta versão da app já não está disponível. Por favor, atualiza.",
+        "title": "Versão desatualizada"
+      }
     },
     "dev": {
       "aboutEnvironment": "Ambiente da build",
