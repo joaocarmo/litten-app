@@ -12,25 +12,20 @@ on:
 
 jobs:
   build:
-
     environment: production
-
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x]
 
     steps:
     - uses: actions/checkout@v2
       with:
         ref: ${{ github.event.inputs.tag }}
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js v14 (LTS)
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: '14'
     - name: Create .env file
       run: cp .env.example .env
+    - uses: c-hive/gha-yarn-cache@v1
     - name: Install dependencies
       run: yarn --frozen-lockfile
     - name: Android build

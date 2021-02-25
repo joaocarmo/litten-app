@@ -1,0 +1,68 @@
+# This workflow is manually triggered and will upload an Android .apk or .aab
+# (Android App Bundle) file to the Google Play Console
+
+name: Publish Play Store
+
+on:
+  workflow_dispatch:
+    inputs:
+      track:
+        description: 'The track in which you want to assign the uploaded app. Default: internal. Possible: alpha, beta, internal, production.'
+        required: false
+        default: 'internal'
+
+jobs:
+  build:
+    environment: production
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js v14 (LTS)
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14'
+    - uses: c-hive/gha-yarn-cache@v1
+    - name: Install dependencies
+      run: |
+        yarn --frozen-lockfile
+
+    - name: Cache Gradle Wrapper
+      uses: actions/cache@v2
+      with:
+        path: ~/.gradle/wrapper
+        key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('android/gradle/wrapper/gradle-wrapper.properties') }}
+
+    - name: Cache Gradle Dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/.gradle/caches
+        key: ${{ runner.os }}-gradle-caches-${{ hashFiles('android/gradle/wrapper/gradle-wrapper.properties') }}
+        restore-keys: |
+          ${{ runner.os }}-gradle-caches-
+
+    - name: Make Gradlew Executable
+      run: |
+        cd android && chmod +x ./gradlew
+
+    - name: Build Android App Bundle
+      run: |
+        cd android && ./gradlew bundleRelease --no-daemon
+
+    - name: Sign App Bundle
+      id: sign_app
+      uses: r0adkll/sign-android-release@v1
+      with:
+        releaseDirectory: android/app/build/outputs/bundle/release
+        signingKeyBase64: ${{ secrets.ANDROID_SIGNING_KEY }}
+        alias: ${{ secrets.ANDROID_SIGNING_ALIAS }}
+        keyStorePassword: ${{ secrets.ANDROID_SIGNING_STORE_PASSWORD }}
+        keyPassword: ${{ secrets.ANDROID_SIGNING_KEY_PASSWORD }}
+
+    - name: Upload To Play Store
+      uses: r0adkll/upload-google-play@v1
+      with:
+        serviceAccountJson: ${{ secrets.ANDROID_SERVICE_ACCOUNT_JSON }}
+        packageName: com.litten
+        releaseFile: ${{ steps.sign_app.outputs.signedReleaseFile }}
+        track: ${{ github.event.inputs.track }}
+        whatsNewDirectory: dist/whatsnew
