@@ -12,7 +12,7 @@ on:
         default: 'internal'
 
 jobs:
-  build:
+  publish:
     environment: production
     runs-on: ubuntu-latest
     steps:

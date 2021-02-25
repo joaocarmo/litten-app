@@ -23,8 +23,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+
     - name: Create .env file
       run: cp .env.example .env
+
     - uses: c-hive/gha-yarn-cache@v1
     - name: Install dependencies
       run: yarn --frozen-lockfile
@@ -32,6 +34,7 @@ jobs:
       run: yarn flow-typed install
     - name: Temporary workaround (for the @react-navigation types)
       run: rm -rf flow-typed/npm/@react-navigation/
+
     - name: Lint the source files
       run: yarn lint
     - name: Type check
@@ -44,3 +47,10 @@ jobs:
       run: yarn test:firestore:rules
     - name: Execute the firebase model tests
       run: yarn test:firestore:model
+
+    - name: Cache firebase emulators
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/firebase/emulators/
+        key: ${{ runner.os }}-firebase-emulators-${{ hashFiles('~/.cache/firebase/emulators/**') }}
+      continue-on-error: true
