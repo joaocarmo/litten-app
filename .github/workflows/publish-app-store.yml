@@ -1,0 +1,57 @@
+# This workflow is manually triggered and will upload an iOS .ipa
+# (iOS App Store Package) file to the Apple iOS App Store
+
+name: Publish App Store
+
+on:
+  workflow_dispatch:
+
+env:
+  OUTPUT_PATH: dist/litten.ipa
+
+jobs:
+  publish:
+    environment: production
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js v14 (LTS)
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14'
+    - uses: c-hive/gha-yarn-cache@v1
+    - name: Install dependencies
+      run: |
+        yarn --frozen-lockfile
+        yarn pods
+
+    - name: Enable App Transport Security
+      run: |
+        scripts/prepare-release-ios
+
+    - name: Build using Xcode
+      uses: sparkfabrik/ios-build-action@v1.0.0
+      with:
+        project-path: ios/litten.xcodeproj
+        workspace-path: ios/litten.xcworkspace
+        export-method: app-store
+        configuration: Release
+        output-path: ${{ env.OUTPUT_PATH }}
+        scheme: litten
+        team-id: ${{ secrets.APPLE_TEAM_ID }}
+        p12-base64: ${{ secrets.APPLE_SIGNING_CERTIFICATE_P12_DATA }}
+        mobileprovision-base64: ${{ secrets.APPLE_PROVISIONING_PROFILE_DATA }}
+        certificate-password: ${{ secrets.APPLE_SIGNING_CERTIFICATE_PASSWORD }}
+        code-signing-identity: ${{ secrets.APPLE_CODE_SIGNING_IDENTITY }}
+      env:
+        GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        JIRA_API_KEY: ${{ secrets.JIRA_API_KEY }}
+        JIRA_EMAIL: ${{ secrets.JIRA_EMAIL }}
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+    - name: Upload app to App Store Connect
+      env:
+        APP_STORE_CONNECT_USERNAME: ${{ secrets.APP_STORE_CONNECT_USERNAME }}
+        APP_STORE_CONNECT_PASSWORD: ${{ secrets.APP_STORE_CONNECT_PASSWORD }}
+      run: |
+        xcrun altool --upload-app -t ios -f "${{ env.OUTPUT_PATH }}" -u "$APP_STORE_CONNECT_USERNAME" -p "$APP_STORE_CONNECT_PASSWORD"
