@@ -26,6 +26,9 @@ jobs:
       run: |
         yarn --frozen-lockfile
 
+    - name: Create .env file
+      run: cp .env.example .env
+
     - name: Cache Gradle Wrapper
       uses: actions/cache@v2
       with:

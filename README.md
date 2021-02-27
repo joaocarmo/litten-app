@@ -1,6 +1,10 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/joaocarmo/litten-app/master/lib/images/logo/blue.png" width="264" alt="litten">
+</p>
+
 # Litten
 
-Litten mobile app repository using React Native.
+Litten mobile app repository using React Native and Firebase.
 
 ## Development Commands
 
@@ -32,11 +36,11 @@ yarn test
 # Prepare the data dependencies
 yarn prepare-data
 
-# This will start the Firebase Emulator
-yarn start:firebase
-
 # This will seed the Firestore DB with some data
 yarn firestore:seed
+
+# This will start the Firebase Emulator
+yarn start:firebase
 ```
 
 ## Generic account
@@ -77,6 +81,8 @@ Additionally, you should install, configure and integrate the
 ### Current API dependecies
 
 - [Google Maps (Geocoding)][googleapikey]
+- [Jira][jira] (Report Problems)
+- [Slack][slack] (Report Problems)
 
 ## License
 
@@ -89,6 +95,8 @@ the design are [not licensed][licenseimgs].
 [env-setup]: https://reactnative.dev/docs/environment-setup
 [firebase]: https://firebase.google.com
 [googleapikey]: https://developers.google.com/maps/documentation/geocoding/get-api-key
+[jira]: https://www.atlassian.com/software/jira
 [license]: ./LICENSE
 [licenseimgs]: ./lib/images/README.md
 [setupfirebase]: https://firebase.google.com/docs/ios/setup
+[slack]: https://slack.com

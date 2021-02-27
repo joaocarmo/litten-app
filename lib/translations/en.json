@@ -228,7 +228,7 @@
     "newPassword": "Create your password",
     "password": "Password",
     "phoneNumber": "Phone number",
-    "profileEmailVerificationSuccess": "You email was verified!",
+    "profileEmailVerificationSuccess": "Your email was verified!",
     "recoverSentSuccess": "Please follow the instructions on your email",
     "registrationError": "Registration failed",
     "registrationSuccess": "Registration successful",

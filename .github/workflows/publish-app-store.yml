@@ -25,6 +25,9 @@ jobs:
         yarn --frozen-lockfile
         yarn pods
 
+    - name: Create .env file
+      run: cp .env.example .env
+
     - name: Enable App Transport Security
       run: |
         scripts/prepare-release-ios
