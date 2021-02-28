@@ -17,9 +17,11 @@ exports[`Snapshot test for the "TabNavigationItem" component renders correctly 1
     Array [
       Object {
         "alignItems": "center",
+        "height": "100%",
         "justifyContent": "center",
         "minHeight": 44,
         "minWidth": 44,
+        "width": "12%",
       },
       Object {
         "paddingBottom": 0,
