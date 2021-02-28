@@ -28,12 +28,15 @@ jobs:
     - name: Create .env file
       run: cp .env.example .env
 
+    - name: Create GoogleService-Info.plist
+      run: echo ${{ secrets.IOS_GOOGLE_SERVICES }} | base64 -d > ios/GoogleService-Info.plist
+
     - name: Enable App Transport Security
       run: |
         scripts/prepare-release-ios
 
     - name: Build using Xcode
-      uses: sparkfabrik/ios-build-action@v1.0.0
+      uses: sparkfabrik/ios-build-action@v1.1.0
       with:
         project-path: ios/litten.xcodeproj
         workspace-path: ios/litten.xcworkspace

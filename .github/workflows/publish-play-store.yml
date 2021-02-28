@@ -29,6 +29,9 @@ jobs:
     - name: Create .env file
       run: cp .env.example .env
 
+    - name: Create google-services.json
+      run: echo ${{ secrets.ANDROID_GOOGLE_SERVICES }} | base64 -d > android/app/google-services.json
+
     - name: Cache Gradle Wrapper
       uses: actions/cache@v2
       with:
