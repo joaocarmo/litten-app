@@ -29,7 +29,8 @@ jobs:
       run: cp .env.example .env
 
     - name: Create GoogleService-Info.plist
-      run: echo ${{ secrets.IOS_GOOGLE_SERVICES }} | base64 -d > ios/GoogleService-Info.plist
+      run: |
+        echo "${{ secrets.IOS_GOOGLE_SERVICES }}" | base64 -d > ios/GoogleService-Info.plist
 
     - name: Enable App Transport Security
       run: |
