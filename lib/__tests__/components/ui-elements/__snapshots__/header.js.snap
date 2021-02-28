@@ -15,6 +15,7 @@ exports[`Snapshot test for the "UIHeader" component renders correctly 1`] = `
       },
       undefined,
       undefined,
+      undefined,
     ]
   }
 >
