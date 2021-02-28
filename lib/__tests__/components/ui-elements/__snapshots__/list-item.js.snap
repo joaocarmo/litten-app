@@ -81,7 +81,7 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
           Array [
             Object {
               "color": "#000000",
-              "fontSize": 10,
+              "fontSize": 9.832647462277093,
               "fontWeight": "700",
             },
             undefined,

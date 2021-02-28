@@ -24,7 +24,7 @@ Array [
         Object {
           "color": "#000000",
           "flex": 1,
-          "fontSize": 16,
+          "fontSize": 15.75,
           "fontWeight": "400",
         }
       }
@@ -96,7 +96,7 @@ exports[`Snapshot test for the "UISwitch" component renders correctly without de
       Object {
         "color": "#000000",
         "flex": 1,
-        "fontSize": 16,
+        "fontSize": 15.75,
         "fontWeight": "400",
       }
     }

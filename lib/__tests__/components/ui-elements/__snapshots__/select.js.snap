@@ -38,7 +38,7 @@ exports[`Snapshot test for the "UISelect" component renders correctly 1`] = `
             Object {
               "borderBottomWidth": 2,
               "color": "#000000",
-              "fontSize": 20,
+              "fontSize": 19.93359375,
               "fontWeight": "700",
               "height": 60,
               "marginBottom": 10,
