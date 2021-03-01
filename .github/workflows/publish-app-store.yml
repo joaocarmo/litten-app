@@ -30,7 +30,7 @@ jobs:
 
     - name: Create GoogleService-Info.plist
       run: |
-        echo "${{ secrets.IOS_GOOGLE_SERVICES }}" | base64 -d > ios/GoogleService-Info.plist
+        echo "${{ secrets.IOS_GOOGLE_SERVICES }}" | base64 --decode > ios/GoogleService-Info.plist
 
     - name: Enable App Transport Security
       run: |
