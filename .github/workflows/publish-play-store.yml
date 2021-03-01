@@ -29,6 +29,10 @@ jobs:
     - name: Create .env file
       run: cp .env.example .env
 
+    - name: Create service-account.json
+      run: |
+        echo "${{ secrets.ANDROID_SERVICE_ACCOUNT_JSON }}" > android/service-account.json
+
     - name: Create google-services.json
       run: |
         echo "${{ secrets.ANDROID_GOOGLE_SERVICES }}" | base64 --decode > android/app/google-services.json
@@ -80,8 +84,8 @@ jobs:
     - name: Upload To Play Store
       uses: r0adkll/upload-google-play@v1
       with:
-        serviceAccountJson: ${{ secrets.ANDROID_SERVICE_ACCOUNT_JSON }}
+        serviceAccountJson: android/service-account.json
         packageName: com.litten
-        releaseFile: android/app/build/outputs/bundle/release/app-release.aab
+        releaseFiles: android/app/build/outputs/bundle/release/app-release.aab
         track: ${{ github.event.inputs.track }}
         whatsNewDirectory: dist/whatsnew
