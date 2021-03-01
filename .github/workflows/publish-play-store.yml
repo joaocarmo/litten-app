@@ -33,9 +33,22 @@ jobs:
       run: |
         echo "${{ secrets.ANDROID_GOOGLE_SERVICES }}" | base64 --decode > android/app/google-services.json
 
-    - name: Create keystore
+    - name: Create keystore file
       run: |
         echo "${{ secrets.ANDROID_SIGNING_KEY }}" | base64 --decode > android/app/litten.keystore
+
+    - name: Create keystore properties
+      run: |
+        echo "LITTEN_UPLOAD_STORE_FILE=litten.keystore" > android/keystore.properties
+    - name: Add keystore key alias
+      run: |
+        echo "LITTEN_UPLOAD_KEY_ALIAS=${{ secrets.ANDROID_SIGNING_ALIAS }}" >> android/keystore.properties
+    - name: Add keystore password
+      run: |
+        echo "LITTEN_UPLOAD_STORE_PASSWORD=${{ secrets.ANDROID_SIGNING_STORE_PASSWORD }}" >> android/keystore.properties
+    - name: Create keystore key password
+      run: |
+        echo "LITTEN_UPLOAD_KEY_PASSWORD=${{ secrets.ANDROID_SIGNING_KEY_PASSWORD }}" >> android/keystore.properties
 
     - name: Cache Gradle Wrapper
       uses: actions/cache@v2
@@ -57,7 +70,7 @@ jobs:
 
     - name: Build Android App Bundle
       run: |
-        cd android && ./gradlew bundleRelease --no-daemon -Pandroid.injected.signing.store.file=android/app/litten.keystore -Pandroid.injected.signing.store.password="${{ secrets.ANDROID_SIGNING_STORE_PASSWORD }}" -Pandroid.injected.signing.store.key.alias="${{ secrets.ANDROID_SIGNING_ALIAS }}" -Pandroid.injected.signing.store.key.password="${{ secrets.ANDROID_SIGNING_KEY_PASSWORD }}"
+        cd android && ./gradlew bundleRelease --no-daemon
       env:
         GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         JIRA_API_KEY: ${{ secrets.JIRA_API_KEY }}
