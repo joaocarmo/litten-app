@@ -33,6 +33,10 @@ jobs:
       run: |
         echo "${{ secrets.ANDROID_GOOGLE_SERVICES }}" | base64 --decode > android/app/google-services.json
 
+    - name: Create keystore
+      run: |
+        echo "${{ secrets.ANDROID_SIGNING_KEY }}" | base64 --decode > android/app/litten.keystore
+
     - name: Cache Gradle Wrapper
       uses: actions/cache@v2
       with:
@@ -53,28 +57,18 @@ jobs:
 
     - name: Build Android App Bundle
       run: |
-        cd android && ./gradlew assembleRelease --no-daemon
+        cd android && ./gradlew bundleRelease --no-daemon -Pandroid.injected.signing.store.file=android/app/litten.keystore -Pandroid.injected.signing.store.password="${{ secrets.ANDROID_SIGNING_STORE_PASSWORD }}" -Pandroid.injected.signing.store.key.alias="${{ secrets.ANDROID_SIGNING_ALIAS }}" -Pandroid.injected.signing.store.key.password="${{ secrets.ANDROID_SIGNING_KEY_PASSWORD }}"
       env:
         GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         JIRA_API_KEY: ${{ secrets.JIRA_API_KEY }}
         JIRA_EMAIL: ${{ secrets.JIRA_EMAIL }}
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
-    - name: Sign App Bundle
-      id: sign_app
-      uses: r0adkll/sign-android-release@v1
-      with:
-        releaseDirectory: android/app/build/outputs/bundle/release
-        signingKeyBase64: ${{ secrets.ANDROID_SIGNING_KEY }}
-        alias: ${{ secrets.ANDROID_SIGNING_ALIAS }}
-        keyStorePassword: ${{ secrets.ANDROID_SIGNING_STORE_PASSWORD }}
-        keyPassword: ${{ secrets.ANDROID_SIGNING_KEY_PASSWORD }}
-
     - name: Upload To Play Store
       uses: r0adkll/upload-google-play@v1
       with:
         serviceAccountJson: ${{ secrets.ANDROID_SERVICE_ACCOUNT_JSON }}
         packageName: com.litten
-        releaseFile: ${{ steps.sign_app.outputs.signedReleaseFile }}
+        releaseFile: android/app/build/outputs/bundle/release/app-release.aab
         track: ${{ github.event.inputs.track }}
         whatsNewDirectory: dist/whatsnew
