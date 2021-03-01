@@ -31,7 +31,7 @@ jobs:
 
     - name: Create service-account.json
       run: |
-        echo "${{ secrets.ANDROID_SERVICE_ACCOUNT_JSON }}" > android/service-account.json
+        echo "${{ secrets.ANDROID_SERVICE_ACCOUNT_JSON }}" | base64 --decode > android/service-account.json
 
     - name: Create google-services.json
       run: |
