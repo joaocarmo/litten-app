@@ -38,7 +38,7 @@ jobs:
         scripts/prepare-release-ios
 
     - name: Build using Xcode
-      uses: sparkfabrik/ios-build-action@v1.1.0
+      uses: yukiarrr/ios-build-action@v1.3.3
       with:
         project-path: ios/litten.xcodeproj
         workspace-path: ios/litten.xcworkspace
