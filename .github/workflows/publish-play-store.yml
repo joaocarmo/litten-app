@@ -11,6 +11,14 @@ on:
         required: false
         default: 'internal'
 
+env:
+  GOOGLE_SERVICES_PATH: android/app/google-services.json
+  KEYSTORE_PATH: android/app/litten.keystore
+  KEYSTORE_PROPERTIES_PATH: android/keystore.properties
+  OUTPUT_PATH: android/app/build/outputs/bundle/release/app-release.aab
+  SERVICE_ACCOUNT_PATH: android/service-account.json
+  WHATS_NEW_PATH: dist/whatsnew
+
 jobs:
   publish:
     environment: production
@@ -31,28 +39,28 @@ jobs:
 
     - name: Create service-account.json
       run: |
-        echo "${{ secrets.ANDROID_SERVICE_ACCOUNT_JSON }}" | base64 --decode > android/service-account.json
+        echo "${{ secrets.ANDROID_SERVICE_ACCOUNT_JSON }}" | base64 --decode > ${{ env.SERVICE_ACCOUNT_PATH }}
 
     - name: Create google-services.json
       run: |
-        echo "${{ secrets.ANDROID_GOOGLE_SERVICES }}" | base64 --decode > android/app/google-services.json
+        echo "${{ secrets.ANDROID_GOOGLE_SERVICES }}" | base64 --decode > ${{ env.GOOGLE_SERVICES_PATH }}
 
     - name: Create keystore file
       run: |
-        echo "${{ secrets.ANDROID_SIGNING_KEY }}" | base64 --decode > android/app/litten.keystore
+        echo "${{ secrets.ANDROID_SIGNING_KEY }}" | base64 --decode > ${{ env.KEYSTORE_PATH }}
 
     - name: Create keystore properties
       run: |
-        echo "LITTEN_UPLOAD_STORE_FILE=litten.keystore" > android/keystore.properties
+        echo "LITTEN_UPLOAD_STORE_FILE=litten.keystore" > ${{ env.KEYSTORE_PROPERTIES_PATH }}
     - name: Add keystore key alias
       run: |
-        echo "LITTEN_UPLOAD_KEY_ALIAS=${{ secrets.ANDROID_SIGNING_ALIAS }}" >> android/keystore.properties
+        echo "LITTEN_UPLOAD_KEY_ALIAS=${{ secrets.ANDROID_SIGNING_ALIAS }}" >> ${{ env.KEYSTORE_PROPERTIES_PATH }}
     - name: Add keystore password
       run: |
-        echo "LITTEN_UPLOAD_STORE_PASSWORD=${{ secrets.ANDROID_SIGNING_STORE_PASSWORD }}" >> android/keystore.properties
+        echo "LITTEN_UPLOAD_STORE_PASSWORD=${{ secrets.ANDROID_SIGNING_STORE_PASSWORD }}" >> ${{ env.KEYSTORE_PROPERTIES_PATH }}
     - name: Create keystore key password
       run: |
-        echo "LITTEN_UPLOAD_KEY_PASSWORD=${{ secrets.ANDROID_SIGNING_KEY_PASSWORD }}" >> android/keystore.properties
+        echo "LITTEN_UPLOAD_KEY_PASSWORD=${{ secrets.ANDROID_SIGNING_KEY_PASSWORD }}" >> ${{ env.KEYSTORE_PROPERTIES_PATH }}
 
     - name: Cache Gradle Wrapper
       uses: actions/cache@v2
@@ -84,8 +92,8 @@ jobs:
     - name: Upload To Play Store
       uses: r0adkll/upload-google-play@v1
       with:
-        serviceAccountJson: android/service-account.json
+        serviceAccountJson: ${{ env.SERVICE_ACCOUNT_PATH }}
         packageName: com.litten
-        releaseFiles: android/app/build/outputs/bundle/release/app-release.aab
+        releaseFiles: ${{ env.OUTPUT_PATH }}
         track: ${{ github.event.inputs.track }}
-        whatsNewDirectory: dist/whatsnew
+        whatsNewDirectory: ${{ env.WHATS_NEW_PATH }}

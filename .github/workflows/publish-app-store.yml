@@ -7,6 +7,7 @@ on:
   workflow_dispatch:
 
 env:
+  GOOGLE_SERVICES_PATH: ios/GoogleService-Info.plist
   OUTPUT_PATH: dist/litten.ipa
 
 jobs:
@@ -30,7 +31,7 @@ jobs:
 
     - name: Create GoogleService-Info.plist
       run: |
-        echo "${{ secrets.IOS_GOOGLE_SERVICES }}" | base64 --decode > ios/GoogleService-Info.plist
+        echo "${{ secrets.IOS_GOOGLE_SERVICES }}" | base64 --decode > ${{ env.GOOGLE_SERVICES_PATH }}
 
     - name: Enable App Transport Security
       run: |
