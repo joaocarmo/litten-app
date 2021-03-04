@@ -1,15 +1,15 @@
-# This workflow is manually triggered and will upload an Android .apk or .aab
-# (Android App Bundle) file to the Google Play Console
-
+# This workflow can be manually triggered and will upload an Android .apk or
+# .aab (Android App Bundle) file to the Google Play Console
+#
 name: Publish Play Store
 
 on:
+  workflow_run:
+    workflows: ['Release Version']
+    branches: [master]
+    types:
+      - completed
   workflow_dispatch:
-    inputs:
-      track:
-        description: 'The track in which you want to assign the uploaded app. Default: internal. Possible: alpha, beta, internal, production.'
-        required: false
-        default: 'internal'
 
 env:
   GOOGLE_SERVICES_PATH: android/app/google-services.json
@@ -95,5 +95,5 @@ jobs:
         serviceAccountJson: ${{ env.SERVICE_ACCOUNT_PATH }}
         packageName: com.litten
         releaseFiles: ${{ env.OUTPUT_PATH }}
-        track: ${{ github.event.inputs.track }}
+        track: 'internal'
         whatsNewDirectory: ${{ env.WHATS_NEW_PATH }}

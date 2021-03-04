@@ -1,9 +1,14 @@
-# This workflow is manually triggered and will upload an iOS .ipa
+# This workflow can be manually triggered and will upload an iOS .ipa
 # (iOS App Store Package) file to the Apple iOS App Store
-
+#
 name: Publish App Store
 
 on:
+  workflow_run:
+    workflows: ['Release Version']
+    branches: [master]
+    types:
+      - completed
   workflow_dispatch:
 
 env:
@@ -25,6 +30,22 @@ jobs:
       run: |
         yarn --frozen-lockfile
         yarn pods
+
+    - name: Cache CocoaPods repositories folder
+      uses: actions/cache@v2
+      with:
+        path: ~/.cocoapods
+        key: ${{ runner.os }}-pods-repos-${{ hashFiles('ios/Podfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-pods-repos-
+
+    - name: Cache CocoaPods caches folder
+      uses: actions/cache@v2
+      with:
+        path: ~/Library/Caches/CocoaPods
+        key: ${{ runner.os }}-pods-caches-${{ hashFiles('ios/Podfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-pods-caches-
 
     - name: Create .env file
       run: cp .env.example .env

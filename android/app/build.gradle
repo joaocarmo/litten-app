@@ -89,7 +89,8 @@ try {
  */
 
 project.ext.react = [
-    enableHermes: false,  // clean and rebuild if changing
+    entryFile: "index.js",
+    enableHermes: true,  // clean and rebuild if changing
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -197,6 +198,7 @@ android {
             signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            // proguardFiles "${background_geolocation.projectDir}/proguard-rules.pro"
         }
     }
 

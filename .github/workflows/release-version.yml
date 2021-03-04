@@ -1,0 +1,40 @@
+# This workflow is automatically triggered on release/tag and will bump the
+# version in the package.json and respective android/ios files
+#
+name: Release Version
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  bump-version:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js v14 (LTS)
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14'
+    - uses: c-hive/gha-yarn-cache@v1
+    - name: Install dependencies
+      run: |
+        yarn --frozen-lockfile
+
+    - name: Get release
+      id: get_release
+      uses: bruceadams/get-release@v1.2.2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Bump the version
+      run: |
+        npm version ${{ steps.get_release.outputs.tag_name }}
+
+    - name: Commit the version change
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Release ${{ steps.get_release.outputs.tag_name }}
+        commit_options: '--no-verify'
+        commit_user_name: Aida
+        commit_user_email: aida@litten.app

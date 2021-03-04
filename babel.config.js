@@ -30,5 +30,6 @@ module.exports = {
       },
     ],
     ['macros'],
+    'react-native-reanimated/plugin',
   ],
 }
