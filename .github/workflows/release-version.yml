@@ -31,7 +31,7 @@ jobs:
       run: |
         git config --local user.name "${{ secrets.GIT_AUTHOR_NAME }}"
         git config --local user.email "${{ secrets.GIT_AUTHOR_EMAIL }}"
-        npm version ${{ steps.get_release.outputs.tag_name }}
+        npm version --no-commit-hooks --no-git-tag-version ${{ steps.get_release.outputs.tag_name }}
 
     - name: Commit the version change
       uses: stefanzweifel/git-auto-commit-action@v4
