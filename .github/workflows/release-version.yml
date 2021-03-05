@@ -37,6 +37,7 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Release ${{ steps.get_release.outputs.tag_name }}
-        commit_options: '--no-verify'
+        commit_options: '--no-gpg-sign --no-verify --signoff'
         commit_user_email: ${{ secrets.GIT_AUTHOR_EMAIL }}
         commit_user_name: ${{ secrets.GIT_AUTHOR_NAME }}
+        skip_fetch: true
