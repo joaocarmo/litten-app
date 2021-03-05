@@ -31,14 +31,14 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Bump the version
-      run: |
-        npm version ${{ steps.get_release.outputs.tag_name }}
-
     - name: Config git
       run: |
         git config --global user.email "${{ env.GIT_AUTHOR_EMAIL }}"
         git config --global user.email "${{ env.GIT_AUTHOR_NAME }}"
+
+    - name: Bump the version
+      run: |
+        npm version ${{ steps.get_release.outputs.tag_name }}
 
     - name: Commit the version change
       uses: stefanzweifel/git-auto-commit-action@v4
