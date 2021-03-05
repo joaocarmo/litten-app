@@ -29,8 +29,8 @@ jobs:
 
     - name: Bump the version
       run: |
-        git config --global user.email "${{ secrets.GIT_AUTHOR_EMAIL }}"
-        git config --global user.email "${{ secrets.GIT_AUTHOR_NAME }}"
+        git config --local user.name "${{ secrets.GIT_AUTHOR_NAME }}"
+        git config --local user.email "${{ secrets.GIT_AUTHOR_EMAIL }}"
         npm version ${{ steps.get_release.outputs.tag_name }}
 
     - name: Commit the version change
