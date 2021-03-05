@@ -7,6 +7,10 @@ on:
   release:
     types: [created]
 
+env:
+  GIT_AUTHOR_EMAIL: '17721880+joaocarmo@users.noreply.github.com'
+  GIT_AUTHOR_NAME: 'João Carmo'
+
 jobs:
   bump-version:
     runs-on: ubuntu-latest
@@ -31,10 +35,15 @@ jobs:
       run: |
         npm version ${{ steps.get_release.outputs.tag_name }}
 
+    - name: Config git
+      run: |
+        git config --global user.email "${{ env.GIT_AUTHOR_EMAIL }}"
+        git config --global user.email "${{ env.GIT_AUTHOR_NAME }}"
+
     - name: Commit the version change
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Release ${{ steps.get_release.outputs.tag_name }}
         commit_options: '--no-verify'
-        commit_user_name: Aida
-        commit_user_email: aida@litten.app
+        commit_user_email: ${{ env.GIT_AUTHOR_EMAIL }}
+        commit_user_name: ${{ env.GIT_AUTHOR_NAME }}
