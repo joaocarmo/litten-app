@@ -5,8 +5,11 @@ name: Publish Play Store
 
 on:
   workflow_dispatch:
-  repository_dispatch:
-    types: [release-version]
+    inputs:
+      track:
+        description: 'The track in which you want to assign the uploaded app. Default: internal. Possible: alpha, beta, internal, production.'
+        required: false
+        default: 'internal'
 
 env:
   GOOGLE_SERVICES_PATH: android/app/google-services.json
@@ -92,5 +95,5 @@ jobs:
         serviceAccountJson: ${{ env.SERVICE_ACCOUNT_PATH }}
         packageName: com.litten
         releaseFiles: ${{ env.OUTPUT_PATH }}
-        track: 'internal'
+        track: ${{ github.event.inputs.track }}
         whatsNewDirectory: ${{ env.WHATS_NEW_PATH }}

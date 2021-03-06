@@ -41,8 +41,15 @@ jobs:
         git commit -m "Release ${{ steps.get_release.outputs.tag_name }}" --no-gpg-sign --no-verify --signoff
         git push
 
-    - name: Trigger the stores build and release
-      uses: peter-evans/repository-dispatch@v1
+    - name: Trigger the App Store build and release
+      uses: benc-uk/workflow-dispatch@v1
       with:
+        workflow: Publish App Store
         token: ${{ github.token }}
-        event-type: release-version
+
+    - name: Trigger the Play Store build and release
+      uses: benc-uk/workflow-dispatch@v1
+      with:
+        workflow: Publish Play Store
+        token: ${{ github.token }}
+        inputs: '{ "track": "internal" }'
