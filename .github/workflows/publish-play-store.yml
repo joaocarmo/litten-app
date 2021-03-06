@@ -4,12 +4,9 @@
 name: Publish Play Store
 
 on:
-  workflow_run:
-    workflows: ['Release Version']
-    branches: [master]
-    types:
-      - completed
   workflow_dispatch:
+  repository_dispatch:
+    types: [release-version]
 
 env:
   GOOGLE_SERVICES_PATH: android/app/google-services.json

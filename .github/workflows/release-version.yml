@@ -40,3 +40,9 @@ jobs:
         git add .
         git commit -m "Release ${{ steps.get_release.outputs.tag_name }}" --no-gpg-sign --no-verify --signoff
         git push
+
+    - name: Trigger the stores build and release
+      uses: peter-evans/repository-dispatch@v1
+      with:
+        token: ${{ github.token }}
+        event-type: release-version
