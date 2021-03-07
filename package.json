@@ -1,7 +1,7 @@
 {
   "name": "litten",
   "description": "Finding new friends for furry friends",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0",
   "private": true,
   "main": "lib",
   "keywords": [
