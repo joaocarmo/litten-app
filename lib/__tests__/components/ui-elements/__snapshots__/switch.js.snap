@@ -31,21 +31,17 @@ Array [
     >
       Some text here
     </Text>
-    <RCTSwitch
+    <AndroidSwitch
       accessibilityRole="switch"
+      enabled={true}
+      on={true}
       onChange={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
-      onTintColor="#7239f2"
-      style={
-        Object {
-          "height": 31,
-          "width": 51,
-        }
-      }
       thumbTintColor="#ffffff"
-      tintColor="#dcdee1"
-      value={true}
+      trackColorForFalse="#dcdee1"
+      trackColorForTrue="#7239f2"
+      trackTintColor="#7239f2"
     />
   </View>,
   <Text
@@ -103,21 +99,17 @@ exports[`Snapshot test for the "UISwitch" component renders correctly without de
   >
     Some text here
   </Text>
-  <RCTSwitch
+  <AndroidSwitch
     accessibilityRole="switch"
+    enabled={true}
+    on={true}
     onChange={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    onTintColor="#7239f2"
-    style={
-      Object {
-        "height": 31,
-        "width": 51,
-      }
-    }
     thumbTintColor="#ffffff"
-    tintColor="#dcdee1"
-    value={true}
+    trackColorForFalse="#dcdee1"
+    trackColorForTrue="#7239f2"
+    trackTintColor="#7239f2"
   />
 </View>
 `;

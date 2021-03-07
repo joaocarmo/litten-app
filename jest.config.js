@@ -16,6 +16,10 @@ module.exports = {
       displayName: 'default',
       setupFiles: ['<rootDir>/jest.setup.js'],
       timers: 'fake',
+      haste: {
+        defaultPlatform: 'android',
+        platforms: ['android', 'ios', 'native'],
+      },
       ...globalConfig,
     },
     {

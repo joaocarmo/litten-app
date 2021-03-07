@@ -17,9 +17,7 @@ exports[`Snapshot test for the "UISlider" component renders correctly 1`] = `
   step={1}
   style={
     Array [
-      Object {
-        "height": 40,
-      },
+      Object {},
       Array [
         Object {
           "height": 80,

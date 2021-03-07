@@ -82,84 +82,36 @@ Array [
   >
     Some more text here
   </Text>,
-  <Modal
-    animationType="slide"
-    hardwareAccelerated={false}
-    supportedOrientations={
+  <RNCAndroidDialogPicker
+    items={
       Array [
-        "portrait",
+        Object {
+          "label": "One",
+          "value": "one",
+        },
+        Object {
+          "label": "Two",
+          "value": "two",
+        },
       ]
     }
-    transparent={true}
-    visible={false}
-  >
-    <View
-      accessible={true}
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
+    mode="dialog"
+    onSelect={[Function]}
+    selected={0}
+    style={
+      Array [
         Object {
-          "flex": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "flex": 1,
-          }
-        }
-      />
-    </View>
-    <View
-      style={
+          "height": 50,
+        },
         Object {
-          "backgroundColor": "#d0d4da",
-          "height": 215,
-          "justifyContent": "center",
-        }
-      }
-    >
-      <View>
-        <RNCPicker
-          items={
-            Array [
-              Object {
-                "label": "One",
-                "testID": undefined,
-                "textColor": undefined,
-                "value": "one",
-              },
-              Object {
-                "label": "Two",
-                "testID": undefined,
-                "textColor": undefined,
-                "value": "two",
-              },
-            ]
-          }
-          onChange={[Function]}
-          selectedIndex={0}
-          style={
-            Array [
-              Object {
-                "height": 216,
-              },
-              undefined,
-            ]
-          }
-        />
-      </View>
-    </View>
-  </Modal>,
+          "height": 2000,
+          "position": "absolute",
+          "top": 0,
+          "width": 2000,
+        },
+      ]
+    }
+  />,
 ]
 `;
 
@@ -223,83 +175,35 @@ Array [
       One
     </Text>
   </View>,
-  <Modal
-    animationType="slide"
-    hardwareAccelerated={false}
-    supportedOrientations={
+  <RNCAndroidDialogPicker
+    items={
       Array [
-        "portrait",
+        Object {
+          "label": "One",
+          "value": "one",
+        },
+        Object {
+          "label": "Two",
+          "value": "two",
+        },
       ]
     }
-    transparent={true}
-    visible={false}
-  >
-    <View
-      accessible={true}
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
+    mode="dialog"
+    onSelect={[Function]}
+    selected={0}
+    style={
+      Array [
         Object {
-          "flex": 1,
-        }
-      }
-    >
-      <View
-        style={
-          Object {
-            "flex": 1,
-          }
-        }
-      />
-    </View>
-    <View
-      style={
+          "height": 50,
+        },
         Object {
-          "backgroundColor": "#d0d4da",
-          "height": 215,
-          "justifyContent": "center",
-        }
-      }
-    >
-      <View>
-        <RNCPicker
-          items={
-            Array [
-              Object {
-                "label": "One",
-                "testID": undefined,
-                "textColor": undefined,
-                "value": "one",
-              },
-              Object {
-                "label": "Two",
-                "testID": undefined,
-                "textColor": undefined,
-                "value": "two",
-              },
-            ]
-          }
-          onChange={[Function]}
-          selectedIndex={0}
-          style={
-            Array [
-              Object {
-                "height": 216,
-              },
-              undefined,
-            ]
-          }
-        />
-      </View>
-    </View>
-  </Modal>,
+          "height": 2000,
+          "position": "absolute",
+          "top": 0,
+          "width": 2000,
+        },
+      ]
+    }
+  />,
 ]
 `;
