@@ -229,7 +229,7 @@
     "password": "Password",
     "phoneNumber": "Phone number",
     "profileEmailVerificationSuccess": "Your email was verified!",
-    "recoverSentSuccess": "Please follow the instructions on your email",
+    "recoverSentSuccess": "Please follow the instructions in your email",
     "registrationError": "Registration failed",
     "registrationSuccess": "Registration successful",
     "registrationTermsAndConditionsMessage": "By proceeding to create an account and use Litten, you are agreeing to our Terms and Conditions and Privacy Policy.",

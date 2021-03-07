@@ -39,6 +39,8 @@
     }
   ],
   "scripts": {
+    "addmedia:android": "adb mkdir /sdcard/Pictures && adb push $IMG_PATH /sdcard/Pictures",
+    "addmedia:ios": "xcrun simctl addmedia booted $IMG_PATH",
     "android": "react-native run-android",
     "background-fetch:android:headless": "adb shell am broadcast -a com.litten.event.BACKGROUND_FETCH",
     "background-fetch:android:job": "adb shell cmd jobscheduler run -f com.litten 999",
