@@ -617,7 +617,7 @@ PODS:
     - React
   - react-native-splash-screen (3.2.0):
     - React
-  - react-native-webview (11.2.3):
+  - react-native-webview (11.2.4):
     - React-Core
   - React-RCTActionSheet (0.63.4):
     - React-Core/RCTActionSheetHeaders (= 0.63.4)
@@ -687,11 +687,11 @@ PODS:
     - React-Core
   - RNCMaskedView (0.1.10):
     - React
-  - RNCPicker (1.9.11):
+  - RNCPicker (1.9.12):
     - React-Core
   - RNCPushNotificationIOS (1.8.0):
     - React-Core
-  - RNDeviceInfo (8.0.2):
+  - RNDeviceInfo (8.0.5):
     - React-Core
   - RNFastImage (8.3.4):
     - React-Core
@@ -1071,7 +1071,7 @@ SPEC CHECKSUMS:
   react-native-simple-toast: bf002828cf816775a6809f7a9ec3907509bce11f
   react-native-slider: e99fc201cefe81270fc9d81714a7a0f5e566b168
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
-  react-native-webview: 6520e3e7b4933de76b95ef542c8d7115cf45b68e
+  react-native-webview: d924ebd615d0d0c0e67dcfc3aa982ed313574b8d
   React-RCTActionSheet: 89a0ca9f4a06c1f93c26067af074ccdce0f40336
   React-RCTAnimation: 1bde3ecc0c104c55df246eda516e0deb03c4e49b
   React-RCTBlob: a97d378b527740cc667e03ebfa183a75231ab0f0
@@ -1086,9 +1086,9 @@ SPEC CHECKSUMS:
   RNCAsyncStorage: b03032fdbdb725bea0bd9e5ec5a7272865ae7398
   RNCClipboard: 41d8d918092ae8e676f18adada19104fa3e68495
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
-  RNCPicker: 6780c753e9e674065db90d9c965920516402579d
+  RNCPicker: b1e22287e5feb38fb10cac877753b924ba1c05d1
   RNCPushNotificationIOS: 61a7c72bd1ebad3568025957d001e0f0e7b32191
-  RNDeviceInfo: a9601119924a67d2479d3facf04cec7b658f44ed
+  RNDeviceInfo: 7828eb110e3146324c0583c134e59db5d39f7e8b
   RNFastImage: d4870d58f5936111c56218dbd7fcfc18e65b58ff
   RNFBAnalytics: 6a5f53ef0621a993b324a2019b637a3a10647574
   RNFBApp: 1624ffcfc328c00ec3049d2f1bbf09d3e78dcdb7
