@@ -230,60 +230,60 @@ PODS:
     - React-Core (= 0.63.4)
     - React-jsi (= 0.63.4)
     - ReactCommon/turbomodule/core (= 0.63.4)
-  - Firebase/Analytics (7.7.0):
+  - Firebase/Analytics (7.8.0):
     - Firebase/Core
-  - Firebase/Auth (7.7.0):
+  - Firebase/Auth (7.8.0):
     - Firebase/CoreOnly
-    - FirebaseAuth (~> 7.7.0)
-  - Firebase/Core (7.7.0):
+    - FirebaseAuth (~> 7.8.0)
+  - Firebase/Core (7.8.0):
     - Firebase/CoreOnly
-    - FirebaseAnalytics (= 7.7.0)
-  - Firebase/CoreOnly (7.7.0):
-    - FirebaseCore (= 7.7.0)
-  - Firebase/Crashlytics (7.7.0):
+    - FirebaseAnalytics (= 7.8.0)
+  - Firebase/CoreOnly (7.8.0):
+    - FirebaseCore (= 7.8.0)
+  - Firebase/Crashlytics (7.8.0):
     - Firebase/CoreOnly
-    - FirebaseCrashlytics (~> 7.7.0)
-  - Firebase/Firestore (7.7.0):
+    - FirebaseCrashlytics (~> 7.8.0)
+  - Firebase/Firestore (7.8.0):
     - Firebase/CoreOnly
-    - FirebaseFirestore (~> 7.7.0)
-  - Firebase/RemoteConfig (7.7.0):
+    - FirebaseFirestore (~> 7.8.0)
+  - Firebase/RemoteConfig (7.8.0):
     - Firebase/CoreOnly
-    - FirebaseRemoteConfig (~> 7.7.0)
-  - Firebase/Storage (7.7.0):
+    - FirebaseRemoteConfig (~> 7.8.0)
+  - Firebase/Storage (7.8.0):
     - Firebase/CoreOnly
-    - FirebaseStorage (~> 7.7.0)
-  - FirebaseABTesting (7.7.0):
+    - FirebaseStorage (~> 7.8.0)
+  - FirebaseABTesting (7.8.0):
     - FirebaseCore (~> 7.0)
-  - FirebaseAnalytics (7.7.0):
+  - FirebaseAnalytics (7.8.0):
     - FirebaseCore (~> 7.0)
     - FirebaseInstallations (~> 7.0)
-    - GoogleAppMeasurement (= 7.7.0)
+    - GoogleAppMeasurement (= 7.8.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
     - GoogleUtilities/MethodSwizzler (~> 7.0)
     - GoogleUtilities/Network (~> 7.0)
     - "GoogleUtilities/NSData+zlib (~> 7.0)"
     - nanopb (~> 2.30907.0)
-  - FirebaseAuth (7.7.0):
+  - FirebaseAuth (7.8.0):
     - FirebaseCore (~> 7.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
     - GoogleUtilities/Environment (~> 7.0)
     - GTMSessionFetcher/Core (~> 1.4)
-  - FirebaseCore (7.7.0):
+  - FirebaseCore (7.8.0):
     - FirebaseCoreDiagnostics (~> 7.4)
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Logger (~> 7.0)
-  - FirebaseCoreDiagnostics (7.7.0):
+  - FirebaseCoreDiagnostics (7.8.0):
     - GoogleDataTransport (~> 8.0)
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Logger (~> 7.0)
     - nanopb (~> 2.30907.0)
-  - FirebaseCrashlytics (7.7.0):
+  - FirebaseCrashlytics (7.8.0):
     - FirebaseCore (~> 7.0)
     - FirebaseInstallations (~> 7.0)
     - GoogleDataTransport (~> 8.0)
     - nanopb (~> 2.30907.0)
     - PromisesObjC (~> 1.2)
-  - FirebaseFirestore (7.7.0):
+  - FirebaseFirestore (7.8.0):
     - abseil/algorithm (= 0.20200225.0)
     - abseil/base (= 0.20200225.0)
     - abseil/memory (= 0.20200225.0)
@@ -295,18 +295,18 @@ PODS:
     - "gRPC-C++ (~> 1.28.0)"
     - leveldb-library (~> 1.22)
     - nanopb (~> 2.30907.0)
-  - FirebaseInstallations (7.7.0):
+  - FirebaseInstallations (7.8.0):
     - FirebaseCore (~> 7.0)
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/UserDefaults (~> 7.0)
     - PromisesObjC (~> 1.2)
-  - FirebaseRemoteConfig (7.7.0):
+  - FirebaseRemoteConfig (7.8.0):
     - FirebaseABTesting (~> 7.0)
     - FirebaseCore (~> 7.0)
     - FirebaseInstallations (~> 7.0)
     - GoogleUtilities/Environment (~> 7.0)
     - "GoogleUtilities/NSData+zlib (~> 7.0)"
-  - FirebaseStorage (7.7.0):
+  - FirebaseStorage (7.8.0):
     - FirebaseCore (~> 7.0)
     - GTMSessionFetcher/Core (~> 1.4)
   - Flipper (0.54.0):
@@ -365,32 +365,34 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.5)
-  - GoogleAppMeasurement (7.7.0):
+  - GoogleAppMeasurement (7.8.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
     - GoogleUtilities/MethodSwizzler (~> 7.0)
     - GoogleUtilities/Network (~> 7.0)
     - "GoogleUtilities/NSData+zlib (~> 7.0)"
     - nanopb (~> 2.30907.0)
-  - GoogleDataTransport (8.2.0):
+  - GoogleDataTransport (8.3.0):
+    - GoogleUtilities/Environment (~> 7.2)
     - nanopb (~> 2.30907.0)
-  - GoogleUtilities/AppDelegateSwizzler (7.2.2):
+    - PromisesObjC (~> 1.2)
+  - GoogleUtilities/AppDelegateSwizzler (7.3.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
     - GoogleUtilities/Network
-  - GoogleUtilities/Environment (7.2.2):
+  - GoogleUtilities/Environment (7.3.0):
     - PromisesObjC (~> 1.2)
-  - GoogleUtilities/Logger (7.2.2):
+  - GoogleUtilities/Logger (7.3.0):
     - GoogleUtilities/Environment
-  - GoogleUtilities/MethodSwizzler (7.2.2):
+  - GoogleUtilities/MethodSwizzler (7.3.0):
     - GoogleUtilities/Logger
-  - GoogleUtilities/Network (7.2.2):
+  - GoogleUtilities/Network (7.3.0):
     - GoogleUtilities/Logger
     - "GoogleUtilities/NSData+zlib"
     - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (7.2.2)"
-  - GoogleUtilities/Reachability (7.2.2):
+  - "GoogleUtilities/NSData+zlib (7.3.0)"
+  - GoogleUtilities/Reachability (7.3.0):
     - GoogleUtilities/Logger
-  - GoogleUtilities/UserDefaults (7.2.2):
+  - GoogleUtilities/UserDefaults (7.3.0):
     - GoogleUtilities/Logger
   - "gRPC-C++ (1.28.2)":
     - "gRPC-C++/Implementation (= 1.28.2)"
@@ -417,7 +419,7 @@ PODS:
     - gRPC-Core/Interface (= 1.28.2)
   - gRPC-Core/Interface (1.28.2)
   - GTMSessionFetcher/Core (1.5.0)
-  - leveldb-library (1.22)
+  - leveldb-library (1.22.1)
   - libwebp (1.2.0):
     - libwebp/demux (= 1.2.0)
     - libwebp/mux (= 1.2.0)
@@ -697,31 +699,31 @@ PODS:
     - React-Core
     - SDWebImage (~> 5.8)
     - SDWebImageWebPCoder (~> 0.6.1)
-  - RNFBAnalytics (11.0.0):
-    - Firebase/Analytics (= 7.7.0)
+  - RNFBAnalytics (11.1.0):
+    - Firebase/Analytics (= 7.8.0)
     - React-Core
     - RNFBApp
-  - RNFBApp (11.0.0):
-    - Firebase/CoreOnly (= 7.7.0)
+  - RNFBApp (11.1.0):
+    - Firebase/CoreOnly (= 7.8.0)
     - React-Core
-  - RNFBAuth (11.0.0):
-    - Firebase/Auth (= 7.7.0)
-    - React-Core
-    - RNFBApp
-  - RNFBCrashlytics (11.0.0):
-    - Firebase/Crashlytics (= 7.7.0)
+  - RNFBAuth (11.1.0):
+    - Firebase/Auth (= 7.8.0)
     - React-Core
     - RNFBApp
-  - RNFBFirestore (11.0.0):
-    - Firebase/Firestore (= 7.7.0)
+  - RNFBCrashlytics (11.1.0):
+    - Firebase/Crashlytics (= 7.8.0)
     - React-Core
     - RNFBApp
-  - RNFBRemoteConfig (11.0.0):
-    - Firebase/RemoteConfig (= 7.7.0)
+  - RNFBFirestore (11.1.0):
+    - Firebase/Firestore (= 7.8.0)
     - React-Core
     - RNFBApp
-  - RNFBStorage (11.0.0):
-    - Firebase/Storage (= 7.7.0)
+  - RNFBRemoteConfig (11.1.0):
+    - Firebase/RemoteConfig (= 7.8.0)
+    - React-Core
+    - RNFBApp
+  - RNFBStorage (11.1.0):
+    - Firebase/Storage (= 7.8.0)
     - React-Core
     - RNFBApp
   - RNGestureHandler (1.10.3):
@@ -1023,17 +1025,17 @@ SPEC CHECKSUMS:
   DoubleConversion: cde416483dac037923206447da6e1454df403714
   FBLazyVector: 3bb422f41b18121b71783a905c10e58606f7dc3e
   FBReactNativeSpec: f2c97f2529dd79c083355182cc158c9f98f4bd6e
-  Firebase: cd2ab85eec8170dc260186159f21072ecb679ad5
-  FirebaseABTesting: 96117eb86e2fa429520bbf5a3f02caef615f6576
-  FirebaseAnalytics: f3f8f75de34fe04141a69bb1c4bd7e24a80178e1
-  FirebaseAuth: 76aa97ecd51e20ecd21321d08474d25f5d2b7b9f
-  FirebaseCore: ac35d680a0bf32319a59966a1478e0741536b97b
-  FirebaseCoreDiagnostics: 179bf3831213451c8addd036aca7fcf5492ec154
-  FirebaseCrashlytics: 47af228115805e190b566db12c028263531b8ce0
-  FirebaseFirestore: 5e314d8ad3280576d641caf228f399dfb74f7914
-  FirebaseInstallations: 42c86e7b02ff75b7f27f85833bf5dcb5f38a9774
-  FirebaseRemoteConfig: 44024544404d1195537bd883b60d596d95e129b7
-  FirebaseStorage: 9b940765fa33494258fab6131b6180fc7c2d80f5
+  Firebase: 1e0d6610f21bdd131231525d7ee78f7f9e64e606
+  FirebaseABTesting: 44acbfc9db915bca8f111ebae342da6fd4f1cc55
+  FirebaseAnalytics: e70f7e0f1f178960a7d0b4ebec32e8c386245eda
+  FirebaseAuth: 667e576a716f6f9fe31687791406f61135002d47
+  FirebaseCore: 049029df3096e5c118917029be7da75ee16f3b1b
+  FirebaseCoreDiagnostics: 066f996579cf097bdad3d7dc9a918d6b9e129c50
+  FirebaseCrashlytics: d07e61d85aabc7d38a68f94ff99995f8557ea8d0
+  FirebaseFirestore: f1ededef972dea136e88a7bae9732f52afe64221
+  FirebaseInstallations: 7f7ed0e7e27fb51f57291e1876e2ddb1524126c1
+  FirebaseRemoteConfig: 0d7a7e45c23bfaa1f299c768b3c357ae3a5bc9d5
+  FirebaseStorage: 84d1eb7bfe8c3cbfe6beeeb02ce712f65dcb8b83
   Flipper: be611d4b742d8c87fbae2ca5f44603a02539e365
   Flipper-DoubleConversion: 38631e41ef4f9b12861c67d17cb5518d06badc41
   Flipper-Folly: e4493b013c02d9347d5e0cb4d128680239f6c78a
@@ -1043,13 +1045,13 @@ SPEC CHECKSUMS:
   FlipperKit: ab353d41aea8aae2ea6daaf813e67496642f3d7d
   Folly: b73c3869541e86821df3c387eb0af5f65addfab4
   glog: 40a13f7840415b9a77023fbcae0f1e6f43192af3
-  GoogleAppMeasurement: 0c3b134b2c0a90c4c24833873894bfe0e42a0384
-  GoogleDataTransport: 1024b1a4dfbd7a0e92cb20d7e0a6f1fb66b449a4
-  GoogleUtilities: 31c5b01f978a70c6cff2afc6272b3f1921614b43
+  GoogleAppMeasurement: dccff6095ea1cd8972a8b96d0ee38b9e6d67acbb
+  GoogleDataTransport: b006084b73915a42c28a3466961a4edda3065da6
+  GoogleUtilities: abda45f519bc4073aa1171d2f8742108def46017
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
-  leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   libwebp: e90b9c01d99205d03b6bb8f2c8c415e5a4ef66f0
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   OpenSSL-Universal: ff34003318d5e1163e9529b08470708e389ffcdd
@@ -1090,13 +1092,13 @@ SPEC CHECKSUMS:
   RNCPushNotificationIOS: 61a7c72bd1ebad3568025957d001e0f0e7b32191
   RNDeviceInfo: 7828eb110e3146324c0583c134e59db5d39f7e8b
   RNFastImage: d4870d58f5936111c56218dbd7fcfc18e65b58ff
-  RNFBAnalytics: 6a5f53ef0621a993b324a2019b637a3a10647574
-  RNFBApp: 1624ffcfc328c00ec3049d2f1bbf09d3e78dcdb7
-  RNFBAuth: 888e490f4bc371e6afa68d587c7c791976a5f52f
-  RNFBCrashlytics: 9dda657f72f488b5112d02c6d96e86840f90dab6
-  RNFBFirestore: 2e602fc143aaae72d99333caa6d36266d6fa14aa
-  RNFBRemoteConfig: 0a30390c4922534ac81af00c05f1788a7b0864c8
-  RNFBStorage: 8f40c919c0c9872424a40bfe942c6323dc58de06
+  RNFBAnalytics: d18b994c7b54e4e66553af9fc9aff3c76c528f10
+  RNFBApp: ac387b613260d2947f3eb954af5f291caaf85a65
+  RNFBAuth: 089b884677ed3ae4901f033c6b750e19ec6355ce
+  RNFBCrashlytics: fa6c1031b868df016d425dd769e9e95d8365303e
+  RNFBFirestore: eb27861ce615b2cc62b8f1041b00ef55622c2336
+  RNFBRemoteConfig: 265f3cd0cbc424092b1b4aa9bb390b97c46d2e33
+  RNFBStorage: e14579800e0e32707b125d2b96a3cb6f3dbdcf6b
   RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
   RNImageCropPicker: e641bf83ac47324994cac139bde74635ec52c17c
   RNLocalize: 43f6c30d8e19ad92282ae434d310fb463b31f419
