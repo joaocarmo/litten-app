@@ -18,5 +18,4 @@ if [ ! -f $InfoPList ]; then
 fi
 
 # Re-enable ATS prior to building the app
-edit_info_plist Set NSAppTransportSecurity:NSAllowsArbitraryLoads false
 edit_info_plist Delete NSAppTransportSecurity:NSExceptionDomains:localhost
