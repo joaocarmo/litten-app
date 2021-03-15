@@ -11,6 +11,7 @@ exports[`Snapshot test for the "UISelect" component renders correctly 1`] = `
 >
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}

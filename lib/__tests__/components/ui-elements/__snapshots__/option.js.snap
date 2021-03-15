@@ -4,6 +4,7 @@ exports[`Snapshot test for the "UISwitch" component renders correctly with descr
 Array [
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -119,6 +120,7 @@ exports[`Snapshot test for the "UISwitch" component renders correctly without de
 Array [
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
