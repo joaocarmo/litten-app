@@ -137,7 +137,7 @@
     "react-native-splash-screen": "^3.2.0",
     "react-native-svg": "^12.1.0",
     "react-native-swipe-list-view": "^3.2.6",
-    "react-native-webview": "^11.2.3",
+    "react-native-webview": "^11.2.5",
     "react-redux": "^7.2.1",
     "redux": "^4.0.5",
     "redux-persist": "^6.0.0"
