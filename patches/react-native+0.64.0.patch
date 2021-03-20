@@ -1,7 +1,6 @@
 diff --git a/node_modules/react-native/.DS_Store b/node_modules/react-native/.DS_Store
 new file mode 100644
-index 0000000..44dca2d
-Binary files /dev/null and b/node_modules/react-native/.DS_Store differ
+index 0000000..e69de29
 diff --git a/node_modules/react-native/Libraries/LinkingIOS/RCTLinkingManager.h b/node_modules/react-native/Libraries/LinkingIOS/RCTLinkingManager.h
 index 02de122..6c24aa0 100644
 --- a/node_modules/react-native/Libraries/LinkingIOS/RCTLinkingManager.h
@@ -55,10 +54,10 @@ index 02de122..6c24aa0 100644
  
  @end
 diff --git a/node_modules/react-native/Libraries/LinkingIOS/RCTLinkingManager.mm b/node_modules/react-native/Libraries/LinkingIOS/RCTLinkingManager.mm
-index 0f14b40..5a5657f 100644
+index 2d96001..1e655cb 100644
 --- a/node_modules/react-native/Libraries/LinkingIOS/RCTLinkingManager.mm
 +++ b/node_modules/react-native/Libraries/LinkingIOS/RCTLinkingManager.mm
-@@ -75,12 +75,7 @@ + (BOOL)application:(UIApplication *)application
+@@ -74,12 +74,7 @@ RCT_EXPORT_MODULE()
  
  + (BOOL)application:(UIApplication *)application
  continueUserActivity:(NSUserActivity *)userActivity

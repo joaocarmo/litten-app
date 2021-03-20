@@ -94,15 +94,25 @@
       "emptyStory": "Era uma vez...",
       "preview": "PRÉ-VISUALIZAÇÃO",
       "selfContactOptions": "Este litten é teu! Podes fazer alterações no ecrã do teu perfil e definições.",
-      "share": "Acho que podes ter interesse em {{name}} ! Porque não espreitas na Litten ? {{uri}}",
-      "shareTitle": "Espreita este Litten",
-      "story": "História"
+      "story": "História",
+      "adopt": {
+        "share": "Acho que podes ter interesse em {{name}} ! Porque não espreitas na Litten ? {{uri}}",
+        "shareTitle": "Espreita este Litten"
+      },
+      "breed": {
+        "share": "Acho que podes ter interesse em {{name}} ! Porque não espreitas na Litten ? {{uri}}",
+        "shareTitle": "Espreita este Litten"
+      },
+      "found": {
+        "share": "Acho que podes estar à procura do litten {{name}} ! Porque não espreitas na Litten ? {{uri}}",
+        "shareTitle": "Perdeste este Litten ?"
+      },
+      "lost": {
+        "share": "Encontraste o litten {{name}} ? Acho que ele se perdeu... Porque não espreitas na Litten ? {{uri}}",
+        "shareTitle": "Encontraste este Litten ?"
+      }
     },
     "messages": {
-      "emptyChatTitle1": "Gostas do litten",
-      "emptyChatTitle2": " {{name}} ",
-      "emptyChatTitle3": "?",
-      "emptyChatTitle4": "Estes são os primeiros passos...",
       "emptyText": "Inicia conversas que elas aparecerão qui",
       "emptyTitle": "Estás com vergonha?",
       "inputPlaceholder": "Escreve uma mensagem...",
@@ -110,6 +120,30 @@
       "littenTitle": "{{type}} {{species}}: {{title}}",
       "loadEarlier": "Carregar mensagens anteriores...",
       "title": "Mensagens",
+      "adopt": {
+        "emptyChatTitle1": "Gostas do litten",
+        "emptyChatTitle2": " {{name}} ",
+        "emptyChatTitle3": "?",
+        "emptyChatTitle4": "Estes são os primeiros passos..."
+      },
+      "lost": {
+        "emptyChatTitle1": "Encontraste o litten",
+        "emptyChatTitle2": " {{name}} ",
+        "emptyChatTitle3": "?",
+        "emptyChatTitle4": "Ajuda-o a regressar a casa..."
+      },
+      "found": {
+        "emptyChatTitle1": "Perdeste o litten",
+        "emptyChatTitle2": " {{name}} ",
+        "emptyChatTitle3": "?",
+        "emptyChatTitle4": "Ele está à tua espera..."
+      },
+      "breed": {
+        "emptyChatTitle1": "Gostas do litten",
+        "emptyChatTitle2": " {{name}} ",
+        "emptyChatTitle3": "?",
+        "emptyChatTitle4": "Estes são os primeiros passos..."
+      },
       "options": {
         "deleteConversation": "Apagar Conversa",
         "reportConversation": "Denunciar Conversation",
