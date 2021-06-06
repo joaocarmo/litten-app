@@ -57,7 +57,7 @@ diff --git a/node_modules/react-native/Libraries/LinkingIOS/RCTLinkingManager.mm
 index 2d96001..1e655cb 100644
 --- a/node_modules/react-native/Libraries/LinkingIOS/RCTLinkingManager.mm
 +++ b/node_modules/react-native/Libraries/LinkingIOS/RCTLinkingManager.mm
-@@ -74,12 +74,7 @@ RCT_EXPORT_MODULE()
+@@ -74,12 +74,7 @@ + (BOOL)application:(UIApplication *)application
  
  + (BOOL)application:(UIApplication *)application
  continueUserActivity:(NSUserActivity *)userActivity
