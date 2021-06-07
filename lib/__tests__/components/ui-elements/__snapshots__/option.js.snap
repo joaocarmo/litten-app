@@ -4,6 +4,7 @@ exports[`Snapshot test for the "UISwitch" component renders correctly with descr
 Array [
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -86,30 +87,34 @@ Array [
     items={
       Array [
         Object {
+          "color": null,
+          "enabled": true,
           "label": "One",
-          "value": "one",
+          "style": Object {
+            "backgroundColor": null,
+            "color": null,
+          },
         },
         Object {
+          "color": null,
+          "enabled": true,
           "label": "Two",
-          "value": "two",
+          "style": Object {
+            "backgroundColor": null,
+            "color": null,
+          },
         },
       ]
     }
-    mode="dialog"
     onSelect={[Function]}
     selected={0}
     style={
-      Array [
-        Object {
-          "height": 50,
-        },
-        Object {
-          "height": 2000,
-          "position": "absolute",
-          "top": 0,
-          "width": 2000,
-        },
-      ]
+      Object {
+        "height": 2000,
+        "position": "absolute",
+        "top": 0,
+        "width": 2000,
+      }
     }
   />,
 ]
@@ -119,6 +124,7 @@ exports[`Snapshot test for the "UISwitch" component renders correctly without de
 Array [
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
@@ -179,30 +185,34 @@ Array [
     items={
       Array [
         Object {
+          "color": null,
+          "enabled": true,
           "label": "One",
-          "value": "one",
+          "style": Object {
+            "backgroundColor": null,
+            "color": null,
+          },
         },
         Object {
+          "color": null,
+          "enabled": true,
           "label": "Two",
-          "value": "two",
+          "style": Object {
+            "backgroundColor": null,
+            "color": null,
+          },
         },
       ]
     }
-    mode="dialog"
     onSelect={[Function]}
     selected={0}
     style={
-      Array [
-        Object {
-          "height": 50,
-        },
-        Object {
-          "height": 2000,
-          "position": "absolute",
-          "top": 0,
-          "width": 2000,
-        },
-      ]
+      Object {
+        "height": 2000,
+        "position": "absolute",
+        "top": 0,
+        "width": 2000,
+      }
     }
   />,
 ]

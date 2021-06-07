@@ -94,15 +94,25 @@
       "emptyStory": "Once upon a time...",
       "preview": "PREVIEW",
       "selfContactOptions": "This is your litten! You can perform edits in your profile and settings tab.",
-      "share": "I think you might be interested in {{name}} ! Why don't you check them out on Litten ? {{uri}} ",
-      "shareTitle": "Check out this Litten",
-      "story": "Story"
+      "story": "Story",
+      "adopt": {
+        "share": "I think you might be interested in {{name}} ! Why don't you check them out on Litten ? {{uri}} ",
+        "shareTitle": "Check out this Litten"
+      },
+      "breed": {
+        "share": "I think you might be interested in {{name}} ! Why don't you check them out on Litten ? {{uri}} ",
+        "shareTitle": "Check out this Litten"
+      },
+      "found": {
+        "share": "I think you might be looking for {{name}} ! Why don't you check them out on Litten ? {{uri}} ",
+        "shareTitle": "Did you lose this Litten ?"
+      },
+      "lost": {
+        "share": "Did you find {{name}} ? I think they're lost... Why don't you check them out on Litten ? {{uri}} ",
+        "shareTitle": "Did you find this Litten ?"
+      }
     },
     "messages": {
-      "emptyChatTitle1": "Do you like",
-      "emptyChatTitle2": " {{name}} ",
-      "emptyChatTitle3": "?",
-      "emptyChatTitle4": "These are your first steps...",
       "emptyText": "Start conversations and they will show up in here",
       "emptyTitle": "Are you feeling shy?",
       "inputPlaceholder": "Type a message...",
@@ -110,6 +120,30 @@
       "littenTitle": "{{type}} {{species}}: {{title}}",
       "loadEarlier": "Load earlier messages...",
       "title": "Messages",
+      "adopt": {
+        "emptyChatTitle1": "Do you like",
+        "emptyChatTitle2": " {{name}} ",
+        "emptyChatTitle3": "?",
+        "emptyChatTitle4": "These are your first steps..."
+      },
+      "lost": {
+        "emptyChatTitle1": "Did you find",
+        "emptyChatTitle2": " {{name}} ",
+        "emptyChatTitle3": "?",
+        "emptyChatTitle4": "Help them get back home..."
+      },
+      "found": {
+        "emptyChatTitle1": "Did you lose",
+        "emptyChatTitle2": " {{name}} ",
+        "emptyChatTitle3": "?",
+        "emptyChatTitle4": "They are waiting..."
+      },
+      "breed": {
+        "emptyChatTitle1": "Do you like",
+        "emptyChatTitle2": " {{name}} ",
+        "emptyChatTitle3": "?",
+        "emptyChatTitle4": "These are your first steps..."
+      },
       "options": {
         "deleteConversation": "Delete Conversation",
         "reportConversation": "Report Conversation",

@@ -12,6 +12,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
 >
   <View
     accessible={true}
+    collapsable={false}
     focusable={true}
     onBlur={[Function]}
     onClick={[Function]}
