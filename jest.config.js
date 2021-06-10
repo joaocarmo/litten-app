@@ -25,7 +25,6 @@ module.exports = {
     {
       displayName: 'model',
       testEnvironment: 'node',
-      runner: 'jest-serial-runner',
       timers: 'real',
       testMatch: [
         '**/__model__tests__/**/*.[jt]s?(x)',

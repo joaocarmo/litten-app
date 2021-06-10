@@ -59,16 +59,7 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
       <View
         style={
           Array [
-            Object {
-              "backgroundColor": "white",
-              "borderRadius": 3,
-              "elevation": 4,
-              "flexDirection": "column",
-              "margin": 16,
-              "minWidth": 300,
-              "overflow": "hidden",
-              "padding": 16,
-            },
+            null,
             Object {},
           ]
         }
@@ -76,9 +67,7 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
         <View
           style={
             Array [
-              Object {
-                "margin": 12,
-              },
+              null,
               Object {},
             ]
           }
@@ -86,10 +75,7 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
           <Text
             style={
               Array [
-                Object {
-                  "fontSize": 18,
-                  "fontWeight": "500",
-                },
+                null,
                 undefined,
               ]
             }
@@ -99,11 +85,7 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
           <Text
             style={
               Array [
-                Object {
-                  "color": "#33383D",
-                  "fontSize": 16,
-                  "marginTop": 10,
-                },
+                null,
                 undefined,
               ]
             }
@@ -114,10 +96,7 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
         <View
           style={
             Array [
-              Object {
-                "marginBottom": 20,
-                "marginHorizontal": 10,
-              },
+              null,
               undefined,
             ]
           }
@@ -128,32 +107,37 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
             autoFocus={true}
             onChangeText={[Function]}
             placeholder="Password"
+            placeholderTextColor={
+              Object {
+                "resource_paths": Array [
+                  "@android:color/hint_foreground_light",
+                ],
+              }
+            }
             rejectResponderTermination={true}
             secureTextEntry={true}
             style={
               Array [
-                Object {
-                  "marginLeft": -4,
-                  "paddingLeft": 4,
-                },
+                null,
                 undefined,
                 Object {
                   "height": 18,
                 },
               ]
             }
-            underlineColorAndroid="transparent"
+            underlineColorAndroid={
+              Object {
+                "resource_paths": Array [
+                  "@android:color/hint_foreground_light",
+                ],
+              }
+            }
           />
         </View>
         <View
           style={
             Array [
-              Object {
-                "alignItems": "center",
-                "flexDirection": "row",
-                "justifyContent": "flex-end",
-                "marginTop": 4,
-              },
+              null,
               Object {},
             ]
           }
@@ -170,8 +154,6 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "alignItems": "center",
-                "justifyContent": "center",
                 "opacity": 1,
               }
             }
@@ -179,12 +161,7 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
             <Text
               style={
                 Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                    "fontSize": 14,
-                    "padding": 8,
-                    "textAlign": "center",
-                  },
+                  null,
                   Object {
                     "color": "#169689",
                     "fontWeight": "normal",
@@ -208,8 +185,6 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "alignItems": "center",
-                "justifyContent": "center",
                 "opacity": 1,
               }
             }
@@ -217,12 +192,7 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
             <Text
               style={
                 Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                    "fontSize": 14,
-                    "padding": 8,
-                    "textAlign": "center",
-                  },
+                  null,
                   Object {
                     "color": "#e30000",
                     "fontWeight": "normal",
