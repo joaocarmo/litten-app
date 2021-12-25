@@ -6,9 +6,9 @@ module.exports = {
     'plugin:jest/recommended',
     'plugin:jest/style',
     'plugin:flowtype/recommended',
-    'prettier',
+    'plugin:prettier/recommended',
   ],
-  plugins: ['jest', 'flowtype'],
+  plugins: ['jest', 'flowtype', 'prettier'],
   env: {
     'jest/globals': true,
   },
