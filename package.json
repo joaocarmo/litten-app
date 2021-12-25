@@ -171,7 +171,7 @@
     "papaparse": "^5.3.0",
     "patch-package": "^6.4.6",
     "pinst": "^2.1.6",
-    "pod-install": "^0.1.18",
+    "pod-install": "^0.1.30",
     "postinstall-postinstall": "^2.1.0",
     "prettier": "^2.2.1",
     "preval.macro": "^5.0.0",

@@ -11544,10 +11544,10 @@ plist@^3.0.1:
     xmlbuilder "^9.0.7"
     xmldom "^0.5.0"
 
-pod-install@^0.1.18:
-  version "0.1.23"
-  resolved "https://registry.yarnpkg.com/pod-install/-/pod-install-0.1.23.tgz#2f9965d52155d923a0fcf7f216f5dfc8dcf831dc"
-  integrity sha512-xm7lqmqgCU3sea4hgRQmLwFFQr20Q9g3xJnpbBLzjQ776O78NLFNrq2fY40vTb3oBNf47ORPNeI35aStWJNcqg==
+pod-install@^0.1.30:
+  version "0.1.30"
+  resolved "https://registry.yarnpkg.com/pod-install/-/pod-install-0.1.30.tgz#a41e47a9244e356cd6c3d51fd796746572562772"
+  integrity sha512-fkiDyRiGLButNypNq1zyKoMkih16k/0t9oVEUxaIGtkiCuBqEkcLmk1p4Vrd/FcIw9Ohi4RK1xJMxnUJTn+nYw==
 
 portfinder@^1.0.23:
   version "1.0.28"
