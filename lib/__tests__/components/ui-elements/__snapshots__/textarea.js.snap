@@ -2,9 +2,7 @@
 
 exports[`Snapshot test for the "UITextArea" component renders correctly 1`] = `
 <TextInput
-  allowFontScaling={true}
   multiline={true}
-  rejectResponderTermination={true}
   style={
     Array [
       Object {
@@ -26,7 +24,6 @@ exports[`Snapshot test for the "UITextArea" component renders correctly 1`] = `
       undefined,
     ]
   }
-  underlineColorAndroid="transparent"
   value="Some text here"
 />
 `;
