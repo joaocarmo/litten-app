@@ -1,4 +1,4 @@
-# OSX
+# macOS
 .DS_Store
 
 # Xcode
@@ -71,6 +71,9 @@ secure.properties
 # Flow typed
 flow-typed/npm/
 !flow-typed/npm/dayjs_v1.x.x.js
+
+# ESLint
+.eslintcache
 
 # Firebase persistence
 firebase/
