@@ -7,6 +7,7 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
   onHide={[Function]}
   renderToHardwareTextureAndroid={true}
   transparent={true}
+  useNativeDriver={false}
   visible={true}
 >
   <View
@@ -60,7 +61,7 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
         style={
           Array [
             null,
-            Object {},
+            undefined,
           ]
         }
       >
@@ -68,7 +69,7 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
           style={
             Array [
               null,
-              Object {},
+              undefined,
             ]
           }
         >
@@ -102,7 +103,6 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
           }
         >
           <TextInput
-            allowFontScaling={true}
             autoCapitalize="none"
             autoFocus={true}
             onChangeText={[Function]}
@@ -114,7 +114,6 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
                 ],
               }
             }
-            rejectResponderTermination={true}
             secureTextEntry={true}
             style={
               Array [
@@ -137,14 +136,24 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
         <View
           style={
             Array [
+              Object {
+                "flexDirection": "row",
+              },
               null,
-              Object {},
+              undefined,
             ]
           }
         >
           <View
+            accessibilityState={
+              Object {
+                "disabled": false,
+              }
+            }
             accessible={true}
+            collapsable={false}
             focusable={true}
+            nativeID="animatedComponent"
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -170,12 +179,19 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
                 ]
               }
             >
-              CANCEL
+              Cancel
             </Text>
           </View>
           <View
+            accessibilityState={
+              Object {
+                "disabled": false,
+              }
+            }
             accessible={true}
+            collapsable={false}
             focusable={true}
+            nativeID="animatedComponent"
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -201,7 +217,7 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
                 ]
               }
             >
-              CONFIRM
+              Confirm
             </Text>
           </View>
         </View>

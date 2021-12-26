@@ -26,6 +26,7 @@ exports[`Snapshot test for the "UISlider" component renders correctly 1`] = `
       ],
     ]
   }
+  tapToSeek={false}
   thumbImage={null}
   thumbTintColor="#ffffff"
   value={35}

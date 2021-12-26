@@ -12,14 +12,12 @@ exports[`Snapshot test for the "UISearch" component renders correctly 1`] = `
   }
 >
   <TextInput
-    allowFontScaling={true}
     autoCapitalize="none"
     enablesReturnKeyAutomatically={true}
     onChangeText={[Function]}
     onSubmitEditing={[Function]}
     placeholder="Search"
     placeholderTextColor="#c4c4c4"
-    rejectResponderTermination={true}
     returnKeyType="search"
     style={
       Array [
@@ -33,7 +31,6 @@ exports[`Snapshot test for the "UISearch" component renders correctly 1`] = `
         undefined,
       ]
     }
-    underlineColorAndroid="transparent"
     value=""
   />
 </View>

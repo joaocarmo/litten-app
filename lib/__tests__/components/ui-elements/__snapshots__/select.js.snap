@@ -26,13 +26,11 @@ exports[`Snapshot test for the "UISelect" component renders correctly 1`] = `
   >
     <TextInput
       active={false}
-      allowFontScaling={true}
       editable={false}
       onBlur={[Function]}
       onFocus={[Function]}
       placeholder="Some text here"
       placeholderTextColor="#c4c4c4"
-      rejectResponderTermination={true}
       style={
         Array [
           Array [
@@ -59,7 +57,6 @@ exports[`Snapshot test for the "UISelect" component renders correctly 1`] = `
           ],
         ]
       }
-      underlineColorAndroid="transparent"
       value="One"
     />
   </View>

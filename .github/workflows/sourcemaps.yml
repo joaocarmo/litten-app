@@ -19,9 +19,10 @@ jobs:
       with:
         ref: ${{ github.event.inputs.tag }}
     - name: Use Node.js v14 (LTS)
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
         node-version: '14'
+        cache: 'yarn'
     - name: Create .env file
       run: cp .env.example .env
     - uses: c-hive/gha-yarn-cache@v1

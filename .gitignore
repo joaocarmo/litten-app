@@ -1,4 +1,4 @@
-# OSX
+# macOS
 .DS_Store
 
 # Xcode
@@ -25,6 +25,7 @@ build/
 .gradle
 local.properties
 *.iml
+*.hprof
 
 # node.js
 node_modules/
@@ -70,6 +71,9 @@ secure.properties
 # Flow typed
 flow-typed/npm/
 !flow-typed/npm/dayjs_v1.x.x.js
+
+# ESLint
+.eslintcache
 
 # Firebase persistence
 firebase/
