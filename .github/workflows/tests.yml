@@ -29,8 +29,6 @@ jobs:
       run: yarn --frozen-lockfile
     - name: Install typings
       run: yarn flow-typed install
-    - name: Temporary workaround (for the @react-navigation types)
-      run: rm -rf flow-typed/npm/@react-navigation/
 
     - name: Lint the source files
       run: yarn lint
