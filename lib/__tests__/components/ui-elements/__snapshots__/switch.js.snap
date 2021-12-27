@@ -38,7 +38,7 @@ Array [
       onChange={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
-      thumbTintColor="#ffffff"
+      thumbTintColor="#c4c4c4"
       trackColorForFalse="#dcdee1"
       trackColorForTrue="#7239f2"
       trackTintColor="#7239f2"
@@ -106,7 +106,7 @@ exports[`Snapshot test for the "UISwitch" component renders correctly without de
     onChange={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    thumbTintColor="#ffffff"
+    thumbTintColor="#c4c4c4"
     trackColorForFalse="#dcdee1"
     trackColorForTrue="#7239f2"
     trackTintColor="#7239f2"
