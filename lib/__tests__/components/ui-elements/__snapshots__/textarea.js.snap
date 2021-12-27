@@ -3,11 +3,13 @@
 exports[`Snapshot test for the "UITextArea" component renders correctly 1`] = `
 <TextInput
   multiline={true}
+  placeholderTextColor="#c4c4c4"
   style={
     Array [
       Object {
         "backgroundColor": "#ffffff",
         "borderRadius": 6,
+        "color": "#000000",
         "flex": 1,
         "marginBottom": 8,
         "marginTop": 8,

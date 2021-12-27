@@ -6,7 +6,7 @@ exports[`Snapshot test for the "UISlider" component renders correctly 1`] = `
   enabled={true}
   inverted={false}
   maximumValue={100}
-  minimumTrackTintColor="#7239f2"
+  minimumTrackTintColor="#84bff1"
   minimumValue={1}
   onChange={null}
   onRNCSliderSlidingComplete={null}
@@ -28,7 +28,7 @@ exports[`Snapshot test for the "UISlider" component renders correctly 1`] = `
   }
   tapToSeek={false}
   thumbImage={null}
-  thumbTintColor="#ffffff"
+  thumbTintColor="#7239f2"
   value={35}
 />
 `;
