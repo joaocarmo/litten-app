@@ -5,7 +5,6 @@ exports[`Snapshot test for the "UIInput" component renders correctly 1`] = `
   onBlur={[Function]}
   onFocus={[Function]}
   placeholder="Some text here"
-  placeholderTextColor="#c4c4c4"
   style={
     Array [
       Object {
