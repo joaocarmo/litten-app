@@ -29,6 +29,8 @@ jobs:
       run: yarn --frozen-lockfile
     - name: Install typings
       run: yarn flow-typed install
+    - name: Temporary workaround
+      run: rm -f flow-typed/npm/@reduxjs/toolkit_v1.x.x.js
 
     - name: Lint the source files
       run: yarn lint
