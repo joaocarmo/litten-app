@@ -10,3 +10,41 @@ index 414eefc..7cf98e3 100644
    renderChatFooter?: () => React.Node,
    renderInputToolbar?: InputToolbarProps => React.Node,
    renderComposer?: ComposerProps => React.Node,
+diff --git a/node_modules/react-native-gifted-chat/lib/MessageContainer.js b/node_modules/react-native-gifted-chat/lib/MessageContainer.js
+index 193772a..79bd4af 100644
+--- a/node_modules/react-native-gifted-chat/lib/MessageContainer.js
++++ b/node_modules/react-native-gifted-chat/lib/MessageContainer.js
+@@ -52,21 +52,24 @@ export default class MessageContainer extends React.PureComponent {
+         this.state = {
+             showScrollBottom: false,
+         };
++        this.kbEventWillShow = null;
++        this.kbEventDidShow = null;
++        this.kbEventWillHide = null;
++        this.kbEventDidHide = null;
+         this.attachKeyboardListeners = () => {
+             const { invertibleScrollViewProps: invertibleProps } = this.props;
+             if (invertibleProps) {
+-                Keyboard.addListener('keyboardWillShow', invertibleProps.onKeyboardWillShow);
+-                Keyboard.addListener('keyboardDidShow', invertibleProps.onKeyboardDidShow);
+-                Keyboard.addListener('keyboardWillHide', invertibleProps.onKeyboardWillHide);
+-                Keyboard.addListener('keyboardDidHide', invertibleProps.onKeyboardDidHide);
++                this.kbEventWillShow = Keyboard.addListener('keyboardWillShow', invertibleProps.onKeyboardWillShow);
++                this.kbEventDidShow = Keyboard.addListener('keyboardDidShow', invertibleProps.onKeyboardDidShow);
++                this.kbEventWillHide = Keyboard.addListener('keyboardWillHide', invertibleProps.onKeyboardWillHide);
++                this.kbEventDidHide = Keyboard.addListener('keyboardDidHide', invertibleProps.onKeyboardDidHide);
+             }
+         };
+         this.detachKeyboardListeners = () => {
+-            const { invertibleScrollViewProps: invertibleProps } = this.props;
+-            Keyboard.removeListener('keyboardWillShow', invertibleProps.onKeyboardWillShow);
+-            Keyboard.removeListener('keyboardDidShow', invertibleProps.onKeyboardDidShow);
+-            Keyboard.removeListener('keyboardWillHide', invertibleProps.onKeyboardWillHide);
+-            Keyboard.removeListener('keyboardDidHide', invertibleProps.onKeyboardDidHide);
++            this.kbEventWillShow && this.kbEventWillShow.remove();
++            this.kbEventDidShow && this.kbEventDidShow.remove();
++            this.kbEventWillHide && this.kbEventWillHide.remove();
++            this.kbEventDidHide && this.kbEventDidHide.remove();
+         };
+         this.renderTypingIndicator = () => {
+             if (Platform.OS === 'web') {
