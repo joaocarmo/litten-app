@@ -17,12 +17,14 @@ exports[`Snapshot test for the "UISearch" component renders correctly 1`] = `
     onChangeText={[Function]}
     onSubmitEditing={[Function]}
     placeholder="Search"
+    placeholderTextColor="#c4c4c4"
     returnKeyType="search"
     style={
       Array [
         Object {
           "backgroundColor": "#ffffff",
           "borderRadius": 24,
+          "color": "#000000",
           "minHeight": 44,
           "padding": 8,
           "paddingLeft": 24,
