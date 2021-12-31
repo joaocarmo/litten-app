@@ -27,7 +27,7 @@ module.exports = (api) => {
         },
       ],
       [
-        '@babel/plugin-transform-react-jsx',
+        '@babel/preset-react',
         {
           runtime: 'automatic',
         },
