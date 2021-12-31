@@ -1,0 +1,11 @@
+# node.js
+node_modules
+
+# configs
+.eslintrc.js
+jest.setup.js
+metro.config.js
+
+# scripts
+scripts/
+lib/fixtures/seed.js

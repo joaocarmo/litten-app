@@ -1,13 +1,14 @@
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
+  parser: '@typescript-eslint/parser',
   extends: [
     '@react-native-community',
     'plugin:jest/recommended',
     'plugin:jest/style',
     'plugin:prettier/recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
-  plugins: ['jest', 'prettier'],
+  plugins: ['@typescript-eslint', 'jest', 'prettier'],
   env: {
     'jest/globals': true,
   },
@@ -21,22 +22,10 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/__tests__/**/*.{js,jsx}'],
+      files: ['**/__tests__/**/*.{js,jsx,ts,tsx}'],
       rules: {
         'react/jsx-no-literals': 'off',
       },
-    },
-    {
-      files: ['**/lib/**/*.{ts,tsx}'],
-      parser: '@typescript-eslint/parser',
-      plugins: ['@typescript-eslint', 'jest', 'prettier'],
-      extends: [
-        '@react-native-community',
-        'plugin:jest/recommended',
-        'plugin:jest/style',
-        'plugin:prettier/recommended',
-        'plugin:@typescript-eslint/recommended',
-      ],
     },
   ],
 }

@@ -9,7 +9,28 @@
     "moduleResolution": "node",
     "noEmit": true,
     "strict": true,
-    "target": "esnext"
+    "target": "esnext",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["lib/*"],
+      "@components/*": ["lib/components/*"],
+      "@config/*": ["lib/config/*"],
+      "@data/*": ["lib/data/*"],
+      "@db/*": ["lib/db/*"],
+      "@fixtures/*": ["lib/fixtures/*"],
+      "@forms/*": ["lib/forms/*"],
+      "@hooks/*": ["lib/hooks/*"],
+      "@images/*": ["lib/images/*"],
+      "@model/*": ["lib/model/*"],
+      "@screens/*": ["lib/screens/*"],
+      "@store/*": ["lib/store/*"],
+      "@structure/*": ["lib/structure/*"],
+      "@styles/*": ["lib/styles/*"],
+      "@templates/*": ["lib/templates/*"],
+      "@translations/*": ["lib/translations/*"],
+      "@ui-elements/*": ["lib/ui-elements/*"],
+      "@utils/*": ["lib/utils/*"]
+    }
   },
   "exclude": [
     "node_modules",
