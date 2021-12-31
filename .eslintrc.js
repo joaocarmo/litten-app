@@ -5,10 +5,9 @@ module.exports = {
     '@react-native-community',
     'plugin:jest/recommended',
     'plugin:jest/style',
-    'plugin:flowtype/recommended',
     'plugin:prettier/recommended',
   ],
-  plugins: ['jest', 'flowtype', 'prettier'],
+  plugins: ['jest', 'prettier'],
   env: {
     'jest/globals': true,
   },
@@ -22,15 +21,22 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/__tests__/**/*.js'],
+      files: ['**/__tests__/**/*.{js,jsx}'],
       rules: {
         'react/jsx-no-literals': 'off',
       },
     },
-  ],
-  settings: {
-    flowtype: {
-      onlyFilesWithFlowAnnotation: true,
+    {
+      files: ['**/lib/**/*.{ts,tsx}'],
+      parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint', 'jest', 'prettier'],
+      extends: [
+        '@react-native-community',
+        'plugin:jest/recommended',
+        'plugin:jest/style',
+        'plugin:prettier/recommended',
+        'plugin:@typescript-eslint/recommended',
+      ],
     },
-  },
+  ],
 }

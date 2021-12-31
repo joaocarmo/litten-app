@@ -58,8 +58,8 @@
     "link:android:verification": "adb shell am start -W -a android.intent.action.VIEW -d \"https://litten.app/open/verification?mode=action&oobCode=code\"",
     "link:ios:litten": "xcrun simctl openurl booted https://litten.app/open/litten/$LITTEN_UID",
     "link:ios:verification": "xcrun simctl openurl booted 'https://litten.app/open/verification?mode=action&oobCode=code'",
-    "lint:fix": "eslint . --fix",
-    "lint": "eslint .",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "log:android": "react-native log-android",
     "log:ios": "react-native log-ios",
     "pods": "pod-install",
@@ -82,12 +82,12 @@
     "test:firestore:rules": "firebase emulators:exec './scripts/firestore-rules-test.js'",
     "test": "jest --selectProjects default --forceExit",
     "translations-check": "./scripts/validate-translations",
-    "type-check": "yarn flow",
+    "type-check": "tsc --noEmit",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,jsx}": "eslint --cache --fix",
-    "*.{js,jsx,json,yml,yaml,md}": "prettier --write"
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "*.{js,jsx,ts,tsx,json,yml,yaml,md}": "prettier --write"
   },
   "dependencies": {
     "@expo/react-native-action-sheet": "^3.12.0",
@@ -151,6 +151,12 @@
     "@firebase/rules-unit-testing": "^1.3.15",
     "@react-native-community/eslint-config": "^3.0.1",
     "@redux-devtools/cli": "^1.0.0-10",
+    "@types/jest": "^27.4.0",
+    "@types/react": "^17.0.38",
+    "@types/react-native": "^0.66.10",
+    "@types/react-test-renderer": "^17.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
     "babel-jest": "^27.4.5",
     "babel-loader": "^8.2.3",
     "babel-plugin-dotenv-import": "^2.2.0",
@@ -164,7 +170,6 @@
     "firebase-admin": "^10.0.1",
     "firebase-tools": "^10.0.1",
     "flat": "^5.0.2",
-    "flow-bin": "^0.168.0",
     "flow-typed": "^3.6.0",
     "husky": "^7.0.4",
     "jest": "^27.4.5",
@@ -184,6 +189,7 @@
     "react-native-version": "^4.0.0",
     "react-test-renderer": "17.0.2",
     "remote-redux-devtools": "^0.5.16",
+    "typescript": "^4.5.4",
     "world-countries": "^4.0.0"
   }
 }

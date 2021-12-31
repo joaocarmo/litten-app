@@ -7,6 +7,7 @@ const globalConfig = {
       '<rootDir>/lib/__mocks__/fileMock.js',
     '\\.svg$': '<rootDir>/lib/__mocks__/svgMock.js',
   },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 }
 
 module.exports = {
