@@ -1,12 +1,13 @@
 import firestore from 'db/firestore'
 import Base from 'model/base'
 import Message from 'model/message'
-import type { BasicChat, ChatClass } from 'model/types/chat'
+import type { BasicChat } from 'model/types/chat'
 import {
   CHATS_INITIAL_NUM_TO_RENDER,
   DB_CHAT_COLLECTION,
 } from 'utils/constants'
 import { logError } from 'utils/dev'
+
 export class ChatError extends Error {
   constructor(...args: string[]) {
     super(...args)
@@ -19,7 +20,8 @@ export class ChatError extends Error {
     this.name = 'ChatError'
   }
 }
-export default class Chat extends Base implements ChatClass {
+
+export default class Chat extends Base {
   static #cursor = null
   static #numOfItemsPerPage = CHATS_INITIAL_NUM_TO_RENDER
   #lastMessage
@@ -236,7 +238,10 @@ export default class Chat extends Base implements ChatClass {
     }
   }
 
-  async update(updateObject: {}, updateTimestamp = true): Promise<void> {
+  async update(
+    updateObject: Record<string, unknown>,
+    updateTimestamp = true,
+  ): Promise<void> {
     if (this.id) {
       let newUpdateObject = updateObject
 

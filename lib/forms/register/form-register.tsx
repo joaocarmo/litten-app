@@ -79,6 +79,7 @@ const RegisterForm = (props): FC => {
           return !validStep.email?.error && !validStep.displayName?.error
         },
 
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
         clear() {},
       },
       {
@@ -107,6 +108,7 @@ const RegisterForm = (props): FC => {
           return !validStep.password?.error && !validStep.passwordConfirm?.error
         },
 
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
         clear() {},
       },
       {

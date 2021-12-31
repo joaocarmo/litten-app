@@ -4,15 +4,12 @@ import { configureStore } from '@reduxjs/toolkit'
 import devToolsEnhancer from 'remote-redux-devtools'
 import rootReducer from 'store/reducers'
 import { devToolsConfig, persistConfig } from 'config/store'
-import type { Persistor } from 'redux-persist/lib/types'
-import type { Store } from 'redux'
-import type { Action, Dispatch } from 'store/types/state'
 
 const setupStore = (): {
-  persistor: Persistor
-  store: Store<any, Action, Dispatch>
+  persistor
+  store
 } => {
-  const persistedReducer = persistReducer<any, any>(persistConfig, rootReducer)
+  const persistedReducer = persistReducer(persistConfig, rootReducer)
   const store = configureStore({
     reducer: persistedReducer,
     middleware: (getDefaultMiddleware) =>
@@ -24,11 +21,10 @@ const setupStore = (): {
   const persistor = persistStore(store)
 
   // Enable hot module replacement for reducers
-  // $FlowFixMe
   if (APP_IS_DEV && module.hot) {
-    // $FlowFixMe
     module.hot.accept(() => {
-      const nextRootReducer: any = require('./reducers/index').default
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      const nextRootReducer = require('./reducers/index').default
 
       store.replaceReducer(nextRootReducer)
     })

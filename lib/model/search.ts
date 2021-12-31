@@ -36,6 +36,10 @@ export default class Search {
     return ''
   }
 
+  set query(query: string) {
+    this.#query = query
+  }
+
   get queryArray(): string[] {
     return string2tags(this.query).slice(0, 10)
   }
@@ -60,15 +64,11 @@ export default class Search {
     return feed
   }
 
-  set query(query: string) {
-    this.#query = query
-  }
-
-  startAfter(doc: any) {
+  startAfter(doc: any): void {
     this.#cursor = doc
   }
 
-  clearCursor() {
+  clearCursor(): void {
     this.#cursor = null
   }
 

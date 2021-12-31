@@ -2,6 +2,7 @@ import dayjs from 'dayjs'
 import localizedFormat from 'dayjs/plugin/localizedFormat'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import { locale as i18nLocale } from 'utils/i18n'
+
 const supportedLocales = {
   'en-au': require('dayjs/locale/en-au'),
   'en-ca': require('dayjs/locale/en-ca'),
@@ -16,8 +17,10 @@ const supportedLocales = {
   'pt-br': require('dayjs/locale/pt-br'),
   pt: require('dayjs/locale/pt'),
 }
-let locale: any | string = 'en'
-let currentLocale: any | {} = {}
+
+let locale = 'en'
+
+let currentLocale: unknown
 
 if (i18nLocale) {
   locale = i18nLocale.toLowerCase()
@@ -33,5 +36,7 @@ if (i18nLocale) {
 dayjs.extend(relativeTime)
 dayjs.extend(localizedFormat)
 dayjs.locale(locale)
+
 export default dayjs
+
 export { currentLocale, locale }

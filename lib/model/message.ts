@@ -1,7 +1,7 @@
 import firestore from 'db/firestore'
 import Base from 'model/base'
 import { debugLog } from 'utils/dev'
-import type { BasicMessage, MessageClass } from 'model/types/message'
+import type { BasicMessage } from 'model/types/message'
 import { DB_MESSAGE_COLLECTION, DB_MESSAGE_BATCH_AMOUNT } from 'utils/constants'
 export class MessageError extends Error {
   constructor(...args: string[]) {
@@ -15,7 +15,7 @@ export class MessageError extends Error {
     this.name = 'MessageError'
   }
 }
-export default class Message extends Base implements MessageClass {
+export default class Message extends Base {
   #cursor = null
   #numOfItemsPerPage = DB_MESSAGE_BATCH_AMOUNT
   #chatUid
@@ -47,20 +47,20 @@ export default class Message extends Base implements MessageClass {
     return this.#chatUid
   }
 
-  get text(): string {
-    return this.#text
-  }
-
-  get userUid(): string {
-    return this.#userUid
-  }
-
   set chatUid(chatUid: string) {
     this.#chatUid = chatUid
   }
 
+  get text(): string {
+    return this.#text
+  }
+
   set text(text: string) {
     this.#text = text
+  }
+
+  get userUid(): string {
+    return this.#userUid
   }
 
   set userUid(userUid: string) {

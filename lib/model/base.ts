@@ -16,8 +16,16 @@ export default class Base {
     return this.#id
   }
 
+  set id(id: string | void = '') {
+    this.#id = id
+  }
+
   get location(): DBLocationObject | void {
     return this.#location
+  }
+
+  set location(location: DBLocationObject = {}) {
+    this.#location = { ...locationSchema, ...location }
   }
 
   get coordinates(): DBCoordinateObject {
@@ -30,8 +38,21 @@ export default class Base {
     }
   }
 
+  set coordinates(coordinates: DBCoordinateObject) {
+    this.#location = { ...locationSchema, coordinates }
+  }
+
   get metadata(): DBMetadata | void {
     return this.#metadata
+  }
+
+  set metadata(
+    metadata: DBMetadata = {
+      createdAt: {},
+      updatedAt: {},
+    },
+  ) {
+    this.#metadata = metadata
   }
 
   get createdAt(): number | void {
@@ -50,27 +71,6 @@ export default class Base {
     }
   }
 
-  set id(id: string | void = '') {
-    this.#id = id
-  }
-
-  set location(location: DBLocationObject = {}) {
-    this.#location = { ...locationSchema, ...location }
-  }
-
-  set coordinates(coordinates: DBCoordinateObject) {
-    this.#location = { ...locationSchema, coordinates }
-  }
-
-  set metadata(
-    metadata: DBMetadata = {
-      createdAt: {},
-      updatedAt: {},
-    },
-  ) {
-    this.#metadata = metadata
-  }
-
   mapCommonProps({
     id = '',
     location = {},
@@ -82,7 +82,7 @@ export default class Base {
     id?: string
     location?: DBLocationObject
     metadata?: DBMetadata
-  }) {
+  }): void {
     this.#id = id
     this.#location = { ...locationSchema, ...location }
     this.#metadata = metadata
@@ -101,6 +101,7 @@ export default class Base {
   } {
     const { coordinates: { latitude, longitude } = {}, ...location } =
       this.#location ?? {}
+
     return {
       ...location,
       coordinates: new firestore.GeoPoint(latitude ?? 0, longitude ?? 0),

@@ -10,7 +10,7 @@ import {
   RegisterForm,
   ReportForm,
   SearchSettings,
-} from './'
+} from 'store/types'
 
 // The overall state of the app
 export type State = {
@@ -25,7 +25,9 @@ export type State = {
   readonly formReport: ReportForm
   readonly searchSettings: SearchSettings
 }
+
 // All the actions of the app
 export type Action = GenericActionObject
+
 // type of a `dispatch()` function
 export type Dispatch = (arg0: Action) => Action

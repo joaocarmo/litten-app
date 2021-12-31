@@ -12,7 +12,7 @@ import {
   USER_PREFERENCES_CONTACT_INAPP,
 } from 'utils/constants'
 import { debugLog, logError } from 'utils/dev'
-import type { BasicUser, UserClass } from 'model/types/user'
+import type { BasicUser } from 'model/types/user'
 import type { DBCoordinateObject, DBLocationObject } from 'db/schemas/location'
 export class UserError extends Error {
   constructor(...args: string[]) {
@@ -26,7 +26,7 @@ export class UserError extends Error {
     this.name = 'UserError'
   }
 }
-export default class User extends Base implements UserClass {
+export default class User extends Base {
   #auth
   #contactPreferences
   #currentUser
@@ -82,47 +82,6 @@ export default class User extends Base implements UserClass {
     return this.#displayName
   }
 
-  get email(): void | string {
-    return this.#email
-  }
-
-  get photoURL(): void | string {
-    return this.#photoURL
-  }
-
-  get location(): void | DBLocationObject {
-    return super.location
-  }
-
-  get coordinates(): DBCoordinateObject {
-    return super.coordinates
-  }
-
-  get photoURLRef(): string {
-    if (this.id) {
-      const fileExt = 'jpg'
-      return `${STORAGE_USER_AVATAR}/${this.id}.${fileExt}`
-    }
-
-    return ''
-  }
-
-  get phoneNumber(): void | string {
-    return this.#phoneNumber
-  }
-
-  get isOrganization(): void | boolean {
-    return this.#isOrganization
-  }
-
-  get contactPreferences(): string[] {
-    return this.#contactPreferences
-  }
-
-  set deferredSave(deferredSave = false) {
-    this.#deferredSave = deferredSave
-  }
-
   set displayName(displayName: string | void = '') {
     if (displayName) {
       this.#displayName = displayName
@@ -134,6 +93,10 @@ export default class User extends Base implements UserClass {
     }
   }
 
+  get email(): void | string {
+    return this.#email
+  }
+
   set email(email: string | void = '') {
     if (email) {
       this.#email = email
@@ -143,6 +106,10 @@ export default class User extends Base implements UserClass {
         this.#auth.email = email
       }
     }
+  }
+
+  get photoURL(): void | string {
+    return this.#photoURL
   }
 
   set photoURL(photoURL: string | void = '') {
@@ -160,14 +127,17 @@ export default class User extends Base implements UserClass {
     }
   }
 
-  set phoneNumber(phoneNumber: string | void = '') {
-    this.#phoneNumber = phoneNumber
-    this.updateOne('phoneNumber', phoneNumber)
+  get location(): void | DBLocationObject {
+    return super.location
   }
 
   set location(location: DBLocationObject = {}) {
     super.location = location
     this.updateOne('location', super.buildLocation())
+  }
+
+  get coordinates(): DBCoordinateObject {
+    return super.coordinates
   }
 
   set coordinates(coordinates: DBCoordinateObject) {
@@ -179,9 +149,35 @@ export default class User extends Base implements UserClass {
     )
   }
 
+  get photoURLRef(): string {
+    if (this.id) {
+      const fileExt = 'jpg'
+      return `${STORAGE_USER_AVATAR}/${this.id}.${fileExt}`
+    }
+
+    return ''
+  }
+
+  get phoneNumber(): void | string {
+    return this.#phoneNumber
+  }
+
+  set phoneNumber(phoneNumber: string | void = '') {
+    this.#phoneNumber = phoneNumber
+    this.updateOne('phoneNumber', phoneNumber)
+  }
+
+  get isOrganization(): void | boolean {
+    return this.#isOrganization
+  }
+
   set isOrganization(isOrganization = false) {
     this.#isOrganization = isOrganization
     this.updateOne('isOrganization', isOrganization)
+  }
+
+  get contactPreferences(): string[] {
+    return this.#contactPreferences
   }
 
   set contactPreferences(value: string | string[] | void) {
@@ -210,7 +206,11 @@ export default class User extends Base implements UserClass {
     }
   }
 
-  async uploadAndSetPhoto(photoURL: string) {
+  set deferredSave(deferredSave = false) {
+    this.#deferredSave = deferredSave
+  }
+
+  async uploadAndSetPhoto(photoURL: string): Promise<void> {
     if (this.#currentUser) {
       try {
         this.#photoURL = await this.#auth.uploadAndSetPhoto(photoURL)
@@ -247,7 +247,7 @@ export default class User extends Base implements UserClass {
     phoneNumber = '',
     photoURL = '',
     ...otherProps
-  }: BasicUser) {
+  }: BasicUser): void {
     super.mapCommonProps(otherProps)
     this.#contactPreferences = contactPreferences
     this.#displayName = displayName
@@ -257,14 +257,14 @@ export default class User extends Base implements UserClass {
     this.#photoURL = typeof photoURL === 'string' ? photoURL : photoURL?.uri
   }
 
-  async reauthenticate(password: string) {
+  async reauthenticate(password: string): Promise<void> {
     const provider = this.#auth.EmailAuthProvider
     const email = this.#email
     const authCredential = provider.credential(email, password)
     await this.#currentUser.reauthenticateWithCredential(authCredential)
   }
 
-  async get() {
+  async get(): Promise<void> {
     let user
 
     if (this.id) {
@@ -287,9 +287,12 @@ export default class User extends Base implements UserClass {
     return null
   }
 
-  async update(updateObject: {}, updateTimestamp = true): Promise<void> {
+  async update(
+    updateObject: Record<string, unknown>,
+    updateTimestamp = true,
+  ): Promise<void> {
     if (this.id) {
-      let newUpdateObject: {} = updateObject
+      let newUpdateObject = updateObject
 
       if (updateTimestamp) {
         newUpdateObject = {
@@ -311,7 +314,7 @@ export default class User extends Base implements UserClass {
 
   async updateOne(
     field: string,
-    value: any,
+    value: unknown,
     updateTimestamp = true,
   ): Promise<void> {
     const updateObject = {
@@ -326,7 +329,7 @@ export default class User extends Base implements UserClass {
     }
   }
 
-  async deleteLittens() {
+  async deleteLittens(): Promise<void> {
     const ids = []
     const activePosts = await this.#search?.userPostsQuery(true).get()
     const inactivePosts = await this.#search?.userPostsQuery(false).get()
@@ -353,7 +356,7 @@ export default class User extends Base implements UserClass {
     }
   }
 
-  async deletePhoto(photoURLRef = '') {
+  async deletePhoto(photoURLRef = ''): Promise<void> {
     const fileRef = this.storage().ref(photoURLRef || this.photoURLRef)
 
     try {
@@ -367,19 +370,19 @@ export default class User extends Base implements UserClass {
     }
   }
 
-  async deleteUser() {
+  async deleteUser(): Promise<void> {
     if (this.id) {
       await this.collection.doc(this.id).delete()
     }
   }
 
-  async deleteAuth() {
+  async deleteAuth(): Promise<void> {
     if (this.#currentUser) {
       await this.#currentUser.delete()
     }
   }
 
-  async delete() {
+  async delete(): Promise<void> {
     await this.deleteLittens()
     await this.deleteChats()
     await this.deletePhoto()

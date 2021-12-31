@@ -8,6 +8,7 @@ import type { PhotoObject } from 'store/types'
 import { string2tags } from 'utils/functions'
 import { logError } from 'utils/dev'
 import { DB_LITTEN_COLLECTION, STORAGE_LITTEN_PHOTOS } from 'utils/constants'
+
 export class LittenError extends Error {
   constructor(...args: string[]) {
     super(...args)
@@ -20,6 +21,7 @@ export class LittenError extends Error {
     this.name = 'LittenError'
   }
 }
+
 export default class Litten extends Base implements LittenClass {
   #active
   #photos
@@ -74,8 +76,16 @@ export default class Litten extends Base implements LittenClass {
     return this.#active
   }
 
+  set active(active = true) {
+    this.#active = active
+  }
+
   get photos(): Array<PhotoObject> {
     return this.#photos ?? []
+  }
+
+  set photos(photos: PhotoObject[] = []) {
+    this.#photos = photos
   }
 
   get mainPhoto(): PhotoObject {
@@ -86,24 +96,48 @@ export default class Litten extends Base implements LittenClass {
     return this.#species
   }
 
+  set species(species = '') {
+    this.#species = species
+  }
+
   get story(): (string & (void | string)) | string {
     return this.#story
+  }
+
+  set story(story = '') {
+    this.#story = story
   }
 
   get title(): string {
     return this.#title
   }
 
+  set title(title = '') {
+    this.#title = title
+  }
+
   get type(): string {
     return this.#type
+  }
+
+  set type(type = '') {
+    this.#type = type
   }
 
   get userUid(): void | string {
     return this.#userUid
   }
 
+  set userUid(userUid = '') {
+    this.#userUid = userUid
+  }
+
   get user(): BasicUser | null {
     return this.#user
+  }
+
+  set user(user: BasicUser | null = {}) {
+    this.#user = user
   }
 
   get contactPreferences(): string[] {
@@ -112,38 +146,6 @@ export default class Litten extends Base implements LittenClass {
 
   get tags(): string[] {
     return this.#tags
-  }
-
-  set active(active = true) {
-    this.#active = active
-  }
-
-  set photos(photos: PhotoObject[] = []) {
-    this.#photos = photos
-  }
-
-  set species(species = '') {
-    this.#species = species
-  }
-
-  set story(story = '') {
-    this.#story = story
-  }
-
-  set title(title = '') {
-    this.#title = title
-  }
-
-  set type(type = '') {
-    this.#type = type
-  }
-
-  set userUid(userUid = '') {
-    this.#userUid = userUid
-  }
-
-  set user(user: BasicUser | null = {}) {
-    this.#user = user
   }
 
   set tags(tags: string | string[] = []) {
@@ -192,7 +194,7 @@ export default class Litten extends Base implements LittenClass {
     userUid = '',
     tags = [],
     ...otherProps
-  }: BasicLitten) {
+  }: BasicLitten): void {
     super.mapCommonProps(otherProps)
     this.#active = active
     this.#photos = photos
@@ -229,7 +231,7 @@ export default class Litten extends Base implements LittenClass {
     }
   }
 
-  async savePhotos(doc: any) {
+  async savePhotos(doc: any): Promise<void> {
     const docId = doc.id
     const photos = []
 
@@ -265,9 +267,10 @@ export default class Litten extends Base implements LittenClass {
     }
   }
 
-  async update() {}
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  async update(): Promise<void> {}
 
-  async save() {
+  async save(): Promise<void> {
     if (this.id) {
       await this.update()
     } else {
@@ -275,7 +278,7 @@ export default class Litten extends Base implements LittenClass {
     }
   }
 
-  async toggleActive(active = true) {
+  async toggleActive(active = true): Promise<void> {
     if (this.id) {
       try {
         await this.collection.doc(this.id).update({
@@ -290,15 +293,15 @@ export default class Litten extends Base implements LittenClass {
     }
   }
 
-  async archive() {
+  async archive(): Promise<void> {
     await this.toggleActive(false)
   }
 
-  async activate() {
+  async activate(): Promise<void> {
     await this.toggleActive(true)
   }
 
-  async deletePhotos() {
+  async deletePhotos(): Promise<void> {
     try {
       const storageRef = this.storage().ref(this.storageRef)
       const filesRef = await storageRef.listAll()
@@ -311,7 +314,7 @@ export default class Litten extends Base implements LittenClass {
     }
   }
 
-  async delete() {
+  async delete(): Promise<void> {
     if (this.id) {
       try {
         await this.collection.doc(this.id).delete()

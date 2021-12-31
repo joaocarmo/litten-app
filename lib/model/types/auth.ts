@@ -1,4 +1,4 @@
-export type AuthSettings = {
+export interface AuthSettings {
   id?: string
   photoURL?: string
   callingCode?: string
@@ -7,6 +7,5 @@ export type AuthSettings = {
   email?: string
   password?: string
   phoneNumber?: string
-  [key: string]: any
+  [key: string]: unknown
 }
-export interface AuthClass {}

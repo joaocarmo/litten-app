@@ -17,7 +17,7 @@ export class AuthError extends Error {
   }
 }
 export default class Auth implements AuthClass {
-  EmailAuthProvider: any = auth.EmailAuthProvider
+  EmailAuthProvider = auth.EmailAuthProvider
   #id
   #photoURL
   #callingCode
@@ -81,8 +81,17 @@ export default class Auth implements AuthClass {
     return this.#id
   }
 
+  set id(id: string) {
+    this.#id = id
+  }
+
   get displayName(): string {
     return this.#displayName
+  }
+
+  set displayName(displayName: string) {
+    this.#displayName = displayName
+    this.updateOne('displayName', this.#displayName)
   }
 
   get phoneNumber(): string {
@@ -97,27 +106,6 @@ export default class Auth implements AuthClass {
     return this.#photoURL
   }
 
-  get email(): string {
-    return this.#email
-  }
-
-  get emailVerified(): boolean {
-    if (this.currentUser) {
-      return this.currentUser.emailVerified
-    }
-
-    return false
-  }
-
-  set id(id: string) {
-    this.#id = id
-  }
-
-  set displayName(displayName: string) {
-    this.#displayName = displayName
-    this.updateOne('displayName', this.#displayName)
-  }
-
   set photoURL(photoURL = '') {
     if (photoURL) {
       this.uploadAndSetPhoto(photoURL)
@@ -127,9 +115,21 @@ export default class Auth implements AuthClass {
     }
   }
 
+  get email(): string {
+    return this.#email
+  }
+
   set email(email: string) {
     this.#email = email
     this.currentUser.updateEmail(email)
+  }
+
+  get emailVerified(): boolean {
+    if (this.currentUser) {
+      return this.currentUser.emailVerified
+    }
+
+    return false
   }
 
   async uploadAndSetPhoto(photoURL: string): Promise<string> {
@@ -151,7 +151,7 @@ export default class Auth implements AuthClass {
     }
   }
 
-  async signIn() {
+  async signIn(): Promise<any> {
     if (this.#email && this.#password) {
       await this.auth.signInWithEmailAndPassword(this.#email, this.#password)
       this.#id = this.currentUser.uid
@@ -160,7 +160,7 @@ export default class Auth implements AuthClass {
     }
   }
 
-  async sendPasswordResetEmail() {
+  async sendPasswordResetEmail(): Promise<any> {
     if (this.#email) {
       await this.auth.sendPasswordResetEmail(this.#email)
     } else {
@@ -176,7 +176,7 @@ export default class Auth implements AuthClass {
     return this.auth.applyActionCode(actionCode)
   }
 
-  async sendEmailVerification() {
+  async sendEmailVerification(): Promise<any> {
     if (this.currentUser) {
       await this.currentUser.sendEmailVerification(actionCodeSettings)
     }
