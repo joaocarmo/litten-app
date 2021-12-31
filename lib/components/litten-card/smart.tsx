@@ -40,7 +40,8 @@ const LittenSmartCard = ({
     [distanceKM, getUser],
   )
   useEffect(() => {
-    setUp(litten) // eslint-disable-next-line react-hooks/exhaustive-deps
+    setUp(litten)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   if (isLoading) {
@@ -51,7 +52,7 @@ const LittenSmartCard = ({
     <LittenCardComponent
       distance={distance}
       editable={editable}
-      isFavourite={isFavourite} // $FlowFixMe
+      isFavourite={isFavourite}
       litten={litten}
       onPressAction={onPressAction}
       user={user}

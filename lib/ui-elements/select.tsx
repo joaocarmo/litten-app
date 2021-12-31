@@ -26,8 +26,10 @@ const UISelect = ({
 
   return (
     <View style={styles.selectContainer}>
-      {/* $FlowFixMe: onTouchStart in an undocumented feature */}
-      <Pressable onTouchStart={toggleModal}>
+      <Pressable
+        // `onTouchStart` in an undocumented feature of React Native
+        onTouchStart={toggleModal}
+      >
         <UIInput
           placeholder={placeholder}
           editable={false}

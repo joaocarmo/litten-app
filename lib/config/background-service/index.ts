@@ -69,8 +69,8 @@ class BackgroundService {
 
   async configure(): Promise<void> {
     const status = await BackgroundFetch.configure(
-      { ...defaultConfig, ...this.#customConfig }, // $FlowFixMe[method-unbinding]
-      this.onBackgroundFetch.bind(this), // $FlowFixMe[method-unbinding]
+      { ...defaultConfig, ...this.#customConfig },
+      this.onBackgroundFetch.bind(this),
       this.onBackgroundTimeout.bind(this),
     )
 

@@ -57,10 +57,7 @@ const HomeIndexHeader = ({
     }
   }, [searchHistoryVisisble, hideSearchHistory, navigation])
   return (
-    <Pressable // $FlowFixMe[method-unbinding]
-      onPress={Keyboard.dismiss}
-      style={styles.header}
-    >
+    <Pressable onPress={Keyboard.dismiss} style={styles.header}>
       <SearchForm
         showSearchHistory={showSearchHistory}
         hideSearchHistory={hideSearchHistory}

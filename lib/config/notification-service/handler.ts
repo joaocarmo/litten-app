@@ -38,13 +38,9 @@ class NotificationHandler {
 
 const handler: NotificationHandler = new NotificationHandler()
 PushNotification.configure({
-  // $FlowFixMe[method-unbinding]
   onRegister: handler.onRegister.bind(handler),
-  // $FlowFixMe[method-unbinding]
   onNotification: handler.onNotification.bind(handler),
-  // $FlowFixMe[method-unbinding]
   onAction: handler.onAction.bind(handler),
-  // $FlowFixMe[method-unbinding]
   onRegistrationError: handler.onRegistrationError.bind(handler),
   permissions: {
     alert: true,

@@ -430,10 +430,7 @@ const FormProfile = ({
       <UILoader active={isLoading} transparent />
       {renderConfirmChange}
       {renderConfirmDelete}
-      <Pressable // $FlowFixMe[method-unbinding]
-        onPress={Keyboard.dismiss}
-        style={styles.editContainer}
-      >
+      <Pressable onPress={Keyboard.dismiss} style={styles.editContainer}>
         <View style={styles.editPhoto}>
           <AddPhoto
             imageSource={editedPhotoURL ?? photoURL}

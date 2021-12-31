@@ -18,7 +18,7 @@ const LittenDumbCard = ({
     <LittenCardComponent
       distance={distance}
       editable={editable}
-      isFavourite={isFavourite} // $FlowFixMe
+      isFavourite={isFavourite}
       litten={litten}
       onPressAction={onPressAction}
       user={user}

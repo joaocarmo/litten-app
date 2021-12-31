@@ -54,7 +54,6 @@ const LittenPostSharedScreen = ({
     return <UILoader active={isLoading} size="large" />
   }
 
-  // $FlowFixMe
   return (
     <PostScreen
       route={{

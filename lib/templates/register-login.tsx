@@ -11,10 +11,7 @@ const RegisterLoginTemplate = ({ children, footer, header }) => (
       </ScreenSimpleHeaderTemplate>
     }
   >
-    <Pressable // $FlowFixMe[method-unbinding]
-      onPress={Keyboard.dismiss}
-      style={styles.container}
-    >
+    <Pressable onPress={Keyboard.dismiss} style={styles.container}>
       <View style={styles.form}>{children}</View>
       <View style={styles.footer}>{footer}</View>
     </Pressable>

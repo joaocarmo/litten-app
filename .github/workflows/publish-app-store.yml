@@ -1,6 +1,5 @@
 # This workflow can be manually triggered and will upload an iOS .ipa
 # (iOS App Store Package) file to the Apple iOS App Store
-#
 name: Publish App Store
 
 on:
