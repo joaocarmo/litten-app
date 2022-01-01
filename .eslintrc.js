@@ -51,7 +51,6 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     // FIXME:
     'no-await-in-loop': 'off',
-    'react/no-unstable-nested-components': 'off',
   },
   settings: {
     'import/resolver': {

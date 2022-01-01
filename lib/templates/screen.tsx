@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import type { FC } from 'react'
 import { SafeAreaView, StatusBar, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
@@ -18,6 +19,7 @@ const ScreenTemplate = ({
     createStyles,
     theme: { colors },
   } = useTheme()
+
   const styles = createStyles((theme) => ({
     safeAreaViewContainer: {
       flex: 1,
@@ -34,32 +36,37 @@ const ScreenTemplate = ({
   const ScreenComponent =
     scrollable && children ? ScrollableScreenTemplate : StaticScreenTemplate
 
-  let screenContent = (
-    <ScreenComponent header={header} {...otherProps}>
-      {children}
-    </ScreenComponent>
-  )
+  const screenContent = useMemo(() => {
+    let content = (
+      <ScreenComponent header={header} {...otherProps}>
+        {children}
+      </ScreenComponent>
+    )
 
-  if (Array.isArray(tabs) && tabs.length) {
-    tabs.forEach((tab, idx, arr) => {
-      const { component: InnerComponent, scrollable: scrollableTab } = tab
-      const TabScreenComponent =
-        scrollableTab && InnerComponent
-          ? ScrollableScreenTemplate
-          : StaticScreenTemplate
+    if (Array.isArray(tabs) && tabs.length) {
+      tabs.forEach((tab, idx, arr) => {
+        const { component: InnerComponent, scrollable: scrollableTab } = tab
+        const TabScreenComponent =
+          scrollableTab && InnerComponent
+            ? ScrollableScreenTemplate
+            : StaticScreenTemplate
 
-      const CompoundComponent: () => FC = () => (
-        <TabScreenComponent header={header} tabs={tabs}>
-          <InnerComponent />
-        </TabScreenComponent>
-      )
+        // eslint-disable-next-line react/no-unstable-nested-components
+        const CompoundComponent: () => FC = () => (
+          <TabScreenComponent header={header} tabs={tabs}>
+            <InnerComponent />
+          </TabScreenComponent>
+        )
 
-      // eslint-disable-next-line no-param-reassign
-      arr[idx].compoundComponent = CompoundComponent
-    })
+        // eslint-disable-next-line no-param-reassign
+        arr[idx].compoundComponent = CompoundComponent
+      })
 
-    screenContent = <ScreenTabular tabs={tabs} />
-  }
+      content = <ScreenTabular tabs={tabs} />
+
+      return content
+    }
+  }, [ScreenComponent, children, header, otherProps, tabs])
 
   return (
     <View style={styles.safeAreaViewContainer}>
