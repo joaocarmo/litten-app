@@ -1,9 +1,9 @@
 import { createContext } from 'react'
 import type { Context } from 'react'
-import type { BackgroundService } from '@config/background-service'
+import type { BackgroundServiceType } from '@config/background-service'
 
-const TasksContext: Context<BackgroundService> =
-  createContext<BackgroundService>(null)
+const TasksContext: Context<BackgroundServiceType> =
+  createContext<BackgroundServiceType>(null)
 
 const TasksProvider = TasksContext.Provider
 

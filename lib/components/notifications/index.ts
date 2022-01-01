@@ -1,9 +1,9 @@
 import { createContext } from 'react'
 import type { Context } from 'react'
-import type { NotificationService } from '@config/notification-service'
+import type { NotificationServiceType } from '@config/notification-service'
 
-const NotificationsContext: Context<NotificationService> =
-  createContext<NotificationService>(null)
+const NotificationsContext: Context<NotificationServiceType> =
+  createContext<NotificationServiceType>(null)
 
 const NotificationsProvider = NotificationsContext.Provider
 

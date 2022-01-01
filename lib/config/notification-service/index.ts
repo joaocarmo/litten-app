@@ -95,4 +95,4 @@ class NotificationService {
 
 export default NotificationService
 
-export type NotificationService = typeof NotificationService
+export type NotificationServiceType = typeof NotificationService

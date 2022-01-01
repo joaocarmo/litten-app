@@ -136,4 +136,4 @@ class BackgroundService {
 
 export default BackgroundService
 
-export type BackgroundService = typeof BackgroundService
+export type BackgroundServiceType = typeof BackgroundService
