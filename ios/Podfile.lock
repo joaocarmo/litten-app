@@ -909,30 +909,30 @@ PODS:
     - React-Core
     - SDWebImage (~> 5.11.1)
     - SDWebImageWebPCoder (~> 0.8.4)
-  - RNFBAnalytics (14.1.0):
+  - RNFBAnalytics (14.2.1):
     - Firebase/Analytics (= 8.10.0)
     - React-Core
     - RNFBApp
-  - RNFBApp (14.1.0):
+  - RNFBApp (14.2.1):
     - Firebase/CoreOnly (= 8.10.0)
     - React-Core
-  - RNFBAuth (14.1.0):
+  - RNFBAuth (14.2.1):
     - Firebase/Auth (= 8.10.0)
     - React-Core
     - RNFBApp
-  - RNFBCrashlytics (14.1.0):
+  - RNFBCrashlytics (14.2.1):
     - Firebase/Crashlytics (= 8.10.0)
     - React-Core
     - RNFBApp
-  - RNFBFirestore (14.1.0):
+  - RNFBFirestore (14.2.1):
     - Firebase/Firestore (= 8.10.0)
     - React-Core
     - RNFBApp
-  - RNFBRemoteConfig (14.1.0):
+  - RNFBRemoteConfig (14.2.1):
     - Firebase/RemoteConfig (= 8.10.0)
     - React-Core
     - RNFBApp
-  - RNFBStorage (14.1.0):
+  - RNFBStorage (14.2.1):
     - Firebase/Storage (= 8.10.0)
     - React-Core
     - RNFBApp
@@ -947,7 +947,7 @@ PODS:
     - React-Core
     - React-RCTImage
     - TOCropViewController
-  - RNLocalize (2.1.6):
+  - RNLocalize (2.1.7):
     - React-Core
   - RNReanimated (2.3.1):
     - DoubleConversion
@@ -1332,16 +1332,16 @@ SPEC CHECKSUMS:
   RNCPushNotificationIOS: 87b8d16d3ede4532745e05b03c42cff33a36cc45
   RNDeviceInfo: 0400a6d0c94186d1120c3cbd97b23abc022187a9
   RNFastImage: 1f2cab428712a4baaf78d6169eaec7f622556dd7
-  RNFBAnalytics: 0555b9d857644540ad36872fed900b2a08080530
-  RNFBApp: e884e9a2dcc5edfa73e2651ef6638df5e0672f89
-  RNFBAuth: fd6cbf93302641dbe20045a44e64c1fa3d4eff02
-  RNFBCrashlytics: 996f65bff28906dce4fb6af64d9e6fd366d489c2
-  RNFBFirestore: 335dcbdb91786a892dd76831373f9794ac947e3b
-  RNFBRemoteConfig: d058fe741b72483718a5091c189389a1f5d6c4ab
-  RNFBStorage: 77eafd785a3a2d4e4ceaac707ebc1abe57537773
+  RNFBAnalytics: c2bc124906b6719c9d3e407f06f9222a15638edc
+  RNFBApp: 4f490a1e02e41721c55b354019f39f2323d72f82
+  RNFBAuth: 8a2d139824431757f1a6b71a8d086cb104e56a0d
+  RNFBCrashlytics: be2b4abeaf1cfe019a95f0ced8a7e7594a59f14e
+  RNFBFirestore: 1269c01e670c2b1833dc3ba1b09bc7b08669393e
+  RNFBRemoteConfig: 7dbac91747c7f8687b66c4fe2ea4b293bfaa4e94
+  RNFBStorage: 4c2f2a68a7aa2bc4ab22e460e9738292a8e41a25
   RNGestureHandler: e5c7cab5f214503dcefd6b2b0cefb050e1f51c4a
   RNImageCropPicker: 448d3c6e923fde3466b49caf3c2457c2a0ba02dd
-  RNLocalize: f10d91c76a5692d4cf6f218c70f6e4d7dcb42d1c
+  RNLocalize: f567ea0e35116a641cdffe6683b0d212d568f32a
   RNReanimated: da3860204e5660c0dd66739936732197d359d753
   RNScreens: 522705f2e5c9d27efb17f24aceb2bf8335bc7b8e
   RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
@@ -1352,6 +1352,6 @@ SPEC CHECKSUMS:
   Yoga: e7dc4e71caba6472ff48ad7d234389b91dadc280
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 1f7efc53d9d9c974a2411dff2c7d70f0b96f2207
+PODFILE CHECKSUM: 72f6e89c71f97fd1d4d097839b2656bd176bc532
 
 COCOAPODS: 1.11.2

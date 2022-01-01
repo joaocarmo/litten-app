@@ -1,9 +1,19 @@
+const alias = require('./alias.config')
+
 module.exports = (api) => {
   api.cache(true)
 
   return {
     presets: ['module:metro-react-native-babel-preset'],
     plugins: [
+      [
+        'module-resolver',
+        {
+          root: ['./lib'],
+          extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
+          alias,
+        },
+      ],
       [
         'dotenv-import',
         {

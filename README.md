@@ -27,7 +27,7 @@ yarn lint
 # Run Prettier
 yarn pretty
 
-# Run the Flow type checker
+# Run the type checker (TypeScript)
 yarn type-check
 
 # Run the tests

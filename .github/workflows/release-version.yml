@@ -1,6 +1,5 @@
 # This workflow is automatically triggered on release/tag and will bump the
 # version in the package.json and respective android/ios files
-#
 name: Release Version
 
 on:

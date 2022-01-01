@@ -1,5 +1,4 @@
 # This workflow is manually triggered and will produce the JS bundle source maps
-
 name: Source Maps
 
 on:

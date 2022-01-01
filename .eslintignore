@@ -1,1 +1,13 @@
-flow-typed/
+# node.js
+node_modules
+
+# configs
+.eslintrc.js
+babel.config.js
+jest.config.js
+jest.setup.js
+metro.config.js
+
+# scripts
+scripts/
+lib/fixtures/seed.js
