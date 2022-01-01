@@ -1,5 +1,4 @@
 import { useCallback, useMemo } from 'react'
-
 import { Alert, StyleSheet, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { useCurrentlyActiveChat, useTheme } from '@hooks'
@@ -29,16 +28,21 @@ const ChatOptions = ({ chat = {}, litten = {}, recipient = {}, user = {} }) => {
   const {
     theme: { colors },
   } = useTheme()
+
   const chatUid = useMemo(
     () => chat.id || currentlyActiveChat,
     [chat.id, currentlyActiveChat],
   )
+
   const chatExists = useMemo(() => !!chatUid, [chatUid])
+
   const littenExists = useMemo(() => !!litten.id, [litten.id])
+
   const recipientExists = useMemo(
     () => !!(recipient.id && recipient.displayName),
     [recipient.displayName, recipient.id],
   )
+
   const deleteConversation = useCallback(async () => {
     const thisChat = new Chat({
       id: chatUid,
@@ -46,6 +50,7 @@ const ChatOptions = ({ chat = {}, litten = {}, recipient = {}, user = {} }) => {
     await thisChat.deleteForUser(user.id)
     navigation.goBack()
   }, [chatUid, navigation, user.id])
+
   const confirmDeleteConversation = useCallback(() => {
     Alert.alert(
       translate('cta.deleteConversation'),
@@ -65,6 +70,7 @@ const ChatOptions = ({ chat = {}, litten = {}, recipient = {}, user = {} }) => {
       ],
     )
   }, [deleteConversation, recipient.displayName])
+
   const conversationOptions = useMemo(
     () => [
       {
@@ -132,6 +138,7 @@ const ChatOptions = ({ chat = {}, litten = {}, recipient = {}, user = {} }) => {
       user,
     ],
   )
+
   return (
     <UIDropdown
       placement="bottom"
@@ -163,4 +170,5 @@ const styles = StyleSheet.create({
     paddingBottom: UI_DROPDOWN_MARGIN,
   },
 })
+
 export default ChatOptions

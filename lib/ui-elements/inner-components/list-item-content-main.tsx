@@ -1,11 +1,11 @@
 import { memo } from 'react'
-
+import type { FC, ReactNode } from 'react'
 import { Text, View } from 'react-native'
 import { useTheme } from '@hooks'
 
 type UIListItemContentMainProps = {
   caption?: string
-  children?: Node
+  children?: ReactNode
   isPressed?: boolean
   noFeedback?: boolean
   selected?: boolean
@@ -19,7 +19,9 @@ const areEqual = (prevProps, nextProps) =>
   prevProps.noFeedback === nextProps.noFeedback &&
   prevProps.selected === nextProps.selected
 
-const UIListItemContentMain: (props: UIListItemContentMainProps) => Node = ({
+const UIListItemContentMain: (
+  props: UIListItemContentMainProps,
+) => FC<UIListItemContentMainProps> = ({
   caption = null,
   children = null,
   isPressed = false,
@@ -89,23 +91,21 @@ const UIListItemContentMain: (props: UIListItemContentMainProps) => Node = ({
     )
   }
 
+  if (typeof children !== 'string') {
+    return children
+  }
+
   return (
-    <>
-      {typeof children === 'string' ? (
-        <Text
-          style={[
-            styles.uiListItemText,
-            selected ? styles.uiListItemTextSelected : undefined,
-            isPressed && !noFeedback ? styles.uiListItemTextPressed : undefined,
-            style,
-          ]}
-        >
-          {children}
-        </Text>
-      ) : (
-        children
-      )}
-    </>
+    <Text
+      style={[
+        styles.uiListItemText,
+        selected ? styles.uiListItemTextSelected : undefined,
+        isPressed && !noFeedback ? styles.uiListItemTextPressed : undefined,
+        style,
+      ]}
+    >
+      {children}
+    </Text>
   )
 }
 

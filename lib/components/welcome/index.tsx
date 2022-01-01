@@ -31,6 +31,7 @@ const Welcome = () => {
       marginBottom: STRUCTURE_TAB_NAV_HEIGHT / 2,
     },
   }))
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar

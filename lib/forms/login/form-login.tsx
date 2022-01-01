@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from 'react'
-
 import { useNavigation } from '@react-navigation/native'
 import { Alert, View } from 'react-native'
 import { useTheme } from '@hooks'
@@ -32,10 +31,12 @@ const LoginForm = ({
   const {
     commonStyles: { noAuthFormStyles: styles },
   } = useTheme()
+
   useEffect(() => {
     clearLoginForm()
     clearErrorsLoginForm() // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
   const validateFields = useCallback(() => {
     const validStep = {
       email: emailValidator(email),
@@ -53,6 +54,7 @@ const LoginForm = ({
     })
     return !validStep.email?.error && !validStep.password?.error
   }, [email, password, setErrorAndMessage])
+
   const submitForm = useCallback(async () => {
     try {
       setIsLoading(true)
@@ -69,6 +71,7 @@ const LoginForm = ({
       setIsLoading(false)
     }
   }, [email, password, setIsLoading])
+
   const validateStep = useCallback(() => {
     const isStepValid = validateFields()
 
@@ -79,6 +82,7 @@ const LoginForm = ({
     clearErrorsLoginForm()
     submitForm()
   }, [clearErrorsLoginForm, submitForm, validateFields])
+
   return (
     <View style={styles.formContainer}>
       <UILoader active={isLoading} transparent />

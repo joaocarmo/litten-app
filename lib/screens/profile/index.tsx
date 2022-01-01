@@ -24,6 +24,7 @@ const ProfileIndexScreen = () => {
     theme: { colors },
     typography,
   } = useTheme()
+
   const styles = createStyles((theme) => ({
     header: {
       width: STRUCTURE_TEMPLATE_SCREEN_HEADER_PROFILE_WIDTH,
@@ -46,6 +47,7 @@ const ProfileIndexScreen = () => {
       alignSelf: 'flex-end',
     },
   }))
+
   return (
     <ScreenTemplate
       header={

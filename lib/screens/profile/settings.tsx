@@ -1,5 +1,4 @@
 import { useCallback, useMemo, useRef } from 'react'
-
 import { useDispatch } from 'react-redux'
 import { setContactPreferences as setContactPreferencesAction } from '@store/actions/authenticated-user'
 import { Alert, SectionList, View } from 'react-native'
@@ -33,33 +32,40 @@ const ProfileSettingsScreen = () => {
       commonStyles: { contentContainerStyle },
     },
   } = useTheme()
+
   const styles = createStyles((theme) => ({
     sectionHeader: {
       flex: 1,
       backgroundColor: theme.colors.neutralLight,
     },
   }))
+
   const contactCall = useMemo(
     () => user.contactPreferences.includes(USER_PREFERENCES_CONTACT_CALL),
     [user.contactPreferences],
   )
+
   const contactEmail = useMemo(
     () => user.contactPreferences.includes(USER_PREFERENCES_CONTACT_EMAIL),
     [user.contactPreferences],
   )
+
   const contactInApp = useMemo(
     () => user.contactPreferences.includes(USER_PREFERENCES_CONTACT_INAPP),
     [user.contactPreferences],
   )
+
   const contactSMS = useMemo(
     () => user.contactPreferences.includes(USER_PREFERENCES_CONTACT_SMS),
     [user.contactPreferences],
   )
+
   const setContactPreferences = useCallback(
     (contactPreference) =>
       dispatch(setContactPreferencesAction(contactPreference)),
     [dispatch],
   )
+
   const hasPhoneNumber = useCallback(() => {
     if (!user.phoneNumber) {
       Alert.alert(
@@ -71,26 +77,31 @@ const ProfileSettingsScreen = () => {
 
     return true
   }, [user.phoneNumber])
+
   const setContactCall = useCallback(() => {
     if (hasPhoneNumber()) {
       setContactPreferences(USER_PREFERENCES_CONTACT_CALL)
       user.contactPreferences = USER_PREFERENCES_CONTACT_CALL
     }
   }, [hasPhoneNumber, setContactPreferences, user])
+
   const setContactEmail = useCallback(() => {
     setContactPreferences(USER_PREFERENCES_CONTACT_EMAIL)
     user.contactPreferences = USER_PREFERENCES_CONTACT_EMAIL
   }, [setContactPreferences, user])
+
   const setContactInApp = useCallback(() => {
     setContactPreferences(USER_PREFERENCES_CONTACT_INAPP)
     user.contactPreferences = USER_PREFERENCES_CONTACT_INAPP
   }, [setContactPreferences, user])
+
   const setContactSMS = useCallback(() => {
     if (hasPhoneNumber()) {
       setContactPreferences(USER_PREFERENCES_CONTACT_SMS)
       user.contactPreferences = USER_PREFERENCES_CONTACT_SMS
     }
   }, [hasPhoneNumber, setContactPreferences, user])
+
   const userSettings = useMemo(
     () => [
       {
@@ -181,6 +192,7 @@ const ProfileSettingsScreen = () => {
     ),
     [styles.sectionHeader],
   )
+
   const renderSectionSeparatorComponent = useCallback(
     ({ trailingItem, trailingSection }) => {
       if (!trailingItem && trailingSection) {
@@ -191,6 +203,7 @@ const ProfileSettingsScreen = () => {
     },
     [],
   )
+
   return (
     <SectionList
       sections={userSettings}

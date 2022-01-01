@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+import type { FC, ReactNode } from 'react'
 import { useColorScheme } from 'react-native'
 import { ThemeContext } from '@components/theme'
 import type { ThemeConfig } from '@components/theme'
@@ -7,7 +8,7 @@ import themes from '@styles/themes'
 import typography from '@styles/typography'
 import { debugLog } from '@utils/dev'
 
-const ThemeProvider = ({ children }: { children: Node }): Node => {
+const ThemeProvider = ({ children }: { children: ReactNode }): FC => {
   const scheme = useColorScheme()
 
   const theme = useMemo(

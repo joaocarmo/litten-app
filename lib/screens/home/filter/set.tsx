@@ -1,5 +1,4 @@
 import { useCallback, useMemo, useState } from 'react'
-
 import { useDispatch } from 'react-redux'
 import {
   usePaddingBottom,
@@ -29,7 +28,7 @@ import {
 import { littenSpeciesList, littenTypes, userTypes } from '@utils/litten'
 import { translate } from '@utils/i18n'
 
-const HomeFilterSetScreen = ({ filter, title }) => {
+const HomeFilterSetScreen = ({ filter }) => {
   const dispatch = useDispatch()
   const [{ littenType, locationRadius, userType }] = useSearchFilters()
   const [littenSpecies, setSpecies, removeSpecies] = useSearchFiltersSpecies()
@@ -42,22 +41,27 @@ const HomeFilterSetScreen = ({ filter, title }) => {
       commonStyles: { contentContainerStyle },
     },
   } = useTheme()
+
   const removeType = useCallback(
     (type) => dispatch(removeTypeAction(type)),
     [dispatch],
   )
+
   const setLocationRadius = useCallback(
     (radius) => dispatch(setLocationRadiusAction(radius)),
     [dispatch],
   )
+
   const setType = useCallback(
     (type) => dispatch(setTypeAction(type)),
     [dispatch],
   )
+
   const setUserType = useCallback(
     (newUserType) => dispatch(setUserTypeAction(newUserType)),
     [dispatch],
   )
+
   const setValue = useCallback(
     (value) => {
       if (filter === LITTEN_FILTER_SPECIES && typeof value === 'string') {
@@ -76,6 +80,7 @@ const HomeFilterSetScreen = ({ filter, title }) => {
     },
     [filter, setLocationRadius, setSpecies, setType, setUserType],
   )
+
   const unsetValue = useCallback(
     (value) => {
       if (filter === LITTEN_FILTER_SPECIES) {
@@ -86,6 +91,7 @@ const HomeFilterSetScreen = ({ filter, title }) => {
     },
     [filter, removeSpecies, removeType],
   )
+
   const getValue = useCallback(() => {
     if (filter === LITTEN_FILTER_SPECIES) {
       return littenSpecies
@@ -120,7 +126,9 @@ const HomeFilterSetScreen = ({ filter, title }) => {
     },
     [setValue],
   )
+
   const displayArr = getDisplayArr()
+
   const filterValue = getValue()
 
   const isSelected = (key) =>
@@ -140,6 +148,7 @@ const HomeFilterSetScreen = ({ filter, title }) => {
   )
 
   const getItemLayout = useCallback(getListItemLayout, [])
+
   const radiusDescription = useMemo(
     () =>
       radiusFilter > 0
@@ -150,6 +159,7 @@ const HomeFilterSetScreen = ({ filter, title }) => {
         : translate('screens.searches.noFilterLocationRadiusValue'),
     [radiusFilter, radiusUnit, radiusValue],
   )
+
   const renderLocationFilter = useCallback(
     () => (
       <>
@@ -179,6 +189,7 @@ const HomeFilterSetScreen = ({ filter, title }) => {
       useRadiusFilter,
     ],
   )
+
   const renderUserTypeFilter = useCallback(
     () => (
       <UIOption
@@ -191,6 +202,7 @@ const HomeFilterSetScreen = ({ filter, title }) => {
     ),
     [filterValue, setValue],
   )
+
   return (
     <>
       {displayArr && (

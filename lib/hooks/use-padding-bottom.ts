@@ -5,19 +5,16 @@ import {
   STRUCTURE_TAB_NAV_HEIGHT,
 } from '@utils/constants'
 
-const usePaddingBottom = (
-  multiplier = 1,
-): {
-  readonly insetBottom: number
-  readonly paddingBottom: number
-} => {
+const usePaddingBottom = (multiplier = 1) => {
   const { bottom } = useSafeAreaInsets()
+
   const paddingBottom = useMemo(
     () =>
       (STRUCTURE_TAB_NAV_HEIGHT + Math.max(bottom, STRUCTURE_PADDING_EXTRA)) *
       multiplier,
     [bottom, multiplier],
   )
+
   return {
     insetBottom: bottom,
     paddingBottom,

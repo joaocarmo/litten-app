@@ -10,12 +10,14 @@ const useAppNotifications = (): [
 ] => {
   const dispatch = useDispatch()
   const appSettingsNotifications = useSelector(appSettingsNotificationsSelector)
+
   const setAppNotifications = useCallback(
     (newAppSettingsNotifications) => {
       dispatch(setNotifications(newAppSettingsNotifications))
     },
     [dispatch],
   )
+
   return [appSettingsNotifications, setAppNotifications]
 }
 

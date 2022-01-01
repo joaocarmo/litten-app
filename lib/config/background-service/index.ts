@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import BackgroundFetch from 'react-native-background-fetch'
 import defaultConfig from '@config/background-service/default'
 import { debugLog } from '@utils/dev'
@@ -110,9 +111,9 @@ class BackgroundService {
 
   async getStatus(): Promise<string> {
     let returnStatus = 'undetermined'
-    const backgroundFetchStatus = new Promise((resolve, reject) =>
-      BackgroundFetch.status(resolve),
-    )
+    const backgroundFetchStatus = new Promise((resolve) => {
+      BackgroundFetch.status(resolve)
+    })
     const status = await backgroundFetchStatus
 
     switch (status) {
@@ -134,3 +135,5 @@ class BackgroundService {
 }
 
 export default BackgroundService
+
+export type BackgroundService = typeof BackgroundService

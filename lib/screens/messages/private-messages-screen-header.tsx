@@ -13,6 +13,7 @@ import {
 const MessagePrivateHeader = (props) => {
   const { litten, recipient } = props
   const { createStyles } = useTheme()
+
   const styles = createStyles((theme, typography) => ({
     headerContainer: {
       flex: 1,
@@ -49,7 +50,9 @@ const MessagePrivateHeader = (props) => {
       justifyContent: 'flex-end',
     },
   }))
+
   const subtitle = littenToHeaderTitle(litten)
+
   return (
     <ScreenSimpleHeaderTemplate withGoBack>
       <View style={styles.headerContainer}>

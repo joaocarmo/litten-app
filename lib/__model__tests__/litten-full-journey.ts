@@ -168,10 +168,14 @@ describe('Performs an end-to-end user and litten journey', () => {
   it('user deletes the profile', async () => {
     // We start by finding a user that has littens
     const littensCollection = await Litten.collection.limit(1).get()
+
     expect(littensCollection.size > 0).toBe(true)
+
     const [littenDoc] = littensCollection.docs
     const { userUid } = littenDoc.data()
+
     expect(userUid.length > 0).toBe(true)
+
     // We verify all the chats, littens and messages the user has
     const dbUser = await User.collection.doc(userUid).get()
     const userChats = await Chat.collection
@@ -183,15 +187,19 @@ describe('Performs an end-to-end user and litten journey', () => {
     const userMessages = await Message.collection
       .where('userUid', '==', userUid)
       .get()
+
     expect(dbUser.exists).toBe(true)
     expect(userChats.size > 0).toBe(true)
     expect(userLittens.size > 0).toBe(true)
     expect(userMessages.size > 0).toBe(true)
+
     // We proceed to delete the user information
     const user = new User({
       id: userUid,
     })
+
     await user.delete()
+
     // Finally, we make sure everything was removed
     const deletedDBUser = await User.collection.doc(userUid).get()
     const deletedUserChats = await Chat.collection
@@ -203,6 +211,7 @@ describe('Performs an end-to-end user and litten journey', () => {
     const deletedUserMessages = await Message.collection
       .where('userUid', '==', userUid)
       .get()
+
     expect(deletedDBUser.exists).toBe(false)
     expect(deletedUserChats.size).toBe(0)
     expect(deletedUserLittens.size).toBe(0)

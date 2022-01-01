@@ -8,7 +8,7 @@ import { translate } from '@utils/i18n'
 const AddPhoto = ({
   ImageComponent,
   imageSource,
-  onChange = (image) => null,
+  onChange = () => null,
   PlaceholderComponent,
   ...otherProps
 }) => {

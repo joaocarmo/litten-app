@@ -18,12 +18,14 @@ const useCacheUsers = (): [
 ] => {
   const dispatch = useDispatch()
   const users = useSelector(cacheUserSelector, areEqual)
+
   const addCacheUser = useCallback(
     (newUser) => {
       dispatch(addUser(newUser))
     },
     [dispatch],
   )
+
   const getCacheUser = useCallback(
     async (id) => {
       if (id && !users[id]) {
@@ -38,6 +40,7 @@ const useCacheUsers = (): [
     },
     [addCacheUser, users],
   )
+
   return [getCacheUser, users, addCacheUser]
 }
 

@@ -9,10 +9,8 @@ const linkingConfig = {
     screens: {
       [SCREEN_LITTEN_POST_SHARED]: 'litten/:littenUid',
       [SCREEN_PROFILE_VERIFICATION]: 'verification',
-    } as {
-      'litten/post/shared': string
-      'profile/verification': string
     },
   },
 }
+
 export default linkingConfig

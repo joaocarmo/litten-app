@@ -10,6 +10,7 @@ const useFavourite = (litten: BasicLitten): [boolean, () => void, number] => {
     [favourites, litten],
   )
   const isFavourite = useMemo(() => !(favouriteIndex < 0), [favouriteIndex])
+
   const toggleFavourite = useCallback(() => {
     if (favouriteIndex < 0) {
       addToFavourites(litten)
@@ -19,6 +20,7 @@ const useFavourite = (litten: BasicLitten): [boolean, () => void, number] => {
       })
     }
   }, [addToFavourites, favouriteIndex, litten, removeFromFavourites])
+
   return [isFavourite, toggleFavourite, favouriteIndex]
 }
 

@@ -12,18 +12,21 @@ const useUserPosts = (): [
 ] => {
   const dispatch = useDispatch()
   const { activePosts, pastPosts } = useSelector(userSavedSelector)
+
   const setNewActivePosts = useCallback(
     (newPosts) => {
       dispatch(setActivePosts(newPosts))
     },
     [dispatch],
   )
+
   const setNewPastPosts = useCallback(
     (newPosts) => {
       dispatch(setPastPosts(newPosts))
     },
     [dispatch],
   )
+
   return [activePosts, pastPosts, setNewActivePosts, setNewPastPosts]
 }
 

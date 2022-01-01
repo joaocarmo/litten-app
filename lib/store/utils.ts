@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import AsyncStorage from '@react-native-community/async-storage'
 import { logError } from '@utils/dev'
 import appConfig from '../../app.json'

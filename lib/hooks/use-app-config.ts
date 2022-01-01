@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import remoteConfig from '@db/remote-config'
 
-const useAppConfig = (configKey: string): any => {
+const useAppConfig = (configKey: string): unknown => {
   const [configValue, setConfigValue] = useState(null)
+
   useEffect(() => {
     if (configKey) {
       setConfigValue(remoteConfig.getValue(configKey))
@@ -10,6 +11,7 @@ const useAppConfig = (configKey: string): any => {
       setConfigValue(remoteConfig.getAll())
     }
   }, [configKey])
+
   return configValue
 }
 

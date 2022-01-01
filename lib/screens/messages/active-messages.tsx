@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
-
 import {
   useFocusEffect,
   useIsFocused,
@@ -63,6 +62,7 @@ const ActiveMessages = () => {
       commonStyles: { contentContainerStyle },
     },
   } = useTheme()
+
   useFocusEffect(
     useCallback(() => {
       setAppNotifications({
@@ -71,6 +71,7 @@ const ActiveMessages = () => {
       })
     }, [setAppNotifications]),
   )
+
   const handleChatNotifications = useCallback(
     ({ chat, litten, recipient }) => {
       const newChatEvent = new Chat(chat)
@@ -94,6 +95,7 @@ const ActiveMessages = () => {
     },
     [currentlyActiveChat, notifications, screenIsFocused, userUid],
   )
+
   const prepareChats = useCallback(async () => {
     if (chats.length) {
       debugLog('[CHATS] prepareChats')
@@ -118,6 +120,7 @@ const ActiveMessages = () => {
 
     setIsLoading(false)
   }, [chats, getLitten, getUser, handleChatNotifications, userUid])
+
   const [updateChats] = useDebouncedCallback(
     useCallback(
       (querySnapshot, error, previousChats = []) => {
@@ -150,14 +153,17 @@ const ActiveMessages = () => {
       [setChats],
     ),
   )
+
   const clearChats = useCallback(() => {
     setChats([])
     setIsLoading(false)
   }, [setChats, setIsLoading])
+
   useEffect(() => {
     debugLog('[CHATS] useEffect chats:', chats.length)
     prepareChats() // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chats])
+
   useEffect(() => {
     if (userUid) {
       debugLog('[CHATS] useEffect subscriber with userUid:', userUid)
@@ -171,12 +177,14 @@ const ActiveMessages = () => {
       clearChats()
     }
   }, [clearChats, updateChats, userUid])
+
   const handleOnScroll = useCallback(() => {
     if (!listIsScrollable) {
       debugLog('[SEARCH] handleOnScroll')
       setListIsScrollable(true)
     }
   }, [listIsScrollable])
+
   const handleOnEndReached = useCallback(async () => {
     if (
       (chats.length >= CHATS_INITIAL_NUM_TO_RENDER,
@@ -197,6 +205,7 @@ const ActiveMessages = () => {
     updateChats,
     userUid,
   ])
+
   const deleteConversation = useCallback(
     async (chatObj) => {
       debugLog('[CHATS] deleteConversation')
@@ -214,6 +223,7 @@ const ActiveMessages = () => {
     },
     [chats.length, userUid],
   )
+
   const confirmDeleteConversation = useCallback(
     async (chat) => {
       debugLog('[CHATS] confirmDeleteConversation')
@@ -240,6 +250,7 @@ const ActiveMessages = () => {
     },
     [deleteConversation, getUser, userUid],
   )
+
   const hiddenOptions = useMemo(
     () => [
       {
@@ -253,11 +264,14 @@ const ActiveMessages = () => {
     ],
     [colors.danger, confirmDeleteConversation],
   )
+
   const rightOpenValue = useMemo(
     () => -(hiddenOptions.length * UI_HIDDEN_OPTION_WIDTH),
     [hiddenOptions.length],
   )
+
   const getItemLayout = useCallback(getListItemLayout, [])
+
   const renderItem = useCallback(
     ({ item: { chat: chatObject, litten, recipient } }) => {
       const chat = new Chat(chatObject)
@@ -284,6 +298,7 @@ const ActiveMessages = () => {
     },
     [navigation, userUid],
   )
+
   const renderHiddenItem = useCallback(
     ({ item: { chat: chatObject } }) => {
       const chat = new Chat(chatObject)
@@ -311,6 +326,7 @@ const ActiveMessages = () => {
     },
     [hiddenOptions, userUid],
   )
+
   const ListEmptyComponent = useMemo(
     () => (
       <Empty
@@ -322,6 +338,7 @@ const ActiveMessages = () => {
     ),
     [],
   )
+
   const ListFooterComponent = useMemo(
     () => <BottomLoader active={isLoadingMore} />,
     [isLoadingMore],

@@ -1,6 +1,5 @@
 import parsePhoneNumber, { AsYouType } from 'libphonenumber-js'
 import { useCallback, useEffect, useMemo, useState, useRef } from 'react'
-
 import { useNavigation } from '@react-navigation/native'
 import { Alert, Pressable, Keyboard, StyleSheet, View } from 'react-native'
 import { useDebouncedCallback, useEmailVerified } from '@hooks'
@@ -53,11 +52,11 @@ const FormProfile = ({
   },
   clearProfileForm,
   setExtra,
-  setLocation,
+  // setLocation,
   setProfileDisplayName,
   setProfileEmail,
   setProfileIsOrganization,
-  setProfileLocation,
+  // setProfileLocation,
   setProfilePhoneNumber,
   setProfilePhotoURL,
 }) => {
@@ -86,13 +85,17 @@ const FormProfile = ({
     phoneNumber,
     photoURL,
   } = extra
+
   const navigation = useNavigation()
+
   useEffect(() => () => clearProfileForm(), [clearProfileForm])
+
   const [debouncedSetIsLoading, cancelSetIsLoading] = useDebouncedCallback(
     useCallback((value) => {
       setIsLoading(value)
     }, []),
   )
+
   const handleOnPhotoChange = useCallback(
     (image) => {
       if (image) {
@@ -104,6 +107,7 @@ const FormProfile = ({
     },
     [setProfilePhotoURL],
   )
+
   const handleChangePhoneNumber = useCallback(
     (newPhoneNumber) => {
       const parsedPhoneNumber = parsePhoneNumber(newPhoneNumber)
@@ -117,6 +121,7 @@ const FormProfile = ({
     },
     [setProfilePhoneNumber],
   )
+
   const handleSetPhotoURL = useCallback(
     (newPhotoURL) => {
       if (newPhotoURL !== photoURL) {
@@ -125,6 +130,7 @@ const FormProfile = ({
     },
     [photoURL, user],
   )
+
   const handleSetDisplayName = useCallback(
     (newDisplayName) => {
       if (newDisplayName !== displayName) {
@@ -133,6 +139,7 @@ const FormProfile = ({
     },
     [displayName, user],
   )
+
   const handleSetEmail = useCallback(
     (newEmail) => {
       if (newEmail !== email) {
@@ -141,6 +148,7 @@ const FormProfile = ({
     },
     [editedEmail, email, user],
   )
+
   const handleSetPhoneNumber = useCallback(
     (newPhoneNumber) => {
       if (newPhoneNumber !== phoneNumber) {
@@ -162,6 +170,7 @@ const FormProfile = ({
     },
     [phoneNumber, user],
   )
+
   const handleSetLocation = useCallback(
     (newLocation) => {
       if (newLocation !== location) {
@@ -170,6 +179,7 @@ const FormProfile = ({
     },
     [location, user],
   )
+
   const handleSetIsOrganization = useCallback(
     (newIsOrganization) => {
       if (newIsOrganization !== isOrganization) {
@@ -178,11 +188,13 @@ const FormProfile = ({
     },
     [isOrganization, user],
   )
+
   const refreshUser = useCallback(async () => {
     await user.get()
     setExtra(user.toJSON())
     clearProfileForm()
   }, [clearProfileForm, setExtra, user])
+
   const updateUser = useCallback(async () => {
     setIsLoading(true)
     user.deferredSave = true
@@ -227,6 +239,7 @@ const FormProfile = ({
     refreshUser,
     user,
   ])
+
   const validateChanges = useCallback(() => {
     let displayNameValidated = { ...displayNameValidation }
     let emailValidated = { ...emailValidation }
@@ -272,6 +285,7 @@ const FormProfile = ({
     location.country,
     phoneNumberValidation,
   ])
+
   const saveChanges = useCallback(() => {
     const editable = [
       editedDisplayName,
@@ -307,6 +321,7 @@ const FormProfile = ({
     updateUser,
     validateChanges,
   ])
+
   const handleUpdateWithPassword = useCallback(
     async (password) => {
       closePrompt()
@@ -323,6 +338,7 @@ const FormProfile = ({
     },
     [updateUser, user],
   )
+
   const deleteAccount = useCallback(
     async (password) => {
       closePrompt()
@@ -344,6 +360,7 @@ const FormProfile = ({
     },
     [user],
   )
+
   const deleteConfirm = useCallback(() => {
     Alert.alert(
       translate('cta.deleteProfile'),
@@ -361,6 +378,7 @@ const FormProfile = ({
       ],
     )
   }, [deletePromptIsOpen])
+
   const sendConfirmationEmail = useCallback(async () => {
     setIsLoading(true)
 
@@ -374,6 +392,7 @@ const FormProfile = ({
       setIsLoading(false)
     }
   }, [basic])
+
   const handleSendConfirmationEmail = useCallback(() => {
     if (!emailVerificationSent) {
       Alert.alert(
@@ -392,6 +411,7 @@ const FormProfile = ({
       )
     }
   }, [emailVerificationSent, sendConfirmationEmail])
+
   const renderConfirmChange = useMemo(
     () => (
       <UIPrompt
@@ -407,6 +427,7 @@ const FormProfile = ({
     ),
     [changePromptIsOpen, handleUpdateWithPassword],
   )
+
   const renderConfirmDelete = useMemo(
     () => (
       <UIPrompt
@@ -423,6 +444,7 @@ const FormProfile = ({
     ),
     [deleteAccount, deletePromptIsOpen],
   )
+
   return (
     <>
       <UILoader active={isLoading} transparent />
@@ -537,4 +559,5 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
 })
+
 export default FormProfile

@@ -11,15 +11,18 @@ const useUserInfo = (): [
 ] => {
   const dispatch = useDispatch()
   const userInfo = useSelector(userInfoSelector)
+
   const setUserInfo = useCallback(
     (newUserInfo) => {
       dispatch(setExtra(newUserInfo))
     },
     [dispatch],
   )
+
   const resetUserInfo = useCallback(() => {
     dispatch(clearExtra())
   }, [dispatch])
+
   return [userInfo, setUserInfo, resetUserInfo]
 }
 

@@ -38,4 +38,5 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
 })
+
 export default GoBack

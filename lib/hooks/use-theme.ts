@@ -31,7 +31,7 @@ const useTheme = (): UseTheme => {
     const themedCommonStyles = {}
 
     for (const key in commonStylesConfig) {
-      if (commonStylesConfig.hasOwnProperty(key)) {
+      if (Object.prototype.hasOwnProperty.call(commonStylesConfig, key)) {
         const style = commonStylesConfig[key]
         themedCommonStyles[key] = createStyles(style)
       }

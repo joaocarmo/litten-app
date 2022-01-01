@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import firestore from '@db/firestore'
 import { locationSchema } from '@db/schemas/location'
 import type { DBLocationObject, DBCoordinateObject } from '@db/schemas/location'

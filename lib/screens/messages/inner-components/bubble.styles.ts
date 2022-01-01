@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-const styles: any = (theme, typography, isDark) => ({
+const styles = (theme, typography, isDark) => ({
   tickStyle: {
     color: theme.colors.neutralDark,
   },

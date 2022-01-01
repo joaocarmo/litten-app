@@ -9,16 +9,19 @@ const useUnit = (
 ): [string, boolean, (useMetric: boolean) => void] => {
   const dispatch = useDispatch()
   const { useMetricUnits } = useSelector(userPreferencesSelector)
+
   const unit = useMemo(
     () => getUnit(property, useMetricUnits),
     [property, useMetricUnits],
   )
+
   const setNewMetricUnits = useCallback(
     (useMetric) => {
       dispatch(setMetricUnits(useMetric))
     },
     [dispatch],
   )
+
   return [unit, useMetricUnits, setNewMetricUnits]
 }
 

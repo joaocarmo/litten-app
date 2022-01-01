@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import firestore from '@db/firestore'
 import { string2tags } from '@utils/functions'
 import {

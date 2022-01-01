@@ -1,4 +1,5 @@
 import { createContext } from 'react'
+import type { Context } from 'react'
 import type { Colors } from '@styles/colors'
 import type { Theme } from '@styles/themes'
 import type { Typography } from '@styles/typography'
@@ -19,7 +20,7 @@ const themeDefaults = {
   typography: {},
 }
 
-const ThemeContext: React.Context<ThemeConfig> =
+const ThemeContext: Context<ThemeConfig> =
   createContext<ThemeConfig>(themeDefaults)
 
 export { ThemeContext }

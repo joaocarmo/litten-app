@@ -7,6 +7,7 @@ import { translate } from '@utils/i18n'
 
 const useConnectionStatus = () => {
   const { isInternetReachable } = useNetInfo()
+
   const [showToast] = useDebouncedCallback(
     useCallback(() => {
       if (isInternetReachable === false) {
@@ -19,6 +20,7 @@ const useConnectionStatus = () => {
     }, [isInternetReachable]),
     100 * DEBOUNCE_TIMEOUT,
   )
+
   useEffect(() => {
     showToast()
   }, [isInternetReachable, showToast])

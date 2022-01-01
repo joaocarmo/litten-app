@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from 'react'
-
 import { getCountryCallingCode } from 'libphonenumber-js/mobile'
 import FormKeyboardAvoidingView from '@templates/form-keyboard-avoiding-view'
 import CountryPhoneSelector from '@components/country-phone-selector'
@@ -11,6 +10,7 @@ const StepCountryPhone = ({
   setPhoneNumber,
 }) => {
   const [callingCodeEditable, setCallingCodeEditable] = useState(false)
+
   const handleOnSelectCountry = useCallback(
     (selectedCountry) => {
       setCountry(selectedCountry)
@@ -33,11 +33,13 @@ const StepCountryPhone = ({
     },
     [setCallingCode, setCountry],
   )
+
   useEffect(() => {
     if (country && !callingCode) {
       handleOnSelectCountry(country)
     }
   }, [callingCode, country, handleOnSelectCountry])
+
   return (
     <FormKeyboardAvoidingView>
       <CountryPhoneSelector

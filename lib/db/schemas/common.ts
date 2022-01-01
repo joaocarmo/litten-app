@@ -4,6 +4,7 @@ export type DBTimestamp = {
   _seconds?: number
   _nanoseconds?: number
 }
+
 export type DBMetadata = {
   createdAt: DBTimestamp
   updatedAt: DBTimestamp

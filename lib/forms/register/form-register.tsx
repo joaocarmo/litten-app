@@ -34,6 +34,7 @@ const RegisterForm = (props): FC => {
   const {
     commonStyles: { noAuthFormStyles: styles },
   } = useTheme()
+
   const {
     formRegister: {
       avatar,
@@ -54,6 +55,7 @@ const RegisterForm = (props): FC => {
     setPhoneNumber,
     setAutoRedirectIfLoggedIn,
   } = props
+
   const formSteps = useMemo(
     () => [
       {
@@ -182,7 +184,9 @@ const RegisterForm = (props): FC => {
       setPhoneNumber,
     ],
   )
+
   const totalSteps = formSteps.length
+
   const setCountryFromIP = useCallback(async () => {
     const geoData = await getExternalGeoInformation()
 
@@ -191,6 +195,7 @@ const RegisterForm = (props): FC => {
       setCountry(countryCode)
     }
   }, [setCountry])
+
   useEffect(() => {
     clearRegisterForm()
     clearErrorsRegisterForm()
@@ -204,6 +209,7 @@ const RegisterForm = (props): FC => {
       setCountry(countryCode)
     } // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
   const submitForm = useCallback(async () => {
     try {
       setAutoRedirectIfLoggedIn(false)
@@ -237,6 +243,7 @@ const RegisterForm = (props): FC => {
     phoneNumber,
     setAutoRedirectIfLoggedIn,
   ])
+
   const acceptTermsAndConditions = useCallback(() => {
     Alert.alert(
       translate('forms.registrationTermsAndConditionsTitle'),
@@ -259,6 +266,7 @@ const RegisterForm = (props): FC => {
       ],
     )
   }, [submitForm])
+
   const submitErrorReport = useCallback(() => {
     logError(new Error(errorReport))
     Alert.alert(
@@ -267,6 +275,7 @@ const RegisterForm = (props): FC => {
     )
     setIsButtonDisabled(true)
   }, [errorReport])
+
   const validateStep = useCallback(() => {
     let isStepValid = false
     const validateFn = formSteps[currentStep - 1]?.validate
@@ -293,6 +302,7 @@ const RegisterForm = (props): FC => {
     formSteps,
     totalSteps,
   ])
+
   const skipStep = useCallback(() => {
     const clearFn = formSteps[currentStep - 1]?.clear
 
@@ -313,6 +323,7 @@ const RegisterForm = (props): FC => {
     formSteps,
     totalSteps,
   ])
+
   const completeStep = useCallback(() => {
     if (doneStatus === 'success') {
       setIsButtonDisabled(true)
@@ -334,10 +345,12 @@ const RegisterForm = (props): FC => {
       )
     }
   }, [doneStatus, setAutoRedirectIfLoggedIn, submitErrorReport])
+
   const CurrentStep = useMemo(
     () => formSteps[currentStep - 1].component,
     [currentStep, formSteps],
   )
+
   return (
     <View style={styles.formContainer}>
       <UILoader active={isLoading} transparent />

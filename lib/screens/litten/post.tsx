@@ -2,7 +2,6 @@ import { useCallback, useEffect, useMemo, useState, useRef } from 'react'
 import type { FC } from 'react'
 import { useFavourite, usePaddingBottom, useUserUid, useTheme } from '@hooks'
 import { Alert, Pressable, ScrollView, View } from 'react-native'
-import { vh, vw } from 'react-native-expo-viewport-units'
 import Carousel from '@components/carousel'
 import Litten from '@model/litten'
 import User from '@model/user'
@@ -32,16 +31,13 @@ import {
 import dayjs from '@utils/day'
 import {
   PLACEHOLDER_USER_DISPLAY_NAME,
-  STRUCTURE_LITTEN_POST_IMAGE_TO_CONTENT_RATIO,
   STRUCTURE_PADDING_MULTIPLIER,
-  STRUCTURE_TAB_NAV_BORDER_RADIUS,
-  STRUCTURE_TAB_NAV_HEIGHT,
-  STRUCTURE_TEMPLATE_SCREEN_BORDER_RADIUS,
   UI_ICON_SIZE_MICRO,
   UI_ICON_SIZE_MINI,
 } from '@utils/constants'
 import { littenSpeciesList, littenTypes } from '@utils/litten'
 import { translate } from '@utils/i18n'
+import postStyles from '@screens/litten/post.styles'
 import type { BasicLitten } from '@model/types/litten'
 import type { BasicUser } from '@model/types/user'
 
@@ -55,7 +51,9 @@ type LittenPostScreenProps = {
   }
 }
 
-const LittenPostScreen: (props: LittenPostScreenProps) => FC = ({
+const LittenPostScreen: (
+  props: LittenPostScreenProps,
+) => FC<LittenPostScreenProps> = ({
   route: {
     params: { litten: littenProp, preview = false, user: userProp },
   },
@@ -70,130 +68,43 @@ const LittenPostScreen: (props: LittenPostScreenProps) => FC = ({
     createStyles,
     theme: { colors },
   } = useTheme()
-  const styles = createStyles((theme) => ({
-    littenPostContainer: {
-      flex: 1,
-      backgroundColor: theme.colors.neutralLight,
-    },
-    littenPost: {
-      flex: 1,
-    },
-    bulletContainerStyle: {
-      bottom: vh(6),
-    },
-    mainImages: {
-      width: '100%',
-      height: vh(STRUCTURE_LITTEN_POST_IMAGE_TO_CONTENT_RATIO * 100) * 1.1,
-      position: 'absolute',
-      top: 0,
-      alignContent: 'center',
-      justifyContent: 'center',
-      overflow: 'hidden',
-    },
-    mainImage: {
-      width: '100%',
-      height: vh(STRUCTURE_LITTEN_POST_IMAGE_TO_CONTENT_RATIO * 100) * 1.1,
-    },
-    mainImagePlaceholder: {
-      width: '100%',
-      height: '100%',
-      backgroundColor: theme.colors.secondaryLight,
-    },
-    littenPostContent: {
-      minHeight: vh((1 - STRUCTURE_LITTEN_POST_IMAGE_TO_CONTENT_RATIO) * 100),
-      marginTop: vh(STRUCTURE_LITTEN_POST_IMAGE_TO_CONTENT_RATIO * 100),
-      paddingBottom: STRUCTURE_TAB_NAV_HEIGHT * STRUCTURE_PADDING_MULTIPLIER,
-      borderTopLeftRadius: STRUCTURE_TEMPLATE_SCREEN_BORDER_RADIUS,
-      borderTopRightRadius: STRUCTURE_TEMPLATE_SCREEN_BORDER_RADIUS,
-      backgroundColor: theme.colors.neutralLight,
-      padding: vw(6),
-    },
-    littenPostContentHeader: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-    },
-    littenPostTitle: {
-      flexShrink: 1,
-      marginRight: 6,
-    },
-    littenPostContentSubHeader: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      overflow: 'hidden',
-    },
-    littenPostContentSubHeaderIcon: {
-      marginRight: 8,
-    },
-    littenPostContentHeaderLocation: {
-      flexShrink: 1,
-    },
-    littenPostFooter: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-      position: 'absolute',
-      bottom: 0,
-      height: STRUCTURE_TAB_NAV_HEIGHT,
-      width: '100%',
-      paddingLeft: 20,
-      paddingRight: 20,
-      borderTopLeftRadius: STRUCTURE_TAB_NAV_BORDER_RADIUS,
-      borderTopRightRadius: STRUCTURE_TAB_NAV_BORDER_RADIUS,
-      backgroundColor: theme.colors.background,
-      zIndex: 1,
-    },
-    littenPostFooterUser: {
-      flex: 1,
-      flexDirection: 'row',
-      alignItems: 'center',
-    },
-    littenPostFooterUserInfo: {
-      flex: 1,
-      marginLeft: 16,
-      marginRight: 24,
-    },
-    littenPostFooterUserName: {
-      flexDirection: 'row',
-      alignItems: 'center',
-    },
-    nameOrganizationIcon: {
-      marginLeft: 6,
-    },
-    callOptionsContainer: {
-      flex: 1,
-      backgroundColor: 'yellow',
-    },
-    favIconStyle: {
-      tintColor: theme.colors.danger,
-    },
-  }))
+
+  const styles = createStyles(postStyles)
+
   const litten = useMemo(
     () => (littenProp instanceof Litten ? littenProp : new Litten(littenProp)),
     [littenProp],
   )
+
   const user = useMemo(
     () => (userProp instanceof User ? userProp : new User(userProp)),
     [userProp],
   )
+
   const locationString = useMemo(
     () => (litten.location ? stringifyLocation(litten.location) : ''),
     [litten.location],
   )
+
   const FavIconComponent = useMemo(
     () => (isFavourite ? HeartFill : HeartOutline),
     [isFavourite],
   )
+
   const { paddingBottom: heightBottom } = usePaddingBottom()
+
   const withPaddingBottom = usePaddingBottom(STRUCTURE_PADDING_MULTIPLIER)
+
   const species = useMemo(
     () => getFromListByKey(littenSpeciesList, litten.species),
     [litten.species],
   )
+
   const typeLabel = useMemo(
     () => getFromListByKey(littenTypes, litten.type)?.label,
     [litten.type],
   )
+
   const postPictures = useMemo(
     () =>
       litten.photos?.map((photoSource, i) => ({
@@ -210,6 +121,7 @@ const LittenPostScreen: (props: LittenPostScreenProps) => FC = ({
       })),
     [litten.photos, styles.mainImage],
   )
+
   const handleOnScroll = useCallback(
     ({
       nativeEvent: {
@@ -221,6 +133,7 @@ const LittenPostScreen: (props: LittenPostScreenProps) => FC = ({
     },
     [navBarInitialPosition],
   )
+
   useEffect(() => {
     if (contentRef && contentRef.current) {
       contentRef.current.measure((x, y, width, height, pageX, pageY) =>
@@ -228,7 +141,9 @@ const LittenPostScreen: (props: LittenPostScreenProps) => FC = ({
       )
     }
   }, [])
+
   const dismissModal = useCallback(() => setModalIsVisible(false), [])
+
   const handleOnPressCTA = useCallback(() => {
     if (preview) {
       Alert.alert(translate('easterEggs.tribute'))
@@ -236,7 +151,9 @@ const LittenPostScreen: (props: LittenPostScreenProps) => FC = ({
       setModalIsVisible(true)
     }
   }, [preview])
+
   const SpeciesIconComponent = species?.icon
+
   return (
     <View style={styles.littenPostContainer}>
       <LittenHeaderNavBar

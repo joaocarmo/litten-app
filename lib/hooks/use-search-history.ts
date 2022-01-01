@@ -12,18 +12,22 @@ const areEqual = (left, right) => left.length === right.length
 const useSearchHistory = (): [string[], (query: string) => void] => {
   const dispatch = useDispatch()
   const searchHistory = useSelector(searchHistorySelector, areEqual)
+
   const addSearchToHistory = useCallback(
     (query) => dispatch(addSavedSearch(query)),
     [dispatch],
   )
+
   const removeSearchFromHistory = useCallback(
     (query) => dispatch(removeSavedSearch(query)),
     [dispatch],
   )
+
   const clearSearchHistory = useCallback(
     () => dispatch(clearSavedSearch()),
     [dispatch],
   )
+
   const setSearchHistory = useCallback(
     (query, { remove = false } = {}) => {
       if (query) {
@@ -38,6 +42,7 @@ const useSearchHistory = (): [string[], (query: string) => void] => {
     },
     [addSearchToHistory, clearSearchHistory, removeSearchFromHistory],
   )
+
   return [searchHistory, setSearchHistory]
 }
 

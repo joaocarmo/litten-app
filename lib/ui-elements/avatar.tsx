@@ -1,5 +1,5 @@
 import { memo, useCallback } from 'react'
-
+import type { FC } from 'react'
 import { StyleSheet, View } from 'react-native'
 import UIImage from '@ui-elements/image'
 import {
@@ -36,7 +36,7 @@ const areEqual = (prevProps, nextProps) => {
   )
 }
 
-const UIAvatar: (props: UIAvatarProps) => Node = ({
+const UIAvatar: (props: UIAvatarProps) => FC<UIAvatarProps> = ({
   containerStyle,
   resizeMode = 'cover',
   size = 'mini',
@@ -89,7 +89,4 @@ const styles = StyleSheet.create({
     borderRadius: USER_AVATAR_SIZE_MINI,
   },
 })
-export default memo<UIAvatarProps>(
-  UIAvatar,
-  areEqual,
-) as React$AbstractComponent<UIAvatarProps, unknown>
+export default memo<UIAvatarProps>(UIAvatar, areEqual)

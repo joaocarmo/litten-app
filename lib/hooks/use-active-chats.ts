@@ -17,6 +17,7 @@ const useActiveChats = (): [BasicChat[], (arg0: BasicChat[]) => void] => {
     },
     [dispatch],
   )
+
   return [active, setNewChats]
 }
 

@@ -1,5 +1,4 @@
 import { useCallback, useMemo, useState, useRef } from 'react'
-
 import { useActionSheet } from '@expo/react-native-action-sheet'
 import { usePaddingBottom, useTheme, useUserInfo, useUserPosts } from '@hooks'
 import { Alert, FlatList, View } from 'react-native'
@@ -21,18 +20,22 @@ const ProfilePosts = ({ active }) => {
       commonStyles: { contentContainerStyle, flexOne },
     },
   } = useTheme()
+
   const posts = active ? activePosts : pastPosts
+
   const search = useRef(
     new Search({
       user,
     }),
   ).current
+
   const updatePosts = useCallback(async () => {
     const userActivePosts = await search.userActivePosts()
     setActivePosts(userActivePosts)
     const userInactivePosts = await search.userInactivePosts()
     setPastPosts(userInactivePosts)
   }, [search, setActivePosts, setPastPosts])
+
   const toggleActive = useCallback(
     async (litten) => {
       setIsLoading(true)
@@ -48,6 +51,7 @@ const ProfilePosts = ({ active }) => {
     },
     [active, updatePosts],
   )
+
   const deleteLitten = useCallback(
     async (litten) => {
       setIsLoading(true)
@@ -57,6 +61,7 @@ const ProfilePosts = ({ active }) => {
     },
     [updatePosts],
   )
+
   const confirmDelete = useCallback(
     (item) => {
       const { title } = item
@@ -80,6 +85,7 @@ const ProfilePosts = ({ active }) => {
     },
     [deleteLitten],
   )
+
   const handleOnPressAction = useCallback(
     (item) => {
       const options = [
@@ -106,6 +112,7 @@ const ProfilePosts = ({ active }) => {
     },
     [active, confirmDelete, showActionSheetWithOptions, toggleActive],
   )
+
   const renderItem = useCallback(
     ({ item: litten }) => (
       <LittenDumbCard
@@ -119,6 +126,7 @@ const ProfilePosts = ({ active }) => {
     ),
     [handleOnPressAction, user],
   )
+
   const ListEmptyComponent = useMemo(
     () => (
       <Empty
@@ -138,6 +146,7 @@ const ProfilePosts = ({ active }) => {
     ),
     [active],
   )
+
   return (
     <View style={flexOne}>
       <UILoader active={isLoading} transparent />

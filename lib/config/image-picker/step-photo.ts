@@ -21,10 +21,10 @@ export const imagePickerOptions = {
   ],
   useFrontCamera: true,
   compressImageQuality: 0.8,
-  loadingLabelText: translate('feedback.pleaseWait') as any,
+  loadingLabelText: translate('feedback.pleaseWait'),
   mediaType: 'photo',
   forceJpg: true,
   enableRotationGesture: true,
-  cropperChooseText: translate('cta.choose') as any,
-  cropperCancelText: translate('cta.cancel') as any,
+  cropperChooseText: translate('cta.choose'),
+  cropperCancelText: translate('cta.cancel'),
 }

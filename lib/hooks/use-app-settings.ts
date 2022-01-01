@@ -4,6 +4,7 @@ import { AppSettings } from '@store/types'
 
 const useAppSettings = (): [AppSettings] => {
   const appSettings = useSelector(appSettingsSelector)
+
   return [appSettings]
 }
 

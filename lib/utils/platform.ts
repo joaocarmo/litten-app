@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { Alert } from 'react-native'
 import { isEmulator } from 'react-native-device-info'
 import { translate } from '@utils/i18n'

@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import PushNotification from 'react-native-push-notification'
 import { logError } from '@utils/dev'
 
@@ -6,38 +7,39 @@ class NotificationHandler {
 
   #onRegister
 
-  onNotification(notification: any) {
+  onNotification(notification) {
     if (typeof this.#onNotification === 'function') {
       this.#onNotification(notification)
     }
   }
 
-  onRegister(token: any) {
+  onRegister(token) {
     if (typeof this.#onRegister === 'function') {
       this.#onRegister(token)
     }
   }
 
-  onAction(notification: any) {
+  onAction(notification) {
     if (notification.action === 'Yes') {
       PushNotification.invokeApp(notification)
     }
   }
 
-  onRegistrationError(err: any) {
+  onRegistrationError(err) {
     logError(err)
   }
 
-  attachRegister(handler: any) {
+  attachRegister(handler) {
     this.#onRegister = handler
   }
 
-  attachNotification(handler: any) {
+  attachNotification(handler) {
     this.#onNotification = handler
   }
 }
 
 const handler: NotificationHandler = new NotificationHandler()
+
 PushNotification.configure({
   onRegister: handler.onRegister.bind(handler),
   onNotification: handler.onNotification.bind(handler),
@@ -51,4 +53,5 @@ PushNotification.configure({
   popInitialNotification: true,
   requestPermissions: true,
 })
+
 export default handler

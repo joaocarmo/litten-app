@@ -1,5 +1,5 @@
 import { memo, useMemo } from 'react'
-
+import type { FC } from 'react'
 import { Text, View } from 'react-native'
 import { useTheme } from '@hooks'
 import dayjs from '@utils/day'
@@ -21,7 +21,9 @@ const areEqual = (prevProps, nextProps) =>
     dayjs(nextProps.lastActivity).fromNow() &&
   prevProps.read === nextProps.read
 
-const UIMessagePreview: (props: UIMessagePreviewProps) => Node = ({
+const UIMessagePreview: (
+  props: UIMessagePreviewProps,
+) => FC<UIMessagePreviewProps> = ({
   children,
   from,
   header,

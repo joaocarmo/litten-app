@@ -11,6 +11,7 @@ const MaintenanceScreen = ({ isAppBlocked }) => {
     createStyles,
     theme: { colors },
   } = useTheme()
+
   const styles = createStyles((theme) => ({
     container: {
       flex: 1,
@@ -35,6 +36,7 @@ const MaintenanceScreen = ({ isAppBlocked }) => {
       flex: 1,
     },
   }))
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar

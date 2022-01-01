@@ -11,7 +11,7 @@ import {
 const UI_ICON_MARGIN = 8
 const UI_ICON_SIZE_MICRO_MINI_AVG = (UI_ICON_SIZE_MICRO + UI_ICON_SIZE_MINI) / 2
 
-const styles: any = (theme) => ({
+const styles = (theme) => ({
   cardContainer: {
     height: UI_LITTEN_CARD_HEIGHT,
     width: '100%',

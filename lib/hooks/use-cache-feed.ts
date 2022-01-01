@@ -10,12 +10,14 @@ const useCacheFeed = (): [
 ] => {
   const dispatch = useDispatch()
   const feed = useSelector(cacheFeedSelector)
+
   const setNewFeed = useCallback(
     (newFeed) => {
       dispatch(setFeed(newFeed))
     },
     [dispatch],
   )
+
   return [feed, setNewFeed]
 }
 

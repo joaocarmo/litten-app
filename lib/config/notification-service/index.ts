@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import PushNotification from 'react-native-push-notification'
 import NotificationHandler from '@config/notification-service/handler'
 import channels from '@config/notification-service/channels'
@@ -11,11 +12,12 @@ class NotificationService {
 
   #doneMessageIds = []
 
-  constructor(onNotification: any, onRegister: any) {
+  constructor(onNotification, onRegister) {
     this.#lastId = 0
     this.createDefaultChannels()
     NotificationHandler.attachRegister(onRegister)
     NotificationHandler.attachNotification(onNotification)
+
     // Clear badge number at start
     PushNotification.getApplicationIconBadgeNumber((number) => {
       if (number > 0) {
@@ -33,7 +35,7 @@ class NotificationService {
   localNotification(
     title: string,
     message: string,
-    { channelId = CHANNELS_GENERAL_MESSAGES_ID, ...options }: any = {},
+    { channelId = CHANNELS_GENERAL_MESSAGES_ID, ...options } = {},
   ) {
     this.#lastId += 1
     PushNotification.localNotification({
@@ -55,7 +57,7 @@ class NotificationService {
     }: {
       dry: boolean
       id: string
-      userInfo: any
+      userInfo: Record<string, unknown>
     } = {},
   ) {
     const messageId = id || `${title}${message}`.trim()
@@ -86,9 +88,11 @@ class NotificationService {
     return PushNotification.checkPermissions(callback)
   }
 
-  requestPermissions(): any {
+  requestPermissions() {
     return PushNotification.requestPermissions()
   }
 }
 
 export default NotificationService
+
+export type NotificationService = typeof NotificationService

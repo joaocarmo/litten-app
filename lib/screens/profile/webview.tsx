@@ -1,5 +1,4 @@
 import { useState } from 'react'
-
 import { StyleSheet, View } from 'react-native'
 import { usePaddingBottom } from '@hooks'
 import { UIContainer, UIHeader, UILoader, UIText } from '@ui-elements'
@@ -77,4 +76,5 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 })
+
 export default WebViewScreen

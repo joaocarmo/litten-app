@@ -11,15 +11,18 @@ const useSearchFilters = (): [
 ] => {
   const dispatch = useDispatch()
   const searchFilters = useSelector(searchFiltersSelector)
+
   const setSearchFilters = useCallback(
     (newSearchFilters) => {
       dispatch(setFilters(newSearchFilters))
     },
     [dispatch],
   )
+
   const resetSearchFilters = useCallback(() => {
     dispatch(resetFilters())
   }, [dispatch])
+
   return [searchFilters, setSearchFilters, resetSearchFilters]
 }
 

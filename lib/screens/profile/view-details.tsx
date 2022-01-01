@@ -17,6 +17,7 @@ const UserProfileDetailsScreen = ({ user = {} }) => {
     photoURL,
   } = user
   const { createStyles } = useTheme()
+
   const styles = createStyles((theme) => ({
     viewProfileContainer: {
       flexDirection: 'row',
@@ -45,7 +46,9 @@ const UserProfileDetailsScreen = ({ user = {} }) => {
       marginRight: 8,
     },
   }))
+
   const memberSince = seconds ? seconds * 1000 : undefined
+
   const userType = isOrganization
     ? translate('screens.profile.viewUserTypeOrganization')
     : translate('screens.profile.viewUserTypeIndividual')

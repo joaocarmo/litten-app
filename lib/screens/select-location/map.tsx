@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState, useRef } from 'react'
-
 import { StyleSheet, View } from 'react-native'
 import MapView, { Marker } from 'react-native-maps'
 import { UIButton, UILink, UILoader, UISeparator, UIText } from '@ui-elements'
@@ -28,10 +27,13 @@ const SelectLocationMapScreen = ({
     ...initialCoordinates,
   })
   const [coordinates, setCoordinates] = useState(initialCoordinates)
+
   const mapRef = useRef(null)
+
   const handleOnMapReady = useCallback(() => {
     setIsLoading(false)
   }, [])
+
   const setRegionCoordinate = useCallback((newRegion) => {
     const { latitude, longitude } = newRegion
     setRegion(newRegion)
@@ -40,6 +42,7 @@ const SelectLocationMapScreen = ({
       longitude,
     })
   }, [])
+
   const setCurrentLocation = useCallback(
     async ({ forceUpdate = false, animateToRegion = false } = {}) => {
       if (
@@ -51,8 +54,9 @@ const SelectLocationMapScreen = ({
         const currentPosition = await getLocation()
 
         if (currentPosition?.coords) {
-          const { latitude, longitude } = currentPosition?.coords
+          const { latitude, longitude } = currentPosition?.coords ?? {}
           const newRegion = { ...initialRegion, latitude, longitude }
+
           setRegionCoordinate(newRegion)
 
           if (animateToRegion && mapRef && mapRef.current) {
@@ -69,6 +73,7 @@ const SelectLocationMapScreen = ({
       setRegionCoordinate,
     ],
   )
+
   const setLocation = useCallback(async () => {
     setIsLoading(true)
     const data = await getReverseGeoInformation(coordinates)
@@ -85,21 +90,25 @@ const SelectLocationMapScreen = ({
 
     setIsLoading(false)
   }, [coordinates, onLocationChange])
+
   const clearLocation = useCallback(
     () => onLocationChange(locationSchema),
     [onLocationChange],
   )
+
   const useCurrent = useCallback(() => {
     setCurrentLocation({
       forceUpdate: true,
       animateToRegion: true,
     })
   }, [setCurrentLocation])
+
   const checkPermission = useCallback(async () => {
     const isPermissionGranted = await hasLocationPermission()
     setHasPermission(isPermissionGranted)
     return isPermissionGranted
   }, [])
+
   const handleGoToSettings = useCallback(() => {
     setGoneToSettings(true)
     openSetting()
@@ -113,6 +122,7 @@ const SelectLocationMapScreen = ({
       }
     }
   })
+
   useEffect(() => {
     setCurrentLocation()
     checkPermission() // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -193,4 +203,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 })
+
 export default SelectLocationMapScreen

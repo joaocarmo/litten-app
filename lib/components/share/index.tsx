@@ -1,5 +1,4 @@
 import { useCallback } from 'react'
-
 import Toast from 'react-native-simple-toast'
 import { Platform, Pressable, Share, StyleSheet, View } from 'react-native'
 import { useTheme } from '@hooks'
@@ -48,6 +47,7 @@ const ShareComponent = ({ filler = false, litten }) => {
       logError(err)
     }
   }, [litten])
+
   const handleOnShare = useCallback(() => {
     if (litten.id && litten.title) {
       shareLitten()
@@ -55,9 +55,12 @@ const ShareComponent = ({ filler = false, litten }) => {
       Toast.show(translate('feedback.errorMessages.littenPostMissing'))
     }
   }, [litten, shareLitten])
-  return filler ? (
-    <View style={styles.shareContainer} />
-  ) : (
+
+  if (filler) {
+    return <View style={styles.shareContainer} />
+  }
+
+  return (
     <Pressable onPress={handleOnShare} style={styles.shareContainer}>
       <ShareIcon
         width={STRUCTURE_SHARE_BUTTON_SIZE}
@@ -76,4 +79,5 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
 })
+
 export default ShareComponent

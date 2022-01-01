@@ -1,5 +1,4 @@
 import { useCallback } from 'react'
-
 import { Alert, Pressable, StyleSheet } from 'react-native'
 import { useTheme } from '@hooks'
 import { UIImage } from '@ui-elements'
@@ -17,6 +16,7 @@ const SelectPhoto = ({
   const {
     theme: { colors },
   } = useTheme()
+
   const handleSetPhoto = useCallback(() => {
     Alert.alert(
       translate('forms.changePhoto'),
@@ -33,11 +33,13 @@ const SelectPhoto = ({
       ],
     )
   }, [onChange])
+
   const getEditIconOffset = useCallback(() => {
     const size =
       imageStyle?.maxHeight || imageStyle?.height || USER_AVATAR_SIZE_LARGE
     return 0.07 * size
   }, [imageStyle])
+
   return (
     <Pressable
       onPress={handleSetPhoto}
@@ -77,4 +79,5 @@ const styles = StyleSheet.create({
     borderRadius: USER_AVATAR_SIZE_LARGE / 2,
   },
 })
+
 export default SelectPhoto

@@ -8,7 +8,7 @@ const UIPrompt = ({
   confirmLabel,
   defaultValue = '',
   isDestructive = false,
-  keyboardType,
+  // keyboardType,
   message,
   onCancel,
   onConfirm,
@@ -20,6 +20,7 @@ const UIPrompt = ({
   const {
     theme: { colors },
   } = useTheme()
+
   const secureTextEntry = type === 'secure-text'
 
   if (!open) {

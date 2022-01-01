@@ -20,5 +20,7 @@ const styles: {
     marginTop: UI_ELEMENT_BORDER_MARGIN,
   },
 })
+
 export const ListFooterComponentStyle = styles.listFooterComponentStyle
+
 export default BottomLoader

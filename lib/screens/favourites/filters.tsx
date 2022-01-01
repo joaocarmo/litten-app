@@ -1,6 +1,5 @@
 import Toast from 'react-native-simple-toast'
 import { useCallback, useMemo } from 'react'
-
 import { FlatList, View } from 'react-native'
 import {
   usePaddingBottom,
@@ -23,6 +22,7 @@ const FavouriteFiltersScreen = () => {
       commonStyles: { contentContainerStyle, flexOne, topPadding },
     },
   } = useTheme()
+
   const applyFilters = useCallback(
     (filter) => {
       setFilters(filter)
@@ -30,6 +30,7 @@ const FavouriteFiltersScreen = () => {
     },
     [setFilters],
   )
+
   const renderItem = useCallback(
     ({ item: { key: name, ...filter } }) => (
       <UIListItem
@@ -43,6 +44,7 @@ const FavouriteFiltersScreen = () => {
     ),
     [applyFilters, removeFavouriteFilter],
   )
+
   const ListEmptyComponent = useMemo(
     () => (
       <Empty
@@ -54,6 +56,7 @@ const FavouriteFiltersScreen = () => {
     ),
     [],
   )
+
   return (
     <View style={flexOne}>
       <FlatList

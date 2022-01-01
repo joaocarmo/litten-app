@@ -1,5 +1,4 @@
 import { useCallback, useMemo } from 'react'
-
 import { FlatList, View } from 'react-native'
 import { useFavourites, usePaddingBottom, useTheme } from '@hooks'
 import LittenSmartCard from '@components/litten-card/smart'
@@ -15,6 +14,7 @@ const FavouritePostsScreen = () => {
       commonStyles: { contentContainerStyle, flexOne, topPadding },
     },
   } = useTheme()
+
   const handleOnPressAction = useCallback(
     (litten) => {
       removeFavourite({
@@ -23,12 +23,14 @@ const FavouritePostsScreen = () => {
     },
     [removeFavourite],
   )
+
   const renderItem = useCallback(
     ({ item }) => (
       <LittenSmartCard litten={item} onPressAction={handleOnPressAction} />
     ),
     [handleOnPressAction],
   )
+
   const ListEmptyComponent = useMemo(
     () => (
       <Empty
@@ -40,6 +42,7 @@ const FavouritePostsScreen = () => {
     ),
     [],
   )
+
   return (
     <View style={flexOne}>
       <FlatList

@@ -1,5 +1,5 @@
-import { memo, useCallback, useMemo, type ComponentType } from 'react'
-
+import { memo, useCallback, useMemo } from 'react'
+import type { FC, ReactNode } from 'react'
 import { Pressable, Text, View } from 'react-native'
 import { useTheme } from '@hooks'
 import UIListItemContentMain from '@ui-elements/inner-components/list-item-content-main'
@@ -20,10 +20,10 @@ type UIListItemContentProps = {
   badgeActive?: boolean
   badgeNum?: number | null
   caption?: string
-  children?: Node
+  children?: ReactNode
   hasExtra?: boolean
   icon?: string | { uri: string }
-  IconComponent?: ComponentType<any>
+  IconComponent?: ReactNode
   iconPosition?: 'left' | 'right'
   isPressed?: boolean
   noFeedback?: boolean
@@ -43,7 +43,9 @@ const areEqual = (prevProps, nextProps) =>
   prevProps.noFeedback === nextProps.noFeedback &&
   prevProps.selected === nextProps.selected
 
-const UIListItemContent: (props: UIListItemContentProps) => Node = ({
+const UIListItemContent: (
+  props: UIListItemContentProps,
+) => FC<UIListItemContentProps> = ({
   badgeActive = false,
   badgeNum = null,
   children,

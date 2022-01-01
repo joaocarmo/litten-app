@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-
 import {
   useCacheFeed,
   useCacheUsers,
@@ -38,14 +37,16 @@ const HomeSearchScreen = () => {
   const [listIsScrollable, setListIsScrollable] = useState(false)
   const [littens, setLittens] = useState([])
   const [userCoordinates] = useUserCoordinates()
+
   const searchRef = useRef(new Search(filterSettings))
   const search = searchRef.current
+
   const prepareData = useCallback(
     async (data) => {
       debugLog('[SEARCH] prepareData')
       const augmentedData = []
 
-      for (const litten: any of data) {
+      for (const litten of data) {
         const littenModel = new Litten(litten)
         const userInfo = await getUser(litten.userUid)
         // START --- These are meant for client-side filtering
@@ -63,6 +64,7 @@ const HomeSearchScreen = () => {
     },
     [getUser, userCoordinates],
   )
+
   const getFeed = useCallback(
     async ({ clear = false } = {}) => {
       debugLog('[SEARCH] getFeed with clear:', clear)
@@ -115,6 +117,7 @@ const HomeSearchScreen = () => {
     },
     [allLittens, filterSettings, littens, prepareData, search, setAllLittens],
   )
+
   const refreshFeed = useCallback(async () => {
     debugLog('[SEARCH] refreshFeed')
     search.clearCursor()
@@ -122,11 +125,13 @@ const HomeSearchScreen = () => {
       clear: true,
     })
   }, [getFeed, search])
+
   const handleOnRefresh = useCallback(async () => {
     debugLog('[SEARCH] handleOnRefresh')
     setIsRefreshing(true)
     refreshFeed()
   }, [refreshFeed])
+
   const handleOnScroll = useCallback(() => {
     if (!listIsScrollable) {
       debugLog('[SEARCH] handleOnScroll listIsScrollable', true)
@@ -138,6 +143,7 @@ const HomeSearchScreen = () => {
       setHasMore(true)
     }
   }, [hasMore, listIsScrollable])
+
   const handleOnEndReached = useCallback(() => {
     if (listIsScrollable && !isLoadingMore && hasMore) {
       debugLog('[SEARCH] handleOnEndReached')
@@ -145,11 +151,13 @@ const HomeSearchScreen = () => {
       getFeed()
     }
   }, [getFeed, hasMore, isLoadingMore, listIsScrollable])
+
   const handleTooltipRefresh = useCallback(() => {
     debugLog('[SEARCH] handleTooltipRefresh')
     setIsLoading(true)
     refreshFeed()
   }, [refreshFeed])
+
   const updateSearch = useCallback(
     async (newQuery) => {
       debugLog('[SEARCH] updateSearch', newQuery)
@@ -160,6 +168,7 @@ const HomeSearchScreen = () => {
     },
     [refreshFeed, search],
   )
+
   useEffect(() => {
     if (!littens.length) {
       debugLog('[SEARCH] useEffect [initial]')
@@ -167,14 +176,17 @@ const HomeSearchScreen = () => {
     } else {
       setLittens(filterData(allLittens, filterSettings))
       setIsLoading(false)
-    } // eslint-disable-next-line react-hooks/exhaustive-deps
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
   useEffect(() => {
     if (listIsReady && lastQuery !== query) {
       debugLog('[SEARCH] useEffect with query:', query)
       updateSearch(query)
     }
   }, [lastQuery, listIsReady, query, updateSearch])
+
   useEffect(() => {
     if (!isLoading && !isRefreshing && !isLoadingMore) {
       debugLog('[SEARCH] useEffect filterData')
@@ -186,7 +198,8 @@ const HomeSearchScreen = () => {
       } else {
         setLittens(newFilteredData)
       }
-    } // eslint-disable-next-line react-hooks/exhaustive-deps
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filterSettings])
 
   if (isLoading) {

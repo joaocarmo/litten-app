@@ -6,12 +6,14 @@ import { setCurrentlyActiveChat } from '@store/actions/app-settings'
 const useCurrentlyActiveChat = (): [string, (chatUid: string) => void] => {
   const dispatch = useDispatch()
   const currentlyActiveChat = useSelector(currentlyActiveChatSelector)
+
   const setNewCurrentlyActiveChat = useCallback(
     (newChatUid) => {
       dispatch(setCurrentlyActiveChat(newChatUid ?? ''))
     },
     [dispatch],
   )
+
   return [currentlyActiveChat, setNewCurrentlyActiveChat]
 }
 

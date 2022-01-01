@@ -107,6 +107,7 @@ const stackScreens = [
     component: DevHacks,
   },
 ]
+
 const ProfileStack = createStackNavigator()
 
 const ProfileScreen = () => (

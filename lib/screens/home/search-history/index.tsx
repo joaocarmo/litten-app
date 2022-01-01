@@ -1,5 +1,4 @@
 import { useCallback, useMemo } from 'react'
-
 import { FlatList, View } from 'react-native'
 import {
   usePaddingBottom,
@@ -28,6 +27,7 @@ const HomeSearchHistory = ({
       commonStyles: { contentContainerStyle },
     },
   } = useTheme()
+
   const styles = createStyles((theme) => ({
     searchHistoryContainer: {
       position: 'absolute',
@@ -42,6 +42,7 @@ const HomeSearchHistory = ({
       backgroundColor: theme.colors.neutralLight,
     },
   }))
+
   const selectSearchQuery = useCallback(
     (query) => {
       setQuery(query)
@@ -49,6 +50,7 @@ const HomeSearchHistory = ({
     },
     [setQuery, setShowSearchHistory],
   )
+
   const renderItem = useCallback(
     ({ item: query }) => (
       <UIListItem
@@ -66,6 +68,7 @@ const HomeSearchHistory = ({
     ),
     [selectSearchQuery, setSearchHistory],
   )
+
   const ListFooterComponent = useMemo(
     () => (
       <UIListItem onPress={() => setSearchHistory()}>

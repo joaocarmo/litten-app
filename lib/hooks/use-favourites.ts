@@ -15,12 +15,14 @@ const useFavourites = (): [
 ] => {
   const dispatch = useDispatch()
   const { favourites } = useSelector(userSavedSelector)
+
   const addToFavourites = useCallback(
     (item) => {
       dispatch(addFavouriteLitten(item))
     },
     [dispatch],
   )
+
   const removeFromFavourites = useCallback(
     ({ index, litten }) => {
       if (Number.isInteger(index)) {
@@ -31,6 +33,7 @@ const useFavourites = (): [
     },
     [dispatch],
   )
+
   return [favourites, addToFavourites, removeFromFavourites]
 }
 

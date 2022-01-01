@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from 'react'
-
 import { Alert } from 'react-native'
 import ScreenTemplate from '@templates/screen'
 import ScreenSimpleHeaderTemplate from '@templates/screen-simple-header'
@@ -21,6 +20,7 @@ const ProfileVerificationScreen = ({
 }) => {
   const [isLoading, setIsLoading] = useState(true)
   const [{ emailVerified }, setAuthUser] = useAuthUser()
+
   const refreshAndConfirm = useCallback(async () => {
     if (!emailVerified) {
       const auth = new Auth({})
@@ -43,9 +43,11 @@ const ProfileVerificationScreen = ({
 
     setIsLoading(false)
   }, [actionCode, emailVerified, setAuthUser])
+
   useEffect(() => {
     refreshAndConfirm()
   }, [refreshAndConfirm])
+
   return (
     <ScreenTemplate header={<ScreenSimpleHeaderTemplate withGoBack />}>
       {isLoading && <UILoader active={isLoading} size="large" />}

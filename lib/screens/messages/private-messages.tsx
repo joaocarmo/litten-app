@@ -1,5 +1,4 @@
 import { useCallback, useState, useEffect, useRef } from 'react'
-
 import { GiftedChat } from 'react-native-gifted-chat'
 import {
   Bubble,

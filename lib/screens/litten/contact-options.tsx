@@ -1,5 +1,4 @@
 import { useCallback, useRef } from 'react'
-
 import { useNavigation } from '@react-navigation/native'
 import { Pressable, View } from 'react-native'
 import User from '@model/user'
@@ -34,6 +33,7 @@ const LittenContactOptions = ({
       commonStyles: { veryElevated: veryElevatedStyle },
     },
   } = useTheme()
+
   const styles = createStyles((theme) => ({
     contactOptionsContainer: {
       justifyContent: 'center',
@@ -56,6 +56,7 @@ const LittenContactOptions = ({
       marginTop: UI_ELEMENT_BORDER_MARGIN * 2,
     },
   }))
+
   const openInAppMessage = useCallback(() => {
     onClickOutside()
     navigation.navigate(SCREEN_MESSAGE_PRIVATE, {
@@ -63,8 +64,9 @@ const LittenContactOptions = ({
       litten,
     })
   }, [litten, navigation, onClickOutside, user])
+
   const handleContact = useCallback(
-    ({ key, urlScheme, urlValueKey }) => {
+    ({ urlScheme, urlValueKey }) => {
       if (urlScheme === LITTEN_URI) {
         openInAppMessage()
       } else {
@@ -77,6 +79,7 @@ const LittenContactOptions = ({
     },
     [openInAppMessage, user],
   )
+
   const renderContactOption = useCallback(
     (contactOption) => {
       const { key, label, icon } = contactOption
@@ -110,6 +113,7 @@ const LittenContactOptions = ({
       veryElevatedStyle,
     ],
   )
+
   const renderContactOptions = useCallback(() => {
     if (!user?.contactPreferences?.length) {
       return (
@@ -140,6 +144,7 @@ const LittenContactOptions = ({
     user?.contactPreferences?.length,
     userUid,
   ])
+
   return (
     <UIModal onClickOutside={onClickOutside} {...otherProps}>
       <UIHeader numberOfLines={1} subheader>

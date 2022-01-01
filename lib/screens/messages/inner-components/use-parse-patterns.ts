@@ -11,14 +11,15 @@ import {
 } from '@utils/constants'
 import { translate } from '@utils/i18n'
 
-type LinkStyle = any
-type ParseShape = any
+type LinkStyle = unknown
+type ParseShape = unknown
 
 const useParsePatterns = (): ((linkStyle: LinkStyle) => Array<ParseShape>) => {
   const [, setQuery] = useSearchQuery()
   const navigation = useNavigation()
   const { showActionSheetWithOptions } = useActionSheet()
   const { createStyles } = useTheme()
+
   const styles = createStyles((theme, typography) => ({
     link: {
       fontWeight: typography.fontWeight.light,
@@ -31,7 +32,9 @@ const useParsePatterns = (): ((linkStyle: LinkStyle) => Array<ParseShape>) => {
       textDecorationLine: 'none',
     },
   }))
+
   const handleUrlPress = useCallback((url) => openURL(url), [])
+
   const handlePhonePress = useCallback(
     (phoneNumber) => {
       const options = [
@@ -56,10 +59,12 @@ const useParsePatterns = (): ((linkStyle: LinkStyle) => Array<ParseShape>) => {
     },
     [showActionSheetWithOptions],
   )
+
   const handleEmailPress = useCallback(
     (email) => openURL(`${MAILTO_URI}${email}`),
     [],
   )
+
   const handleHashtagPress = useCallback(
     (hastag) => {
       setQuery(hastag)
@@ -70,6 +75,7 @@ const useParsePatterns = (): ((linkStyle: LinkStyle) => Array<ParseShape>) => {
     },
     [navigation, setQuery],
   )
+
   const parsePatterns = useCallback(
     (linkStyle: LinkStyle): ParseShape[] => [
       {
@@ -102,6 +108,7 @@ const useParsePatterns = (): ((linkStyle: LinkStyle) => Array<ParseShape>) => {
       styles.link,
     ],
   )
+
   return parsePatterns
 }
 

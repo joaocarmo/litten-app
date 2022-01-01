@@ -37,7 +37,7 @@ const HomeFilterSet = ({ route }) => (
   </ScreenTemplate>
 )
 
-const HomeScreen = (props) => (
+const HomeScreen = () => (
   <HomeStack.Navigator
     screenOptions={{
       headerShown: false,

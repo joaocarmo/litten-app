@@ -3,7 +3,7 @@ import { TasksContext } from '@components/tasks'
 import useTasksHandler from '@hooks/use-tasks-handler'
 import { debugLog } from '@utils/dev'
 
-const useTasks = (): any => {
+const useTasks = () => {
   const tasks = useContext(TasksContext)
 
   const [onBackgroundFetch, onBackgroundFail, onBackgroundTimeout] =
@@ -28,11 +28,15 @@ const useTasks = (): any => {
     tasks.registerOnBackgroundTimeout(onBackgroundTimeout)
     tasks.registerHeadlessTask(headlessTask)
     tasks.configure()
+
     debugLog('[BACKGROUND SERVICE] start')
+
     return () => {
       tasks.stop()
+
       debugLog('[BACKGROUND SERVICE] stop')
-    } // eslint-disable-next-line react-hooks/exhaustive-deps
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return tasks

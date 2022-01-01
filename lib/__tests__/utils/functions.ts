@@ -47,7 +47,7 @@ import defaultConfig, {
   VERSION_DISABLED,
 } from '@config/remote-config/defaults'
 import { getRandInt } from '@utils/tests'
-import reverseGeocodingResponse from './responses/reverse-geocoding-response'
+import reverseGeocodingResponse from './responses/reverse-geocoding-response.json'
 
 jest.mock('utils/env', () => ({
   IS_BETA_RELASE: true,

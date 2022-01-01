@@ -11,12 +11,14 @@ const useUserCoordinates = (): [
   const dispatch = useDispatch()
   const { latitude = null, longitude = null } =
     useSelector(userCoordinatesSelector) ?? {}
+
   const setNewLocationCoordinates = useCallback(
     (newCoordinates) => {
       dispatch(setLocationCoordinates(newCoordinates))
     },
     [dispatch],
   )
+
   return [
     {
       latitude,

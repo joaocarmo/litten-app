@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { Alert, Linking } from 'react-native'
 import { translate } from '@utils/i18n'
 

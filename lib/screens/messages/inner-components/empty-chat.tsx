@@ -8,6 +8,7 @@ import { littenTypesKeys } from '@utils/litten'
 const EmptyChat = ({ litten: { photos = [], title: name, type } }) => {
   const [firstPhoto = placeholderCat] = photos
   const { createStyles } = useTheme()
+
   const styles = createStyles((theme) => ({
     emptyChatContainer: {
       flexGrow: 1,
@@ -33,7 +34,9 @@ const EmptyChat = ({ litten: { photos = [], title: name, type } }) => {
       backgroundColor: theme.colors.neutralLighter,
     },
   }))
+
   const typeKey = littenTypesKeys[type]
+
   return (
     <View style={styles.emptyChatContainer}>
       <UIContainer centered>

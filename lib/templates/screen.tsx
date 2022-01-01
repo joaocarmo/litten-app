@@ -33,6 +33,7 @@ const ScreenTemplate = ({
 
   const ScreenComponent =
     scrollable && children ? ScrollableScreenTemplate : StaticScreenTemplate
+
   let screenContent = (
     <ScreenComponent header={header} {...otherProps}>
       {children}
@@ -56,6 +57,7 @@ const ScreenTemplate = ({
       // eslint-disable-next-line no-param-reassign
       arr[idx].compoundComponent = CompoundComponent
     })
+
     screenContent = <ScreenTabular tabs={tabs} />
   }
 

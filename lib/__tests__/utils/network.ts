@@ -4,8 +4,8 @@ import {
   getReverseGeoInformation,
   submitUserFeedback,
 } from '@utils/network'
-import geocodingResponse from './responses/geocoding-response'
-import reverseGeocodingResponse from './responses/reverse-geocoding-response'
+import geocodingResponse from './responses/geocoding-response.json'
+import reverseGeocodingResponse from './responses/reverse-geocoding-response.json'
 
 jest.mock('../../utils/fetcher.ts')
 

@@ -14,18 +14,21 @@ const useSavedFilters = (): [
 ] => {
   const dispatch = useDispatch()
   const { filters } = useSelector(userSavedSelector)
+
   const addNewFavouriteFilter = useCallback(
     (newFilter) => {
       dispatch(addFavouriteFilter(newFilter))
     },
     [dispatch],
   )
+
   const removeFromFavouriteFilters = useCallback(
     (name) => {
       dispatch(removeFavouriteFilter(name))
     },
     [dispatch],
   )
+
   return [filters, addNewFavouriteFilter, removeFromFavouriteFilters]
 }
 

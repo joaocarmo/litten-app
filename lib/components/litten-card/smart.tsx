@@ -1,6 +1,5 @@
 import Toast from 'react-native-simple-toast'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-
 import { useCacheUsers, useFavourite, useUserCoordinates } from '@hooks'
 import LittenCardComponent from '@components/litten-card/card-component'
 import Litten from '@model/litten'
@@ -11,7 +10,7 @@ import { debugLog } from '@utils/dev'
 const LittenSmartCard = ({
   litten: littenProp,
   editable = false,
-  onPressAction = (item) =>
+  onPressAction = () =>
     Toast.show(translate('feedback.errorMessages.notImplemented')),
 }) => {
   const [getUser] = useCacheUsers()
@@ -29,7 +28,9 @@ const LittenSmartCard = ({
       distanceBetween(litten.coordinates, authenticatedUserCoordinates),
     [authenticatedUserCoordinates, litten.coordinates, littenProp.distance],
   )
+
   debugLog('LittenSmartCard', litten.id, 'isLoading', isLoading)
+
   const setUp = useCallback(
     async (item) => {
       const userInfo = await getUser(item.userUid)
@@ -39,6 +40,7 @@ const LittenSmartCard = ({
     },
     [distanceKM, getUser],
   )
+
   useEffect(() => {
     setUp(litten)
     // eslint-disable-next-line react-hooks/exhaustive-deps

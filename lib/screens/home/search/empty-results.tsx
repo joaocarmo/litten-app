@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-
 import { StyleSheet, View } from 'react-native'
 import { UITooltip } from '@ui-elements'
 import Empty from '@components/empty'
@@ -10,6 +9,7 @@ import { translate } from '@utils/i18n'
 const SearchEmptyResults = ({ handleTooltipRefresh }) => {
   const [showRefresh, setShowRefresh] = useState(false)
   const timerId = useRef(null)
+
   useEffect(() => {
     if (!showRefresh) {
       timerId.current = setTimeout(
@@ -51,4 +51,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 })
+
 export default SearchEmptyResults

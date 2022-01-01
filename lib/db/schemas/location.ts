@@ -2,16 +2,19 @@ export type Coordinates = {
   latitude: number
   longitude: number
 }
+
 export type EmptyCoordinates = {
   latitude: null
   longitude: null
 }
+
 export type DBCoordinateObject = {
   latitude: number | null
   longitude: number | null
   _latitude?: number | null
   _longitude?: number | null
 }
+
 export type DBLocationObject = {
   country: string
   administrativeArea1: string
@@ -23,6 +26,7 @@ export type DBLocationObject = {
   street: string
   coordinates: DBCoordinateObject
 }
+
 export const locationSchema: DBLocationObject = {
   // country
   country: '',

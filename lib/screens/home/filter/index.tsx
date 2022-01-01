@@ -1,6 +1,5 @@
 import Toast from 'react-native-simple-toast'
 import { useCallback, useMemo, useState } from 'react'
-
 import { FlatList, Alert } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import {
@@ -44,6 +43,7 @@ const HomeFilterScreen = () => {
       commonStyles: { contentContainerStyle },
     },
   } = useTheme()
+
   const getFilterArray = useCallback((filter: string) => {
     if (filter === LITTEN_FILTER_SPECIES) {
       return littenSpeciesList
@@ -53,6 +53,7 @@ const HomeFilterScreen = () => {
 
     return []
   }, [])
+
   const getCaptionFor = useCallback(
     ({ key, storeKey }: { key: string; storeKey: string }): string => {
       const filter: string[] | number | string = filters[storeKey]
@@ -84,6 +85,7 @@ const HomeFilterScreen = () => {
     },
     [filters, getFilterArray, unit, useMetricUnits],
   )
+
   const clearConfirm = useCallback(() => {
     Alert.alert(
       translate('cta.resetFilters'),
@@ -101,6 +103,7 @@ const HomeFilterScreen = () => {
       ],
     )
   }, [resetFilters])
+
   const saveFilters = useCallback(
     (name) => {
       addFavouriteFilter({
@@ -122,9 +125,11 @@ const HomeFilterScreen = () => {
       }
     }
   }, [filters, namePromptIsOpen])
+
   const handleCancelPrompt = useCallback(() => {
     setNamePromptIsOpen(false)
   }, [])
+
   const renderItem = useCallback(
     ({ item: { key, label, storeKey } }) => (
       <UIListItem
@@ -145,7 +150,9 @@ const HomeFilterScreen = () => {
     ),
     [getCaptionFor, navigation],
   )
+
   const getItemLayout = useCallback(getListItemLayout, [])
+
   const ListFooterComponent = useMemo(
     () => (
       <>
@@ -159,6 +166,7 @@ const HomeFilterScreen = () => {
     ),
     [clearConfirm, saveFiltersWithName],
   )
+
   const renderSavePrompt = useMemo(
     () => (
       <UIPrompt
@@ -173,6 +181,7 @@ const HomeFilterScreen = () => {
     ),
     [handleCancelPrompt, namePromptIsOpen, saveFilters],
   )
+
   return (
     <>
       {renderSavePrompt}

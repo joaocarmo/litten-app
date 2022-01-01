@@ -18,12 +18,14 @@ const useCacheLittens = (): [
 ] => {
   const dispatch = useDispatch()
   const littens = useSelector(cacheLittenSelector, areEqual)
+
   const addCacheLitten = useCallback(
     (newLitten) => {
       dispatch(addLitten(newLitten))
     },
     [dispatch],
   )
+
   const getCacheLitten = useCallback(
     async (id) => {
       if (id && !littens[id]) {
@@ -38,6 +40,7 @@ const useCacheLittens = (): [
     },
     [addCacheLitten, littens],
   )
+
   return [getCacheLitten, littens, addCacheLitten]
 }
 

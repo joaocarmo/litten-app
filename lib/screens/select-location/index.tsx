@@ -1,5 +1,4 @@
 import { useCallback } from 'react'
-
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch } from 'react-redux'
 import SelectLocationMapScreen from './map'
@@ -11,6 +10,7 @@ const SelectLocationIndexScreen = ({
 }) => {
   const dispatch = useDispatch()
   const navigation = useNavigation()
+
   const setLocationToAction = useCallback(
     (payload) =>
       dispatch({
@@ -19,6 +19,7 @@ const SelectLocationIndexScreen = ({
       }),
     [dispatch, dispatchToAction],
   )
+
   const onLocationChange = useCallback(
     (newLoc) => {
       if (dispatchToAction && newLoc) {
@@ -29,6 +30,7 @@ const SelectLocationIndexScreen = ({
     },
     [dispatchToAction, navigation, setLocationToAction],
   )
+
   return (
     <SelectLocationMapScreen
       initialCoordinates={initialCoordinates}

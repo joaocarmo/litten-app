@@ -28,4 +28,5 @@ const styles = StyleSheet.create({
     marginTop: UI_SCREEN_NOAUTH_CTA_HEIGHT,
   },
 })
+
 export default CreateNewCTA

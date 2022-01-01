@@ -8,11 +8,13 @@ const useSafeNavigation = ({
   fallbackScreen = SCREEN_TAB_NAV_HOME,
 }: {
   fallbackScreen: string
-} = {}): NavigationProp<any> => {
+} = {}): NavigationProp => {
   const navIndex = useNavigationState(({ index }) => index)
   const navRoutes = useNavigationState(({ routes }) => routes)
   const navigation = useNavigation()
+
   const canGoBack = navIndex > 0
+
   useEffect(() => {
     // Make sure there's a screen to go back to after following a deep link
     const [currentRoute] = navRoutes
@@ -34,6 +36,7 @@ const useSafeNavigation = ({
       })
     }
   }, [canGoBack, fallbackScreen, navRoutes, navigation])
+
   return navigation
 }
 

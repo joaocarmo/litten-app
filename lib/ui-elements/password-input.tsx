@@ -1,5 +1,4 @@
 import { useState } from 'react'
-
 import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import { useTheme } from '@hooks'
@@ -11,7 +10,7 @@ const UIPasswordInput = ({
   errorMessage,
   onBlur,
   onFocus,
-  secureTextEntry,
+  // secureTextEntry,
   style,
   success = false,
   ...otherProps
@@ -23,6 +22,7 @@ const UIPasswordInput = ({
     theme: { colors },
     typography,
   } = useTheme()
+
   const styles = createStyles((theme) => ({
     uiPasswordInputContainer: {
       flexDirection: 'row',
@@ -59,18 +59,22 @@ const UIPasswordInput = ({
       marginTop: -4,
     },
   }))
+
   const stylesActive = StyleSheet.compose(
     styles.uiPasswordInputContainer,
     styles.uiInputPasswordActive,
   )
+
   const stylesInactive = StyleSheet.compose(
     styles.uiPasswordInputContainer,
     styles.uiInputPasswordInactive,
   )
+
   const stylesSuccess = StyleSheet.compose(
     styles.uiPasswordInputContainer,
     styles.uiInputPasswordSuccess,
   )
+
   const stylesError = StyleSheet.compose(
     styles.uiPasswordInputContainer,
     styles.uiInputPasswordError,

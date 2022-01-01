@@ -7,9 +7,10 @@ import Share from '@components/share'
 import { UIHeader } from '@ui-elements'
 import { opacity2Hex } from '@utils/functions'
 import { STRUCTURE_TEMPLATE_SCREEN_HEADER_MARGIN } from '@utils/constants'
+import type { BasicLitten } from '@model/types/litten'
 
 const LittenHeaderNavBar: (props: {
-  litten: any
+  litten: BasicLitten
   opacity: number
   preview: boolean
 }) => FC = ({ litten, opacity = 0, preview = false }) => {
@@ -18,6 +19,7 @@ const LittenHeaderNavBar: (props: {
     createStyles,
     theme: { colors },
   } = useTheme()
+
   const styles = createStyles((theme) => ({
     littenHeaderNavBar: {
       position: 'absolute',
@@ -37,9 +39,12 @@ const LittenHeaderNavBar: (props: {
       color: theme.colors.textAlt,
     },
   }))
+
   const isAndroid = Platform.OS === 'android'
+
   const backgroundColor =
     opacity > 0 ? `${colors.secondary}${opacity2Hex(opacity)}` : 'transparent'
+
   return (
     <View
       style={[

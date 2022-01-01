@@ -10,18 +10,21 @@ const useSearchFiltersSpecies = (): [
 ] => {
   const dispatch = useDispatch()
   const { littenSpecies } = useSelector(searchFiltersSelector)
+
   const addFilterSpecies = useCallback(
     (species) => {
       dispatch(setSpecies(species))
     },
     [dispatch],
   )
+
   const removeFilterSpecies = useCallback(
     (species) => {
       dispatch(removeSpecies(species))
     },
     [dispatch],
   )
+
   return [littenSpecies, addFilterSpecies, removeFilterSpecies]
 }
 

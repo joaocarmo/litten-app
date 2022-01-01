@@ -19,6 +19,7 @@ const HomeIndexHeader = ({
   const [filters] = useSearchFilters()
   const navigation = useNavigation()
   const { createStyles } = useTheme()
+
   const styles = createStyles((theme, typography) => ({
     header: {
       flex: 1,
@@ -40,14 +41,17 @@ const HomeIndexHeader = ({
       fontWeight: typography.fontWeight.bolder,
     },
   }))
+
   const showSearchHistory = useCallback(
     () => setShowSearchHistory(true),
     [setShowSearchHistory],
   )
+
   const hideSearchHistory = useCallback(
     () => setShowSearchHistory(false),
     [setShowSearchHistory],
   )
+
   const handleNextToSearchAction = useCallback(() => {
     if (searchHistoryVisisble) {
       hideSearchHistory()
@@ -56,6 +60,7 @@ const HomeIndexHeader = ({
       navigation.navigate(SCREEN_HOME_FILTER)
     }
   }, [searchHistoryVisisble, hideSearchHistory, navigation])
+
   return (
     <Pressable onPress={Keyboard.dismiss} style={styles.header}>
       <SearchForm

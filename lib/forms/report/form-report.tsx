@@ -1,6 +1,5 @@
 import Toast from 'react-native-simple-toast'
 import { useCallback, useEffect, useState } from 'react'
-
 import { Alert, StyleSheet, View } from 'react-native'
 import {
   UIButton,
@@ -35,17 +34,21 @@ const ReportForm = ({
 }) => {
   const [extraContent, setExtraContent] = useState('')
   const [isLoading, setIsLoading] = useState(false)
+
   useEffect(() => {
     if (initialContent) {
       setExtraContent(initialContent)
     }
   }, [initialContent])
+
   useEffect(() => {
     if (type) {
       setType(type)
     }
   }, [setType, type])
+
   useEffect(() => () => resetForm(), [resetForm])
+
   const onChangeImage = useCallback(
     (image, index) => {
       const imagePath = getImagePath(image)
@@ -56,6 +59,7 @@ const ReportForm = ({
     },
     [attachments, setAttachments],
   )
+
   const onSubmit = useCallback(async () => {
     const fullContent = `${extraContent}${stateContent}`
 
@@ -92,6 +96,7 @@ const ReportForm = ({
     stateContent,
     stateType,
   ])
+
   return (
     <>
       <UILoader active={isLoading} transparent />
@@ -140,4 +145,5 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
 })
+
 export default ReportForm

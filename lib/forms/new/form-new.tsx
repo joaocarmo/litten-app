@@ -1,7 +1,6 @@
 import { APP_IS_DEV } from '@utils/env'
 import Toast from 'react-native-simple-toast'
 import { useCallback, useMemo, useRef, useState } from 'react'
-
 import { useNavigation } from '@react-navigation/native'
 import { useActionSheet } from '@expo/react-native-action-sheet'
 import { Alert } from 'react-native'
@@ -82,6 +81,7 @@ const NewForm = ({
       user,
     }),
   ).current
+
   const [debouncedSetIsSubmitting, cancelSetIsSubmitting] =
     useDebouncedCallback(
       useCallback(
@@ -92,6 +92,7 @@ const NewForm = ({
         [clearNewForm],
       ),
     )
+
   const handleOnPhotoChange = useCallback(
     (image, photoIndex = null) => {
       if (image) {
@@ -119,6 +120,7 @@ const NewForm = ({
     },
     [addPhoto, removePhoto, updatePhoto],
   )
+
   const chooseSpecies = useCallback(() => {
     const options = [
       ...littenSpeciesList.map(({ label }) => label),
@@ -137,6 +139,7 @@ const NewForm = ({
       },
     )
   }, [setSpecies, showActionSheetWithOptions])
+
   const chooseType = useCallback(() => {
     const options = [
       ...littenTypes.map(({ label }) => label),
@@ -155,6 +158,7 @@ const NewForm = ({
       },
     )
   }, [setType, showActionSheetWithOptions])
+
   const selectLocation = useCallback(() => {
     const options = [
       translate('screens.new.selectLocationMap'),
@@ -187,26 +191,25 @@ const NewForm = ({
     showActionSheetWithOptions,
     userLocation,
   ])
-  const clearForm = useCallback(
-    (confirm = false) => {
-      Alert.alert(
-        translate('cta.clearForm'),
-        translate('feedback.confirmMessages.clearForm'),
-        [
-          {
-            text: translate('cta.yes'),
-            onPress: () => clearNewForm(),
-            style: 'destructive',
-          },
-          {
-            text: translate('cta.no'),
-            onPress: () => null,
-          },
-        ],
-      )
-    },
-    [clearNewForm],
-  )
+
+  const clearForm = useCallback(() => {
+    Alert.alert(
+      translate('cta.clearForm'),
+      translate('feedback.confirmMessages.clearForm'),
+      [
+        {
+          text: translate('cta.yes'),
+          onPress: () => clearNewForm(),
+          style: 'destructive',
+        },
+        {
+          text: translate('cta.no'),
+          onPress: () => null,
+        },
+      ],
+    )
+  }, [clearNewForm])
+
   const validateForm = useCallback(() => {
     const validators = [
       littenPhotoValidator(photos),
@@ -239,10 +242,12 @@ const NewForm = ({
 
     return true
   }, [isAllowedToCreate, location, photos, species, story, title, type])
+
   const updatePosts = useCallback(async () => {
     const userActivePosts = await search.userActivePosts()
     setActivePosts(userActivePosts)
   }, [search, setActivePosts])
+
   const submitForm = useCallback(async () => {
     const isFormValid = validateForm()
 
@@ -273,26 +278,31 @@ const NewForm = ({
     user,
     validateForm,
   ])
+
   const goToEditProfile = useCallback(() => {
     navigation.navigate(SCREEN_TAB_NAV_PROFILE, {
       screen: SCREEN_PROFILE_EDIT,
       initial: false,
     })
   }, [navigation])
+
   const littenSpecies = useMemo(
     () => getFromListByKey(littenSpeciesList, species)?.label,
     [species],
   )
+
   const littenType = useMemo(
     () => getFromListByKey(littenTypes, type)?.label,
     [type],
   )
+
   return (
     <>
       <UISeparator invisible small />
       <UIImagePlaceholder.Group>
         {iterateTimes(NEW_POST_NUM_OF_PHOTOS).map((v, idx) => (
           <AddPhoto
+            // eslint-disable-next-line react/no-array-index-key
             key={idx}
             imageSource={photos[idx]}
             actionable={idx === photos.length}

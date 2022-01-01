@@ -18,4 +18,5 @@ const styles = StyleSheet.create({
     height: UI_SCREEN_NOAUTH_CTA_HEIGHT * 2,
   },
 })
+
 export default Recover

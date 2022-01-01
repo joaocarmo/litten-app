@@ -1,3 +1,4 @@
+import type { GestureResponderEvent } from 'react-native'
 import type { BasicLitten } from '@model/types/litten'
 import type { BasicUser } from '@model/types/user'
 
@@ -6,6 +7,6 @@ export type LittenCardComponentProps = {
   editable: boolean
   isFavourite: boolean
   litten: BasicLitten
-  onPressAction: (args: any) => void
+  onPressAction: ((event: GestureResponderEvent) => void) | null | undefined
   user: BasicUser
 }

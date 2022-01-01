@@ -5,6 +5,7 @@ const useLittenTeam = (): boolean => {
 
   if (authUser) {
     const { email = '', emailVerified = false } = authUser
+
     return emailVerified && email.endsWith('@litten.app')
   }
 

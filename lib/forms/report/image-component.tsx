@@ -11,6 +11,7 @@ const FLEX_BASIS = (0.95 * (1 / MAX_NUM_OF_REPORT_IMAGES) * 100).toFixed(1)
 
 const ImageComponent = ({ source, ...otherProps }) => {
   const { createStyles } = useTheme()
+
   const styles = createStyles((theme) => ({
     reportImageContainer: {
       alignItems: 'center',
@@ -27,6 +28,7 @@ const ImageComponent = ({ source, ...otherProps }) => {
       width: '100%',
     },
   }))
+
   return (
     <Pressable style={styles.reportImageContainer} {...otherProps}>
       <UIImage source={source} style={styles.reportImage} />

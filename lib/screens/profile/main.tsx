@@ -1,6 +1,5 @@
 import { APP_IS_DEV } from '@utils/env'
 import { useCallback, useMemo } from 'react'
-
 import { usePaddingBottom, useUserPosts, useTheme } from '@hooks'
 import { useNavigation } from '@react-navigation/native'
 import { useActionSheet } from '@expo/react-native-action-sheet'
@@ -34,13 +33,16 @@ const ProfileMainScreen = () => {
       commonStyles: { contentContainerStyle },
     },
   } = useTheme()
+
   const styles = createStyles((theme) => ({
     sectionHeader: {
       flex: 1,
       backgroundColor: theme.colors.neutralLight,
     },
   }))
-  const signout = useCallback(async () => await Auth.signOut(), [])
+
+  const signout = useCallback(() => Auth.signOut(), [])
+
   const showActionSheetFeedback = useCallback(() => {
     const reportTypesLabels = reportTypes.map(({ label }) => label)
     const options = [...reportTypesLabels, translate('cta.cancel')]
@@ -61,6 +63,7 @@ const ProfileMainScreen = () => {
       },
     )
   }, [navigation, showActionSheetWithOptions])
+
   const signoutConfirm = useCallback(() => {
     Alert.alert(
       translate('cta.signOut'),
@@ -78,6 +81,7 @@ const ProfileMainScreen = () => {
       ],
     )
   }, [signout])
+
   const mainOptions = useMemo(
     () => [
       {
@@ -222,6 +226,7 @@ const ProfileMainScreen = () => {
       signoutConfirm,
     ],
   )
+
   const renderItem = useCallback(
     ({ item: { title, onPress, navigateTo, otherProps = {}, devOnly } }) => {
       if (devOnly && !APP_IS_DEV) {
@@ -239,6 +244,7 @@ const ProfileMainScreen = () => {
     },
     [navigation],
   )
+
   const renderSectionHeader = useCallback(
     ({ section: { title } }) => (
       <View style={styles.sectionHeader}>
@@ -247,7 +253,9 @@ const ProfileMainScreen = () => {
     ),
     [styles.sectionHeader],
   )
+
   const getItemLayout = useCallback(getListItemLayout, [])
+
   return (
     <SectionList
       sections={mainOptions}

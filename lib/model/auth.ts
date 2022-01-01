@@ -1,3 +1,5 @@
+/* eslint-disable class-methods-use-this */
+/* eslint-disable max-classes-per-file */
 import { USE_GRAVATAR } from '@utils/env'
 import auth from '@db/auth'
 import { parseAvatar } from '@utils/functions'

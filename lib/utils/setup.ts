@@ -88,15 +88,16 @@ export const hasLocationPermission = async (): Promise<boolean> => {
   return false
 }
 export const getCurrentPosition = (): Promise<{
-  coords: any
+  coords: Coordinates | EmptyCoordinates
 }> => {
   const options = {
     enableHighAccuracy: true,
     timeout: 15000,
   }
-  return new Promise((resolve, reject) =>
-    Geolocation.getCurrentPosition(resolve, reject, options),
-  )
+
+  return new Promise((resolve, reject) => {
+    Geolocation.getCurrentPosition(resolve, reject, options)
+  })
 }
 export const getLocation = async (): Promise<{
   coords: Coordinates | EmptyCoordinates
@@ -140,6 +141,7 @@ export const setupUserInfo = async (
     const user = new User({
       id: userAuthUid,
     })
+
     await retry(
       async (bail, retryNum) => {
         debugLog('[SETUP] UPDATING USER INFO... ATTEMPT', retryNum)
@@ -153,8 +155,11 @@ export const setupUserInfo = async (
         retries: RECURSION_LIMIT,
       },
     )
+
     const userInfo = user.toJSON()
+
     debugLog('[SETUP] UPDATED USER INFO...')
+
     return userInfo
   }
 }

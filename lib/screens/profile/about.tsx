@@ -1,5 +1,4 @@
 import { useState } from 'react'
-
 import { Pressable, StyleSheet, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { useTheme } from '@hooks'
@@ -14,7 +13,7 @@ import {
   UI_ABOUT_LOGO_HEIGHT,
   UI_ABOUT_LOGO_WIDTH,
 } from '@utils/constants'
-import { author, contributors, license, version } from 'litten/package.json'
+import { author, contributors, license, version } from '../../../package.json'
 
 const authors = [
   author?.name,
@@ -111,4 +110,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 })
+
 export default ProfileAboutScreen

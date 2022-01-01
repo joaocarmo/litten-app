@@ -1,10 +1,10 @@
-import type { Node } from 'React'
+import type { ReactNode } from 'React'
 import { Component } from 'react'
 import Fallback from '@components/error-boundary/fallback'
 import { logError } from '@utils/dev'
 
 type ErrorBoundaryProps = {
-  children: Node
+  children: ReactNode
 }
 type ErrorBoundaryState = {
   hasError: boolean
@@ -21,6 +21,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     }
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   static getDerivedStateFromError(error: Error): {
     hasError: boolean
   } {
@@ -34,7 +35,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     logError(error, errorInfo.componentStack)
   }
 
-  render(): Node | Node {
+  render() {
     const { children } = this.props
     const { hasError } = this.state
 

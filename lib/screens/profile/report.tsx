@@ -8,6 +8,7 @@ const ProfileReportScreen = ({
   type = FEEDBACK_TYPE_OTHER,
 }) => {
   const header = getFromListByKey(reportTypes, type)?.label
+
   return (
     <ReportForm header={header} initialContent={initialContent} type={type} />
   )

@@ -3,6 +3,7 @@ import { userUidSelector } from '@store/selectors'
 
 const useUserUid = (): string => {
   const userUid = useSelector(userUidSelector)
+
   return userUid ?? ''
 }
 

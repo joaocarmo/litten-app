@@ -1,3 +1,5 @@
+/* eslint-disable class-methods-use-this */
+/* eslint-disable max-classes-per-file */
 import firestore from '@db/firestore'
 import Base from '@model/base'
 import { debugLog } from '@utils/dev'

@@ -18,12 +18,14 @@ const MessagePrivateScreen = ({
   },
 }) => {
   const { createStyles } = useTheme()
+
   const styles = createStyles((theme) => ({
     messagesContainer: {
       flex: 1,
       backgroundColor: theme.colors.neutralLight,
     },
   }))
+
   return (
     <ScreenTemplate
       header={

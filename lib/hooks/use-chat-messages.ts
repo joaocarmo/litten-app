@@ -10,6 +10,7 @@ const useChatMessages = (
 ): [BasicMessage[], (arg0: BasicMessage[]) => void] => {
   const dispatch = useDispatch()
   const chatMessages = useSelector(messageSelector(chatUid)) || initialValue
+
   const setChatMessages = useCallback(
     (newMessages) => {
       dispatch(
@@ -21,11 +22,13 @@ const useChatMessages = (
     },
     [chatUid, dispatch],
   )
+
   useEffect(() => {
     if (!chatUid) {
       setChatMessages([])
     }
   }, [chatUid, setChatMessages])
+
   return [chatMessages, setChatMessages]
 }
 

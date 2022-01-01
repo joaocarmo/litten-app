@@ -1,5 +1,4 @@
 import { useCallback } from 'react'
-
 import { FlatList, Pressable, StyleSheet } from 'react-native'
 import { useSearchFiltersSpecies } from '@hooks'
 import { UIIcon, UIText } from '@ui-elements'
@@ -7,10 +6,12 @@ import { littenSpeciesList } from '@utils/litten'
 
 const SearchHeaderResults = () => {
   const [littenSpecies, addSpecies, removeSpecies] = useSearchFiltersSpecies()
+
   const isSelected = useCallback(
     (key) => littenSpecies.includes(key),
     [littenSpecies],
   )
+
   const renderItem = useCallback(
     ({ item: { key, icon, label } }) => (
       <Pressable
@@ -28,6 +29,7 @@ const SearchHeaderResults = () => {
     ),
     [addSpecies, isSelected, removeSpecies],
   )
+
   return (
     <FlatList
       data={littenSpeciesList}
@@ -46,4 +48,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 })
+
 export default SearchHeaderResults

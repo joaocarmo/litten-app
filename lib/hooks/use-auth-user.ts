@@ -11,15 +11,18 @@ const useAuthUser = (): [
 ] => {
   const dispatch = useDispatch()
   const authUser = useSelector(authUserSelector)
+
   const setAuthUser = useCallback(
     (newUserInfo) => {
       dispatch(setBasic(newUserInfo))
     },
     [dispatch],
   )
+
   const resetAuthUser = useCallback(() => {
     dispatch(clearBasic())
   }, [dispatch])
+
   return [authUser, setAuthUser, resetAuthUser]
 }
 

@@ -1,3 +1,5 @@
+/* eslint-disable class-methods-use-this */
+/* eslint-disable max-classes-per-file */
 import storage from '@react-native-firebase/storage'
 import firestore from '@db/firestore'
 import Auth from '@model/auth'

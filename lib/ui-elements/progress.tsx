@@ -1,5 +1,4 @@
 import { Fragment } from 'react'
-
 import { View } from 'react-native'
 import { vw } from 'react-native-expo-viewport-units'
 import { useTheme } from '@hooks'
@@ -15,6 +14,7 @@ const borderWidth = 2.5
 
 const UIProgress = ({ currentStep, totalSteps }) => {
   const { createStyles } = useTheme()
+
   const styles = createStyles((theme) => ({
     container: {
       flexDirection: 'row',
@@ -54,6 +54,7 @@ const UIProgress = ({ currentStep, totalSteps }) => {
       backgroundColor: theme.colors.secondary,
     },
   }))
+
   return (
     <View style={styles.container}>
       {currentStep === 1 ? (
@@ -68,19 +69,15 @@ const UIProgress = ({ currentStep, totalSteps }) => {
               <View style={styles.donePath} />
               <View style={styles.activeBullet} />
             </>
+          ) : currentStep > n ? (
+            <>
+              <View style={styles.donePath} />
+              <View style={styles.doneBullet} />
+            </>
           ) : (
             <>
-              {currentStep > n ? (
-                <>
-                  <View style={styles.donePath} />
-                  <View style={styles.doneBullet} />
-                </>
-              ) : (
-                <>
-                  <View style={styles.inactivePath} />
-                  <View style={styles.inactiveBullet} />
-                </>
-              )}
+              <View style={styles.inactivePath} />
+              <View style={styles.inactiveBullet} />
             </>
           )}
         </Fragment>

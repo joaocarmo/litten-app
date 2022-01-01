@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react'
-
+import { useCallback, useEffect, useState } from 'react'
 import { Alert, View } from 'react-native'
 import { useTheme } from '@hooks'
 import FormKeyboardAvoidingView from '@templates/form-keyboard-avoiding-view'
@@ -25,7 +24,7 @@ const FormRecover = ({
     clearErrorsLoginForm() // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const validateFields = () => {
+  const validateFields = useCallback(() => {
     const validStep = {
       email: emailValidator(email),
     }
@@ -35,9 +34,9 @@ const FormRecover = ({
       validStep.email?.errorMessage,
     )
     return !validStep.email?.error
-  }
+  }, [email, setErrorAndMessage])
 
-  const submitForm = async () => {
+  const submitForm = useCallback(async () => {
     try {
       setIsLoading(true)
       clearErrorsLoginForm()
@@ -52,9 +51,9 @@ const FormRecover = ({
     } finally {
       setIsLoading(false)
     }
-  }
+  }, [clearErrorsLoginForm, email])
 
-  const validateStep = () => {
+  const validateStep = useCallback(() => {
     const isStepValid = validateFields()
 
     if (!isStepValid) {
@@ -63,7 +62,7 @@ const FormRecover = ({
 
     clearErrorsLoginForm()
     submitForm()
-  }
+  }, [clearErrorsLoginForm, submitForm, validateFields])
 
   if (isSuccess) {
     return (

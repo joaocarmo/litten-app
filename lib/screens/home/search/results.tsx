@@ -23,12 +23,12 @@ import {
 const SearchResults = ({
   handleOnRefresh,
   handleTooltipRefresh,
-  initialNumToRender,
+  // initialNumToRender,
   isLoadingMore,
   isRefreshing,
   littens,
   onEndReached,
-  onEndReachedThreshold,
+  // onEndReachedThreshold,
   onScroll,
 }) => {
   const withPaddingBottom = usePaddingBottom()
@@ -40,6 +40,7 @@ const SearchResults = ({
       commonStyles: { contentContainerStyle, flexOne },
     },
   } = useTheme()
+
   const getItemLayout = useCallback(
     (data, index) => ({
       length: UI_LITTEN_CARD_HEIGHT,
@@ -48,14 +49,17 @@ const SearchResults = ({
     }),
     [],
   )
+
   const ListEmptyComponent = useMemo(
     () => <SearchEmptyResults handleTooltipRefresh={handleTooltipRefresh} />,
     [handleTooltipRefresh],
   )
+
   const ListFooterComponent = useMemo(
     () => <BottomLoader active={isLoadingMore} />,
     [isLoadingMore],
   )
+
   const renderItem = useCallback(
     ({ item: { user, ...litten } }) => {
       const littenModel = new Litten(litten)
@@ -74,6 +78,7 @@ const SearchResults = ({
     },
     [isFavourite, toggleFavourite, userCoordinates],
   )
+
   return (
     <View style={flexOne}>
       <FlatList

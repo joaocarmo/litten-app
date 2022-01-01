@@ -19,7 +19,6 @@ module.exports = {
   },
   rules: {
     semi: ['error', 'never'],
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -30,12 +29,11 @@ module.exports = {
         tsx: 'never',
       },
     ],
-    'no-restricted-syntax': 'off',
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/prefer-default-export': 'off',
     'jest/expect-expect': 'off',
+    'no-restricted-syntax': 'off',
     'object-curly-spacing': ['error', 'always'],
-    'react/jsx-no-literals': ['error', { noStrings: false, ignoreProps: true }],
-    'react/jsx-uses-react': 'off',
-    'react/react-in-jsx-scope': 'off',
     'react/function-component-definition': [
       'error',
       {
@@ -47,7 +45,13 @@ module.exports = {
       'error',
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
     ],
+    'react/jsx-no-literals': ['error', { noStrings: false, ignoreProps: true }],
     'react/jsx-props-no-spreading': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
+    // FIXME:
+    'no-await-in-loop': 'off',
+    'react/no-unstable-nested-components': 'off',
   },
   settings: {
     'import/resolver': {

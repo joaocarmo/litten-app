@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-
 import { useFavouriteFn, useUserPosts, useUserUid } from '@hooks'
 import Search from '@model/search'
 import LittenSmartCard from '@components/litten-card/smart'
@@ -19,15 +18,18 @@ const UserProfileScreen = ({
   const userUid = useUserUid()
   const [activePosts] = useUserPosts()
   const [, toggleFavourite] = useFavouriteFn()
+
   const search = useRef(
     new Search({
       user,
     }),
   ).current
+
   const getUserActivePosts = useCallback(async () => {
     const userPosts = await search.userActivePosts()
     setLittens(userPosts)
   }, [search])
+
   useEffect(() => {
     if (user.id === userUid) {
       setLittens(activePosts)
@@ -35,17 +37,21 @@ const UserProfileScreen = ({
       getUserActivePosts()
     }
   }, [activePosts, getUserActivePosts, user.id, userUid])
+
   const renderItem = useCallback(
     ({ item }) => (
       <LittenSmartCard litten={item} onPressAction={toggleFavourite} />
     ),
     [toggleFavourite],
   )
+
   const ListHeaderComponent = useMemo(
     () => <UserProfileDetailsScreen user={user} />,
     [user],
   )
+
   const ListFooterComponent = useMemo(() => <UISeparator invisible />, [])
+
   const ListEmptyComponent = useMemo(
     () => (
       <View style={styles.emptyContainer}>
@@ -56,6 +62,7 @@ const UserProfileScreen = ({
     ),
     [],
   )
+
   return (
     <ScreenTemplate
       header={
@@ -93,4 +100,5 @@ const styles = StyleSheet.create({
     paddingTop: 32,
   },
 })
+
 export default UserProfileScreen

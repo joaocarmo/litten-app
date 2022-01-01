@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import TestRenderer from 'react-test-renderer'
 import ThemeProvider from '@components/theme/provider'
 import { UIImagePlaceholder } from '@ui-elements'

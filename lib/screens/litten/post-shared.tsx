@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from 'react'
-
 import { useNavigation } from '@react-navigation/native'
 import { useCacheLittens, useCacheUsers } from '@hooks'
 import { UILoader } from '@ui-elements'
@@ -20,6 +19,7 @@ const LittenPostSharedScreen = ({
   const [user, setUser] = useState({})
   const [isLoading, setIsLoading] = useState(true)
   const navigation = useNavigation()
+
   const fetchLittenAndUser = useCallback(
     async (littenId) => {
       const sharedLittenObject = await getLitten(littenId)
@@ -39,6 +39,7 @@ const LittenPostSharedScreen = ({
     },
     [getLitten, getUser],
   )
+
   useEffect(() => {
     if (littenUid) {
       fetchLittenAndUser(littenUid)
@@ -46,6 +47,7 @@ const LittenPostSharedScreen = ({
       navigation.goBack()
     }
   }, [fetchLittenAndUser, littenUid, navigation])
+
   useEffect(() => {
     setLittenUid(littenUidProp)
   }, [littenUidProp])

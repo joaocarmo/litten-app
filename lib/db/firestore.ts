@@ -23,7 +23,6 @@ if (APP_IS_DEV && USE_FIREBASE_EMULATOR && FIRESTORE_EMULATOR_HOST) {
 
   firestore().settings({
     persistence: FIRESTORE_EMULATOR_PERSISTENCE,
-    ssl: false,
   })
 
   firestore.setLogLevel('debug')

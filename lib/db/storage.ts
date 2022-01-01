@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import storage from '@react-native-firebase/storage'
 import { STORAGE_USER_AVATAR } from '@utils/constants'
 import { logError } from '@utils/dev'

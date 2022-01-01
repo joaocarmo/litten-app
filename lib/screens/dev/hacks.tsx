@@ -1,5 +1,4 @@
 import { useCallback, useState } from 'react'
-
 import { Platform, View, StyleSheet } from 'react-native'
 import { useNetInfo } from '@react-native-community/netinfo'
 import { useActionSheet } from '@expo/react-native-action-sheet'
@@ -14,7 +13,7 @@ import { clearStorage } from '@store/utils'
 
 const [getState, toggleState] = simulateNetwork()
 
-const HacksUI = ({ type }) => {
+const HacksUI = () => {
   const [storageCleared, setStorageCleared] = useState(false)
   const [useCrashTestDummy, setUseCrashTestDummy] = useState(false)
   const [fbNetworkActive, setFbNetworkActive] = useState(getState())
@@ -39,10 +38,12 @@ const HacksUI = ({ type }) => {
     await toggleState()
     setFbNetworkActive(getState())
   }, [])
+
   const handleClearStorage = useCallback(async () => {
     const hasStorageCleared = await clearStorage()
     setStorageCleared(hasStorageCleared)
   }, [])
+
   const handleAbruptChaos = useCallback(() => {
     const options = [
       translate('screens.dev.abruptChaosNative'),
@@ -67,6 +68,7 @@ const HacksUI = ({ type }) => {
       },
     )
   }, [showActionSheetWithOptions])
+
   const renderCrashTestDummy = useCallback(() => {
     if (useCrashTestDummy) {
       return 'Crash Test Dummy'
@@ -74,6 +76,7 @@ const HacksUI = ({ type }) => {
 
     return null
   }, [useCrashTestDummy])
+
   return (
     <ScreenTemplate
       header={
@@ -137,4 +140,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 })
+
 export default HacksUI

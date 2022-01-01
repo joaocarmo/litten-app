@@ -4,7 +4,7 @@ import { DEBOUNCE_TIMEOUT } from '@utils/constants'
 const useDebouncedState = <S>(
   initialValue: (() => S) | S,
   delay: number = DEBOUNCE_TIMEOUT,
-): [S, (arg0: ((arg0: S) => S) | S) => void] => {
+): [S, (arg0: ((arg1: S) => S) | S) => void] => {
   const [value, setValue] = useState<S>(initialValue)
   const timerId = useRef(null)
 
@@ -27,8 +27,11 @@ const useDebouncedState = <S>(
     },
     [delay],
   )
+
   useEffect(() => clearTimer(), [delay])
+
   useEffect(() => () => clearTimer(), [])
+
   return [value, debouncedSetValue]
 }
 

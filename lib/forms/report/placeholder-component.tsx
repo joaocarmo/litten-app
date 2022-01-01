@@ -15,6 +15,7 @@ const PlaceholderComponent = (props) => {
     createStyles,
     theme: { colors },
   } = useTheme()
+
   const styles = createStyles((theme) => ({
     reportImageContainer: {
       alignItems: 'center',
@@ -27,6 +28,7 @@ const PlaceholderComponent = (props) => {
       overflow: 'hidden',
     },
   }))
+
   return (
     <Pressable style={styles.reportImageContainer} {...props}>
       <PlusIcon

@@ -33,7 +33,9 @@ const areEqual = (prevProps, nextProps) =>
   prevProps.litten.id === nextProps.litten.id &&
   prevProps.user.id === nextProps.user.id
 
-const LittenCardComponent: (props: LittenCardComponentProps) => FC = ({
+const LittenCardComponent: (
+  props: LittenCardComponentProps,
+) => FC<LittenCardComponentProps> = ({
   distance: distanceKM,
   editable = false,
   isFavourite = false,

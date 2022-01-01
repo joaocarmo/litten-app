@@ -13,7 +13,9 @@ const LittenDumbCard = ({
   const litten = useRef(
     littenProp instanceof Litten ? littenProp : new Litten(littenProp),
   ).current
+
   debugLog('LittenDumbCard', litten.id)
+
   return (
     <LittenCardComponent
       distance={distance}

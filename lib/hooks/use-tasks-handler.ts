@@ -17,6 +17,7 @@ const useTasksHandler = (): [
   const notifications = useNotifications()
   const [appNotifications, setAppNotifications] = useAppNotifications()
   const userUid = useUserUid()
+
   const onBackgroundFetch = useCallback(
     async (taskId) => {
       debugLog('[BackgroundFetch] task started', taskId)
@@ -58,9 +59,11 @@ const useTasksHandler = (): [
     },
     [appNotifications, notifications, setAppNotifications, tasks, userUid],
   )
+
   const onBackgroundFail = useCallback((error) => {
     debugLog('[BackgroundFetch] failed to start', error)
   }, [])
+
   const onBackgroundTimeout = useCallback(
     (taskId) => {
       debugLog('[BackgroundFetch] timeout', taskId)
@@ -68,6 +71,7 @@ const useTasksHandler = (): [
     },
     [tasks],
   )
+
   return [onBackgroundFetch, onBackgroundFail, onBackgroundTimeout]
 }
 

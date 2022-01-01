@@ -1,3 +1,5 @@
+/* eslint-disable class-methods-use-this */
+/* eslint-disable max-classes-per-file */
 import firestore from '@db/firestore'
 import Base from '@model/base'
 import Message from '@model/message'
@@ -203,6 +205,7 @@ export default class Chat extends Base {
         .get()
 
       if (!results.empty) {
+        // eslint-disable-next-line prefer-destructuring
         chat = results.docs[0]
       }
     }
