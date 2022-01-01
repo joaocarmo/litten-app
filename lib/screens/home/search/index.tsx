@@ -44,11 +44,21 @@ const HomeSearchScreen = () => {
   const prepareData = useCallback(
     async (data) => {
       debugLog('[SEARCH] prepareData')
+
       const augmentedData = []
 
+      const usersToFetch = []
+
       for (const litten of data) {
+        usersToFetch.push(getUser(litten.userUid))
+      }
+
+      const users = await Promise.all(usersToFetch)
+
+      for (const [littenIndex, litten] of data.entries()) {
         const littenModel = new Litten(litten)
-        const userInfo = await getUser(litten.userUid)
+        const userInfo = users[littenIndex]
+
         // START --- These are meant for client-side filtering
         litten.distance = distanceBetween(
           littenModel.coordinates,
@@ -56,6 +66,7 @@ const HomeSearchScreen = () => {
         )
         litten.isFromOrganization = userInfo.isOrganization
         // END ---
+
         litten.user = userInfo
         augmentedData.push(litten)
       }
@@ -77,8 +88,10 @@ const HomeSearchScreen = () => {
       let limitInifity = 0
 
       do {
+        // eslint-disable-next-line no-await-in-loop
         newData = await search.getHomeFeed()
         data = [...data, ...newData]
+        // eslint-disable-next-line no-await-in-loop
         newPreparedData = await prepareData(newData)
         preparedData = [...preparedData, ...newPreparedData]
         newFilteredData = filterData(newPreparedData, filterSettings)

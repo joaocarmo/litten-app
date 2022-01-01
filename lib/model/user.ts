@@ -346,19 +346,26 @@ export default class User extends Base {
     const ids = []
     const activePosts = await this.#search?.userPostsQuery(true).get()
     const inactivePosts = await this.#search?.userPostsQuery(false).get()
+
     activePosts?.docs.forEach((documentSnapshot) => {
       ids.push(documentSnapshot.id)
     })
+
     inactivePosts?.docs.forEach((documentSnapshot) => {
       ids.push(documentSnapshot.id)
     })
+
+    const littensToDelete = []
 
     for (const id of ids) {
       const litten = new Litten({
         id,
       })
-      await litten.delete()
+
+      littensToDelete.push(litten.delete())
     }
+
+    await Promise.all(littensToDelete)
 
     debugLog('[USER] DELETED LITTENS', ids.length)
   }

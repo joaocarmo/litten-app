@@ -169,12 +169,15 @@ export const submitUserFeedbackAttachments = async ({
     const appendUrl = JIRA_APPEND_ATTACHMENT.replace('{issueIdOrKey}', issueId)
     const temporaryAttachmentIds = []
 
+    const headersUpload = {
+      Authorization,
+      'X-ExperimentalApi': 'opt-in',
+      'X-Atlassian-Token': 'no-check',
+    }
+
+    const attachmentsToUpload = []
+
     for (const attachment of attachments) {
-      const headersUpload = {
-        Authorization,
-        'X-ExperimentalApi': 'opt-in',
-        'X-Atlassian-Token': 'no-check',
-      }
       const formData = new FormData()
       const attachmentFile = {
         uri: attachment,
@@ -183,15 +186,23 @@ export const submitUserFeedbackAttachments = async ({
       }
       formData.append('file', attachmentFile)
 
-      try {
-        const response = await fetcher(uploadUrl, {
+      attachmentsToUpload.push(
+        fetcher(uploadUrl, {
           method: 'POST',
           headers: headersUpload,
           body: formData,
-        })
+        }),
+      )
+    }
 
-        if (response.ok) {
-          const responseBody = await response.json()
+    try {
+      const uploadResponses = await Promise.all(attachmentsToUpload)
+      const uploadResponsesJson = await Promise.all(
+        uploadResponses.map((response) => response.ok && response.json()),
+      )
+
+      uploadResponsesJson.forEach((responseBody, responseIndex) => {
+        if (responseBody) {
           const { temporaryAttachments } = responseBody
 
           for (const temporaryAttachment of temporaryAttachments) {
@@ -199,11 +210,16 @@ export const submitUserFeedbackAttachments = async ({
             temporaryAttachmentIds.push(temporaryAttachmentId)
           }
         } else {
-          debugLog(uploadUrl, headersUpload, response)
+          debugLog(
+            '[ERROR] Uploading attachment',
+            uploadUrl,
+            headersUpload,
+            uploadResponses[responseIndex],
+          )
         }
-      } catch (err) {
-        logError(err)
-      }
+      })
+    } catch (err) {
+      logError(err)
     }
 
     if (temporaryAttachmentIds.length > 0) {

@@ -101,10 +101,25 @@ const ActiveMessages = () => {
       debugLog('[CHATS] prepareChats')
       const preparedChats = []
 
+      const littensToFetch = []
+      const recipientsToFetch = []
+
       for (const chat of chats) {
-        const litten = await getLitten(chat.littenUid)
         const recipientUid = chat.participants.find((id) => id !== userUid)
-        const recipient = await getUser(recipientUid)
+
+        littensToFetch.push(getLitten(chat.littenUid))
+        recipientsToFetch.push(getUser(recipientUid))
+      }
+
+      const [littens, recipients] = await Promise.all([
+        Promise.all(littensToFetch),
+        Promise.all(recipientsToFetch),
+      ])
+
+      chats.forEach((chat, chatIndex) => {
+        const litten = littens[chatIndex]
+        const recipient = recipients[chatIndex]
+
         const preparedChat = {
           key: chat.id,
           chat,
@@ -113,7 +128,7 @@ const ActiveMessages = () => {
         }
         preparedChats.push(preparedChat)
         handleChatNotifications(preparedChat)
-      }
+      })
 
       setDisplayChats(preparedChats)
     }

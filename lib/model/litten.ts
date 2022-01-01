@@ -241,27 +241,34 @@ export default class Litten extends Base implements LittenClass {
     }
   }
 
-  async savePhotos(doc: any): Promise<void> {
+  async savePhotos(doc): Promise<void> {
     const docId = doc.id
     const photos = []
 
+    const photosToSave = []
+
     for (const photo of this.#photos) {
       if (typeof photo?.uri === 'string') {
-        try {
-          const photoURL = await this.savePhoto(photo?.uri, docId)
+        photosToSave.push(this.savePhoto(photo?.uri, docId))
+      }
+    }
 
-          if (photoURL) {
-            photos.push(photoURL)
-          }
-        } catch (err) {
-          logError(err)
+    try {
+      const savedPhotos = await Promise.all(photosToSave)
+
+      for (const photo of savedPhotos) {
+        if (photo) {
+          photos.push(photo)
         }
       }
+    } catch (err) {
+      logError(err)
     }
 
     await doc.update({
       photos,
     })
+
     this.#photos = photos
   }
 
@@ -270,7 +277,9 @@ export default class Litten extends Base implements LittenClass {
       const littenObject = this.buildObject()
       const litten = await this.collection.add(littenObject)
       this.id = litten.id
+
       await this.savePhotos(litten)
+
       return litten
     } catch (err) {
       throw new LittenError(err)

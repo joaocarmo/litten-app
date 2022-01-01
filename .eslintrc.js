@@ -46,8 +46,6 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
-    // FIXME:
-    'no-await-in-loop': 'off',
   },
   settings: {
     'import/resolver': {

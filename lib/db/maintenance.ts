@@ -78,9 +78,13 @@ export const deleteAllChatForUser = async (userUid: string): Promise<void> => {
         chats.push(chat)
       })
 
+      const chatsToDelete = []
+
       for (const chat of chats) {
-        await chat.deleteForUser(userUid)
+        chatsToDelete.push(chat.deleteForUser(userUid))
       }
+
+      await Promise.all(chatsToDelete)
 
       debugLog('[CHAT] DELETED CHATS', chats.length)
     } catch (err) {
