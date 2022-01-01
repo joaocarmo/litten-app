@@ -1,7 +1,8 @@
 import {
   SCREEN_LITTEN_POST_SHARED,
   SCREEN_PROFILE_VERIFICATION,
-} from 'utils/constants'
+} from '@utils/constants'
+
 const linkingConfig = {
   prefixes: ['https://litten.app/open', 'litten://'],
   config: {

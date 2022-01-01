@@ -1,4 +1,4 @@
-import { NETWORK_TIMEOUT } from 'utils/constants'
+import { NETWORK_TIMEOUT } from '@utils/constants'
 
 /**
  * Wraps fetch with a timeout
@@ -7,8 +7,10 @@ import { NETWORK_TIMEOUT } from 'utils/constants'
  * @returns {function}
  */
 export const fetchWithTimeout =
-  (ms: number): ((url: string, arg1: any) => any) =>
-  (url: string, { signal, ...options }: any = {}) => {
+  (
+    ms: number,
+  ): ((url: string, options: Record<string, unknown>) => Promise<unknown>) =>
+  (url: string, { signal, ...options }: Promise<unknown> = {}) => {
     const abortController = new AbortController()
     const fetchPromise = fetch(url, {
       signal: abortController.signal,
@@ -30,6 +32,9 @@ export const fetchWithTimeout =
  * @param {{}} options - Request options
  * @returns {Promise}
  */
-const fetcher: (url: string, arg1: any) => any =
-  fetchWithTimeout(NETWORK_TIMEOUT)
+const fetcher: (
+  url: string,
+  options: Record<string, unknown>,
+) => Promise<unknown> = fetchWithTimeout(NETWORK_TIMEOUT)
+
 export default fetcher

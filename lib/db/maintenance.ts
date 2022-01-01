@@ -1,10 +1,10 @@
-import Auth from 'model/auth'
-import Chat, { ChatError } from 'model/chat'
-import User from 'model/user'
-import { locationSchema } from 'db/schemas/location'
-import { debugLog, logError } from 'utils/dev'
-import type { AuthSettings } from 'model/types/auth'
-import type { BasicUser } from 'model/types/user'
+import Auth from '@model/auth'
+import Chat, { ChatError } from '@model/chat'
+import User from '@model/user'
+import { locationSchema } from '@db/schemas/location'
+import { debugLog, logError } from '@utils/dev'
+import type { AuthSettings } from '@model/types/auth'
+import type { BasicUser } from '@model/types/user'
 
 /**
  * Creates a new Authentication and User object
@@ -21,6 +21,7 @@ export const createNewUser = async ({
   phoneNumber,
 }: AuthSettings): Promise<BasicUser | null> => {
   debugLog('[AUTH] Creating new user...')
+
   const userAuth = new Auth({
     photoURL,
     callingCode,
@@ -30,7 +31,9 @@ export const createNewUser = async ({
     password,
     phoneNumber,
   })
+
   await userAuth.create()
+
   // Create a user object to store extra user information
   const user = new User({
     id: userAuth.id,
@@ -53,6 +56,7 @@ export const createNewUser = async ({
 
   // Send email verification asynchronously
   userAuth.sendEmailVerification()
+
   return newUser
 }
 

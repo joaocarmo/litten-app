@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useMemo, useState, FC } from 'react'
 import { Alert, View } from 'react-native'
 import { getLocales } from 'react-native-localize'
-import { useTheme } from 'hooks'
-import { createNewUser } from 'db/maintenance'
-import { UIButton, UILoader, UIProgress, UISeparator } from 'ui-elements'
+import { useTheme } from '@hooks'
+import { createNewUser } from '@db/maintenance'
+import { UIButton, UILoader, UIProgress, UISeparator } from '@ui-elements'
 import {
   avatarValidator,
   countryValidator,
@@ -12,18 +12,18 @@ import {
   passwordConfirmValidator,
   passwordValidator,
   phoneNumberValidator,
-} from 'utils/validators'
-import FormStatusTemplate from 'templates/form-status'
-import StepNameEmail from 'forms/register/steps/name-email'
-import StepPassword from 'forms/register/steps/password'
-import StepCountryPhone from 'forms/register/steps/country-phone'
-import StepPhoto from 'forms/register/steps/photo'
-import { openURL } from 'utils/ui'
-import { getExternalGeoInformation } from 'utils/network'
-import { getErrorMessage } from 'utils/functions'
-import { WEB_APP_BASE, WEB_APP_TERMS_AND_CONDITIONS } from 'utils/constants'
-import { logError } from 'utils/dev'
-import { translate } from 'utils/i18n'
+} from '@utils/validators'
+import FormStatusTemplate from '@templates/form-status'
+import StepNameEmail from '@forms/register/steps/name-email'
+import StepPassword from '@forms/register/steps/password'
+import StepCountryPhone from '@forms/register/steps/country-phone'
+import StepPhoto from '@forms/register/steps/photo'
+import { openURL } from '@utils/ui'
+import { getExternalGeoInformation } from '@utils/network'
+import { getErrorMessage } from '@utils/functions'
+import { WEB_APP_BASE, WEB_APP_TERMS_AND_CONDITIONS } from '@utils/constants'
+import { logError } from '@utils/dev'
+import { translate } from '@utils/i18n'
 
 const RegisterForm = (props): FC => {
   const [currentStep, setCurrentStep] = useState(1)

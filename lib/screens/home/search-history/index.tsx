@@ -6,14 +6,14 @@ import {
   useSearchHistory,
   useSearchQuery,
   useTheme,
-} from 'hooks'
-import { UIListItem, UIText } from 'ui-elements'
-import { Cross as CrossIcon } from 'images/components/icons'
+} from '@hooks'
+import { UIListItem, UIText } from '@ui-elements'
+import { Cross as CrossIcon } from '@images/components/icons'
 import {
   DEVICE_WIDTH,
   STRUCTURE_TEMPLATE_SCREEN_PADDING,
-} from 'utils/constants'
-import { translate } from 'utils/i18n'
+} from '@utils/constants'
+import { translate } from '@utils/i18n'
 
 const HomeSearchHistory = ({
   setShowSearchHistory,

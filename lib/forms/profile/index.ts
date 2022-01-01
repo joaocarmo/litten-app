@@ -1,13 +1,13 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import * as AuthenticatedUserActions from 'store/actions/authenticated-user'
-import * as FormProfileActions from 'store/actions/form-profile'
-import FormProfile from 'forms/profile/form-profile'
-import type { Dispatch, State } from 'store/types/state'
+import * as AuthenticatedUserActions from '@store/actions/authenticated-user'
+import * as FormProfileActions from '@store/actions/form-profile'
+import FormProfile from '@forms/profile/form-profile'
+import type { Dispatch, State } from '@store/types/state'
 import type {
   AuthenticatedUser,
   ProfileForm as ProfileFormType,
-} from 'store/types'
+} from '@store/types'
 
 type OwnProps = any
 type StateProps = {

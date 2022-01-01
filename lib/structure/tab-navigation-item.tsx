@@ -1,15 +1,13 @@
 import { useMemo } from 'react'
-
 import { Pressable, View } from 'react-native'
-import { useTheme } from 'hooks'
-import { usePaddingBottom } from 'hooks'
-import { UIBadge } from 'ui-elements'
+import { useTheme, usePaddingBottom } from '@hooks'
+import { UIBadge } from '@ui-elements'
 import {
   RECOMMENDED_MINIMUM_TAPPABLE_SIZE,
   STRUCTURE_TAB_NAV_ACTIVE_INDICATOR_SIZE,
   STRUCTURE_TAB_NAV_ICON_INDICATOR_DISTANCE,
   STRUCTURE_TAB_NAV_ICON_SIZE,
-} from 'utils/constants'
+} from '@utils/constants'
 
 const TabNavigationItem = ({
   isFocused,
@@ -22,6 +20,7 @@ const TabNavigationItem = ({
     createStyles,
     theme: { colors },
   } = useTheme()
+
   const styles = createStyles((theme) => ({
     iconBox: {
       height: '100%',
@@ -50,10 +49,12 @@ const TabNavigationItem = ({
       backgroundColor: theme.colors.secondary,
     },
   }))
+
   const paddingBottom = useMemo(
     () => (insetBottom ? insetBottom / 2 : 0),
     [insetBottom],
   )
+
   return (
     <Pressable
       onPress={onPress}

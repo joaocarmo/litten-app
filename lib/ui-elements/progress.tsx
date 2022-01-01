@@ -2,8 +2,9 @@ import { Fragment } from 'react'
 
 import { View } from 'react-native'
 import { vw } from 'react-native-expo-viewport-units'
-import { useTheme } from 'hooks'
-import { iterateTimes } from 'utils/functions'
+import { useTheme } from '@hooks'
+import { iterateTimes } from '@utils/functions'
+
 const bulletSize = 10
 const bulletSizeRadius = Math.floor(bulletSize / 2)
 const bulletSizeActive = Math.floor(bulletSize * 1.7)

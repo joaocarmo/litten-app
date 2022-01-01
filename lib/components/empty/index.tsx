@@ -1,7 +1,7 @@
 import { Children } from 'react'
 import { StyleSheet, View } from 'react-native'
-import { UIContainer, UIHeader, UIImage, UIText } from 'ui-elements'
-import { UI_EMPTY_PLACEHOLDER_IMAGE } from 'utils/constants'
+import { UIContainer, UIHeader, UIImage, UIText } from '@ui-elements'
+import { UI_EMPTY_PLACEHOLDER_IMAGE } from '@utils/constants'
 
 const Empty = ({ children, header, imageSource }) => (
   <View style={styles.emptyPostsContainer}>

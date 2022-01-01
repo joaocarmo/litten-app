@@ -1,11 +1,11 @@
 import { Pressable } from 'react-native'
-import { useTheme } from 'hooks'
-import UIImage from 'ui-elements/image'
+import { useTheme } from '@hooks'
+import UIImage from '@ui-elements/image'
 import {
   UI_IMAGE_PLACEHOLDER_ITEM_MARGIN,
   UI_IMAGE_PLACEHOLDER_ITEM_SIZE,
   UI_PRESSED_OPACITY,
-} from 'utils/constants'
+} from '@utils/constants'
 
 const UIImagePlaceholderImageItem = ({ source, onPress, onLongPress }) => {
   const { createStyles } = useTheme()

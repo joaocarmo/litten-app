@@ -7,12 +7,12 @@ import {
   useSavedFilters,
   useSearchFilters,
   useTheme,
-} from 'hooks'
-import Empty from 'components/empty'
-import { UIListItem } from 'ui-elements'
-import { Cross as CrossIcon } from 'images/components/icons'
-import { placeholderEmptyFavouriteSearches } from 'images'
-import { translate } from 'utils/i18n'
+} from '@hooks'
+import Empty from '@components/empty'
+import { UIListItem } from '@ui-elements'
+import { Cross as CrossIcon } from '@images/components/icons'
+import { placeholderEmptyFavouriteSearches } from '@images'
+import { translate } from '@utils/i18n'
 
 const FavouriteFiltersScreen = () => {
   const withPaddingBottom = usePaddingBottom()

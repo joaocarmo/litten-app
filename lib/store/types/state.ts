@@ -10,7 +10,7 @@ import {
   RegisterForm,
   ReportForm,
   SearchSettings,
-} from 'store/types'
+} from '@store/types'
 
 // The overall state of the app
 export type State = {

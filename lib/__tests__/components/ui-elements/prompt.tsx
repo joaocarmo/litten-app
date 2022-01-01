@@ -1,6 +1,7 @@
 import TestRenderer from 'react-test-renderer'
-import ThemeProvider from 'components/theme/provider'
-import { UIPrompt } from 'ui-elements'
+import ThemeProvider from '@components/theme/provider'
+import { UIPrompt } from '@ui-elements'
+
 beforeAll(() => {
   jest.mock('react-native/Libraries/Utilities/Platform', () => ({
     OS: 'android',

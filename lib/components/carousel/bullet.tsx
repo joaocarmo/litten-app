@@ -1,5 +1,6 @@
 import { StyleSheet, View } from 'react-native'
-import { useTheme } from 'hooks'
+import { useTheme } from '@hooks'
+
 const bulletSize = 6
 const bulletSizeBig = bulletSize + 2
 

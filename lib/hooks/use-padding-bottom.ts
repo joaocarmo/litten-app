@@ -3,7 +3,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import {
   STRUCTURE_PADDING_EXTRA,
   STRUCTURE_TAB_NAV_HEIGHT,
-} from 'utils/constants'
+} from '@utils/constants'
 
 const usePaddingBottom = (
   multiplier = 1,

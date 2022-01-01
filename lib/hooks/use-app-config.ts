@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import remoteConfig from 'db/remote-config'
+import remoteConfig from '@db/remote-config'
 
 const useAppConfig = (configKey: string): any => {
   const [configValue, setConfigValue] = useState(null)

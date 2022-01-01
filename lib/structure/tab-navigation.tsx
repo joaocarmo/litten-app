@@ -1,14 +1,15 @@
 import { View } from 'react-native'
-import { usePaddingBottom, useTheme } from 'hooks'
-import TabNavigationItem from 'structure/tab-navigation-item'
+import { usePaddingBottom, useTheme } from '@hooks'
+import TabNavigationItem from '@structure/tab-navigation-item'
 import {
   STRUCTURE_TAB_NAV_BORDER_RADIUS,
   STRUCTURE_TAB_NAV_HEIGHT,
-} from 'utils/constants'
+} from '@utils/constants'
 
 const TabNavigation = ({ state, descriptors, navigation }) => {
   const { insetBottom } = usePaddingBottom()
   const { createStyles } = useTheme()
+
   const styles = createStyles((theme) => ({
     container: {
       flexDirection: 'row',
@@ -25,6 +26,7 @@ const TabNavigation = ({ state, descriptors, navigation }) => {
       backgroundColor: theme.colors.background,
     },
   }))
+
   return (
     <View
       style={[

@@ -1,4 +1,5 @@
-import { IS_BETA_RELASE } from 'utils/env'
+import { IS_BETA_RELASE } from '@utils/env'
+
 export const BETA_ENABLED = 'betaEnabled'
 export const MAINTENANCE_MODE = 'maintenanceMode'
 export const VERSION_DISABLED = 'versionDisabled'

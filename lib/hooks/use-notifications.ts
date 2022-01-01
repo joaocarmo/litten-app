@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { NotificationsContext } from 'components/notifications'
+import { NotificationsContext } from '@components/notifications'
 
 const useNotifications = (): any => {
   const notifications = useContext(NotificationsContext)

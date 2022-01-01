@@ -1,4 +1,4 @@
-import { UIAvatar } from 'ui-elements'
+import { UIAvatar } from '@ui-elements'
 import TestRenderer from 'react-test-renderer'
 
 const imgPlaceholder = 'https://placeimg.com/140/140/people'

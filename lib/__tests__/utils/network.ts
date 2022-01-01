@@ -3,7 +3,7 @@ import {
   getGeoInformation,
   getReverseGeoInformation,
   submitUserFeedback,
-} from 'utils/network'
+} from '@utils/network'
 import geocodingResponse from './responses/geocoding-response'
 import reverseGeocodingResponse from './responses/reverse-geocoding-response'
 
@@ -51,7 +51,6 @@ describe('Test the external network requests', () => {
 
     if (K > 0) {
       for (const key of expectedKeys) {
-        // eslint-disable-next-line jest/no-conditional-expect
         expect(data).toHaveProperty(key)
       }
     }

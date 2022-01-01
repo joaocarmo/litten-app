@@ -6,19 +6,19 @@ import {
   usePaddingBottom,
   useTheme,
   useUserCoordinates,
-} from 'hooks'
+} from '@hooks'
 import BottomLoader, {
   ListFooterComponentStyle,
-} from 'components/bottom-loader'
-import Litten from 'model/litten'
-import LittenDumbCard from 'components/litten-card/dumb'
-import SearchHeaderResults from 'screens/home/search/header-results'
-import SearchEmptyResults from 'screens/home/search/empty-results'
-import { distanceBetween } from 'utils/functions'
+} from '@components/bottom-loader'
+import Litten from '@model/litten'
+import LittenDumbCard from '@components/litten-card/dumb'
+import SearchHeaderResults from '@screens/home/search/header-results'
+import SearchEmptyResults from '@screens/home/search/empty-results'
+import { distanceBetween } from '@utils/functions'
 import {
   SEARCH_INITIAL_NUM_TO_RENDER,
   UI_LITTEN_CARD_HEIGHT,
-} from 'utils/constants'
+} from '@utils/constants'
 
 const SearchResults = ({
   handleOnRefresh,

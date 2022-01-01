@@ -1,15 +1,16 @@
 import { useCallback } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useActionSheet } from '@expo/react-native-action-sheet'
-import { useSearchQuery, useTheme } from 'hooks'
-import { openURL } from 'utils/ui'
+import { useSearchQuery, useTheme } from '@hooks'
+import { openURL } from '@utils/ui'
 import {
   MAILTO_URI,
   SCREEN_TAB_NAV_HOME,
   SMS_URI,
   TEL_URI,
-} from 'utils/constants'
-import { translate } from 'utils/i18n'
+} from '@utils/constants'
+import { translate } from '@utils/i18n'
+
 type LinkStyle = any
 type ParseShape = any
 

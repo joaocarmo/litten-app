@@ -1,7 +1,8 @@
+import { useCallback } from 'react'
 import { ActivityIndicator, View } from 'react-native'
-import { useTheme } from 'hooks'
-import { opacity2Hex } from 'utils/functions'
-import { DEVICE_WIDTH } from 'utils/constants'
+import { useTheme } from '@hooks'
+import { opacity2Hex } from '@utils/functions'
+import { DEVICE_WIDTH } from '@utils/constants'
 
 const UILoader = ({
   active = false,
@@ -13,6 +14,7 @@ const UILoader = ({
     createStyles,
     theme: { secondary: secondaryColor },
   } = useTheme()
+
   const styles = createStyles((theme) => ({
     uiLoader: {
       flex: 0,
@@ -33,11 +35,7 @@ const UILoader = ({
     },
   }))
 
-  if (!active) {
-    return null
-  }
-
-  const getTransparencyStyle = () => {
+  const getTransparencyStyle = useCallback(() => {
     if (transparent === true) {
       return styles.uiLoaderTransparent
     }
@@ -48,6 +46,10 @@ const UILoader = ({
         backgroundColor: `${styles.uiLoader.backgroundColor}${opacity}`,
       }
     }
+  }, [styles.uiLoader.backgroundColor, styles.uiLoaderTransparent, transparent])
+
+  if (!active) {
+    return null
   }
 
   return (

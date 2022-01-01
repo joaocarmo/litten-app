@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { ScrollView, StyleSheet, View } from 'react-native'
-import Bullets from 'components/carousel/bullets'
+import Bullets from '@components/carousel/bullets'
 
 const Carousel = ({
   bounces,

@@ -9,25 +9,25 @@ import {
   ScrollToBottomComponent,
   Send,
   useParsePatterns,
-} from 'screens/messages/inner-components'
+} from '@screens/messages/inner-components'
 import {
   useChatMessages,
   useCurrentlyActiveChat,
   useDebouncedState,
   useTheme,
   useUserInfo,
-} from 'hooks'
-import Chat from 'model/chat'
-import Message from 'model/message'
-import { UILoader } from 'ui-elements'
-import { debugLog, logError } from 'utils/dev'
-import { locale } from 'utils/day'
-import { translate } from 'utils/i18n'
+} from '@hooks'
+import Chat from '@model/chat'
+import Message from '@model/message'
+import { UILoader } from '@ui-elements'
+import { debugLog, logError } from '@utils/dev'
+import { locale } from '@utils/day'
+import { translate } from '@utils/i18n'
 import {
   DB_MESSAGE_BATCH_AMOUNT,
   PLACEHOLDER_USER_DISPLAY_NAME,
   UI_MESSAGE_MIN_INPUT_TOOLBAR_HEIGHT,
-} from 'utils/constants'
+} from '@utils/constants'
 
 const PrivateMessages = ({ chat: chatProp, litten, recipient }) => {
   const [{ id: userUid, photoURL, displayName }] = useUserInfo()

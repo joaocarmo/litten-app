@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { DEBOUNCE_TIMEOUT } from 'utils/constants'
+import { DEBOUNCE_TIMEOUT } from '@utils/constants'
 
 const useDebouncedState = <S>(
   initialValue: (() => S) | S,

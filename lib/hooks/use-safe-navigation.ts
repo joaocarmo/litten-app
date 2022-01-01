@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import type { NavigationProp } from '@react-navigation/native'
 import { useNavigation, useNavigationState } from '@react-navigation/native'
-import { SCREEN_TAB_NAV_HOME } from 'utils/constants'
-import linkingConfig from 'config/navigation/linking'
+import { SCREEN_TAB_NAV_HOME } from '@utils/constants'
+import linkingConfig from '@config/navigation/linking'
 
 const useSafeNavigation = ({
   fallbackScreen = SCREEN_TAB_NAV_HOME,

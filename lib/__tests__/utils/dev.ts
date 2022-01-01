@@ -1,4 +1,5 @@
-import { debugLog, logError } from 'utils/dev'
+import { debugLog, logError } from '@utils/dev'
+
 describe('Test the "debugLog" function', () => {
   it('returns a string error message', () => {
     expect(debugLog('arguments')).toBeUndefined()

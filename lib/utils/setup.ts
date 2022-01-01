@@ -2,25 +2,26 @@ import retry from 'async-retry'
 import { Alert, Linking, PermissionsAndroid, Platform } from 'react-native'
 import Toast from 'react-native-simple-toast'
 import Geolocation from 'react-native-geolocation-service'
-import Search from 'model/search'
-import User from 'model/user'
-import { userSchema } from 'db/schemas/user'
-import { getExternalGeoInformation } from 'utils/network'
-import { clearPersistence } from 'db/firestore'
-import { setupRemoteConfig } from 'db/remote-config'
-import { debugLog, logError } from 'utils/dev'
-import { translate } from 'utils/i18n'
-import { execOrTimeout } from 'utils/functions'
-import { RECURSION_LIMIT } from 'utils/constants'
-import type { BasicAuthUser } from 'store/types'
+import Search from '@model/search'
+import User from '@model/user'
+import { userSchema } from '@db/schemas/user'
+import { getExternalGeoInformation } from '@utils/network'
+import { clearPersistence } from '@db/firestore'
+import { setupRemoteConfig } from '@db/remote-config'
+import { debugLog, logError } from '@utils/dev'
+import { translate } from '@utils/i18n'
+import { execOrTimeout } from '@utils/functions'
+import { RECURSION_LIMIT } from '@utils/constants'
+import type { BasicAuthUser } from '@store/types'
 import type {
   Coordinates,
   DBCoordinateObject,
   EmptyCoordinates,
-} from 'db/schemas/location'
-import type { BasicUser } from 'model/types/user'
-import type { BasicLitten } from 'model/types/litten'
+} from '@db/schemas/location'
+import type { BasicUser } from '@model/types/user'
+import type { BasicLitten } from '@model/types/litten'
 import appConfig from '../../app.json'
+
 export const openSetting = () => {
   Linking.openSettings().catch(() => {
     Toast.show(translate('feedback.system.cantOpenSettings'))

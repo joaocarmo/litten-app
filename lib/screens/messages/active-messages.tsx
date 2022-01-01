@@ -5,8 +5,9 @@ import {
   useIsFocused,
   useNavigation,
 } from '@react-navigation/native'
-import { useNotifications, usePaddingBottom } from 'hooks'
 import {
+  useNotifications,
+  usePaddingBottom,
   useActiveChats,
   useAppNotifications,
   useCacheLittens,
@@ -15,29 +16,29 @@ import {
   useDebouncedCallback,
   useTheme,
   useUserUid,
-} from 'hooks'
+} from '@hooks'
 import { Alert } from 'react-native'
 import { SwipeListView } from 'react-native-swipe-list-view'
-import Chat from 'model/chat'
+import Chat from '@model/chat'
 import BottomLoader, {
   ListFooterComponentStyle,
-} from 'components/bottom-loader'
-import Empty from 'components/empty'
-import { placeholderEmptyMessages } from 'images'
-import { UIMessage, UILoader } from 'ui-elements'
-import { debugLog, logError } from 'utils/dev'
+} from '@components/bottom-loader'
+import Empty from '@components/empty'
+import { placeholderEmptyMessages } from '@images'
+import { UIMessage, UILoader } from '@ui-elements'
+import { debugLog, logError } from '@utils/dev'
 import {
   getListItemLayout,
   littenToHeaderTitle,
   shortenName,
-} from 'utils/functions'
+} from '@utils/functions'
 import {
   CHATS_INITIAL_NUM_TO_RENDER,
   PLACEHOLDER_USER_DISPLAY_NAME,
   SCREEN_MESSAGE_PRIVATE,
   UI_HIDDEN_OPTION_WIDTH,
-} from 'utils/constants'
-import { translate } from 'utils/i18n'
+} from '@utils/constants'
+import { translate } from '@utils/i18n'
 
 const ActiveMessages = () => {
   const [chats, setChats] = useActiveChats()

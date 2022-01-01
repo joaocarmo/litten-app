@@ -1,12 +1,12 @@
 import { useCallback } from 'react'
 
 import { Alert, Pressable, StyleSheet } from 'react-native'
-import { useTheme } from 'hooks'
-import { UIImage } from 'ui-elements'
-import { placeholderUser } from 'images'
-import { Edit as EditIcon } from 'images/components/icons'
-import { UI_ICON_SIZE_MINI, USER_AVATAR_SIZE_LARGE } from 'utils/constants'
-import { translate } from 'utils/i18n'
+import { useTheme } from '@hooks'
+import { UIImage } from '@ui-elements'
+import { placeholderUser } from '@images'
+import { Edit as EditIcon } from '@images/components/icons'
+import { UI_ICON_SIZE_MINI, USER_AVATAR_SIZE_LARGE } from '@utils/constants'
+import { translate } from '@utils/i18n'
 
 const SelectPhoto = ({
   imageStyle,

@@ -1,8 +1,8 @@
-import { BasicChat } from 'model/types/chat'
-import { BasicLitten } from 'model/types/litten'
-import { BasicMessage } from 'model/types/message'
-import { BasicUser } from 'model/types/user'
-import { DBLocationObject } from 'db/schemas/location'
+import { BasicChat } from '@model/types/chat'
+import { BasicLitten } from '@model/types/litten'
+import { BasicMessage } from '@model/types/message'
+import { BasicUser } from '@model/types/user'
+import { DBLocationObject } from '@db/schemas/location'
 
 export type GenericActionObject = {
   type: string

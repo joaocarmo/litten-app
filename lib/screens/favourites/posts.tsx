@@ -1,11 +1,11 @@
 import { useCallback, useMemo } from 'react'
 
 import { FlatList, View } from 'react-native'
-import { useFavourites, usePaddingBottom, useTheme } from 'hooks'
-import LittenSmartCard from 'components/litten-card/smart'
-import Empty from 'components/empty'
-import { placeholderEmptyFavouritePosts } from 'images'
-import { translate } from 'utils/i18n'
+import { useFavourites, usePaddingBottom, useTheme } from '@hooks'
+import LittenSmartCard from '@components/litten-card/smart'
+import Empty from '@components/empty'
+import { placeholderEmptyFavouritePosts } from '@images'
+import { translate } from '@utils/i18n'
 
 const FavouritePostsScreen = () => {
   const withPaddingBottom = usePaddingBottom()

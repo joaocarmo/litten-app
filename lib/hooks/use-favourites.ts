@@ -1,12 +1,12 @@
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { userSavedSelector } from 'store/selectors'
+import { userSavedSelector } from '@store/selectors'
 import {
   addFavouriteLitten,
   removeFavouriteLitten,
   removeFavouriteWithIndex,
-} from 'store/actions/authenticated-user'
-import type { BasicLitten } from 'model/types/litten'
+} from '@store/actions/authenticated-user'
+import type { BasicLitten } from '@model/types/litten'
 
 const useFavourites = (): [
   BasicLitten[],

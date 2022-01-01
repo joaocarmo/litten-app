@@ -1,7 +1,7 @@
-import type { PhotoObject } from 'store/types'
-import type { DBLocationObject } from 'db/schemas/location'
-import type { DBMetadata } from 'db/schemas/common'
-import type { BasicUser } from 'model/types/user'
+import type { PhotoObject } from '@store/types'
+import type { DBLocationObject } from '@db/schemas/location'
+import type { DBMetadata } from '@db/schemas/common'
+import type { BasicUser } from '@model/types/user'
 
 export type BasicLitten = {
   active?: boolean

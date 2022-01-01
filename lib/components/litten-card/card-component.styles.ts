@@ -6,7 +6,8 @@ import {
   UI_LITTEN_CARD_HEIGHT,
   UI_LITTEN_CARD_IMAGE_TO_CONTENT_RATIO,
   UI_LITTEN_CARD_SPACING,
-} from 'utils/constants'
+} from '@utils/constants'
+
 const UI_ICON_MARGIN = 8
 const UI_ICON_SIZE_MICRO_MINI_AVG = (UI_ICON_SIZE_MICRO + UI_ICON_SIZE_MINI) / 2
 

@@ -2,9 +2,9 @@ import { useState } from 'react'
 
 import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
-import { useTheme } from 'hooks'
-import UIInput from 'ui-elements/input'
-import { Eye as EyeIcon } from 'images/components/icons'
+import { useTheme } from '@hooks'
+import UIInput from '@ui-elements/input'
+import { Eye as EyeIcon } from '@images/components/icons'
 
 const UIPasswordInput = ({
   error,

@@ -1,6 +1,6 @@
 import { StyleSheet, View } from 'react-native'
-import Bullet from 'components/carousel/bullet'
-import { iterateTimes } from 'utils/functions'
+import Bullet from '@components/carousel/bullet'
+import { iterateTimes } from '@utils/functions'
 
 const Bullets = ({
   activeInterval,

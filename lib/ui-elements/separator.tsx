@@ -1,5 +1,5 @@
 import { StyleSheet, View } from 'react-native'
-import { useTheme } from 'hooks'
+import { useTheme } from '@hooks'
 
 const UISeparator = ({
   invisible = false,
@@ -8,6 +8,7 @@ const UISeparator = ({
   ...otherProps
 }) => {
   const { createStyles } = useTheme()
+
   const styles = createStyles((theme) => ({
     uiSeparator: {
       marginTop: 20,
@@ -26,6 +27,7 @@ const UISeparator = ({
     styles.uiSeparator,
     styles.uiSeparatorVisible,
   )
+
   return (
     <View
       {...otherProps}

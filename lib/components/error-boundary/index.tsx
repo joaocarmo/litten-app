@@ -1,7 +1,8 @@
 import type { Node } from 'React'
 import { Component } from 'react'
-import Fallback from 'components/error-boundary/fallback'
-import { logError } from 'utils/dev'
+import Fallback from '@components/error-boundary/fallback'
+import { logError } from '@utils/dev'
+
 type ErrorBoundaryProps = {
   children: Node
 }

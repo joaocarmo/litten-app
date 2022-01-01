@@ -1,5 +1,6 @@
-import { locationSchema } from 'db/schemas/location'
-import { LITTEN_SPECIES_CAT, LITTEN_TYPE_ADOPT } from 'utils/constants'
+import { locationSchema } from '@db/schemas/location'
+import { LITTEN_SPECIES_CAT, LITTEN_TYPE_ADOPT } from '@utils/constants'
+
 export const messageText1 = 'Have you come here for forgiveness?'
 export const messageText2 = 'Have you come to raise the dead?'
 export const users = [

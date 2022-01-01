@@ -1,7 +1,7 @@
 import { Text } from 'react-native'
 import TestRenderer from 'react-test-renderer'
-import ThemeProvider from 'components/theme/provider'
-import { UIBadge, UIText } from 'ui-elements'
+import ThemeProvider from '@components/theme/provider'
+import { UIBadge, UIText } from '@ui-elements'
 
 describe('Snapshot test for the "UIBadge" component', () => {
   const content = 'Text'

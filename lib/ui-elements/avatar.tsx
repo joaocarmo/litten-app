@@ -1,12 +1,13 @@
 import { memo, useCallback } from 'react'
 
 import { StyleSheet, View } from 'react-native'
-import UIImage from 'ui-elements/image'
+import UIImage from '@ui-elements/image'
 import {
   USER_AVATAR_SIZE_LARGE,
   USER_AVATAR_SIZE_MEDIUM,
   USER_AVATAR_SIZE_MINI,
-} from 'utils/constants'
+} from '@utils/constants'
+
 type UIAvatarProps = {
   containerStyle: any
   resizeMode: string

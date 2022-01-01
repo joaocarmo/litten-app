@@ -1,7 +1,7 @@
 import { memo } from 'react'
 
 import { Text, View } from 'react-native'
-import { useTheme } from 'hooks'
+import { useTheme } from '@hooks'
 
 type UIListItemContentMainProps = {
   caption?: string
@@ -12,15 +12,12 @@ type UIListItemContentMainProps = {
   style?: any
 }
 
-const areEqual = (prevProps, nextProps) => {
-  return (
-    prevProps.caption === nextProps.caption &&
-    prevProps.children === nextProps.children &&
-    prevProps.isPressed === nextProps.isPressed &&
-    prevProps.noFeedback === nextProps.noFeedback &&
-    prevProps.selected === nextProps.selected
-  )
-}
+const areEqual = (prevProps, nextProps) =>
+  prevProps.caption === nextProps.caption &&
+  prevProps.children === nextProps.children &&
+  prevProps.isPressed === nextProps.isPressed &&
+  prevProps.noFeedback === nextProps.noFeedback &&
+  prevProps.selected === nextProps.selected
 
 const UIListItemContentMain: (props: UIListItemContentMainProps) => Node = ({
   caption = null,

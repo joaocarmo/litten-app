@@ -1,4 +1,5 @@
 import { createStackNavigator } from '@react-navigation/stack'
+
 const ScreenTabStack = createStackNavigator()
 
 const ScreenTabular = ({ tabs = [] }) => (

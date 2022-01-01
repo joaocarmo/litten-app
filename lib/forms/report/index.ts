@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import * as FormReportActions from 'store/actions/form-report'
-import ReportForm from 'forms/report/form-report'
-import type { Dispatch, State } from 'store/types/state'
-import type { ReportForm as ReportFormType } from 'store/types'
+import * as FormReportActions from '@store/actions/form-report'
+import ReportForm from '@forms/report/form-report'
+import type { Dispatch, State } from '@store/types/state'
+import type { ReportForm as ReportFormType } from '@store/types'
 
 type OwnProps = any
 type StateProps = {

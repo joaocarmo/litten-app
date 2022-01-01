@@ -1,11 +1,11 @@
 import { useMemo } from 'react'
-
 import { TextInput } from 'react-native'
-import { useTheme } from 'hooks'
+import { useTheme } from '@hooks'
 import {
   UI_ELEMENT_BORDER_MARGIN,
   UI_ELEMENT_BORDER_RADIUS,
-} from 'utils/constants'
+} from '@utils/constants'
+
 const rowHeight = 64
 
 const UITextArea = ({
@@ -20,6 +20,7 @@ const UITextArea = ({
     createStyles,
     theme: { colors },
   } = useTheme()
+
   const styles = createStyles((theme) => ({
     uiTextArea: {
       flex: 1,
@@ -36,6 +37,7 @@ const UITextArea = ({
       backgroundColor: theme.colors.background,
     },
   }))
+
   const minHeightStyle = useMemo(
     () => ({
       minHeight: rows * rowHeight,

@@ -1,10 +1,10 @@
-import Chat from 'model/chat'
-import Litten from 'model/litten'
-import Message from 'model/message'
-import Search from 'model/search'
-import User from 'model/user'
-import { littens, messages, users } from 'fixtures/tests'
-import { cleanFirestore } from 'utils/tests'
+import Chat from '@model/chat'
+import Litten from '@model/litten'
+import Message from '@model/message'
+import Search from '@model/search'
+import User from '@model/user'
+import { littens, messages, users } from '@fixtures/tests'
+import { cleanFirestore } from '@utils/tests'
 
 afterAll(async () => {
   await cleanFirestore()

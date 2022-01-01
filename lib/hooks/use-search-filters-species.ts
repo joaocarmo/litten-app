@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { searchFiltersSelector } from 'store/selectors'
-import { removeSpecies, setSpecies } from 'store/actions/search-settings'
+import { searchFiltersSelector } from '@store/selectors'
+import { removeSpecies, setSpecies } from '@store/actions/search-settings'
 
 const useSearchFiltersSpecies = (): [
   string[],

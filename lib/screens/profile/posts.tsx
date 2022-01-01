@@ -1,14 +1,14 @@
 import { useCallback, useMemo, useState, useRef } from 'react'
 
 import { useActionSheet } from '@expo/react-native-action-sheet'
-import { usePaddingBottom, useTheme, useUserInfo, useUserPosts } from 'hooks'
+import { usePaddingBottom, useTheme, useUserInfo, useUserPosts } from '@hooks'
 import { Alert, FlatList, View } from 'react-native'
-import Search from 'model/search'
-import Empty from 'components/empty'
-import LittenDumbCard from 'components/litten-card/dumb'
-import { placeholderEmptyUserPosts } from 'images'
-import { UILoader } from 'ui-elements'
-import { translate } from 'utils/i18n'
+import Search from '@model/search'
+import Empty from '@components/empty'
+import LittenDumbCard from '@components/litten-card/dumb'
+import { placeholderEmptyUserPosts } from '@images'
+import { UILoader } from '@ui-elements'
+import { translate } from '@utils/i18n'
 
 const ProfilePosts = ({ active }) => {
   const [isLoading, setIsLoading] = useState(false)

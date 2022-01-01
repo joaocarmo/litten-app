@@ -1,5 +1,6 @@
+/* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import type { ErrorAction, PhotoObject, RegisterForm } from 'store/types'
+import type { ErrorAction, PhotoObject, RegisterForm } from '@store/types'
 
 const initialState: RegisterForm = {
   avatar: null,

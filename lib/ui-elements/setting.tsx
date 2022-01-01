@@ -1,7 +1,7 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native'
-import { useTheme } from 'hooks'
-import UIText from 'ui-elements/text'
-import { UI_ELEMENT_BORDER_MARGIN } from 'utils/constants'
+import { useTheme } from '@hooks'
+import UIText from '@ui-elements/text'
+import { UI_ELEMENT_BORDER_MARGIN } from '@utils/constants'
 
 const UISetting = ({
   children,
@@ -11,6 +11,7 @@ const UISetting = ({
   ...otherProps
 }) => {
   const { createStyles } = useTheme()
+
   const styles = createStyles((theme, typography) => ({
     uiSettingContainer: {
       flexDirection: 'row',
@@ -34,6 +35,7 @@ const UISetting = ({
       marginTop: UI_ELEMENT_BORDER_MARGIN,
     },
   }))
+
   const content = (
     <>
       <Text style={styles.uiSettingText} numberOfLines={1}>
@@ -42,6 +44,7 @@ const UISetting = ({
       {children}
     </>
   )
+
   const descriptionContent = description ? (
     <UIText style={styles.uiSettingDescription} noPadding>
       {description}

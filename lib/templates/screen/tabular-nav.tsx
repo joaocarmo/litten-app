@@ -1,11 +1,12 @@
 import { Pressable, StyleSheet, View } from 'react-native'
 import { useNavigation, useNavigationState } from '@react-navigation/native'
-import { UIText } from 'ui-elements'
-import { useTheme } from 'hooks'
+import { UIText } from '@ui-elements'
+import { useTheme } from '@hooks'
 
 const ScreenTabularNav = ({ tabs = [], style = null }) => {
   const navigation = useNavigation()
   const { createStyles } = useTheme()
+
   const styles = createStyles((theme, typography) => ({
     container: {
       flexDirection: 'row',
@@ -27,7 +28,9 @@ const ScreenTabularNav = ({ tabs = [], style = null }) => {
       fontWeight: typography.fontWeight.bolder,
     },
   }))
+
   const navIdx = useNavigationState((state) => state?.index)
+
   return (
     <View style={StyleSheet.compose(styles.container, style)}>
       {tabs &&

@@ -1,6 +1,7 @@
+/* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import type { SearchFilters, SearchSettings } from 'store/types'
-import { LITTEN_FILTER_LOCATION_RADIUS_INITIAL } from 'utils/constants'
+import type { SearchFilters, SearchSettings } from '@store/types'
+import { LITTEN_FILTER_LOCATION_RADIUS_INITIAL } from '@utils/constants'
 
 const initialState: SearchSettings = {
   query: '',

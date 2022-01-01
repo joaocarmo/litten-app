@@ -1,12 +1,12 @@
 import { Pressable, StyleSheet, Text } from 'react-native'
-import { useTheme } from 'hooks'
-import UILoader from 'ui-elements/loader'
+import { useTheme } from '@hooks'
+import UILoader from '@ui-elements/loader'
 import {
   RECOMMENDED_MINIMUM_TAPPABLE_SIZE,
   UI_BUTTON_BORDER_RADIUS,
   UI_BUTTON_FIXED_WIDTH,
   UI_PRESSED_OPACITY,
-} from 'utils/constants'
+} from '@utils/constants'
 
 const UIButton = ({
   children,

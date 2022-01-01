@@ -1,4 +1,4 @@
-import useAuthUser from 'hooks/use-auth-user'
+import useAuthUser from '@hooks/use-auth-user'
 
 const useLittenTeam = (): boolean => {
   const [authUser] = useAuthUser()

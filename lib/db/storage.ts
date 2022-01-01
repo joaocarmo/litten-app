@@ -1,6 +1,7 @@
+/* eslint-disable import/prefer-default-export */
 import storage from '@react-native-firebase/storage'
-import { STORAGE_USER_AVATAR } from 'utils/constants'
-import { logError } from 'utils/dev'
+import { STORAGE_USER_AVATAR } from '@utils/constants'
+import { logError } from '@utils/dev'
 
 /**
  * Uploads a user's avatar to the storage
@@ -16,7 +17,7 @@ export async function uploadUserAvatar(
   }: {
     userAuthUid: string
   } = {},
-): Promise<any> | Promise<string> {
+): Promise<string> {
   if (photoURL && typeof photoURL === 'string') {
     try {
       const fileExt = 'jpg'
@@ -27,6 +28,7 @@ export async function uploadUserAvatar(
       return downloadURL
     } catch (err) {
       logError(err)
+      return ''
     }
   }
 

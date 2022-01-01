@@ -1,9 +1,9 @@
 import { View } from 'react-native'
-import { useTheme } from 'hooks'
-import { UIAvatar, UIContainer, UIHeader, UISeparator } from 'ui-elements'
-import { placeholderCat } from 'images'
-import { translate } from 'utils/i18n'
-import { littenTypesKeys } from 'utils/litten'
+import { useTheme } from '@hooks'
+import { UIAvatar, UIContainer, UIHeader, UISeparator } from '@ui-elements'
+import { placeholderCat } from '@images'
+import { translate } from '@utils/i18n'
+import { littenTypesKeys } from '@utils/litten'
 
 const EmptyChat = ({ litten: { photos = [], title: name, type } }) => {
   const [firstPhoto = placeholderCat] = photos

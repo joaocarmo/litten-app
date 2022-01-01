@@ -1,8 +1,8 @@
 import { useCallback, useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { userPreferencesSelector } from 'store/selectors'
-import { setMetricUnits } from 'store/actions/authenticated-user'
-import { getUnit } from 'utils/functions'
+import { userPreferencesSelector } from '@store/selectors'
+import { setMetricUnits } from '@store/actions/authenticated-user'
+import { getUnit } from '@utils/functions'
 
 const useUnit = (
   property = '',

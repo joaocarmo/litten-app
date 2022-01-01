@@ -1,5 +1,5 @@
-import type { DBLocationObject } from 'db/schemas/location'
-import type { DBMetadata } from 'db/schemas/common'
+import type { DBLocationObject } from '@db/schemas/location'
+import type { DBMetadata } from '@db/schemas/common'
 
 export type BasicUser = {
   id?: string

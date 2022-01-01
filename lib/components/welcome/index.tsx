@@ -1,9 +1,9 @@
 import { SafeAreaView, StatusBar, View } from 'react-native'
-import { useTheme } from 'hooks'
-import Header from 'components/welcome/header'
-import Intro from 'components/welcome/intro'
-import Actions from 'components/welcome/actions'
-import { STRUCTURE_TAB_NAV_HEIGHT } from 'utils/constants'
+import { useTheme } from '@hooks'
+import Header from '@components/welcome/header'
+import Intro from '@components/welcome/intro'
+import Actions from '@components/welcome/actions'
+import { STRUCTURE_TAB_NAV_HEIGHT } from '@utils/constants'
 
 const Welcome = () => {
   const {

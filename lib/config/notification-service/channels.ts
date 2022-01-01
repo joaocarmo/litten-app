@@ -1,8 +1,8 @@
 import {
   CHANNELS_GENERAL_MESSAGES_ID,
   CHANNELS_PRIVATE_MESSAGES_ID,
-} from 'utils/constants'
-import { debugLog } from 'utils/dev'
+} from '@utils/constants'
+import { debugLog } from '@utils/dev'
 
 const channelCallback = (channelId) => (created: boolean) =>
   debugLog('[NOTIFICATION SERVICE]', channelId, 'created:', created)

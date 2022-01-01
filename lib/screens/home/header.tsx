@@ -1,15 +1,15 @@
 import { Keyboard, Pressable, Text } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { useSearchFilters, useTheme } from 'hooks'
-import SearchForm from 'forms/search'
-import { UIBadge } from 'ui-elements'
-import { getNumOfActiveFilters } from 'utils/functions'
-import { translate } from 'utils/i18n'
+import { useSearchFilters, useTheme } from '@hooks'
+import SearchForm from '@forms/search'
+import { UIBadge } from '@ui-elements'
+import { getNumOfActiveFilters } from '@utils/functions'
+import { translate } from '@utils/i18n'
 import {
   RECOMMENDED_MINIMUM_TAPPABLE_SIZE,
   SCREEN_HOME_FILTER,
   STRUCTURE_TEMPLATE_SCREEN_PADDING,
-} from 'utils/constants'
+} from '@utils/constants'
 import { useCallback } from 'react'
 
 const HomeIndexHeader = ({

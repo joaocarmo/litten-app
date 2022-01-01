@@ -1,11 +1,11 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import * as AuthenticatedUserActions from 'store/actions/authenticated-user'
-import * as FormNewActions from 'store/actions/form-new'
-import NewForm from 'forms/new/form-new'
-import type { Dispatch, State } from 'store/types/state'
-import type { NewForm as NewFormType } from 'store/types'
-import type { BasicUser } from 'model/types/user'
+import * as AuthenticatedUserActions from '@store/actions/authenticated-user'
+import * as FormNewActions from '@store/actions/form-new'
+import NewForm from '@forms/new/form-new'
+import type { Dispatch, State } from '@store/types/state'
+import type { NewForm as NewFormType } from '@store/types'
+import type { BasicUser } from '@model/types/user'
 
 type OwnProps = any
 type StateProps = {

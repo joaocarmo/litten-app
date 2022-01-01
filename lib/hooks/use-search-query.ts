@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { searchQuerySelector } from 'store/selectors'
-import { setQuery } from 'store/actions/search-settings'
+import { searchQuerySelector } from '@store/selectors'
+import { setQuery } from '@store/actions/search-settings'
 
 const useSearchQuery = (): [string, any] => {
   const dispatch = useDispatch()

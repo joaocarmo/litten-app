@@ -1,10 +1,10 @@
 import { ScrollView, View } from 'react-native'
-import { usePaddingBottom, useTheme } from 'hooks'
-import ScreenTabularNav from 'templates/screen/tabular-nav'
+import { usePaddingBottom, useTheme } from '@hooks'
+import ScreenTabularNav from '@templates/screen/tabular-nav'
 import {
   STRUCTURE_TAB_NAV_HEIGHT,
   STRUCTURE_TEMPLATE_SCREEN_BORDER_RADIUS,
-} from 'utils/constants'
+} from '@utils/constants'
 
 const ScrollableScreenTemplate = ({
   children,
@@ -17,6 +17,7 @@ const ScrollableScreenTemplate = ({
     createStyles,
     commonStyles: { screenTemplateStyles },
   } = useTheme()
+
   const styles = createStyles((theme) => ({
     containerStyle: {
       backgroundColor: theme.colors.neutralLight,
@@ -32,6 +33,7 @@ const ScrollableScreenTemplate = ({
       paddingBottom: STRUCTURE_TAB_NAV_HEIGHT,
     },
   }))
+
   return (
     <ScrollView
       bounces={false}

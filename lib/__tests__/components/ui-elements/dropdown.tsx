@@ -1,6 +1,7 @@
 import TestRenderer from 'react-test-renderer'
-import ThemeProvider from 'components/theme/provider'
-import { UIDropdown } from 'ui-elements'
+import ThemeProvider from '@components/theme/provider'
+import { UIDropdown } from '@ui-elements'
+
 const messageOptions = [
   {
     key: 'all',

@@ -1,9 +1,12 @@
-import { APP_IS_DEV } from 'utils/env'
+/* eslint-disable import/no-import-module-exports */
+/* eslint-disable global-require */
+/* eslint-disable @typescript-eslint/no-var-requires */
+import { APP_IS_DEV } from '@utils/env'
 import { persistStore, persistReducer } from 'redux-persist'
 import { configureStore } from '@reduxjs/toolkit'
 import devToolsEnhancer from 'remote-redux-devtools'
-import rootReducer from 'store/reducers'
-import { devToolsConfig, persistConfig } from 'config/store'
+import rootReducer from '@store/reducers'
+import { devToolsConfig, persistConfig } from '@config/store'
 
 const setupStore = (): {
   persistor
@@ -23,7 +26,6 @@ const setupStore = (): {
   // Enable hot module replacement for reducers
   if (APP_IS_DEV && module.hot) {
     module.hot.accept(() => {
-      // eslint-disable-next-line @typescript-eslint/no-var-requires
       const nextRootReducer = require('./reducers/index').default
 
       store.replaceReducer(nextRootReducer)

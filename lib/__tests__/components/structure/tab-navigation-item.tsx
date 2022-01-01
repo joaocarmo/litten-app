@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import TestRenderer from 'react-test-renderer'
-import TabNavigationItem from 'structure/tab-navigation-item'
-import ThemeProvider from 'components/theme/provider'
+import TabNavigationItem from '@structure/tab-navigation-item'
+import ThemeProvider from '@components/theme/provider'
 
 const CustomComponent = () => <View />
 

@@ -1,6 +1,7 @@
-import { APP_IS_DEV } from 'utils/env'
-import { USER_AVATAR_SIZE_LARGE } from 'utils/constants'
-import { translate } from 'utils/i18n'
+import { APP_IS_DEV } from '@utils/env'
+import { USER_AVATAR_SIZE_LARGE } from '@utils/constants'
+import { translate } from '@utils/i18n'
+
 export const imagePickerOptions = {
   height: USER_AVATAR_SIZE_LARGE,
   width: USER_AVATAR_SIZE_LARGE,

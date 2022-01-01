@@ -1,12 +1,12 @@
 import Toast from 'react-native-simple-toast'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 
-import { useCacheUsers, useFavourite, useUserCoordinates } from 'hooks'
-import LittenCardComponent from 'components/litten-card/card-component'
-import Litten from 'model/litten'
-import { distanceBetween } from 'utils/functions'
-import { translate } from 'utils/i18n'
-import { debugLog } from 'utils/dev'
+import { useCacheUsers, useFavourite, useUserCoordinates } from '@hooks'
+import LittenCardComponent from '@components/litten-card/card-component'
+import Litten from '@model/litten'
+import { distanceBetween } from '@utils/functions'
+import { translate } from '@utils/i18n'
+import { debugLog } from '@utils/dev'
 
 const LittenSmartCard = ({
   litten: littenProp,

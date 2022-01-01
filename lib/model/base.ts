@@ -1,11 +1,13 @@
-import type { DBTimestamp } from '../db/schemas/common'
-import firestore from 'db/firestore'
-import { locationSchema } from 'db/schemas/location'
-import type { DBLocationObject, DBCoordinateObject } from 'db/schemas/location'
-import type { DBMetadata } from 'db/schemas/common'
+import firestore from '@db/firestore'
+import { locationSchema } from '@db/schemas/location'
+import type { DBLocationObject, DBCoordinateObject } from '@db/schemas/location'
+import type { DBMetadata, DBTimestamp } from '@db/schemas/common'
+
 export default class Base {
   #id
+
   #location
+
   #metadata
 
   get firestore(): any {

@@ -1,12 +1,10 @@
-// export type GResponse = {
-//   address_components: {
-//     @@iterator(): Iterator<{
-//       long_name: string,
-//       short_name: string,
-//       types: string[],
-//     }>,
-//   },
-// }
+export type GResponse = {
+  address_components: Iterator<{
+    long_name: string
+    short_name: string
+    types: string[]
+  }>
+}
 
 export type GLocation = {
   administrative_area_level_1: string

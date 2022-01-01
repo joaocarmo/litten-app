@@ -1,3 +1,4 @@
+import { State } from '@store/types/state'
 import {
   AppSettings,
   AppSettingsNotifications,
@@ -15,7 +16,7 @@ import { BasicMessage } from '../../model/types/message'
 import { BasicLitten } from '../../model/types/litten'
 import { BasicChat } from '../../model/types/chat'
 import { DBCoordinateObject } from '../../db/schemas/location'
-import { State } from 'store/types/state'
+
 export const appSettingsSelector = (state: State): AppSettings =>
   state.appSettings
 export const appSettingsNotificationsSelector = (

@@ -1,12 +1,12 @@
-import dayjs from 'utils/day'
+import dayjs from '@utils/day'
 import { View } from 'react-native'
-import { useTheme } from 'hooks'
-import { UIAvatar, UIHeader, UIIcon, UIText } from 'ui-elements'
-import { placeholderUser } from 'images'
-import { getFromListByKey, shortenName } from 'utils/functions'
-import { contactOptions } from 'utils/litten'
-import { PLACEHOLDER_USER_DISPLAY_NAME } from 'utils/constants'
-import { translate } from 'utils/i18n'
+import { useTheme } from '@hooks'
+import { UIAvatar, UIHeader, UIIcon, UIText } from '@ui-elements'
+import { placeholderUser } from '@images'
+import { getFromListByKey, shortenName } from '@utils/functions'
+import { contactOptions } from '@utils/litten'
+import { PLACEHOLDER_USER_DISPLAY_NAME } from '@utils/constants'
+import { translate } from '@utils/i18n'
 
 const UserProfileDetailsScreen = ({ user = {} }) => {
   const {

@@ -1,2 +1,3 @@
-// lib/utils/fetcher.js
-module.exports = fetch
+const fetcher = fetch
+
+export default fetcher

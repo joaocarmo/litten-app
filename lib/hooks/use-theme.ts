@@ -1,10 +1,10 @@
 import { useCallback, useContext, useMemo } from 'react'
 import { StyleSheet } from 'react-native'
-import type { ThemeConfig } from 'components/theme'
-import { ThemeContext } from 'components/theme'
-import * as commonStylesConfig from 'styles/common'
-import type { Theme } from 'styles/themes'
-import type { Typography } from 'styles/typography'
+import type { ThemeConfig } from '@components/theme'
+import { ThemeContext } from '@components/theme'
+import * as commonStylesConfig from '@styles/common'
+import type { Theme } from '@styles/themes'
+import type { Typography } from '@styles/typography'
 
 type CreateStylesFn = (
   theme: Theme,

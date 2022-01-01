@@ -1,5 +1,6 @@
-import type { BasicLitten } from 'model/types/litten'
-import type { BasicUser } from 'model/types/user'
+import type { BasicLitten } from '@model/types/litten'
+import type { BasicUser } from '@model/types/user'
+
 export type LittenCardComponentProps = {
   distance: number
   editable: boolean

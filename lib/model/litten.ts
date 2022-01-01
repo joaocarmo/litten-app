@@ -1,13 +1,13 @@
-import { APP_IS_DEV } from 'utils/env'
+import { APP_IS_DEV } from '@utils/env'
 import storage from '@react-native-firebase/storage'
-import firestore from 'db/firestore'
-import Base from 'model/base'
-import type { BasicLitten, LittenClass } from 'model/types/litten'
-import type { BasicUser } from 'model/types/user'
-import type { PhotoObject } from 'store/types'
-import { string2tags } from 'utils/functions'
-import { logError } from 'utils/dev'
-import { DB_LITTEN_COLLECTION, STORAGE_LITTEN_PHOTOS } from 'utils/constants'
+import firestore from '@db/firestore'
+import Base from '@model/base'
+import type { BasicLitten, LittenClass } from '@model/types/litten'
+import type { BasicUser } from '@model/types/user'
+import type { PhotoObject } from '@store/types'
+import { string2tags } from '@utils/functions'
+import { logError } from '@utils/dev'
+import { DB_LITTEN_COLLECTION, STORAGE_LITTEN_PHOTOS } from '@utils/constants'
 
 export class LittenError extends Error {
   constructor(...args: string[]) {
@@ -24,13 +24,21 @@ export class LittenError extends Error {
 
 export default class Litten extends Base implements LittenClass {
   #active
+
   #photos
+
   #species
+
   #story
+
   #title
+
   #type
+
   #user
+
   #userUid
+
   #tags
 
   constructor({ user = null, ...basicLitten }: BasicLitten) {

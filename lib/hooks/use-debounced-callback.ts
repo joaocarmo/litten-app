@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef } from 'react'
-import { DEBOUNCE_TIMEOUT } from 'utils/constants'
+import { DEBOUNCE_TIMEOUT } from '@utils/constants'
 
 const useDebouncedCallback = (
   callbackFn: (...args: any[]) => void,

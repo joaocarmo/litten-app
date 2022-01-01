@@ -1,8 +1,8 @@
 import { parsePhoneNumberFromString as parseMobile } from 'libphonenumber-js/mobile'
-import { stringifyLocation } from 'utils/functions'
-import { littenSpeciesList, littenTypes } from 'utils/litten'
-import { translate } from 'utils/i18n'
-import type { GLocationParsed } from 'utils/types/functions'
+import { stringifyLocation } from '@utils/functions'
+import { littenSpeciesList, littenTypes } from '@utils/litten'
+import { translate } from '@utils/i18n'
+import type { GLocationParsed } from '@utils/types/functions'
 
 /**
  * Generic validators and utilities
@@ -11,11 +11,13 @@ export const resetValidator = {
   error: false,
   errorMessage: '',
 }
-export function notNothing(): (value: any) => any {
-  return (value: any) => !!value
+export function notNothing(): (value: unknown) => boolean {
+  return (value: unknown) => !!value
 }
-export function minLength(k: number): (value: string | Array<any>) => boolean {
-  return (value: string | any[]) => {
+export function minLength(
+  k: number,
+): (value: string | Array<unknown>) => boolean {
+  return (value: string | unknown[]) => {
     if (value && value.length) {
       return value.length >= k
     }
@@ -23,18 +25,20 @@ export function minLength(k: number): (value: string | Array<any>) => boolean {
     return false
   }
 }
-export function mustMatch(valueB: any): (valueA: any) => boolean {
-  return (valueA: any) => valueA === valueB
+
+export function mustMatch(valueB: unknown): (valueA: unknown) => boolean {
+  return (valueA: unknown) => valueA === valueB
 }
 export function validEmail(): (value: string) => boolean {
   const emailRE =
     /[a-z0-9!#$%&'*+/=?^_`{}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
   return (value: string) => emailRE.test(value)
 }
+
 export function validPhoneNumber(
   country: string,
   callingCode: string | number,
-): (value: string | number) => any {
+): (value: string | number) => boolean {
   return (value: string | number) => {
     let isValid = false
     const phoneNumber = parseMobile(value, country)
@@ -48,11 +52,12 @@ export function validPhoneNumber(
     return isValid ?? false
   }
 }
+
 export function isPartOfList(
-  list: any[],
-  itemGetter: (arg0: any) => any = ({ key }) => key,
-): (value: any) => boolean {
-  return (value: any) => {
+  list: unknown[],
+  itemGetter: (item: unknown) => unknown = ({ key }) => key,
+): (value: unknown) => boolean {
+  return (value: unknown) => {
     if (Array.isArray(list)) {
       return list.some((item) => itemGetter(item) === value)
     }
@@ -60,10 +65,11 @@ export function isPartOfList(
     return false
   }
 }
+
 export function getErrorFromValidators(
-  value: any,
+  value: unknown,
   conditions: {
-    testFn: (value: any) => boolean
+    testFn: (testValue: unknown) => boolean
     errorMessage: string
   }[],
 ): {
@@ -104,6 +110,7 @@ export function emailValidator(email: string): {
   ]
   return getErrorFromValidators(email, conditions)
 }
+
 export function displayNameValidator(displayName: string): {
   error: boolean
   errorMessage: string
@@ -116,6 +123,7 @@ export function displayNameValidator(displayName: string): {
   ]
   return getErrorFromValidators(displayName, conditions)
 }
+
 export function passwordValidator(password: string): {
   error: boolean
   errorMessage: string
@@ -132,6 +140,7 @@ export function passwordValidator(password: string): {
   ]
   return getErrorFromValidators(password, conditions)
 }
+
 export function passwordConfirmValidator(
   passwordConfirm: string,
   password: string,
@@ -147,6 +156,7 @@ export function passwordConfirmValidator(
   ]
   return getErrorFromValidators(passwordConfirm, conditions)
 }
+
 export function countryValidator(country: string): {
   error: boolean
   errorMessage: string
@@ -159,6 +169,7 @@ export function countryValidator(country: string): {
   ]
   return getErrorFromValidators(country, conditions)
 }
+
 export function phoneNumberValidator(
   phoneNumber: string | number,
   country: string,
@@ -179,6 +190,7 @@ export function phoneNumberValidator(
   ]
   return getErrorFromValidators(phoneNumber, conditions)
 }
+
 export function avatarValidator(avatar: string): {
   error: boolean
   errorMessage: string
@@ -207,6 +219,7 @@ export function littenPhotoValidator(photos: string[]): {
   ]
   return getErrorFromValidators(photos, conditions)
 }
+
 export function littenTitleValidator(title: string): {
   error: boolean
   errorMessage: string
@@ -219,6 +232,7 @@ export function littenTitleValidator(title: string): {
   ]
   return getErrorFromValidators(title, conditions)
 }
+
 export function littenSpeciesValidator(species: string): {
   error: boolean
   errorMessage: string
@@ -231,6 +245,7 @@ export function littenSpeciesValidator(species: string): {
   ]
   return getErrorFromValidators(species, conditions)
 }
+
 export function littenTypeValidator(type: string): {
   error: boolean
   errorMessage: string
@@ -243,6 +258,7 @@ export function littenTypeValidator(type: string): {
   ]
   return getErrorFromValidators(type, conditions)
 }
+
 export function littenStoryValidator(story: string): {
   error: boolean
   errorMessage: string
@@ -255,6 +271,7 @@ export function littenStoryValidator(story: string): {
   ]
   return getErrorFromValidators(story, conditions)
 }
+
 export function littenLocationValidator(location: GLocationParsed): {
   error: boolean
   errorMessage: string

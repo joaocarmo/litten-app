@@ -3,14 +3,15 @@ import { useCallback, useState } from 'react'
 import { Platform, View, StyleSheet } from 'react-native'
 import { useNetInfo } from '@react-native-community/netinfo'
 import { useActionSheet } from '@expo/react-native-action-sheet'
-import { useLittenTeam, useNotifications } from 'hooks'
-import crashlytics from 'db/crashlytics'
-import { simulateNetwork } from 'db/firestore'
-import { UIButton, UIHeader, UISeparator, UIText } from 'ui-elements'
-import ScreenTemplate from 'templates/screen'
-import ScreenSimpleHeaderTemplate from 'templates/screen-simple-header'
-import { translate } from 'utils/i18n'
-import { clearStorage } from 'store/utils'
+import { useLittenTeam, useNotifications } from '@hooks'
+import crashlytics from '@db/crashlytics'
+import { simulateNetwork } from '@db/firestore'
+import { UIButton, UIHeader, UISeparator, UIText } from '@ui-elements'
+import ScreenTemplate from '@templates/screen'
+import ScreenSimpleHeaderTemplate from '@templates/screen-simple-header'
+import { translate } from '@utils/i18n'
+import { clearStorage } from '@store/utils'
+
 const [getState, toggleState] = simulateNetwork()
 
 const HacksUI = ({ type }) => {

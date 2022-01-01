@@ -3,8 +3,8 @@ import {
   FIRESTORE_EMULATOR_HOST,
   FIRESTORE_EMULATOR_PERSISTENCE,
   USE_FIREBASE_EMULATOR,
-} from 'utils/env'
-import { debugLog } from 'utils/dev'
+} from '@utils/env'
+import { debugLog } from '@utils/dev'
 import firestore from '@react-native-firebase/firestore'
 
 /**
@@ -13,16 +13,19 @@ import firestore from '@react-native-firebase/firestore'
  *  - https://firebase.google.com/docs/emulator-suite/connect_firestore
  *  - https://rnfirebase.io/reference/firestore/settings#host
  */
-if (APP_IS_DEV && USE_FIREBASE_EMULATOR) {
-  debugLog(
-    '[FIREBASE] USING FIREBASE EMULATOR [FIRESTORE]',
-    FIRESTORE_EMULATOR_HOST,
-  )
+if (APP_IS_DEV && USE_FIREBASE_EMULATOR && FIRESTORE_EMULATOR_HOST) {
+  const [host, portStr] = FIRESTORE_EMULATOR_HOST.split(':')
+  const port = parseInt(portStr, 10)
+
+  debugLog(`[FIREBASE] USING FIREBASE EMULATOR [FIRESTORE] ${host}:${port}`)
+
+  firestore().useEmulator(host, port)
+
   firestore().settings({
-    host: FIRESTORE_EMULATOR_HOST,
     persistence: FIRESTORE_EMULATOR_PERSISTENCE,
     ssl: false,
   })
+
   firestore.setLogLevel('debug')
 }
 
@@ -47,6 +50,7 @@ const networkManager = (startState = true): (() => NetworkManagerHook) => {
 }
 
 export const simulateNetwork: () => NetworkManagerHook = networkManager()
+
 export const clearPersistence = async () => {
   if (!FIRESTORE_EMULATOR_PERSISTENCE) {
     debugLog('[FIREBASE] CLEARED PERSISTENCE [FIRESTORE]')

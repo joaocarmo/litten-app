@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
-import { activeChatsSelector } from 'store/selectors'
-import useUserUid from 'hooks/use-useruid'
+import { activeChatsSelector } from '@store/selectors'
+import useUserUid from '@hooks/use-useruid'
 
 const useUnreadMessages = (): number => {
   const activeChats = useSelector(activeChatsSelector)

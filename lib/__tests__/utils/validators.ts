@@ -6,6 +6,7 @@ import {
   validEmail,
   validPhoneNumber,
 } from '../../utils/validators'
+
 describe('Test the "isPartOfList" validator', () => {
   const simpleList = [1, 2, 3, 4, 5, 6]
   const simpleValidator = isPartOfList(simpleList, (item) => item)

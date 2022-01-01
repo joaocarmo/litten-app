@@ -1,4 +1,4 @@
-import type { DBMetadata } from 'db/schemas/common'
+import type { DBMetadata } from '@db/schemas/common'
 
 export type BasicChat = {
   id?: string

@@ -1,9 +1,9 @@
 import ImagePicker from 'react-native-image-crop-picker'
 import { useActionSheet } from '@expo/react-native-action-sheet'
-import { imagePickerOptions } from 'config/image-picker/form-new'
-import { cameraIsAvailable } from 'utils/platform'
-import { debugLog } from 'utils/dev'
-import { translate } from 'utils/i18n'
+import { imagePickerOptions } from '@config/image-picker/form-new'
+import { cameraIsAvailable } from '@utils/platform'
+import { debugLog } from '@utils/dev'
+import { translate } from '@utils/i18n'
 
 const AddPhoto = ({
   ImageComponent,

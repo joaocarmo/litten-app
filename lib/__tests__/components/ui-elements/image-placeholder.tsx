@@ -1,7 +1,8 @@
 import TestRenderer from 'react-test-renderer'
-import ThemeProvider from 'components/theme/provider'
-import { UIImagePlaceholder } from 'ui-elements'
-import { iterateTimes } from 'utils/functions'
+import ThemeProvider from '@components/theme/provider'
+import { UIImagePlaceholder } from '@ui-elements'
+import { iterateTimes } from '@utils/functions'
+
 const allowedNumPhotos = 8
 const photos = []
 describe('Snapshot test for the "UIImagePlaceholder" component', () => {

@@ -9,4 +9,5 @@ import Bird from './bird.svg'
 import Rabbit from './rabbit.svg'
 import Reptilian from './reptilian.svg'
 import Rodent from './rodent.svg'
+
 export { Adopt, Found, Lost, Cat, Dog, Bird, Rabbit, Reptilian, Rodent }

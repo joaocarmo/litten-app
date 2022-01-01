@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
 
 import { Alert, View } from 'react-native'
-import { useTheme } from 'hooks'
-import FormKeyboardAvoidingView from 'templates/form-keyboard-avoiding-view'
-import Auth from 'model/auth'
-import { UIButton, UIInput, UILoader } from 'ui-elements'
-import FormStatusTemplate from 'templates/form-status'
-import { emailValidator } from 'utils/validators'
-import { getErrorMessage } from 'utils/functions'
-import { translate } from 'utils/i18n'
+import { useTheme } from '@hooks'
+import FormKeyboardAvoidingView from '@templates/form-keyboard-avoiding-view'
+import Auth from '@model/auth'
+import { UIButton, UIInput, UILoader } from '@ui-elements'
+import FormStatusTemplate from '@templates/form-status'
+import { emailValidator } from '@utils/validators'
+import { getErrorMessage } from '@utils/functions'
+import { translate } from '@utils/i18n'
 
 const FormRecover = ({
   formLogin: { email, error, errorMessage },

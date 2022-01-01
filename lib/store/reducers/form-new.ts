@@ -1,7 +1,8 @@
+/* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import type { DBLocationObject } from 'db/schemas/location'
-import { locationSchema } from 'db/schemas/location'
-import type { NewForm, PhotoObject } from 'store/types'
+import type { DBLocationObject } from '@db/schemas/location'
+import { locationSchema } from '@db/schemas/location'
+import type { NewForm, PhotoObject } from '@store/types'
 
 type PhotoPayload = {
   photo?: PhotoObject

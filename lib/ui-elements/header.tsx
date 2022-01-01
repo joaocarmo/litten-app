@@ -1,5 +1,5 @@
 import { StyleSheet, Text } from 'react-native'
-import { useTheme } from 'hooks'
+import { useTheme } from '@hooks'
 
 const UIHeader = ({
   centered = false,

@@ -1,6 +1,7 @@
 import BackgroundFetch from 'react-native-background-fetch'
-import defaultConfig from 'config/background-service/default'
-import { debugLog } from 'utils/dev'
+import defaultConfig from '@config/background-service/default'
+import { debugLog } from '@utils/dev'
+
 export type HeadlessEvent = {
   readonly taskId: string
   readonly timeout: boolean
@@ -28,9 +29,13 @@ export type TimeoutHandler = (taskId: string) => void
 
 class BackgroundService {
   #customConfig
+
   #headlessTaskRegistered = false
+
   #onBackgroundFail
+
   #onBackgroundFetch
+
   #onBackgroundTimeout
 
   constructor(customConfig: BackgroundFetchConfig = {}) {

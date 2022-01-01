@@ -1,5 +1,6 @@
+/* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import type { PhotoObject, ReportForm } from 'store/types'
+import type { PhotoObject, ReportForm } from '@store/types'
 
 const initialState: ReportForm = {
   attachments: [],

@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react'
-import analytics from 'db/analytics'
-import crashlytics from 'db/crashlytics'
+import analytics from '@db/analytics'
+import crashlytics from '@db/crashlytics'
 
 const useCrashlytics = (): [boolean, (enabled: boolean) => void] => {
   const [crashlyticsEnabled, setCrashlyticsEnabled] = useState(

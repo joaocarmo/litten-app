@@ -1,8 +1,8 @@
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { userCoordinatesSelector } from 'store/selectors'
-import { setLocationCoordinates } from 'store/actions/authenticated-user'
-import type { DBCoordinateObject } from 'db/schemas/location'
+import { userCoordinatesSelector } from '@store/selectors'
+import { setLocationCoordinates } from '@store/actions/authenticated-user'
+import type { DBCoordinateObject } from '@db/schemas/location'
 
 const useUserCoordinates = (): [
   DBCoordinateObject,

@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { emailVerifiedSelector } from 'store/selectors'
+import { emailVerifiedSelector } from '@store/selectors'
 
 const useEmailVerified = (): boolean => {
   const emailVerified = useSelector(emailVerifiedSelector)

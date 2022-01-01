@@ -1,10 +1,11 @@
 import { View } from 'react-native'
-import { useTheme } from 'hooks'
-import { UIImage, UIText } from 'ui-elements'
 import { vh, vw } from 'react-native-expo-viewport-units'
+import { useTheme } from '@hooks'
+import { UIImage, UIText } from '@ui-elements'
 
 const IntroCarouselItemTemplate = ({ header, image, footer }) => {
   const { createStyles } = useTheme()
+
   const styles = createStyles((_, typography) => ({
     item: {
       flexDirection: 'column',
@@ -36,6 +37,7 @@ const IntroCarouselItemTemplate = ({ header, image, footer }) => {
       marginBottom: 20,
     },
   }))
+
   return (
     <View style={styles.item}>
       <UIText noPadding style={styles.textHeader}>

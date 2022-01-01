@@ -1,5 +1,5 @@
 import { StyleSheet, Text } from 'react-native'
-import { useTheme } from 'hooks'
+import { useTheme } from '@hooks'
 
 const UILink = ({ children, underline = true, style, ...otherProps }) => {
   const { createStyles } = useTheme()
@@ -13,6 +13,7 @@ const UILink = ({ children, underline = true, style, ...otherProps }) => {
       textDecorationLine: 'none',
     },
   }))
+
   return (
     <Text
       {...otherProps}

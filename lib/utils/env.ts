@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import preval from 'preval.macro'
 import {
   FIREBASE_AUTH_EMULATOR_HOST as FIREBASE_AUTH_EMULATOR_HOST_STR,
@@ -12,8 +13,9 @@ import {
   USE_GRAVATAR as USE_GRAVATAR_STR,
   USE_REDUX_DEVTOOLS_LOCAL_SERVER as USE_REDUX_DEVTOOLS_LOCAL_SERVER_STR,
 } from '@env'
+
 export const APP_IS_DEV = process.env.NODE_ENV === 'development'
-export const BUILD_TIME: any = preval`module.exports = new Date().valueOf()`
+export const BUILD_TIME = preval`module.exports = new Date().valueOf()`
 export const FIREBASE_AUTH_EMULATOR_HOST = FIREBASE_AUTH_EMULATOR_HOST_STR
 export const FIRESTORE_EMULATOR_HOST = FIRESTORE_EMULATOR_HOST_STR
 export const FIRESTORE_EMULATOR_PERSISTENCE =

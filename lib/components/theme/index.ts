@@ -1,7 +1,7 @@
 import { createContext } from 'react'
-import type { Colors } from 'styles/colors'
-import type { Theme } from 'styles/themes'
-import type { Typography } from 'styles/typography'
+import type { Colors } from '@styles/colors'
+import type { Theme } from '@styles/themes'
+import type { Typography } from '@styles/typography'
 
 export type ThemeConfig = {
   colors: Colors

@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 import { InputToolbar as GFInputToolbar } from 'react-native-gifted-chat'
-import { UI_MESSAGE_MIN_INPUT_TOOLBAR_HEIGHT } from 'utils/constants'
+import { UI_MESSAGE_MIN_INPUT_TOOLBAR_HEIGHT } from '@utils/constants'
 
 const InputToolbar = (props) => (
   <GFInputToolbar

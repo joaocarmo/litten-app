@@ -1,7 +1,8 @@
+/* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import type { Chats } from 'store/types'
-import type { BasicChat } from 'model/types/chat'
-import type { BasicMessage } from 'model/types/message'
+import type { Chats } from '@store/types'
+import type { BasicChat } from '@model/types/chat'
+import type { BasicMessage } from '@model/types/message'
 
 type MessagePayload = {
   chatUid: string

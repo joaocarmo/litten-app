@@ -1,12 +1,12 @@
-import firestore from 'db/firestore'
-import Base from 'model/base'
-import Message from 'model/message'
-import type { BasicChat } from 'model/types/chat'
+import firestore from '@db/firestore'
+import Base from '@model/base'
+import Message from '@model/message'
+import type { BasicChat } from '@model/types/chat'
 import {
   CHATS_INITIAL_NUM_TO_RENDER,
   DB_CHAT_COLLECTION,
-} from 'utils/constants'
-import { logError } from 'utils/dev'
+} from '@utils/constants'
+import { logError } from '@utils/dev'
 
 export class ChatError extends Error {
   constructor(...args: string[]) {
@@ -23,13 +23,21 @@ export class ChatError extends Error {
 
 export default class Chat extends Base {
   static #cursor = null
+
   static #numOfItemsPerPage = CHATS_INITIAL_NUM_TO_RENDER
+
   #lastMessage
+
   #lastMessageBy
+
   #littenSpecies
+
   #littenType
+
   #littenUid
+
   #participants
+
   #read
 
   constructor(basicChat: BasicChat) {

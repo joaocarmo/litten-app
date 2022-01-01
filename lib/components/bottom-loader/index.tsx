@@ -1,9 +1,9 @@
 import { StyleSheet } from 'react-native'
-import { UILoader } from 'ui-elements'
+import { UILoader } from '@ui-elements'
 import {
   UI_BOTTOM_LOADER_HEIGHT,
   UI_ELEMENT_BORDER_MARGIN,
-} from 'utils/constants'
+} from '@utils/constants'
 
 const BottomLoader = (props) => (
   <UILoader containerStyle={styles.listFooterComponentStyle} {...props} />

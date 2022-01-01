@@ -1,11 +1,12 @@
 import { Pressable } from 'react-native'
-import { useTheme } from 'hooks'
-import { UIImage } from 'ui-elements'
+import { useTheme } from '@hooks'
+import { UIImage } from '@ui-elements'
 import {
   MAX_NUM_OF_REPORT_IMAGES,
   UI_ELEMENT_BORDER_RADIUS,
   USER_AVATAR_SIZE_MEDIUM,
-} from 'utils/constants'
+} from '@utils/constants'
+
 const FLEX_BASIS = (0.95 * (1 / MAX_NUM_OF_REPORT_IMAGES) * 100).toFixed(1)
 
 const ImageComponent = ({ source, ...otherProps }) => {

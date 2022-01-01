@@ -1,10 +1,10 @@
 import { Platform, Text, View } from 'react-native'
-import { useTheme } from 'hooks'
-import GoBack from 'components/go-back'
+import { useTheme } from '@hooks'
+import GoBack from '@components/go-back'
 import {
   STRUCTURE_TEMPLATE_SCREEN_HEADER_PADDING_BOTTOM,
   STRUCTURE_TEMPLATE_SCREEN_HEADER_WIDTH,
-} from 'utils/constants'
+} from '@utils/constants'
 
 const ScreenSimpleHeaderTemplate = ({
   children,
@@ -12,6 +12,7 @@ const ScreenSimpleHeaderTemplate = ({
   withGoBack = false,
 }) => {
   const { createStyles } = useTheme()
+
   const styles = createStyles((theme, typography) => ({
     headerContainer: {
       height: '100%',
@@ -35,8 +36,10 @@ const ScreenSimpleHeaderTemplate = ({
       textAlign: 'center',
     },
   }))
+
   const notAndroid = Platform.OS !== 'android'
   const childrenIsText = typeof children === 'string'
+
   return (
     <View style={[styles.headerContainer, style]}>
       {notAndroid && withGoBack && <GoBack />}

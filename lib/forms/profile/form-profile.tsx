@@ -3,15 +3,15 @@ import { useCallback, useEffect, useMemo, useState, useRef } from 'react'
 
 import { useNavigation } from '@react-navigation/native'
 import { Alert, Pressable, Keyboard, StyleSheet, View } from 'react-native'
-import { useDebouncedCallback, useEmailVerified } from 'hooks'
+import { useDebouncedCallback, useEmailVerified } from '@hooks'
 import {
   displayNameValidator,
   emailValidator,
   phoneNumberValidator,
   resetValidator,
-} from 'utils/validators'
-import Auth from 'model/auth'
-import User from 'model/user'
+} from '@utils/validators'
+import Auth from '@model/auth'
+import User from '@model/user'
 import {
   UIBalloon,
   UIButton,
@@ -22,24 +22,24 @@ import {
   UISeparator,
   UISwitch,
   UIText,
-} from 'ui-elements'
-import AddPhoto from 'components/add-photo'
-import SelectPhoto from 'components/select-photo'
-import { clearStorage } from 'store/utils'
+} from '@ui-elements'
+import AddPhoto from '@components/add-photo'
+import SelectPhoto from '@components/select-photo'
+import { clearStorage } from '@store/utils'
 import {
   getErrorMessage,
   getImagePath,
   stringifyLocation,
-} from 'utils/functions'
-import { logError } from 'utils/dev'
+} from '@utils/functions'
+import { logError } from '@utils/dev'
 import {
   FORM_PROFILE_SET_LOCATION,
   SCREEN_NEW_LOCATION,
   USER_AVATAR_SIZE_LARGE,
   USER_PREFERENCES_CONTACT_CALL,
   USER_PREFERENCES_CONTACT_SMS,
-} from 'utils/constants'
-import { translate } from 'utils/i18n'
+} from '@utils/constants'
+import { translate } from '@utils/i18n'
 
 const FormProfile = ({
   authenticatedUser: { basic, extra },
@@ -87,9 +87,7 @@ const FormProfile = ({
     photoURL,
   } = extra
   const navigation = useNavigation()
-  useEffect(() => {
-    return () => clearProfileForm()
-  }, [clearProfileForm])
+  useEffect(() => () => clearProfileForm(), [clearProfileForm])
   const [debouncedSetIsLoading, cancelSetIsLoading] = useDebouncedCallback(
     useCallback((value) => {
       setIsLoading(value)

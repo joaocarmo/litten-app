@@ -1,11 +1,11 @@
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { userSavedSelector } from 'store/selectors'
+import { userSavedSelector } from '@store/selectors'
 import {
   addFavouriteFilter,
   removeFavouriteFilter,
-} from 'store/actions/authenticated-user'
-import type { SavedFilters, SearchFilters } from 'store/types'
+} from '@store/actions/authenticated-user'
+import type { SavedFilters, SearchFilters } from '@store/types'
 
 const useSavedFilters = (): [
   SavedFilters[],

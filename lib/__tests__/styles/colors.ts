@@ -1,4 +1,5 @@
-import colors from 'styles/colors'
+import colors from '@styles/colors'
+
 describe('Test the style colors object', () => {
   it('should be a "[x: string]: string" type object', () => {
     expect(typeof colors).toBe('object')

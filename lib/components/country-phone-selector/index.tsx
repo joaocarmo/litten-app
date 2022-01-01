@@ -1,8 +1,9 @@
 import { StyleSheet, View } from 'react-native'
-import { UIInput, UISelect } from 'ui-elements'
-import { mapCountriesToSelector } from 'utils/functions'
-import { translate } from 'utils/i18n'
-import { countries } from 'data'
+import { UIInput, UISelect } from '@ui-elements'
+import { mapCountriesToSelector } from '@utils/functions'
+import { translate } from '@utils/i18n'
+import { countries } from '@data'
+
 const inputSpacing = 9
 const countryList = countries.map(mapCountriesToSelector)
 

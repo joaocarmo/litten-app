@@ -1,19 +1,20 @@
 import storage from '@react-native-firebase/storage'
-import firestore from 'db/firestore'
-import Auth from 'model/auth'
-import Base from 'model/base'
-import Litten from 'model/litten'
-import Search from 'model/search'
-import { deleteAllChatForUser } from 'db/maintenance'
+import firestore from '@db/firestore'
+import Auth from '@model/auth'
+import Base from '@model/base'
+import Litten from '@model/litten'
+import Search from '@model/search'
+import { deleteAllChatForUser } from '@db/maintenance'
 import {
   DB_USER_COLLECTION,
   STORAGE_IGNORED_ERRORS,
   STORAGE_USER_AVATAR,
   USER_PREFERENCES_CONTACT_INAPP,
-} from 'utils/constants'
-import { debugLog, logError } from 'utils/dev'
-import type { BasicUser } from 'model/types/user'
-import type { DBCoordinateObject, DBLocationObject } from 'db/schemas/location'
+} from '@utils/constants'
+import { debugLog, logError } from '@utils/dev'
+import type { BasicUser } from '@model/types/user'
+import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
+
 export class UserError extends Error {
   constructor(...args: string[]) {
     super(...args)
@@ -28,15 +29,25 @@ export class UserError extends Error {
 }
 export default class User extends Base {
   #auth
+
   #contactPreferences
+
   #currentUser
+
   #displayName
+
   #email
+
   #isOrganization
+
   #phoneNumber
+
   #photoURL
+
   #search
+
   #deferredSave = false
+
   #deferredSaveObject = {}
 
   constructor(basicUser: BasicUser) {

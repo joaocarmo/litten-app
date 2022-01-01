@@ -1,13 +1,13 @@
 import { useCallback, useEffect, useMemo, useState, useRef } from 'react'
-
-import { useFavourite, usePaddingBottom, useUserUid, useTheme } from 'hooks'
+import type { FC } from 'react'
+import { useFavourite, usePaddingBottom, useUserUid, useTheme } from '@hooks'
 import { Alert, Pressable, ScrollView, View } from 'react-native'
 import { vh, vw } from 'react-native-expo-viewport-units'
-import Carousel from 'components/carousel'
-import Litten from 'model/litten'
-import User from 'model/user'
-import LittenContactOptions from 'screens/litten/contact-options'
-import LittenHeaderNavBar from 'screens/litten/header-nav-bar'
+import Carousel from '@components/carousel'
+import Litten from '@model/litten'
+import User from '@model/user'
+import LittenContactOptions from '@screens/litten/contact-options'
+import LittenHeaderNavBar from '@screens/litten/header-nav-bar'
 import {
   UIAvatar,
   UIButton,
@@ -16,16 +16,20 @@ import {
   UIImage,
   UISeparator,
   UIText,
-} from 'ui-elements'
-import { Location as LocationIcon } from 'images/components/icons'
-import { placeholderCat, placeholderUser } from 'images'
+} from '@ui-elements'
 import {
+  Location as LocationIcon,
   HeartFill,
   HeartOutline,
   Organization as OrganizationIcon,
-} from 'images/components/icons'
-import { stringifyLocation } from 'utils/functions'
-import dayjs from 'utils/day'
+} from '@images/components/icons'
+import { placeholderCat, placeholderUser } from '@images'
+import {
+  stringifyLocation,
+  getFromListByKey,
+  shortenName,
+} from '@utils/functions'
+import dayjs from '@utils/day'
 import {
   PLACEHOLDER_USER_DISPLAY_NAME,
   STRUCTURE_LITTEN_POST_IMAGE_TO_CONTENT_RATIO,
@@ -35,12 +39,12 @@ import {
   STRUCTURE_TEMPLATE_SCREEN_BORDER_RADIUS,
   UI_ICON_SIZE_MICRO,
   UI_ICON_SIZE_MINI,
-} from 'utils/constants'
-import { littenSpeciesList, littenTypes } from 'utils/litten'
-import { getFromListByKey, shortenName } from 'utils/functions'
-import { translate } from 'utils/i18n'
-import type { BasicLitten } from 'model/types/litten'
-import type { BasicUser } from 'model/types/user'
+} from '@utils/constants'
+import { littenSpeciesList, littenTypes } from '@utils/litten'
+import { translate } from '@utils/i18n'
+import type { BasicLitten } from '@model/types/litten'
+import type { BasicUser } from '@model/types/user'
+
 type LittenPostScreenProps = {
   route: {
     params: {
@@ -51,7 +55,7 @@ type LittenPostScreenProps = {
   }
 }
 
-const LittenPostScreen: (props: LittenPostScreenProps) => Node = ({
+const LittenPostScreen: (props: LittenPostScreenProps) => FC = ({
   route: {
     params: { litten: littenProp, preview = false, user: userProp },
   },
@@ -199,6 +203,7 @@ const LittenPostScreen: (props: LittenPostScreenProps) => Node = ({
             source={photoSource}
             style={styles.mainImage}
             resizeMode="cover"
+            // eslint-disable-next-line react/no-array-index-key
             key={i}
           />
         ),

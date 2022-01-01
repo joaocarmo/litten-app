@@ -1,9 +1,10 @@
 import { KeyboardAvoidingView } from 'react-native'
-import { useTheme } from 'hooks'
-import { DEVICE_HEIGHT } from 'utils/constants'
+import { useTheme } from '@hooks'
+import { DEVICE_HEIGHT } from '@utils/constants'
 
 const FormKeyboardAvoidingView = ({ children, factor = 4 }) => {
   const { createStyles } = useTheme()
+
   const styles = createStyles((theme) => ({
     container: {
       height: '100%',
@@ -16,6 +17,7 @@ const FormKeyboardAvoidingView = ({ children, factor = 4 }) => {
       backgroundColor: theme.colors.neutralLight,
     },
   }))
+
   return (
     <KeyboardAvoidingView
       behavior="position"

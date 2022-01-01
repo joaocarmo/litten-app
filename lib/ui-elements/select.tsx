@@ -1,10 +1,10 @@
 import { useState } from 'react'
 
 import { Pressable, StyleSheet, View } from 'react-native'
-import { useTheme } from 'hooks'
-import UIInput from 'ui-elements/input'
-import UISelectPlatform from 'ui-elements/inner-components/select'
-import { UI_SELECT_OPTION_HEIGHT } from 'utils/constants'
+import { useTheme } from '@hooks'
+import UIInput from '@ui-elements/input'
+import UISelectPlatform from '@ui-elements/inner-components/select'
+import { UI_SELECT_OPTION_HEIGHT } from '@utils/constants'
 
 const UISelect = ({
   error,

@@ -1,6 +1,7 @@
-import { APP_IS_DEV } from 'utils/env'
-import { POST_PHOTO_SIZE_HEIGHT, POST_PHOTO_SIZE_WIDTH } from 'utils/constants'
-import { translate } from 'utils/i18n'
+import { APP_IS_DEV } from '@utils/env'
+import { POST_PHOTO_SIZE_HEIGHT, POST_PHOTO_SIZE_WIDTH } from '@utils/constants'
+import { translate } from '@utils/i18n'
+
 export const imagePickerOptions = {
   height: POST_PHOTO_SIZE_HEIGHT,
   width: POST_PHOTO_SIZE_WIDTH,

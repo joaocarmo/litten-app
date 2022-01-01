@@ -22,6 +22,7 @@
       "@hooks/*": ["lib/hooks/*"],
       "@images/*": ["lib/images/*"],
       "@model/*": ["lib/model/*"],
+      "@root/*": ["lib/*"],
       "@screens/*": ["lib/screens/*"],
       "@store/*": ["lib/store/*"],
       "@structure/*": ["lib/structure/*"],
@@ -33,9 +34,11 @@
     }
   },
   "exclude": [
-    "node_modules",
+    ".eslintrc.js",
     "babel.config.js",
+    "jest.config.js",
+    "jest.setup.js",
     "metro.config.js",
-    "jest.config.js"
+    "node_modules"
   ]
 }

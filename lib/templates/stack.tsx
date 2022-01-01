@@ -1,5 +1,5 @@
-import ScreenTemplate from 'templates/screen'
-import ScreenSimpleHeaderTemplate from 'templates/screen-simple-header'
+import ScreenTemplate from '@templates/screen'
+import ScreenSimpleHeaderTemplate from '@templates/screen-simple-header'
 
 const StackTemplate = ({ header, children, ...otherProps }) => (
   <ScreenTemplate

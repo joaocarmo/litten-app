@@ -1,12 +1,12 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native'
-import { useTheme } from 'hooks'
-import { Camera as CameraIcon } from 'images/components/icons'
+import { useTheme } from '@hooks'
+import { Camera as CameraIcon } from '@images/components/icons'
 import {
   UI_IMAGE_PLACEHOLDER_ITEM_MARGIN,
   UI_IMAGE_PLACEHOLDER_ITEM_SIZE,
   UI_PRESSED_OPACITY,
-} from 'utils/constants'
-import { translate } from 'utils/i18n'
+} from '@utils/constants'
+import { translate } from '@utils/i18n'
 
 const UIImagePlaceholderItem = ({
   actionable = false,

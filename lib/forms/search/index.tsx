@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useState } from 'react'
 
 import { StyleSheet } from 'react-native'
-import { UISearch } from 'ui-elements'
-import { useSearchHistory, useSearchQuery } from 'hooks'
-import { translate } from 'utils/i18n'
+import { UISearch } from '@ui-elements'
+import { useSearchHistory, useSearchQuery } from '@hooks'
+import { translate } from '@utils/i18n'
 
 const SearchForm = ({ showSearchHistory, hideSearchHistory }) => {
   const [isFocused, setIsFocused] = useState(false)
@@ -19,9 +19,10 @@ const SearchForm = ({ showSearchHistory, hideSearchHistory }) => {
     setIsFocused(true)
     showSearchHistory()
   }, [showSearchHistory])
-  const isClearable = useCallback(() => {
-    return isFocused || searchQuery.length > 0
-  }, [isFocused, searchQuery.length])
+  const isClearable = useCallback(
+    () => isFocused || searchQuery.length > 0,
+    [isFocused, searchQuery.length],
+  )
   const onSubmit = useCallback(
     (query) => {
       setQuery(query)

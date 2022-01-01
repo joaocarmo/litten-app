@@ -1,9 +1,10 @@
+import type { FC } from 'react'
 import { SafeAreaView, StatusBar, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import { useTheme } from 'hooks'
-import ScreenTabular from 'templates/screen/tabular'
-import ScrollableScreenTemplate from 'templates/screen/scrollable'
-import StaticScreenTemplate from 'templates/screen/static'
+import { useTheme } from '@hooks'
+import ScreenTabular from '@templates/screen/tabular'
+import ScrollableScreenTemplate from '@templates/screen/scrollable'
+import StaticScreenTemplate from '@templates/screen/static'
 
 const ScreenTemplate = ({
   children,
@@ -29,6 +30,7 @@ const ScreenTemplate = ({
       backgroundColor: theme.colors.neutralLight,
     },
   }))
+
   const ScreenComponent =
     scrollable && children ? ScrollableScreenTemplate : StaticScreenTemplate
   let screenContent = (
@@ -45,12 +47,13 @@ const ScreenTemplate = ({
           ? ScrollableScreenTemplate
           : StaticScreenTemplate
 
-      const CompoundComponent: () => Node = () => (
+      const CompoundComponent: () => FC = () => (
         <TabScreenComponent header={header} tabs={tabs}>
           <InnerComponent />
         </TabScreenComponent>
       )
 
+      // eslint-disable-next-line no-param-reassign
       arr[idx].compoundComponent = CompoundComponent
     })
     screenContent = <ScreenTabular tabs={tabs} />

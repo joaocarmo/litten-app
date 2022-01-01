@@ -1,12 +1,12 @@
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addLitten } from 'store/actions/cache'
-import { cacheLittenSelector } from 'store/selectors'
-import Litten from 'model/litten'
-import { memoizedGetFromModel as getFromModel } from 'utils/network'
-import { debugLog } from 'utils/dev'
-import type { BasicLitten } from 'model/types/litten'
-import type { ObjectById } from 'store/types'
+import { addLitten } from '@store/actions/cache'
+import { cacheLittenSelector } from '@store/selectors'
+import Litten from '@model/litten'
+import { memoizedGetFromModel as getFromModel } from '@utils/network'
+import { debugLog } from '@utils/dev'
+import type { BasicLitten } from '@model/types/litten'
+import type { ObjectById } from '@store/types'
 
 const areEqual = (left, right) =>
   Object.keys(left).length === Object.keys(right).length

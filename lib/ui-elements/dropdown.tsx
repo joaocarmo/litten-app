@@ -6,10 +6,11 @@ import {
   MenuTrigger,
   renderers,
 } from 'react-native-popup-menu'
-import { useTheme } from 'hooks'
-import UISeparator from 'ui-elements/separator'
-import { Right as RightArrow } from 'images/components/arrows'
-import { UI_DROPDOWN_MARGIN, UI_ICON_SIZE_MICRO } from 'utils/constants'
+import { useTheme } from '@hooks'
+import UISeparator from '@ui-elements/separator'
+import { Right as RightArrow } from '@images/components/arrows'
+import { UI_DROPDOWN_MARGIN, UI_ICON_SIZE_MICRO } from '@utils/constants'
+
 const { Popover } = renderers
 
 const UIDropdown = ({

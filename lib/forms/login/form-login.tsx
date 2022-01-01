@@ -2,9 +2,9 @@ import { useCallback, useEffect, useState } from 'react'
 
 import { useNavigation } from '@react-navigation/native'
 import { Alert, View } from 'react-native'
-import { useTheme } from 'hooks'
-import FormKeyboardAvoidingView from 'templates/form-keyboard-avoiding-view'
-import Auth from 'model/auth'
+import { useTheme } from '@hooks'
+import FormKeyboardAvoidingView from '@templates/form-keyboard-avoiding-view'
+import Auth from '@model/auth'
 import {
   UIButton,
   UIInput,
@@ -12,11 +12,11 @@ import {
   UILoader,
   UIPasswordInput,
   UISeparator,
-} from 'ui-elements'
-import { emailValidator, passwordValidator } from 'utils/validators'
-import { getErrorMessage } from 'utils/functions'
-import { SCREEN_NOAUTH_RECOVER } from 'utils/constants'
-import { translate } from 'utils/i18n'
+} from '@ui-elements'
+import { emailValidator, passwordValidator } from '@utils/validators'
+import { getErrorMessage } from '@utils/functions'
+import { SCREEN_NOAUTH_RECOVER } from '@utils/constants'
+import { translate } from '@utils/i18n'
 
 const LoginForm = ({
   clearErrorsLoginForm,

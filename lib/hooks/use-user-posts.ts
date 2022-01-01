@@ -1,8 +1,8 @@
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { userSavedSelector } from 'store/selectors'
-import { setActivePosts, setPastPosts } from 'store/actions/authenticated-user'
-import type { BasicLitten } from 'model/types/litten'
+import { userSavedSelector } from '@store/selectors'
+import { setActivePosts, setPastPosts } from '@store/actions/authenticated-user'
+import type { BasicLitten } from '@model/types/litten'
 
 const useUserPosts = (): [
   BasicLitten[],

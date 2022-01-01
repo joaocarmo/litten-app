@@ -2,19 +2,20 @@ import { useState } from 'react'
 
 import { Pressable, StyleSheet, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { useTheme } from 'hooks'
-import { UIBalloon, UIHeader, UISeparator, UIText } from 'ui-elements'
-import { Litten as LittenLogo } from 'images/components/logo'
-import { translate } from 'utils/i18n'
-import { BUILD_TIME, IS_BETA_RELASE } from 'utils/env'
+import { useTheme } from '@hooks'
+import { UIBalloon, UIHeader, UISeparator, UIText } from '@ui-elements'
+import { Litten as LittenLogo } from '@images/components/logo'
+import { translate } from '@utils/i18n'
+import { BUILD_TIME, IS_BETA_RELASE } from '@utils/env'
 import {
   NUM_TAPS_FOR_SURPRISE,
   SCREEN_DEV_HACKS,
   STRUCTURE_TEMPLATE_SCREEN_PADDING,
   UI_ABOUT_LOGO_HEIGHT,
   UI_ABOUT_LOGO_WIDTH,
-} from 'utils/constants'
+} from '@utils/constants'
 import { author, contributors, license, version } from 'litten/package.json'
+
 const authors = [
   author?.name,
   ...contributors.map((contributor) => contributor?.name),

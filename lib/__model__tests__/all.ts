@@ -1,9 +1,9 @@
-import Chat from 'model/chat'
-import Litten from 'model/litten'
-import Message from 'model/message'
-import User from 'model/user'
-import { chats, littens, messages, users } from 'fixtures/tests'
-import { cleanFirestore, mapName } from 'utils/tests'
+import Chat from '@model/chat'
+import Litten from '@model/litten'
+import Message from '@model/message'
+import User from '@model/user'
+import { chats, littens, messages, users } from '@fixtures/tests'
+import { cleanFirestore, mapName } from '@utils/tests'
 
 afterAll(async () => {
   await cleanFirestore()

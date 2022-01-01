@@ -1,14 +1,14 @@
 import { Text, View } from 'react-native'
-import { useTheme } from 'hooks'
-import ScreenSimpleHeaderTemplate from 'templates/screen-simple-header'
-import { UIAvatar } from 'ui-elements'
-import { ChatOptions } from 'screens/messages/inner-components'
-import { placeholderUser } from 'images'
-import { littenToHeaderTitle, shortenName } from 'utils/functions'
+import { useTheme } from '@hooks'
+import ScreenSimpleHeaderTemplate from '@templates/screen-simple-header'
+import { UIAvatar } from '@ui-elements'
+import { ChatOptions } from '@screens/messages/inner-components'
+import { placeholderUser } from '@images'
+import { littenToHeaderTitle, shortenName } from '@utils/functions'
 import {
   PLACEHOLDER_USER_DISPLAY_NAME,
   USER_AVATAR_SIZE_MINI,
-} from 'utils/constants'
+} from '@utils/constants'
 
 const MessagePrivateHeader = (props) => {
   const { litten, recipient } = props

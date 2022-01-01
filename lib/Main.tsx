@@ -1,26 +1,27 @@
-import { useEffect, useMemo, FC } from 'react'
+import { useEffect, useMemo } from 'react'
+import type { FC } from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack'
-import TabNavigation from 'structure/tab-navigation'
-import FavouritesScreen from 'screens/favourites'
-import HomeScreen from 'screens/home'
-import LittenPostScreen from 'screens/litten/post'
-import LittenPostSharedScreen from 'screens/litten/post-shared'
-import MessagesScreen from 'screens/messages'
-import NewScreen from 'screens/new'
-import PrivateMessagesScreen from 'screens/messages/private-messages-screen'
-import ProfileScreen from 'screens/profile'
-import SelectLocation from 'screens/select-location'
-import UserProfileScreen from 'screens/profile/view'
-import ProfileVerificationScreen from 'screens/profile/verification'
+import TabNavigation from '@structure/tab-navigation'
+import FavouritesScreen from '@screens/favourites'
+import HomeScreen from '@screens/home'
+import LittenPostScreen from '@screens/litten/post'
+import LittenPostSharedScreen from '@screens/litten/post-shared'
+import MessagesScreen from '@screens/messages'
+import NewScreen from '@screens/new'
+import PrivateMessagesScreen from '@screens/messages/private-messages-screen'
+import ProfileScreen from '@screens/profile'
+import SelectLocation from '@screens/select-location'
+import UserProfileScreen from '@screens/profile/view'
+import ProfileVerificationScreen from '@screens/profile/verification'
 import {
   Favourites,
   Home,
   Messages,
   New,
   Profile,
-} from 'images/components/menu'
-import { useNotifications, useUnreadMessages } from 'hooks'
+} from '@images/components/menu'
+import { useNotifications, useUnreadMessages } from '@hooks'
 import {
   SCREEN_LITTEN_POST_SHARED,
   SCREEN_LITTEN_POST,
@@ -34,9 +35,12 @@ import {
   SCREEN_TAB_NAV_NEW,
   SCREEN_TAB_NAV_PROFILE,
   SCREEN_USER_PROFILE,
-} from 'utils/constants'
-import { translate } from 'utils/i18n'
+} from '@utils/constants'
+import { translate } from '@utils/i18n'
+
 const Tab = createBottomTabNavigator()
+
+const TabBar = (props) => <TabNavigation {...props} />
 
 const TabNavigator = (): FC => {
   const unreadMessages = useUnreadMessages()
@@ -94,15 +98,17 @@ const TabNavigator = (): FC => {
     ],
     [unreadMessages],
   )
+
   useEffect(() => {
     notifications.setApplicationIconBadgeNumber(unreadMessages)
   }, [notifications, unreadMessages])
+
   return (
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
       }}
-      tabBar={(props) => <TabNavigation {...props} />}
+      tabBar={TabBar}
     >
       {tabScreens.map((props) => (
         <Tab.Screen {...props} />

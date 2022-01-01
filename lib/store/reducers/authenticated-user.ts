@@ -1,16 +1,17 @@
+/* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { usesMetricSystem } from 'react-native-localize'
-import { locationSchema } from 'db/schemas/location'
-import { userSchema } from 'db/schemas/user'
-import { getFavouriteIndex } from 'utils/functions'
+import { locationSchema } from '@db/schemas/location'
+import { userSchema } from '@db/schemas/user'
+import { getFavouriteIndex } from '@utils/functions'
 import type {
   AuthenticatedUser,
   BasicAuthUser,
   SearchFilters,
-} from 'store/types'
-import type { BasicLitten } from 'model/types/litten'
-import type { BasicUser } from 'model/types/user'
-import type { DBCoordinateObject, DBLocationObject } from 'db/schemas/location'
+} from '@store/types'
+import type { BasicLitten } from '@model/types/litten'
+import type { BasicUser } from '@model/types/user'
+import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
 
 const initialState: AuthenticatedUser = {
   basic: null,

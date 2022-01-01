@@ -1,10 +1,10 @@
 import { Text, View } from 'react-native'
-import { useTheme } from 'hooks'
+import { useTheme } from '@hooks'
 import {
   UI_BADGE_ELEMENT_OFFSET,
   UI_BADGE_PADDING,
   UI_BADGE_SIZE,
-} from 'utils/constants'
+} from '@utils/constants'
 
 const UIBadge = ({ children, number, showNonPositive = false }) => {
   const { createStyles } = useTheme()

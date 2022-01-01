@@ -1,7 +1,8 @@
-import { useCallback, useEffect, useState, FC } from 'react'
+import { useCallback, useEffect, useState } from 'react'
+import type { FC } from 'react'
 import SplashScreen from 'react-native-splash-screen'
 import Toast from 'react-native-simple-toast'
-import * as RootNavigation from 'config/navigation/root'
+import * as RootNavigation from '@config/navigation/root'
 import {
   useActiveChats,
   useAppConfig,
@@ -12,16 +13,16 @@ import {
   useUserCoordinates,
   useUserInfo,
   useUserPosts,
-} from 'hooks'
-import Auth from 'model/auth'
-import Main from 'root/Main'
-import Onboard from 'root/Onboard'
-import BlockedScreen from 'screens/blocked'
-import { UILoader } from 'ui-elements'
-import { setUpApp } from 'utils/setup'
-import { blockingValidator } from 'utils/functions'
-import { translate } from 'utils/i18n'
-import { debugLog } from 'utils/dev'
+} from '@hooks'
+import Auth from '@model/auth'
+import Main from '@root/Main'
+import Onboard from '@root/Onboard'
+import BlockedScreen from '@screens/blocked'
+import { UILoader } from '@ui-elements'
+import { setUpApp } from '@utils/setup'
+import { blockingValidator } from '@utils/functions'
+import { translate } from '@utils/i18n'
+import { debugLog } from '@utils/dev'
 
 const Litten = (): FC => {
   const [{ autoRedirectIfLoggedIn }] = useAppSettings()
@@ -38,6 +39,7 @@ const Litten = (): FC => {
   useTasks()
   // Show a toast when the connection is lost
   useConnectionStatus()
+
   // Refresh the user information
   const setupUser = useCallback(
     async (basicAuthUser) => {
@@ -67,6 +69,7 @@ const Litten = (): FC => {
     }, // eslint-disable-next-line react-hooks/exhaustive-deps
     [],
   )
+
   // Handle user state changes
   const onAuthStateChangeHandler = useCallback(
     (authUser) => {
@@ -83,11 +86,13 @@ const Litten = (): FC => {
     }, // eslint-disable-next-line react-hooks/exhaustive-deps
     [isSettingUp],
   )
+
   // Respond to the remote config
   useEffect(() => {
     const appIsBlocked = blockingValidator(appConfig)
     setIsAppblocked(appIsBlocked)
   }, [appConfig])
+
   // Handle authentication state changes
   useEffect(() => {
     const authStateSubscriber = Auth.auth.onAuthStateChanged(
@@ -98,6 +103,7 @@ const Litten = (): FC => {
       authStateSubscriber()
     } // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
   useEffect(() => {
     if (!isSettingUp) {
       SplashScreen.hide()

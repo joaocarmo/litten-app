@@ -1,16 +1,16 @@
 import { useState } from 'react'
 
 import { StyleSheet, View } from 'react-native'
-import { usePaddingBottom } from 'hooks'
-import { UIContainer, UIHeader, UILoader, UIText } from 'ui-elements'
+import { usePaddingBottom } from '@hooks'
+import { UIContainer, UIHeader, UILoader, UIText } from '@ui-elements'
 import { WebView } from 'react-native-webview'
-import { debugLog } from 'utils/dev'
+import { debugLog } from '@utils/dev'
 import {
   DEBOUNCE_TIMEOUT,
   STRUCTURE_TAB_NAV_HEIGHT,
   WEB_APP_BASE,
-} from 'utils/constants'
-import { translate } from 'utils/i18n'
+} from '@utils/constants'
+import { translate } from '@utils/i18n'
 
 const WebViewScreen = ({ path }) => {
   const [isLoading, setIsLoading] = useState(true)

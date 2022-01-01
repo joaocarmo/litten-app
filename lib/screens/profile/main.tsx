@@ -1,12 +1,12 @@
-import { APP_IS_DEV } from 'utils/env'
+import { APP_IS_DEV } from '@utils/env'
 import { useCallback, useMemo } from 'react'
 
-import { usePaddingBottom, useUserPosts, useTheme } from 'hooks'
+import { usePaddingBottom, useUserPosts, useTheme } from '@hooks'
 import { useNavigation } from '@react-navigation/native'
 import { useActionSheet } from '@expo/react-native-action-sheet'
 import { Alert, SectionList, View } from 'react-native'
-import Auth from 'model/auth'
-import { UIListItem, UIText } from 'ui-elements'
+import Auth from '@model/auth'
+import { UIListItem, UIText } from '@ui-elements'
 import {
   SCREEN_DEV_HACKS,
   SCREEN_PROFILE_ABOUT,
@@ -18,10 +18,10 @@ import {
   WEB_APP_HELP_AND_CONTACT,
   WEB_APP_PRIVACY_POLICY,
   WEB_APP_TERMS_AND_CONDITIONS,
-} from 'utils/constants'
-import { getListItemLayout } from 'utils/functions'
-import { reportTypes } from 'utils/litten'
-import { translate } from 'utils/i18n'
+} from '@utils/constants'
+import { getListItemLayout } from '@utils/functions'
+import { reportTypes } from '@utils/litten'
+import { translate } from '@utils/i18n'
 
 const ProfileMainScreen = () => {
   const [activePosts, pastPosts] = useUserPosts()

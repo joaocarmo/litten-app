@@ -1,6 +1,6 @@
-import FormKeyboardAvoidingView from 'templates/form-keyboard-avoiding-view'
-import { UIPasswordInput } from 'ui-elements'
-import { translate } from 'utils/i18n'
+import FormKeyboardAvoidingView from '@templates/form-keyboard-avoiding-view'
+import { UIPasswordInput } from '@ui-elements'
+import { translate } from '@utils/i18n'
 
 const StepPassword = ({
   formRegister: { password, passwordConfirm, error, errorMessage },

@@ -1,6 +1,6 @@
 import { View } from 'react-native'
-import { useTheme } from 'hooks'
-import UIListItem from 'ui-elements/list-item'
+import { useTheme } from '@hooks'
+import UIListItem from '@ui-elements/list-item'
 
 const UIMessageHidden = ({ children, read = false, ...otherProps }) => {
   const { createStyles } = useTheme()

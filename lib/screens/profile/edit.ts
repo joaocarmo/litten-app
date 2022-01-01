@@ -1,2 +1,3 @@
-import ProfileForm from 'forms/profile'
+import ProfileForm from '@forms/profile'
+
 export default ProfileForm

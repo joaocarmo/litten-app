@@ -1,6 +1,7 @@
 import TestRenderer from 'react-test-renderer'
-import ThemeProvider from 'components/theme/provider'
-import { UIProgress } from 'ui-elements'
+import ThemeProvider from '@components/theme/provider'
+import { UIProgress } from '@ui-elements'
+
 describe('Snapshot test for the "UIProgress" component', () => {
   it('renders correctly', () => {
     const currentStep = 2

@@ -1,10 +1,10 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import * as FormRegisterActions from 'store/actions/form-register'
-import { setAutoRedirectIfLoggedIn } from 'store/actions/app-settings'
-import RegisterForm from 'forms/register/form-register'
-import type { Dispatch, State } from 'store/types/state'
-import type { RegisterForm as RegisterFormType } from 'store/types'
+import * as FormRegisterActions from '@store/actions/form-register'
+import { setAutoRedirectIfLoggedIn } from '@store/actions/app-settings'
+import RegisterForm from '@forms/register/form-register'
+import type { Dispatch, State } from '@store/types/state'
+import type { RegisterForm as RegisterFormType } from '@store/types'
 
 type OwnProps = any
 type StateProps = {

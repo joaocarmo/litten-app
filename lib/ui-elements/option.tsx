@@ -1,8 +1,8 @@
+/* eslint-disable import/no-unresolved */
 import { useState } from 'react'
-
-import UISetting from 'ui-elements/setting'
-import UISelectPlatform from 'ui-elements/inner-components/select'
-import UIText from 'ui-elements/text'
+import UISetting from '@ui-elements/setting'
+import UISelectPlatform from '@ui-elements/inner-components/select'
+import UIText from '@ui-elements/text'
 
 const UIOption = ({
   description,

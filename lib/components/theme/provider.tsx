@@ -1,11 +1,11 @@
 import { useMemo } from 'react'
 import { useColorScheme } from 'react-native'
-import { ThemeContext } from 'components/theme'
-import type { ThemeConfig } from 'components/theme'
-import colors from 'styles/colors'
-import themes from 'styles/themes'
-import typography from 'styles/typography'
-import { debugLog } from 'utils/dev'
+import { ThemeContext } from '@components/theme'
+import type { ThemeConfig } from '@components/theme'
+import colors from '@styles/colors'
+import themes from '@styles/themes'
+import typography from '@styles/typography'
+import { debugLog } from '@utils/dev'
 
 const ThemeProvider = ({ children }: { children: Node }): Node => {
   const scheme = useColorScheme()

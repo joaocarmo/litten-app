@@ -1,6 +1,7 @@
 import TestRenderer from 'react-test-renderer'
-import ThemeProvider from 'components/theme/provider'
-import { UILoader } from 'ui-elements'
+import ThemeProvider from '@components/theme/provider'
+import { UILoader } from '@ui-elements'
+
 describe('Snapshot test for the "UILoader" component', () => {
   it('renders null when inactive', () => {
     const element = TestRenderer.create(

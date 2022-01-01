@@ -1,4 +1,5 @@
-import { translate } from 'utils/i18n'
+import { translate } from '@utils/i18n'
+
 describe('Test the i18n helpers', () => {
   const testKeys = ['', 'cta.yes', 'thisShouldNotExist']
   it('always returns a string', () => {

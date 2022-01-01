@@ -1,13 +1,15 @@
 import { memo, useCallback, useMemo } from 'react'
-import type { ComponentType, Node } from 'react'
+import type { FC, ReactNode } from 'react'
 import { View } from 'react-native'
-import { useTheme } from 'hooks'
-import UIImage from 'ui-elements/image'
+import { useTheme } from '@hooks'
+import UIImage from '@ui-elements/image'
 import {
   UI_ICON_SIZE_MEDIUM,
   UI_ICON_SIZE_SMALL,
   UI_ICON_SIZE_MINI,
-} from 'utils/constants'
+} from '@utils/constants'
+import iconStyles from '@ui-elements/icon.styles'
+
 type UIIconProps = {
   circle: boolean
   icon:
@@ -15,22 +17,19 @@ type UIIconProps = {
     | {
         uri: string
       }
-  IconComponent: ComponentType<any>
+  IconComponent: ReactNode
   iconStyle: any
   selected: boolean
   size: 'mini' | 'small' | 'medium'
   style: any
 }
 
-const areEqual = (prevProps, nextProps) => {
-  return (
-    prevProps.selected === nextProps.selected &&
-    prevProps.icon === nextProps.icon &&
-    prevProps.IconComponent === nextProps.IconComponent
-  )
-}
+const areEqual = (prevProps, nextProps) =>
+  prevProps.selected === nextProps.selected &&
+  prevProps.icon === nextProps.icon &&
+  prevProps.IconComponent === nextProps.IconComponent
 
-const UIIcon: (props: UIIconProps) => Node = ({
+const UIIcon: (props: UIIconProps) => FC = ({
   circle = false,
   icon,
   IconComponent,
@@ -50,45 +49,9 @@ const UIIcon: (props: UIIconProps) => Node = ({
       },
     },
   } = useTheme()
-  const styles = createStyles((theme) => ({
-    uiIconContainer: {
-      aspectRatio: 1,
-      borderRadius: 4,
-      backgroundColor: theme.colors.background,
-    },
-    uiIconContainerMainSelected: {
-      backgroundColor: theme.colors.secondary,
-    },
-    uiIconContainerMainMedium: {
-      height: UI_ICON_SIZE_MEDIUM,
-      padding: UI_ICON_SIZE_MEDIUM / 4,
-    },
-    uiIconContainerCircleMedium: {
-      borderRadius: UI_ICON_SIZE_MEDIUM / 2,
-    },
-    uiIconContainerMainSmall: {
-      height: UI_ICON_SIZE_SMALL,
-      padding: UI_ICON_SIZE_SMALL / 4,
-    },
-    uiIconContainerCircleSmall: {
-      borderRadius: UI_ICON_SIZE_SMALL / 2,
-    },
-    uiIconContainerMainMini: {
-      height: UI_ICON_SIZE_MINI,
-      padding: UI_ICON_SIZE_MINI / 4,
-    },
-    uiIconContainerCircleMini: {
-      borderRadius: UI_ICON_SIZE_MINI / 2,
-    },
-    uiIcon: {
-      height: '100%',
-      width: '100%',
-      tintColor: theme.colors.secondary,
-    },
-    uiIconSelected: {
-      tintColor: theme.colors.background,
-    },
-  }))
+
+  const styles = createStyles(iconStyles)
+
   const getSizeStyle = useCallback(() => {
     switch (size) {
       case 'medium':
@@ -126,6 +89,7 @@ const UIIcon: (props: UIIconProps) => Node = ({
     styles.uiIconContainerMainSmall,
     veryElevatedStyle,
   ])
+
   const sizeStyle = useMemo(() => getSizeStyle(), [getSizeStyle])
   const elevationStyle = useMemo(
     () => sizeStyle.elevation,
@@ -144,9 +108,10 @@ const UIIcon: (props: UIIconProps) => Node = ({
       iconStyle?.tintColor ?? (selected ? colors.textAlt : colors.secondary),
     [colors.secondary, colors.textAlt, iconStyle?.tintColor, selected],
   )
+
   return (
     <View
-      {...({
+      {...{
         ...otherProps,
         style: [
           styles.uiIconContainer,
@@ -156,7 +121,7 @@ const UIIcon: (props: UIIconProps) => Node = ({
           mainSelected,
           style,
         ],
-      } as any)}
+      }}
     >
       {icon && !IconComponent && (
         <UIImage
@@ -175,7 +140,4 @@ const UIIcon: (props: UIIconProps) => Node = ({
   )
 }
 
-export default memo<UIIconProps>(UIIcon, areEqual) as React$AbstractComponent<
-  UIIconProps,
-  unknown
->
+export default memo<UIIconProps>(UIIcon, areEqual)

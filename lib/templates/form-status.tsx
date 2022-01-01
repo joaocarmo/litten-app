@@ -1,11 +1,11 @@
 import { Text, View } from 'react-native'
 import { vw } from 'react-native-expo-viewport-units'
-import { useTheme } from 'hooks'
+import { useTheme } from '@hooks'
 import {
   Error as ErrorIcon,
   Success as SuccessIcon,
-} from 'images/components/icons'
-import { UI_OPERATION_STATUS_ICON_SIZE } from 'utils/constants'
+} from '@images/components/icons'
+import { UI_OPERATION_STATUS_ICON_SIZE } from '@utils/constants'
 
 const FormStatusTemplate = ({ success, error, children }) => {
   const {
@@ -13,6 +13,7 @@ const FormStatusTemplate = ({ success, error, children }) => {
     theme: { colors },
     typography,
   } = useTheme()
+
   const styles = createStyles((theme) => ({
     container: {
       height: '100%',
@@ -33,6 +34,7 @@ const FormStatusTemplate = ({ success, error, children }) => {
       textAlign: 'center',
     },
   }))
+
   return (
     <View style={styles.container}>
       {success && (

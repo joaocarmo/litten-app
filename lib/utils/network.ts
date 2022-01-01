@@ -1,25 +1,25 @@
-import { APP_IS_DEV } from 'utils/env'
-import memoize from 'lodash/memoize'
-import { Alert } from 'react-native'
-import FormData from 'react-native/Libraries/Network/FormData'
-import type { DBCoordinateObject } from 'db/schemas/location'
-import type { GeoInformation } from 'utils/types/network'
-import { reportTypes } from 'utils/litten'
-import { createAuthHeader, getFromListByKey } from 'utils/functions'
-import fetcher from 'utils/fetcher'
 import {
+  APP_IS_DEV,
   GOOGLE_API_KEY,
   JIRA_API_KEY,
   JIRA_EMAIL,
   SLACK_WEBHOOK_URL,
-} from 'utils/env'
+} from '@utils/env'
+import memoize from 'lodash.memoize'
+import { Alert } from 'react-native'
+import FormData from 'react-native/Libraries/Network/FormData'
+import type { DBCoordinateObject } from '@db/schemas/location'
+import type { GeoInformation } from '@utils/types/network'
+import { reportTypes } from '@utils/litten'
+import { createAuthHeader, getFromListByKey } from '@utils/functions'
+import fetcher from '@utils/fetcher'
 import {
   JIRA_APPEND_ATTACHMENT,
   JIRA_TICKET_URL,
   JIRA_UPLOAD_ATTACHMENT,
-} from 'utils/constants'
-import { debugLog, logError } from 'utils/dev'
-import { translate } from 'utils/i18n'
+} from '@utils/constants'
+import { debugLog, logError } from '@utils/dev'
+import { translate } from '@utils/i18n'
 import config from '../../package.json'
 
 /**
@@ -29,11 +29,13 @@ import config from '../../package.json'
  * @param {string} id - The resource ID
  * @returns {*}
  */
-export const getFromModel = async (Model: any, id: string): Promise<any> => {
+export const getFromModel = async <T>(Model: T, id: string): Promise<T> => {
   const resource = new Model({
     id,
   })
+
   await resource.get()
+
   return resource
 }
 
@@ -44,10 +46,7 @@ export const getFromModel = async (Model: any, id: string): Promise<any> => {
  * @param {string} id - The resource ID
  * @returns {*}
  */
-export const memoizedGetFromModel: any = memoize(
-  getFromModel,
-  (Model, id) => id,
-)
+export const memoizedGetFromModel = memoize(getFromModel, (Model, id) => id)
 
 /**
  * Handles network errors
@@ -82,22 +81,20 @@ export async function getExternalGeoInformation(
   try {
     const data = await fetcher(apiUri)
     jsonData = await data.json()
-  } finally {
-    return jsonData
+  } catch (e) {
+    debugLog(e)
   }
+
+  return jsonData
 }
 
 /**
  * Finds geolocation information based on the address
  * @async
  * @param {string} address
- * @param {Array<string>} components
  * @returns {Array.<{address_components: Array<{long_name: string, short_name: string, types: string[]}>, formatted_address: string, geometry: Object, place_id: string, plus_code: Object, types: string[]}>}
  */
-export async function getGeoInformation(
-  address: string,
-  components: string[] = [],
-): Promise<null> {
+export async function getGeoInformation(address: string): Promise<null> {
   const apiUri = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${GOOGLE_API_KEY}`
   let results = null
 
@@ -157,7 +154,7 @@ export const submitUserFeedbackAttachments = async ({
   numOfAttachments,
   response: { issueId },
   serviceDeskId,
-}: any): Promise<void> => {
+}): Promise<void> => {
   if (
     !APP_IS_DEV &&
     JIRA_APPEND_ATTACHMENT &&

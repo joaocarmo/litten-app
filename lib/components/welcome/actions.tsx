@@ -1,10 +1,11 @@
+import type { FC } from 'react'
 import { useNavigation } from '@react-navigation/native'
-import { UIButton } from 'ui-elements'
-import SignInCTA from 'components/welcome/cta-sign-in'
-import { translate } from 'utils/i18n'
-import { SCREEN_NOAUTH_REGISTER } from 'utils/constants'
+import { UIButton } from '@ui-elements'
+import SignInCTA from '@components/welcome/cta-sign-in'
+import { translate } from '@utils/i18n'
+import { SCREEN_NOAUTH_REGISTER } from '@utils/constants'
 
-const Actions: () => Node = () => {
+const Actions: () => FC = () => {
   const navigation = useNavigation()
   return (
     <>

@@ -1,42 +1,39 @@
 import { memo, useCallback, useMemo, useRef } from 'react'
-
+import type { FC } from 'react'
 import { Platform, Pressable, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { useTheme, useUnit } from 'hooks'
-import { UIHeader, UIIcon, UIImage, UIText } from 'ui-elements'
-import { placeholderCat } from 'images'
+import { useTheme, useUnit } from '@hooks'
+import { UIHeader, UIIcon, UIImage, UIText } from '@ui-elements'
+import { placeholderCat } from '@images'
 import {
   Cog as CogIcon,
   HeartFill,
   HeartOutline,
   Location as LocationIcon,
   Organization as OrganizationIcon,
-} from 'images/components/icons'
-import { littenSpeciesList, littenTypes } from 'utils/litten'
+} from '@images/components/icons'
+import { littenSpeciesList, littenTypes } from '@utils/litten'
 import {
   SCREEN_LITTEN_POST,
   UI_ICON_SIZE_MICRO,
   UI_ICON_SIZE_MINI,
-} from 'utils/constants'
-import dayjs from 'utils/day'
-import { convertLength, getFromListByKey, shortenName } from 'utils/functions'
-import I18n from 'utils/i18n'
-import { debugLog } from 'utils/dev'
-import type { LittenCardComponentProps } from 'components/litten-card/types'
-import cardComponentStyles from 'components/litten-card/card-component.styles'
+} from '@utils/constants'
+import dayjs from '@utils/day'
+import { convertLength, getFromListByKey, shortenName } from '@utils/functions'
+import I18n from '@utils/i18n'
+import { debugLog } from '@utils/dev'
+import type { LittenCardComponentProps } from '@components/litten-card/types'
+import cardComponentStyles from '@components/litten-card/card-component.styles'
 
 const UI_ICON_SIZE_MICRO_MINI_AVG = (UI_ICON_SIZE_MICRO + UI_ICON_SIZE_MINI) / 2
 
-const areEqual = (prevProps, nextProps) => {
-  return (
-    prevProps.distance === nextProps.distance &&
-    prevProps.isFavourite === nextProps.isFavourite &&
-    prevProps.litten.id === nextProps.litten.id &&
-    prevProps.user.id === nextProps.user.id
-  )
-}
+const areEqual = (prevProps, nextProps) =>
+  prevProps.distance === nextProps.distance &&
+  prevProps.isFavourite === nextProps.isFavourite &&
+  prevProps.litten.id === nextProps.litten.id &&
+  prevProps.user.id === nextProps.user.id
 
-const LittenCardComponent: (props: LittenCardComponentProps) => Node = ({
+const LittenCardComponent: (props: LittenCardComponentProps) => FC = ({
   distance: distanceKM,
   editable = false,
   isFavourite = false,

@@ -2,16 +2,16 @@ import { useCallback } from 'react'
 
 import Toast from 'react-native-simple-toast'
 import { Platform, Pressable, Share, StyleSheet, View } from 'react-native'
-import { useTheme } from 'hooks'
-import { Share as ShareIcon } from 'images/components/icons'
-import { buildShareURI } from 'utils/functions'
-import { debugLog, logError } from 'utils/dev'
+import { useTheme } from '@hooks'
+import { Share as ShareIcon } from '@images/components/icons'
+import { buildShareURI } from '@utils/functions'
+import { debugLog, logError } from '@utils/dev'
 import {
   RECOMMENDED_MINIMUM_TAPPABLE_SIZE,
   STRUCTURE_SHARE_BUTTON_SIZE,
-} from 'utils/constants'
-import { translate } from 'utils/i18n'
-import { littenTypesKeys } from 'utils/litten'
+} from '@utils/constants'
+import { translate } from '@utils/i18n'
+import { littenTypesKeys } from '@utils/litten'
 
 const ShareComponent = ({ filler = false, litten }) => {
   const {

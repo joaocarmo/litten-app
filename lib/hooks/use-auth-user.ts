@@ -1,8 +1,8 @@
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { authUserSelector } from 'store/selectors'
-import { clearBasic, setBasic } from 'store/actions/authenticated-user'
-import type { BasicAuthUser } from 'store/types'
+import { authUserSelector } from '@store/selectors'
+import { clearBasic, setBasic } from '@store/actions/authenticated-user'
+import type { BasicAuthUser } from '@store/types'
 
 const useAuthUser = (): [
   BasicAuthUser | null,

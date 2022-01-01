@@ -1,4 +1,5 @@
 import { Dimensions } from 'react-native'
+
 const { width: wWidth, height: wHeight } = Dimensions.get('window')
 export const ANIMATE_TIME = 1000
 export const ASPECT_RATIO = wWidth / wHeight

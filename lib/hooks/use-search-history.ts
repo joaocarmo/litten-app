@@ -1,11 +1,11 @@
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { searchHistorySelector } from 'store/selectors'
+import { searchHistorySelector } from '@store/selectors'
 import {
   addSavedSearch,
   clearSavedSearch,
   removeSavedSearch,
-} from 'store/actions/authenticated-user'
+} from '@store/actions/authenticated-user'
 
 const areEqual = (left, right) => left.length === right.length
 

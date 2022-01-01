@@ -1,9 +1,9 @@
 import { memo, useMemo } from 'react'
 
 import { Text, View } from 'react-native'
-import { useTheme } from 'hooks'
-import dayjs from 'utils/day'
-import UIListItem from 'ui-elements/list-item'
+import { useTheme } from '@hooks'
+import dayjs from '@utils/day'
+import UIListItem from '@ui-elements/list-item'
 
 export type UIMessagePreviewProps = {
   children: string
@@ -13,16 +13,13 @@ export type UIMessagePreviewProps = {
   read: boolean
 }
 
-const areEqual = (prevProps, nextProps) => {
-  return (
-    prevProps.children === nextProps.children &&
-    prevProps.from === nextProps.from &&
-    prevProps.header === nextProps.header &&
-    dayjs(prevProps.lastActivity).fromNow() ===
-      dayjs(nextProps.lastActivity).fromNow() &&
-    prevProps.read === nextProps.read
-  )
-}
+const areEqual = (prevProps, nextProps) =>
+  prevProps.children === nextProps.children &&
+  prevProps.from === nextProps.from &&
+  prevProps.header === nextProps.header &&
+  dayjs(prevProps.lastActivity).fromNow() ===
+    dayjs(nextProps.lastActivity).fromNow() &&
+  prevProps.read === nextProps.read
 
 const UIMessagePreview: (props: UIMessagePreviewProps) => Node = ({
   children,

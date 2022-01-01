@@ -1,17 +1,23 @@
-import firestore from 'db/firestore'
-import { string2tags } from 'utils/functions'
+import firestore from '@db/firestore'
+import { string2tags } from '@utils/functions'
 import {
   DB_LITTEN_COLLECTION,
   SEARCH_INITIAL_NUM_TO_RENDER,
-} from 'utils/constants'
-import type { BasicLitten } from 'model/types/litten'
-import type { SearchSettings } from 'model/types/search'
+} from '@utils/constants'
+import type { BasicLitten } from '@model/types/litten'
+import type { SearchSettings } from '@model/types/search'
+
 export default class Search {
   #query
+
   #filters
+
   #minQueryLength = 2
+
   #numOfItemsPerPage = SEARCH_INITIAL_NUM_TO_RENDER
+
   #user = null
+
   #cursor = null
 
   constructor({ query = '', filters = {}, user }: SearchSettings = {}) {

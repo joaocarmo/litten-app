@@ -8,6 +8,7 @@ import placeholderUser from './placeholders/male.png'
 import welcomeStepOne from './welcome/step-one.png'
 import welcomeStepThree from './welcome/step-three.png'
 import welcomeStepTwo from './welcome/step-two.png'
+
 export {
   placeholderCat,
   placeholderEmptyFavouritePosts,

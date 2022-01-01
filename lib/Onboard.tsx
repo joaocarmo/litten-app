@@ -1,14 +1,16 @@
+import type { FC } from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-import Welcome from 'components/welcome'
-import Register from 'components/welcome/register'
-import Login from 'components/welcome/login'
-import Recover from 'components/welcome/recover'
+import Welcome from '@components/welcome'
+import Register from '@components/welcome/register'
+import Login from '@components/welcome/login'
+import Recover from '@components/welcome/recover'
 import {
   SCREEN_NOAUTH_WELCOME,
   SCREEN_NOAUTH_REGISTER,
   SCREEN_NOAUTH_LOGIN,
   SCREEN_NOAUTH_RECOVER,
-} from 'utils/constants'
+} from '@utils/constants'
+
 const stackScreens = [
   {
     key: SCREEN_NOAUTH_WELCOME,
@@ -31,6 +33,7 @@ const stackScreens = [
     component: Recover,
   },
 ]
+
 const Stack = createStackNavigator()
 
 const Onboard = (): FC => (

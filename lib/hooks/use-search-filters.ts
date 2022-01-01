@@ -1,8 +1,8 @@
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { searchFiltersSelector } from 'store/selectors'
-import { setFilters, resetFilters } from 'store/actions/search-settings'
-import type { SearchFilters } from 'store/types'
+import { searchFiltersSelector } from '@store/selectors'
+import { setFilters, resetFilters } from '@store/actions/search-settings'
+import type { SearchFilters } from '@store/types'
 
 const useSearchFilters = (): [
   SearchFilters,

@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useState } from 'react'
 
 import { useNavigation } from '@react-navigation/native'
-import { useCacheLittens, useCacheUsers } from 'hooks'
-import { UILoader } from 'ui-elements'
-import PostScreen from 'screens/litten/post'
-import Litten from 'model/litten'
-import User from 'model/user'
-import { debugLog } from 'utils/dev'
+import { useCacheLittens, useCacheUsers } from '@hooks'
+import { UILoader } from '@ui-elements'
+import PostScreen from '@screens/litten/post'
+import Litten from '@model/litten'
+import User from '@model/user'
+import { debugLog } from '@utils/dev'
 
 const LittenPostSharedScreen = ({
   route: {

@@ -1,6 +1,6 @@
 import { Switch } from 'react-native'
-import { useTheme } from 'hooks'
-import UISetting from 'ui-elements/setting'
+import { useTheme } from '@hooks'
+import UISetting from '@ui-elements/setting'
 
 const UISwitch = ({
   description,
@@ -12,6 +12,7 @@ const UISwitch = ({
   const {
     theme: { colors },
   } = useTheme()
+
   return (
     <UISetting description={description} label={label}>
       <Switch

@@ -1,10 +1,10 @@
 import { useCallback } from 'react'
 import type { FC } from 'react'
-import { useTheme } from 'hooks'
+import { useTheme } from '@hooks'
 import { useActionSheet } from '@expo/react-native-action-sheet'
 import Clipboard from '@react-native-community/clipboard'
 import { Bubble as GCBubble } from 'react-native-gifted-chat'
-import { translate } from 'utils/i18n'
+import { translate } from '@utils/i18n'
 import bubbleStyles from './bubble.styles'
 
 const Bubble = (props: unknown): FC<unknown> => {

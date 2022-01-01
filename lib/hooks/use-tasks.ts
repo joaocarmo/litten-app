@@ -1,7 +1,7 @@
 import { useCallback, useContext, useEffect } from 'react'
-import { TasksContext } from 'components/tasks'
-import useTasksHandler from 'hooks/use-tasks-handler'
-import { debugLog } from 'utils/dev'
+import { TasksContext } from '@components/tasks'
+import useTasksHandler from '@hooks/use-tasks-handler'
+import { debugLog } from '@utils/dev'
 
 const useTasks = (): any => {
   const tasks = useContext(TasksContext)

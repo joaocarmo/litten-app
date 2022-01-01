@@ -1,11 +1,12 @@
 import { StyleSheet, View } from 'react-native'
-import { useTheme } from 'hooks'
-import ScreenTabularNav from 'templates/screen/tabular-nav'
+import { useTheme } from '@hooks'
+import ScreenTabularNav from '@templates/screen/tabular-nav'
 
 const StaticScreenTemplate = ({ children, header, tabs, style }) => {
   const {
     commonStyles: { screenTemplateStyles },
   } = useTheme()
+
   return (
     <View style={screenTemplateStyles.contentView}>
       <View style={screenTemplateStyles.header}>{header}</View>
@@ -31,4 +32,5 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 })
+
 export default StaticScreenTemplate

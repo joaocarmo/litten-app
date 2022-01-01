@@ -1,13 +1,14 @@
+import type { FC } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { StyleSheet, View } from 'react-native'
-import { UILink, UIText } from 'ui-elements'
-import { translate } from 'utils/i18n'
+import { UILink, UIText } from '@ui-elements'
+import { translate } from '@utils/i18n'
 import {
   SCREEN_NOAUTH_LOGIN,
   UI_SCREEN_NOAUTH_CTA_HEIGHT,
-} from 'utils/constants'
+} from '@utils/constants'
 
-const SignInCTA: () => Node = () => {
+const SignInCTA: () => FC = () => {
   const navigation = useNavigation()
   return (
     <View style={styles.cta}>

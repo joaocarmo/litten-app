@@ -1,8 +1,8 @@
-import { useTheme } from 'hooks'
-import ScreenTemplate from 'templates/screen'
-import MessagePrivateHeader from 'screens/messages/private-messages-screen-header'
-import PrivateMessages from 'screens/messages/private-messages'
-import { translate } from 'utils/i18n'
+import { useTheme } from '@hooks'
+import ScreenTemplate from '@templates/screen'
+import MessagePrivateHeader from '@screens/messages/private-messages-screen-header'
+import PrivateMessages from '@screens/messages/private-messages'
+import { translate } from '@utils/i18n'
 
 const MessagePrivateScreen = ({
   route: {

@@ -1,9 +1,7 @@
-import { useState } from 'react'
-
+import { useCallback, useState } from 'react'
 import { StyleSheet, Text, TextInput } from 'react-native'
-import { useTheme } from 'hooks'
-const UI_INPUT_HEIGHT = 60
-const UI_INPUT_MARGIN = 10
+import { useTheme } from '@hooks'
+import inputStyles from '@ui-elements/input.styles'
 
 const UIInput = ({
   error = false,
@@ -20,45 +18,10 @@ const UIInput = ({
   const {
     createStyles,
     theme: { colors },
-    typography,
   } = useTheme()
-  const styles = createStyles((theme) => ({
-    uiInput: {
-      height: UI_INPUT_HEIGHT,
-      width: '100%',
-      fontSize: typography.fontSize.xxlarge,
-      fontWeight: typography.fontWeight.bolder,
-      marginTop: UI_INPUT_MARGIN,
-      marginBottom: UI_INPUT_MARGIN,
-      borderBottomWidth: 2,
-      color: theme.colors.text,
-    },
-    uiInputActive: {
-      borderBottomColor: theme.colors.text,
-    },
-    uiInputInactive: {
-      borderBottomColor: theme.colors.neutral,
-    },
-    uiInputSuccess: {
-      borderBottomColor: theme.colors.primary,
-    },
-    uiInputError: {
-      color: theme.colors.danger,
-      borderBottomColor: theme.colors.danger,
-    },
-    uiInputSmall: {
-      height: UI_INPUT_HEIGHT * 0.5,
-      fontSize: typography.fontSize.base,
-      marginTop: UI_INPUT_MARGIN * 0.5,
-      marginBottom: UI_INPUT_MARGIN * 0.5,
-    },
-    errorMessage: {
-      width: '100%',
-      fontSize: typography.fontSize.small,
-      color: theme.colors.danger,
-      marginTop: -4,
-    },
-  }))
+
+  const styles = createStyles(inputStyles)
+
   const stylesActive = StyleSheet.compose(styles.uiInput, styles.uiInputActive)
   const stylesInactive = StyleSheet.compose(
     styles.uiInput,
@@ -70,23 +33,23 @@ const UIInput = ({
   )
   const stylesError = StyleSheet.compose(styles.uiInput, styles.uiInputError)
 
-  const onFocusHandler = () => {
+  const onFocusHandler = useCallback(() => {
     setIsActive(true)
 
     if (typeof onFocus === 'function') {
       onFocus()
     }
-  }
+  }, [onFocus])
 
-  const onBlurHandler = () => {
+  const onBlurHandler = useCallback(() => {
     setIsActive(false)
 
     if (typeof onBlur === 'function') {
       onBlur()
     }
-  }
+  }, [onBlur])
 
-  const getStyle = () => {
+  const getStyle = useCallback(() => {
     let inputStyle = {}
 
     if (success) {
@@ -108,7 +71,17 @@ const UIInput = ({
     }
 
     return inputStyle
-  }
+  }, [
+    error,
+    isActive,
+    size,
+    styles.uiInputSmall,
+    stylesActive,
+    stylesError,
+    stylesInactive,
+    stylesSuccess,
+    success,
+  ])
 
   return (
     <>

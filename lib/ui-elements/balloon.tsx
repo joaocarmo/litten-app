@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, View } from 'react-native'
-import { useTheme } from 'hooks'
-import UIText from 'ui-elements/text'
+import { useTheme } from '@hooks'
+import UIText from '@ui-elements/text'
 
 const UIBalloon = ({ children, style, type, ...otherProps }) => {
   const { createStyles } = useTheme()

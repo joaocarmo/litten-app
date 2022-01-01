@@ -1,15 +1,16 @@
 import { createStackNavigator } from '@react-navigation/stack'
-import ScreenTemplate from 'templates/screen'
-import ScreenSimpleHeaderTemplate from 'templates/screen-simple-header'
-import Home from 'screens/home/index'
-import Filter from 'screens/home/filter'
-import FilterSet from 'screens/home/filter/set'
-import { translate } from 'utils/i18n'
+import ScreenTemplate from '@templates/screen'
+import ScreenSimpleHeaderTemplate from '@templates/screen-simple-header'
+import Home from '@screens/home/index'
+import Filter from '@screens/home/filter'
+import FilterSet from '@screens/home/filter/set'
+import { translate } from '@utils/i18n'
 import {
   SCREEN_HOME_INDEX,
   SCREEN_HOME_FILTER,
   SCREEN_HOME_FILTER_SET,
-} from 'utils/constants'
+} from '@utils/constants'
+
 const HomeStack = createStackNavigator()
 
 const HomeFilter = (props) => (

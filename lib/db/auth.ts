@@ -2,8 +2,8 @@ import {
   APP_IS_DEV,
   FIREBASE_AUTH_EMULATOR_HOST,
   USE_FIREBASE_EMULATOR,
-} from 'utils/env'
-import { debugLog } from 'utils/dev'
+} from '@utils/env'
+import { debugLog } from '@utils/dev'
 import auth from '@react-native-firebase/auth'
 
 /**
@@ -17,6 +17,7 @@ if (APP_IS_DEV && USE_FIREBASE_EMULATOR) {
     '[FIREBASE] USING FIREBASE EMULATOR [AUTH]',
     FIREBASE_AUTH_EMULATOR_HOST,
   )
+
   auth().useEmulator(FIREBASE_AUTH_EMULATOR_HOST)
 }
 

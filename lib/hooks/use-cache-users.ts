@@ -1,12 +1,12 @@
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addUser } from 'store/actions/cache'
-import { cacheUserSelector } from 'store/selectors'
-import User from 'model/user'
-import { memoizedGetFromModel as getFromModel } from 'utils/network'
-import { debugLog } from 'utils/dev'
-import type { BasicUser } from 'model/types/user'
-import type { ObjectById } from 'store/types'
+import { addUser } from '@store/actions/cache'
+import { cacheUserSelector } from '@store/selectors'
+import User from '@model/user'
+import { memoizedGetFromModel as getFromModel } from '@utils/network'
+import { debugLog } from '@utils/dev'
+import type { BasicUser } from '@model/types/user'
+import type { ObjectById } from '@store/types'
 
 const areEqual = (left, right) =>
   Object.keys(left).length === Object.keys(right).length

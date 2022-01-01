@@ -1,10 +1,12 @@
-import Carousel from 'components/carousel'
-import IntroCarouselItemTemplate from 'templates/intro-carousel-item'
-import { welcomeStepOne, welcomeStepTwo, welcomeStepThree } from 'images'
-import { translate } from 'utils/i18n'
+import type { FC } from 'react'
+import Carousel from '@components/carousel'
+import IntroCarouselItemTemplate from '@templates/intro-carousel-item'
+import { welcomeStepOne, welcomeStepTwo, welcomeStepThree } from '@images'
+import { translate } from '@utils/i18n'
+
 const messages = translate('welcome.carousel')
 
-const Intro: () => Node = () => (
+const Intro: () => FC = () => (
   <Carousel
     items={[
       {

@@ -1,4 +1,4 @@
-import { APP_IS_DEV } from 'utils/env'
+import { APP_IS_DEV } from '@utils/env'
 import Toast from 'react-native-simple-toast'
 import { useCallback, useMemo, useRef, useState } from 'react'
 
@@ -15,11 +15,11 @@ import {
   UISwitch,
   UIText,
   UITextArea,
-} from 'ui-elements'
-import Litten from 'model/litten'
-import Search from 'model/search'
-import AddPhoto from 'components/add-photo'
-import { useDebouncedCallback, useEmailVerified } from 'hooks'
+} from '@ui-elements'
+import Litten from '@model/litten'
+import Search from '@model/search'
+import AddPhoto from '@components/add-photo'
+import { useDebouncedCallback, useEmailVerified } from '@hooks'
 import {
   littenLocationValidator,
   littenPhotoValidator,
@@ -27,15 +27,15 @@ import {
   littenStoryValidator,
   littenTitleValidator,
   littenTypeValidator,
-} from 'utils/validators'
+} from '@utils/validators'
 import {
   getFromListByKey,
   getImagePath,
   iterateTimes,
   stringifyLocation,
-} from 'utils/functions'
-import { logError } from 'utils/dev'
-import { translate } from 'utils/i18n'
+} from '@utils/functions'
+import { logError } from '@utils/dev'
+import { translate } from '@utils/i18n'
 import {
   FORM_NEW_SET_LOCATION,
   NEW_POST_NUM_OF_PHOTOS,
@@ -43,8 +43,8 @@ import {
   SCREEN_NEW_LOCATION,
   SCREEN_PROFILE_EDIT,
   SCREEN_TAB_NAV_PROFILE,
-} from 'utils/constants'
-import { littenSpeciesList, littenTypes } from 'utils/litten'
+} from '@utils/constants'
+import { littenSpeciesList, littenTypes } from '@utils/litten'
 
 const NewForm = ({
   addPhoto,

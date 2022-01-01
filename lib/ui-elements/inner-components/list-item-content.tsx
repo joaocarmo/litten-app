@@ -1,10 +1,10 @@
 import { memo, useCallback, useMemo, type ComponentType } from 'react'
 
 import { Pressable, Text, View } from 'react-native'
-import { useTheme } from 'hooks'
-import UIListItemContentMain from 'ui-elements/inner-components/list-item-content-main'
-import UIImage from 'ui-elements/image'
-import { Right as RightArrow } from 'images/components/arrows'
+import { useTheme } from '@hooks'
+import UIListItemContentMain from '@ui-elements/inner-components/list-item-content-main'
+import UIImage from '@ui-elements/image'
+import { Right as RightArrow } from '@images/components/arrows'
 import {
   RECOMMENDED_MINIMUM_TAPPABLE_SIZE,
   UI_ELEMENT_BORDER_MARGIN,
@@ -12,7 +12,7 @@ import {
   UI_ELEMENT_LIST_HEIGHT,
   UI_ICON_SIZE_MICRO,
   UI_ICON_SIZE_MINI,
-} from 'utils/constants'
+} from '@utils/constants'
 
 const ICON_MARGIN = 16
 
@@ -32,19 +32,16 @@ type UIListItemContentProps = {
   style?: any
 }
 
-const areEqual = (prevProps, nextProps) => {
-  return (
-    prevProps.badgeActive === nextProps.badgeActive &&
-    prevProps.badgeNum === nextProps.badgeNum &&
-    prevProps.caption === nextProps.caption &&
-    prevProps.children === nextProps.children &&
-    prevProps.hasExtra === nextProps.hasExtra &&
-    prevProps.iconPosition === nextProps.iconPosition &&
-    prevProps.isPressed === nextProps.isPressed &&
-    prevProps.noFeedback === nextProps.noFeedback &&
-    prevProps.selected === nextProps.selected
-  )
-}
+const areEqual = (prevProps, nextProps) =>
+  prevProps.badgeActive === nextProps.badgeActive &&
+  prevProps.badgeNum === nextProps.badgeNum &&
+  prevProps.caption === nextProps.caption &&
+  prevProps.children === nextProps.children &&
+  prevProps.hasExtra === nextProps.hasExtra &&
+  prevProps.iconPosition === nextProps.iconPosition &&
+  prevProps.isPressed === nextProps.isPressed &&
+  prevProps.noFeedback === nextProps.noFeedback &&
+  prevProps.selected === nextProps.selected
 
 const UIListItemContent: (props: UIListItemContentProps) => Node = ({
   badgeActive = false,

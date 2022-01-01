@@ -1,8 +1,8 @@
 import { useCallback, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { messageSelector } from 'store/selectors'
-import { setMessages } from 'store/actions/chats'
-import type { BasicMessage } from 'model/types/message'
+import { messageSelector } from '@store/selectors'
+import { setMessages } from '@store/actions/chats'
+import type { BasicMessage } from '@model/types/message'
 
 const useChatMessages = (
   chatUid: string,

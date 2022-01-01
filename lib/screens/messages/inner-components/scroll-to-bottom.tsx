@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native'
-import { useTheme } from 'hooks'
-import { Right as RightArrow } from 'images/components/arrows'
-import { UI_ICON_SIZE_MICRO } from 'utils/constants'
+import { useTheme } from '@hooks'
+import { Right as RightArrow } from '@images/components/arrows'
+import { UI_ICON_SIZE_MICRO } from '@utils/constants'
 
 const ScrollToBottomComponent = () => {
   const {

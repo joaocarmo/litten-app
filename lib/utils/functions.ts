@@ -1,13 +1,13 @@
-import { APP_IS_DEV, IS_BETA_RELASE } from 'utils/env'
+import { APP_IS_DEV, IS_BETA_RELASE } from '@utils/env'
 import base64 from 'base-64'
 import md5Hex from 'md5-hex'
 import isEmpty from 'lodash.isempty'
-import { locationSchema } from 'db/schemas/location'
+import { locationSchema } from '@db/schemas/location'
 import {
   BETA_ENABLED,
   MAINTENANCE_MODE,
   VERSION_DISABLED,
-} from 'config/remote-config/defaults'
+} from '@config/remote-config/defaults'
 import {
   EARTH_RADIUS,
   KM_PER_MI,
@@ -18,19 +18,19 @@ import {
   USER_TYPE_INDIVIDUAL,
   USER_TYPE_ORGANIZATION,
   WEB_APP_BASE,
-} from 'utils/constants'
-import { littenSpeciesList, littenTypes } from 'utils/litten'
-import { translate } from 'utils/i18n'
-import type { DBCoordinateObject, DBLocationObject } from 'db/schemas/location'
-import type { LittenFeedObject, SearchFilters } from 'store/types'
+} from '@utils/constants'
+import { littenSpeciesList, littenTypes } from '@utils/litten'
+import { translate } from '@utils/i18n'
+import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
+import type { LittenFeedObject, SearchFilters } from '@store/types'
 import type {
   GLocation,
   GLocationParsed,
   GResponse,
-} from 'utils/types/functions'
-import type { BasicChat } from 'model/types/chat'
-import type { BasicLitten } from 'model/types/litten'
-import type { BasicUser } from 'model/types/user'
+} from '@utils/types/functions'
+import type { BasicChat } from '@model/types/chat'
+import type { BasicLitten } from '@model/types/litten'
+import type { BasicUser } from '@model/types/user'
 
 /**
  * Converts kms to mis
@@ -167,8 +167,7 @@ export const parseAvatar = (
     // Gravatar uses MD5 hashes from an email address (all lowercase)
     const hash = md5Hex(email.toLowerCase())
     // The full avatar URL
-    avatar = `${gravatarUrl}/${hash}?${query}`
-    return avatar
+    return `${gravatarUrl}/${hash}?${query}`
   }
 
   return ''
@@ -385,8 +384,8 @@ export const distanceBetween = (
     const lngB = degToRad(lngBdeg)
     // Apply the Haversine formula
     const h =
-      Math.pow(Math.sin((latB - latA) / 2), 2) +
-      Math.cos(latA) * Math.cos(latB) * Math.pow(Math.sin((lngB - lngA) / 2), 2)
+      Math.sin((latB - latA) / 2) ** 2 +
+      Math.cos(latA) * Math.cos(latB) * Math.sin((lngB - lngA) / 2) ** 2
     return 2 * EARTH_RADIUS * Math.asin(Math.sqrt(h))
   }
 
@@ -400,9 +399,9 @@ export const distanceBetween = (
  * @returns {Object|void}
  */
 export const getFromListByKey = (
-  list: Record<string, any>[],
+  list: Record<string, unknown>[],
   key = '',
-): Record<string, any> | void =>
+): Record<string, unknown> | void =>
   list.find(({ key: objectKey }) => objectKey === key)
 
 /**
@@ -414,9 +413,7 @@ export const getFromListByKey = (
 export const getFavouriteIndex = (
   litten: BasicLitten,
   favourites: BasicLitten[],
-): number => {
-  return favourites.findIndex(({ id }) => id === litten?.id)
-}
+): number => favourites.findIndex(({ id }) => id === litten?.id)
 
 /**
  * Returns only the first and last instances of a name string, assuming each
@@ -574,7 +571,7 @@ export const string2tags = (str: string): string[] => {
  * @returns {{length: number, offset: number, index: number}}
  */
 export const getListItemLayout = (
-  data: any,
+  data: unknown,
   index: number,
 ): {
   index: number
@@ -582,6 +579,7 @@ export const getListItemLayout = (
   offset: number
 } => {
   const fullSize = UI_ELEMENT_LIST_HEIGHT + UI_ELEMENT_BORDER_MARGIN * 2
+
   return {
     length: fullSize,
     offset: fullSize * index,
@@ -656,9 +654,9 @@ export const filterData = (
  * @returns {Promise}
  */
 export const execOrTimeout = (
-  asyncFn: Promise<any>,
+  asyncFn: Promise<unknown>,
   timeout: number,
-): Promise<any> => {
+): Promise<unknown> => {
   const racePromise = new Promise((resolve, reject) => {
     setTimeout(reject, timeout, new Error('Async function timed out'))
   })
@@ -671,7 +669,9 @@ export const execOrTimeout = (
  * @param {{[key: string]: *}} appConfig The remote config object
  * @returns {string}
  */
-export const blockingValidator = (appConfig: any): string => {
+export const blockingValidator = (
+  appConfig: Record<string, unknown>,
+): string => {
   const appIsBlocked = ''
 
   if (!appConfig) {
@@ -681,7 +681,7 @@ export const blockingValidator = (appConfig: any): string => {
   const entries = Object.entries(appConfig)
 
   for (const entry of entries) {
-    const [key, value]: [string, any] = entry
+    const [key, value]: [string, unknown] = entry
 
     if (key === BETA_ENABLED && IS_BETA_RELASE && value.asBoolean() === false) {
       return BETA_ENABLED

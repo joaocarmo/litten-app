@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
-import useFavourites from 'hooks/use-favourites'
-import { getFavouriteIndex } from 'utils/functions'
-import type { BasicLitten } from 'model/types/litten'
+import useFavourites from '@hooks/use-favourites'
+import { getFavouriteIndex } from '@utils/functions'
+import type { BasicLitten } from '@model/types/litten'
 
 const useFavouriteFn = (): [
   (litten: BasicLitten) => boolean,

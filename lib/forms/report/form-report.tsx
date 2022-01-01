@@ -9,14 +9,18 @@ import {
   UISeparator,
   UIText,
   UITextArea,
-} from 'ui-elements'
-import AddPhoto from 'components/add-photo'
-import ImageComponent from 'forms/report/image-component'
-import PlaceholderComponent from 'forms/report/placeholder-component'
-import { getImagePath, iterateTimes } from 'utils/functions'
-import { submitUserFeedback, handleNetworkError } from 'utils/network'
-import { MAX_NUM_OF_REPORT_IMAGES, NUM_OF_REPORT_IMAGES } from 'utils/constants'
-import { translate } from 'utils/i18n'
+} from '@ui-elements'
+import AddPhoto from '@components/add-photo'
+import ImageComponent from '@forms/report/image-component'
+import PlaceholderComponent from '@forms/report/placeholder-component'
+import { getImagePath, iterateTimes } from '@utils/functions'
+import { submitUserFeedback, handleNetworkError } from '@utils/network'
+import {
+  MAX_NUM_OF_REPORT_IMAGES,
+  NUM_OF_REPORT_IMAGES,
+} from '@utils/constants'
+import { translate } from '@utils/i18n'
+
 const NUM_IMAGES = Math.min(NUM_OF_REPORT_IMAGES, MAX_NUM_OF_REPORT_IMAGES)
 
 const ReportForm = ({

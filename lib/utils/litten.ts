@@ -30,13 +30,13 @@ import {
   USER_TYPE_ALL,
   USER_TYPE_INDIVIDUAL,
   USER_TYPE_ORGANIZATION,
-} from 'utils/constants'
+} from '@utils/constants'
 import {
   ContactEmail,
   ContactInApp,
   ContactPhoneCall,
   ContactSMS,
-} from 'images/components/icons'
+} from '@images/components/icons'
 import {
   Adopt,
   Found,
@@ -47,8 +47,8 @@ import {
   Rabbit,
   Reptilian as Other,
   Rodent,
-} from 'images/components/litten'
-import { translate } from 'utils/i18n'
+} from '@images/components/litten'
+import { translate } from '@utils/i18n'
 import type {
   ListOfContactOptions,
   ListOfFilters,
@@ -56,7 +56,8 @@ import type {
   ListOfSpecies,
   ListOfTypes,
   ListOfUserTypes,
-} from 'utils/types/litten'
+} from '@utils/types/litten'
+
 export const littenSpeciesList: ListOfSpecies[] = [
   {
     key: LITTEN_SPECIES_DOG,
@@ -125,11 +126,13 @@ export const littenSpeciesList: ListOfSpecies[] = [
     description: '',
   },
 ]
+
 export const littenTypesKeys: Record<string, string> = {
   [LITTEN_TYPE_ADOPT]: 'adopt',
   [LITTEN_TYPE_LOST]: 'lost',
   [LITTEN_TYPE_FOUND]: 'found',
 }
+
 export const littenTypes: ListOfTypes[] = [
   {
     key: LITTEN_TYPE_ADOPT,
@@ -150,6 +153,7 @@ export const littenTypes: ListOfTypes[] = [
     description: '',
   },
 ]
+
 export const littenFilters: ListOfFilters[] = [
   {
     key: LITTEN_FILTER_SPECIES,
@@ -172,6 +176,7 @@ export const littenFilters: ListOfFilters[] = [
     storeKey: LITTEN_FILTER_USER_TYPE_STORE,
   },
 ]
+
 export const contactOptions: ListOfContactOptions[] = [
   {
     key: USER_PREFERENCES_CONTACT_INAPP,
@@ -202,6 +207,7 @@ export const contactOptions: ListOfContactOptions[] = [
     urlValueKey: 'phoneNumber',
   },
 ]
+
 export const reportTypes: ListOfReportTypes[] = [
   {
     key: FEEDBACK_TYPE_ABUSE,
@@ -222,6 +228,7 @@ export const reportTypes: ListOfReportTypes[] = [
     requestTypeId: 12,
   },
 ]
+
 export const userTypes: ListOfUserTypes[] = [
   {
     key: USER_TYPE_ALL,

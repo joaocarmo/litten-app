@@ -6,17 +6,17 @@ import {
   useSearchFilters,
   useSearchQuery,
   useUserCoordinates,
-} from 'hooks'
-import Litten from 'model/litten'
-import Search from 'model/search'
-import SearchResults from 'screens/home/search/results'
-import { UILoader } from 'ui-elements'
-import { distanceBetween, filterData } from 'utils/functions'
+} from '@hooks'
+import Litten from '@model/litten'
+import Search from '@model/search'
+import SearchResults from '@screens/home/search/results'
+import { UILoader } from '@ui-elements'
+import { distanceBetween, filterData } from '@utils/functions'
 import {
   RECURSION_LIMIT_SEARCH,
   SEARCH_INITIAL_NUM_TO_RENDER,
-} from 'utils/constants'
-import { debugLog } from 'utils/dev'
+} from '@utils/constants'
+import { debugLog } from '@utils/dev'
 
 const HomeSearchScreen = () => {
   const [query] = useSearchQuery()

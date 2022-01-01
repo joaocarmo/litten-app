@@ -1,16 +1,17 @@
 import { useCallback, useEffect, useState } from 'react'
 
 import { Alert } from 'react-native'
-import ScreenTemplate from 'templates/screen'
-import ScreenSimpleHeaderTemplate from 'templates/screen-simple-header'
-import FormStatusTemplate from 'templates/form-status'
-import { UILoader } from 'ui-elements'
-import { useAuthUser } from 'hooks'
-import Auth from 'model/auth'
-import { getErrorMessage } from 'utils/functions'
-import { logError } from 'utils/dev'
-import { actionCodeSettings } from 'config/auth'
-import { translate } from 'utils/i18n'
+import ScreenTemplate from '@templates/screen'
+import ScreenSimpleHeaderTemplate from '@templates/screen-simple-header'
+import FormStatusTemplate from '@templates/form-status'
+import { UILoader } from '@ui-elements'
+import { useAuthUser } from '@hooks'
+import Auth from '@model/auth'
+import { getErrorMessage } from '@utils/functions'
+import { logError } from '@utils/dev'
+import { actionCodeSettings } from '@config/auth'
+import { translate } from '@utils/i18n'
+
 const { handleCodeInApp } = actionCodeSettings
 
 const ProfileVerificationScreen = ({

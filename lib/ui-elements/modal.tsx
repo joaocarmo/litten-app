@@ -1,14 +1,15 @@
 import { Modal, Pressable, View } from 'react-native'
-import { useTheme } from 'hooks'
+import { useTheme } from '@hooks'
 import {
   DEVICE_WIDTH,
   STRUCTURE_TEMPLATE_SCREEN_BORDER_RADIUS,
   UI_MODAL_MIN_HEIGHT,
-} from 'utils/constants'
+} from '@utils/constants'
 
 const UIModal = ({
   children,
   onClickOutside,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   style,
   transparent = true,
   visible = false,

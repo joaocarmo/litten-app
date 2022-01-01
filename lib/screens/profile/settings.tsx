@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useRef } from 'react'
 
 import { useDispatch } from 'react-redux'
-import { setContactPreferences as setContactPreferencesAction } from 'store/actions/authenticated-user'
+import { setContactPreferences as setContactPreferencesAction } from '@store/actions/authenticated-user'
 import { Alert, SectionList, View } from 'react-native'
 import {
   useCrashlytics,
@@ -9,16 +9,16 @@ import {
   useTheme,
   useUnit,
   useUserInfo,
-} from 'hooks'
-import User from 'model/user'
-import { UIHeader, UISeparator, UISwitch } from 'ui-elements'
-import { translate } from 'utils/i18n'
+} from '@hooks'
+import User from '@model/user'
+import { UIHeader, UISeparator, UISwitch } from '@ui-elements'
+import { translate } from '@utils/i18n'
 import {
   USER_PREFERENCES_CONTACT_CALL,
   USER_PREFERENCES_CONTACT_EMAIL,
   USER_PREFERENCES_CONTACT_INAPP,
   USER_PREFERENCES_CONTACT_SMS,
-} from 'utils/constants'
+} from '@utils/constants'
 
 const ProfileSettingsScreen = () => {
   const dispatch = useDispatch()

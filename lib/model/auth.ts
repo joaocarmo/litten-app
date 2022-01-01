@@ -1,9 +1,10 @@
-import { USE_GRAVATAR } from 'utils/env'
-import auth from 'db/auth'
-import { parseAvatar } from 'utils/functions'
-import { uploadUserAvatar } from 'db/storage'
-import { actionCodeSettings } from 'config/auth'
-import type { AuthClass, AuthSettings } from 'model/types/auth'
+import { USE_GRAVATAR } from '@utils/env'
+import auth from '@db/auth'
+import { parseAvatar } from '@utils/functions'
+import { uploadUserAvatar } from '@db/storage'
+import { actionCodeSettings } from '@config/auth'
+import type { AuthClass, AuthSettings } from '@model/types/auth'
+
 export class AuthError extends Error {
   constructor(...args: string[]) {
     super(...args)
@@ -18,13 +19,21 @@ export class AuthError extends Error {
 }
 export default class Auth implements AuthClass {
   EmailAuthProvider = auth.EmailAuthProvider
+
   #id
+
   #photoURL
+
   #callingCode
+
   #country
+
   #displayName
+
   #email
+
   #password
+
   #phoneNumber
 
   constructor({

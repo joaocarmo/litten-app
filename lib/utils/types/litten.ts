@@ -1,11 +1,13 @@
+import type { ReactNode } from 'react'
+
 export type BasicListOfThings = {
   key: string
   label: string
-  [key: string]: any
+  [key: string]: unknown
 }
 
 export type BasicListOfAttributes = BasicListOfThings & {
-  icon: string | Node
+  icon: string | ReactNode
   description: string
 }
 
@@ -20,7 +22,7 @@ export type ListOfFilters = BasicListOfThings & {
 }
 
 export type ListOfContactOptions = BasicListOfThings & {
-  icon: string | Node
+  icon: string | ReactNode
   urlScheme: string
   urlValueKey: string
 }

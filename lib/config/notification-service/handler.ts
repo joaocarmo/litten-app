@@ -1,8 +1,9 @@
 import PushNotification from 'react-native-push-notification'
-import { logError } from 'utils/dev'
+import { logError } from '@utils/dev'
 
 class NotificationHandler {
   #onNotification
+
   #onRegister
 
   onNotification(notification: any) {

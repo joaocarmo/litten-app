@@ -1,14 +1,14 @@
 import { createStackNavigator } from '@react-navigation/stack'
-import StackTemplate from 'templates/stack'
-import Profile from 'screens/profile/index'
-import About from 'screens/profile/about'
-import Edit from 'screens/profile/edit'
-import Posts from 'screens/profile/posts'
-import Report from 'screens/profile/report'
-import Settings from 'screens/profile/settings'
-import WebView from 'screens/profile/webview'
-import DevHacks from 'screens/dev/hacks'
-import { translate } from 'utils/i18n'
+import StackTemplate from '@templates/stack'
+import Profile from '@screens/profile/index'
+import About from '@screens/profile/about'
+import Edit from '@screens/profile/edit'
+import Posts from '@screens/profile/posts'
+import Report from '@screens/profile/report'
+import Settings from '@screens/profile/settings'
+import WebView from '@screens/profile/webview'
+import DevHacks from '@screens/dev/hacks'
+import { translate } from '@utils/i18n'
 import {
   SCREEN_DEV_HACKS,
   SCREEN_PROFILE_ABOUT,
@@ -18,7 +18,7 @@ import {
   SCREEN_PROFILE_REPORT,
   SCREEN_PROFILE_SETTINGS,
   SCREEN_PROFILE_WEBVIEW,
-} from 'utils/constants'
+} from '@utils/constants'
 
 const EditScreen = () => (
   <StackTemplate header={translate('screens.profile.edit')} scrollable>

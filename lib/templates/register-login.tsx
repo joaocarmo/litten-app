@@ -1,7 +1,7 @@
 import { Keyboard, Pressable, StyleSheet, View } from 'react-native'
-import ScreenTemplate from 'templates/screen'
-import ScreenSimpleHeaderTemplate from 'templates/screen-simple-header'
-import { STRUCTURE_TAB_NAV_HEIGHT } from 'utils/constants'
+import ScreenTemplate from '@templates/screen'
+import ScreenSimpleHeaderTemplate from '@templates/screen-simple-header'
+import { STRUCTURE_TAB_NAV_HEIGHT } from '@utils/constants'
 
 const RegisterLoginTemplate = ({ children, footer, header }) => (
   <ScreenTemplate
@@ -33,4 +33,5 @@ const styles = StyleSheet.create({
     marginBottom: STRUCTURE_TAB_NAV_HEIGHT / 2,
   },
 })
+
 export default RegisterLoginTemplate

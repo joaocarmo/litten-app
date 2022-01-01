@@ -1,5 +1,4 @@
 import { useMemo } from 'react'
-
 import FastImage from 'react-native-fast-image'
 
 const UIImage = ({
@@ -19,6 +18,7 @@ const UIImage = ({
         : propsSource,
     [propsSource],
   )
+
   const styles = useMemo(() => {
     const imageStyle = {
       height,
@@ -34,6 +34,7 @@ const UIImage = ({
       ...style,
     }
   }, [height, style, width])
+
   return (
     <FastImage
       resizeMode={FastImage.resizeMode[resizeMode]}

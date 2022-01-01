@@ -1,12 +1,13 @@
-import ScreenTemplate from 'templates/screen'
-import ScreenSimpleHeaderTemplate from 'templates/screen-simple-header'
-import FavouritePostsScreen from 'screens/favourites/posts'
-import FavouriteFiltersScreen from 'screens/favourites/filters'
-import { translate } from 'utils/i18n'
+import ScreenTemplate from '@templates/screen'
+import ScreenSimpleHeaderTemplate from '@templates/screen-simple-header'
+import FavouritePostsScreen from '@screens/favourites/posts'
+import FavouriteFiltersScreen from '@screens/favourites/filters'
+import { translate } from '@utils/i18n'
 import {
   SCREEN_TAB_NAV_FAVOURITES_POSTS,
   SCREEN_TAB_NAV_FAVOURITES_SEARCHES,
-} from 'utils/constants'
+} from '@utils/constants'
+
 const tabs = [
   {
     key: SCREEN_TAB_NAV_FAVOURITES_POSTS,

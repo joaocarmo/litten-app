@@ -1,14 +1,14 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 
-import { useFavouriteFn, useUserPosts, useUserUid } from 'hooks'
-import Search from 'model/search'
-import LittenSmartCard from 'components/litten-card/smart'
-import ScreenTemplate from 'templates/screen'
-import ScreenSimpleHeaderTemplate from 'templates/screen-simple-header'
+import { useFavouriteFn, useUserPosts, useUserUid } from '@hooks'
+import Search from '@model/search'
+import LittenSmartCard from '@components/litten-card/smart'
+import ScreenTemplate from '@templates/screen'
+import ScreenSimpleHeaderTemplate from '@templates/screen-simple-header'
 import { FlatList, StyleSheet, View } from 'react-native'
-import { UIBalloon, UISeparator } from 'ui-elements'
-import UserProfileDetailsScreen from 'screens/profile/view-details'
-import { translate } from 'utils/i18n'
+import { UIBalloon, UISeparator } from '@ui-elements'
+import UserProfileDetailsScreen from '@screens/profile/view-details'
+import { translate } from '@utils/i18n'
 
 const UserProfileScreen = ({
   route: {

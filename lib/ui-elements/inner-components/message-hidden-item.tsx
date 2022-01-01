@@ -1,6 +1,6 @@
 import { Pressable, Text } from 'react-native'
-import { useTheme } from 'hooks'
-import { UI_HIDDEN_OPTION_WIDTH, UI_PRESSED_OPACITY } from 'utils/constants'
+import { useTheme } from '@hooks'
+import { UI_HIDDEN_OPTION_WIDTH, UI_PRESSED_OPACITY } from '@utils/constants'
 
 const UIMessageHiddenItem = ({ children, style, ...otherProps }) => {
   const { createStyles } = useTheme()

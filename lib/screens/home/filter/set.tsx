@@ -7,16 +7,16 @@ import {
   useSearchFiltersSpecies,
   useTheme,
   useUnit,
-} from 'hooks'
+} from '@hooks'
 import {
   removeType as removeTypeAction,
   setLocationRadius as setLocationRadiusAction,
   setType as setTypeAction,
   setUserType as setUserTypeAction,
-} from 'store/actions/search-settings'
+} from '@store/actions/search-settings'
 import { FlatList } from 'react-native'
-import { UIListItem, UIOption, UISlider, UISwitch } from 'ui-elements'
-import { convertLength, getListItemLayout } from 'utils/functions'
+import { UIListItem, UIOption, UISlider, UISwitch } from '@ui-elements'
+import { convertLength, getListItemLayout } from '@utils/functions'
 import {
   LITTEN_FILTER_LOCATION_RADIUS_DEFAULT,
   LITTEN_FILTER_LOCATION_RADIUS_MAX,
@@ -25,9 +25,9 @@ import {
   LITTEN_FILTER_SPECIES,
   LITTEN_FILTER_TYPE,
   LITTEN_FILTER_USER_TYPE,
-} from 'utils/constants'
-import { littenSpeciesList, littenTypes, userTypes } from 'utils/litten'
-import { translate } from 'utils/i18n'
+} from '@utils/constants'
+import { littenSpeciesList, littenTypes, userTypes } from '@utils/litten'
+import { translate } from '@utils/i18n'
 
 const HomeFilterSetScreen = ({ filter, title }) => {
   const dispatch = useDispatch()

@@ -2,11 +2,11 @@ import { useCallback, useMemo } from 'react'
 
 import { Alert, StyleSheet, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { useCurrentlyActiveChat, useTheme } from 'hooks'
-import Chat from 'model/chat'
-import { UIDropdown } from 'ui-elements'
-import { MoreOptions } from 'images/components/icons'
-import { prepareReportMessage } from 'utils/functions'
+import { useCurrentlyActiveChat, useTheme } from '@hooks'
+import Chat from '@model/chat'
+import { UIDropdown } from '@ui-elements'
+import { MoreOptions } from '@images/components/icons'
+import { prepareReportMessage } from '@utils/functions'
 import {
   CONVERSATION_DELETE_CONVERSATION,
   CONVERSATION_REPORT_CONVERSATION,
@@ -20,8 +20,8 @@ import {
   SCREEN_USER_PROFILE,
   UI_DROPDOWN_MARGIN,
   UI_EXTRA_OPTION_SIZE,
-} from 'utils/constants'
-import { translate } from 'utils/i18n'
+} from '@utils/constants'
+import { translate } from '@utils/i18n'
 
 const ChatOptions = ({ chat = {}, litten = {}, recipient = {}, user = {} }) => {
   const navigation = useNavigation()

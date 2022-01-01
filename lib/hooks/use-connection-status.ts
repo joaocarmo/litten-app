@@ -1,9 +1,9 @@
 import { useCallback, useEffect } from 'react'
 import Toast from 'react-native-simple-toast'
 import { useNetInfo } from '@react-native-community/netinfo'
-import useDebouncedCallback from 'hooks/use-debounced-callback'
-import { DEBOUNCE_TIMEOUT } from 'utils/constants'
-import { translate } from 'utils/i18n'
+import useDebouncedCallback from '@hooks/use-debounced-callback'
+import { DEBOUNCE_TIMEOUT } from '@utils/constants'
+import { translate } from '@utils/i18n'
 
 const useConnectionStatus = () => {
   const { isInternetReachable } = useNetInfo()

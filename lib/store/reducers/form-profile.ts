@@ -1,6 +1,7 @@
+/* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import type { PhotoObject, ProfileForm } from 'store/types'
-import type { DBLocationObject } from 'db/schemas/location'
+import type { PhotoObject, ProfileForm } from '@store/types'
+import type { DBLocationObject } from '@db/schemas/location'
 
 const initialState: ProfileForm = {
   callingCode: null,

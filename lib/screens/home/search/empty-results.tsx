@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 
 import { StyleSheet, View } from 'react-native'
-import { UITooltip } from 'ui-elements'
-import Empty from 'components/empty'
-import { placeholderEmptySearches } from 'images'
-import { NO_RESULTS_REFRESH_TIMEOUT_IN } from 'utils/constants'
-import { translate } from 'utils/i18n'
+import { UITooltip } from '@ui-elements'
+import Empty from '@components/empty'
+import { placeholderEmptySearches } from '@images'
+import { NO_RESULTS_REFRESH_TIMEOUT_IN } from '@utils/constants'
+import { translate } from '@utils/i18n'
 
 const SearchEmptyResults = ({ handleTooltipRefresh }) => {
   const [showRefresh, setShowRefresh] = useState(false)

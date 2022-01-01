@@ -2,19 +2,19 @@ import { useCallback, useRef } from 'react'
 
 import { useNavigation } from '@react-navigation/native'
 import { Pressable, View } from 'react-native'
-import User from 'model/user'
-import { useTheme } from 'hooks'
-import { UIBalloon, UIHeader, UIIcon, UIModal, UIText } from 'ui-elements'
-import { contactOptions } from 'utils/litten'
-import { translate } from 'utils/i18n'
-import { openURL } from 'utils/ui'
-import { shortenName } from 'utils/functions'
+import User from '@model/user'
+import { useTheme } from '@hooks'
+import { UIBalloon, UIHeader, UIIcon, UIModal, UIText } from '@ui-elements'
+import { contactOptions } from '@utils/litten'
+import { translate } from '@utils/i18n'
+import { openURL } from '@utils/ui'
+import { shortenName } from '@utils/functions'
 import {
   LITTEN_URI,
   SCREEN_MESSAGE_PRIVATE,
   STRUCTURE_TEMPLATE_SCREEN_PADDING,
   UI_ELEMENT_BORDER_MARGIN,
-} from 'utils/constants'
+} from '@utils/constants'
 
 const LittenContactOptions = ({
   authenticatedUserUid,

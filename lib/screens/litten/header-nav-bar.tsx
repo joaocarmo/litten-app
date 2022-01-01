@@ -1,17 +1,18 @@
+import type { FC } from 'react'
 import { Platform, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import { useTheme } from 'hooks'
-import GoBack from 'components/go-back'
-import Share from 'components/share'
-import { UIHeader } from 'ui-elements'
-import { opacity2Hex } from 'utils/functions'
-import { STRUCTURE_TEMPLATE_SCREEN_HEADER_MARGIN } from 'utils/constants'
+import { useTheme } from '@hooks'
+import GoBack from '@components/go-back'
+import Share from '@components/share'
+import { UIHeader } from '@ui-elements'
+import { opacity2Hex } from '@utils/functions'
+import { STRUCTURE_TEMPLATE_SCREEN_HEADER_MARGIN } from '@utils/constants'
 
 const LittenHeaderNavBar: (props: {
   litten: any
   opacity: number
   preview: boolean
-}) => Node = ({ litten, opacity = 0, preview = false }) => {
+}) => FC = ({ litten, opacity = 0, preview = false }) => {
   const { top } = useSafeAreaInsets()
   const {
     createStyles,

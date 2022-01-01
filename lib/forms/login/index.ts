@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import * as FormLoginActions from 'store/actions/form-login'
-import LoginForm from 'forms/login/form-login'
-import type { Dispatch, State } from 'store/types/state'
-import type { LoginForm as LoginFormType } from 'store/types'
+import * as FormLoginActions from '@store/actions/form-login'
+import LoginForm from '@forms/login/form-login'
+import type { Dispatch, State } from '@store/types/state'
+import type { LoginForm as LoginFormType } from '@store/types'
 
 type OwnProps = any
 type StateProps = {

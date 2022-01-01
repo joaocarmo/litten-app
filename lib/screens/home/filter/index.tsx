@@ -1,7 +1,7 @@
 import Toast from 'react-native-simple-toast'
 import { useCallback, useMemo, useState } from 'react'
 
-import { FlatList } from 'react-native'
+import { FlatList, Alert } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import {
   usePaddingBottom,
@@ -9,29 +9,28 @@ import {
   useSearchFilters,
   useTheme,
   useUnit,
-} from 'hooks'
-import { Alert } from 'react-native'
-import { UIListItem, UIPrompt } from 'ui-elements'
+} from '@hooks'
+import { UIListItem, UIPrompt } from '@ui-elements'
 import {
   LITTEN_FILTER_LOCATION_RADIUS,
   LITTEN_FILTER_SPECIES,
   LITTEN_FILTER_TYPE,
   LITTEN_FILTER_USER_TYPE,
   SCREEN_HOME_FILTER_SET,
-} from 'utils/constants'
+} from '@utils/constants'
 import {
   convertLength,
   getFromListByKey,
   getListItemLayout,
   getNumOfActiveFilters,
-} from 'utils/functions'
+} from '@utils/functions'
 import {
   littenFilters,
   littenSpeciesList,
   littenTypes,
   userTypes,
-} from 'utils/litten'
-import { translate } from 'utils/i18n'
+} from '@utils/litten'
+import { translate } from '@utils/i18n'
 
 const HomeFilterScreen = () => {
   const [namePromptIsOpen, setNamePromptIsOpen] = useState(false)

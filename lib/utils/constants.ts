@@ -1,4 +1,5 @@
 import { vh, vw } from 'react-native-expo-viewport-units'
+
 // UI
 export const DEVICE_HEIGHT: number = vh(100)
 export const DEVICE_WIDTH: number = vw(100)
@@ -64,6 +65,7 @@ export const UI_SELECT_OPTION_HEIGHT = 60
 export const USER_AVATAR_SIZE_LARGE = 200
 export const USER_AVATAR_SIZE_MEDIUM = 82
 export const USER_AVATAR_SIZE_MINI = 36
+
 // Screens
 export const SCREEN_DEV_HACKS = 'dev/hacks'
 export const SCREEN_HOME_FILTER = 'home/filter'
@@ -94,10 +96,12 @@ export const SCREEN_TAB_NAV_MESSAGES = 'tabnav/messages'
 export const SCREEN_TAB_NAV_NEW = 'tabnav/new'
 export const SCREEN_TAB_NAV_PROFILE = 'tabnav/profile'
 export const SCREEN_USER_PROFILE = 'profile/view'
+
 // WebViews
 export const WEB_APP_HELP_AND_CONTACT = '/faq?inapp=true'
 export const WEB_APP_TERMS_AND_CONDITIONS = '/terms-and-conditions?inapp=true'
 export const WEB_APP_PRIVACY_POLICY = '/privacy-policy?inapp=true'
+
 // Messages
 export const CONVERSATION_DELETE_CONVERSATION =
   'CONVERSATION_DELETE_CONVERSATION'
@@ -105,20 +109,24 @@ export const CONVERSATION_REPORT_CONVERSATION =
   'CONVERSATION_REPORT_CONVERSATION'
 export const CONVERSATION_VIEW_LITTEN = 'CONVERSATION_VIEW_LITTEN'
 export const CONVERSATION_VIEW_PROFILE = 'CONVERSATION_VIEW_PROFILE'
+
 // Feedback
 export const FEEDBACK_TYPE_ABUSE = 'FEEDBACK_TYPE_ABUSE'
 export const FEEDBACK_TYPE_BUG = 'FEEDBACK_TYPE_BUG'
 export const FEEDBACK_TYPE_OTHER = 'FEEDBACK_TYPE_OTHER'
+
 // Data
 export const DB_CHAT_COLLECTION = 'chats'
 export const DB_LITTEN_COLLECTION = 'littens'
 export const DB_MESSAGE_COLLECTION = 'messages'
 export const DB_USER_COLLECTION = 'users'
+
 // User preferences
 export const USER_PREFERENCES_CONTACT_CALL = 'USER_PREFERENCES_CONTACT_CALL'
 export const USER_PREFERENCES_CONTACT_EMAIL = 'USER_PREFERENCES_CONTACT_EMAIL'
 export const USER_PREFERENCES_CONTACT_INAPP = 'USER_PREFERENCES_CONTACT_INAPP'
 export const USER_PREFERENCES_CONTACT_SMS = 'USER_PREFERENCES_CONTACT_SMS'
+
 // Litten species
 export const LITTEN_SPECIES_DOG = 'LITTEN_SPECIES_DOG'
 export const LITTEN_SPECIES_CAT = 'LITTEN_SPECIES_CAT'
@@ -126,10 +134,12 @@ export const LITTEN_SPECIES_BIRD = 'LITTEN_SPECIES_BIRD'
 export const LITTEN_SPECIES_RABBIT = 'LITTEN_SPECIES_RABBIT'
 export const LITTEN_SPECIES_RODENT = 'LITTEN_SPECIES_RODENT'
 export const LITTEN_SPECIES_OTHER = 'LITTEN_SPECIES_OTHER'
+
 // Litten types
 export const LITTEN_TYPE_ADOPT = 'LITTEN_TYPE_ADOPT'
 export const LITTEN_TYPE_LOST = 'LITTEN_TYPE_LOST'
 export const LITTEN_TYPE_FOUND = 'LITTEN_TYPE_FOUND'
+
 // Search filters
 export const LITTEN_FILTER_LOCATION_RADIUS = 'LITTEN_FILTER_LOCATION_RADIUS'
 export const LITTEN_FILTER_SPECIES = 'LITTEN_FILTER_SPECIES'
@@ -139,20 +149,21 @@ export const LITTEN_FILTER_LOCATION_RADIUS_STORE = 'locationRadius'
 export const LITTEN_FILTER_SPECIES_STORE = 'littenSpecies'
 export const LITTEN_FILTER_TYPE_STORE = 'littenType'
 export const LITTEN_FILTER_USER_TYPE_STORE = 'userType'
+
 // In kilometers
 export const LITTEN_FILTER_LOCATION_RADIUS_MIN = 1
 export const LITTEN_FILTER_LOCATION_RADIUS_INITIAL = 0
 export const LITTEN_FILTER_LOCATION_RADIUS_DEFAULT = 60
 export const LITTEN_FILTER_LOCATION_RADIUS_MAX = 100
+
 // User types
 export const USER_TYPE_ALL = 'USER_TYPE_ALL'
 export const USER_TYPE_INDIVIDUAL = 'USER_TYPE_INDIVIDUAL'
 export const USER_TYPE_ORGANIZATION = 'USER_TYPE_ORGANIZATION'
+
 // Universal constans
 export const EARTH_CIRCUMFERENCE_EQUATOR = 40075 // km
-
 export const EARTH_CIRCUMFERENCE_POLES = 40007 // km
-
 export const EARTH_RADIUS = 6371 // km
 
 // Measurement units
@@ -161,16 +172,18 @@ export const MEASURE_MI = 'mi'
 export const KM_PER_MI = 1.609344
 export const LAT_DEGREES_PER_KM = 360 / EARTH_CIRCUMFERENCE_POLES
 export const LNG_DEGREES_PER_KM = 360 / EARTH_CIRCUMFERENCE_EQUATOR
+
 // Placeholders
 export const PLACEHOLDER_USER_DISPLAY_NAME = 'User'
+
 // Store actions
 export const FORM_PROFILE_SET_LOCATION = 'formProfile/setProfileLocation'
 export const FORM_NEW_SET_LOCATION = 'formNew/setLocation'
+
 // Other
 export const WEB_APP_BASE = 'https://litten.app'
 export const NUM_TAPS_FOR_SURPRISE = 19
 export const NETWORK_TIMEOUT = 30000 // ms
-
 export const LITTEN_URI = 'litten://'
 export const MAILTO_URI = 'mailto:'
 export const SMS_URI = 'sms:'
@@ -186,11 +199,9 @@ export const STORAGE_IGNORED_ERRORS = [
   STORAGE_OBJECT_UNAUTHORIZED,
 ]
 export const NO_RESULTS_REFRESH_TIMEOUT_IN = 3500 // ms
-
 export const NEW_POST_NUM_OF_PHOTOS = 8
 export const DB_MESSAGE_BATCH_AMOUNT = 20
 export const DEBOUNCE_TIMEOUT = 400 // ms
-
 export const NUM_OF_REPORT_IMAGES = 1
 export const MAX_NUM_OF_REPORT_IMAGES = 3
 export const CHATS_INITIAL_NUM_TO_RENDER = 10
@@ -198,7 +209,6 @@ export const SEARCH_INITIAL_NUM_TO_RENDER = 4
 export const RECURSION_LIMIT = 3
 export const RECURSION_LIMIT_SEARCH = 10
 export const MINIMUM_FETCH_INTERVAL = 15 // min
-
 export const CHANNELS_GENERAL_MESSAGES_ID = 'general-notifications'
 export const CHANNELS_PRIVATE_MESSAGES_ID = 'private-messages-notifications'
 export const JIRA_TICKET_URL =

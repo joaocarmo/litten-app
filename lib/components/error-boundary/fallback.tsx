@@ -1,8 +1,8 @@
 import { SafeAreaView, StatusBar, View } from 'react-native'
-import { useTheme } from 'hooks'
-import { UIHeader, UIText } from 'ui-elements'
-import { STRUCTURE_TEMPLATE_SCREEN_PADDING } from 'utils/constants'
-import { translate } from 'utils/i18n'
+import { useTheme } from '@hooks'
+import { UIHeader, UIText } from '@ui-elements'
+import { STRUCTURE_TEMPLATE_SCREEN_PADDING } from '@utils/constants'
+import { translate } from '@utils/i18n'
 
 const Fallback = () => {
   const {

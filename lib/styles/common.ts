@@ -5,9 +5,9 @@ import {
   STRUCTURE_TEMPLATE_SCREEN_HEADER_HEIGHT,
   STRUCTURE_TEMPLATE_SCREEN_PADDING,
   UI_ELEMENT_BORDER_MARGIN,
-} from 'utils/constants'
+} from '@utils/constants'
 
-export const commonStyles: any = (theme) => ({
+export const commonStyles = (theme) => ({
   elevated: {
     shadowColor: theme.colors.backgroundAlt,
     shadowOffset: {
@@ -50,7 +50,7 @@ export const commonStyles: any = (theme) => ({
   },
 })
 
-export const noAuthFormStyles: any = () => ({
+export const noAuthFormStyles = () => ({
   formContainer: {
     flex: 1,
   },
@@ -76,7 +76,7 @@ export const noAuthFormStyles: any = () => ({
   },
 })
 
-export const screenTemplateStyles: any = (theme) => ({
+export const screenTemplateStyles = (theme) => ({
   contentView: {
     flex: 1,
     backgroundColor: theme.colors.secondary,

@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from 'react'
 
 import { getCountryCallingCode } from 'libphonenumber-js/mobile'
-import FormKeyboardAvoidingView from 'templates/form-keyboard-avoiding-view'
-import CountryPhoneSelector from 'components/country-phone-selector'
+import FormKeyboardAvoidingView from '@templates/form-keyboard-avoiding-view'
+import CountryPhoneSelector from '@components/country-phone-selector'
 
 const StepCountryPhone = ({
   formRegister: { country, callingCode, phoneNumber, error, errorMessage },

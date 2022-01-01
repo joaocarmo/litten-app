@@ -1,8 +1,8 @@
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { appSettingsNotificationsSelector } from 'store/selectors'
-import { setNotifications } from 'store/actions/app-settings'
-import type { AppSettingsNotifications } from 'store/types'
+import { appSettingsNotificationsSelector } from '@store/selectors'
+import { setNotifications } from '@store/actions/app-settings'
+import type { AppSettingsNotifications } from '@store/types'
 
 const useAppNotifications = (): [
   AppSettingsNotifications,

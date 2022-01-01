@@ -1,13 +1,14 @@
 import PushNotification from 'react-native-push-notification'
-import NotificationHandler from 'config/notification-service/handler'
-import channels from 'config/notification-service/channels'
+import NotificationHandler from '@config/notification-service/handler'
+import channels from '@config/notification-service/channels'
 import {
   CHANNELS_GENERAL_MESSAGES_ID,
   CHANNELS_PRIVATE_MESSAGES_ID,
-} from 'utils/constants'
+} from '@utils/constants'
 
 class NotificationService {
   #lastId
+
   #doneMessageIds = []
 
   constructor(onNotification: any, onRegister: any) {

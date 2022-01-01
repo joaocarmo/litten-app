@@ -1,12 +1,12 @@
 import { useCallback, useContext } from 'react'
-import { TasksContext } from 'components/tasks'
-import useAppNotifications from 'hooks/use-app-notifications'
-import useNotifications from 'hooks/use-notifications'
-import useUserUid from 'hooks/use-useruid'
-import Chat from 'model/chat'
-import { SCREEN_TAB_NAV_MESSAGES } from 'utils/constants'
-import { debugLog } from 'utils/dev'
-import { translate } from 'utils/i18n'
+import { TasksContext } from '@components/tasks'
+import useAppNotifications from '@hooks/use-app-notifications'
+import useNotifications from '@hooks/use-notifications'
+import useUserUid from '@hooks/use-useruid'
+import Chat from '@model/chat'
+import { SCREEN_TAB_NAV_MESSAGES } from '@utils/constants'
+import { debugLog } from '@utils/dev'
+import { translate } from '@utils/i18n'
 
 const useTasksHandler = (): [
   (taskId: string) => Promise<void>,

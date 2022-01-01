@@ -1,5 +1,5 @@
-import { APP_IS_DEV } from 'utils/env'
-import crashlytics from 'db/crashlytics'
+import { APP_IS_DEV } from '@utils/env'
+import crashlytics from '@db/crashlytics'
 
 /**
  * Logs whatever is passed as an argument (ERROR)
@@ -8,7 +8,7 @@ import crashlytics from 'db/crashlytics'
  * @param {...any} args - List of arguments to be logged
  * @returns {void}
  */
-export const logError = (...args: any[]) => {
+export const logError = (...args: unknown[]) => {
   if (APP_IS_DEV) {
     console.warn(...args)
   } else {
@@ -22,7 +22,7 @@ export const logError = (...args: any[]) => {
  * @param {...any} args - List of arguments to be logged
  * @returns {void}
  */
-export const debugLog = (...args: any[]) => {
+export const debugLog = (...args: unknown[]) => {
   if (APP_IS_DEV) {
     console.log(...args)
   }

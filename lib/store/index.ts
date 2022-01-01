@@ -1,3 +1,5 @@
-import setupStore from 'store/configure-store'
-const { store, persistor } = setupStore() as any
+import setupStore from '@store/configure-store'
+
+const { store, persistor } = setupStore()
+
 export { store, persistor }

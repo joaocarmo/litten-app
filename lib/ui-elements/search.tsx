@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useState } from 'react'
 
 import { Pressable, TextInput, View } from 'react-native'
-import { UIText } from 'ui-elements'
-import { useTheme } from 'hooks'
-import { RECOMMENDED_MINIMUM_TAPPABLE_SIZE } from 'utils/constants'
-import { translate } from 'utils/i18n'
+import { UIText } from '@ui-elements'
+import { useTheme } from '@hooks'
+import { RECOMMENDED_MINIMUM_TAPPABLE_SIZE } from '@utils/constants'
+import { translate } from '@utils/i18n'
 
 const UISearch = ({
   clearable = false,

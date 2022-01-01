@@ -1,19 +1,19 @@
 import { useNavigation } from '@react-navigation/native'
-import { useUserInfo, useTheme } from 'hooks'
+import { useUserInfo, useTheme } from '@hooks'
 import { Pressable, Text, View } from 'react-native'
-import { UIAvatar } from 'ui-elements'
-import ScreenTemplate from 'templates/screen'
-import ProfileMainScreen from 'screens/profile/main'
-import { placeholderUser } from 'images'
-import { Cog as CogIcon } from 'images/components/icons'
-import { shortenName } from 'utils/functions'
+import { UIAvatar } from '@ui-elements'
+import ScreenTemplate from '@templates/screen'
+import ProfileMainScreen from '@screens/profile/main'
+import { placeholderUser } from '@images'
+import { Cog as CogIcon } from '@images/components/icons'
+import { shortenName } from '@utils/functions'
 import {
   PLACEHOLDER_USER_DISPLAY_NAME,
   SCREEN_PROFILE_EDIT,
   SCREEN_USER_PROFILE,
   STRUCTURE_TEMPLATE_SCREEN_HEADER_PROFILE_WIDTH,
   UI_ICON_SIZE_MINI,
-} from 'utils/constants'
+} from '@utils/constants'
 
 const ProfileIndexScreen = () => {
   const [user] = useUserInfo()

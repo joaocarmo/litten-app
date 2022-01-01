@@ -1,8 +1,8 @@
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { userInfoSelector } from 'store/selectors'
-import { clearExtra, setExtra } from 'store/actions/authenticated-user'
-import type { BasicUser } from 'model/types/user'
+import { userInfoSelector } from '@store/selectors'
+import { clearExtra, setExtra } from '@store/actions/authenticated-user'
+import type { BasicUser } from '@model/types/user'
 
 const useUserInfo = (): [
   BasicUser,

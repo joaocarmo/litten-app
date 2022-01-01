@@ -27,7 +27,7 @@ import {
   shortenName,
   string2tags,
   stringifyLocation,
-} from 'utils/functions'
+} from '@utils/functions'
 import {
   LITTEN_FILTER_LOCATION_RADIUS_MAX,
   LITTEN_FILTER_LOCATION_RADIUS_MIN,
@@ -40,13 +40,13 @@ import {
   MEASURE_MI,
   USER_TYPE_INDIVIDUAL,
   USER_TYPE_ORGANIZATION,
-} from 'utils/constants'
+} from '@utils/constants'
 import defaultConfig, {
   BETA_ENABLED,
   MAINTENANCE_MODE,
   VERSION_DISABLED,
-} from 'config/remote-config/defaults'
-import { getRandInt } from 'utils/tests'
+} from '@config/remote-config/defaults'
+import { getRandInt } from '@utils/tests'
 import reverseGeocodingResponse from './responses/reverse-geocoding-response'
 
 jest.mock('utils/env', () => ({
@@ -379,7 +379,7 @@ describe('Test the "stringifyLocation" function', () => {
 })
 
 describe('Test the "degToRad" function', () => {
-  const PI = Math.PI
+  const { PI } = Math
   const conversionTable = [
     [0, 0],
     [30, PI / 6],

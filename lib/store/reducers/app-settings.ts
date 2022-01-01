@@ -1,5 +1,6 @@
+/* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { AppSettings, AppSettingsNotifications } from 'store/types'
+import { AppSettings, AppSettingsNotifications } from '@store/types'
 
 const initialState: AppSettings = {
   autoRedirectIfLoggedIn: true,

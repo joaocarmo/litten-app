@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Dialog from 'react-native-dialog'
-import { useTheme } from 'hooks'
-import { translate } from 'utils/i18n'
+import { useTheme } from '@hooks'
+import { translate } from '@utils/i18n'
 
 const UIPrompt = ({
   cancelLabel,

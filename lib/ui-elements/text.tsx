@@ -1,5 +1,5 @@
 import { StyleSheet, Text } from 'react-native'
-import { useTheme } from 'hooks'
+import { useTheme } from '@hooks'
 
 const UIText = ({
   bold = false,
@@ -11,6 +11,7 @@ const UIText = ({
   ...otherProps
 }) => {
   const { createStyles } = useTheme()
+
   const styles = createStyles((theme, typography) => ({
     uiText: {
       color: theme.colors.text,

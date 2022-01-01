@@ -1,9 +1,9 @@
 import { useCallback } from 'react'
 
 import { FlatList, Pressable, StyleSheet } from 'react-native'
-import { useSearchFiltersSpecies } from 'hooks'
-import { UIIcon, UIText } from 'ui-elements'
-import { littenSpeciesList } from 'utils/litten'
+import { useSearchFiltersSpecies } from '@hooks'
+import { UIIcon, UIText } from '@ui-elements'
+import { littenSpeciesList } from '@utils/litten'
 
 const SearchHeaderResults = () => {
   const [littenSpecies, addSpecies, removeSpecies] = useSearchFiltersSpecies()
