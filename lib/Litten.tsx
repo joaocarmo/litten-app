@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
 import type { FC } from 'react'
-import SplashScreen from 'react-native-splash-screen'
 import Toast from 'react-native-simple-toast'
 import * as RootNavigation from '@config/navigation/root'
 import {
@@ -106,7 +105,7 @@ const Litten = (): FC => {
 
   useEffect(() => {
     if (!isSettingUp) {
-      SplashScreen.hide()
+      // Hide splash screen here
     }
   }, [isSettingUp])
 
