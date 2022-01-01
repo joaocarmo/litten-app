@@ -41,10 +41,7 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
-    'react/jsx-filename-extension': [
-      'error',
-      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
-    ],
+    'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
     'react/jsx-no-literals': ['error', { noStrings: false, ignoreProps: true }],
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-uses-react': 'off',
@@ -56,7 +53,20 @@ module.exports = {
     'import/resolver': {
       'eslint-import-resolver-custom-alias': {
         alias,
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        extensions: [
+          '.js',
+          '.jsx',
+          '.ts',
+          '.tsx',
+          '.android.js',
+          '.android.jsx',
+          '.android.ts',
+          '.android.tsx',
+          '.ios.js',
+          '.ios.jsx',
+          '.ios.ts',
+          '.ios.tsx',
+        ],
       },
     },
   },

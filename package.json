@@ -3,7 +3,10 @@
   "description": "Finding new friends for furry friends",
   "version": "1.1.0",
   "private": true,
-  "main": "lib",
+  "main": "./index.js",
+  "directories": {
+    "lib": "./lib"
+  },
   "keywords": [
     "adoption",
     "android",

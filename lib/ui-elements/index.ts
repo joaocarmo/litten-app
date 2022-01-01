@@ -1,5 +1,3 @@
-/* eslint-disable import/extensions */
-/* eslint-disable import/no-unresolved */
 export { default as UIAvatar } from './avatar'
 export { default as UIBadge } from './badge'
 export { default as UIBalloon } from './balloon'

@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import { useState } from 'react'
 import UISetting from '@ui-elements/setting'
 import UISelectPlatform from '@ui-elements/inner-components/select'
