@@ -1,12 +1,16 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { AppState } from 'react-native'
 
 const useAppState = (callbackFn: (state: string) => void): void => {
+  const eventListenerRef = useRef(null)
+
   useEffect(() => {
-    AppState.addEventListener('change', callbackFn)
+    eventListenerRef.current = AppState.addEventListener('change', callbackFn)
 
     return () => {
-      AppState.removeEventListener('change', callbackFn)
+      if (typeof eventListenerRef?.current?.remove === 'function') {
+        eventListenerRef.current.remove()
+      }
     }
   }, [callbackFn])
 }

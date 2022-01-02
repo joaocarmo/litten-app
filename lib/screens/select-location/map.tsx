@@ -113,6 +113,7 @@ const SelectLocationMapScreen = ({
     setGoneToSettings(true)
     openSetting()
   }, [])
+
   useAppState((appState) => {
     if (goneToSettings && appState === 'active') {
       setGoneToSettings(false)
