@@ -8,7 +8,9 @@ import type {
   AuthenticatedUser,
   BasicAuthUser,
   SearchFilters,
+  ThemePreferences,
 } from '@store/types'
+import { THEME_SYSTEM } from '@utils/constants'
 import type { BasicLitten } from '@model/types/litten'
 import type { BasicUser } from '@model/types/user'
 import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
@@ -17,6 +19,7 @@ const initialState: AuthenticatedUser = {
   basic: null,
   extra: userSchema,
   preferences: {
+    theme: THEME_SYSTEM,
     useMetricUnits: usesMetricSystem() ?? true,
     shareMetrics: true,
   },
@@ -154,6 +157,10 @@ const authenticatedUserSlice = createSlice<AuthenticatedUser>({
     setShareMetrics(state, action: PayloadAction<boolean>) {
       state.preferences.shareMetrics = action.payload
     },
+
+    setTheme(state, action: PayloadAction<ThemePreferences>) {
+      state.preferences.theme = action.payload
+    },
   },
 })
 
@@ -182,6 +189,7 @@ export const {
   setPhoneNumber,
   setPhotoURL,
   setShareMetrics,
+  setTheme,
 } = authenticatedUserSlice.actions
 
 export default authenticatedUserSlice.reducer

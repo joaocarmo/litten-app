@@ -10,4 +10,4 @@ export {
   setPassword,
   setPasswordConfirm,
   setPhoneNumber,
-} from '../reducers/form-register'
+} from '@store/reducers/form-register'

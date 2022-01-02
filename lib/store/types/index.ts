@@ -42,11 +42,13 @@ export type BasicAuthUser = {
     lastSignInTime: number
   }
   readonly photoURL: string
-  readonly providerData: any[]
+  readonly providerData: unknown[]
   readonly providerId: string
   readonly uid: string
 }
+export type ThemePreferences = 'dark' | 'light' | 'system'
 export type UserPreferences = {
+  theme: ThemePreferences
   useMetricUnits: boolean
   shareMetrics: boolean
 }

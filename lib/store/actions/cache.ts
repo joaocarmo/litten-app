@@ -4,4 +4,4 @@ export {
   setFeed,
   setLittens,
   setUsers,
-} from '../reducers/cache'
+} from '@store/reducers/cache'

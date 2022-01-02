@@ -8,4 +8,4 @@ export {
   setProfileLocation,
   setProfilePhoneNumber,
   setProfilePhotoURL,
-} from '../reducers/form-profile'
+} from '@store/reducers/form-profile'

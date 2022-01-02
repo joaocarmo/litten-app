@@ -1,5 +1,7 @@
 import { useCallback, useContext, useMemo } from 'react'
+import { useDispatch } from 'react-redux'
 import { StyleSheet } from 'react-native'
+import { setTheme as setThemeAction } from '@store/actions/authenticated-user'
 import type { ThemeConfig } from '@components/theme'
 import { ThemeContext } from '@components/theme'
 import * as commonStylesConfig from '@styles/common'
@@ -10,16 +12,19 @@ type CreateStylesFn = (
   theme: Theme,
   typography: Typography,
   isDark: boolean,
-) => any
+) => Record<string, unknown>
 
 type UseTheme =
   | ThemeConfig
   | {
-      createStyles: (fn: CreateStylesFn) => typeof StyleSheet.create
+      createStyles: (fn: CreateStylesFn) => ReturnType<typeof StyleSheet.create>
     }
 
 const useTheme = (): UseTheme => {
   const themeConfig: ThemeConfig = useContext<ThemeConfig>(ThemeContext)
+
+  const dispatch = useDispatch()
+
   const createStyles = useCallback(
     (fn: CreateStylesFn) =>
       StyleSheet.create(
@@ -27,6 +32,7 @@ const useTheme = (): UseTheme => {
       ),
     [themeConfig.isDark, themeConfig.theme, themeConfig.typography],
   )
+
   const commonStyles = useMemo(() => {
     const themedCommonStyles = {}
 
@@ -39,7 +45,15 @@ const useTheme = (): UseTheme => {
 
     return themedCommonStyles
   }, [createStyles])
-  return { ...themeConfig, createStyles, commonStyles }
+
+  const setTheme = useCallback(
+    (theme) => {
+      dispatch(setThemeAction(theme))
+    },
+    [dispatch],
+  )
+
+  return { ...themeConfig, commonStyles, createStyles, setTheme }
 }
 
 export default useTheme

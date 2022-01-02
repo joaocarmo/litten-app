@@ -161,6 +161,11 @@ export const USER_TYPE_ALL = 'USER_TYPE_ALL'
 export const USER_TYPE_INDIVIDUAL = 'USER_TYPE_INDIVIDUAL'
 export const USER_TYPE_ORGANIZATION = 'USER_TYPE_ORGANIZATION'
 
+// Themes
+export const THEME_DARK = 'dark'
+export const THEME_LIGHT = 'light'
+export const THEME_SYSTEM = 'system'
+
 // Universal constans
 export const EARTH_CIRCUMFERENCE_EQUATOR = 40075 // km
 export const EARTH_CIRCUMFERENCE_POLES = 40007 // km

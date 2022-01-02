@@ -23,6 +23,9 @@ import {
   MAILTO_URI,
   SMS_URI,
   TEL_URI,
+  THEME_DARK,
+  THEME_LIGHT,
+  THEME_SYSTEM,
   USER_PREFERENCES_CONTACT_CALL,
   USER_PREFERENCES_CONTACT_EMAIL,
   USER_PREFERENCES_CONTACT_INAPP,
@@ -54,6 +57,7 @@ import type {
   ListOfFilters,
   ListOfReportTypes,
   ListOfSpecies,
+  ListOfThemeOptions,
   ListOfTypes,
   ListOfUserTypes,
 } from '@utils/types/litten'
@@ -244,5 +248,23 @@ export const userTypes: ListOfUserTypes[] = [
     key: USER_TYPE_ORGANIZATION,
     label: translate('screens.profile.viewUserTypeOrganization'),
     value: USER_TYPE_ORGANIZATION,
+  },
+]
+
+export const themeOptions: ListOfThemeOptions[] = [
+  {
+    key: THEME_DARK,
+    label: translate('screens.settings.scheme.dark'),
+    value: THEME_DARK,
+  },
+  {
+    key: THEME_LIGHT,
+    label: translate('screens.settings.scheme.light'),
+    value: THEME_LIGHT,
+  },
+  {
+    key: THEME_SYSTEM,
+    label: translate('screens.settings.scheme.system'),
+    value: THEME_SYSTEM,
   },
 ]

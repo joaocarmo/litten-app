@@ -207,7 +207,15 @@
       "miscOptions": "Outros",
       "shareMetrics": "Partilhar Estatísticas",
       "shareMetricsDesc": "As estatísticas são dados anónimos que nos permitem receber relatórios de erros automaticamente e usá-los para melhorar a tua experiência.",
-      "useMetricUnits": "Utilizar Sistema Métrico"
+      "useMetricUnits": "Utilizar Sistema Métrico",
+      "useMetricUnitsDesc": "Podes escolher usar o sistema métrico ou o sistema imperial. Por defeito, a app usa as definições do teu dispositivo.",
+      "theme": "Tema visual",
+      "themeDesc": "Aqui podes alterar o aspecto da app ao escolher um tema visual diferente. Por defeito, o tema respeita as definições do teu dispositivo.",
+      "scheme": {
+        "dark": "Escuro",
+        "light": "Claro",
+        "system": "Sistema"
+      }
     },
     "selectLocation": {
       "title": "Escolher localização"

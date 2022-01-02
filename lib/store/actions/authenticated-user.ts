@@ -23,4 +23,5 @@ export {
   setPhoneNumber,
   setPhotoURL,
   setShareMetrics,
-} from '../reducers/authenticated-user'
+  setTheme,
+} from '@store/reducers/authenticated-user'

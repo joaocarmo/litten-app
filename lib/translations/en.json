@@ -207,7 +207,15 @@
       "miscOptions": "Other",
       "shareMetrics": "Share Litten Analytics",
       "shareMetricsDesc": "Analytics are anonymous and allow us to receive automated error reports which we use to improve the overall user experience.",
-      "useMetricUnits": "Use Metric Units"
+      "useMetricUnits": "Use Metric Units",
+      "useMetricUnitsDesc": "You can choose whether to use the metric or the imperial system. By default, the app will use your device's settings.",
+      "theme": "Theme",
+      "themeDesc": "You can change the look of the app by selecting a different theme. By default, the app will use your device's theme.",
+      "scheme": {
+        "dark": "Dark",
+        "light": "Light",
+        "system": "System"
+      }
     },
     "selectLocation": {
       "title": "Select location"

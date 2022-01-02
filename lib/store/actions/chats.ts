@@ -1,1 +1,1 @@
-export { setChats, setMessages } from '../reducers/chats'
+export { setChats, setMessages } from '@store/reducers/chats'
