@@ -1,4 +1,4 @@
-import { memo, useCallback, useMemo } from 'react'
+import { useCallback, useMemo } from 'react'
 import type { FC, ReactNode } from 'react'
 import { View } from 'react-native'
 import { useTheme } from '@hooks'
@@ -23,11 +23,6 @@ type UIIconProps = {
   size: 'mini' | 'small' | 'medium'
   style: any
 }
-
-const areEqual = (prevProps, nextProps) =>
-  prevProps.selected === nextProps.selected &&
-  prevProps.icon === nextProps.icon &&
-  prevProps.IconComponent === nextProps.IconComponent
 
 const UIIcon: (props: UIIconProps) => FC = ({
   circle = false,
@@ -140,4 +135,4 @@ const UIIcon: (props: UIIconProps) => FC = ({
   )
 }
 
-export default memo<UIIconProps>(UIIcon, areEqual)
+export default UIIcon

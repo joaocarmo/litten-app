@@ -57,7 +57,7 @@
     "generate-data": "./scripts/generate-data",
     "ios:device:production": "react-native run-ios --configuration Release --device $IOS_DEVICE_NAME",
     "ios:device": "react-native run-ios --device $IOS_DEVICE_NAME",
-    "ios": "react-native run-ios",
+    "ios": "react-native run-ios --simulator $IOS_SIMULATOR_NAME",
     "link:android:litten": "adb shell am start -W -a android.intent.action.VIEW -d \"https://litten.app/open/litten/$LITTEN_UID\"",
     "link:android:verification": "adb shell am start -W -a android.intent.action.VIEW -d \"https://litten.app/open/verification?mode=action&oobCode=code\"",
     "link:ios:litten": "xcrun simctl openurl booted https://litten.app/open/litten/$LITTEN_UID",

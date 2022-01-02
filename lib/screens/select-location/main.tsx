@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch } from 'react-redux'
-import SelectLocationMapScreen from './map'
+import SelectLocationMapScreen from '@screens/select-location/map'
 
 const SelectLocationIndexScreen = ({
   route: {

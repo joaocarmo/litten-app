@@ -39,7 +39,9 @@ const uses24HourClock = () => true
 const usesMetricSystem = () => true
 
 const addEventListener = jest.fn()
+
 const removeEventListener = jest.fn()
+
 export {
   findBestAvailableLanguage,
   getLocales,
