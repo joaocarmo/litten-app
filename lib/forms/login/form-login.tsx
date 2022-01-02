@@ -34,7 +34,8 @@ const LoginForm = ({
 
   useEffect(() => {
     clearLoginForm()
-    clearErrorsLoginForm() // eslint-disable-next-line react-hooks/exhaustive-deps
+    clearErrorsLoginForm()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const validateFields = useCallback(() => {

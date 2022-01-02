@@ -71,7 +71,8 @@ const Litten = (): FC => {
         setPastPosts(userInactivePosts)
         setIsSettingUp(false)
       }
-    }, // eslint-disable-next-line react-hooks/exhaustive-deps
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [],
   )
 
@@ -90,7 +91,8 @@ const Litten = (): FC => {
         clearExtra()
         setIsSettingUp(false)
       }
-    }, // eslint-disable-next-line react-hooks/exhaustive-deps
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [isSettingUp],
   )
 
@@ -108,7 +110,8 @@ const Litten = (): FC => {
     // Unsubscribe on unmount
     return () => {
       authStateSubscriber()
-    } // eslint-disable-next-line react-hooks/exhaustive-deps
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {

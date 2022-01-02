@@ -164,7 +164,8 @@ const ActiveMessages = () => {
         } else {
           setIsLoading(false)
         }
-      }, // eslint-disable-next-line react-hooks/exhaustive-deps
+      },
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       [setChats],
     ),
   )
@@ -176,7 +177,8 @@ const ActiveMessages = () => {
 
   useEffect(() => {
     debugLog('[CHATS] useEffect chats:', chats.length)
-    prepareChats() // eslint-disable-next-line react-hooks/exhaustive-deps
+    prepareChats()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chats])
 
   useEffect(() => {

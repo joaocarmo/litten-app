@@ -207,7 +207,8 @@ const RegisterForm = (props): FC => {
       setCountryFromIP()
     } else {
       setCountry(countryCode)
-    } // eslint-disable-next-line react-hooks/exhaustive-deps
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const submitForm = useCallback(async () => {

@@ -16,7 +16,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.2.2'
-        classpath 'com.google.gms:google-services:4.3.3'
+        classpath 'com.google.gms:google-services:4.3.10'
         classpath 'com.google.firebase:firebase-crashlytics-gradle:2.2.0'
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -45,4 +45,24 @@ allprojects {
         maven { url 'https://maven.google.com' }
         maven { url 'https://www.jitpack.io' }
     }
+}
+
+project.ext {
+  set('react-native', [
+    versions: [
+      // Overriding Build/Android SDK Versions
+      android : [
+        minSdk    : 19,
+        targetSdk : 31,
+        compileSdk: 31,
+        buildTools: "30.0.3"
+      ],
+
+      // Overriding Library SDK Versions
+      firebase: [
+        // Override Firebase SDK Version
+        bom           : "29.0.1"
+      ],
+    ],
+  ])
 }
