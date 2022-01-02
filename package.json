@@ -52,6 +52,7 @@
     "clear-cache:all": "watchman watch-del-all && rm -rf /tmp/metro-* && rm -rf node_modules/ && yarn install && yarn start --reset-cache",
     "clear-cache:babel": "rm -rf node_modules/.cache/babel-loader/*",
     "clear-cache:xcode": "rm -rf ios/litten.xcworkspace/xcshareddata/ ios/litten.xcworkspace/xcuserdata/",
+    "clear-cache": "watchman watch-del-all && rm -rf /tmp/metro-* && yarn start --reset-cache",
     "firestore:seed": "firebase emulators:exec './scripts/firestore-seed.js' --import=./firebase --export-on-exit",
     "generate-data": "./scripts/generate-data",
     "ios:device:production": "react-native run-ios --configuration Release --device $IOS_DEVICE_NAME",
@@ -69,6 +70,7 @@
     "postinstall": "patch-package && husky install",
     "postversion": "react-native-version --never-amend",
     "prepare-data": "yarn generate-data && yarn sort-data",
+    "prepare": "husky install",
     "pretty:fix": "prettier --write .",
     "pretty": "prettier --check .",
     "push": "git add . && gitmoji -c && git push",
@@ -85,8 +87,7 @@
     "test:firestore:rules": "firebase emulators:exec './scripts/firestore-rules-test.js'",
     "test": "jest --selectProjects default --forceExit",
     "translations-check": "./scripts/validate-translations",
-    "type-check": "tsc --noEmit",
-    "prepare": "husky install"
+    "type-check": "tsc --noEmit"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
@@ -124,6 +125,7 @@
     "react": "17.0.2",
     "react-native": "0.66.4",
     "react-native-background-fetch": "^4.0.4",
+    "react-native-bootsplash": "^4.0.2",
     "react-native-device-info": "^8.4.8",
     "react-native-dialog": "^9.2.0",
     "react-native-expo-viewport-units": "^0.0.8",

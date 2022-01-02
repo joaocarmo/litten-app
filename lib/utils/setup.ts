@@ -27,6 +27,7 @@ export const openSetting = () => {
     Toast.show(translate('feedback.system.cantOpenSettings'))
   })
 }
+
 export const hasLocationPermissionIOS = async (): Promise<boolean> => {
   const status = await Geolocation.requestAuthorization('whenInUse')
 
@@ -59,6 +60,7 @@ export const hasLocationPermissionIOS = async (): Promise<boolean> => {
 
   return false
 }
+
 export const hasLocationPermission = async (): Promise<boolean> => {
   if (Platform.OS === 'ios') {
     const hasPermission = await hasLocationPermissionIOS()
@@ -87,6 +89,7 @@ export const hasLocationPermission = async (): Promise<boolean> => {
 
   return false
 }
+
 export const getCurrentPosition = (): Promise<{
   coords: Coordinates | EmptyCoordinates
 }> => {
@@ -99,6 +102,7 @@ export const getCurrentPosition = (): Promise<{
     Geolocation.getCurrentPosition(resolve, reject, options)
   })
 }
+
 export const getLocation = async (): Promise<{
   coords: Coordinates | EmptyCoordinates
 }> => {
@@ -132,6 +136,7 @@ export const getLocation = async (): Promise<{
 
   return emptyResponse
 }
+
 export const setupUserInfo = async (
   authUser: BasicAuthUser,
 ): Promise<BasicUser | void> => {
@@ -163,6 +168,7 @@ export const setupUserInfo = async (
     return userInfo
   }
 }
+
 export const setUpUserLocation = async (
   userInfo: BasicUser,
 ): Promise<DBCoordinateObject | void> => {
@@ -192,6 +198,7 @@ export const setUpUserLocation = async (
   debugLog('[SETUP] USED EXISTING USER COORDINATES...', user.coordinates)
   return user.coordinates
 }
+
 export const setUpUserPosts = async (
   user: BasicUser,
 ): Promise<{
@@ -204,7 +211,9 @@ export const setUpUserPosts = async (
     })
     const userActivePosts = await search.userActivePosts()
     const userInactivePosts = await search.userInactivePosts()
+
     debugLog('[SETUP] UPDATED USER POSTS...')
+
     return {
       userActivePosts,
       userInactivePosts,
@@ -216,6 +225,7 @@ export const setUpUserPosts = async (
     userInactivePosts: [],
   }
 }
+
 export const setUpApp = async (
   authUser: BasicAuthUser,
 ): Promise<{
@@ -258,6 +268,7 @@ export const setUpApp = async (
     userInactivePosts,
   }
 }
+
 export const preSetup = async () => {
   await clearPersistence()
   await setupRemoteConfig()
