@@ -9,6 +9,12 @@ jest.mock('react-native-gesture-handler', () => mockRNGestureHandlerModule)
 
 jest.mock('@react-native-community/netinfo', () => mockRNCNetInfo)
 
+// Testing react-native-bootsplash requires mocking the native methods
+jest.mock('react-native-bootsplash', () => ({
+  show: jest.fn().mockResolvedValueOnce(),
+  getVisibilityStatus: jest.fn().mockResolvedValue('hidden'),
+}))
+
 jest.mock('react-native-simple-toast', () => ({
   LONG: jest.fn(),
   SHORT: jest.fn(),
