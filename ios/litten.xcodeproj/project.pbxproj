@@ -12,12 +12,12 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1787FB853A76872C4D38807A /* libPods-litten-littenTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D616F87DFFDD069B1F634E /* libPods-litten-littenTests.a */; };
+		528B7FBB27811A1C00FF832F /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528B7FBA27811A1C00FF832F /* BootSplash.storyboard */; };
 		52AF6BD6257D8E6C001F0EA7 /* LinkingIOS in Resources */ = {isa = PBXBuildFile; fileRef = 52AF6BD5257D8E6C001F0EA7 /* LinkingIOS */; };
 		52AF6BDC257D8F09001F0EA7 /* RCTLinkingManager.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 52AF6BDB257D8F09001F0EA7 /* RCTLinkingManager.h */; };
 		52CB39FF2576663C0086A303 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52CB39FE2576663C0086A303 /* GoogleService-Info.plist */; };
 		52FCE32A25BCEC7300CAD0F7 /* RNBackgroundFetch+AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FCE32925BCEC7300CAD0F7 /* RNBackgroundFetch+AppDelegate.m */; };
 		643009FE24043073DD6A15DE /* libPods-litten.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA875020D8BE788449DD47FC /* libPods-litten.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,12 +42,12 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = litten/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = litten/main.m; sourceTree = "<group>"; };
 		5285F679257FBD6900283F21 /* litten.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = litten.entitlements; path = litten/litten.entitlements; sourceTree = "<group>"; };
+		528B7FBA27811A1C00FF832F /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = litten/BootSplash.storyboard; sourceTree = "<group>"; };
 		52AF6BD5257D8E6C001F0EA7 /* LinkingIOS */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LinkingIOS; path = "../node_modules/react-native/Libraries/LinkingIOS"; sourceTree = "<group>"; };
 		52AF6BDB257D8F09001F0EA7 /* RCTLinkingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTLinkingManager.h; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinkingManager.h"; sourceTree = "<group>"; };
 		52CB39FE2576663C0086A303 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52FCE32925BCEC7300CAD0F7 /* RNBackgroundFetch+AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RNBackgroundFetch+AppDelegate.m"; path = "../node_modules/react-native-background-fetch/ios/RNBackgroundFetch/RNBackgroundFetch+AppDelegate.m"; sourceTree = "<group>"; };
 		79D616F87DFFDD069B1F634E /* libPods-litten-littenTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-litten-littenTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = litten/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F5886BEE4526A9676E4D592 /* Pods-litten-littenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-litten-littenTests.debug.xcconfig"; path = "Target Support Files/Pods-litten-littenTests/Pods-litten-littenTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A18782B501F0467ADBC58A30 /* Pods-litten.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-litten.debug.xcconfig"; path = "Target Support Files/Pods-litten/Pods-litten.debug.xcconfig"; sourceTree = "<group>"; };
 		AE768918601F36E23FC8ACD4 /* Pods-litten.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-litten.release.xcconfig"; path = "Target Support Files/Pods-litten/Pods-litten.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
+				528B7FBA27811A1C00FF832F /* BootSplash.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = litten;
@@ -265,7 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				528B7FBB27811A1C00FF832F /* BootSplash.storyboard in Resources */,
 				52AF6BD6257D8E6C001F0EA7 /* LinkingIOS in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				52CB39FF2576663C0086A303 /* GoogleService-Info.plist in Resources */,
@@ -629,7 +629,6 @@
 					"\"${PODS_ROOT}/Headers/Public/react-native-maps\"",
 					"\"${PODS_ROOT}/Headers/Public/react-native-safe-area-context\"",
 					"\"${PODS_ROOT}/Headers/Public/react-native-slider\"",
-					"\"${PODS_ROOT}/Headers/Public/react-native-splash-screen\"",
 					"\"${PODS_ROOT}/Headers/Public/react-native-webview\"",
 					"$(inherited)",
 					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
@@ -729,7 +728,6 @@
 					"\"${PODS_ROOT}/Headers/Public/react-native-maps\"",
 					"\"${PODS_ROOT}/Headers/Public/react-native-safe-area-context\"",
 					"\"${PODS_ROOT}/Headers/Public/react-native-slider\"",
-					"\"${PODS_ROOT}/Headers/Public/react-native-splash-screen\"",
 					"\"${PODS_ROOT}/Headers/Public/react-native-webview\"",
 					"$(inherited)",
 					"${PODS_ROOT}/Firebase/CoreOnly/Sources",

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import type { FC } from 'react'
-import SplashScreen from 'react-native-splash-screen'
+import BootSplash from 'react-native-bootsplash'
 import Toast from 'react-native-simple-toast'
 import * as RootNavigation from '@config/navigation/root'
 import {
@@ -31,10 +31,12 @@ const Litten = (): FC => {
   const [, , setActivePosts, setPastPosts] = useUserPosts()
   const [, setLocationCoordinates] = useUserCoordinates()
   const [, setActiveChats] = useActiveChats()
+
   // Set an initializing state whilst Firebase connects
   const [isSettingUp, setIsSettingUp] = useState(true)
   const appConfig = useAppConfig()
   const [isAppBlocked, setIsAppblocked] = useState('')
+
   // Use the background service to run periodic tasks
   useTasks()
   // Show a toast when the connection is lost
@@ -53,10 +55,13 @@ const Litten = (): FC => {
 
       if (error) {
         await Auth.signOut()
+
         setActiveChats([])
         clearBasic()
         clearExtra()
+
         RootNavigation.resetToRoot()
+
         Toast.show(translate('feedback.errorMessages.tryAgainLater'))
       } else {
         setBasic(basicAuthUser)
@@ -66,7 +71,8 @@ const Litten = (): FC => {
         setPastPosts(userInactivePosts)
         setIsSettingUp(false)
       }
-    }, // eslint-disable-next-line react-hooks/exhaustive-deps
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [],
   )
 
@@ -75,15 +81,18 @@ const Litten = (): FC => {
     (authUser) => {
       if (authUser) {
         debugLog('[LITTEN] signed in')
+
         setupUser(authUser)
       } else {
         debugLog('[LITTEN] signed out')
+
         setActiveChats([])
         clearBasic()
         clearExtra()
         setIsSettingUp(false)
       }
-    }, // eslint-disable-next-line react-hooks/exhaustive-deps
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [isSettingUp],
   )
 
@@ -101,12 +110,16 @@ const Litten = (): FC => {
     // Unsubscribe on unmount
     return () => {
       authStateSubscriber()
-    } // eslint-disable-next-line react-hooks/exhaustive-deps
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
     if (!isSettingUp) {
-      SplashScreen.hide()
+      // Hide splash screen here
+      BootSplash.hide({ fade: true })
+
+      debugLog('[LITTEN] app is ready, hiding the splash screen')
     }
   }, [isSettingUp])
 

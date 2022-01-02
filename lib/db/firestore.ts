@@ -19,11 +19,11 @@ if (APP_IS_DEV && USE_FIREBASE_EMULATOR && FIRESTORE_EMULATOR_HOST) {
 
   debugLog(`[FIREBASE] USING FIREBASE EMULATOR [FIRESTORE] ${host}:${port}`)
 
-  firestore().useEmulator(host, port)
-
   firestore().settings({
     persistence: FIRESTORE_EMULATOR_PERSISTENCE,
   })
+
+  firestore().useEmulator(host, port)
 
   firestore.setLogLevel('debug')
 }

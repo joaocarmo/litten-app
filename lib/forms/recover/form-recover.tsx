@@ -21,7 +21,8 @@ const FormRecover = ({
     commonStyles: { noAuthFormStyles: styles },
   } = useTheme()
   useEffect(() => {
-    clearErrorsLoginForm() // eslint-disable-next-line react-hooks/exhaustive-deps
+    clearErrorsLoginForm()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const validateFields = useCallback(() => {

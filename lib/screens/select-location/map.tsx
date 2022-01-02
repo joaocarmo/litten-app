@@ -125,7 +125,8 @@ const SelectLocationMapScreen = ({
 
   useEffect(() => {
     setCurrentLocation()
-    checkPermission() // eslint-disable-next-line react-hooks/exhaustive-deps
+    checkPermission()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   if (hasPermission === false) {

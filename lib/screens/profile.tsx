@@ -1,6 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import StackTemplate from '@templates/stack'
-import Profile from '@screens/profile/index'
+import Profile from '@screens/profile/start'
 import About from '@screens/profile/about'
 import Edit from '@screens/profile/edit'
 import Posts from '@screens/profile/posts'

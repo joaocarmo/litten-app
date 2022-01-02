@@ -1,7 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import ScreenTemplate from '@templates/screen'
 import ScreenSimpleHeaderTemplate from '@templates/screen-simple-header'
-import Home from '@screens/home/index'
+import Home from '@screens/home/main'
 import Filter from '@screens/home/filter'
 import FilterSet from '@screens/home/filter/set'
 import { translate } from '@utils/i18n'

@@ -11,6 +11,7 @@ build/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
+xcshareddata
 xcuserdata
 *.xccheckout
 *.moved-aside
@@ -26,6 +27,7 @@ build/
 local.properties
 *.iml
 *.hprof
+*.log
 
 # node.js
 node_modules/
