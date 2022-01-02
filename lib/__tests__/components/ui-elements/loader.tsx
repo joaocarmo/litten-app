@@ -1,22 +1,16 @@
-import TestRenderer from 'react-test-renderer'
-import ThemeProvider from '@components/theme/provider'
+import { render } from '@utils/tests/react-native'
 import { UILoader } from '@ui-elements'
 
 describe('Snapshot test for the "UILoader" component', () => {
   it('renders null when inactive', () => {
-    const element = TestRenderer.create(
-      <ThemeProvider>
-        <UILoader active={false} />
-      </ThemeProvider>,
-    ).toJSON()
-    expect(element).toBeNull()
+    const element = render(<UILoader active={false} />)
+
+    expect(element.toJSON()).toBeNull()
   })
+
   it('renders correctly when active', () => {
-    const element = TestRenderer.create(
-      <ThemeProvider>
-        <UILoader active />
-      </ThemeProvider>,
-    ).toJSON()
-    expect(element).toMatchSnapshot()
+    const element = render(<UILoader active />)
+
+    expect(element.toJSON()).toMatchSnapshot()
   })
 })

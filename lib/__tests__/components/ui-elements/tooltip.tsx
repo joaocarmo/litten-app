@@ -1,14 +1,10 @@
-import TestRenderer from 'react-test-renderer'
-import ThemeProvider from '@components/theme/provider'
+import { render } from '@utils/tests/react-native'
 import { UITooltip } from '@ui-elements'
 
 describe('Snapshot test for the "UITooltip" component', () => {
   it('renders correctly', () => {
-    const element = TestRenderer.create(
-      <ThemeProvider>
-        <UITooltip>Some text here</UITooltip>
-      </ThemeProvider>,
-    ).toJSON()
-    expect(element).toMatchSnapshot()
+    const element = render(<UITooltip>Some text here</UITooltip>)
+
+    expect(element.toJSON()).toMatchSnapshot()
   })
 })

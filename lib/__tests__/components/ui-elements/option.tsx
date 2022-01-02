@@ -1,5 +1,4 @@
-import TestRenderer from 'react-test-renderer'
-import ThemeProvider from '@components/theme/provider'
+import { render } from '@utils/tests/react-native'
 import { UIOption } from '@ui-elements'
 
 describe('Snapshot test for the "UISwitch" component', () => {
@@ -16,29 +15,29 @@ describe('Snapshot test for the "UISwitch" component', () => {
     },
   ]
   const selectedValue = 'one'
+
   it('renders correctly without description', () => {
-    const element = TestRenderer.create(
-      <ThemeProvider>
-        <UIOption
-          items={items}
-          label="Some text here"
-          selectedValue={selectedValue}
-        />
-      </ThemeProvider>,
-    ).toJSON()
-    expect(element).toMatchSnapshot()
+    const element = render(
+      <UIOption
+        items={items}
+        label="Some text here"
+        selectedValue={selectedValue}
+      />,
+    )
+
+    expect(element.toJSON()).toMatchSnapshot()
   })
+
   it('renders correctly with description', () => {
-    const element = TestRenderer.create(
-      <ThemeProvider>
-        <UIOption
-          description="Some more text here"
-          items={items}
-          label="Some text here"
-          selectedValue={selectedValue}
-        />
-      </ThemeProvider>,
-    ).toJSON()
-    expect(element).toMatchSnapshot()
+    const element = render(
+      <UIOption
+        description="Some more text here"
+        items={items}
+        label="Some text here"
+        selectedValue={selectedValue}
+      />,
+    )
+
+    expect(element.toJSON()).toMatchSnapshot()
   })
 })

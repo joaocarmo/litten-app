@@ -1,16 +1,14 @@
-import TestRenderer from 'react-test-renderer'
-import ThemeProvider from '@components/theme/provider'
+import { render } from '@utils/tests/react-native'
 import { UIModal, UIText } from '@ui-elements'
 
 describe('Snapshot test for the "UIModal" component', () => {
   it('renders correctly', () => {
-    const element = TestRenderer.create(
-      <ThemeProvider>
-        <UIModal visible>
-          <UIText>Some text here</UIText>
-        </UIModal>
-      </ThemeProvider>,
-    ).toJSON()
-    expect(element).toMatchSnapshot()
+    const element = render(
+      <UIModal visible>
+        <UIText>Some text here</UIText>
+      </UIModal>,
+    )
+
+    expect(element.toJSON()).toMatchSnapshot()
   })
 })

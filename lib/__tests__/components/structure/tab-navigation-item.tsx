@@ -1,7 +1,6 @@
 import { View, Text } from 'react-native'
-import TestRenderer from 'react-test-renderer'
+import { render } from '@utils/tests/react-native'
 import TabNavigationItem from '@structure/tab-navigation-item'
-import ThemeProvider from '@components/theme/provider'
 
 const CustomComponent = () => <View />
 
@@ -21,12 +20,8 @@ describe('Snapshot test for the "TabNavigationItem" component', () => {
       },
     }
 
-    const element = TestRenderer.create(
-      <ThemeProvider>
-        <TabNavigationItem {...props} />
-      </ThemeProvider>,
-    ).toJSON()
+    const element = render(<TabNavigationItem {...props} />)
 
-    expect(element).toMatchSnapshot()
+    expect(element.toJSON()).toMatchSnapshot()
   })
 })

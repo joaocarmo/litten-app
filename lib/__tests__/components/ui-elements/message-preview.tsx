@@ -1,6 +1,5 @@
 /* eslint-disable react/no-array-index-key */
-import TestRenderer from 'react-test-renderer'
-import ThemeProvider from '@components/theme/provider'
+import { render } from '@utils/tests/react-native'
 import { UIMessage } from '@ui-elements'
 
 const ipsumLorem = `\
@@ -15,10 +14,11 @@ uncover many web sites still in their infancy. Various versions
 have evolved over the years, sometimes by accident, sometimes on
 purpose (injected humour and the like). \
 `
+
 describe('Snapshot test for the "UIMessage" component', () => {
   it('renders correctly', () => {
-    const element = TestRenderer.create(
-      <ThemeProvider>
+    const element = render(
+      <>
         {[...Array(30)].map((val, idx) => (
           <UIMessage.Preview
             key={idx}
@@ -30,8 +30,9 @@ describe('Snapshot test for the "UIMessage" component', () => {
             {ipsumLorem}
           </UIMessage.Preview>
         ))}
-      </ThemeProvider>,
-    ).toJSON()
-    expect(element).toMatchSnapshot()
+      </>,
+    )
+
+    expect(element.toJSON()).toMatchSnapshot()
   })
 })
