@@ -2,4 +2,4 @@ export {
   setAutoRedirectIfLoggedIn,
   setCurrentlyActiveChat,
   setNotifications,
-} from '../reducers/app-settings'
+} from '@store/reducers/app-settings'

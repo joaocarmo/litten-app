@@ -3,4 +3,4 @@ export {
   setAttachments,
   setContent,
   setType,
-} from '../reducers/form-report'
+} from '@store/reducers/form-report'

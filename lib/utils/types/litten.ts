@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react'
+import type { ThemePreferences } from '@store/types'
 
 export type BasicListOfThings = {
   key: string
   label: string
-  [key: string]: unknown
 }
 
 export type BasicListOfAttributes = BasicListOfThings & {
@@ -34,4 +34,8 @@ export type ListOfReportTypes = BasicListOfThings & {
 
 export type ListOfUserTypes = BasicListOfThings & {
   value: string
+}
+
+export type ListOfThemeOptions = BasicListOfThings & {
+  value: ThemePreferences
 }

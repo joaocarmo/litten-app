@@ -10,7 +10,8 @@ import {
   useUserInfo,
 } from '@hooks'
 import User from '@model/user'
-import { UIHeader, UISeparator, UISwitch } from '@ui-elements'
+import { UIHeader, UIOption, UISeparator, UISwitch } from '@ui-elements'
+import { themeOptions } from '@utils/litten'
 import { translate } from '@utils/i18n'
 import {
   USER_PREFERENCES_CONTACT_CALL,
@@ -18,6 +19,29 @@ import {
   USER_PREFERENCES_CONTACT_INAPP,
   USER_PREFERENCES_CONTACT_SMS,
 } from '@utils/constants'
+
+const renderItem = ({ item: { items, label, description, value, setter } }) => {
+  if (items) {
+    return (
+      <UIOption
+        items={items}
+        label={label}
+        description={description}
+        selectedValue={value}
+        onValueChange={setter}
+      />
+    )
+  }
+
+  return (
+    <UISwitch
+      label={label}
+      description={description}
+      value={value}
+      onValueChange={setter}
+    />
+  )
+}
 
 const ProfileSettingsScreen = () => {
   const dispatch = useDispatch()
@@ -31,6 +55,8 @@ const ProfileSettingsScreen = () => {
     commonStyles: {
       commonStyles: { contentContainerStyle },
     },
+    setTheme,
+    userScheme,
   } = useTheme()
 
   const styles = createStyles((theme) => ({
@@ -143,9 +169,17 @@ const ProfileSettingsScreen = () => {
         label: translate('screens.settings.miscOptions'),
         data: [
           {
+            key: 'theme',
+            items: themeOptions,
+            label: translate('screens.settings.theme'),
+            description: translate('screens.settings.themeDesc'),
+            value: userScheme,
+            setter: setTheme,
+          },
+          {
             key: 'useMetricUnits',
             label: translate('screens.settings.useMetricUnits'),
-            description: null,
+            description: translate('screens.settings.useMetricUnitsDesc'),
             value: useMetricUnits,
             setter: setMetricUnits,
           },
@@ -171,17 +205,10 @@ const ProfileSettingsScreen = () => {
       setContactSMS,
       setCrashlyticsEnabled,
       setMetricUnits,
+      setTheme,
       useMetricUnits,
+      userScheme,
     ],
-  )
-
-  const renderItem = ({ item: { label, description, value, setter } }) => (
-    <UISwitch
-      label={label}
-      description={description}
-      value={value}
-      onValueChange={setter}
-    />
   )
 
   const renderSectionHeader = useCallback(

@@ -1,5 +1,4 @@
-import TestRenderer from 'react-test-renderer'
-import ThemeProvider from '@components/theme/provider'
+import { render } from '@utils/tests/react-native'
 import { UIDropdown } from '@ui-elements'
 
 const messageOptions = [
@@ -21,15 +20,14 @@ const messageOptions = [
 ]
 describe('Snapshot test for the "UIDropdown" component', () => {
   it('renders correctly', () => {
-    const element = TestRenderer.create(
-      <ThemeProvider>
-        <UIDropdown
-          options={messageOptions}
-          selectedValue="all"
-          placement="bottom"
-        />
-      </ThemeProvider>,
-    ).toJSON()
-    expect(element).toMatchSnapshot()
+    const element = render(
+      <UIDropdown
+        options={messageOptions}
+        selectedValue="all"
+        placement="bottom"
+      />,
+    )
+
+    expect(element.toJSON()).toMatchSnapshot()
   })
 })

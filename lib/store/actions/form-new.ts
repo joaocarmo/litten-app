@@ -10,4 +10,4 @@ export {
   setType,
   setUseExtraInfo,
   updatePhoto,
-} from '../reducers/form-new'
+} from '@store/reducers/form-new'

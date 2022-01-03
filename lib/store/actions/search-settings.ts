@@ -8,4 +8,4 @@ export {
   setSpecies,
   setType,
   setUserType,
-} from '../reducers/search-settings'
+} from '@store/reducers/search-settings'

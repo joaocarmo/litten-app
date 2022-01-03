@@ -17,14 +17,14 @@ const colors = {
   red: '#e30000',
   white: '#ffffff',
   // Official color palette (dark)
-  darkOrange: '#85653e',
+  darkOrange: '#be9059',
   invertedGray: '#4f4f4f',
   lightBlack: '#181a1b',
   lightDarkOrange: '#e8c6a2',
-  lighterBlack: '#202324',
+  lighterBlack: '#212426',
   lighterDarkOrange: '#f3d7b9',
   lightPurple: '#8663d3',
-  sepia: '#a69e93',
+  sepia: '#bbb6a9',
   // Outside the official color palette
   darkRed: '#9f3a38',
   iosGray: '#d0d4da',

@@ -5,7 +5,7 @@
 <!-- (add an `x` to `[ ]` if applicable and the issue number if available) -->
 
 - [ ] Feature
-- [ ] Fix #ISSUE
+- [ ] Fix
 - [ ] Refactor
 - [ ] DevOps
 - [ ] i18n
@@ -23,6 +23,12 @@
 
 {Please write here a summary of the change}
 
+### UI Changes
+
+<!-- Please replace {Please add here ...} with some useful screenshots -->
+
+{Please add here some screenshots of the UI changes}
+
 ### Check lists
 
 <!-- (add an `x` to `[ ]` if applicable) -->
@@ -30,3 +36,5 @@
 - [ ] Tests added
 - [ ] Tests passed
 - [ ] Coding style respected
+
+<!-- References -->

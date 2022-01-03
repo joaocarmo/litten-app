@@ -4,4 +4,4 @@ export {
   setEmail,
   setErrorAndMessage,
   setPassword,
-} from '../reducers/form-login'
+} from '@store/reducers/form-login'

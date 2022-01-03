@@ -1,5 +1,4 @@
-import TestRenderer from 'react-test-renderer'
-import ThemeProvider from '@components/theme/provider'
+import { render } from '@utils/tests/react-native'
 import { UISelect } from '@ui-elements'
 
 describe('Snapshot test for the "UISelect" component', () => {
@@ -17,15 +16,14 @@ describe('Snapshot test for the "UISelect" component', () => {
       },
     ]
     const selectedValue = 'one'
-    const element = TestRenderer.create(
-      <ThemeProvider>
-        <UISelect
-          placeholder="Some text here"
-          items={items}
-          selectedValue={selectedValue}
-        />
-      </ThemeProvider>,
-    ).toJSON()
-    expect(element).toMatchSnapshot()
+    const element = render(
+      <UISelect
+        placeholder="Some text here"
+        items={items}
+        selectedValue={selectedValue}
+      />,
+    )
+
+    expect(element.toJSON()).toMatchSnapshot()
   })
 })

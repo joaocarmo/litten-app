@@ -196,8 +196,8 @@ const HomeFilterSetScreen = ({ filter }) => {
         items={userTypes}
         label={translate('screens.searches.selectUserType')}
         description={translate('screens.searches.selectUserTypeDesc')}
-        onValueChange={setValue}
         selectedValue={filterValue}
+        onValueChange={setValue}
       />
     ),
     [filterValue, setValue],
