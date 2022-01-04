@@ -8,4 +8,5 @@ const PushNotification = {
   requestPermissions: jest.fn(),
   setApplicationIconBadgeNumber: jest.fn(),
 }
+
 export default PushNotification

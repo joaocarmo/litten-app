@@ -1,4 +1,4 @@
-import { AnyAction, combineReducers } from 'redux'
+import { combineReducers } from 'redux'
 import appSettings from './app-settings'
 import authenticatedUser from './authenticated-user'
 import cache from './cache'
@@ -25,4 +25,4 @@ const reducers = {
 
 export type Reducers = typeof reducers
 
-export default combineReducers<Reducers, AnyAction>(reducers)
+export default combineReducers(reducers)

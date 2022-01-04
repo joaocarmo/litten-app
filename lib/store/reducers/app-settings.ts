@@ -1,8 +1,8 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { AppSettings, AppSettingsNotifications } from '@store/types'
+import { AppSettingsNotifications } from '@store/types'
 
-const initialState: AppSettings = {
+const initialState = {
   autoRedirectIfLoggedIn: true,
   currentlyActiveChat: '',
   notifications: {
@@ -11,7 +11,7 @@ const initialState: AppSettings = {
   },
 }
 
-const appSettingsSlice = createSlice<AppSettings>({
+const appSettingsSlice = createSlice({
   name: 'appSettings',
   initialState,
   reducers: {

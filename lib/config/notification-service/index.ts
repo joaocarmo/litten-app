@@ -35,7 +35,10 @@ class NotificationService {
   localNotification(
     title: string,
     message: string,
-    { channelId = CHANNELS_GENERAL_MESSAGES_ID, ...options } = {},
+    {
+      channelId = CHANNELS_GENERAL_MESSAGES_ID,
+      ...options
+    }: Record<string, unknown> = {},
   ) {
     this.#lastId += 1
     PushNotification.localNotification({
@@ -50,15 +53,7 @@ class NotificationService {
   messageNotification(
     title: string,
     message: string,
-    {
-      dry = false,
-      id = '',
-      userInfo = {},
-    }: {
-      dry: boolean
-      id: string
-      userInfo: Record<string, unknown>
-    } = {},
+    { dry = false, id = '', userInfo = {} } = {},
   ) {
     const messageId = id || `${title}${message}`.trim()
 

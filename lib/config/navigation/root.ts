@@ -1,13 +1,26 @@
 import { createRef } from 'react'
 import { SCREEN_NOAUTH_WELCOME } from '@utils/constants'
+import type {
+  goBack as goBackType,
+  navigate as navigateType,
+  reset as resetType,
+  setParams as setParamsType,
+} from '@react-navigation/routers'
 
 export const isReadyRef = createRef<boolean>()
 
-export const navigationRef = createRef()
+type CommonActions = {
+  goBack: goBackType
+  navigate: navigateType
+  reset: resetType
+  setParams: setParamsType
+}
 
-export const navigate = (name, params) => {
+export const navigationRef = createRef<CommonActions>()
+
+export const navigate = (...args) => {
   if (isReadyRef.current && navigationRef.current) {
-    navigationRef.current.navigate(name, params)
+    navigationRef.current.navigate(...args)
   }
 }
 

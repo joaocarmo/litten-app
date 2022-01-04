@@ -1,8 +1,8 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import type { ErrorAction, PhotoObject, RegisterForm } from '@store/types'
+import type { ErrorAction, PhotoObject } from '@store/types'
 
-const initialState: RegisterForm = {
+const initialState = {
   avatar: null,
   callingCode: '',
   country: '',
@@ -33,7 +33,7 @@ const initialState: RegisterForm = {
   },
 }
 
-const formRegisterSlice = createSlice<RegisterForm>({
+const formRegisterSlice = createSlice({
   name: 'formRegister',
   initialState,
   reducers: {

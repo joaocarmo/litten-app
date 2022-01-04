@@ -1,8 +1,8 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import type { ErrorAction, LoginForm } from '@store/types'
+import type { ErrorAction } from '@store/types'
 
-const initialState: LoginForm = {
+const initialState = {
   email: '',
   password: '',
   error: {
@@ -14,7 +14,7 @@ const initialState: LoginForm = {
     password: '',
   },
 }
-const formLoginSlice = createSlice<LoginForm>({
+const formLoginSlice = createSlice({
   name: 'formLogin',
   initialState,
   reducers: {

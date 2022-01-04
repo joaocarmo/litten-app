@@ -1,31 +1,16 @@
 /* eslint-disable class-methods-use-this */
 import BackgroundFetch from 'react-native-background-fetch'
+import type {
+  BackgroundFetchConfig,
+  BackgroundFetchStatus,
+  HeadlessEvent,
+} from 'react-native-background-fetch'
 import defaultConfig from '@config/background-service/default'
 import { debugLog } from '@utils/dev'
 
-export type HeadlessEvent = {
-  readonly taskId: string
-  readonly timeout: boolean
-}
-export type HeadlessTask = (event: HeadlessEvent) => void
-export type BackgroundFetchStatus = 0 | 1 | 2
-export type NetworkType = 0 | 1 | 2 | 3 | 4
-export type AbstractConfig = {
-  enableHeadless?: boolean
-  forceAlarmManager?: boolean
-  requiredNetworkType?: NetworkType
-  requiresBatteryNotLow?: boolean
-  requiresCharging?: boolean
-  requiresDeviceIdle?: boolean
-  requiresStorageNotLow?: boolean
-  startOnBoot?: boolean
-  stopOnTerminate?: boolean
-}
-export type BackgroundFetchConfig = AbstractConfig & {
-  minimumFetchInterval?: number
-}
-export type FetchHandler = (taskId: string) => void
 export type FailHandler = (status: BackgroundFetchStatus) => void
+export type FetchHandler = (taskId: string) => void
+export type HeadlessTask = (event: HeadlessEvent) => void
 export type TimeoutHandler = (taskId: string) => void
 
 class BackgroundService {
@@ -43,37 +28,37 @@ class BackgroundService {
     this.#customConfig = customConfig
   }
 
-  registerOnBackgroundFetch(handler: FetchHandler): void {
+  registerOnBackgroundFetch(handler: FetchHandler) {
     this.#onBackgroundFetch = handler
   }
 
-  registerOnBackgroundFail(handler: FailHandler): void {
+  registerOnBackgroundFail(handler: FailHandler) {
     this.#onBackgroundFail = handler
   }
 
-  registerOnBackgroundTimeout(handler: TimeoutHandler): void {
+  registerOnBackgroundTimeout(handler: TimeoutHandler) {
     this.#onBackgroundTimeout = handler
   }
 
-  onBackgroundFetch(taskId: string): void {
+  onBackgroundFetch(taskId: string) {
     if (typeof this.#onBackgroundFetch === 'function') {
       this.#onBackgroundFetch(taskId)
     }
   }
 
-  onBackgroundFail(status: BackgroundFetchStatus): void {
+  onBackgroundFail(status: BackgroundFetchStatus) {
     if (typeof this.#onBackgroundFail === 'function') {
       this.#onBackgroundFail(status)
     }
   }
 
-  onBackgroundTimeout(taskId: string): void {
+  onBackgroundTimeout(taskId: string) {
     if (typeof this.#onBackgroundTimeout === 'function') {
       this.#onBackgroundTimeout(taskId)
     }
   }
 
-  async configure(): Promise<void> {
+  async configure() {
     const status = await BackgroundFetch.configure(
       { ...defaultConfig, ...this.#customConfig },
       this.onBackgroundFetch.bind(this),
@@ -85,7 +70,7 @@ class BackgroundService {
     }
   }
 
-  registerHeadlessTask(task: HeadlessTask): void {
+  registerHeadlessTask(task: HeadlessTask) {
     debugLog('[BACKGROUND SERVICE] registerHeadlessTask')
 
     if (!this.#headlessTaskRegistered) {
@@ -94,27 +79,28 @@ class BackgroundService {
     }
   }
 
-  start(): Promise<BackgroundFetchStatus> {
+  start() {
     debugLog('[BACKGROUND SERVICE] start')
     return BackgroundFetch.start()
   }
 
-  finish(taskId?: string): Promise<boolean> {
+  finish(taskId?: string) {
     debugLog('[BACKGROUND SERVICE] stop')
     return BackgroundFetch.finish(taskId)
   }
 
-  stop(taskId?: string): Promise<boolean> {
+  stop(taskId?: string) {
     debugLog('[BACKGROUND SERVICE] stop', taskId)
     return BackgroundFetch.stop(taskId)
   }
 
-  async getStatus(): Promise<string> {
+  async getStatus() {
     let returnStatus = 'undetermined'
-    const backgroundFetchStatus = new Promise((resolve) => {
-      BackgroundFetch.status(resolve)
-    })
-    const status = await backgroundFetchStatus
+    const backgroundFetchStatus = () =>
+      new Promise<string>((resolve) => {
+        BackgroundFetch.status(resolve)
+      })
+    const status = await backgroundFetchStatus()
 
     switch (status) {
       case BackgroundFetch.STATUS_RESTRICTED:

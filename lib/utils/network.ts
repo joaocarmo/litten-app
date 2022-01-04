@@ -22,6 +22,10 @@ import { debugLog, logError } from '@utils/dev'
 import { translate } from '@utils/i18n'
 import config from '../../package.json'
 
+interface IModel<T> {
+  new ({ id }: { id: string }): T
+}
+
 /**
  * Simple function to retrieve a document using a model
  * @async
@@ -29,7 +33,10 @@ import config from '../../package.json'
  * @param {string} id - The resource ID
  * @returns {*}
  */
-export const getFromModel = async <T>(Model: T, id: string): Promise<T> => {
+export const getFromModel = async <T>(
+  Model: IModel<T>,
+  id: string,
+): Promise<T> => {
   const resource = new Model({
     id,
   })

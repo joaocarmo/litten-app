@@ -121,7 +121,7 @@ export const mapCountriesToSelector = (item: {
  * @param {string} code - The error code to get the message for
  * @returns {string}
  */
-export const getErrorMessage = (type: string, code: string): any | string => {
+export const getErrorMessage = (type: string, code: string): string => {
   const defaultValue = 'Unknown error'
 
   if (type && typeof type === 'string' && code && typeof code === 'string') {
@@ -189,8 +189,7 @@ export const isValidLocation = (location: DBLocationObject = {}): boolean => {
   const hasValidCountryCode = (location?.country || '').length === 2
   let numValidKeys = 0
   validKeys.forEach((key) => {
-    const isValidLocationValue =
-      ((location?.[key] as any as string) || '').length > 1
+    const isValidLocationValue = (location?.[key] || '').length > 1
 
     if (isValidLocationValue) {
       numValidKeys += 1
@@ -653,10 +652,10 @@ export const filterData = (
  * @param {number} timeout The execution time limit for the promise
  * @returns {Promise}
  */
-export const execOrTimeout = (
-  asyncFn: Promise<unknown>,
+export const execOrTimeout = <T>(
+  asyncFn: Promise<T>,
   timeout: number,
-): Promise<unknown> => {
+): Promise<T> => {
   const racePromise = new Promise((resolve, reject) => {
     setTimeout(reject, timeout, new Error('Async function timed out'))
   })

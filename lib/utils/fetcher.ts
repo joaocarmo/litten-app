@@ -7,10 +7,8 @@ import { NETWORK_TIMEOUT } from '@utils/constants'
  * @returns {function}
  */
 export const fetchWithTimeout =
-  (
-    ms: number,
-  ): ((url: string, options: Record<string, unknown>) => Promise<unknown>) =>
-  (url: string, { signal, ...options }: Promise<unknown> = {}) => {
+  (ms: number) =>
+  (url, { signal, ...options }) => {
     const abortController = new AbortController()
     const fetchPromise = fetch(url, {
       signal: abortController.signal,
