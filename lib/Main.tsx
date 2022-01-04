@@ -1,5 +1,4 @@
 import { useEffect, useMemo } from 'react'
-import type { FC } from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack'
 import TabNavigation from '@structure/tab-navigation'
@@ -42,7 +41,7 @@ const Tab = createBottomTabNavigator()
 
 const TabBar = (props) => <TabNavigation {...props} />
 
-const TabNavigator = (): FC => {
+const TabNavigator = () => {
   const unreadMessages = useUnreadMessages()
   const notifications = useNotifications()
   const tabScreens = useMemo(
@@ -156,7 +155,7 @@ const stackScreens = [
 ]
 const Stack = createStackNavigator()
 
-const Main = (): FC => (
+const Main = () => (
   <Stack.Navigator
     screenOptions={{
       headerShown: false,

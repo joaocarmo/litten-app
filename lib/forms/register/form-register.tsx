@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState, FC } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Alert, View } from 'react-native'
 import { getLocales } from 'react-native-localize'
 import { useTheme } from '@hooks'
@@ -25,7 +25,7 @@ import { WEB_APP_BASE, WEB_APP_TERMS_AND_CONDITIONS } from '@utils/constants'
 import { logError } from '@utils/dev'
 import { translate } from '@utils/i18n'
 
-const RegisterForm = (props): FC => {
+const RegisterForm = (props) => {
   const [currentStep, setCurrentStep] = useState(1)
   const [doneStatus, setDoneStatus] = useState(null)
   const [errorReport, setErrorReport] = useState('')

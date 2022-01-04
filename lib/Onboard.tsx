@@ -1,4 +1,3 @@
-import type { FC } from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import Welcome from '@components/welcome'
 import Register from '@components/welcome/register'
@@ -36,7 +35,7 @@ const stackScreens = [
 
 const Stack = createStackNavigator()
 
-const Onboard = (): FC => (
+const Onboard = () => (
   <Stack.Navigator
     screenOptions={{
       headerShown: false,

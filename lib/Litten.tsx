@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from 'react'
-import type { FC } from 'react'
 import BootSplash from 'react-native-bootsplash'
 import Toast from 'react-native-simple-toast'
 import * as RootNavigation from '@config/navigation/root'
@@ -24,7 +23,7 @@ import { blockingValidator } from '@utils/functions'
 import { translate } from '@utils/i18n'
 import { debugLog } from '@utils/dev'
 
-const Litten = (): FC => {
+const Litten = () => {
   const [{ autoRedirectIfLoggedIn }] = useAppSettings()
   const [basic, setBasic, clearBasic] = useAuthUser()
   const [, setExtra, clearExtra] = useUserInfo()

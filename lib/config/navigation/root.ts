@@ -1,7 +1,7 @@
 import { createRef } from 'react'
 import { SCREEN_NOAUTH_WELCOME } from '@utils/constants'
 
-export const isReadyRef = createRef()
+export const isReadyRef = createRef<boolean>()
 
 export const navigationRef = createRef()
 
