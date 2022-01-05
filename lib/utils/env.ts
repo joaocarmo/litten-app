@@ -1,4 +1,5 @@
 /* eslint-disable import/no-unresolved */
+import '@types/env'
 import preval from 'preval.macro'
 import {
   FIREBASE_AUTH_EMULATOR_HOST as FIREBASE_AUTH_EMULATOR_HOST_STR,

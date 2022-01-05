@@ -30,9 +30,6 @@ export const fetchWithTimeout =
  * @param {{}} options - Request options
  * @returns {Promise}
  */
-const fetcher: (
-  url: string,
-  options: Record<string, unknown>,
-) => Promise<unknown> = fetchWithTimeout(NETWORK_TIMEOUT)
+const fetcher = fetchWithTimeout(NETWORK_TIMEOUT)
 
 export default fetcher

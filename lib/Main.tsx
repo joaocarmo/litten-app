@@ -155,15 +155,15 @@ const stackScreens = [
 ]
 const Stack = createStackNavigator()
 
+const allStackScreens = stackScreens.map((props) => <Stack.Screen {...props} />)
+
 const Main = () => (
   <Stack.Navigator
     screenOptions={{
       headerShown: false,
     }}
   >
-    {stackScreens.map((props) => (
-      <Stack.Screen {...props} />
-    ))}
+    {allStackScreens}
   </Stack.Navigator>
 )
 

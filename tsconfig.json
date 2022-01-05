@@ -27,6 +27,7 @@
       "@styles/*": ["lib/styles/*"],
       "@templates/*": ["lib/templates/*"],
       "@translations/*": ["lib/translations/*"],
+      "@types/*": ["types/*"],
       "@ui-elements/*": ["lib/ui-elements/*"],
       "@utils/*": ["lib/utils/*"]
     },
@@ -36,6 +37,7 @@
     "target": "esnext",
     "useDefineForClassFields": true
   },
+  "include": ["lib/**/*", "types/**/*"],
   "exclude": [
     ".eslintrc.js",
     "babel.config.js",
