@@ -10,6 +10,7 @@
 - [ ] DevOps
 - [ ] i18n
 - [ ] a11y
+- [ ] Docs
 
 ### Summary
 
