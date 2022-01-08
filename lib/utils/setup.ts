@@ -95,7 +95,6 @@ export const getCurrentPosition = (): Promise<{
 }> => {
   const options = {
     enableHighAccuracy: true,
-    timeout: 15000,
   }
 
   return new Promise((resolve, reject) => {
