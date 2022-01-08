@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/joaocarmo/litten-app/master/lib/images/logo/blue.png" width="264" alt="litten">
+  <img src="https://raw.githubusercontent.com/joaocarmo/litten-app/main/lib/images/logo/blue.png" width="264" alt="litten">
 </p>
 
 # Litten
