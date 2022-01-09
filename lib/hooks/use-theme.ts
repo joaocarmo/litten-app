@@ -14,11 +14,11 @@ type CreateStylesFn = (
   isDark: boolean,
 ) => Record<string, unknown>
 
-type UseTheme =
-  | ThemeConfig
-  | {
-      createStyles: (fn: CreateStylesFn) => ReturnType<typeof StyleSheet.create>
-    }
+type UseTheme = ThemeConfig & {
+  commonStyles: commonStylesConfig.CommonStyles
+  createStyles: (fn: CreateStylesFn) => any
+  setTheme: (theme: string) => void
+}
 
 const useTheme = (): UseTheme => {
   const themeConfig: ThemeConfig = useContext<ThemeConfig>(ThemeContext)
@@ -33,7 +33,7 @@ const useTheme = (): UseTheme => {
     [themeConfig.isDark, themeConfig.theme, themeConfig.typography],
   )
 
-  const commonStyles = useMemo(() => {
+  const commonStyles: commonStylesConfig.CommonStyles = useMemo(() => {
     const themedCommonStyles = {}
 
     for (const key in commonStylesConfig) {
@@ -47,7 +47,7 @@ const useTheme = (): UseTheme => {
   }, [createStyles])
 
   const setTheme = useCallback(
-    (theme) => {
+    (theme: string) => {
       dispatch(setThemeAction(theme))
     },
     [dispatch],

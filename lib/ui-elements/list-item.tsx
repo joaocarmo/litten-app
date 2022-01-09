@@ -1,8 +1,20 @@
 import { useMemo, useState } from 'react'
 import { Pressable } from 'react-native'
+import type { PressableProps } from 'react-native'
 import UIListItemContent from '@ui-elements/inner-components/list-item-content'
+import type { UIListItemContentProps } from '@ui-elements/inner-components/list-item-content'
 
-const UIListItem = ({ children, onLongPress, onPress, ...otherProps }) => {
+export type UIListItemProps = {
+  onLongPress: PressableProps['onLongPress']
+  onPress: PressableProps['onPress']
+} & UIListItemContentProps
+
+const UIListItem = ({
+  children,
+  onLongPress,
+  onPress,
+  ...otherProps
+}: UIListItemProps) => {
   const [isPressed, setIsPressed] = useState(false)
   const isClickable =
     typeof onPress !== 'undefined' || typeof onLongPress !== 'undefined'

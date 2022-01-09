@@ -1,8 +1,9 @@
 import { StyleSheet } from 'react-native'
 import UISelectPicker from '@ui-elements/inner-components/select-picker'
+import type { IOSSelectProps } from '@ui-elements/inner-components/select'
 
-const AndroidSelect = ({ ...otherProps }) => (
-  <UISelectPicker style={styles.androidSelect} {...otherProps} />
+const AndroidSelect = (props: IOSSelectProps) => (
+  <UISelectPicker style={styles.androidSelect} {...props} />
 )
 
 const styles = StyleSheet.create({

@@ -1,6 +1,9 @@
 # node.js
 node_modules
 
+# entrypoint
+index.js
+
 # configs
 .eslintrc.js
 alias.config.js

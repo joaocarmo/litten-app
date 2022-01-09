@@ -12,7 +12,7 @@ const UILoader = ({
 }) => {
   const {
     createStyles,
-    theme: { secondary: secondaryColor },
+    theme: { colors },
   } = useTheme()
 
   const styles = createStyles((theme) => ({
@@ -56,7 +56,7 @@ const UILoader = ({
     <View style={[styles.uiLoader, containerStyle, getTransparencyStyle()]}>
       <ActivityIndicator
         animating={active}
-        color={secondaryColor}
+        color={colors.secondary}
         {...otherProps}
       />
     </View>

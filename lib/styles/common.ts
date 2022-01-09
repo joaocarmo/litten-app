@@ -104,3 +104,9 @@ export const screenTemplateStyles = (theme) => ({
     backgroundColor: theme.colors.neutralLight,
   },
 })
+
+export type CommonStyles = {
+  commonStyles: ReturnType<typeof commonStyles>
+  noAuthFormStyles: ReturnType<typeof noAuthFormStyles>
+  screenTemplateStyles: ReturnType<typeof screenTemplateStyles>
+}

@@ -1,5 +1,4 @@
 import { memo, useMemo } from 'react'
-import type { FC } from 'react'
 import { Text, View } from 'react-native'
 import { useTheme } from '@hooks'
 import dayjs from '@utils/day'
@@ -21,16 +20,14 @@ const areEqual = (prevProps, nextProps) =>
     dayjs(nextProps.lastActivity).fromNow() &&
   prevProps.read === nextProps.read
 
-const UIMessagePreview: (
-  props: UIMessagePreviewProps,
-) => FC<UIMessagePreviewProps> = ({
+const UIMessagePreview = ({
   children,
   from,
   header,
   lastActivity,
   read = true,
   ...otherProps
-}) => {
+}: UIMessagePreviewProps) => {
   const { createStyles } = useTheme()
 
   const styles = createStyles((theme, typography) => ({
@@ -129,4 +126,4 @@ const UIMessagePreview: (
   )
 }
 
-export default memo<UIMessagePreviewProps>(UIMessagePreview, areEqual)
+export default memo(UIMessagePreview, areEqual)

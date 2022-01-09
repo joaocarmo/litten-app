@@ -17,6 +17,7 @@
       "@db/*": ["lib/db/*"],
       "@fixtures/*": ["lib/fixtures/*"],
       "@forms/*": ["lib/forms/*"],
+      "@hooks": ["lib/hooks/index.ts"],
       "@hooks/*": ["lib/hooks/*"],
       "@images/*": ["lib/images/*"],
       "@model/*": ["lib/model/*"],
@@ -28,6 +29,7 @@
       "@templates/*": ["lib/templates/*"],
       "@translations/*": ["lib/translations/*"],
       "@types/*": ["types/*"],
+      "@ui-elements": ["lib/ui-elements/index.ts"],
       "@ui-elements/*": ["lib/ui-elements/*"],
       "@utils/*": ["lib/utils/*"]
     },
