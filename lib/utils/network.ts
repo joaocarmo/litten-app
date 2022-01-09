@@ -12,6 +12,7 @@ import type { DBCoordinateObject } from '@db/schemas/location'
 import type { GeoInformation } from '@utils/types/network'
 import { reportTypes } from '@utils/litten'
 import { createAuthHeader, getFromListByKey } from '@utils/functions'
+import type { ListOfReportTypes } from '@utils/types/litten'
 import fetcher from '@utils/fetcher'
 import {
   JIRA_APPEND_ATTACHMENT,
@@ -24,6 +25,7 @@ import config from '../../package.json'
 
 interface IModel<T> {
   new ({ id }: { id: string }): T
+  get: () => T
 }
 
 /**
@@ -33,8 +35,8 @@ interface IModel<T> {
  * @param {string} id - The resource ID
  * @returns {*}
  */
-export const getFromModel = async <T>(
-  Model: IModel<T>,
+export const getFromModel = async <T extends IModel<T>>(
+  Model: T,
   id: string,
 ): Promise<T> => {
   const resource = new Model({
@@ -81,18 +83,15 @@ export const handleNetworkError = (err: Error): void => {
  */
 export async function getExternalGeoInformation(
   externalIP = '',
-): Promise<GeoInformation> {
+): Promise<GeoInformation | void> {
   const apiUri = `https://freegeoip.live/json/${externalIP}`
-  let jsonData = {}
 
   try {
     const data = await fetcher(apiUri)
-    jsonData = await data.json()
+    return await data.json()
   } catch (e) {
     debugLog(e)
   }
-
-  return jsonData
 }
 
 /**
@@ -149,6 +148,14 @@ export async function getReverseGeoInformation(
   return results
 }
 
+type FeedbackAttachments = {
+  attachments: string[]
+  headers: Record<string, string>
+  numOfAttachments: number
+  response: Record<string, unknown>
+  serviceDeskId: number
+}
+
 /**
  * Submits the user feedback attachments
  * @async
@@ -161,7 +168,7 @@ export const submitUserFeedbackAttachments = async ({
   numOfAttachments,
   response: { issueId },
   serviceDeskId,
-}): Promise<void> => {
+}: FeedbackAttachments): Promise<void> => {
   if (
     !APP_IS_DEV &&
     JIRA_APPEND_ATTACHMENT &&
@@ -171,9 +178,12 @@ export const submitUserFeedbackAttachments = async ({
   ) {
     const uploadUrl = JIRA_UPLOAD_ATTACHMENT.replace(
       '{serviceDeskId}',
-      serviceDeskId,
+      String(serviceDeskId),
     )
-    const appendUrl = JIRA_APPEND_ATTACHMENT.replace('{issueIdOrKey}', issueId)
+    const appendUrl = JIRA_APPEND_ATTACHMENT.replace(
+      '{issueIdOrKey}',
+      String(issueId),
+    )
     const temporaryAttachmentIds = []
 
     const headersUpload = {
@@ -276,11 +286,13 @@ export const submitUserFeedback = async (
   const serviceDeskId = 2
   const cleanAttachments = attachments.filter((attachment) => !!attachment)
   const numOfAttachments = cleanAttachments.length
-  const { emoji = ':warning:', requestTypeId } =
-    getFromListByKey(reportTypes, type) ?? {}
+  const { emoji = ':warning:', requestTypeId = 0 } = (getFromListByKey(
+    reportTypes,
+    type,
+  ) ?? {}) as ListOfReportTypes
   let url = ''
   let postData = null
-  let headers = {
+  let headers: Record<string, string> = {
     'Content-Type': 'application/json',
   }
 

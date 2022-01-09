@@ -1,9 +1,9 @@
 export type GResponse = {
-  address_components: Iterator<{
+  address_components: {
     long_name: string
     short_name: string
     types: string[]
-  }>
+  }[]
 }
 
 export type GLocation = {
