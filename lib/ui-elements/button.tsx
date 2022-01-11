@@ -1,4 +1,5 @@
 import { Pressable, StyleSheet, Text } from 'react-native'
+import type { PressableProps, TextProps } from 'react-native'
 import { useTheme } from '@hooks'
 import UILoader from '@ui-elements/loader'
 import {
@@ -8,20 +9,31 @@ import {
   UI_PRESSED_OPACITY,
 } from '@utils/constants'
 
+export type UIButtonProps = {
+  compact: boolean
+  danger: boolean
+  disabled: boolean
+  fluid: boolean
+  loading: boolean
+  secondary: boolean
+  textStyle: TextProps['style']
+} & PressableProps
+
 const UIButton = ({
   children,
-  compact = false,
-  danger = false,
-  disabled = false,
-  fluid = false,
-  loading = false,
+  compact,
+  danger,
+  disabled,
+  fluid,
+  loading,
   onPress,
-  secondary = false,
+  secondary,
   style,
   textStyle,
   ...otherProps
-}) => {
+}: UIButtonProps) => {
   const { createStyles } = useTheme()
+
   const styles = createStyles((theme, typography) => ({
     uiButton: {
       minHeight: RECOMMENDED_MINIMUM_TAPPABLE_SIZE,
@@ -59,6 +71,7 @@ const UIButton = ({
       opacity: 0.3,
     },
   }))
+
   const primaryStyle = styles.uiButton
   const primaryDisabledStyle = StyleSheet.compose(primaryStyle, styles.disabled)
   const secondaryStyle = StyleSheet.compose(primaryStyle, styles.secondary)
@@ -113,6 +126,15 @@ const UIButton = ({
       )}
     </Pressable>
   )
+}
+
+UIButton.defaultProps = {
+  compact: false,
+  danger: false,
+  disabled: false,
+  fluid: false,
+  loading: false,
+  secondary: false,
 }
 
 export default UIButton

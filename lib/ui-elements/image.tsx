@@ -1,14 +1,25 @@
 import { useMemo } from 'react'
 import FastImage from 'react-native-fast-image'
+import type { FastImageProps } from 'react-native-fast-image'
+
+export type UIImageProps = {
+  height?: number
+  source:
+    | string
+    | {
+        uri: string
+      }
+  width?: number
+} & FastImageProps
 
 const UIImage = ({
   height,
-  resizeMode = 'contain',
+  resizeMode,
   source: propsSource,
   style,
   width,
   ...otherProps
-}) => {
+}: UIImageProps) => {
   const source = useMemo(
     () =>
       typeof propsSource === 'string'
@@ -29,10 +40,7 @@ const UIImage = ({
       return [imageStyle, ...style]
     }
 
-    return {
-      imageStyle,
-      ...style,
-    }
+    return [imageStyle, style]
   }, [height, style, width])
 
   return (
@@ -43,6 +51,13 @@ const UIImage = ({
       {...otherProps}
     />
   )
+}
+
+UIImage.defaultProps = {
+  height: undefined,
+  resizeMode: 'contain',
+  style: undefined,
+  width: undefined,
 }
 
 export default UIImage

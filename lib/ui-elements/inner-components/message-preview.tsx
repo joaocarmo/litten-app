@@ -3,6 +3,7 @@ import { Text, View } from 'react-native'
 import { useTheme } from '@hooks'
 import dayjs from '@utils/day'
 import UIListItem from '@ui-elements/list-item'
+import type { UIListItemProps } from '@ui-elements/list-item'
 
 export type UIMessagePreviewProps = {
   children: string
@@ -10,7 +11,7 @@ export type UIMessagePreviewProps = {
   header: string
   lastActivity: number
   read: boolean
-}
+} & UIListItemProps
 
 const areEqual = (prevProps, nextProps) =>
   prevProps.children === nextProps.children &&
@@ -81,7 +82,7 @@ const UIMessagePreview = ({
   )
 
   return (
-    <UIListItem {...{ ...otherProps, selected: !read }}>
+    <UIListItem selected={!read} {...otherProps}>
       <View style={styles.uiMessagePreviewContentMainContainer}>
         <View style={styles.uiMessagePreviewHeader}>
           <Text

@@ -1,9 +1,19 @@
 import { View } from 'react-native'
+import type { ViewProps } from 'react-native'
 import { useTheme } from '@hooks'
 import UIListItem from '@ui-elements/list-item'
 
-const UIMessageHidden = ({ children, read = false, ...otherProps }) => {
+export type UIMessageHiddenProps = {
+  read?: boolean
+} & ViewProps
+
+const UIMessageHidden = ({
+  children,
+  read,
+  ...otherProps
+}: UIMessageHiddenProps) => {
   const { createStyles } = useTheme()
+
   const styles = createStyles((theme) => ({
     resetUIListItemContainer: {
       paddingTop: 0,
@@ -20,6 +30,7 @@ const UIMessageHidden = ({ children, read = false, ...otherProps }) => {
       alignItems: 'flex-end',
     },
   }))
+
   return (
     <UIListItem
       style={[
@@ -32,6 +43,10 @@ const UIMessageHidden = ({ children, read = false, ...otherProps }) => {
       </View>
     </UIListItem>
   )
+}
+
+UIMessageHidden.defaultProps = {
+  read: false,
 }
 
 export default UIMessageHidden

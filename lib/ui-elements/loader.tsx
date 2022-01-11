@@ -1,15 +1,22 @@
 import { useCallback } from 'react'
 import { ActivityIndicator, View } from 'react-native'
+import type { ActivityIndicatorProps, ViewStyle } from 'react-native'
 import { useTheme } from '@hooks'
 import { opacity2Hex } from '@utils/functions'
 import { DEVICE_WIDTH } from '@utils/constants'
 
+export type UILoaderProps = {
+  active?: boolean
+  transparent?: boolean | number
+  containerStyle?: ViewStyle
+} & ActivityIndicatorProps
+
 const UILoader = ({
-  active = false,
-  transparent = false,
+  active,
+  transparent,
   containerStyle,
   ...otherProps
-}) => {
+}: UILoaderProps) => {
   const {
     createStyles,
     theme: { colors },
@@ -61,6 +68,12 @@ const UILoader = ({
       />
     </View>
   )
+}
+
+UILoader.defaultProps = {
+  active: false,
+  transparent: false,
+  containerStyle: undefined,
 }
 
 export default UILoader

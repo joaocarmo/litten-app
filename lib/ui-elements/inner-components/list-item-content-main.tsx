@@ -1,4 +1,3 @@
-import { memo } from 'react'
 import { Text, View } from 'react-native'
 import type { TextProps } from 'react-native'
 import { useTheme } from '@hooks'
@@ -11,13 +10,6 @@ export type UIListItemContentMainProps = {
   selected?: boolean
   style?: TextProps['style']
 }
-
-const areEqual = (prevProps, nextProps) =>
-  prevProps.caption === nextProps.caption &&
-  prevProps.children === nextProps.children &&
-  prevProps.isPressed === nextProps.isPressed &&
-  prevProps.noFeedback === nextProps.noFeedback &&
-  prevProps.selected === nextProps.selected
 
 const UIListItemContentMain = ({
   caption,
@@ -55,6 +47,11 @@ const UIListItemContentMain = ({
     },
   }))
 
+  if (typeof children !== 'string') {
+    // eslint-disable-next-line react/jsx-no-useless-fragment
+    return <>{children}</>
+  }
+
   if (
     caption &&
     children &&
@@ -89,10 +86,6 @@ const UIListItemContentMain = ({
     )
   }
 
-  if (typeof children !== 'string') {
-    return children
-  }
-
   return (
     <Text
       style={[
@@ -115,4 +108,4 @@ UIListItemContentMain.defaultProps = {
   selected: false,
 }
 
-export default memo(UIListItemContentMain, areEqual)
+export default UIListItemContentMain

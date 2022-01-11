@@ -1,12 +1,18 @@
 import { StyleSheet, View } from 'react-native'
+import type { ViewProps } from 'react-native'
 import { useTheme } from '@hooks'
 
+export type UISeparatorProps = {
+  invisible?: boolean
+  small?: boolean
+} & ViewProps
+
 const UISeparator = ({
-  invisible = false,
-  small = false,
+  invisible,
+  small,
   style,
   ...otherProps
-}) => {
+}: UISeparatorProps) => {
   const { createStyles } = useTheme()
 
   const styles = createStyles((theme) => ({
@@ -23,6 +29,7 @@ const UISeparator = ({
       backgroundColor: theme.colors.neutral,
     },
   }))
+
   const uiSeparatorVisible = StyleSheet.compose(
     styles.uiSeparator,
     styles.uiSeparatorVisible,
@@ -39,6 +46,11 @@ const UISeparator = ({
       ]}
     />
   )
+}
+
+UISeparator.defaultProps = {
+  invisible: false,
+  small: false,
 }
 
 export default UISeparator

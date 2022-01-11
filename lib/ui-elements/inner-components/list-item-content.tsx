@@ -1,5 +1,5 @@
-import { memo, useCallback, useMemo } from 'react'
-import type { ReactNode } from 'react'
+import { isValidElement, useCallback, useMemo } from 'react'
+import type { ComponentType } from 'react'
 import { Pressable, Text, View } from 'react-native'
 import type { PressableProps } from 'react-native'
 import { useTheme } from '@hooks'
@@ -9,27 +9,17 @@ import UIImage from '@ui-elements/image'
 import { Right as RightArrow } from '@images/components/arrows'
 import { UI_ICON_SIZE_MICRO, UI_ICON_SIZE_MINI } from '@utils/constants'
 import listItemContentStyles from '@ui-elements/inner-components/list-item-content.styles'
+import type { IconComponentProps } from '@ui-elements/types'
 
 export type UIListItemContentProps = {
   badgeActive?: boolean
   badgeNum?: number | null
   hasExtra?: boolean
   icon?: string | { uri: string }
-  IconComponent?: ReactNode
+  IconComponent?: ComponentType<IconComponentProps>
   iconPosition?: 'left' | 'right'
-  onPressIcon: PressableProps['onPress']
+  onPressIcon?: PressableProps['onPress']
 } & UIListItemContentMainProps
-
-const areEqual = (prevProps, nextProps) =>
-  prevProps.badgeActive === nextProps.badgeActive &&
-  prevProps.badgeNum === nextProps.badgeNum &&
-  prevProps.caption === nextProps.caption &&
-  prevProps.children === nextProps.children &&
-  prevProps.hasExtra === nextProps.hasExtra &&
-  prevProps.iconPosition === nextProps.iconPosition &&
-  prevProps.isPressed === nextProps.isPressed &&
-  prevProps.noFeedback === nextProps.noFeedback &&
-  prevProps.selected === nextProps.selected
 
 const UIListItemContent = ({
   badgeActive = false,
@@ -72,9 +62,10 @@ const UIListItemContent = ({
           ]}
         />
       )
-    } else if (IconComponent) {
+    } else if (isValidElement(IconComponent)) {
       const leftFillColor = selected ? colors.textAlt : colors.secondary
       const iconSize = leftIcon ? UI_ICON_SIZE_MINI : UI_ICON_SIZE_MICRO
+
       iconElement = (
         <IconComponent
           height={iconSize}
@@ -122,7 +113,10 @@ const UIListItemContent = ({
       <View style={styles.uiListItemContentContainer}>
         {leftIcon && renderIcon()}
         <UIListItemContentMain
-          {...{ ...otherProps, isPressed, noFeedback, selected }}
+          isPressed={isPressed}
+          noFeedback={noFeedback}
+          selected={selected}
+          {...otherProps}
         >
           {children}
         </UIListItemContentMain>
@@ -156,6 +150,7 @@ UIListItemContent.defaultProps = {
   badgeNum: null,
   hasExtra: false,
   iconPosition: 'left',
+  onPressIcon: undefined,
 }
 
-export default memo(UIListItemContent, areEqual)
+export default UIListItemContent

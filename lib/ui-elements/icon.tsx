@@ -1,8 +1,10 @@
-import { useCallback, useMemo } from 'react'
-import type { FC, ReactNode } from 'react'
+import { isValidElement, useCallback, useMemo } from 'react'
+import type { ComponentType } from 'react'
 import { View } from 'react-native'
+import type { ImageStyle, ViewProps } from 'react-native'
 import { useTheme } from '@hooks'
 import UIImage from '@ui-elements/image'
+import type { IconComponentProps } from '@ui-elements/types'
 import {
   UI_ICON_SIZE_MEDIUM,
   UI_ICON_SIZE_SMALL,
@@ -10,30 +12,29 @@ import {
 } from '@utils/constants'
 import iconStyles from '@ui-elements/icon.styles'
 
-type UIIconProps = {
-  circle: boolean
-  icon:
+export type UIIconProps = {
+  circle?: boolean
+  icon?:
     | string
     | {
         uri: string
       }
-  IconComponent: ReactNode
-  iconStyle: any
-  selected: boolean
-  size: 'mini' | 'small' | 'medium'
-  style: any
-}
+  IconComponent?: ComponentType<IconComponentProps>
+  iconStyle?: ImageStyle
+  selected?: boolean
+  size?: 'mini' | 'small' | 'medium'
+} & ViewProps
 
-const UIIcon: (props: UIIconProps) => FC = ({
-  circle = false,
+const UIIcon = ({
+  circle,
   icon,
   IconComponent,
   iconStyle,
-  selected = false,
-  size = 'small',
+  selected,
+  size,
   style,
   ...otherProps
-}) => {
+}: UIIconProps) => {
   const {
     createStyles,
     theme: { colors },
@@ -103,28 +104,35 @@ const UIIcon: (props: UIIconProps) => FC = ({
       iconStyle?.tintColor ?? (selected ? colors.textAlt : colors.secondary),
     [colors.secondary, colors.textAlt, iconStyle?.tintColor, selected],
   )
+  const wrapperStyle: ViewProps['style'] = useMemo(
+    () => [
+      styles.uiIconContainer,
+      sizeStyle.main,
+      circle ? sizeStyle.circle : undefined,
+      elevationStyle,
+      mainSelected,
+      style,
+    ],
+    [
+      circle,
+      elevationStyle,
+      mainSelected,
+      sizeStyle.circle,
+      sizeStyle.main,
+      style,
+      styles.uiIconContainer,
+    ],
+  )
 
   return (
-    <View
-      {...{
-        ...otherProps,
-        style: [
-          styles.uiIconContainer,
-          sizeStyle.main,
-          circle ? sizeStyle.circle : undefined,
-          elevationStyle,
-          mainSelected,
-          style,
-        ],
-      }}
-    >
+    <View style={wrapperStyle} {...otherProps}>
       {icon && !IconComponent && (
         <UIImage
           source={icon}
           style={[styles.uiIcon, iconSelected, iconStyle]}
         />
       )}
-      {!icon && IconComponent && (
+      {!icon && isValidElement(IconComponent) && (
         <IconComponent
           height={sizeStyle.dimensions / 2}
           width={sizeStyle.dimensions / 2}
@@ -133,6 +141,15 @@ const UIIcon: (props: UIIconProps) => FC = ({
       )}
     </View>
   )
+}
+
+UIIcon.defaultProps = {
+  circle: false,
+  icon: undefined,
+  IconComponent: undefined,
+  iconStyle: undefined,
+  selected: false,
+  size: 'small',
 }
 
 export default UIIcon

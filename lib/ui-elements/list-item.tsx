@@ -5,8 +5,8 @@ import UIListItemContent from '@ui-elements/inner-components/list-item-content'
 import type { UIListItemContentProps } from '@ui-elements/inner-components/list-item-content'
 
 export type UIListItemProps = {
-  onLongPress: PressableProps['onLongPress']
-  onPress: PressableProps['onPress']
+  onLongPress?: PressableProps['onLongPress']
+  onPress?: PressableProps['onPress']
 } & UIListItemContentProps
 
 const UIListItem = ({
@@ -42,6 +42,11 @@ const UIListItem = ({
   }
 
   return content
+}
+
+UIListItem.defaultProps = {
+  onLongPress: undefined,
+  onPress: undefined,
 }
 
 export default UIListItem
