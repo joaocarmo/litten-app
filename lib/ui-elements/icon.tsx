@@ -1,4 +1,4 @@
-import { isValidElement, useCallback, useMemo } from 'react'
+import { useCallback, useMemo } from 'react'
 import type { ComponentType } from 'react'
 import { View } from 'react-native'
 import type { ImageStyle, ViewProps } from 'react-native'
@@ -104,35 +104,26 @@ const UIIcon = ({
       iconStyle?.tintColor ?? (selected ? colors.textAlt : colors.secondary),
     [colors.secondary, colors.textAlt, iconStyle?.tintColor, selected],
   )
-  const wrapperStyle: ViewProps['style'] = useMemo(
-    () => [
-      styles.uiIconContainer,
-      sizeStyle.main,
-      circle ? sizeStyle.circle : undefined,
-      elevationStyle,
-      mainSelected,
-      style,
-    ],
-    [
-      circle,
-      elevationStyle,
-      mainSelected,
-      sizeStyle.circle,
-      sizeStyle.main,
-      style,
-      styles.uiIconContainer,
-    ],
-  )
 
   return (
-    <View style={wrapperStyle} {...otherProps}>
+    <View
+      style={[
+        styles.uiIconContainer,
+        sizeStyle.main,
+        circle ? sizeStyle.circle : undefined,
+        elevationStyle,
+        mainSelected,
+        style,
+      ]}
+      {...otherProps}
+    >
       {icon && !IconComponent && (
         <UIImage
           source={icon}
           style={[styles.uiIcon, iconSelected, iconStyle]}
         />
       )}
-      {!icon && isValidElement(IconComponent) && (
+      {!icon && IconComponent && (
         <IconComponent
           height={sizeStyle.dimensions / 2}
           width={sizeStyle.dimensions / 2}

@@ -47,11 +47,6 @@ const UIListItemContentMain = ({
     },
   }))
 
-  if (typeof children !== 'string') {
-    // eslint-disable-next-line react/jsx-no-useless-fragment
-    return <>{children}</>
-  }
-
   if (
     caption &&
     children &&
@@ -84,6 +79,11 @@ const UIListItemContentMain = ({
         </Text>
       </View>
     )
+  }
+
+  if (typeof children !== 'string') {
+    // eslint-disable-next-line react/jsx-no-useless-fragment
+    return <>{children}</>
   }
 
   return (

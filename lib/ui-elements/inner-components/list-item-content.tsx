@@ -1,4 +1,4 @@
-import { isValidElement, useCallback, useMemo } from 'react'
+import { useCallback, useMemo } from 'react'
 import type { ComponentType } from 'react'
 import { Pressable, Text, View } from 'react-native'
 import type { PressableProps } from 'react-native'
@@ -62,7 +62,7 @@ const UIListItemContent = ({
           ]}
         />
       )
-    } else if (isValidElement(IconComponent)) {
+    } else if (IconComponent) {
       const leftFillColor = selected ? colors.textAlt : colors.secondary
       const iconSize = leftIcon ? UI_ICON_SIZE_MINI : UI_ICON_SIZE_MICRO
 

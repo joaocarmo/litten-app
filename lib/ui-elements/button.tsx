@@ -8,6 +8,7 @@ import {
   UI_BUTTON_FIXED_WIDTH,
   UI_PRESSED_OPACITY,
 } from '@utils/constants'
+import { useCallback } from 'react'
 
 export type UIButtonProps = {
   compact: boolean
@@ -83,7 +84,7 @@ const UIButton = ({
   const dangerDisabledStyle = StyleSheet.compose(dangerStyle, styles.disabled)
   const fluidity = fluid ? styles.fluid : styles.notFluid
 
-  const getStyle = () => {
+  const getStyle = useCallback(() => {
     if (danger) {
       if (disabled) {
         return dangerDisabledStyle
@@ -105,7 +106,17 @@ const UIButton = ({
     }
 
     return primaryStyle
-  }
+  }, [
+    danger,
+    dangerDisabledStyle,
+    dangerStyle,
+    disabled,
+    primaryDisabledStyle,
+    primaryStyle,
+    secondary,
+    secondaryDisabledStyle,
+    secondaryStyle,
+  ])
 
   return (
     <Pressable
