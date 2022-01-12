@@ -1,17 +1,26 @@
 import { ScrollView, View } from 'react-native'
+import type { ViewProps } from 'react-native'
 import { usePaddingBottom, useTheme } from '@hooks'
 import ScreenTabularNav from '@templates/screen/tabular-nav'
 import {
   STRUCTURE_TAB_NAV_HEIGHT,
   STRUCTURE_TEMPLATE_SCREEN_BORDER_RADIUS,
 } from '@utils/constants'
+import type { Tab } from '@templates/types'
+
+export type ScrollableScreenTemplateProps = {
+  children: ViewProps['children']
+  header?: ViewProps['children']
+  showsVerticalScrollIndicator?: boolean
+  tabs?: Tab[]
+}
 
 const ScrollableScreenTemplate = ({
   children,
   header,
-  showsVerticalScrollIndicator = false,
+  showsVerticalScrollIndicator,
   tabs,
-}) => {
+}: ScrollableScreenTemplateProps) => {
   const withPaddingBottom = usePaddingBottom()
   const {
     createStyles,
@@ -59,6 +68,11 @@ const ScrollableScreenTemplate = ({
       </View>
     </ScrollView>
   )
+}
+
+ScrollableScreenTemplate.defaultProps = {
+  header: null,
+  showsVerticalScrollIndicator: false,
 }
 
 export default ScrollableScreenTemplate

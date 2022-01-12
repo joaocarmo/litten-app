@@ -1,9 +1,16 @@
 import { Pressable, StyleSheet, View } from 'react-native'
+import type { ViewProps } from 'react-native'
 import { useNavigation, useNavigationState } from '@react-navigation/native'
 import { UIText } from '@ui-elements'
 import { useTheme } from '@hooks'
+import type { Tab } from '@templates/types'
 
-const ScreenTabularNav = ({ tabs = [], style = null }) => {
+export type ScreenTabularNavProps = {
+  tabs?: Tab[]
+  style?: ViewProps['style']
+}
+
+const ScreenTabularNav = ({ tabs, style }: ScreenTabularNavProps) => {
   const navigation = useNavigation()
   const { createStyles } = useTheme()
 
@@ -37,6 +44,8 @@ const ScreenTabularNav = ({ tabs = [], style = null }) => {
         tabs.map(({ key, name, title }, idx) => (
           <Pressable
             key={key}
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore FIXME: https://reactnavigation.org/docs/typescript/
             onPress={() => navigation.navigate(name)}
             style={
               navIdx === idx
@@ -51,6 +60,11 @@ const ScreenTabularNav = ({ tabs = [], style = null }) => {
         ))}
     </View>
   )
+}
+
+ScreenTabularNav.defaultProps = {
+  tabs: [],
+  style: null,
 }
 
 export default ScreenTabularNav

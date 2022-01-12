@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable global-require */
 /* eslint-disable import/no-import-module-exports */
@@ -8,10 +9,7 @@ import devToolsEnhancer from 'remote-redux-devtools'
 import rootReducer from '@store/reducers'
 import { devToolsConfig, persistConfig } from '@config/store'
 
-const setupStore = (): {
-  persistor
-  store
-} => {
+const setupStore = () => {
   const persistedReducer = persistReducer(persistConfig, rootReducer)
   const store = configureStore({
     reducer: persistedReducer,
@@ -23,10 +21,9 @@ const setupStore = (): {
   })
   const persistor = persistStore(store)
 
-  // Enable hot module replacement for reducers
-  // ts-ignore-next-line
+  // @ts-ignore Enable hot module replacement for reducers
   if (APP_IS_DEV && module.hot) {
-    // ts-ignore-next-line
+    // @ts-ignore
     module.hot.accept(() => {
       const nextRootReducer = require('./reducers/index').default
 

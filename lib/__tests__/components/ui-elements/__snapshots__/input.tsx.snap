@@ -2,6 +2,7 @@
 
 exports[`Snapshot test for the "UIInput" component renders correctly 1`] = `
 <TextInput
+  active={true}
   onBlur={[Function]}
   onFocus={[Function]}
   placeholder="Some text here"

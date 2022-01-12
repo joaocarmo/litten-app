@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react'
+import { useCallback } from 'react'
 import { StyleSheet, View } from 'react-native'
 import type { ViewStyle } from 'react-native'
 import UIImage from '@ui-elements/image'
@@ -14,22 +14,6 @@ type UIAvatarProps = {
   resizeMode: string
   size: 'mini' | 'medium' | 'large'
 } & UIImageProps
-
-const areEqual = (prevProps: UIAvatarProps, nextProps: UIAvatarProps) => {
-  const prevSource =
-    typeof prevProps.source === 'string'
-      ? prevProps.source
-      : prevProps.source.uri
-  const nextSource =
-    typeof nextProps.source === 'string'
-      ? nextProps.source
-      : nextProps.source.uri
-  return (
-    prevProps.resizeMode === nextProps.resizeMode &&
-    prevProps.size === nextProps.size &&
-    prevSource === nextSource
-  )
-}
 
 const UIAvatar = ({
   containerStyle,
@@ -85,4 +69,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default memo<UIAvatarProps>(UIAvatar, areEqual)
+export default UIAvatar

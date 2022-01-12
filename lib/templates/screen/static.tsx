@@ -1,8 +1,22 @@
 import { StyleSheet, View } from 'react-native'
+import type { ViewProps } from 'react-native'
 import { useTheme } from '@hooks'
 import ScreenTabularNav from '@templates/screen/tabular-nav'
+import type { Tab } from '@templates/types'
 
-const StaticScreenTemplate = ({ children, header, tabs, style }) => {
+export type StaticScreenTemplateProps = {
+  children: ViewProps['children']
+  header?: ViewProps['children']
+  tabs?: Tab[]
+  style?: ViewProps['style']
+}
+
+const StaticScreenTemplate = ({
+  children,
+  header,
+  tabs,
+  style,
+}: StaticScreenTemplateProps) => {
   const {
     commonStyles: { screenTemplateStyles },
   } = useTheme()
@@ -25,6 +39,12 @@ const StaticScreenTemplate = ({ children, header, tabs, style }) => {
       </View>
     </View>
   )
+}
+
+StaticScreenTemplate.defaultProps = {
+  header: null,
+  style: undefined,
+  tabs: undefined,
 }
 
 const styles = StyleSheet.create({

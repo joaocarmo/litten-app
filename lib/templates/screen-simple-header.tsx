@@ -1,4 +1,5 @@
 import { Platform, Text, View } from 'react-native'
+import type { ViewProps } from 'react-native'
 import { useTheme } from '@hooks'
 import GoBack from '@components/go-back'
 import {
@@ -6,11 +7,17 @@ import {
   STRUCTURE_TEMPLATE_SCREEN_HEADER_WIDTH,
 } from '@utils/constants'
 
+export type ScreenSimpleHeaderTemplateProps = {
+  children: ViewProps['children']
+  style?: ViewProps['style']
+  withGoBack?: boolean
+}
+
 const ScreenSimpleHeaderTemplate = ({
   children,
   style,
-  withGoBack = false,
-}) => {
+  withGoBack,
+}: ScreenSimpleHeaderTemplateProps) => {
   const { createStyles } = useTheme()
 
   const styles = createStyles((theme, typography) => ({
@@ -61,6 +68,11 @@ const ScreenSimpleHeaderTemplate = ({
       {notAndroid && childrenIsText && withGoBack && <GoBack filler />}
     </View>
   )
+}
+
+ScreenSimpleHeaderTemplate.defaultProps = {
+  style: undefined,
+  withGoBack: false,
 }
 
 export default ScreenSimpleHeaderTemplate

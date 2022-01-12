@@ -1,8 +1,13 @@
 import { createStackNavigator } from '@react-navigation/stack'
+import type { Tab } from '@templates/types'
 
 const ScreenTabStack = createStackNavigator()
 
-const ScreenTabular = ({ tabs = [] }) => (
+export type ScreenTabularProps = {
+  tabs?: Tab[]
+}
+
+const ScreenTabular = ({ tabs }: ScreenTabularProps) => (
   <ScreenTabStack.Navigator
     screenOptions={{
       animationEnabled: false,
@@ -19,5 +24,9 @@ const ScreenTabular = ({ tabs = [] }) => (
       ))}
   </ScreenTabStack.Navigator>
 )
+
+ScreenTabular.defaultProps = {
+  tabs: [],
+}
 
 export default ScreenTabular

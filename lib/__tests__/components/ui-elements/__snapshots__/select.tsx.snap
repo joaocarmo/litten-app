@@ -48,13 +48,10 @@ exports[`Snapshot test for the "UISelect" component renders correctly 1`] = `
               "borderBottomColor": "#c4c4c4",
             },
           ],
-          Array [
-            Object {
-              "height": 60,
-              "width": "100%",
-            },
-            Object {},
-          ],
+          Object {
+            "height": 60,
+            "width": "100%",
+          },
         ]
       }
       value="One"

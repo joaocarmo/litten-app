@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler'
-import { useCallback, useEffect, useState, useRef } from 'react'
+import { useCallback, useState, useRef } from 'react'
 import { Provider as StoreProvider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
@@ -16,7 +16,7 @@ import { useNotificationHandler } from '@hooks'
 import Litten from '@root/Litten'
 import ErrorBoundary from '@components/error-boundary'
 import linkingConfig from '@config/navigation/linking'
-import { isReadyRef, navigationRef } from '@config/navigation/root'
+import { navigationRef } from '@config/navigation/root'
 import { preSetup } from '@utils/setup'
 
 const App = () => {
@@ -27,19 +27,9 @@ const App = () => {
 
   const onBeforeLift = useCallback(async () => {
     await preSetup()
+
     setInitializingStore(false)
   }, [])
-
-  const handleOnNavigationReady = useCallback(() => {
-    isReadyRef.current = true
-  }, [])
-
-  useEffect(
-    () => () => {
-      isReadyRef.current = false
-    },
-    [],
-  )
 
   return (
     <StoreProvider store={store}>
@@ -54,7 +44,6 @@ const App = () => {
               <NotificationsProvider value={notifications}>
                 <NavigationContainer
                   linking={linkingConfig}
-                  onReady={handleOnNavigationReady}
                   ref={navigationRef}
                 >
                   <ActionSheetProvider>

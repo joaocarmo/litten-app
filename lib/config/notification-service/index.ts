@@ -12,7 +12,7 @@ class NotificationService {
 
   #doneMessageIds = []
 
-  constructor(onNotification, onRegister) {
+  constructor(onNotification?: any, onRegister?: any) {
     this.#lastId = 0
     this.createDefaultChannels()
     NotificationHandler.attachRegister(onRegister)

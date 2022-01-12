@@ -13,19 +13,18 @@ export type CallbackOrButtons = Parameters<AlertStatic['prompt']>[2]
 export type AlertStaticParameters = Parameters<AlertStatic['prompt']>
 
 export type UIPromptProps = {
+  callbackOrButtons?: AlertStaticParameters[2]
   cancelLabel: string
   confirmLabel: string
+  defaultValue?: AlertStaticParameters[4]
   isDestructive?: boolean
+  keyboardType?: AlertStaticParameters[5]
+  message?: AlertStaticParameters[1]
   onCancel: ((text: string) => void) | AlertButton
   onConfirm: ((text: string) => void) | AlertButton
   open?: boolean
-} & {
   title: AlertStaticParameters[0]
-  message?: AlertStaticParameters[1]
-  callbackOrButtons?: AlertStaticParameters[2]
   type?: AlertStaticParameters[3]
-  defaultValue?: AlertStaticParameters[4]
-  keyboardType?: AlertStaticParameters[5]
 }
 
 declare class PromptComponent extends Component<UIPromptProps> {}

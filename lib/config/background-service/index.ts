@@ -97,7 +97,7 @@ class BackgroundService {
   async getStatus() {
     let returnStatus = 'undetermined'
     const backgroundFetchStatus = () =>
-      new Promise<string>((resolve) => {
+      new Promise<BackgroundFetchStatus>((resolve) => {
         BackgroundFetch.status(resolve)
       })
     const status = await backgroundFetchStatus()
