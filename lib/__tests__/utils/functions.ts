@@ -504,7 +504,7 @@ describe('Test the "getFromListByKey" function', () => {
   })
 
   it('Returns nothing if there is not match', () => {
-    expect(getFromListByKey(list, 'empty')).toBeUndefined()
+    expect(getFromListByKey(list, 'empty')).toBeNull()
   })
 })
 

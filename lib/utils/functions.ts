@@ -151,9 +151,9 @@ export const parseAvatar = (
     email = '',
     size = 512,
   }: {
-    email: string
+    email?: string
     size?: number
-  },
+  } = {},
 ): string => {
   if (typeof avatar === 'string' && avatar.length) {
     return avatar
