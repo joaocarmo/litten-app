@@ -33,11 +33,12 @@ import {
   SCREEN_TAB_NAV_MESSAGES,
   SCREEN_TAB_NAV_NEW,
   SCREEN_TAB_NAV_PROFILE,
-  SCREEN_USER_PROFILE,
+  SCREEN_PROFILE_VIEW,
 } from '@utils/constants'
 import { translate } from '@utils/i18n'
+import type { RootStackParamList, RootTabParamList } from '@utils/types/routes'
 
-const Tab = createBottomTabNavigator()
+const Tab = createBottomTabNavigator<RootTabParamList>()
 
 const TabBar = (props) => <TabNavigation {...props} />
 
@@ -138,8 +139,8 @@ const stackScreens = [
     component: LittenPostScreen,
   },
   {
-    key: SCREEN_USER_PROFILE,
-    name: SCREEN_USER_PROFILE,
+    key: SCREEN_PROFILE_VIEW,
+    name: SCREEN_PROFILE_VIEW,
     component: UserProfileScreen,
   },
   {
@@ -153,7 +154,7 @@ const stackScreens = [
     component: ProfileVerificationScreen,
   },
 ]
-const Stack = createStackNavigator()
+const Stack = createStackNavigator<RootStackParamList>()
 
 const allStackScreens = stackScreens.map((props) => <Stack.Screen {...props} />)
 

@@ -9,6 +9,7 @@ import {
   SCREEN_NOAUTH_LOGIN,
   SCREEN_NOAUTH_RECOVER,
 } from '@utils/constants'
+import type { OnboardStackParamList } from '@utils/types/routes'
 
 const stackScreens = [
   {
@@ -33,7 +34,7 @@ const stackScreens = [
   },
 ]
 
-const Stack = createStackNavigator()
+const Stack = createStackNavigator<OnboardStackParamList>()
 
 const Onboard = () => (
   <Stack.Navigator

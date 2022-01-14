@@ -7,15 +7,21 @@ import { getFromListByKey, shortenName } from '@utils/functions'
 import { contactOptions } from '@utils/litten'
 import { PLACEHOLDER_USER_DISPLAY_NAME } from '@utils/constants'
 import { translate } from '@utils/i18n'
+import type { BasicUser } from '@model/types/user'
 
-const UserProfileDetailsScreen = ({ user = {} }) => {
-  const {
-    contactPreferences = [],
+export type UserProfileDetailsScreenProps = { user: BasicUser }
+
+const UserProfileDetailsScreen = ({
+  user: {
+    contactPreferences,
     displayName,
     isOrganization,
-    metadata: { createdAt: { seconds } = {} } = {},
+    metadata: {
+      createdAt: { seconds },
+    },
     photoURL,
-  } = user
+  },
+}: UserProfileDetailsScreenProps) => {
   const { createStyles } = useTheme()
 
   const styles = createStyles((theme) => ({
@@ -53,10 +59,11 @@ const UserProfileDetailsScreen = ({ user = {} }) => {
     ? translate('screens.profile.viewUserTypeOrganization')
     : translate('screens.profile.viewUserTypeIndividual')
 
-  const getIcon = (key) => getFromListByKey(contactOptions, key)?.icon
+  const getIcon = (key: string) => getFromListByKey(contactOptions, key)?.icon
 
-  const renderContactPreference = (contactPreference) => {
+  const renderContactPreference = (contactPreference: string) => {
     const IconComponent = getIcon(contactPreference)
+
     return (
       <UIIcon
         key={contactPreference}
@@ -98,6 +105,16 @@ const UserProfileDetailsScreen = ({ user = {} }) => {
       </UIHeader>
     </>
   )
+}
+
+UserProfileDetailsScreen.defaultProps = {
+  user: {
+    contactPreferences: [],
+    displayName: '',
+    isOrganization: false,
+    metadata: { createdAt: { seconds: 0 } },
+    photoURL: '',
+  },
 }
 
 export default UserProfileDetailsScreen

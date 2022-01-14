@@ -8,7 +8,7 @@ import {
 } from '@utils/constants'
 
 export type ScreenSimpleHeaderTemplateProps = {
-  children: ViewProps['children']
+  children?: ViewProps['children']
   style?: ViewProps['style']
   withGoBack?: boolean
 }
@@ -71,6 +71,7 @@ const ScreenSimpleHeaderTemplate = ({
 }
 
 ScreenSimpleHeaderTemplate.defaultProps = {
+  children: null,
   style: undefined,
   withGoBack: false,
 }

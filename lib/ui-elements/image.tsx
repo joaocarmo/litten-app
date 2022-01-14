@@ -1,14 +1,11 @@
 import { useMemo } from 'react'
 import FastImage from 'react-native-fast-image'
 import type { FastImageProps } from 'react-native-fast-image'
+import type { ImageSource } from '@ui-elements/types'
 
 export type UIImageProps = {
   height?: number
-  source:
-    | string
-    | {
-        uri: string
-      }
+  source: ImageSource
   width?: number
 } & FastImageProps
 

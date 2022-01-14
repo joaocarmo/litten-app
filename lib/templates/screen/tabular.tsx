@@ -1,7 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import type { Tab } from '@templates/types'
 
-const ScreenTabStack = createStackNavigator()
+const ScreenTabStack = createStackNavigator<Record<string, undefined>>()
 
 export type ScreenTabularProps = {
   tabs?: Tab[]

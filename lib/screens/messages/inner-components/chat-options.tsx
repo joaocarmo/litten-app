@@ -16,7 +16,7 @@ import {
   SCREEN_LITTEN_POST,
   SCREEN_PROFILE_REPORT,
   SCREEN_TAB_NAV_PROFILE,
-  SCREEN_USER_PROFILE,
+  SCREEN_PROFILE_VIEW,
   UI_DROPDOWN_MARGIN,
   UI_EXTRA_OPTION_SIZE,
 } from '@utils/constants'
@@ -89,7 +89,7 @@ const ChatOptions = ({ chat = {}, litten = {}, recipient = {}, user = {} }) => {
         label: translate('screens.messages.options.viewProfile'),
         value: CONVERSATION_VIEW_PROFILE,
         onSelect: () =>
-          navigation.navigate(SCREEN_USER_PROFILE, {
+          navigation.navigate(SCREEN_PROFILE_VIEW, {
             user: recipient,
           }),
         disabled: !recipientExists,

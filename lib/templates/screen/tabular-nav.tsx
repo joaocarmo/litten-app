@@ -44,8 +44,6 @@ const ScreenTabularNav = ({ tabs, style }: ScreenTabularNavProps) => {
         tabs.map(({ key, name, title }, idx) => (
           <Pressable
             key={key}
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore FIXME: https://reactnavigation.org/docs/typescript/
             onPress={() => navigation.navigate(name)}
             style={
               navIdx === idx

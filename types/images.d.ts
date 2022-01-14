@@ -1,3 +1,5 @@
+declare module '@images'
+
 declare module '*.png' {
   const content: any
   export default content

@@ -19,6 +19,7 @@ import {
   SCREEN_PROFILE_SETTINGS,
   SCREEN_PROFILE_WEBVIEW,
 } from '@utils/constants'
+import type { ProfileStackParamList } from '@utils/types/routes'
 
 const EditScreen = () => (
   <StackTemplate header={translate('screens.profile.edit')} scrollable>
@@ -108,7 +109,7 @@ const stackScreens = [
   },
 ]
 
-const ProfileStack = createStackNavigator()
+const ProfileStack = createStackNavigator<ProfileStackParamList>()
 
 const ProfileScreen = () => (
   <ProfileStack.Navigator

@@ -6,3 +6,9 @@ export type IconComponentProps = {
   fill?: ColorValue
   style?: ImageStyle
 }
+
+export type ImageSource =
+  | string
+  | {
+      uri: string
+    }

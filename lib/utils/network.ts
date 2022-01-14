@@ -21,6 +21,7 @@ import {
 } from '@utils/constants'
 import { debugLog, logError } from '@utils/dev'
 import { translate } from '@utils/i18n'
+import type { GResponse } from '@utils/types/functions'
 import config from '../../package.json'
 
 interface IModel<T> {
@@ -121,14 +122,13 @@ export async function getGeoInformation(address: string): Promise<null> {
 /**
  * Finds reverse geolocation information based on the coordinates
  * @async
- * @param {{latitude: string, longitude: string}} coordinates
- * @returns {Array.<{address_components: Array<{long_name: string, short_name: string, types: string[]}>, formatted_address: string, geometry: Object, place_id: string, plus_code: Object, types: string[]}>}
+ * @param {DBCoordinateObject} coordinates
+ * @returns {GResponse}
  */
 export async function getReverseGeoInformation(
   coordinates: DBCoordinateObject,
-): Promise<null> {
+): Promise<GResponse[]> {
   const { latitude, longitude } = coordinates
-  let results = null
 
   if (latitude && longitude) {
     const apiUri = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${GOOGLE_API_KEY}`
@@ -138,14 +138,14 @@ export async function getReverseGeoInformation(
       const jsonData = await data.json()
 
       if (jsonData?.status === 'OK') {
-        results = jsonData?.results
+        return jsonData?.results as GResponse[]
       }
     } catch (err) {
       handleNetworkError(err)
     }
   }
 
-  return results
+  return []
 }
 
 type FeedbackAttachments = {
