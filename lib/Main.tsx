@@ -46,56 +46,59 @@ const TabNavigator = () => {
   const unreadMessages = useUnreadMessages()
   const notifications = useNotifications()
   const tabScreens = useMemo(
-    () => [
-      {
-        key: SCREEN_TAB_NAV_HOME,
-        name: SCREEN_TAB_NAV_HOME,
-        component: HomeScreen,
-        options: {
-          tabBarIcon: Home,
-          tabBarAccessibilityLabel: translate('accessibility.tabBar.home'),
+    () =>
+      [
+        {
+          key: SCREEN_TAB_NAV_HOME,
+          name: SCREEN_TAB_NAV_HOME,
+          component: HomeScreen,
+          options: {
+            tabBarIcon: Home,
+            tabBarAccessibilityLabel: translate('accessibility.tabBar.home'),
+          },
         },
-      },
-      {
-        key: SCREEN_TAB_NAV_FAVOURITES,
-        name: SCREEN_TAB_NAV_FAVOURITES,
-        component: FavouritesScreen,
-        options: {
-          tabBarIcon: Favourites,
-          tabBarAccessibilityLabel: translate(
-            'accessibility.tabBar.favourites',
-          ),
+        {
+          key: SCREEN_TAB_NAV_FAVOURITES,
+          name: SCREEN_TAB_NAV_FAVOURITES,
+          component: FavouritesScreen,
+          options: {
+            tabBarIcon: Favourites,
+            tabBarAccessibilityLabel: translate(
+              'accessibility.tabBar.favourites',
+            ),
+          },
         },
-      },
-      {
-        key: SCREEN_TAB_NAV_NEW,
-        name: SCREEN_TAB_NAV_NEW,
-        component: NewScreen,
-        options: {
-          tabBarIcon: New,
-          tabBarAccessibilityLabel: translate('accessibility.tabBar.newPost'),
+        {
+          key: SCREEN_TAB_NAV_NEW,
+          name: SCREEN_TAB_NAV_NEW,
+          component: NewScreen,
+          options: {
+            tabBarIcon: New,
+            tabBarAccessibilityLabel: translate('accessibility.tabBar.newPost'),
+          },
         },
-      },
-      {
-        key: SCREEN_TAB_NAV_MESSAGES,
-        name: SCREEN_TAB_NAV_MESSAGES,
-        component: MessagesScreen,
-        options: {
-          tabBarIcon: Messages,
-          tabBarBadge: unreadMessages,
-          tabBarAccessibilityLabel: translate('accessibility.tabBar.messages'),
+        {
+          key: SCREEN_TAB_NAV_MESSAGES,
+          name: SCREEN_TAB_NAV_MESSAGES,
+          component: MessagesScreen,
+          options: {
+            tabBarIcon: Messages,
+            tabBarBadge: unreadMessages,
+            tabBarAccessibilityLabel: translate(
+              'accessibility.tabBar.messages',
+            ),
+          },
         },
-      },
-      {
-        key: SCREEN_TAB_NAV_PROFILE,
-        name: SCREEN_TAB_NAV_PROFILE,
-        component: ProfileScreen,
-        options: {
-          tabBarIcon: Profile,
-          tabBarAccessibilityLabel: translate('accessibility.tabBar.profile'),
+        {
+          key: SCREEN_TAB_NAV_PROFILE,
+          name: SCREEN_TAB_NAV_PROFILE,
+          component: ProfileScreen,
+          options: {
+            tabBarIcon: Profile,
+            tabBarAccessibilityLabel: translate('accessibility.tabBar.profile'),
+          },
         },
-      },
-    ],
+      ] as const,
     [unreadMessages],
   )
 
@@ -110,8 +113,8 @@ const TabNavigator = () => {
       }}
       tabBar={TabBar}
     >
-      {tabScreens.map((props) => (
-        <Tab.Screen {...props} />
+      {tabScreens.map(({ key, name, component }) => (
+        <Tab.Screen key={key} name={name} component={component} />
       ))}
     </Tab.Navigator>
   )
@@ -153,10 +156,13 @@ const stackScreens = [
     name: SCREEN_PROFILE_VERIFICATION,
     component: ProfileVerificationScreen,
   },
-]
+] as const
+
 const Stack = createStackNavigator<RootStackParamList>()
 
-const allStackScreens = stackScreens.map((props) => <Stack.Screen {...props} />)
+const allStackScreens = stackScreens.map(({ key, name, component }) => (
+  <Stack.Screen key={key} name={name} component={component} />
+))
 
 const Main = () => (
   <Stack.Navigator

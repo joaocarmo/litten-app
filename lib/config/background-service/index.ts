@@ -122,4 +122,4 @@ class BackgroundService {
 
 export default BackgroundService
 
-export type BackgroundServiceType = typeof BackgroundService
+export type BackgroundServiceType = Omit<typeof BackgroundService, 'prototype'>

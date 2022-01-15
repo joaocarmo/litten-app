@@ -32,7 +32,7 @@ const stackScreens = [
     name: SCREEN_NOAUTH_RECOVER,
     component: Recover,
   },
-]
+] as const
 
 const Stack = createStackNavigator<OnboardStackParamList>()
 
@@ -42,8 +42,8 @@ const Onboard = () => (
       headerShown: false,
     }}
   >
-    {stackScreens.map((props) => (
-      <Stack.Screen {...props} />
+    {stackScreens.map(({ key, name, component }) => (
+      <Stack.Screen key={key} name={name} component={component} />
     ))}
   </Stack.Navigator>
 )
