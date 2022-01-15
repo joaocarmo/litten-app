@@ -1,5 +1,4 @@
 import { useCallback, useMemo } from 'react'
-import type { ComponentType } from 'react'
 import { Pressable, Text, View } from 'react-native'
 import type { PressableProps } from 'react-native'
 import { useTheme } from '@hooks'
@@ -9,14 +8,14 @@ import UIImage from '@ui-elements/image'
 import { Right as RightArrow } from '@images/components/arrows'
 import { UI_ICON_SIZE_MICRO, UI_ICON_SIZE_MINI } from '@utils/constants'
 import listItemContentStyles from '@ui-elements/inner-components/list-item-content.styles'
-import type { IconComponentProps } from '@ui-elements/types'
+import type { IconTypeComponent } from '@ui-elements/types'
 
 export type UIListItemContentProps = {
   badgeActive?: boolean
   badgeNum?: number | null
   hasExtra?: boolean
   icon?: string | { uri: string }
-  IconComponent?: ComponentType<IconComponentProps>
+  IconComponent?: IconTypeComponent
   iconPosition?: 'left' | 'right'
   onPressIcon?: PressableProps['onPress']
 } & UIListItemContentMainProps

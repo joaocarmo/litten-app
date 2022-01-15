@@ -24,7 +24,10 @@ export type OnboardStackParamList = {
 
 export type HomeStackParamList = {
   'home/filter': undefined
-  'home/filter/set': undefined
+  'home/filter/set': {
+    title: string
+    filter: string
+  }
   'home/index': undefined
 }
 
@@ -46,7 +49,7 @@ export type RootTabParamList = {
   'tabnav/favourites': undefined
   'tabnav/favourites/posts': undefined
   'tabnav/favourites/searches': undefined
-  'tabnav/home': undefined
+  'tabnav/home': NavigatorScreenParams<HomeStackParamList>
   'tabnav/messages': undefined
   'tabnav/new': undefined
   'tabnav/profile': NavigatorScreenParams<ProfileStackParamList>
@@ -55,11 +58,14 @@ export type RootTabParamList = {
 export type RootStackParamList = {
   'litten/post': {
     litten: BasicLitten
+    preview?: boolean
     user: BasicUser
   }
-  'litten/post/shared': undefined
+  'litten/post/shared': {
+    littenUid: string
+  }
   'message/private': {
-    chat: BasicChat
+    chat?: BasicChat
     recipient: BasicUser
     litten: BasicLitten
   }
@@ -119,4 +125,35 @@ export type ChatOptionsNavigationProp = CompositeNavigationProp<
 export type ActiveMessagesNavigationProp = CompositeNavigationProp<
   StackNavigationProp<RootStackParamList, 'tabnav/index'>,
   BottomTabNavigationProp<RootTabParamList, 'tabnav/messages'>
+>
+
+export type LittenPostScreenProps = StackScreenProps<
+  RootStackParamList,
+  'litten/post'
+>
+
+export type LittenPostSharedScreenProps = StackScreenProps<
+  RootStackParamList,
+  'litten/post/shared'
+>
+
+export type LittenContactOptionsNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'litten/post'
+>
+
+export type HomeIndexHeaderNavigationProp = CompositeNavigationProp<
+  StackNavigationProp<RootStackParamList, 'tabnav/index'>,
+  CompositeNavigationProp<
+    BottomTabNavigationProp<RootTabParamList, 'tabnav/home'>,
+    StackNavigationProp<HomeStackParamList, 'home/index'>
+  >
+>
+
+export type HomeFilterScreenNavigationProp = CompositeNavigationProp<
+  StackNavigationProp<RootStackParamList, 'tabnav/index'>,
+  CompositeNavigationProp<
+    BottomTabNavigationProp<RootTabParamList, 'tabnav/home'>,
+    StackNavigationProp<HomeStackParamList, 'home/filter'>
+  >
 >

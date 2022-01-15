@@ -5,7 +5,11 @@ import Header from '@components/welcome/header'
 import { STRUCTURE_TEMPLATE_SCREEN_PADDING } from '@utils/constants'
 import { translate } from '@utils/i18n'
 
-const MaintenanceScreen = ({ isAppBlocked }) => {
+type MaintenanceScreenProps = {
+  isAppBlocked: string
+}
+
+const MaintenanceScreen = ({ isAppBlocked }: MaintenanceScreenProps) => {
   const {
     isDark,
     createStyles,

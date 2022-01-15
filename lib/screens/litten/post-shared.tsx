@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useCacheLittens, useCacheUsers } from '@hooks'
 import { UILoader } from '@ui-elements'
@@ -6,12 +6,13 @@ import PostScreen from '@screens/litten/post'
 import Litten from '@model/litten'
 import User from '@model/user'
 import { debugLog } from '@utils/dev'
+import type { LittenPostSharedScreenProps } from '@utils/types/routes'
 
 const LittenPostSharedScreen = ({
   route: {
     params: { littenUid: littenUidProp },
   },
-}) => {
+}: LittenPostSharedScreenProps) => {
   const [littenUid, setLittenUid] = useState(littenUidProp)
   const [getLitten] = useCacheLittens()
   const [getUser] = useCacheUsers()
@@ -52,20 +53,23 @@ const LittenPostSharedScreen = ({
     setLittenUid(littenUidProp)
   }, [littenUidProp])
 
+  const route = useMemo(
+    () => ({
+      params: {
+        litten,
+        user,
+      },
+    }),
+    [litten, user],
+  )
+
   if (isLoading) {
     return <UILoader active={isLoading} size="large" />
   }
 
-  return (
-    <PostScreen
-      route={{
-        params: {
-          litten,
-          user,
-        },
-      }}
-    />
-  )
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore FIXEME
+  return <PostScreen route={route} />
 }
 
 export default LittenPostSharedScreen

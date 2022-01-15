@@ -1,8 +1,15 @@
 import { StyleSheet, View } from 'react-native'
 import { useTheme } from '@hooks'
 import bulletStyles from '@components/carousel/bullet.styles'
+import type { ViewProps } from 'react-native'
 
-const Bullet = ({ active = false, contrast = false, style }) => {
+export type BulletProps = {
+  active?: boolean
+  contrast?: boolean
+  style: ViewProps['style']
+}
+
+const Bullet = ({ active, contrast, style }: BulletProps) => {
   const { createStyles } = useTheme()
 
   const styles = createStyles(bulletStyles)
@@ -16,6 +23,12 @@ const Bullet = ({ active = false, contrast = false, style }) => {
       ]}
     />
   )
+}
+
+Bullet.defaultProps = {
+  active: false,
+  contrast: false,
+  style: undefined,
 }
 
 export default Bullet

@@ -86,6 +86,7 @@ const ScreenTemplate = ({
 }
 
 ScreenTemplate.defaultProps = {
+  children: null,
   header: null,
   scrollable: false,
   tabs: null,

@@ -1,10 +1,9 @@
 import { useCallback, useMemo } from 'react'
-import type { ComponentType } from 'react'
 import { View } from 'react-native'
 import type { ImageStyle, ViewProps } from 'react-native'
 import { useTheme } from '@hooks'
 import UIImage from '@ui-elements/image'
-import type { IconComponentProps } from '@ui-elements/types'
+import type { IconTypeComponent } from '@ui-elements/types'
 import {
   UI_ICON_SIZE_MEDIUM,
   UI_ICON_SIZE_SMALL,
@@ -19,7 +18,7 @@ export type UIIconProps = {
     | {
         uri: string
       }
-  IconComponent?: ComponentType<IconComponentProps>
+  IconComponent?: IconTypeComponent
   iconStyle?: ImageStyle
   selected?: boolean
   size?: 'mini' | 'small' | 'medium'

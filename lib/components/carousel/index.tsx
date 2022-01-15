@@ -1,17 +1,34 @@
 import { useCallback, useEffect, useState } from 'react'
 import { ScrollView, StyleSheet, View } from 'react-native'
+import type { ScrollViewProps, ViewProps } from 'react-native'
 import Bullets from '@components/carousel/bullets'
+import type { BulletProps } from '@components/carousel/bullet'
+
+type CarouselItem = {
+  key: string | number
+  item: ViewProps['children']
+}
+
+export type CarouselProps = {
+  bounces: ScrollViewProps['bounces']
+  bulletContainerStyle: ViewProps['style']
+  bulletContrast: BulletProps['contrast']
+  bulletStyle: BulletProps['style']
+  fill: boolean
+  items: CarouselItem[]
+  placeholder: ViewProps['children']
+} & ViewProps
 
 const Carousel = ({
   bounces,
   bulletContainerStyle,
-  bulletContrast = false,
+  bulletContrast,
   bulletStyle,
-  fill = false,
-  items = [],
+  fill,
+  items,
   placeholder,
   ...otherProps
-}) => {
+}: CarouselProps) => {
   const [activeInterval, setActiveInterval] = useState(1)
   const [intervals, setIntervals] = useState(1)
   const [width, setWidth] = useState(0)
@@ -82,6 +99,13 @@ const Carousel = ({
       )}
     </View>
   )
+}
+
+Carousel.defaultProps = {
+  bulletContrast: false,
+  bulletStyle: undefined,
+  fill: false,
+  items: [],
 }
 
 const styles = StyleSheet.create({

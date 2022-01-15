@@ -1,4 +1,3 @@
-import type { FC } from 'react'
 import { Platform, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useTheme } from '@hooks'
@@ -9,11 +8,17 @@ import { opacity2Hex } from '@utils/functions'
 import { STRUCTURE_TEMPLATE_SCREEN_HEADER_MARGIN } from '@utils/constants'
 import type { BasicLitten } from '@model/types/litten'
 
-const LittenHeaderNavBar: (props: {
+export type LittenHeaderNavBarProps = {
   litten: BasicLitten
-  opacity: number
-  preview: boolean
-}) => FC = ({ litten, opacity = 0, preview = false }) => {
+  opacity?: number
+  preview?: boolean
+}
+
+const LittenHeaderNavBar = ({
+  litten,
+  opacity,
+  preview,
+}: LittenHeaderNavBarProps) => {
   const { top } = useSafeAreaInsets()
   const {
     createStyles,
@@ -69,6 +74,11 @@ const LittenHeaderNavBar: (props: {
       <Share litten={litten} filler={preview || !litten.active} />
     </View>
   )
+}
+
+LittenHeaderNavBar.defaultProps = {
+  opacity: 0,
+  preview: false,
 }
 
 export default LittenHeaderNavBar

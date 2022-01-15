@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useMemo, useState, useRef } from 'react'
-import type { FC } from 'react'
 import { useFavourite, usePaddingBottom, useUserUid, useTheme } from '@hooks'
 import { Alert, Pressable, ScrollView, View } from 'react-native'
 import Carousel from '@components/carousel'
@@ -38,26 +37,16 @@ import {
 import { littenSpeciesList, littenTypes } from '@utils/litten'
 import { translate } from '@utils/i18n'
 import postStyles from '@screens/litten/post.styles'
+import type { LittenPostScreenProps } from '@utils/types/routes'
+import type { IconTypeComponent } from '@ui-elements/types'
 import type { BasicLitten } from '@model/types/litten'
 import type { BasicUser } from '@model/types/user'
 
-type LittenPostScreenProps = {
+const LittenPostScreen = ({
   route: {
-    params: {
-      litten: BasicLitten
-      preview?: boolean
-      user: BasicUser
-    }
-  }
-}
-
-const LittenPostScreen: (
-  props: LittenPostScreenProps,
-) => FC<LittenPostScreenProps> = ({
-  route: {
-    params: { litten: littenProp, preview = false, user: userProp },
+    params: { litten: littenProp, preview, user: userProp },
   },
-}) => {
+}: LittenPostScreenProps) => {
   const [navBarOpacity, setNavBarOpacity] = useState(0)
   const [navBarInitialPosition, setNavBarInitialPosition] = useState(0)
   const [modalIsVisible, setModalIsVisible] = useState(false)
@@ -152,12 +141,12 @@ const LittenPostScreen: (
     }
   }, [preview])
 
-  const SpeciesIconComponent = species?.icon
+  const SpeciesIconComponent = species?.icon as IconTypeComponent
 
   return (
     <View style={styles.littenPostContainer}>
       <LittenHeaderNavBar
-        litten={litten}
+        litten={litten as BasicLitten}
         opacity={navBarOpacity}
         preview={preview}
       />
@@ -254,7 +243,8 @@ const LittenPostScreen: (
           <View style={styles.littenPostFooterUserInfo}>
             <View style={styles.littenPostFooterUserName}>
               <UIText numberOfLines={1} small bold noPadding>
-                {shortenName(user.displayName) || PLACEHOLDER_USER_DISPLAY_NAME}
+                {shortenName(user.displayName as string) ||
+                  PLACEHOLDER_USER_DISPLAY_NAME}
               </UIText>
               {user.isOrganization && (
                 <OrganizationIcon
@@ -265,7 +255,9 @@ const LittenPostScreen: (
                 />
               )}
             </View>
-            <UIText noPadding>{dayjs(litten.createdAt).fromNow()}</UIText>
+            <UIText noPadding>
+              {dayjs(litten.createdAt as number).fromNow()}
+            </UIText>
           </View>
         </View>
         {typeLabel && (
@@ -275,14 +267,20 @@ const LittenPostScreen: (
         )}
       </View>
       <LittenContactOptions
-        litten={litten}
-        user={user}
+        litten={litten as BasicLitten}
+        user={user as BasicUser}
         authenticatedUserUid={authenticatedUserUid}
         visible={modalIsVisible}
         onClickOutside={dismissModal}
       />
     </View>
   )
+}
+
+LittenPostScreen.defaultProps = {
+  route: {
+    params: { litten: {}, preview: false, user: {} },
+  },
 }
 
 export default LittenPostScreen
