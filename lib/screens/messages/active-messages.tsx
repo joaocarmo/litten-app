@@ -38,6 +38,7 @@ import {
   UI_HIDDEN_OPTION_WIDTH,
 } from '@utils/constants'
 import { translate } from '@utils/i18n'
+import type { ActiveMessagesNavigationProp } from '@utils/types/routes'
 
 const ActiveMessages = () => {
   const [chats, setChats] = useActiveChats()
@@ -51,7 +52,7 @@ const ActiveMessages = () => {
   const [getUser] = useCacheUsers()
   const userUid = useUserUid()
   const [currentlyActiveChat] = useCurrentlyActiveChat()
-  const navigation = useNavigation()
+  const navigation = useNavigation<ActiveMessagesNavigationProp>()
   const screenIsFocused = useIsFocused()
   const notifications = useNotifications()
   const [, setAppNotifications] = useAppNotifications()

@@ -5,18 +5,17 @@ import { useSearchQuery, useTheme } from '@hooks'
 import { openURL } from '@utils/ui'
 import {
   MAILTO_URI,
+  SCREEN_TAB_NAV_INDEX,
   SCREEN_TAB_NAV_HOME,
   SMS_URI,
   TEL_URI,
 } from '@utils/constants'
 import { translate } from '@utils/i18n'
+import type { UseParsePatternsNavigationProp } from '@utils/types/routes'
 
-type LinkStyle = unknown
-type ParseShape = unknown
-
-const useParsePatterns = (): ((linkStyle: LinkStyle) => Array<ParseShape>) => {
+const useParsePatterns = () => {
   const [, setQuery] = useSearchQuery()
-  const navigation = useNavigation()
+  const navigation = useNavigation<UseParsePatternsNavigationProp>()
   const { showActionSheetWithOptions } = useActionSheet()
   const { createStyles } = useTheme()
 
@@ -68,7 +67,7 @@ const useParsePatterns = (): ((linkStyle: LinkStyle) => Array<ParseShape>) => {
   const handleHashtagPress = useCallback(
     (hastag) => {
       setQuery(hastag)
-      navigation.navigate(SCREEN_TAB_NAV_HOME, {
+      navigation.navigate(SCREEN_TAB_NAV_INDEX, {
         screen: SCREEN_TAB_NAV_HOME,
         initial: false,
       })
@@ -77,7 +76,7 @@ const useParsePatterns = (): ((linkStyle: LinkStyle) => Array<ParseShape>) => {
   )
 
   const parsePatterns = useCallback(
-    (linkStyle: LinkStyle): ParseShape[] => [
+    (linkStyle) => [
       {
         type: 'url',
         style: [linkStyle, styles.link],

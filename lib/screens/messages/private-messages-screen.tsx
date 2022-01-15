@@ -3,20 +3,13 @@ import ScreenTemplate from '@templates/screen'
 import MessagePrivateHeader from '@screens/messages/private-messages-screen-header'
 import PrivateMessages from '@screens/messages/private-messages'
 import { translate } from '@utils/i18n'
+import { MessagePrivateScreenProps } from '@utils/types/routes'
 
 const MessagePrivateScreen = ({
   route: {
-    params: {
-      chat,
-      recipient = {
-        id: 0,
-        displayName: translate('ui.placeholders.user'),
-      },
-      litten,
-      read,
-    },
+    params: { chat, recipient, litten },
   },
-}) => {
+}: MessagePrivateScreenProps) => {
   const { createStyles } = useTheme()
 
   const styles = createStyles((theme) => ({
@@ -35,17 +28,25 @@ const MessagePrivateScreen = ({
           recipient={recipient}
         />
       }
-      behavior={null}
       style={styles.messagesContainer}
     >
-      <PrivateMessages
-        chat={chat}
-        litten={litten}
-        recipient={recipient}
-        read={read}
-      />
+      <PrivateMessages chat={chat} litten={litten} recipient={recipient} />
     </ScreenTemplate>
   )
+}
+
+MessagePrivateScreen.defaultProps = {
+  route: {
+    params: {
+      chat: null,
+      recipient: {
+        id: 0,
+        displayName: translate('ui.placeholders.user'),
+      },
+      litten: null,
+      read: null,
+    },
+  },
 }
 
 export default MessagePrivateScreen
