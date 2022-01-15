@@ -13,6 +13,7 @@ import {
   UI_ABOUT_LOGO_HEIGHT,
   UI_ABOUT_LOGO_WIDTH,
 } from '@utils/constants'
+import type { ProfileAboutScreenNavigationProp } from '@utils/types/routes'
 import { author, contributors, license, version } from '../../../package.json'
 
 const authors = [
@@ -24,7 +25,7 @@ const authors = [
 
 const ProfileAboutScreen = () => {
   const [aboutCounter, setAboutCounter] = useState(0)
-  const navigation = useNavigation()
+  const navigation = useNavigation<ProfileAboutScreenNavigationProp>()
   const {
     theme: { colors },
   } = useTheme()

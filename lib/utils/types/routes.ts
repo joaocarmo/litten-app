@@ -49,10 +49,14 @@ export type ProfileStackParamList = {
   'profile/edit': undefined
   'profile/index': undefined
   'profile/posts': undefined
-  'profile/report': undefined
+  'profile/report': {
+    type: string
+  }
   'profile/settings': undefined
   'profile/webview': undefined
 }
+
+export type TabularStackParamList = Record<string, undefined>
 
 /**
  * Screen navigation param types
@@ -63,5 +67,15 @@ export type ProfileIndexScreenNavigationProp = CompositeNavigationProp<
   CompositeNavigationProp<
     BottomTabNavigationProp<RootTabParamList, 'tabnav/profile'>,
     StackNavigationProp<ProfileStackParamList, 'profile/index'>
+  >
+>
+
+export type ProfileMainScreenNavigationProp = ProfileIndexScreenNavigationProp
+
+export type ProfileAboutScreenNavigationProp = CompositeNavigationProp<
+  StackNavigationProp<RootStackParamList, 'tabnav/index'>,
+  CompositeNavigationProp<
+    BottomTabNavigationProp<RootTabParamList, 'tabnav/profile'>,
+    StackNavigationProp<ProfileStackParamList, 'profile/about'>
   >
 >

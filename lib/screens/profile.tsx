@@ -107,7 +107,7 @@ const stackScreens = [
     name: SCREEN_DEV_HACKS,
     component: DevHacks,
   },
-]
+] as const
 
 const ProfileStack = createStackNavigator<ProfileStackParamList>()
 
@@ -117,8 +117,8 @@ const ProfileScreen = () => (
       headerShown: false,
     }}
   >
-    {stackScreens.map((props) => (
-      <ProfileStack.Screen {...props} />
+    {stackScreens.map(({ key, name, component }) => (
+      <ProfileStack.Screen key={key} name={name} component={component} />
     ))}
   </ProfileStack.Navigator>
 )
