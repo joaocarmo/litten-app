@@ -12450,10 +12450,10 @@ react-native-background-fetch@^4.0.4:
   resolved "https://registry.yarnpkg.com/react-native-background-fetch/-/react-native-background-fetch-4.0.4.tgz#2a7a29bc24ec1e740f9457ccf7108766957d9f24"
   integrity sha512-vGcsIbv5TXblIqBonsMw1dbh/x/1np1NTMArLVz5rjdgUu330pc4o7X6VTxCWtzadajz0Fe1Y71xqXylpmBekA==
 
-react-native-bootsplash@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/react-native-bootsplash/-/react-native-bootsplash-4.0.2.tgz#af64537a65ea18bf1cbb09633600975cfe48c51d"
-  integrity sha512-zSorquCsF1jxEhJK+UQR4Tb9a9TeYegrrJwb5ANkFksKnViNVg91PjmYI+/UNrhfgM0fLxUm7agHP1v5AfuBtQ==
+react-native-bootsplash@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-bootsplash/-/react-native-bootsplash-4.1.0.tgz#2d11f855f914116a268f7b263832747d974702ce"
+  integrity sha512-otFBLou7+zlKNN0ikGH7lEDk5NgBpWinjukwEYt+ysBYjH5YGodMe1kB5tRjcULwHha1Y2Z4WZc9TqnNGReuLA==
   dependencies:
     chalk "^4.1.2"
     fs-extra "^10.0.0"

@@ -230,7 +230,7 @@ dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
-    implementation "androidx.core:core-splashscreen:1.0.0-alpha02"
+    implementation "androidx.core:core-splashscreen:1.0.0-beta01"
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 
