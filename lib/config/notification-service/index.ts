@@ -90,7 +90,4 @@ class NotificationService {
 
 export default NotificationService
 
-export type NotificationServiceType = Omit<
-  typeof NotificationService,
-  'prototype'
->
+export type NotificationServiceType = InstanceType<typeof NotificationService>

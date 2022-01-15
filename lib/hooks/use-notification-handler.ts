@@ -2,7 +2,7 @@ import { useCallback } from 'react'
 import * as RootNavigation from '@config/navigation/root'
 import { SCREEN_MESSAGE_PRIVATE } from '@utils/constants'
 
-const useNotificationHandler = (): [(args: unknown[]) => void] => {
+const useNotificationHandler = () => {
   const onNotification = useCallback(
     ({ foreground, data: { screen, ...data }, userInteraction }) => {
       if (screen) {

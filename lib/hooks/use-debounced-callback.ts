@@ -18,7 +18,9 @@ const useDebouncedCallback = (
   const debouncedCallback = useCallback(
     (...args: any[]) => {
       argsRef.current = args
+
       clearTimer()
+
       timerId.current = setTimeout(() => {
         if (argsRef.current) {
           callbackFn(...argsRef.current)

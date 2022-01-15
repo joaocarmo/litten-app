@@ -46,7 +46,7 @@ export const messagesSelector = (
 ): ObjectById<Array<BasicMessage>> => state.chats.messages
 export const userCoordinatesSelector = (
   state: State,
-): void | DBCoordinateObject =>
+): DBCoordinateObject | null =>
   state.authenticatedUser.extra.location?.coordinates
 export const userPreferencesSelector = (state: State): UserPreferences =>
   state.authenticatedUser.preferences

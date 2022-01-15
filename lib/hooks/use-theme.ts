@@ -7,16 +7,17 @@ import { ThemeContext } from '@components/theme'
 import * as commonStylesConfig from '@styles/common'
 import type { Theme } from '@styles/themes'
 import type { Typography } from '@styles/typography'
+import type { ThemePreferences } from '@store/types'
 
 type CreateStylesFn = (
   theme: Theme,
   typography: Typography,
   isDark: boolean,
-) => Record<string, unknown>
+) => Parameters<typeof StyleSheet.create>[0]
 
 type UseTheme = ThemeConfig & {
   commonStyles: commonStylesConfig.CommonStyles
-  createStyles: (fn: CreateStylesFn) => any
+  createStyles: (fn: CreateStylesFn) => ReturnType<typeof StyleSheet.create>
   setTheme: (theme: string) => void
 }
 
@@ -47,7 +48,7 @@ const useTheme = (): UseTheme => {
   }, [createStyles])
 
   const setTheme = useCallback(
-    (theme: string) => {
+    (theme: ThemePreferences) => {
       dispatch(setThemeAction(theme))
     },
     [dispatch],
