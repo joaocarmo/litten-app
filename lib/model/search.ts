@@ -21,7 +21,7 @@ export default class Search {
 
   #cursor = null
 
-  constructor({ query = '', filters = {}, user }: SearchSettings = {}) {
+  constructor({ query, filters, user }: SearchSettings) {
     this.#query = query
     this.#filters = filters
     this.#user = user

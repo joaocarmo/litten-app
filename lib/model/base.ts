@@ -15,19 +15,19 @@ export default class Base {
     return firestore
   }
 
-  get id(): string | void {
+  get id(): string | undefined {
     return this.#id
   }
 
-  set id(id: string | void = '') {
+  set id(id: string | undefined) {
     this.#id = id
   }
 
-  get location(): DBLocationObject | void {
+  get location(): DBLocationObject {
     return this.#location
   }
 
-  set location(location: DBLocationObject = {}) {
+  set location(location: DBLocationObject) {
     this.#location = { ...locationSchema, ...location }
   }
 
@@ -45,20 +45,18 @@ export default class Base {
     this.#location = { ...locationSchema, coordinates }
   }
 
-  get metadata(): DBMetadata | void {
+  get metadata(): DBMetadata | undefined {
     return this.#metadata
   }
 
-  set metadata(
-    metadata: DBMetadata = {
+  set metadata(metadata: DBMetadata) {
+    this.#metadata = metadata || {
       createdAt: {},
       updatedAt: {},
-    },
-  ) {
-    this.#metadata = metadata
+    }
   }
 
-  get createdAt(): number | void {
+  get createdAt(): number | undefined {
     if (this.#metadata?.createdAt) {
       const { seconds, _seconds } = this.#metadata.createdAt
       const s = seconds ?? _seconds
@@ -66,7 +64,7 @@ export default class Base {
     }
   }
 
-  get updatedAt(): number | void {
+  get updatedAt(): number | undefined {
     if (this.#metadata?.updatedAt) {
       const { seconds, _seconds } = this.#metadata.updatedAt
       const s = seconds ?? _seconds
@@ -76,7 +74,7 @@ export default class Base {
 
   mapCommonProps({
     id = '',
-    location = {},
+    location = locationSchema,
     metadata = {
       createdAt: {},
       updatedAt: {},
@@ -91,19 +89,11 @@ export default class Base {
     this.#metadata = metadata
   }
 
-  buildLocation(): {
-    administrativeArea1: string
-    administrativeArea2: string
-    administrativeArea3: string
-    administrativeArea4: string
-    administrativeArea5: string
-    administrativeArea6: string
-    coordinates: any
-    country: string
-    street: string
-  } {
-    const { coordinates: { latitude, longitude } = {}, ...location } =
-      this.#location ?? {}
+  buildLocation(): DBLocationObject {
+    const {
+      coordinates: { latitude, longitude },
+      ...location
+    } = this.#location ?? locationSchema
 
     return {
       ...location,
@@ -112,13 +102,14 @@ export default class Base {
   }
 
   buildMetadata(): {
-    createdAt: any | DBTimestamp
-    updatedAt: any
+    createdAt: DBTimestamp
+    updatedAt: DBTimestamp
   } {
     const createdAt = this.#metadata?.createdAt?.seconds
-      ? this.#metadata?.createdAt
-      : firestore.FieldValue.serverTimestamp()
-    const updatedAt = firestore.FieldValue.serverTimestamp()
+      ? (this.#metadata?.createdAt as DBTimestamp)
+      : (firestore.FieldValue.serverTimestamp() as DBTimestamp)
+    const updatedAt = firestore.FieldValue.serverTimestamp() as DBTimestamp
+
     return {
       createdAt,
       updatedAt,
