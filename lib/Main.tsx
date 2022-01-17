@@ -40,11 +40,18 @@ import type { RootStackParamList, RootTabParamList } from '@utils/types/routes'
 
 const Tab = createBottomTabNavigator<RootTabParamList>()
 
-const TabBar = (props) => <TabNavigation {...props} />
+const TabBar = ({ descriptors, navigation, state }) => (
+  <TabNavigation
+    descriptors={descriptors}
+    navigation={navigation}
+    state={state}
+  />
+)
 
 const TabNavigator = () => {
   const unreadMessages = useUnreadMessages()
   const notifications = useNotifications()
+
   const tabScreens = useMemo(
     () =>
       [
@@ -113,8 +120,13 @@ const TabNavigator = () => {
       }}
       tabBar={TabBar}
     >
-      {tabScreens.map(({ key, name, component }) => (
-        <Tab.Screen key={key} name={name} component={component} />
+      {tabScreens.map(({ key, name, component, options }) => (
+        <Tab.Screen
+          key={key}
+          name={name}
+          component={component}
+          options={options}
+        />
       ))}
     </Tab.Navigator>
   )
