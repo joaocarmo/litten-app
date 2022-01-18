@@ -9,6 +9,8 @@ import type { Theme } from '@styles/themes'
 import type { Typography } from '@styles/typography'
 import type { ThemePreferences } from '@store/types'
 
+type CreateStyleSheet = ReturnType<typeof StyleSheet.create>
+
 type CreateStylesFn = (
   theme: Theme,
   typography: Typography,
@@ -17,7 +19,7 @@ type CreateStylesFn = (
 
 type UseTheme = ThemeConfig & {
   commonStyles: commonStylesConfig.CommonStyles
-  createStyles: (fn: CreateStylesFn) => ReturnType<typeof StyleSheet.create>
+  createStyles: (fn: CreateStylesFn) => CreateStyleSheet
   setTheme: (theme: string) => void
 }
 
@@ -26,7 +28,7 @@ const useTheme = (): UseTheme => {
 
   const dispatch = useDispatch()
 
-  const createStyles = useCallback(
+  const createStyles: UseTheme['createStyles'] = useCallback(
     (fn: CreateStylesFn) =>
       StyleSheet.create(
         fn(themeConfig.theme, themeConfig.typography, themeConfig.isDark),
@@ -35,7 +37,7 @@ const useTheme = (): UseTheme => {
   )
 
   const commonStyles: commonStylesConfig.CommonStyles = useMemo(() => {
-    const themedCommonStyles = {}
+    const themedCommonStyles: any = {}
 
     for (const key in commonStylesConfig) {
       if (Object.prototype.hasOwnProperty.call(commonStylesConfig, key)) {

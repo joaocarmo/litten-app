@@ -80,6 +80,12 @@ export type RootStackParamList = {
 export type TabularStackParamList = Record<string, undefined>
 
 /**
+ * Routes
+ */
+
+export type Routes = string
+
+/**
  * Screen navigation param types
  */
 
@@ -156,4 +162,14 @@ export type HomeFilterScreenNavigationProp = CompositeNavigationProp<
     BottomTabNavigationProp<RootTabParamList, 'tabnav/home'>,
     StackNavigationProp<HomeStackParamList, 'home/filter'>
   >
+>
+
+export type UseSafeNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'tabnav/index'
+>
+
+export type RootNavigationProp = StackScreenProps<
+  RootStackParamList,
+  'tabnav/index'
 >

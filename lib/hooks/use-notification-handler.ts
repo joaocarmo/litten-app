@@ -11,6 +11,8 @@ const useNotificationHandler = () => {
         const { chat, litten, recipient } = data
 
         if (chat && litten && recipient) {
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore FIXME
           RootNavigation.navigate(SCREEN_MESSAGE_PRIVATE, {
             chat,
             recipient,
