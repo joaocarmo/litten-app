@@ -1,4 +1,5 @@
 import { Text, View } from 'react-native'
+import type { TextProps } from 'react-native'
 import { vw } from 'react-native-expo-viewport-units'
 import { useTheme } from '@hooks'
 import {
@@ -7,7 +8,17 @@ import {
 } from '@images/components/icons'
 import { UI_OPERATION_STATUS_ICON_SIZE } from '@utils/constants'
 
-const FormStatusTemplate = ({ success, error, children }) => {
+export type FormStatusTemplateProps = {
+  success?: boolean
+  error?: boolean
+  children: TextProps['children']
+}
+
+const FormStatusTemplate = ({
+  success,
+  error,
+  children,
+}: FormStatusTemplateProps) => {
   const {
     createStyles,
     theme: { colors },
@@ -56,6 +67,11 @@ const FormStatusTemplate = ({ success, error, children }) => {
       <Text style={styles.text}>{children}</Text>
     </View>
   )
+}
+
+FormStatusTemplate.defaultProps = {
+  success: false,
+  error: false,
 }
 
 export default FormStatusTemplate

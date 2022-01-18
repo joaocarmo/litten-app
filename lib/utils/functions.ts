@@ -22,6 +22,7 @@ import {
 import { littenSpeciesList, littenTypes } from '@utils/litten'
 import { translate } from '@utils/i18n'
 import type { FirebaseRemoteConfigTypes } from '@react-native-firebase/remote-config'
+import type { Image } from 'react-native-image-crop-picker'
 import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
 import type { LittenFeedObject, SearchFilters } from '@store/types'
 import type {
@@ -443,11 +444,7 @@ export const shortenName = (fullName = ''): string => {
  * @param {{data:string,mime:string,path:string}} image - The image object
  * @returns {string}
  */
-export const getImagePath = (image: {
-  data: string
-  mime: string
-  path: string
-}): string => {
+export const getImagePath = (image: Image): string => {
   if (image) {
     if (APP_IS_DEV) {
       return `data:${image.mime};base64,${image.data}`

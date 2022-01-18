@@ -13,6 +13,7 @@ const initialState = {
   phoneNumber: null,
   photoURL: null,
 }
+
 const formProfileSlice = createSlice({
   name: 'formProfile',
   initialState,

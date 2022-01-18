@@ -1,5 +1,9 @@
 import { parsePhoneNumberFromString as parseMobile } from 'libphonenumber-js/mobile'
-import type { CountryCode } from 'libphonenumber-js/types'
+import type {
+  CountryCallingCode,
+  CountryCode,
+  E164Number,
+} from 'libphonenumber-js/types'
 import { stringifyLocation } from '@utils/functions'
 import { littenSpeciesList, littenTypes } from '@utils/litten'
 import { translate } from '@utils/i18n'
@@ -172,9 +176,9 @@ export function countryValidator(country: string): {
 }
 
 export function phoneNumberValidator(
-  phoneNumber: string | number,
+  phoneNumber: E164Number,
   country: CountryCode,
-  callingCode: string | number,
+  callingCode: CountryCallingCode,
 ): {
   error: boolean
   errorMessage: string

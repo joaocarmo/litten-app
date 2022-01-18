@@ -2,6 +2,7 @@ import parsePhoneNumber, { AsYouType } from 'libphonenumber-js'
 import { useCallback, useEffect, useMemo, useState, useRef } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { Alert, Pressable, Keyboard, StyleSheet, View } from 'react-native'
+import type { ImageOrVideo } from 'react-native-image-crop-picker'
 import { useDebouncedCallback, useEmailVerified } from '@hooks'
 import {
   displayNameValidator,
@@ -39,6 +40,7 @@ import {
   USER_PREFERENCES_CONTACT_SMS,
 } from '@utils/constants'
 import { translate } from '@utils/i18n'
+import type { FormProfileNavigationProp } from '@utils/types/routes'
 
 const FormProfile = ({
   authenticatedUser: { basic, extra },
@@ -69,6 +71,7 @@ const FormProfile = ({
   const [isLoading, setIsLoading] = useState(false)
   const [changePromptIsOpen, setChangePromptIsOpen] = useState(false)
   const [deletePromptIsOpen, setDeletePromptIsOpen] = useState(false)
+  const navigation = useNavigation<FormProfileNavigationProp>()
 
   const closePrompt = () => {
     setChangePromptIsOpen(false)
@@ -86,8 +89,6 @@ const FormProfile = ({
     photoURL,
   } = extra
 
-  const navigation = useNavigation()
-
   useEffect(() => () => clearProfileForm(), [clearProfileForm])
 
   const [debouncedSetIsLoading, cancelSetIsLoading] = useDebouncedCallback(
@@ -97,7 +98,7 @@ const FormProfile = ({
   )
 
   const handleOnPhotoChange = useCallback(
-    (image) => {
+    (image: ImageOrVideo) => {
       if (image) {
         const imagePath = getImagePath(image)
         setProfilePhotoURL(imagePath)

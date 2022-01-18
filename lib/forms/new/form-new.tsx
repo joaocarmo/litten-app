@@ -44,6 +44,7 @@ import {
   SCREEN_TAB_NAV_PROFILE,
 } from '@utils/constants'
 import { littenSpeciesList, littenTypes } from '@utils/litten'
+import type { NewFormNavigationProp } from '@utils/types/routes'
 
 const NewForm = ({
   addPhoto,
@@ -74,7 +75,7 @@ const NewForm = ({
   } = litten
   const { location: userLocation } = user
   const isAllowedToCreate = useEmailVerified()
-  const navigation = useNavigation()
+  const navigation = useNavigation<NewFormNavigationProp>()
   const { showActionSheetWithOptions } = useActionSheet()
   const search = useRef(
     new Search({

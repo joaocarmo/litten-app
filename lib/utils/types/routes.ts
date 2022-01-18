@@ -10,6 +10,7 @@ import type {
 import type { BasicChat } from '@model/types/chat'
 import type { BasicLitten } from '@model/types/litten'
 import type { BasicUser } from '@model/types/user'
+import type { DBCoordinateObject } from '@db/schemas/location'
 
 /**
  * Root navigation param types
@@ -69,7 +70,10 @@ export type RootStackParamList = {
     recipient: BasicUser
     litten: BasicLitten
   }
-  'new/location': undefined
+  'new/location': {
+    initialCoordinates: DBCoordinateObject
+    dispatchToAction: string
+  }
   'profile/verification': undefined
   'profile/view': {
     user: BasicUser
@@ -172,4 +176,22 @@ export type UseSafeNavigationProp = StackNavigationProp<
 export type RootNavigationProp = StackScreenProps<
   RootStackParamList,
   'tabnav/index'
+>
+
+export type FormProfileNavigationProp = CompositeNavigationProp<
+  StackNavigationProp<RootStackParamList, 'tabnav/index'>,
+  CompositeNavigationProp<
+    BottomTabNavigationProp<RootTabParamList, 'tabnav/profile'>,
+    StackNavigationProp<ProfileStackParamList, 'profile/edit'>
+  >
+>
+
+export type NewFormNavigationProp = CompositeNavigationProp<
+  StackNavigationProp<RootStackParamList, 'tabnav/index'>,
+  BottomTabNavigationProp<RootTabParamList, 'tabnav/new'>
+>
+
+export type LoginFormNavigationProp = StackNavigationProp<
+  OnboardStackParamList,
+  'noauth/login'
 >

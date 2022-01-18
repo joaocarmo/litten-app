@@ -199,8 +199,9 @@ const RegisterForm = (props) => {
   useEffect(() => {
     clearRegisterForm()
     clearErrorsRegisterForm()
+
     // Get the user's country code from the device
-    const { countryCode } = getLocales()
+    const [{ countryCode }] = getLocales()
 
     if (!countryCode) {
       // Determine from the user's location
