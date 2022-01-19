@@ -9,22 +9,22 @@ import type { BasicLitten } from '@model/types/litten'
 import type { SearchSettings } from '@model/types/search'
 
 export default class Search {
-  #query
+  #cursor = null
 
-  #filters
+  #filters = {}
 
   #minQueryLength = 2
 
   #numOfItemsPerPage = SEARCH_INITIAL_NUM_TO_RENDER
 
+  #query = ''
+
   #user = null
 
-  #cursor = null
-
   constructor({ query, filters, user }: SearchSettings) {
-    this.#query = query
-    this.#filters = filters
-    this.#user = user
+    this.#filters = filters || this.#filters
+    this.#query = query || this.#query
+    this.#user = user || this.#user
   }
 
   get firestore(): any {

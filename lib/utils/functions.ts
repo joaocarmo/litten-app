@@ -609,6 +609,7 @@ export const filterData = (
       locationRadius: filterRadius = 0,
       userType: filterUserType = '',
     } = filters ?? {}
+
     const filteredData: LittenFeedObject[] = data.filter(
       ({ distance, isFromOrganization, species, type }) => {
         let isAllowed = true
