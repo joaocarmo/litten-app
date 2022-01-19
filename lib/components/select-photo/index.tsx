@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 import { Alert, Pressable, StyleSheet } from 'react-native'
-import type { PressableProps } from 'react-native'
+import type { AlertButton, PressableProps } from 'react-native'
 import { useTheme } from '@hooks'
 import { UIImage } from '@ui-elements'
 import { placeholderUser } from '@images'
@@ -10,8 +10,11 @@ import { translate } from '@utils/i18n'
 import type { UIImageProps } from '@ui-elements/image'
 
 export type SelectPhotoProps = {
-  imageStyle: UIImageProps['style']
-  onChange: PressableProps['onPress']
+  imageStyle: UIImageProps['style'] & {
+    height?: number
+    maxHeight?: number
+  }
+  onChange: AlertButton['onPress']
   source: UIImageProps['source']
 } & PressableProps
 

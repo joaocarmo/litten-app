@@ -4,6 +4,7 @@ import { useCallback, useMemo, useRef, useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useActionSheet } from '@expo/react-native-action-sheet'
 import { Alert } from 'react-native'
+import type { Image } from 'react-native-image-crop-picker'
 import {
   UIBalloon,
   UIButton,
@@ -45,6 +46,8 @@ import {
 } from '@utils/constants'
 import { littenSpeciesList, littenTypes } from '@utils/litten'
 import type { NewFormNavigationProp } from '@utils/types/routes'
+import { BasicLitten } from '@model/types/litten'
+import { BasicUser } from '@model/types/user'
 
 const NewForm = ({
   addPhoto,
@@ -72,8 +75,8 @@ const NewForm = ({
     title,
     type,
     useExtraInfo,
-  } = litten
-  const { location: userLocation } = user
+  } = litten as BasicLitten & { useExtraInfo?: boolean }
+  const { location: userLocation } = user as BasicUser
   const isAllowedToCreate = useEmailVerified()
   const navigation = useNavigation<NewFormNavigationProp>()
   const { showActionSheetWithOptions } = useActionSheet()
@@ -95,7 +98,7 @@ const NewForm = ({
     )
 
   const handleOnPhotoChange = useCallback(
-    (image, photoIndex = null) => {
+    (image: Image, photoIndex: number | null = null) => {
       if (image) {
         const imagePath = getImagePath(image)
 
@@ -306,6 +309,8 @@ const NewForm = ({
             // eslint-disable-next-line react/no-array-index-key
             key={idx}
             imageSource={photos[idx]}
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore FIXME
             actionable={idx === photos.length}
             ImageComponent={UIImagePlaceholder.ImageItem}
             PlaceholderComponent={UIImagePlaceholder.Item}

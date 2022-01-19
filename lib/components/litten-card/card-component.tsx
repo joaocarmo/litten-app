@@ -23,6 +23,8 @@ import I18n from '@utils/i18n'
 import { debugLog } from '@utils/dev'
 import cardComponentStyles from '@components/litten-card/card-component.styles'
 import type { LittenCardComponentProps } from '@components/litten-card/types'
+import type { IconTypeComponent } from '@ui-elements/types'
+import type { LittenCardComponentNavigationProp } from '@utils/types/routes'
 
 const UI_ICON_SIZE_MICRO_MINI_AVG = (UI_ICON_SIZE_MICRO + UI_ICON_SIZE_MINI) / 2
 
@@ -45,7 +47,7 @@ const LittenCardComponent = ({
 }: LittenCardComponentProps) => {
   const [unit, useMetricUnits] = useUnit('length')
 
-  const navigation = useNavigation()
+  const navigation = useNavigation<LittenCardComponentNavigationProp>()
 
   const {
     createStyles,
@@ -76,13 +78,13 @@ const LittenCardComponent = ({
   )
 
   const species = useRef(
-    getFromListByKey(littenSpeciesList, litten.species) ?? {},
+    getFromListByKey(littenSpeciesList, litten.species),
   ).current
-  const type = useRef(getFromListByKey(littenTypes, litten.type) ?? {}).current
+  const type = useRef(getFromListByKey(littenTypes, litten.type)).current
   const SpeciesIconComponent = useRef(species?.icon).current
   const TypeIconComponent = useRef(type?.icon).current
 
-  const FavIconComponent = useMemo(
+  const FavIconComponent: IconTypeComponent = useMemo(
     () => (isFavourite ? HeartFill : HeartOutline),
     [isFavourite],
   )

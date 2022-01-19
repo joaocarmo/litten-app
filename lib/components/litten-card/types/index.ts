@@ -5,7 +5,9 @@ export type LittenCardComponentProps = {
   distance: number
   editable?: boolean
   isFavourite?: boolean
-  litten: BasicLitten
+  litten: BasicLitten & {
+    distance?: number
+  }
   onPressAction?: (litten: BasicLitten) => void
   user: BasicUser
 }

@@ -195,3 +195,23 @@ export type LoginFormNavigationProp = StackNavigationProp<
   OnboardStackParamList,
   'noauth/login'
 >
+
+export type CreateNewCTANavigationProp = StackNavigationProp<
+  OnboardStackParamList,
+  'noauth/welcome'
+>
+
+export type SignInCTANavigationProp = StackNavigationProp<
+  OnboardStackParamList,
+  'noauth/welcome'
+>
+
+export type ActionsNavigationProp = StackNavigationProp<
+  OnboardStackParamList,
+  'noauth/welcome'
+>
+
+export type LittenCardComponentNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'tabnav/index'
+>

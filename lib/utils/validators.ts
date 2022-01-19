@@ -8,6 +8,7 @@ import { stringifyLocation } from '@utils/functions'
 import { littenSpeciesList, littenTypes } from '@utils/litten'
 import { translate } from '@utils/i18n'
 import type { GLocationParsed } from '@utils/types/functions'
+import type { PhotoObject } from '@store/types'
 
 /**
  * Generic validators and utilities
@@ -212,7 +213,7 @@ export function avatarValidator(avatar: string): {
 /**
  * New litten validators
  */
-export function littenPhotoValidator(photos: string[]): {
+export function littenPhotoValidator(photos: PhotoObject[]): {
   error: boolean
   errorMessage: string
 } {

@@ -1,6 +1,6 @@
 import I18n from 'i18n-js'
 import { getLocales } from 'react-native-localize'
-import memoize from 'lodash.memoize'
+import memoize from 'lodash/memoize'
 import { en, pt } from '@translations'
 
 const getI18nConfig = () => {
@@ -20,7 +20,7 @@ const getI18nConfig = () => {
     pt,
   }
 
-  const translate = memoize(
+  const translate = memoize<typeof I18n.t>(
     (key, config) => I18n.t(key, config),
     (key, config) => (config ? key + JSON.stringify(config) : key),
   )

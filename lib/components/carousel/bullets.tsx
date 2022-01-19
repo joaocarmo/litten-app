@@ -18,6 +18,8 @@ const Bullets = ({
   style,
   ...otherProps
 }: BulletsProps) => (
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore FIXME
   <View style={StyleSheet.compose(styles.bullets, style)}>
     {iterateTimes(intervals).map((n) => (
       <Bullet

@@ -5,7 +5,7 @@ import {
   JIRA_EMAIL,
   SLACK_WEBHOOK_URL,
 } from '@utils/env'
-import memoize from 'lodash.memoize'
+import memoize from 'lodash/memoize'
 import { Alert } from 'react-native'
 import FormData from 'react-native/Libraries/Network/FormData'
 import type { DBCoordinateObject } from '@db/schemas/location'
@@ -24,11 +24,6 @@ import { translate } from '@utils/i18n'
 import type { GResponse } from '@utils/types/functions'
 import config from '../../package.json'
 
-interface IModel<T> {
-  new ({ id }: { id: string }): T
-  get: () => T
-}
-
 /**
  * Simple function to retrieve a document using a model
  * @async
@@ -36,10 +31,7 @@ interface IModel<T> {
  * @param {string} id - The resource ID
  * @returns {*}
  */
-export const getFromModel = async <T extends IModel<T>>(
-  Model: T,
-  id: string,
-): Promise<T> => {
+export const getFromModel = async (Model: any, id: string): Promise<any> => {
   const resource = new Model({
     id,
   })

@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { ScrollView, StyleSheet, View } from 'react-native'
 import type { ScrollViewProps, ViewProps } from 'react-native'
 import Bullets from '@components/carousel/bullets'
+import type { BulletsProps } from '@components/carousel/bullets'
 import type { BulletProps } from '@components/carousel/bullet'
 
 type CarouselItem = {
@@ -10,13 +11,13 @@ type CarouselItem = {
 }
 
 export type CarouselProps = {
-  bounces: ScrollViewProps['bounces']
-  bulletContainerStyle: ViewProps['style']
-  bulletContrast: BulletProps['contrast']
-  bulletStyle: BulletProps['style']
-  fill: boolean
+  bounces?: ScrollViewProps['bounces']
+  bulletContainerStyle?: BulletsProps['style']
+  bulletContrast?: BulletProps['contrast']
+  bulletStyle?: BulletProps['style']
+  fill?: boolean
   items: CarouselItem[]
-  placeholder: ViewProps['children']
+  placeholder?: ViewProps['children']
 } & ViewProps
 
 const Carousel = ({
@@ -32,14 +33,18 @@ const Carousel = ({
   const [activeInterval, setActiveInterval] = useState(1)
   const [intervals, setIntervals] = useState(1)
   const [width, setWidth] = useState(0)
+
   useEffect(() => {
     setIntervals(items.length)
   }, [items.length])
+
   const getInterval = useCallback(
     (offset) => Math.round((offset / width) * intervals) + 1,
     [intervals, width],
   )
+
   const handleOnContentSizeChange = useCallback((w) => setWidth(w), [])
+
   const handleOnScroll = useCallback(
     ({
       nativeEvent: {
@@ -92,8 +97,12 @@ const Carousel = ({
           intervals={intervals}
           style={
             fill
-              ? StyleSheet.compose(styles.fillBulletStyle, bulletContainerStyle)
-              : bulletContainerStyle
+              ? // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore FIXME
+                StyleSheet.compose(styles.fillBulletStyle, bulletContainerStyle)
+              : // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore FIXME
+                bulletContainerStyle
           }
         />
       )}
@@ -102,10 +111,13 @@ const Carousel = ({
 }
 
 Carousel.defaultProps = {
+  bounces: true,
+  bulletContainerStyle: undefined,
   bulletContrast: false,
   bulletStyle: undefined,
   fill: false,
   items: [],
+  placeholder: null,
 }
 
 const styles = StyleSheet.create({

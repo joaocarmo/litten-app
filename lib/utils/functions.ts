@@ -1,7 +1,7 @@
 import { APP_IS_DEV, IS_BETA_RELASE } from '@utils/env'
 import base64 from 'base-64'
 import md5Hex from 'md5-hex'
-import isEmpty from 'lodash.isempty'
+import isEmpty from 'lodash/isEmpty'
 import { locationSchema } from '@db/schemas/location'
 import {
   BETA_ENABLED,
@@ -103,7 +103,7 @@ export const mapCountriesToSelector = (item: {
   name: {
     common: string
   }
-}): void | {
+}): {
   key: string
   label: string
   value: string

@@ -9,11 +9,11 @@ import { debugLog } from '@utils/dev'
 import { translate } from '@utils/i18n'
 import type { ImageSource } from '@ui-elements/types'
 
-export type AddPhotoProps<T> = {
-  ImageComponent: ComponentType<T | ImageProps>
+export type AddPhotoProps = {
+  ImageComponent: ComponentType<any>
   imageSource: ImageSource
   onChange: (image: ImageOrVideo | null) => void
-  PlaceholderComponent: ComponentType<T | ImageProps>
+  PlaceholderComponent: ComponentType<any>
 } & Omit<ImageProps, 'source'>
 
 const AddPhoto = ({
