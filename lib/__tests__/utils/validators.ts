@@ -58,7 +58,7 @@ describe('Test the "notNothing" validator', () => {
   })
 
   it('returns "false" if the value is falsy', () => {
-    expect(validator()).toBe(false)
+    expect(validator(undefined)).toBe(false)
   })
 })
 

@@ -47,6 +47,12 @@ import defaultConfig, {
   VERSION_DISABLED,
 } from '@config/remote-config/defaults'
 import { getRandInt } from '@utils/tests'
+import type { FirebaseRemoteConfigTypes } from '@react-native-firebase/remote-config'
+import type { LittenFeedObject, SearchFilters } from '@store/types'
+import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
+import type { BasicChat } from '@model/types/chat'
+import type { BasicLitten } from '@model/types/litten'
+import type { BasicUser } from '@model/types/user'
 import reverseGeocodingResponse from './responses/reverse-geocoding-response.json'
 
 jest.mock('utils/env', () => ({
@@ -144,13 +150,15 @@ describe('Test the "mapCountriesToSelector" function', () => {
 describe('Test the "getErrorMessage" function', () => {
   it('returns a string error message', () => {
     const defaultValue = 'Unknown error'
-    expect(getErrorMessage('thisShouldNotExist')).toEqual(defaultValue)
+    expect(getErrorMessage('thisShouldNotExist', undefined)).toEqual(
+      defaultValue,
+    )
   })
 })
 
 describe('Test the "parseAvatar" function', () => {
   it('returns null is there if no input and no email', () => {
-    expect(parseAvatar()).toBe('')
+    expect(parseAvatar(undefined)).toBe('')
   })
 
   it('returns a gravatar URI if no input, but an email exists', () => {
@@ -173,26 +181,31 @@ describe('Test the "parseAvatar" function', () => {
 })
 
 describe('Test the "isValidLocation" function', () => {
-  it('evaluates a location object', () => {
-    expect(isValidLocation()).toBe(false)
-    expect(isValidLocation({})).toBe(false)
-    expect(
-      isValidLocation({
+  const testLocations = [
+    [undefined, false],
+    [null, false],
+    [{}, false],
+    [{ latitude: 0, longitude: 0 }, false],
+    [
+      {
         key: 'value',
-      }),
-    ).toBe(false)
-    expect(
-      isValidLocation({
+      },
+      false,
+    ],
+    [
+      {
         country: 'value',
-      }),
-    ).toBe(false)
-    expect(
-      isValidLocation({
+      },
+      false,
+    ],
+    [
+      {
         country: 'PT',
-      }),
-    ).toBe(false)
-    expect(
-      isValidLocation({
+      },
+      false,
+    ],
+    [
+      {
         country: '',
         administrativeArea1: '',
         administrativeArea2: '',
@@ -201,10 +214,11 @@ describe('Test the "isValidLocation" function', () => {
         administrativeArea5: '',
         administrativeArea6: '',
         street: '',
-      }),
-    ).toBe(false)
-    expect(
-      isValidLocation({
+      },
+      false,
+    ],
+    [
+      {
         country: 'value',
         administrativeArea1: 'value',
         administrativeArea2: 'value',
@@ -213,10 +227,11 @@ describe('Test the "isValidLocation" function', () => {
         administrativeArea5: 'value',
         administrativeArea6: 'value',
         street: 'value',
-      }),
-    ).toBe(false)
-    expect(
-      isValidLocation({
+      },
+      false,
+    ],
+    [
+      {
         country: 'PT',
         administrativeArea1: 'value',
         administrativeArea2: '',
@@ -225,10 +240,11 @@ describe('Test the "isValidLocation" function', () => {
         administrativeArea5: '',
         administrativeArea6: '',
         street: '',
-      }),
-    ).toBe(false)
-    expect(
-      isValidLocation({
+      },
+      false,
+    ],
+    [
+      {
         country: 'PT',
         administrativeArea1: 'value',
         administrativeArea2: 'value',
@@ -237,10 +253,11 @@ describe('Test the "isValidLocation" function', () => {
         administrativeArea5: '',
         administrativeArea6: '',
         street: '',
-      }),
-    ).toBe(true)
-    expect(
-      isValidLocation({
+      },
+      true,
+    ],
+    [
+      {
         country: 'PT',
         administrativeArea1: 'value',
         administrativeArea2: 'value',
@@ -249,8 +266,13 @@ describe('Test the "isValidLocation" function', () => {
         administrativeArea5: 'value',
         administrativeArea6: 'value',
         street: 'value',
-      }),
-    ).toBe(true)
+      },
+      true,
+    ],
+  ] as [DBLocationObject, boolean][]
+
+  it.each(testLocations)('evaluates a location object', (location, result) => {
+    expect(isValidLocation(location)).toBe(result)
   })
 
   describe('Test the "getLocationType" function', () => {
@@ -290,7 +312,7 @@ describe('Test the "isValidLocation" function', () => {
     }
 
     it('returns a key-value map of the response', () => {
-      expect(parseGoogleMapResponse()).toEqual({})
+      expect(parseGoogleMapResponse(undefined)).toEqual({})
       expect(parseGoogleMapResponse(result)).toEqual(shortResult)
       expect(parseGoogleMapResponse(result, true)).toEqual(longResult)
     })
@@ -403,7 +425,7 @@ describe('Test the "degToRad" function', () => {
 })
 
 describe('Test the "distanceBetween" function', () => {
-  const coordinates = [
+  const coordinates: [DBCoordinateObject, DBCoordinateObject, number][] = [
     [
       {
         latitude: 0,
@@ -520,6 +542,10 @@ describe('Test the "getImagePath" function', () => {
   it('Retrieves a single object from an array of objects', () => {
     const imageObj = {
       path: 'image/path.jpg',
+      mime: 'image/jpeg',
+      size: 100,
+      width: 100,
+      height: 100,
     }
     expect(getImagePath(imageObj)).toEqual(imageObj.path)
   })
@@ -528,11 +554,11 @@ describe('Test the "getImagePath" function', () => {
 describe('Test the "prepareReportMessage" function', () => {
   it('Prepares a meaningful report message', () => {
     const chat = {
-      id: 1,
-    }
+      id: String(getRandInt(10000, 99999)),
+    } as BasicChat
     const user = {
-      id: 1,
-    }
+      id: String(getRandInt(10000, 99999)),
+    } as BasicUser
     const message = prepareReportMessage(chat, user)
     expect(typeof message === 'string').toBe(true)
     expect(message.length).toBeGreaterThan(0)
@@ -614,30 +640,20 @@ describe('Test the "buildShareURI" function', () => {
   })
 
   it('Returns an custom URI string for an object with a proper id', () => {
-    const id = getRandInt(10000, 99999)
-    expect(
-      buildShareURI(
-        {
-          id,
-        },
-        false,
-      ),
-    ).toBe(`litten://litten/${id}`)
-    expect(
-      buildShareURI(
-        {
-          id,
-        },
-        true,
-      ),
-    ).toBe(`https://litten.app/open/litten/${id}`)
+    const id = String(getRandInt(10000, 99999))
+    const mockLitten = { id } as BasicLitten
+
+    expect(buildShareURI(mockLitten, false)).toBe(`litten://litten/${id}`)
+    expect(buildShareURI(mockLitten, true)).toBe(
+      `https://litten.app/open/litten/${id}`,
+    )
   })
 })
 
 describe('Test the "createAuthHeader" function', () => {
   it('Returns an empty string for missing arguments', () => {
-    expect(createAuthHeader()).toBe('')
-    expect(createAuthHeader('')).toBe('')
+    expect(createAuthHeader(undefined, undefined)).toBe('')
+    expect(createAuthHeader('', undefined)).toBe('')
     expect(createAuthHeader('', '')).toBe('')
     expect(createAuthHeader('a', '')).toBe('')
     expect(createAuthHeader('', 'b')).toBe('')
@@ -653,7 +669,7 @@ describe('Test the "createAuthHeader" function', () => {
 })
 
 describe('Test the "string2tags" function', () => {
-  const stringsTable = [
+  const stringsTable: [string, string[]][] = [
     ['', []],
     ['a', ['a']],
     ['         ', []],
@@ -708,7 +724,11 @@ describe('Test the "filterData" function', () => {
     locationRadius: 0,
     userType: '',
   }
-  const dataTable = [
+  const dataTable: [
+    LittenFeedObject[],
+    { filters: SearchFilters },
+    LittenFeedObject[],
+  ][] = [
     [
       [],
       {
@@ -802,7 +822,7 @@ describe('Test the "execOrTimeout" function', () => {
 })
 
 describe('Test the "blockingValidator" function', () => {
-  const blockingConfigs = [
+  const blockingConfigs: [string, typeof defaultConfig, string][] = [
     ['Empty config', {}, ''],
     ['Default config', defaultConfig, ''],
     [
@@ -836,7 +856,7 @@ describe('Test the "blockingValidator" function', () => {
           key,
           {
             asBoolean: () => value,
-          },
+          } as FirebaseRemoteConfigTypes.ConfigValue,
         ]),
       )
       expect(blockingValidator(config)).toBe(result)
@@ -845,7 +865,7 @@ describe('Test the "blockingValidator" function', () => {
 })
 
 describe('Test the "opacity2Hex" function', () => {
-  const tests = [
+  const tests: [number, string][] = [
     [0, '0'],
     [10, '1a'],
     [25, '40'],

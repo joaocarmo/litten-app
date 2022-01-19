@@ -72,43 +72,45 @@ export const handleNetworkError = (err: Error): void => {
  * Finds geolocation information based on the device's IP address
  * @async
  * @param {string} externalIP - An external IP address
- * @returns {{ip: string, country_code: string, country_name: string, region_code: string, region_name: string, city: string, zip_code: string, time_zone: string, latitude: number, longitude: number, metro_code: number}}
+ * @returns {GeoInformation}
  */
 export async function getExternalGeoInformation(
   externalIP = '',
-): Promise<GeoInformation | void> {
+): Promise<GeoInformation | null> {
   const apiUri = `https://freegeoip.live/json/${externalIP}`
 
   try {
     const data = await fetcher(apiUri)
-    return await data.json()
+    const jsonData = (await data.json()) as GeoInformation
+    return jsonData
   } catch (e) {
     debugLog(e)
   }
+
+  return null
 }
 
 /**
  * Finds geolocation information based on the address
  * @async
  * @param {string} address
- * @returns {Array.<{address_components: Array<{long_name: string, short_name: string, types: string[]}>, formatted_address: string, geometry: Object, place_id: string, plus_code: Object, types: string[]}>}
+ * @returns {GResponse[]}
  */
-export async function getGeoInformation(address: string): Promise<null> {
+export async function getGeoInformation(address: string): Promise<GResponse[]> {
   const apiUri = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${GOOGLE_API_KEY}`
-  let results = null
 
   try {
     const data = await fetcher(apiUri)
     const jsonData = await data.json()
 
     if (jsonData?.status === 'OK') {
-      results = jsonData?.results
+      return jsonData?.results as GResponse[]
     }
   } catch (err) {
     handleNetworkError(err)
   }
 
-  return results
+  return null
 }
 
 /**
