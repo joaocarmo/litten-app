@@ -7135,10 +7135,10 @@ firebase-admin@^10.0.1:
     "@google-cloud/firestore" "^4.5.0"
     "@google-cloud/storage" "^5.3.0"
 
-firebase-tools@^10.1.0:
-  version "10.1.0"
-  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-10.1.0.tgz#9f78e0201e4a5db71a06cbc7702e7a19302cbce2"
-  integrity sha512-IbZt58lrgA/iFHvZAR0SsAeu3VGPdmBbPwAIzg/nuFyHw3P2B26MlH/0Bo92N0lT3FdCEECPe+zMDTK1CGYT/g==
+firebase-tools@^10.1.1:
+  version "10.1.1"
+  resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-10.1.1.tgz#1aeab1b058c9adbca1884cfe743380d196ef5065"
+  integrity sha512-rL/p4TJ1KSDymIO7Ve4WJT8P3tvpzvU0G1AfqzmvouuYO7eCuv8yOaZwkpXmM48F1YiHqlj28YgAt5Vyh2u+nw==
   dependencies:
     "@google-cloud/pubsub" "^2.7.0"
     JSONStream "^1.2.1"
@@ -9978,10 +9978,10 @@ linked-list@0.1.0:
   resolved "https://registry.yarnpkg.com/linked-list/-/linked-list-0.1.0.tgz#798b0ff97d1b92a4fd08480f55aea4e9d49d37bf"
   integrity sha1-eYsP+X0bkqT9CEgPVa6k6dSdN78=
 
-lint-staged@^12.2.0:
-  version "12.2.0"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-12.2.0.tgz#6f7298399519efc382a414d36717949714b705c3"
-  integrity sha512-TnNciMBhmEqzqM+RvzqqdvrG4TsI8wCDMX1Vg9+rj2Y9uY70Nq84Mb1WOIiwxW9l5tUlCOqtY5La71RM2fSgfA==
+lint-staged@^12.2.1:
+  version "12.2.1"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-12.2.1.tgz#e37b5a81deaabf5823f43b3aa903a70c15c9d0b3"
+  integrity sha512-VCVcA9C2Vt5HHxSR4EZVZFJcQRJH984CGBeY+cJ/xed4mBd+JidbM/xbKcCq5ASaygAV0iITtdsCTnID7h/1OQ==
   dependencies:
     cli-truncate "^3.1.0"
     colorette "^2.0.16"
@@ -12640,10 +12640,10 @@ react-native-version@^4.0.0:
     resolve-from "^5.0.0"
     semver "^7.0.0"
 
-react-native-webview@^11.16.0:
-  version "11.16.0"
-  resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-11.16.0.tgz#51dce13480aa4f8f727307df05b8bfaf74ca3d14"
-  integrity sha512-yap3dO3adMQp4z5oDzlcgcv6XPsfHAtt1E3ort94GthrunswaZhL6AfMiDOsNnKQmlUA+o4LNJsnlAy1b10rUg==
+react-native-webview@^11.17.0:
+  version "11.17.0"
+  resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-11.17.0.tgz#318ee8314662866148ca2b8db07549038e1c0c64"
+  integrity sha512-mm6XYOne4K0c9eYOArmJOuo9fOUeESB7DT+xihLcX84qMTsepPTcnkKha5BxuFwlvKKlSj4KzgkUMl15Mhbvdw==
   dependencies:
     escape-string-regexp "2.0.0"
     invariant "2.2.4"
