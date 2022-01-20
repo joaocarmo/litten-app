@@ -1,15 +1,23 @@
 import { StyleSheet, Text } from 'react-native'
+import type { TextProps } from 'react-native'
 import { useTheme } from '@hooks'
 
+export type UITextProps = {
+  bold?: boolean
+  centered?: boolean
+  noPadding?: boolean
+  small?: boolean
+} & TextProps
+
 const UIText = ({
-  bold = false,
-  centered = false,
+  bold,
+  centered,
   children,
-  noPadding = false,
-  small = false,
+  noPadding,
+  small,
   style,
   ...otherProps
-}) => {
+}: UITextProps) => {
   const { createStyles } = useTheme()
 
   const styles = createStyles((theme, typography) => ({
@@ -53,6 +61,13 @@ const UIText = ({
       {children}
     </Text>
   )
+}
+
+UIText.defaultProps = {
+  bold: false,
+  centered: false,
+  noPadding: false,
+  small: false,
 }
 
 export default UIText

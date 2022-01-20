@@ -1,7 +1,8 @@
-import { memo, useCallback } from 'react'
-import type { FC } from 'react'
+import { useCallback } from 'react'
 import { StyleSheet, View } from 'react-native'
+import type { ViewStyle } from 'react-native'
 import UIImage from '@ui-elements/image'
+import type { UIImageProps } from '@ui-elements/image'
 import {
   USER_AVATAR_SIZE_LARGE,
   USER_AVATAR_SIZE_MEDIUM,
@@ -9,41 +10,19 @@ import {
 } from '@utils/constants'
 
 type UIAvatarProps = {
-  containerStyle: any
+  containerStyle: ViewStyle
   resizeMode: string
   size: 'mini' | 'medium' | 'large'
-  source:
-    | string
-    | {
-        uri: string
-      }
-  style: any
-}
+} & UIImageProps
 
-const areEqual = (prevProps, nextProps) => {
-  const prevSource =
-    typeof prevProps.source === 'string'
-      ? prevProps.source
-      : prevProps.source.uri
-  const nextSource =
-    typeof nextProps.source === 'string'
-      ? nextProps.source
-      : nextProps.source.uri
-  return (
-    prevProps.resizeMode === nextProps.resizeMode &&
-    prevProps.size === nextProps.size &&
-    prevSource === nextSource
-  )
-}
-
-const UIAvatar: (props: UIAvatarProps) => FC<UIAvatarProps> = ({
+const UIAvatar = ({
   containerStyle,
   resizeMode = 'cover',
   size = 'mini',
   source,
   style,
   ...otherProps
-}) => {
+}: UIAvatarProps) => {
   const getSize = useCallback(() => {
     switch (size) {
       case 'large':
@@ -89,4 +68,5 @@ const styles = StyleSheet.create({
     borderRadius: USER_AVATAR_SIZE_MINI,
   },
 })
-export default memo<UIAvatarProps>(UIAvatar, areEqual)
+
+export default UIAvatar

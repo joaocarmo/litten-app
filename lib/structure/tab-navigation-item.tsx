@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 import { Pressable, View } from 'react-native'
+import type { PressableProps } from 'react-native'
 import { useTheme, usePaddingBottom } from '@hooks'
 import { UIBadge } from '@ui-elements'
 import {
@@ -8,13 +9,26 @@ import {
   STRUCTURE_TAB_NAV_ICON_INDICATOR_DISTANCE,
   STRUCTURE_TAB_NAV_ICON_SIZE,
 } from '@utils/constants'
+import type { IconTypeComponent } from '@ui-elements/types'
+
+type TabNavigationItemOptions = {
+  tabBarIcon: IconTypeComponent
+  tabBarBadge?: number
+}
+
+export type TabNavigationItemProps = {
+  isFocused?: boolean
+  onPress?: PressableProps['onPress']
+  onLongPress?: PressableProps['onLongPress']
+  options: TabNavigationItemOptions
+}
 
 const TabNavigationItem = ({
   isFocused,
   onLongPress,
   onPress,
   options: { tabBarIcon: TabBarIconComponent, tabBarBadge = 0 },
-}) => {
+}: TabNavigationItemProps) => {
   const { insetBottom } = usePaddingBottom()
   const {
     createStyles,
@@ -81,6 +95,13 @@ const TabNavigationItem = ({
       />
     </Pressable>
   )
+}
+
+TabNavigationItem.defaultProps = {
+  isFocused: false,
+  onPress: undefined,
+  onLongPress: undefined,
+  options: { tabBarIcon: null, tabBarBadge: 0 },
 }
 
 export default TabNavigationItem

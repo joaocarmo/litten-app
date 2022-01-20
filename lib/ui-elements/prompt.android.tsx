@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import Dialog from 'react-native-dialog'
 import { useTheme } from '@hooks'
 import { translate } from '@utils/i18n'
@@ -8,7 +8,6 @@ const UIPrompt = ({
   confirmLabel,
   defaultValue = '',
   isDestructive = false,
-  // keyboardType,
   message,
   onCancel,
   onConfirm,
@@ -22,6 +21,10 @@ const UIPrompt = ({
   } = useTheme()
 
   const secureTextEntry = type === 'secure-text'
+
+  const handleOnPress = useCallback(() => {
+    onConfirm(inputText)
+  }, [inputText, onConfirm])
 
   if (!open) {
     return null
@@ -41,7 +44,7 @@ const UIPrompt = ({
       <Dialog.Button label={cancelLabel} onPress={onCancel} />
       <Dialog.Button
         label={confirmLabel}
-        onPress={() => onConfirm(inputText)}
+        onPress={handleOnPress}
         color={isDestructive ? colors.danger : undefined}
       />
     </Dialog.Container>

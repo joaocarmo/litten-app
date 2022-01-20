@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef } from 'react'
-import type { FC, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { Animated, Pressable, Text } from 'react-native'
 import type { PressableProps } from 'react-native'
 import { useTheme } from '@hooks'
@@ -16,7 +16,7 @@ const UITooltip = ({
   animated = true,
   children,
   ...otherProps
-}: UITooltipProps): FC<UITooltipProps> => {
+}: UITooltipProps) => {
   const {
     createStyles,
     commonStyles: {

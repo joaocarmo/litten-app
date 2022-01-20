@@ -1,10 +1,22 @@
 import { Pressable, StyleSheet, View } from 'react-native'
+import type { ViewProps } from 'react-native'
 import { useNavigation, useNavigationState } from '@react-navigation/native'
 import { UIText } from '@ui-elements'
 import { useTheme } from '@hooks'
+import type { StackNavigationProp } from '@react-navigation/stack'
+import type { Tab } from '@templates/types'
+import type { TabularStackParamList } from '@utils/types/routes'
 
-const ScreenTabularNav = ({ tabs = [], style = null }) => {
-  const navigation = useNavigation()
+export type ScreenTabularNavProps = {
+  tabs?: Tab[]
+  style?: ViewProps['style']
+}
+
+export type ScreenTabularNavNavigationProp =
+  StackNavigationProp<TabularStackParamList>
+
+const ScreenTabularNav = ({ tabs, style }: ScreenTabularNavProps) => {
+  const navigation = useNavigation<ScreenTabularNavNavigationProp>()
   const { createStyles } = useTheme()
 
   const styles = createStyles((theme, typography) => ({
@@ -51,6 +63,11 @@ const ScreenTabularNav = ({ tabs = [], style = null }) => {
         ))}
     </View>
   )
+}
+
+ScreenTabularNav.defaultProps = {
+  tabs: [],
+  style: null,
 }
 
 export default ScreenTabularNav

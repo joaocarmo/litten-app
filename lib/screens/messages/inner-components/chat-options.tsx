@@ -16,14 +16,25 @@ import {
   SCREEN_LITTEN_POST,
   SCREEN_PROFILE_REPORT,
   SCREEN_TAB_NAV_PROFILE,
-  SCREEN_USER_PROFILE,
+  SCREEN_PROFILE_VIEW,
   UI_DROPDOWN_MARGIN,
   UI_EXTRA_OPTION_SIZE,
 } from '@utils/constants'
 import { translate } from '@utils/i18n'
+import type { BasicChat } from '@model/types/chat'
+import type { BasicLitten } from '@model/types/litten'
+import type { BasicUser } from '@model/types/user'
+import type { ChatOptionsNavigationProp } from '@utils/types/routes'
 
-const ChatOptions = ({ chat = {}, litten = {}, recipient = {}, user = {} }) => {
-  const navigation = useNavigation()
+export type ChatOptionsProps = {
+  chat: BasicChat
+  litten: BasicLitten
+  recipient: BasicUser
+  user: BasicUser
+}
+
+const ChatOptions = ({ chat, litten, recipient, user }: ChatOptionsProps) => {
+  const navigation = useNavigation<ChatOptionsNavigationProp>()
   const [currentlyActiveChat] = useCurrentlyActiveChat()
   const {
     theme: { colors },
@@ -89,7 +100,7 @@ const ChatOptions = ({ chat = {}, litten = {}, recipient = {}, user = {} }) => {
         label: translate('screens.messages.options.viewProfile'),
         value: CONVERSATION_VIEW_PROFILE,
         onSelect: () =>
-          navigation.navigate(SCREEN_USER_PROFILE, {
+          navigation.navigate(SCREEN_PROFILE_VIEW, {
             user: recipient,
           }),
         disabled: !recipientExists,
@@ -155,6 +166,13 @@ const ChatOptions = ({ chat = {}, litten = {}, recipient = {}, user = {} }) => {
       style={styles.menuContainer}
     />
   )
+}
+
+ChatOptions.defaultProps = {
+  chat: {},
+  litten: {},
+  recipient: {},
+  user: {},
 }
 
 const styles = StyleSheet.create({

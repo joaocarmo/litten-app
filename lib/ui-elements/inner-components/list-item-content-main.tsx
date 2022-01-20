@@ -1,34 +1,24 @@
-import { memo } from 'react'
-import type { FC, ReactNode } from 'react'
 import { Text, View } from 'react-native'
+import type { TextProps } from 'react-native'
 import { useTheme } from '@hooks'
 
-type UIListItemContentMainProps = {
+export type UIListItemContentMainProps = {
   caption?: string
-  children?: ReactNode
+  children?: TextProps['children']
   isPressed?: boolean
   noFeedback?: boolean
   selected?: boolean
-  style?: any
+  style?: TextProps['style']
 }
 
-const areEqual = (prevProps, nextProps) =>
-  prevProps.caption === nextProps.caption &&
-  prevProps.children === nextProps.children &&
-  prevProps.isPressed === nextProps.isPressed &&
-  prevProps.noFeedback === nextProps.noFeedback &&
-  prevProps.selected === nextProps.selected
-
-const UIListItemContentMain: (
-  props: UIListItemContentMainProps,
-) => FC<UIListItemContentMainProps> = ({
-  caption = null,
-  children = null,
-  isPressed = false,
-  noFeedback = false,
-  selected = false,
+const UIListItemContentMain = ({
+  caption,
+  children,
+  isPressed,
+  noFeedback,
+  selected,
   style,
-}) => {
+}: UIListItemContentMainProps) => {
   const { createStyles } = useTheme()
 
   const styles = createStyles((theme, typography) => ({
@@ -92,7 +82,8 @@ const UIListItemContentMain: (
   }
 
   if (typeof children !== 'string') {
-    return children
+    // eslint-disable-next-line react/jsx-no-useless-fragment
+    return <>{children}</>
   }
 
   return (
@@ -109,4 +100,12 @@ const UIListItemContentMain: (
   )
 }
 
-export default memo<UIListItemContentMainProps>(UIListItemContentMain, areEqual)
+UIListItemContentMain.defaultProps = {
+  caption: null,
+  children: null,
+  isPressed: false,
+  noFeedback: false,
+  selected: false,
+}
+
+export default UIListItemContentMain

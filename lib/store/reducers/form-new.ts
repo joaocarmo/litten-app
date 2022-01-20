@@ -2,14 +2,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import type { DBLocationObject } from '@db/schemas/location'
 import { locationSchema } from '@db/schemas/location'
-import type { NewForm, PhotoObject } from '@store/types'
+import type { PhotoObject } from '@store/types'
 
 type PhotoPayload = {
   photo?: PhotoObject
   photoIndex?: number
 }
 
-const initialState: NewForm = {
+const initialState = {
   location: locationSchema,
   photos: [],
   species: '',
@@ -20,7 +20,7 @@ const initialState: NewForm = {
   useExtraInfo: false,
 }
 
-const formNewSlice = createSlice<NewForm>({
+const formNewSlice = createSlice({
   name: 'formNew',
   initialState,
   reducers: {

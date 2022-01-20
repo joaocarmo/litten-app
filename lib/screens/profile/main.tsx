@@ -21,10 +21,17 @@ import {
 import { getListItemLayout } from '@utils/functions'
 import { reportTypes } from '@utils/litten'
 import { translate } from '@utils/i18n'
+import type { ProfileMainScreenNavigationProp } from '@utils/types/routes'
+
+type MainList = ReadonlyArray<{
+  key: string
+  title: string
+  data: any[]
+}>
 
 const ProfileMainScreen = () => {
   const [activePosts, pastPosts] = useUserPosts()
-  const navigation = useNavigation()
+  const navigation = useNavigation<ProfileMainScreenNavigationProp>()
   const { showActionSheetWithOptions } = useActionSheet()
   const withPaddingBottom = usePaddingBottom()
   const {
@@ -82,7 +89,7 @@ const ProfileMainScreen = () => {
     )
   }, [signout])
 
-  const mainOptions = useMemo(
+  const mainOptions: MainList = useMemo(
     () => [
       {
         key: 'firstHeader',

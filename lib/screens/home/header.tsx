@@ -1,3 +1,4 @@
+import { useCallback } from 'react'
 import { Keyboard, Pressable, Text } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { useSearchFilters, useTheme } from '@hooks'
@@ -10,14 +11,14 @@ import {
   SCREEN_HOME_FILTER,
   STRUCTURE_TEMPLATE_SCREEN_PADDING,
 } from '@utils/constants'
-import { useCallback } from 'react'
+import type { HomeIndexHeaderNavigationProp } from '@utils/types/routes'
 
 const HomeIndexHeader = ({
   showSearchHistory: searchHistoryVisisble,
   setShowSearchHistory,
 }) => {
   const [filters] = useSearchFilters()
-  const navigation = useNavigation()
+  const navigation = useNavigation<HomeIndexHeaderNavigationProp>()
   const { createStyles } = useTheme()
 
   const styles = createStyles((theme, typography) => ({

@@ -1,13 +1,13 @@
-import type { FC } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { useTheme } from '@hooks'
 import { Litten as LittenLogo } from '@images/components/logo'
 import { UI_ABOUT_LOGO_HEIGHT, UI_ABOUT_LOGO_WIDTH } from '@utils/constants'
 
-const Header: () => FC = () => {
+const Header = () => {
   const {
     theme: { colors },
   } = useTheme()
+
   return (
     <View style={styles.header}>
       <LittenLogo

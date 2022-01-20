@@ -1,3 +1,4 @@
+import type { FetchMock } from 'jest-fetch-mock'
 import {
   getExternalGeoInformation,
   getGeoInformation,
@@ -6,6 +7,8 @@ import {
 } from '@utils/network'
 import geocodingResponse from './responses/geocoding-response.json'
 import reverseGeocodingResponse from './responses/reverse-geocoding-response.json'
+
+const fetchMock = fetch as FetchMock
 
 jest.mock('../../utils/fetcher.ts')
 
@@ -16,7 +19,7 @@ afterEach(() => {
 
 describe('Test the external network requests', () => {
   beforeEach(() => {
-    fetch.resetMocks()
+    fetchMock.resetMocks()
     jest.useRealTimers()
   })
 
@@ -41,7 +44,7 @@ describe('Test the external network requests', () => {
       objectResponse[key] = ''
     })
 
-    fetch.mockResponse(JSON.stringify(objectResponse))
+    fetchMock.mockResponse(JSON.stringify(objectResponse))
     const data = await getExternalGeoInformation()
     const K = Object.keys(data).length
 
@@ -60,7 +63,7 @@ describe('Test the external network requests', () => {
     const expectedKeys = ['geometry']
     const address = '1600 Amphitheatre Parkway, Mountain View, CA'
 
-    fetch.mockResponse(JSON.stringify(geocodingResponse))
+    fetchMock.mockResponse(JSON.stringify(geocodingResponse))
 
     const response = await getGeoInformation(address)
 
@@ -82,7 +85,7 @@ describe('Test the external network requests', () => {
       longitude: -73.961452,
     }
 
-    fetch.mockResponse(JSON.stringify(reverseGeocodingResponse))
+    fetchMock.mockResponse(JSON.stringify(reverseGeocodingResponse))
 
     const response = await getReverseGeoInformation(coordinates)
 
@@ -98,7 +101,7 @@ describe('Test the external network requests', () => {
   })
 
   it('submits the user feedback and returns the status', async () => {
-    fetch.mockResponse(JSON.stringify({}))
+    fetchMock.mockResponse(JSON.stringify({}))
 
     const result = await submitUserFeedback('type', 'message')
 

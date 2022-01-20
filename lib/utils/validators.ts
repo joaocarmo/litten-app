@@ -1,8 +1,14 @@
 import { parsePhoneNumberFromString as parseMobile } from 'libphonenumber-js/mobile'
+import type {
+  CountryCallingCode,
+  CountryCode,
+  E164Number,
+} from 'libphonenumber-js/types'
 import { stringifyLocation } from '@utils/functions'
 import { littenSpeciesList, littenTypes } from '@utils/litten'
 import { translate } from '@utils/i18n'
 import type { GLocationParsed } from '@utils/types/functions'
+import type { PhotoObject } from '@store/types'
 
 /**
  * Generic validators and utilities
@@ -36,10 +42,10 @@ export function validEmail(): (value: string) => boolean {
 }
 
 export function validPhoneNumber(
-  country: string,
+  country: CountryCode,
   callingCode: string | number,
-): (value: string | number) => boolean {
-  return (value: string | number) => {
+) {
+  return (value: string) => {
     let isValid = false
     const phoneNumber = parseMobile(value, country)
     isValid = phoneNumber && phoneNumber.isValid()
@@ -171,9 +177,9 @@ export function countryValidator(country: string): {
 }
 
 export function phoneNumberValidator(
-  phoneNumber: string | number,
-  country: string,
-  callingCode: string | number,
+  phoneNumber: E164Number,
+  country: CountryCode,
+  callingCode: CountryCallingCode,
 ): {
   error: boolean
   errorMessage: string
@@ -184,7 +190,7 @@ export function phoneNumberValidator(
       errorMessage: translate('feedback.errorMessages.blankPhoneNumber'),
     },
     {
-      testFn: validPhoneNumber(country, callingCode),
+      testFn: validPhoneNumber(country, String(callingCode)),
       errorMessage: translate('feedback.errorMessages.invalidPhoneNumber'),
     },
   ]
@@ -207,7 +213,7 @@ export function avatarValidator(avatar: string): {
 /**
  * New litten validators
  */
-export function littenPhotoValidator(photos: string[]): {
+export function littenPhotoValidator(photos: PhotoObject[]): {
   error: boolean
   errorMessage: string
 } {

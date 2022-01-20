@@ -1,30 +1,17 @@
 /* eslint-disable class-methods-use-this */
-/* eslint-disable max-classes-per-file */
 import { APP_IS_DEV } from '@utils/env'
 import storage from '@react-native-firebase/storage'
 import firestore from '@db/firestore'
 import Base from '@model/base'
-import type { BasicLitten, LittenClass } from '@model/types/litten'
-import type { BasicUser } from '@model/types/user'
-import type { PhotoObject } from '@store/types'
+import { LittenError } from '@model/error/litten'
 import { string2tags } from '@utils/functions'
 import { logError } from '@utils/dev'
 import { DB_LITTEN_COLLECTION, STORAGE_LITTEN_PHOTOS } from '@utils/constants'
+import type { BasicLitten } from '@model/types/litten'
+import type { BasicUser } from '@model/types/user'
+import type { PhotoObject } from '@store/types'
 
-export class LittenError extends Error {
-  constructor(...args: string[]) {
-    super(...args)
-
-    // Maintains proper stack trace for where the error was thrown
-    if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, LittenError)
-    }
-
-    this.name = 'LittenError'
-  }
-}
-
-export default class Litten extends Base implements LittenClass {
+export default class Litten extends Base {
   #active
 
   #photos
@@ -86,67 +73,67 @@ export default class Litten extends Base implements LittenClass {
     return this.#active
   }
 
-  set active(active = true) {
-    this.#active = active
+  set active(active: boolean) {
+    this.#active = active || false
   }
 
-  get photos(): Array<PhotoObject> {
+  get photos(): PhotoObject[] {
     return this.#photos ?? []
   }
 
-  set photos(photos: PhotoObject[] = []) {
-    this.#photos = photos
+  set photos(photos: PhotoObject[]) {
+    this.#photos = photos || []
   }
 
   get mainPhoto(): PhotoObject {
     return this.photos[0]
   }
 
-  get species(): (string & (void | string)) | string {
-    return this.#species
+  get species(): string {
+    return this.#species || ''
   }
 
-  set species(species = '') {
-    this.#species = species
+  set species(species: string) {
+    this.#species = species || ''
   }
 
-  get story(): (string & (void | string)) | string {
-    return this.#story
+  get story(): string {
+    return this.#story || ''
   }
 
-  set story(story = '') {
-    this.#story = story
+  set story(story: string) {
+    this.#story = story || ''
   }
 
   get title(): string {
-    return this.#title
+    return this.#title || ''
   }
 
-  set title(title = '') {
-    this.#title = title
+  set title(title: string) {
+    this.#title = title || ''
   }
 
   get type(): string {
-    return this.#type
+    return this.#type || ''
   }
 
-  set type(type = '') {
-    this.#type = type
+  set type(type: string) {
+    this.#type = type || ''
   }
 
-  get userUid(): void | string {
-    return this.#userUid
+  get userUid(): string {
+    return this.#userUid || ''
   }
 
-  set userUid(userUid = '') {
-    this.#userUid = userUid
+  set userUid(userUid: string) {
+    this.#userUid = userUid || ''
   }
 
   get user(): BasicUser | null {
     return this.#user
   }
 
-  set user(user: BasicUser | null = {}) {
+  set user(user: BasicUser | null) {
     this.#user = user
   }
 
@@ -158,7 +145,7 @@ export default class Litten extends Base implements LittenClass {
     return this.#tags
   }
 
-  set tags(tags: string | string[] = []) {
+  set tags(tags: string | string[]) {
     if (typeof tags === 'string') {
       this.#tags = [...new Set([...this.#tags, tags])]
     }

@@ -10,15 +10,16 @@ import { shortenName } from '@utils/functions'
 import {
   PLACEHOLDER_USER_DISPLAY_NAME,
   SCREEN_PROFILE_EDIT,
-  SCREEN_USER_PROFILE,
+  SCREEN_PROFILE_VIEW,
   STRUCTURE_TEMPLATE_SCREEN_HEADER_PROFILE_WIDTH,
   UI_ICON_SIZE_MINI,
 } from '@utils/constants'
+import type { ProfileIndexScreenNavigationProp } from '@utils/types/routes'
 
 const ProfileIndexScreen = () => {
   const [user] = useUserInfo()
   const { displayName, photoURL = null } = user
-  const navigation = useNavigation()
+  const navigation = useNavigation<ProfileIndexScreenNavigationProp>()
   const {
     createStyles,
     theme: { colors },
@@ -54,7 +55,7 @@ const ProfileIndexScreen = () => {
         <View style={styles.header}>
           <Pressable
             onPress={() =>
-              navigation.navigate(SCREEN_USER_PROFILE, {
+              navigation.navigate(SCREEN_PROFILE_VIEW, {
                 user,
               })
             }

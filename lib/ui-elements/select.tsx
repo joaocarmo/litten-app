@@ -1,27 +1,51 @@
-import { useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import { Pressable, StyleSheet, View } from 'react-native'
 import { useTheme } from '@hooks'
 import UIInput from '@ui-elements/input'
 import UISelectPlatform from '@ui-elements/inner-components/select'
 import { UI_SELECT_OPTION_HEIGHT } from '@utils/constants'
 
+export type UISelectProps = {
+  error: boolean
+  errorMessage: string
+  items: Array<{ key: string; label: string; value: string | number }>
+  onChange: (value: string | number) => void
+  placeholder: string
+  selectedValue: string | number
+}
+
 const UISelect = ({
   error,
   errorMessage,
-  items = [],
+  items,
   placeholder,
   selectedValue,
   ...otherProps
-}) => {
+}: UISelectProps) => {
   const [selectorOpen, setSelectorOpen] = useState(false)
-  const {
-    theme: { colors },
-  } = useTheme()
+  const { createStyles } = useTheme()
 
-  const toggleModal = () => setSelectorOpen(!selectorOpen)
+  const toggleModal = useCallback(
+    () => setSelectorOpen(!selectorOpen),
+    [selectorOpen],
+  )
 
-  const translateSelectedValue = () =>
-    items.find(({ value }) => value === selectedValue)?.label
+  const translateSelectedValue = useCallback(
+    () => items.find(({ value }) => value === selectedValue)?.label,
+    [items, selectedValue],
+  )
+
+  const styledOpenSelector = createStyles((theme) => ({
+    borderBottomColor: theme.colors.text,
+  }))
+
+  const inputStyle = useMemo(
+    () =>
+      selectorOpen
+        ? StyleSheet.compose(styles.selectInput, styledOpenSelector)
+        : styles.selectInput,
+    [selectorOpen, styledOpenSelector],
+  )
 
   return (
     <View style={styles.selectContainer}>
@@ -32,14 +56,7 @@ const UISelect = ({
         <UIInput
           placeholder={placeholder}
           editable={false}
-          style={StyleSheet.compose(
-            styles.selectInput,
-            selectorOpen
-              ? {
-                  borderBottomColor: colors.text,
-                }
-              : {},
-          )}
+          style={inputStyle}
           value={translateSelectedValue()}
           error={error}
           errorMessage={errorMessage}
@@ -67,4 +84,5 @@ const styles = StyleSheet.create({
     width: '100%',
   },
 })
+
 export default UISelect

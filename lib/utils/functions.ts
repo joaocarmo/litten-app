@@ -1,7 +1,7 @@
 import { APP_IS_DEV, IS_BETA_RELASE } from '@utils/env'
 import base64 from 'base-64'
 import md5Hex from 'md5-hex'
-import isEmpty from 'lodash.isempty'
+import isEmpty from 'lodash/isEmpty'
 import { locationSchema } from '@db/schemas/location'
 import {
   BETA_ENABLED,
@@ -21,6 +21,8 @@ import {
 } from '@utils/constants'
 import { littenSpeciesList, littenTypes } from '@utils/litten'
 import { translate } from '@utils/i18n'
+import type { FirebaseRemoteConfigTypes } from '@react-native-firebase/remote-config'
+import type { Image } from 'react-native-image-crop-picker'
 import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
 import type { LittenFeedObject, SearchFilters } from '@store/types'
 import type {
@@ -101,7 +103,7 @@ export const mapCountriesToSelector = (item: {
   name: {
     common: string
   }
-}): void | {
+}): {
   key: string
   label: string
   value: string
@@ -121,7 +123,7 @@ export const mapCountriesToSelector = (item: {
  * @param {string} code - The error code to get the message for
  * @returns {string}
  */
-export const getErrorMessage = (type: string, code: string): any | string => {
+export const getErrorMessage = (type: string, code: string): string => {
   const defaultValue = 'Unknown error'
 
   if (type && typeof type === 'string' && code && typeof code === 'string') {
@@ -145,12 +147,12 @@ export const getErrorMessage = (type: string, code: string): any | string => {
  * @returns {string}
  */
 export const parseAvatar = (
-  avatar = '',
+  avatar: string,
   {
     email = '',
     size = 512,
   }: {
-    email: string
+    email?: string
     size?: number
   } = {},
 ): string => {
@@ -180,7 +182,7 @@ export const parseAvatar = (
  * @param {Object<string, string>} location - Location object
  * @returns {boolean}
  */
-export const isValidLocation = (location: DBLocationObject = {}): boolean => {
+export const isValidLocation = (location: DBLocationObject): boolean => {
   if (isEmpty(location)) {
     return false
   }
@@ -188,14 +190,15 @@ export const isValidLocation = (location: DBLocationObject = {}): boolean => {
   const validKeys = Object.keys(locationSchema)
   const hasValidCountryCode = (location?.country || '').length === 2
   let numValidKeys = 0
+
   validKeys.forEach((key) => {
-    const isValidLocationValue =
-      ((location?.[key] as any as string) || '').length > 1
+    const isValidLocationValue = (location?.[key] || '').length > 1
 
     if (isValidLocationValue) {
       numValidKeys += 1
     }
   })
+
   return hasValidCountryCode && numValidKeys > 2
 }
 
@@ -223,10 +226,10 @@ export const getLocationType = (types: string[] = []): string => {
  * @returns {GLocation}
  */
 export const parseGoogleMapResponse = (
-  location: GResponse = {},
+  location: GResponse,
   long = false,
 ): GLocation => {
-  const { address_components: components } = location
+  const { address_components: components } = location || {}
   const parsed = {}
 
   if (components) {
@@ -238,7 +241,7 @@ export const parseGoogleMapResponse = (
     }
   }
 
-  return parsed
+  return parsed as GLocation
 }
 
 /**
@@ -246,7 +249,9 @@ export const parseGoogleMapResponse = (
  * @param {Object.<string, string>} location - Googles's location object
  * @returns {Object.<string, string>}
  */
-export const mapGoogleLocationKeys = (location: GLocation): GLocationParsed => {
+export const mapGoogleLocationKeys = (
+  location: GLocation,
+): GLocationParsed | void => {
   const keyMap = {
     administrative_area_level_1: 'administrativeArea1',
     administrative_area_level_2: 'administrativeArea2',
@@ -264,12 +269,12 @@ export const mapGoogleLocationKeys = (location: GLocation): GLocationParsed => {
 
   if (typeof location === 'object') {
     Object.keys(location).forEach((oldKey) => {
-      const newKey = keyMap?.[oldKey]
-      mapped[newKey || oldKey] = location[oldKey]
+      const newKey: string = keyMap?.[oldKey] || oldKey
+      mapped[newKey] = location[oldKey]
     })
   }
 
-  return mapped
+  return mapped as GLocationParsed
 }
 
 /**
@@ -398,11 +403,10 @@ export const distanceBetween = (
  * @param {string} key - A string to match the object's key with
  * @returns {Object|void}
  */
-export const getFromListByKey = (
-  list: Record<string, unknown>[],
+export const getFromListByKey = <T extends { key: string }>(
+  list: Array<T>,
   key = '',
-): Record<string, unknown> | void =>
-  list.find(({ key: objectKey }) => objectKey === key)
+): T | null => list.find(({ key: objectKey }) => objectKey === key) ?? null
 
 /**
  * Returns the index of a litten object from an array of litten objects
@@ -440,11 +444,7 @@ export const shortenName = (fullName = ''): string => {
  * @param {{data:string,mime:string,path:string}} image - The image object
  * @returns {string}
  */
-export const getImagePath = (image: {
-  data: string
-  mime: string
-  path: string
-}): string => {
+export const getImagePath = (image: Image): string => {
   if (image) {
     if (APP_IS_DEV) {
       return `data:${image.mime};base64,${image.data}`
@@ -507,6 +507,7 @@ export const littenToHeaderTitle = ({
 }: BasicLitten = {}): string => {
   const speciesLabel = getFromListByKey(littenSpeciesList, species)?.labelOne
   const typeLabel = getFromListByKey(littenTypes, type)?.label
+
   return title && species && type
     ? translate('screens.messages.littenTitle', {
         species: speciesLabel,
@@ -596,7 +597,7 @@ export const getListItemLayout = (
 export const filterData = (
   data: LittenFeedObject[],
   {
-    filters = {},
+    filters,
   }: {
     filters?: SearchFilters
   },
@@ -607,7 +608,8 @@ export const filterData = (
       littenType: filterType = '',
       locationRadius: filterRadius = 0,
       userType: filterUserType = '',
-    } = filters
+    } = filters ?? {}
+
     const filteredData: LittenFeedObject[] = data.filter(
       ({ distance, isFromOrganization, species, type }) => {
         let isAllowed = true
@@ -653,13 +655,14 @@ export const filterData = (
  * @param {number} timeout The execution time limit for the promise
  * @returns {Promise}
  */
-export const execOrTimeout = (
-  asyncFn: Promise<unknown>,
+export const execOrTimeout = <T>(
+  asyncFn: Promise<T>,
   timeout: number,
-): Promise<unknown> => {
-  const racePromise = new Promise((resolve, reject) => {
+): Promise<T | void> => {
+  const racePromise = new Promise<void>((resolve, reject) => {
     setTimeout(reject, timeout, new Error('Async function timed out'))
   })
+
   return Promise.race([asyncFn, racePromise])
 }
 
@@ -670,7 +673,7 @@ export const execOrTimeout = (
  * @returns {string}
  */
 export const blockingValidator = (
-  appConfig: Record<string, unknown>,
+  appConfig: FirebaseRemoteConfigTypes.ConfigValues,
 ): string => {
   const appIsBlocked = ''
 
@@ -681,7 +684,7 @@ export const blockingValidator = (
   const entries = Object.entries(appConfig)
 
   for (const entry of entries) {
-    const [key, value]: [string, unknown] = entry
+    const [key, value] = entry
 
     if (key === BETA_ENABLED && IS_BETA_RELASE && value.asBoolean() === false) {
       return BETA_ENABLED

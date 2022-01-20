@@ -5,13 +5,14 @@ import {
   JIRA_EMAIL,
   SLACK_WEBHOOK_URL,
 } from '@utils/env'
-import memoize from 'lodash.memoize'
+import memoize from 'lodash/memoize'
 import { Alert } from 'react-native'
 import FormData from 'react-native/Libraries/Network/FormData'
 import type { DBCoordinateObject } from '@db/schemas/location'
 import type { GeoInformation } from '@utils/types/network'
 import { reportTypes } from '@utils/litten'
 import { createAuthHeader, getFromListByKey } from '@utils/functions'
+import type { ListOfReportTypes } from '@utils/types/litten'
 import fetcher from '@utils/fetcher'
 import {
   JIRA_APPEND_ATTACHMENT,
@@ -20,6 +21,7 @@ import {
 } from '@utils/constants'
 import { debugLog, logError } from '@utils/dev'
 import { translate } from '@utils/i18n'
+import type { GResponse } from '@utils/types/functions'
 import config from '../../package.json'
 
 /**
@@ -29,7 +31,7 @@ import config from '../../package.json'
  * @param {string} id - The resource ID
  * @returns {*}
  */
-export const getFromModel = async <T>(Model: T, id: string): Promise<T> => {
+export const getFromModel = async (Model: any, id: string): Promise<any> => {
   const resource = new Model({
     id,
   })
@@ -70,59 +72,57 @@ export const handleNetworkError = (err: Error): void => {
  * Finds geolocation information based on the device's IP address
  * @async
  * @param {string} externalIP - An external IP address
- * @returns {{ip: string, country_code: string, country_name: string, region_code: string, region_name: string, city: string, zip_code: string, time_zone: string, latitude: number, longitude: number, metro_code: number}}
+ * @returns {GeoInformation}
  */
 export async function getExternalGeoInformation(
   externalIP = '',
-): Promise<GeoInformation> {
+): Promise<GeoInformation | null> {
   const apiUri = `https://freegeoip.live/json/${externalIP}`
-  let jsonData = {}
 
   try {
     const data = await fetcher(apiUri)
-    jsonData = await data.json()
+    const jsonData = (await data.json()) as GeoInformation
+    return jsonData
   } catch (e) {
     debugLog(e)
   }
 
-  return jsonData
+  return null
 }
 
 /**
  * Finds geolocation information based on the address
  * @async
  * @param {string} address
- * @returns {Array.<{address_components: Array<{long_name: string, short_name: string, types: string[]}>, formatted_address: string, geometry: Object, place_id: string, plus_code: Object, types: string[]}>}
+ * @returns {GResponse[]}
  */
-export async function getGeoInformation(address: string): Promise<null> {
+export async function getGeoInformation(address: string): Promise<GResponse[]> {
   const apiUri = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${GOOGLE_API_KEY}`
-  let results = null
 
   try {
     const data = await fetcher(apiUri)
     const jsonData = await data.json()
 
     if (jsonData?.status === 'OK') {
-      results = jsonData?.results
+      return jsonData?.results as GResponse[]
     }
   } catch (err) {
     handleNetworkError(err)
   }
 
-  return results
+  return null
 }
 
 /**
  * Finds reverse geolocation information based on the coordinates
  * @async
- * @param {{latitude: string, longitude: string}} coordinates
- * @returns {Array.<{address_components: Array<{long_name: string, short_name: string, types: string[]}>, formatted_address: string, geometry: Object, place_id: string, plus_code: Object, types: string[]}>}
+ * @param {DBCoordinateObject} coordinates
+ * @returns {GResponse}
  */
 export async function getReverseGeoInformation(
   coordinates: DBCoordinateObject,
-): Promise<null> {
+): Promise<GResponse[]> {
   const { latitude, longitude } = coordinates
-  let results = null
 
   if (latitude && longitude) {
     const apiUri = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${GOOGLE_API_KEY}`
@@ -132,14 +132,22 @@ export async function getReverseGeoInformation(
       const jsonData = await data.json()
 
       if (jsonData?.status === 'OK') {
-        results = jsonData?.results
+        return jsonData?.results as GResponse[]
       }
     } catch (err) {
       handleNetworkError(err)
     }
   }
 
-  return results
+  return []
+}
+
+type FeedbackAttachments = {
+  attachments: string[]
+  headers: Record<string, string>
+  numOfAttachments: number
+  response: Record<string, unknown>
+  serviceDeskId: number
 }
 
 /**
@@ -154,7 +162,7 @@ export const submitUserFeedbackAttachments = async ({
   numOfAttachments,
   response: { issueId },
   serviceDeskId,
-}): Promise<void> => {
+}: FeedbackAttachments): Promise<void> => {
   if (
     !APP_IS_DEV &&
     JIRA_APPEND_ATTACHMENT &&
@@ -164,9 +172,12 @@ export const submitUserFeedbackAttachments = async ({
   ) {
     const uploadUrl = JIRA_UPLOAD_ATTACHMENT.replace(
       '{serviceDeskId}',
-      serviceDeskId,
+      String(serviceDeskId),
     )
-    const appendUrl = JIRA_APPEND_ATTACHMENT.replace('{issueIdOrKey}', issueId)
+    const appendUrl = JIRA_APPEND_ATTACHMENT.replace(
+      '{issueIdOrKey}',
+      String(issueId),
+    )
     const temporaryAttachmentIds = []
 
     const headersUpload = {
@@ -269,11 +280,13 @@ export const submitUserFeedback = async (
   const serviceDeskId = 2
   const cleanAttachments = attachments.filter((attachment) => !!attachment)
   const numOfAttachments = cleanAttachments.length
-  const { emoji = ':warning:', requestTypeId } =
-    getFromListByKey(reportTypes, type) ?? {}
+  const { emoji = ':warning:', requestTypeId = 0 } = (getFromListByKey(
+    reportTypes,
+    type,
+  ) ?? {}) as ListOfReportTypes
   let url = ''
   let postData = null
-  let headers = {
+  let headers: Record<string, string> = {
     'Content-Type': 'application/json',
   }
 

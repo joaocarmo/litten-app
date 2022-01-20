@@ -11,6 +11,7 @@ const Welcome = () => {
     createStyles,
     theme: { colors },
   } = useTheme()
+
   const styles = createStyles((theme) => ({
     container: {
       flex: 1,

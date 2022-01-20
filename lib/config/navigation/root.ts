@@ -1,19 +1,23 @@
-import { createRef } from 'react'
+import { createNavigationContainerRef } from '@react-navigation/native'
 import { SCREEN_NOAUTH_WELCOME } from '@utils/constants'
 
-export const isReadyRef = createRef()
+export const navigationRef = createNavigationContainerRef()
 
-export const navigationRef = createRef()
+type NavigateParameters = Parameters<typeof navigationRef.navigate>
 
-export const navigate = (name, params) => {
-  if (isReadyRef.current && navigationRef.current) {
-    navigationRef.current.navigate(name, params)
+export const navigate = (...args: NavigateParameters) => {
+  if (navigationRef.isReady()) {
+    navigationRef.navigate(...args)
   }
 }
 
-export const resetRoot = (resetState) => {
-  if (isReadyRef.current && navigationRef.current) {
-    navigationRef.current.resetRoot(resetState)
+type ResetRootParameters = Parameters<typeof navigationRef.reset>
+
+export const resetRoot: typeof navigationRef.resetRoot = (
+  ...args: ResetRootParameters
+) => {
+  if (navigationRef.isReady()) {
+    navigationRef.resetRoot(...args)
   }
 }
 

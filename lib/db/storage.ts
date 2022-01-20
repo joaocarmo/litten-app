@@ -11,11 +11,7 @@ import { logError } from '@utils/dev'
  */
 export async function uploadUserAvatar(
   photoURL: string,
-  {
-    userAuthUid = '',
-  }: {
-    userAuthUid: string
-  } = {},
+  { userAuthUid = '' },
 ): Promise<string> {
   if (photoURL && typeof photoURL === 'string') {
     try {

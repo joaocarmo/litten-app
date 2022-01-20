@@ -1,4 +1,5 @@
 import { useCallback, useState, useEffect, useRef } from 'react'
+import type { ReactNode } from 'react'
 import { GiftedChat } from 'react-native-gifted-chat'
 import {
   Bubble,
@@ -18,6 +19,9 @@ import {
 } from '@hooks'
 import Chat from '@model/chat'
 import Message from '@model/message'
+import type { BasicChat } from '@model/types/chat'
+import type { BasicLitten } from '@model/types/litten'
+import type { BasicUser } from '@model/types/user'
 import { UILoader } from '@ui-elements'
 import { debugLog, logError } from '@utils/dev'
 import { locale } from '@utils/day'
@@ -28,7 +32,17 @@ import {
   UI_MESSAGE_MIN_INPUT_TOOLBAR_HEIGHT,
 } from '@utils/constants'
 
-const PrivateMessages = ({ chat: chatProp, litten, recipient }) => {
+export type PrivateMessagesProps = {
+  chat: BasicChat
+  litten: BasicLitten
+  recipient: BasicUser
+}
+
+const PrivateMessages = ({
+  chat: chatProp,
+  litten,
+  recipient,
+}: PrivateMessagesProps) => {
   const [{ id: userUid, photoURL, displayName }] = useUserInfo()
   const [chat, setChat] = useState(
     new Chat(
@@ -44,7 +58,7 @@ const PrivateMessages = ({ chat: chatProp, litten, recipient }) => {
   const [lastMessage, setLastMessage] = useState(null)
   const [message, setMessage] = useState(
     new Message({
-      chatUid: chat.id,
+      chatUid: chat.id as string,
       userUid,
     }),
   )
@@ -232,7 +246,7 @@ const PrivateMessages = ({ chat: chatProp, litten, recipient }) => {
   const renderBubble = useCallback((props) => <Bubble {...props} />, [])
 
   const renderChatEmpty = useCallback(
-    (props) => <EmptyChat litten={litten} {...props} />,
+    (): ReactNode => <EmptyChat litten={litten} />,
     [litten],
   )
 

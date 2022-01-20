@@ -25,6 +25,7 @@ exports[`Snapshot test for the "UILoader" component renders correctly when activ
 >
   <ActivityIndicator
     animating={true}
+    color="#39a4f2"
   />
 </View>
 `;

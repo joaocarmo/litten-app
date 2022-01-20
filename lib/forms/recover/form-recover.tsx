@@ -20,6 +20,7 @@ const FormRecover = ({
   const {
     commonStyles: { noAuthFormStyles: styles },
   } = useTheme()
+
   useEffect(() => {
     clearErrorsLoginForm()
     // eslint-disable-next-line react-hooks/exhaustive-deps

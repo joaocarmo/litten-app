@@ -6,13 +6,18 @@ import Litten from '@model/litten'
 import { distanceBetween } from '@utils/functions'
 import { translate } from '@utils/i18n'
 import { debugLog } from '@utils/dev'
+import type { LittenCardComponentProps } from '@components/litten-card/types'
+
+export type LittenSmartCardProps = Pick<
+  LittenCardComponentProps,
+  'litten' | 'editable' | 'onPressAction'
+>
 
 const LittenSmartCard = ({
   litten: littenProp,
-  editable = false,
-  onPressAction = () =>
-    Toast.show(translate('feedback.errorMessages.notImplemented')),
-}) => {
+  editable,
+  onPressAction,
+}: LittenSmartCardProps) => {
   const [getUser] = useCacheUsers()
   const [user, setUser] = useState({})
   const [isLoading, setIsLoading] = useState(true)
@@ -60,6 +65,12 @@ const LittenSmartCard = ({
       user={user}
     />
   )
+}
+
+LittenSmartCard.defaultProps = {
+  editable: false,
+  onPressAction: () =>
+    Toast.show(translate('feedback.errorMessages.notImplemented')),
 }
 
 export default LittenSmartCard

@@ -1,5 +1,5 @@
-import type { ReactNode } from 'react'
 import type { ThemePreferences } from '@store/types'
+import type { IconTypeComponent } from '@ui-elements/types'
 
 export type BasicListOfThings = {
   key: string
@@ -7,7 +7,7 @@ export type BasicListOfThings = {
 }
 
 export type BasicListOfAttributes = BasicListOfThings & {
-  icon: string | ReactNode
+  icon: IconTypeComponent
   description: string
 }
 
@@ -22,7 +22,7 @@ export type ListOfFilters = BasicListOfThings & {
 }
 
 export type ListOfContactOptions = BasicListOfThings & {
-  icon: string | ReactNode
+  icon: IconTypeComponent
   urlScheme: string
   urlValueKey: string
 }

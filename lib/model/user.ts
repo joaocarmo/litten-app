@@ -1,12 +1,13 @@
 /* eslint-disable class-methods-use-this */
-/* eslint-disable max-classes-per-file */
 import storage from '@react-native-firebase/storage'
 import firestore from '@db/firestore'
 import Auth from '@model/auth'
 import Base from '@model/base'
 import Litten from '@model/litten'
 import Search from '@model/search'
+import { UserError } from '@model/error/user'
 import { deleteAllChatForUser } from '@db/maintenance'
+import { locationSchema } from '@db/schemas/location'
 import {
   DB_USER_COLLECTION,
   STORAGE_IGNORED_ERRORS,
@@ -17,18 +18,6 @@ import { debugLog, logError } from '@utils/dev'
 import type { BasicUser } from '@model/types/user'
 import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
 
-export class UserError extends Error {
-  constructor(...args: string[]) {
-    super(...args)
-
-    // Maintains proper stack trace for where the error was thrown
-    if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, UserError)
-    }
-
-    this.name = 'UserError'
-  }
-}
 export default class User extends Base {
   #auth
 
@@ -91,13 +80,13 @@ export default class User extends Base {
     return User.storage
   }
 
-  get displayName(): void | string {
+  get displayName(): string | undefined {
     return this.#displayName
   }
 
-  set displayName(displayName: string | void = '') {
+  set displayName(displayName: string | undefined) {
     if (displayName) {
-      this.#displayName = displayName
+      this.#displayName = displayName || ''
       this.updateOne('displayName', displayName)
 
       if (this.#currentUser) {
@@ -106,32 +95,32 @@ export default class User extends Base {
     }
   }
 
-  get email(): void | string {
+  get email(): string | undefined {
     return this.#email
   }
 
-  set email(email: string | void = '') {
+  set email(email: string | undefined) {
     if (email) {
-      this.#email = email
+      this.#email = email || ''
       this.updateOne('email', email)
 
       if (this.#currentUser) {
-        this.#auth.email = email
+        this.#auth.email = email || ''
       }
     }
   }
 
-  get photoURL(): void | string {
+  get photoURL(): string | undefined {
     return this.#photoURL
   }
 
-  set photoURL(photoURL: string | void = '') {
+  set photoURL(photoURL: string | undefined) {
     this.deletePhoto(this.photoURLRef)
 
     if (photoURL) {
       this.uploadAndSetPhoto(photoURL)
     } else {
-      this.#photoURL = photoURL
+      this.#photoURL = photoURL || ''
       this.updateOne('photoURL', photoURL)
 
       if (this.#currentUser && photoURL) {
@@ -140,12 +129,12 @@ export default class User extends Base {
     }
   }
 
-  get location(): void | DBLocationObject {
+  get location(): DBLocationObject {
     return super.location
   }
 
-  set location(location: DBLocationObject = {}) {
-    super.location = location
+  set location(location: DBLocationObject) {
+    super.location = location || locationSchema
     this.updateOne('location', super.buildLocation())
   }
 
@@ -171,21 +160,21 @@ export default class User extends Base {
     return ''
   }
 
-  get phoneNumber(): void | string {
+  get phoneNumber(): string | undefined {
     return this.#phoneNumber
   }
 
-  set phoneNumber(phoneNumber: string | void = '') {
-    this.#phoneNumber = phoneNumber
+  set phoneNumber(phoneNumber: string | undefined) {
+    this.#phoneNumber = phoneNumber || ''
     this.updateOne('phoneNumber', phoneNumber)
   }
 
-  get isOrganization(): void | boolean {
+  get isOrganization(): boolean | undefined {
     return this.#isOrganization
   }
 
-  set isOrganization(isOrganization = false) {
-    this.#isOrganization = isOrganization
+  set isOrganization(isOrganization: boolean) {
+    this.#isOrganization = isOrganization || false
     this.updateOne('isOrganization', isOrganization)
   }
 
@@ -219,8 +208,8 @@ export default class User extends Base {
     }
   }
 
-  set deferredSave(deferredSave = false) {
-    this.#deferredSave = deferredSave
+  set deferredSave(deferredSave: boolean) {
+    this.#deferredSave = deferredSave || false
   }
 
   async uploadAndSetPhoto(photoURL: string): Promise<void> {

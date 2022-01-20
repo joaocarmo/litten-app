@@ -30,13 +30,14 @@ import {
   userTypes,
 } from '@utils/litten'
 import { translate } from '@utils/i18n'
+import type { HomeFilterScreenNavigationProp } from '@utils/types/routes'
 
 const HomeFilterScreen = () => {
   const [namePromptIsOpen, setNamePromptIsOpen] = useState(false)
   const [, addFavouriteFilter] = useSavedFilters()
   const [filters, , resetFilters] = useSearchFilters()
   const [unit, useMetricUnits] = useUnit('length')
-  const navigation = useNavigation()
+  const navigation = useNavigation<HomeFilterScreenNavigationProp>()
   const withPaddingBottom = usePaddingBottom()
   const {
     commonStyles: {

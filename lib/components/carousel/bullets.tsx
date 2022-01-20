@@ -1,6 +1,15 @@
 import { StyleSheet, View } from 'react-native'
+import type { ViewProps } from 'react-native'
 import Bullet from '@components/carousel/bullet'
 import { iterateTimes } from '@utils/functions'
+import type { BulletProps } from '@components/carousel/bullet'
+
+export type BulletsProps = {
+  activeInterval: number
+  bulletStyle: BulletProps['style']
+  intervals: number
+  style: ViewProps['style']
+} & BulletProps
 
 const Bullets = ({
   activeInterval,
@@ -8,7 +17,9 @@ const Bullets = ({
   intervals,
   style,
   ...otherProps
-}) => (
+}: BulletsProps) => (
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore FIXME
   <View style={StyleSheet.compose(styles.bullets, style)}>
     {iterateTimes(intervals).map((n) => (
       <Bullet

@@ -1,6 +1,16 @@
 import { StyleSheet, View } from 'react-native'
+import type { ViewProps } from 'react-native'
 
-const UIContainer = ({ centered = false, children, style, ...otherProps }) => (
+export type UIContainerProps = {
+  centered?: boolean
+} & ViewProps
+
+const UIContainer = ({
+  centered,
+  children,
+  style,
+  ...otherProps
+}: UIContainerProps) => (
   <View
     {...otherProps}
     style={[
@@ -13,6 +23,10 @@ const UIContainer = ({ centered = false, children, style, ...otherProps }) => (
   </View>
 )
 
+UIContainer.defaultProps = {
+  centered: false,
+}
+
 const styles = StyleSheet.create({
   uiContainer: {
     width: '75%',
@@ -23,4 +37,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 })
+
 export default UIContainer

@@ -54,6 +54,7 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
           All
         </Text>
         <SvgMock
+          fill="#474545"
           height={12}
           style={
             Object {

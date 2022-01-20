@@ -2,10 +2,10 @@ import UIImagePlaceholderGroup from '@ui-elements/inner-components/image-placeho
 import UIImagePlaceholderImageItem from '@ui-elements/inner-components/image-placeholder-item-image'
 import UIImagePlaceholderItem from '@ui-elements/inner-components/image-placeholder-item'
 
-const UIImagePlaceholder = {}
-
-UIImagePlaceholder.Group = UIImagePlaceholderGroup
-UIImagePlaceholder.Item = UIImagePlaceholderItem
-UIImagePlaceholder.ImageItem = UIImagePlaceholderImageItem
+const UIImagePlaceholder = {
+  Group: UIImagePlaceholderGroup,
+  Item: UIImagePlaceholderItem,
+  ImageItem: UIImagePlaceholderImageItem,
+}
 
 export default UIImagePlaceholder

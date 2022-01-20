@@ -1,18 +1,24 @@
-import type { FC } from 'react'
 import { SafeAreaView, StatusBar, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useTheme } from '@hooks'
 import ScreenTabular from '@templates/screen/tabular'
 import ScrollableScreenTemplate from '@templates/screen/scrollable'
+import type { ScrollableScreenTemplateProps } from '@templates/screen/scrollable'
 import StaticScreenTemplate from '@templates/screen/static'
+import type { StaticScreenTemplateProps } from '@templates/screen/static'
+
+export type ScreenTemplateProps = {
+  scrollable?: boolean
+} & ScrollableScreenTemplateProps &
+  StaticScreenTemplateProps
 
 const ScreenTemplate = ({
   children,
   header,
-  scrollable = false,
-  tabs = null,
+  scrollable,
+  tabs,
   ...otherProps
-}) => {
+}: ScreenTemplateProps) => {
   const insets = useSafeAreaInsets()
   const {
     createStyles,
@@ -50,7 +56,7 @@ const ScreenTemplate = ({
           : StaticScreenTemplate
 
       // eslint-disable-next-line react/no-unstable-nested-components
-      const CompoundComponent: () => FC = () => (
+      const CompoundComponent = () => (
         <TabScreenComponent header={header} tabs={tabs}>
           <InnerComponent />
         </TabScreenComponent>
@@ -77,6 +83,13 @@ const ScreenTemplate = ({
       />
     </View>
   )
+}
+
+ScreenTemplate.defaultProps = {
+  children: null,
+  header: null,
+  scrollable: false,
+  tabs: null,
 }
 
 export default ScreenTemplate

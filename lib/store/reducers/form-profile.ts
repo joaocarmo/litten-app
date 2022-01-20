@@ -1,9 +1,9 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import type { PhotoObject, ProfileForm } from '@store/types'
+import type { PhotoObject } from '@store/types'
 import type { DBLocationObject } from '@db/schemas/location'
 
-const initialState: ProfileForm = {
+const initialState = {
   callingCode: null,
   country: null,
   displayName: null,
@@ -13,7 +13,8 @@ const initialState: ProfileForm = {
   phoneNumber: null,
   photoURL: null,
 }
-const formProfileSlice = createSlice<ProfileForm>({
+
+const formProfileSlice = createSlice({
   name: 'formProfile',
   initialState,
   reducers: {

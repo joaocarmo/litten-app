@@ -1,7 +1,7 @@
 /* eslint-disable class-methods-use-this */
-/* eslint-disable max-classes-per-file */
 import firestore from '@db/firestore'
 import Base from '@model/base'
+import { MessageError } from '@model/error/message'
 import { debugLog } from '@utils/dev'
 import type { BasicMessage } from '@model/types/message'
 import {
@@ -9,18 +9,6 @@ import {
   DB_MESSAGE_BATCH_AMOUNT,
 } from '@utils/constants'
 
-export class MessageError extends Error {
-  constructor(...args: string[]) {
-    super(...args)
-
-    // Maintains proper stack trace for where the error was thrown
-    if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, MessageError)
-    }
-
-    this.name = 'MessageError'
-  }
-}
 export default class Message extends Base {
   #cursor = null
 
@@ -114,7 +102,7 @@ export default class Message extends Base {
     return chatMessages
   }
 
-  async get(): Promise<any> {
+  async get() {
     if (this.id) {
       const message = await this.collection.doc(this.id).get()
 
@@ -126,7 +114,7 @@ export default class Message extends Base {
     }
   }
 
-  async getAll(): any {
+  async getAll() {
     if (this.#chatUid) {
       return this.collection.where('chatUid', '==', this.#chatUid).get()
     } else {
@@ -134,7 +122,7 @@ export default class Message extends Base {
     }
   }
 
-  async getPreviousMessages(lastMessage: any): Promise<any> {
+  async getPreviousMessages(lastMessage: any) {
     if (lastMessage) {
       this.#cursor = lastMessage
     }

@@ -1,19 +1,28 @@
 import { useCallback, useState } from 'react'
 import { StyleSheet, Text, TextInput } from 'react-native'
+import type { TextInputProps } from 'react-native'
 import { useTheme } from '@hooks'
 import inputStyles from '@ui-elements/input.styles'
 
+type UISelectProps = {
+  active?: boolean
+  error?: boolean
+  errorMessage?: string
+  size?: 'small' | 'medium' | 'large'
+  success?: boolean
+} & TextInputProps
+
 const UIInput = ({
-  error = false,
-  errorMessage = '',
+  error,
+  errorMessage,
   onBlur,
   onFocus,
   placeholderTextColor,
-  size = 'medium',
+  size,
   style,
-  success = false,
+  success,
   ...otherProps
-}) => {
+}: UISelectProps) => {
   const [isActive, setIsActive] = useState(false)
   const {
     createStyles,
@@ -33,21 +42,27 @@ const UIInput = ({
   )
   const stylesError = StyleSheet.compose(styles.uiInput, styles.uiInputError)
 
-  const onFocusHandler = useCallback(() => {
-    setIsActive(true)
+  const onFocusHandler = useCallback(
+    (e) => {
+      setIsActive(true)
 
-    if (typeof onFocus === 'function') {
-      onFocus()
-    }
-  }, [onFocus])
+      if (typeof onFocus === 'function') {
+        onFocus(e)
+      }
+    },
+    [onFocus],
+  )
 
-  const onBlurHandler = useCallback(() => {
-    setIsActive(false)
+  const onBlurHandler = useCallback(
+    (e) => {
+      setIsActive(false)
 
-    if (typeof onBlur === 'function') {
-      onBlur()
-    }
-  }, [onBlur])
+      if (typeof onBlur === 'function') {
+        onBlur(e)
+      }
+    },
+    [onBlur],
+  )
 
   const getStyle = useCallback(() => {
     let inputStyle = {}
@@ -97,6 +112,14 @@ const UIInput = ({
       )}
     </>
   )
+}
+
+UIInput.defaultProps = {
+  active: true,
+  error: false,
+  errorMessage: '',
+  size: 'medium',
+  success: false,
 }
 
 export default UIInput

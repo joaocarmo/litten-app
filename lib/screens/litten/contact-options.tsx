@@ -1,6 +1,7 @@
 import { useCallback, useRef } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { Pressable, View } from 'react-native'
+import type { GestureResponderEvent } from 'react-native'
 import User from '@model/user'
 import { useTheme } from '@hooks'
 import { UIBalloon, UIHeader, UIIcon, UIModal, UIText } from '@ui-elements'
@@ -14,6 +15,17 @@ import {
   STRUCTURE_TEMPLATE_SCREEN_PADDING,
   UI_ELEMENT_BORDER_MARGIN,
 } from '@utils/constants'
+import type { BasicLitten } from '@model/types/litten'
+import type { BasicUser } from '@model/types/user'
+import type { UIModalProps } from '@ui-elements/modal'
+import type { ListOfContactOptions } from '@utils/types/litten'
+import type { LittenContactOptionsNavigationProp } from '@utils/types/routes'
+
+export type LittenContactOptionsProps = {
+  authenticatedUserUid: string
+  litten: BasicLitten
+  user: BasicUser
+} & UIModalProps
 
 const LittenContactOptions = ({
   authenticatedUserUid,
@@ -21,12 +33,12 @@ const LittenContactOptions = ({
   onClickOutside,
   user: userProp,
   ...otherProps
-}) => {
-  const user = useRef(
+}: LittenContactOptionsProps) => {
+  const user: BasicUser = useRef(
     userProp instanceof User ? userProp.toJSON() : userProp,
   ).current
   const { id: userUid, displayName } = user
-  const navigation = useNavigation()
+  const navigation = useNavigation<LittenContactOptionsNavigationProp>()
   const {
     createStyles,
     commonStyles: {
@@ -57,18 +69,25 @@ const LittenContactOptions = ({
     },
   }))
 
-  const openInAppMessage = useCallback(() => {
-    onClickOutside()
-    navigation.navigate(SCREEN_MESSAGE_PRIVATE, {
-      recipient: user,
-      litten,
-    })
-  }, [litten, navigation, onClickOutside, user])
+  const openInAppMessage = useCallback(
+    (e: GestureResponderEvent) => {
+      onClickOutside(e)
+
+      navigation.navigate(SCREEN_MESSAGE_PRIVATE, {
+        recipient: user,
+        litten,
+      })
+    },
+    [litten, navigation, onClickOutside, user],
+  )
 
   const handleContact = useCallback(
-    ({ urlScheme, urlValueKey }) => {
+    (
+      e: GestureResponderEvent,
+      { urlScheme, urlValueKey }: ListOfContactOptions,
+    ) => {
       if (urlScheme === LITTEN_URI) {
-        openInAppMessage()
+        openInAppMessage(e)
       } else {
         const urlValue = user[urlValueKey]
 
@@ -81,13 +100,13 @@ const LittenContactOptions = ({
   )
 
   const renderContactOption = useCallback(
-    (contactOption) => {
+    (contactOption: ListOfContactOptions) => {
       const { key, label, icon } = contactOption
 
       if (user.contactPreferences.includes(key)) {
         return (
           <Pressable
-            onPress={() => handleContact(contactOption)}
+            onPress={(e) => handleContact(e, contactOption)}
             style={({ pressed }) => [
               veryElevatedStyle,
               styles.contactOptionContainer,

@@ -2,15 +2,15 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import type { BasicLitten } from '@model/types/litten'
 import type { BasicUser } from '@model/types/user'
-import type { Cache, LittenFeedObject, ObjectById } from '@store/types'
+import type { LittenFeedObject, ObjectById } from '@store/types'
 
-const initialState: Cache = {
+const initialState = {
   feed: [],
   littens: {},
   users: {},
 }
 
-const cacheSlice = createSlice<Cache>({
+const cacheSlice = createSlice({
   name: 'cache',
   initialState,
   reducers: {

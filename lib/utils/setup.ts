@@ -95,7 +95,6 @@ export const getCurrentPosition = (): Promise<{
 }> => {
   const options = {
     enableHighAccuracy: true,
-    timeout: 15000,
   }
 
   return new Promise((resolve, reject) => {
@@ -120,15 +119,21 @@ export const getLocation = async (): Promise<{
 
   try {
     const currentPosition = await execOrTimeout(getCurrentPosition(), 15000)
-    return currentPosition
+
+    if (currentPosition) {
+      return currentPosition
+    }
   } catch (err) {
     logError(err)
   }
 
   try {
     const coords = await getExternalGeoInformation()
-    return {
-      coords,
+
+    if (coords) {
+      return {
+        coords,
+      }
     }
   } catch (err) {
     logError(err)
@@ -235,7 +240,7 @@ export const setUpApp = async (
   userCoordinates: DBCoordinateObject
   userInactivePosts: BasicLitten[]
 }> => {
-  let user = userSchema
+  let user: BasicUser = userSchema
   let userActivePosts = []
   let userCoordinates = {
     latitude: null,
@@ -246,10 +251,11 @@ export const setUpApp = async (
 
   try {
     if (authUser) {
-      user = (await setupUserInfo(authUser)) ?? user
+      user = ((await setupUserInfo(authUser)) ?? user) as BasicUser
 
       if (user) {
-        userCoordinates = (await setUpUserLocation(user)) ?? userCoordinates
+        userCoordinates = ((await setUpUserLocation(user)) ??
+          userCoordinates) as DBCoordinateObject
         const userPosts = await setUpUserPosts(user)
         userActivePosts = userPosts.userActivePosts
         userInactivePosts = userPosts.userInactivePosts

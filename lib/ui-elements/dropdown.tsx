@@ -1,4 +1,7 @@
+import { useCallback } from 'react'
+import type { ReactNode } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
+import type { ViewProps } from 'react-native'
 import {
   Menu,
   MenuOptions,
@@ -13,20 +16,40 @@ import { UI_DROPDOWN_MARGIN, UI_ICON_SIZE_MICRO } from '@utils/constants'
 
 const { Popover } = renderers
 
+export type UIDropdownValue = string | number
+
+export type UIDropdownOption = {
+  key: string
+  label: string
+  value: UIDropdownValue
+  disabled: boolean
+  separator: boolean
+  onSelect: (optionValue: UIDropdownValue) => void
+}
+
+export type UIDropdownProps = {
+  menuTrigger?: ReactNode
+  onSelect: (optionValue: UIDropdownValue) => void
+  options: UIDropdownOption[]
+  placement?: 'top' | 'right' | 'bottom' | 'left' | 'auto'
+  selectedValue: UIDropdownValue
+} & ViewProps
+
 const UIDropdown = ({
-  menuTrigger = null,
+  menuTrigger,
   onSelect,
   options,
-  placement = 'auto',
+  placement,
   selectedValue,
   style,
   ...otherProps
-}) => {
+}: UIDropdownProps) => {
   const {
     createStyles,
-    theme: { neutralDarker: neutralDarkerColor },
+    theme: { colors },
     typography,
   } = useTheme()
+
   const styles = createStyles((theme) => ({
     uiDropdownContainer: {
       flexDirection: 'row',
@@ -85,8 +108,10 @@ const UIDropdown = ({
     },
   }))
 
-  const translateSelectedValue = () =>
-    options.find(({ value }) => value === selectedValue)?.label
+  const translateSelectedValue = useCallback(
+    () => options.find(({ value }) => value === selectedValue)?.label,
+    [options, selectedValue],
+  )
 
   return (
     <View {...otherProps} style={[styles.uiDropdownContainer, style]}>
@@ -114,7 +139,7 @@ const UIDropdown = ({
               <RightArrow
                 height={UI_ICON_SIZE_MICRO}
                 width={UI_ICON_SIZE_MICRO}
-                fill={neutralDarkerColor}
+                fill={colors.neutralDarker}
                 style={styles.iconChevron}
               />
             </View>
@@ -141,7 +166,7 @@ const UIDropdown = ({
                   key={key}
                   value={value}
                   disabled={disabled}
-                  onSelect={(optionValue) => onOptionSelect(optionValue)}
+                  onSelect={() => onOptionSelect(value)}
                   customStyles={{
                     optionWrapper: styles.optionWrapper,
                   }}
@@ -164,6 +189,11 @@ const UIDropdown = ({
       </Menu>
     </View>
   )
+}
+
+UIDropdown.defaultProps = {
+  menuTrigger: null,
+  placement: 'auto',
 }
 
 export default UIDropdown

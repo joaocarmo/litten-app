@@ -1,5 +1,4 @@
 import { useEffect, useMemo } from 'react'
-import type { FC } from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack'
 import TabNavigation from '@structure/tab-navigation'
@@ -34,68 +33,79 @@ import {
   SCREEN_TAB_NAV_MESSAGES,
   SCREEN_TAB_NAV_NEW,
   SCREEN_TAB_NAV_PROFILE,
-  SCREEN_USER_PROFILE,
+  SCREEN_PROFILE_VIEW,
 } from '@utils/constants'
 import { translate } from '@utils/i18n'
+import type { RootStackParamList, RootTabParamList } from '@utils/types/routes'
 
-const Tab = createBottomTabNavigator()
+const Tab = createBottomTabNavigator<RootTabParamList>()
 
-const TabBar = (props) => <TabNavigation {...props} />
+const TabBar = ({ descriptors, navigation, state }) => (
+  <TabNavigation
+    descriptors={descriptors}
+    navigation={navigation}
+    state={state}
+  />
+)
 
-const TabNavigator = (): FC => {
+const TabNavigator = () => {
   const unreadMessages = useUnreadMessages()
   const notifications = useNotifications()
+
   const tabScreens = useMemo(
-    () => [
-      {
-        key: SCREEN_TAB_NAV_HOME,
-        name: SCREEN_TAB_NAV_HOME,
-        component: HomeScreen,
-        options: {
-          tabBarIcon: Home,
-          tabBarAccessibilityLabel: translate('accessibility.tabBar.home'),
+    () =>
+      [
+        {
+          key: SCREEN_TAB_NAV_HOME,
+          name: SCREEN_TAB_NAV_HOME,
+          component: HomeScreen,
+          options: {
+            tabBarIcon: Home,
+            tabBarAccessibilityLabel: translate('accessibility.tabBar.home'),
+          },
         },
-      },
-      {
-        key: SCREEN_TAB_NAV_FAVOURITES,
-        name: SCREEN_TAB_NAV_FAVOURITES,
-        component: FavouritesScreen,
-        options: {
-          tabBarIcon: Favourites,
-          tabBarAccessibilityLabel: translate(
-            'accessibility.tabBar.favourites',
-          ),
+        {
+          key: SCREEN_TAB_NAV_FAVOURITES,
+          name: SCREEN_TAB_NAV_FAVOURITES,
+          component: FavouritesScreen,
+          options: {
+            tabBarIcon: Favourites,
+            tabBarAccessibilityLabel: translate(
+              'accessibility.tabBar.favourites',
+            ),
+          },
         },
-      },
-      {
-        key: SCREEN_TAB_NAV_NEW,
-        name: SCREEN_TAB_NAV_NEW,
-        component: NewScreen,
-        options: {
-          tabBarIcon: New,
-          tabBarAccessibilityLabel: translate('accessibility.tabBar.newPost'),
+        {
+          key: SCREEN_TAB_NAV_NEW,
+          name: SCREEN_TAB_NAV_NEW,
+          component: NewScreen,
+          options: {
+            tabBarIcon: New,
+            tabBarAccessibilityLabel: translate('accessibility.tabBar.newPost'),
+          },
         },
-      },
-      {
-        key: SCREEN_TAB_NAV_MESSAGES,
-        name: SCREEN_TAB_NAV_MESSAGES,
-        component: MessagesScreen,
-        options: {
-          tabBarIcon: Messages,
-          tabBarBadge: unreadMessages,
-          tabBarAccessibilityLabel: translate('accessibility.tabBar.messages'),
+        {
+          key: SCREEN_TAB_NAV_MESSAGES,
+          name: SCREEN_TAB_NAV_MESSAGES,
+          component: MessagesScreen,
+          options: {
+            tabBarIcon: Messages,
+            tabBarBadge: unreadMessages,
+            tabBarAccessibilityLabel: translate(
+              'accessibility.tabBar.messages',
+            ),
+          },
         },
-      },
-      {
-        key: SCREEN_TAB_NAV_PROFILE,
-        name: SCREEN_TAB_NAV_PROFILE,
-        component: ProfileScreen,
-        options: {
-          tabBarIcon: Profile,
-          tabBarAccessibilityLabel: translate('accessibility.tabBar.profile'),
+        {
+          key: SCREEN_TAB_NAV_PROFILE,
+          name: SCREEN_TAB_NAV_PROFILE,
+          component: ProfileScreen,
+          options: {
+            tabBarIcon: Profile,
+            tabBarAccessibilityLabel: translate('accessibility.tabBar.profile'),
+          },
         },
-      },
-    ],
+      ] as const,
     [unreadMessages],
   )
 
@@ -110,8 +120,13 @@ const TabNavigator = (): FC => {
       }}
       tabBar={TabBar}
     >
-      {tabScreens.map((props) => (
-        <Tab.Screen {...props} />
+      {tabScreens.map(({ key, name, component, options }) => (
+        <Tab.Screen
+          key={key}
+          name={name}
+          component={component}
+          options={options}
+        />
       ))}
     </Tab.Navigator>
   )
@@ -139,8 +154,8 @@ const stackScreens = [
     component: LittenPostScreen,
   },
   {
-    key: SCREEN_USER_PROFILE,
-    name: SCREEN_USER_PROFILE,
+    key: SCREEN_PROFILE_VIEW,
+    name: SCREEN_PROFILE_VIEW,
     component: UserProfileScreen,
   },
   {
@@ -153,18 +168,21 @@ const stackScreens = [
     name: SCREEN_PROFILE_VERIFICATION,
     component: ProfileVerificationScreen,
   },
-]
-const Stack = createStackNavigator()
+] as const
 
-const Main = (): FC => (
+const Stack = createStackNavigator<RootStackParamList>()
+
+const allStackScreens = stackScreens.map(({ key, name, component }) => (
+  <Stack.Screen key={key} name={name} component={component} />
+))
+
+const Main = () => (
   <Stack.Navigator
     screenOptions={{
       headerShown: false,
     }}
   >
-    {stackScreens.map((props) => (
-      <Stack.Screen {...props} />
-    ))}
+    {allStackScreens}
   </Stack.Navigator>
 )
 

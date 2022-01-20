@@ -1,4 +1,3 @@
-import type { FC } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { StyleSheet, View } from 'react-native'
 import { UILink, UIText } from '@ui-elements'
@@ -7,9 +6,11 @@ import {
   SCREEN_NOAUTH_REGISTER,
   UI_SCREEN_NOAUTH_CTA_HEIGHT,
 } from '@utils/constants'
+import { CreateNewCTANavigationProp } from '@utils/types/routes'
 
-const CreateNewCTA: () => FC = () => {
-  const navigation = useNavigation()
+const CreateNewCTA = () => {
+  const navigation = useNavigation<CreateNewCTANavigationProp>()
+
   return (
     <View style={styles.cta}>
       <UIText noPadding>{`${translate('welcome.newAccount')} `}</UIText>

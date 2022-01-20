@@ -7,7 +7,7 @@ import rootReducer from '@store/reducers'
 const render = (
   ui,
   {
-    preloadedState,
+    preloadedState = {},
     store = configureStore({ reducer: rootReducer, preloadedState }),
     ...renderOptions
   } = {},

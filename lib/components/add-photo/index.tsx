@@ -1,18 +1,30 @@
+import { ComponentType, useCallback } from 'react'
+import type { ImageProps } from 'react-native'
 import ImagePicker from 'react-native-image-crop-picker'
+import type { ImageOrVideo } from 'react-native-image-crop-picker'
 import { useActionSheet } from '@expo/react-native-action-sheet'
 import { imagePickerOptions } from '@config/image-picker/form-new'
 import { cameraIsAvailable } from '@utils/platform'
 import { debugLog } from '@utils/dev'
 import { translate } from '@utils/i18n'
+import type { ImageSource } from '@ui-elements/types'
+
+export type AddPhotoProps = {
+  ImageComponent: ComponentType<any>
+  imageSource: ImageSource
+  onChange: (image: ImageOrVideo | null) => void
+  PlaceholderComponent: ComponentType<any>
+} & Omit<ImageProps, 'source'>
 
 const AddPhoto = ({
   ImageComponent,
   imageSource,
-  onChange = () => null,
+  onChange,
   PlaceholderComponent,
   ...otherProps
-}) => {
+}: AddPhotoProps) => {
   const { showActionSheetWithOptions } = useActionSheet()
+
   const source =
     imageSource && typeof imageSource === 'string'
       ? {
@@ -20,7 +32,7 @@ const AddPhoto = ({
         }
       : imageSource
 
-  const openCamera = async () => {
+  const openCamera = useCallback(async () => {
     try {
       const cameraAvailable = await cameraIsAvailable()
 
@@ -31,18 +43,18 @@ const AddPhoto = ({
     } catch (err) {
       debugLog(err)
     }
-  }
+  }, [onChange])
 
-  const openImagePicker = async () => {
+  const openImagePicker = useCallback(async () => {
     try {
       const image = await ImagePicker.openPicker(imagePickerOptions)
       onChange(image)
     } catch (err) {
       debugLog(err)
     }
-  }
+  }, [onChange])
 
-  const showActionSheetAdd = () => {
+  const showActionSheetAdd = useCallback(() => {
     const options = [
       translate('cta.openCamera'),
       translate('cta.fromLibrary'),
@@ -62,14 +74,15 @@ const AddPhoto = ({
         }
       },
     )
-  }
+  }, [openCamera, openImagePicker, showActionSheetWithOptions])
 
-  const showActionSheetEdit = () => {
+  const showActionSheetEdit = useCallback(() => {
     const options = [
       translate('cta.changePhoto'),
       translate('cta.removePhoto'),
       translate('cta.cancel'),
     ]
+
     showActionSheetWithOptions(
       {
         options,
@@ -84,7 +97,7 @@ const AddPhoto = ({
         }
       },
     )
-  }
+  }, [onChange, showActionSheetAdd, showActionSheetWithOptions])
 
   if (source) {
     return (
@@ -97,6 +110,10 @@ const AddPhoto = ({
   }
 
   return <PlaceholderComponent onPress={showActionSheetAdd} {...otherProps} />
+}
+
+AddPhoto.defaultProps = {
+  onChange: () => null,
 }
 
 export default AddPhoto

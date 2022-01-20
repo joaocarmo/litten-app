@@ -4,8 +4,15 @@ import { UIAvatar, UIContainer, UIHeader, UISeparator } from '@ui-elements'
 import { placeholderCat } from '@images'
 import { translate } from '@utils/i18n'
 import { littenTypesKeys } from '@utils/litten'
+import type { BasicLitten } from '@model/types/litten'
 
-const EmptyChat = ({ litten: { photos = [], title: name, type } }) => {
+export type EmptyChatProps = {
+  litten: BasicLitten
+}
+
+const EmptyChat = ({
+  litten: { photos = [], title: name, type },
+}: EmptyChatProps) => {
   const [firstPhoto = placeholderCat] = photos
   const { createStyles } = useTheme()
 

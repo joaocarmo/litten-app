@@ -1,11 +1,13 @@
 import { useCallback, useEffect, useRef } from 'react'
 import { DEBOUNCE_TIMEOUT } from '@utils/constants'
 
+type ParametersType = any[]
+
 const useDebouncedCallback = (
-  callbackFn: (args: unknown[]) => void,
+  callbackFn: (...args: ParametersType) => void,
   delay: number = DEBOUNCE_TIMEOUT,
-): [(args: unknown[]) => void, () => void] => {
-  const argsRef = useRef()
+) => {
+  const argsRef = useRef([])
   const timerId = useRef(null)
 
   const clearTimer = useCallback(() => {
@@ -16,9 +18,11 @@ const useDebouncedCallback = (
   }, [])
 
   const debouncedCallback = useCallback(
-    (...args) => {
+    (...args: ParametersType) => {
       argsRef.current = args
+
       clearTimer()
+
       timerId.current = setTimeout(() => {
         if (argsRef.current) {
           callbackFn(...argsRef.current)

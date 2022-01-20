@@ -1,7 +1,14 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native'
+import type { PressableProps, ViewProps } from 'react-native'
 import { useTheme } from '@hooks'
 import UIText from '@ui-elements/text'
 import { UI_ELEMENT_BORDER_MARGIN } from '@utils/constants'
+
+type UISettingProps = {
+  description?: string
+  label?: string
+} & PressableProps &
+  ViewProps
 
 const UISetting = ({
   children,
@@ -9,7 +16,7 @@ const UISetting = ({
   label,
   onPress,
   ...otherProps
-}) => {
+}: UISettingProps) => {
   const { createStyles } = useTheme()
 
   const styles = createStyles((theme, typography) => ({
@@ -74,6 +81,11 @@ const UISetting = ({
       {descriptionContent}
     </>
   )
+}
+
+UISetting.defaultProps = {
+  description: '',
+  label: '',
 }
 
 export default UISetting

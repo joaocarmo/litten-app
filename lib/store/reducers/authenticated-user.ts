@@ -5,7 +5,6 @@ import { locationSchema } from '@db/schemas/location'
 import { userSchema } from '@db/schemas/user'
 import { getFavouriteIndex } from '@utils/functions'
 import type {
-  AuthenticatedUser,
   BasicAuthUser,
   SearchFilters,
   ThemePreferences,
@@ -15,9 +14,9 @@ import type { BasicLitten } from '@model/types/litten'
 import type { BasicUser } from '@model/types/user'
 import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
 
-const initialState: AuthenticatedUser = {
+const initialState = {
   basic: null,
-  extra: userSchema,
+  extra: userSchema as BasicUser,
   preferences: {
     theme: THEME_SYSTEM,
     useMetricUnits: usesMetricSystem() ?? true,
@@ -32,7 +31,7 @@ const initialState: AuthenticatedUser = {
   },
 }
 
-const authenticatedUserSlice = createSlice<AuthenticatedUser>({
+const authenticatedUserSlice = createSlice({
   name: 'authenticatedUser',
   initialState,
   reducers: {

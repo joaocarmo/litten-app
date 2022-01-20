@@ -10,8 +10,9 @@ import {
   SCREEN_HOME_FILTER,
   SCREEN_HOME_FILTER_SET,
 } from '@utils/constants'
+import type { HomeStackParamList } from '@utils/types/routes'
 
-const HomeStack = createStackNavigator()
+const HomeStack = createStackNavigator<HomeStackParamList>()
 
 const HomeFilter = (props) => (
   <ScreenTemplate

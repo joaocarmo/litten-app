@@ -16,6 +16,7 @@ import { emailValidator, passwordValidator } from '@utils/validators'
 import { getErrorMessage } from '@utils/functions'
 import { SCREEN_NOAUTH_RECOVER } from '@utils/constants'
 import { translate } from '@utils/i18n'
+import type { LoginFormNavigationProp } from '@utils/types/routes'
 
 const LoginForm = ({
   clearErrorsLoginForm,
@@ -27,7 +28,7 @@ const LoginForm = ({
 }) => {
   const [showForgotPassword, setShowForgotPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
-  const navigation = useNavigation()
+  const navigation = useNavigation<LoginFormNavigationProp>()
   const {
     commonStyles: { noAuthFormStyles: styles },
   } = useTheme()

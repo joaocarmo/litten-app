@@ -1,8 +1,9 @@
 import { APP_IS_DEV } from '@utils/env'
 import { POST_PHOTO_SIZE_HEIGHT, POST_PHOTO_SIZE_WIDTH } from '@utils/constants'
 import { translate } from '@utils/i18n'
+import type { Options } from 'react-native-image-crop-picker'
 
-export const imagePickerOptions = {
+export const imagePickerOptions: Options = {
   height: POST_PHOTO_SIZE_HEIGHT,
   width: POST_PHOTO_SIZE_WIDTH,
   cropping: true,

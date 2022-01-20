@@ -1,25 +1,13 @@
 /* eslint-disable class-methods-use-this */
-/* eslint-disable max-classes-per-file */
 import { USE_GRAVATAR } from '@utils/env'
 import auth from '@db/auth'
+import { AuthError } from '@model/error/auth'
 import { parseAvatar } from '@utils/functions'
 import { uploadUserAvatar } from '@db/storage'
 import { actionCodeSettings } from '@config/auth'
-import type { AuthClass, AuthSettings } from '@model/types/auth'
+import type { AuthSettings } from '@model/types/auth'
 
-export class AuthError extends Error {
-  constructor(...args: string[]) {
-    super(...args)
-
-    // Maintains proper stack trace for where the error was thrown
-    if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, AuthError)
-    }
-
-    this.name = 'AuthError'
-  }
-}
-export default class Auth implements AuthClass {
+export default class Auth {
   EmailAuthProvider = auth.EmailAuthProvider
 
   #id
@@ -117,7 +105,7 @@ export default class Auth implements AuthClass {
     return this.#photoURL
   }
 
-  set photoURL(photoURL = '') {
+  set photoURL(photoURL: string) {
     if (photoURL) {
       this.uploadAndSetPhoto(photoURL)
     } else {

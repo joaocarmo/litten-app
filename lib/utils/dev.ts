@@ -13,7 +13,10 @@ export const logError = (...args: unknown[]) => {
     console.warn(...args)
   } else {
     const [err] = args
-    crashlytics.recordError(err)
+
+    if (err instanceof Error) {
+      crashlytics.recordError(err)
+    }
   }
 }
 

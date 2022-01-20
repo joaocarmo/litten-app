@@ -20,12 +20,3 @@ export type BasicLitten = {
   readonly createdAt?: number
   readonly updatedAt?: number
 }
-
-export interface LittenClass {
-  active(): boolean
-  photos(): PhotoObject[]
-  species(): string
-  story(): string
-  title(): string
-  type(): string
-}

@@ -19,7 +19,7 @@ export const fontWeight = {
   regular: '500',
   bold: '600',
   bolder: '700',
-}
+} as const
 
 const typography = {
   base,

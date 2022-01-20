@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useRef } from 'react'
 import { useDispatch } from 'react-redux'
-import { setContactPreferences as setContactPreferencesAction } from '@store/actions/authenticated-user'
 import { Alert, SectionList, View } from 'react-native'
+import { setContactPreferences as setContactPreferencesAction } from '@store/actions/authenticated-user'
 import {
   useCrashlytics,
   usePaddingBottom,
@@ -19,6 +19,12 @@ import {
   USER_PREFERENCES_CONTACT_INAPP,
   USER_PREFERENCES_CONTACT_SMS,
 } from '@utils/constants'
+
+type UserSettings = ReadonlyArray<{
+  key: string
+  label: string
+  data: any[]
+}>
 
 const renderItem = ({ item: { items, label, description, value, setter } }) => {
   if (items) {
@@ -128,7 +134,7 @@ const ProfileSettingsScreen = () => {
     }
   }, [hasPhoneNumber, setContactPreferences, user])
 
-  const userSettings = useMemo(
+  const userSettings: UserSettings = useMemo(
     () => [
       {
         key: 'contactOptions',

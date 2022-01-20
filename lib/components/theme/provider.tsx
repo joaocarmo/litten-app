@@ -1,5 +1,4 @@
 import { useMemo } from 'react'
-import type { FC, ReactNode } from 'react'
 import { useColorScheme } from 'react-native'
 import { useSelector } from 'react-redux'
 import { userPreferencesSelector } from '@store/selectors'
@@ -11,7 +10,7 @@ import typography from '@styles/typography'
 import { THEME_DARK, THEME_SYSTEM } from '@utils/constants'
 import { debugLog } from '@utils/dev'
 
-const ThemeProvider = ({ children }: { children: ReactNode }): FC => {
+const ThemeProvider = ({ children }) => {
   const systemScheme = useColorScheme()
   const { theme: userScheme = THEME_SYSTEM } = useSelector(
     userPreferencesSelector,

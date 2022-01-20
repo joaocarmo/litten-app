@@ -15,6 +15,7 @@ module.exports = {
   '@styles': './lib/styles',
   '@templates': './lib/templates',
   '@translations': './lib/translations',
+  '@types': './types',
   '@ui-elements': './lib/ui-elements',
   '@utils': './lib/utils',
 }

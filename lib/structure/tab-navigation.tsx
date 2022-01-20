@@ -6,7 +6,7 @@ import {
   STRUCTURE_TAB_NAV_HEIGHT,
 } from '@utils/constants'
 
-const TabNavigation = ({ state, descriptors, navigation }) => {
+const TabNavigation = ({ descriptors, navigation, state }) => {
   const { insetBottom } = usePaddingBottom()
   const { createStyles } = useTheme()
 

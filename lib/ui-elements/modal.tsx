@@ -1,4 +1,5 @@
 import { Modal, Pressable, View } from 'react-native'
+import type { ColorValue, ModalProps, PressableProps } from 'react-native'
 import { useTheme } from '@hooks'
 import {
   DEVICE_WIDTH,
@@ -6,16 +7,22 @@ import {
   UI_MODAL_MIN_HEIGHT,
 } from '@utils/constants'
 
+export type UIModalProps = {
+  onClickOutside: PressableProps['onPress']
+  backgroundColor?: ColorValue
+} & ModalProps
+
 const UIModal = ({
   children,
   onClickOutside,
+  // FIXME
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   style,
-  transparent = true,
-  visible = false,
+  transparent,
+  visible,
   backgroundColor,
   ...otherProps
-}) => {
+}: UIModalProps) => {
   const { createStyles } = useTheme()
   const styles = createStyles((theme) => ({
     uiModalContainer: {
@@ -71,6 +78,11 @@ const UIModal = ({
       </Modal>
     </View>
   )
+}
+
+UIModal.defaultProps = {
+  transparent: true,
+  visible: false,
 }
 
 export default UIModal

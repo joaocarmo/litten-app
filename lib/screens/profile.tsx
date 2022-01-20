@@ -19,6 +19,7 @@ import {
   SCREEN_PROFILE_SETTINGS,
   SCREEN_PROFILE_WEBVIEW,
 } from '@utils/constants'
+import type { ProfileStackParamList } from '@utils/types/routes'
 
 const EditScreen = () => (
   <StackTemplate header={translate('screens.profile.edit')} scrollable>
@@ -106,9 +107,9 @@ const stackScreens = [
     name: SCREEN_DEV_HACKS,
     component: DevHacks,
   },
-]
+] as const
 
-const ProfileStack = createStackNavigator()
+const ProfileStack = createStackNavigator<ProfileStackParamList>()
 
 const ProfileScreen = () => (
   <ProfileStack.Navigator
@@ -116,8 +117,8 @@ const ProfileScreen = () => (
       headerShown: false,
     }}
   >
-    {stackScreens.map((props) => (
-      <ProfileStack.Screen {...props} />
+    {stackScreens.map(({ key, name, component }) => (
+      <ProfileStack.Screen key={key} name={name} component={component} />
     ))}
   </ProfileStack.Navigator>
 )

@@ -1,4 +1,4 @@
-import type { ReactNode } from 'React'
+import type { ReactNode } from 'react'
 import { Component } from 'react'
 import Fallback from '@components/error-boundary/fallback'
 import { logError } from '@utils/dev'

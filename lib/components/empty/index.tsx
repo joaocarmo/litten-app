@@ -1,9 +1,17 @@
 import { Children } from 'react'
+import type { ReactNode } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { UIContainer, UIHeader, UIImage, UIText } from '@ui-elements'
 import { UI_EMPTY_PLACEHOLDER_IMAGE } from '@utils/constants'
+import type { ImageSource } from '@ui-elements/types'
 
-const Empty = ({ children, header, imageSource }) => (
+export type EmptyProps = {
+  children?: ReactNode
+  header?: string
+  imageSource?: ImageSource
+}
+
+const Empty = ({ children, header, imageSource }: EmptyProps) => (
   <View style={styles.emptyPostsContainer}>
     <UIContainer style={styles.floatContainer}>
       {imageSource && (
@@ -41,5 +49,11 @@ const styles = StyleSheet.create({
     margin: 20,
   },
 })
+
+Empty.defaultProps = {
+  children: null,
+  header: '',
+  imageSource: '',
+}
 
 export default Empty

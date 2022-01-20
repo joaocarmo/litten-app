@@ -1,9 +1,9 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import type { SearchFilters, SearchSettings } from '@store/types'
+import type { SearchFilters } from '@store/types'
 import { LITTEN_FILTER_LOCATION_RADIUS_INITIAL } from '@utils/constants'
 
-const initialState: SearchSettings = {
+const initialState = {
   query: '',
   filters: {
     littenSpecies: [],
@@ -13,7 +13,7 @@ const initialState: SearchSettings = {
   },
 }
 
-const searchSettingsSlice = createSlice<SearchSettings>({
+const searchSettingsSlice = createSlice({
   name: 'searchSettings',
   initialState,
   reducers: {

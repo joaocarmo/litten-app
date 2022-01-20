@@ -1,29 +1,61 @@
-export { default as UIAvatar } from './avatar'
-export { default as UIBadge } from './badge'
-export { default as UIBalloon } from './balloon'
-export { default as UIButton } from './button'
-export { default as UIContainer } from './container'
-export { default as UIDropdown } from './dropdown'
-export { default as UIHeader } from './header'
-export { default as UIIcon } from './icon'
-export { default as UIImage } from './image'
-export { default as UIImagePlaceholder } from './image-placeholder'
-export { default as UIInput } from './input'
-export { default as UILink } from './link'
-export { default as UIListItem } from './list-item'
-export { default as UILoader } from './loader'
-export { default as UIMessage } from './message'
-export { default as UIModal } from './modal'
-export { default as UIOption } from './option'
-export { default as UIPasswordInput } from './password-input'
-export { default as UIProgress } from './progress'
-export { default as UIPrompt } from './prompt'
-export { default as UISearch } from './search'
-export { default as UISelect } from './select'
-export { default as UISeparator } from './separator'
-export { default as UISetting } from './setting'
-export { default as UISlider } from './slider'
-export { default as UISwitch } from './switch'
-export { default as UIText } from './text'
-export { default as UITextArea } from './textarea'
-export { default as UITooltip } from './tooltip'
+import UIAvatar from './avatar'
+import UIBadge from './badge'
+import UIBalloon from './balloon'
+import UIButton from './button'
+import UIContainer from './container'
+import UIDropdown from './dropdown'
+import UIHeader from './header'
+import UIIcon from './icon'
+import UIImage from './image'
+import UIImagePlaceholder from './image-placeholder'
+import UIInput from './input'
+import UILink from './link'
+import UIListItem from './list-item'
+import UILoader from './loader'
+import UIMessage from './message'
+import UIModal from './modal'
+import UIOption from './option'
+import UIPasswordInput from './password-input'
+import UIProgress from './progress'
+import UIPrompt from './prompt'
+import UISearch from './search'
+import UISelect from './select'
+import UISeparator from './separator'
+import UISetting from './setting'
+import UISlider from './slider'
+import UISwitch from './switch'
+import UIText from './text'
+import UITextArea from './textarea'
+import UITooltip from './tooltip'
+
+export {
+  UIAvatar,
+  UIBadge,
+  UIBalloon,
+  UIButton,
+  UIContainer,
+  UIDropdown,
+  UIHeader,
+  UIIcon,
+  UIImage,
+  UIImagePlaceholder,
+  UIInput,
+  UILink,
+  UIListItem,
+  UILoader,
+  UIMessage,
+  UIModal,
+  UIOption,
+  UIPasswordInput,
+  UIProgress,
+  UIPrompt,
+  UISearch,
+  UISelect,
+  UISeparator,
+  UISetting,
+  UISlider,
+  UISwitch,
+  UIText,
+  UITextArea,
+  UITooltip,
+}

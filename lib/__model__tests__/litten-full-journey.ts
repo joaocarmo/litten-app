@@ -64,7 +64,11 @@ describe('Performs an end-to-end user and litten journey', () => {
   })
 
   it('user browses feed', async () => {
-    const search = new Search()
+    const search = new Search({
+      query: undefined,
+      filters: undefined,
+      user: undefined,
+    })
     const feed = await search.getHomeFeed()
     expect(feed).toHaveLength(1)
     const [firstLitten] = feed
@@ -88,7 +92,11 @@ describe('Performs an end-to-end user and litten journey', () => {
     const [{ text }] = messages
     const chatsCollection = await Chat.collection.get()
     expect(chatsCollection.size).toBe(0)
-    const search = new Search()
+    const search = new Search({
+      query: undefined,
+      filters: undefined,
+      user: undefined,
+    })
     const feed = await search.getHomeFeed()
     const [
       { id: littenUid, species: littenSpecies, type: littenType, userUid },
@@ -98,7 +106,7 @@ describe('Performs an end-to-end user and litten journey', () => {
     })
     const participants = [
       littenOwner.id,
-      users.find(({ id }) => id !== littenOwner).id,
+      users.find(({ id }) => id !== littenOwner.id).id,
     ]
     const newChat = new Chat({
       littenSpecies,

@@ -1,4 +1,3 @@
-import type { FC } from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import Welcome from '@components/welcome'
 import Register from '@components/welcome/register'
@@ -10,6 +9,7 @@ import {
   SCREEN_NOAUTH_LOGIN,
   SCREEN_NOAUTH_RECOVER,
 } from '@utils/constants'
+import type { OnboardStackParamList } from '@utils/types/routes'
 
 const stackScreens = [
   {
@@ -32,18 +32,18 @@ const stackScreens = [
     name: SCREEN_NOAUTH_RECOVER,
     component: Recover,
   },
-]
+] as const
 
-const Stack = createStackNavigator()
+const Stack = createStackNavigator<OnboardStackParamList>()
 
-const Onboard = (): FC => (
+const Onboard = () => (
   <Stack.Navigator
     screenOptions={{
       headerShown: false,
     }}
   >
-    {stackScreens.map((props) => (
-      <Stack.Screen {...props} />
+    {stackScreens.map(({ key, name, component }) => (
+      <Stack.Screen key={key} name={name} component={component} />
     ))}
   </Stack.Navigator>
 )
