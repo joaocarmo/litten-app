@@ -6,11 +6,13 @@
 
 - [ ] Feature
 - [ ] Fix
+- [ ] Tests
 - [ ] Refactor
 - [ ] DevOps
 - [ ] i18n
 - [ ] a11y
-- [ ] Docs
+- [ ] Documentation
+- [ ] Release
 
 ### Summary
 

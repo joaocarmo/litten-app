@@ -1,0 +1,2 @@
+# Set the PR creator as the assignee
+addAssignees: author

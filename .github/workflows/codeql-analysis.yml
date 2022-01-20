@@ -1,5 +1,5 @@
 # For most projects, this workflow file will not need changing
-name: "CodeQL"
+name: CodeQL
 
 on:
   push:
