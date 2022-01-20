@@ -909,30 +909,30 @@ PODS:
     - React-Core
     - SDWebImage (~> 5.11.1)
     - SDWebImageWebPCoder (~> 0.8.4)
-  - RNFBAnalytics (14.2.2):
+  - RNFBAnalytics (14.2.3):
     - Firebase/Analytics (= 8.10.0)
     - React-Core
     - RNFBApp
-  - RNFBApp (14.2.2):
+  - RNFBApp (14.2.3):
     - Firebase/CoreOnly (= 8.10.0)
     - React-Core
-  - RNFBAuth (14.2.2):
+  - RNFBAuth (14.2.3):
     - Firebase/Auth (= 8.10.0)
     - React-Core
     - RNFBApp
-  - RNFBCrashlytics (14.2.2):
+  - RNFBCrashlytics (14.2.3):
     - Firebase/Crashlytics (= 8.10.0)
     - React-Core
     - RNFBApp
-  - RNFBFirestore (14.2.2):
+  - RNFBFirestore (14.2.3):
     - Firebase/Firestore (= 8.10.0)
     - React-Core
     - RNFBApp
-  - RNFBRemoteConfig (14.2.2):
+  - RNFBRemoteConfig (14.2.3):
     - Firebase/RemoteConfig (= 8.10.0)
     - React-Core
     - RNFBApp
-  - RNFBStorage (14.2.2):
+  - RNFBStorage (14.2.3):
     - Firebase/Storage (= 8.10.0)
     - React-Core
     - RNFBApp
@@ -1332,13 +1332,13 @@ SPEC CHECKSUMS:
   RNCPushNotificationIOS: 87b8d16d3ede4532745e05b03c42cff33a36cc45
   RNDeviceInfo: 0400a6d0c94186d1120c3cbd97b23abc022187a9
   RNFastImage: 1f2cab428712a4baaf78d6169eaec7f622556dd7
-  RNFBAnalytics: e4a511c1f6d2eeca606a0acd7d43b39c937c9afa
-  RNFBApp: 78d0446e8b28dc30616c134a9e4d8d4b01f9f966
-  RNFBAuth: ac807e2ed1c08f1157bd866ede64faa706eab303
-  RNFBCrashlytics: 01b813547d6bd905563f6ba5bc706b01aa2466fe
-  RNFBFirestore: 0b11664ee7aef061378ad3a3acc48d0bc31d821a
-  RNFBRemoteConfig: 542d85179c812bc1770b956c5203caa43e2bd116
-  RNFBStorage: ca6753df72fdf9e5d9fbc266f4348cc1f2c184ab
+  RNFBAnalytics: 69e24a15d2509d803f1092cc89c7222406d62a49
+  RNFBApp: a87ff8c3543b6a2fa62fe85da43c192ca73c5653
+  RNFBAuth: 995ada5ba61f11cb03d5650288757d0977f2587c
+  RNFBCrashlytics: 5f47d339b4b27f2b6201e2b4d9e305e5297c7773
+  RNFBFirestore: f70218f3ea71f7ed16d7f76367802bf5179350b5
+  RNFBRemoteConfig: c9f1756fefe9f03d17f083301dd88e129ce34068
+  RNFBStorage: 9534106b674a58185cc06f5d960dc059bbf77e75
   RNGestureHandler: bf572f552ea324acd5b5464b8d30755b2d8c1de6
   RNImageCropPicker: 448d3c6e923fde3466b49caf3c2457c2a0ba02dd
   RNLocalize: f567ea0e35116a641cdffe6683b0d212d568f32a
