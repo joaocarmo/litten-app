@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore FIXME
 import { apps, clearFirestoreData } from '@firebase/rules-unit-testing'
 
 export const projectId = 'litten-app'
