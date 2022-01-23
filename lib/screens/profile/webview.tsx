@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { StyleSheet, View } from 'react-native'
-import { usePaddingBottom } from '@hooks'
+import { usePaddingBottom, useTheme } from '@hooks'
 import { UIContainer, UIHeader, UILoader, UIText } from '@ui-elements'
 import { WebView } from 'react-native-webview'
 import { debugLog } from '@utils/dev'
@@ -14,7 +14,10 @@ import { translate } from '@utils/i18n'
 const WebViewScreen = ({ path }) => {
   const [isLoading, setIsLoading] = useState(true)
   const [showError, setShowError] = useState(false)
+  const { scheme } = useTheme()
   const withPaddingBottom = usePaddingBottom(0.85)
+
+  const params = useMemo(() => `?inapp=true&theme=${scheme}`, [scheme])
 
   const stopLoading = () => {
     setTimeout(() => setIsLoading(false), DEBOUNCE_TIMEOUT)
@@ -38,7 +41,7 @@ const WebViewScreen = ({ path }) => {
       {!showError && (
         <WebView
           source={{
-            uri: `${WEB_APP_BASE}${path}`,
+            uri: `${WEB_APP_BASE}${path}${params}`,
           }}
           onError={() => {
             debugLog(`[WEBVIEW] WebView Error at ${path}.`)

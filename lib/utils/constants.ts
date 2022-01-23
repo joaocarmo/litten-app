@@ -70,9 +70,9 @@ export const USER_AVATAR_SIZE_MINI = 36
 export * from './routes'
 
 // WebViews
-export const WEB_APP_HELP_AND_CONTACT = '/faq?inapp=true'
-export const WEB_APP_TERMS_AND_CONDITIONS = '/terms-and-conditions?inapp=true'
-export const WEB_APP_PRIVACY_POLICY = '/privacy-policy?inapp=true'
+export const WEB_APP_HELP_AND_CONTACT = '/faq'
+export const WEB_APP_TERMS_AND_CONDITIONS = '/terms-and-conditions'
+export const WEB_APP_PRIVACY_POLICY = '/privacy-policy'
 
 // Messages
 export const CONVERSATION_DELETE_CONVERSATION =
