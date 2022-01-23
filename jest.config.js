@@ -34,7 +34,17 @@ module.exports = {
       timers: 'real',
       testMatch: [
         '**/__model__tests__/**/*.[jt]s?(x)',
-        '**/?(*.)+(model-spec|serial-test).[jt]s?(x)',
+        '**/?(*.)+(model-spec|model-test).[jt]s?(x)',
+      ],
+      ...globalConfig,
+    },
+    {
+      displayName: 'rules',
+      testEnvironment: 'node',
+      timers: 'real',
+      testMatch: [
+        '**/__rules__tests__/**/*.[jt]s?(x)',
+        '**/?(*.)+(rules-spec|rules-test).[jt]s?(x)',
       ],
       ...globalConfig,
     },

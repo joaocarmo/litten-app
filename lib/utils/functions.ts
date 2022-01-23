@@ -1,6 +1,6 @@
 import { APP_IS_DEV, IS_BETA_RELASE } from '@utils/env'
 import base64 from 'base-64'
-import md5Hex from 'md5-hex'
+import MD5 from 'crypto-js/md5'
 import isEmpty from 'lodash/isEmpty'
 import { locationSchema } from '@db/schemas/location'
 import {
@@ -167,7 +167,7 @@ export const parseAvatar = (
     // The size query and default if no gravatar exists
     const query = `s=${size}&d=mp`
     // Gravatar uses MD5 hashes from an email address (all lowercase)
-    const hash = md5Hex(email.toLowerCase())
+    const hash = MD5(email.toLowerCase()).toString()
     // The full avatar URL
     return `${gravatarUrl}/${hash}?${query}`
   }

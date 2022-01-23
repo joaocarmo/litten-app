@@ -1,12 +1,15 @@
-import { apps, clearFirestoreData } from '@firebase/rules-unit-testing'
+import firebase from 'firebase/compat/app'
+import { initializeTestEnvironment } from '@firebase/rules-unit-testing'
 
 export const projectId = 'litten-app'
 
-export const cleanFirestore = async (): Promise<void> => {
-  await Promise.all(apps().map((app) => app.delete()))
-  await clearFirestoreData({
+export const cleanFirestore = async () => {
+  const testEnv = await initializeTestEnvironment({
     projectId,
   })
+
+  await Promise.all(firebase.apps.map((app) => app.delete()))
+  await testEnv.clearFirestore()
 }
 
 export const mapName =
