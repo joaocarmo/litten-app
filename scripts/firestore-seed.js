@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const admin = require('firebase-admin')
-const { apps, clearFirestoreData } = require('@firebase/rules-unit-testing')
+const firebase = require('firebase/compat/app')
+const { initializeTestEnvironment } = require('@firebase/rules-unit-testing')
 const {
   authUser,
   authUserRecord,
@@ -11,6 +12,7 @@ const {
 } = require('../lib/fixtures/seed')
 
 const projectId = 'litten-app'
+
 const DB_CHAT_COLLECTION = 'chats'
 const DB_LITTEN_COLLECTION = 'littens'
 const DB_MESSAGE_COLLECTION = 'messages'
@@ -36,6 +38,18 @@ const parseDataDoc = (origObj) => {
   return obj
 }
 
+const cleanup = async () => {
+  const testEnv = await initializeTestEnvironment({
+    projectId,
+  })
+
+  console.log('Clearing existing apps...')
+  await Promise.all(firebase.apps.map((app) => app.delete()))
+
+  console.log('Clearing previous data...')
+  await testEnv.clearFirestore()
+}
+
 const main = async () => {
   const auth = admin.auth()
   const db = admin.firestore()
@@ -47,11 +61,7 @@ const main = async () => {
 
   console.log(`Seeding the Firestore DB project '${projectId}'...`)
 
-  console.log('Clearing existing apps...')
-  await Promise.all(apps().map((app) => app.delete()))
-
-  console.log('Clearing previous data...')
-  await clearFirestoreData({ projectId })
+  await cleanup()
 
   console.log('Clearing previous auth accounts...')
   const authList = await admin.auth().listUsers()
