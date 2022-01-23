@@ -84,7 +84,7 @@
     "start:ios": "yarn ios && yarn start:firebase",
     "start": "react-native start",
     "test:firestore:model": "firebase emulators:exec 'jest --runInBand --selectProjects model --forceExit'",
-    "test:firestore:rules": "firebase emulators:exec 'jest --selectProjects rules'",
+    "test:firestore:rules": "firebase emulators:exec 'jest --selectProjects rules --forceExit'",
     "test": "jest --selectProjects default --forceExit",
     "translations-check": "./scripts/validate-translations",
     "type-check": "tsc --noEmit"
