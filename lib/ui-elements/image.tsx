@@ -40,10 +40,6 @@ const UIImage = ({
     return [imageStyle, style]
   }, [height, style, width])
 
-  if (!source?.uri) {
-    return null
-  }
-
   return (
     <FastImage
       resizeMode={FastImage.resizeMode[resizeMode]}
