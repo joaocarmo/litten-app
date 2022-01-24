@@ -62,4 +62,5 @@ export const clearPersistence = async () => {
     }
   }
 }
+
 export default firestore

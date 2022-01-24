@@ -1,6 +1,6 @@
 /* eslint-disable class-methods-use-this */
-import storage from '@react-native-firebase/storage'
 import firestore from '@db/firestore'
+import storage from '@db/storage'
 import Auth from '@model/auth'
 import Base from '@model/base'
 import Litten from '@model/litten'
@@ -216,6 +216,7 @@ export default class User extends Base {
     if (this.#currentUser) {
       try {
         this.#photoURL = await this.#auth.uploadAndSetPhoto(photoURL)
+        console.log('photoURL', this.#photoURL)
         this.updateOne('photoURL', this.#photoURL)
       } catch (err) {
         if (STORAGE_IGNORED_ERRORS.includes(err.code)) {

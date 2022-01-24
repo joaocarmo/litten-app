@@ -143,25 +143,24 @@ export const getErrorMessage = (type: string, code: string): string => {
  * Parses the user's supplied image URI during the register photo step,
  * if none is supplied, a Gravatar URI is generated based on the user's email
  * @param {string} avatar - URI location of the user's avatar
- * @param {{email: string}} options - Extra options, e.g. the user's email
+ * @param {{email: string, size: number}} options - Extra options, e.g. the user's email
  * @returns {string}
  */
 export const parseAvatar = (
   avatar: string,
-  {
-    email = '',
-    size = 512,
-  }: {
+  options?: {
     email?: string
     size?: number
-  } = {},
+  },
 ): string => {
-  if (typeof avatar === 'string' && avatar.length) {
+  const { email = '', size = 512 } = options || {}
+
+  if (typeof avatar === 'string' && avatar.length > 0) {
     return avatar
   }
 
   // Grab a gravatar
-  if (typeof email === 'string' && email.length) {
+  if (typeof email === 'string' && email.length > 0) {
     // The Gravatar image service
     const gravatarUrl = 'https://s.gravatar.com/avatar'
     // The size query and default if no gravatar exists
@@ -179,7 +178,7 @@ export const parseAvatar = (
  * Evaluates whether a given location object is considered valid according to
  *  - Has a valid ISO 3166-1 alpha-2 country code
  *  - Has 2 or more valid keys fulfilled
- * @param {Object<string, string>} location - Location object
+ * @param {DBLocationObject} location - Location object
  * @returns {boolean}
  */
 export const isValidLocation = (location: DBLocationObject): boolean => {

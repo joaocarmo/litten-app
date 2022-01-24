@@ -1,7 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import { APP_IS_DEV } from '@utils/env'
-import storage from '@react-native-firebase/storage'
 import firestore from '@db/firestore'
+import storage from '@db/storage'
 import Base from '@model/base'
 import { LittenError } from '@model/error/litten'
 import { string2tags } from '@utils/functions'
