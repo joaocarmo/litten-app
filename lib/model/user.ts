@@ -216,8 +216,7 @@ export default class User extends Base {
     if (this.#currentUser) {
       try {
         this.#photoURL = await this.#auth.uploadAndSetPhoto(photoURL)
-        console.log('photoURL', this.#photoURL)
-        this.updateOne('photoURL', this.#photoURL)
+        return this.updateOne('photoURL', this.#photoURL)
       } catch (err) {
         if (STORAGE_IGNORED_ERRORS.includes(err.code)) {
           debugLog(err)

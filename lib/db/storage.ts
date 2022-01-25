@@ -38,9 +38,15 @@ export const uploadUserAvatar = async (
       const fileExt = 'jpg'
       const strRef = `${STORAGE_USER_AVATAR}/${userAuthUid}.${fileExt}`
       const storageRef = storage().ref(strRef)
-      await storageRef.putFile(photoURL)
-      const downloadURL = await storageRef.getDownloadURL()
-      return downloadURL
+      const task = await storageRef.putFile(photoURL)
+
+      if (task.state === 'success') {
+        const downloadURL = await storageRef.getDownloadURL()
+        return downloadURL
+      } else {
+        debugLog(`[FIREBASE] UPLOAD USER AVATAR FAILED`)
+        logError(task.error)
+      }
     } catch (err) {
       logError(err)
     }

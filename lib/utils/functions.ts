@@ -1,4 +1,9 @@
-import { APP_IS_DEV, IS_BETA_RELASE } from '@utils/env'
+import {
+  APP_IS_DEV,
+  FIREBASE_STORAGE_EMULATOR_HOST,
+  IS_BETA_RELASE,
+  USE_FIREBASE_EMULATOR,
+} from '@utils/env'
 import base64 from 'base-64'
 import MD5 from 'crypto-js/md5'
 import isEmpty from 'lodash/isEmpty'
@@ -445,7 +450,10 @@ export const shortenName = (fullName = ''): string => {
  */
 export const getImagePath = (image: Image): string => {
   if (image) {
-    if (APP_IS_DEV) {
+    if (
+      APP_IS_DEV &&
+      (!USE_FIREBASE_EMULATOR || !FIREBASE_STORAGE_EMULATOR_HOST)
+    ) {
       return `data:${image.mime};base64,${image.data}`
     }
 
