@@ -1,7 +1,6 @@
 /* eslint-disable class-methods-use-this */
-import { APP_IS_DEV } from '@utils/env'
 import firestore from '@db/firestore'
-import storage from '@db/storage'
+import storage, { uploadAndGetDownloadUrl } from '@db/storage'
 import Base from '@model/base'
 import { LittenError } from '@model/error/litten'
 import { string2tags } from '@utils/functions'
@@ -213,19 +212,11 @@ export default class Litten extends Base {
     }
   }
 
-  async savePhoto(fileURI: string, docId: string): Promise<void | string> {
-    if (typeof fileURI === 'string') {
-      if (APP_IS_DEV) {
-        return fileURI
-      }
-
-      const filename = fileURI.split('/').pop()
-      const strRef = `${STORAGE_LITTEN_PHOTOS}/${docId}/${filename}`
-      const storageRef = this.storage().ref(strRef)
-      await storageRef.putFile(fileURI)
-      const downloadURL = await storageRef.getDownloadURL()
-      return downloadURL
-    }
+  async savePhoto(fileURI: string, docId: string): Promise<string> {
+    const filename = fileURI.split('/').pop()
+    const strRef = `${STORAGE_LITTEN_PHOTOS}/${docId}/${filename}`
+    const downloadURL = await uploadAndGetDownloadUrl(strRef, fileURI)
+    return downloadURL
   }
 
   async savePhotos(doc): Promise<void> {
