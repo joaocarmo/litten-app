@@ -28,6 +28,10 @@ const UIImage = ({
   )
 
   const styles = useMemo(() => {
+    if (!height && !width) {
+      return style
+    }
+
     const imageStyle = {
       height,
       width,
