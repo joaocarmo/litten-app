@@ -1,5 +1,6 @@
-import { useMemo } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import FastImage from 'react-native-fast-image'
+import UILoader from '@ui-elements/loader'
 import type { FastImageProps } from 'react-native-fast-image'
 import type { ImageSource } from '@ui-elements/types'
 
@@ -17,6 +18,8 @@ const UIImage = ({
   width,
   ...otherProps
 }: UIImageProps) => {
+  const [isLoading, setIsLoading] = useState(true)
+
   const source = useMemo(
     () =>
       typeof propsSource === 'string'
@@ -26,6 +29,14 @@ const UIImage = ({
         : propsSource,
     [propsSource],
   )
+
+  const handleOnLoadStart = useCallback(() => {
+    setIsLoading(true)
+  }, [])
+
+  const handleOnLoad = useCallback(() => {
+    setIsLoading(false)
+  }, [])
 
   const styles = useMemo(() => {
     if (!height && !width) {
@@ -45,18 +56,23 @@ const UIImage = ({
   }, [height, style, width])
 
   return (
-    <FastImage
-      resizeMode={FastImage.resizeMode[resizeMode]}
-      style={styles}
-      source={source}
-      {...otherProps}
-    />
+    <>
+      {isLoading && <UILoader active={isLoading} size="small" />}
+      <FastImage
+        source={source}
+        resizeMode={FastImage.resizeMode[resizeMode]}
+        style={styles}
+        onLoadStart={handleOnLoadStart}
+        onLoadEnd={handleOnLoad}
+        {...otherProps}
+      />
+    </>
   )
 }
 
 UIImage.defaultProps = {
   height: undefined,
-  resizeMode: 'contain',
+  resizeMode: 'cover',
   style: undefined,
   width: undefined,
 }
