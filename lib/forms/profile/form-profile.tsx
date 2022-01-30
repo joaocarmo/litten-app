@@ -124,9 +124,9 @@ const FormProfile = ({
   )
 
   const handleSetPhotoURL = useCallback(
-    (newPhotoURL) => {
+    async (newPhotoURL) => {
       if (newPhotoURL !== photoURL) {
-        user.photoURL = newPhotoURL
+        await user.uploadAndSetPhoto(newPhotoURL)
       }
     },
     [photoURL, user],
@@ -204,7 +204,7 @@ const FormProfile = ({
     handleSetIsOrganization(editedIsOrganization ?? isOrganization)
     handleSetLocation(editedLocation ?? location)
     handleSetPhoneNumber(editedPhoneNumber ?? phoneNumber)
-    handleSetPhotoURL(editedPhotoURL ?? photoURL)
+    await handleSetPhotoURL(editedPhotoURL ?? photoURL)
     debouncedSetIsLoading(false)
 
     try {
