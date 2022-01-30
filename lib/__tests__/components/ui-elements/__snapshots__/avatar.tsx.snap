@@ -26,10 +26,6 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
         },
         Array [
           Object {
-            "height": undefined,
-            "width": undefined,
-          },
-          Object {
             "borderRadius": 36,
             "height": 36,
             "width": 36,

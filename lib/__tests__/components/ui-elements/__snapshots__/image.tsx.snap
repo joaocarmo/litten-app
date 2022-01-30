@@ -7,13 +7,7 @@ exports[`Snapshot test for the "UIImage" component renders correctly 1`] = `
       Object {
         "overflow": "hidden",
       },
-      Array [
-        Object {
-          "height": undefined,
-          "width": undefined,
-        },
-        undefined,
-      ],
+      undefined,
     ]
   }
 >
