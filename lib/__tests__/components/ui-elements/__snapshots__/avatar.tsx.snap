@@ -4,7 +4,6 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
 <View
   style={
     Array [
-      undefined,
       Object {
         "alignItems": "center",
         "justifyContent": "center",
@@ -15,6 +14,7 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
         "height": 36,
         "width": 36,
       },
+      undefined,
     ]
   }
 >
