@@ -1,4 +1,4 @@
-import { useCallback } from 'react'
+import { useCallback, useMemo } from 'react'
 import { StyleSheet, View } from 'react-native'
 import type { ViewStyle } from 'react-native'
 import UIImage from '@ui-elements/image'
@@ -16,7 +16,7 @@ type UIAvatarProps = {
 } & UIImageProps
 
 const UIAvatar = ({
-  containerStyle,
+  containerStyle: propsContainerStyle,
   resizeMode = 'cover',
   size = 'mini',
   source,
@@ -32,14 +32,25 @@ const UIAvatar = ({
         return styles.uiAvatarSizeMedium
 
       default:
+        // mini
         return styles.uiAvatarSizeMini
     }
   }, [size])
+
+  const containerStyle = useMemo(
+    () => [styles.uiAvatarImageContainer, getSize(), propsContainerStyle],
+    [propsContainerStyle, getSize],
+  )
+  const imageStyle = useMemo(() => [getSize(), style], [getSize, style])
+
   return (
-    <View style={[containerStyle, styles.uiAvatarImageContainer, getSize()]}>
+    <View style={containerStyle}>
       {source && (
         <UIImage
-          {...{ ...otherProps, resizeMode, source, style: [getSize(), style] }}
+          source={source}
+          resizeMode={resizeMode}
+          style={imageStyle}
+          {...otherProps}
         />
       )}
     </View>

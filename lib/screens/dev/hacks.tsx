@@ -2,6 +2,7 @@ import { useCallback, useState } from 'react'
 import { Platform, View, StyleSheet } from 'react-native'
 import { useNetInfo } from '@react-native-community/netinfo'
 import { useActionSheet } from '@expo/react-native-action-sheet'
+import FastImage from 'react-native-fast-image'
 import { useLittenTeam, useNotifications } from '@hooks'
 import crashlytics from '@db/crashlytics'
 import { simulateNetwork } from '@db/firestore'
@@ -10,11 +11,13 @@ import ScreenTemplate from '@templates/screen'
 import ScreenSimpleHeaderTemplate from '@templates/screen-simple-header'
 import { translate } from '@utils/i18n'
 import { clearStorage } from '@store/utils'
+import { debugLog } from '@utils/dev'
 
 const [getState, toggleState] = simulateNetwork()
 
 const HacksUI = () => {
   const [storageCleared, setStorageCleared] = useState(false)
+  const [cacheCleared, setCacheCleared] = useState(false)
   const [useCrashTestDummy, setUseCrashTestDummy] = useState(false)
   const [fbNetworkActive, setFbNetworkActive] = useState(getState())
   const actionsAreAllowed = useLittenTeam()
@@ -42,6 +45,16 @@ const HacksUI = () => {
   const handleClearStorage = useCallback(async () => {
     const hasStorageCleared = await clearStorage()
     setStorageCleared(hasStorageCleared)
+  }, [])
+
+  const handleClearCache = useCallback(async () => {
+    try {
+      await FastImage.clearMemoryCache()
+      await FastImage.clearDiskCache()
+      setCacheCleared(true)
+    } catch (err) {
+      debugLog(err)
+    }
   }, [])
 
   const handleAbruptChaos = useCallback(() => {
@@ -122,6 +135,10 @@ const HacksUI = () => {
               danger
             >
               {translate('screens.dev.clearAsyncStorage')}
+            </UIButton>
+            <UISeparator invisible small />
+            <UIButton onPress={handleClearCache} disabled={cacheCleared} danger>
+              {translate('screens.dev.clearImageCache')}
             </UIButton>
             <UISeparator invisible small />
             <UIButton onPress={handleAbruptChaos} danger>
