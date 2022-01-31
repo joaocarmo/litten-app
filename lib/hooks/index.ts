@@ -28,6 +28,7 @@ import useSearchFilters from '@hooks/use-search-filters'
 import useSearchFiltersSpecies from '@hooks/use-search-filters-species'
 import useSearchHistory from '@hooks/use-search-history'
 import useSearchQuery from '@hooks/use-search-query'
+import useStore from '@hooks/use-store'
 import useTasks from '@hooks/use-tasks'
 import useTasksHandler from '@hooks/use-tasks-handler'
 import useTheme from '@hooks/use-theme'
@@ -69,6 +70,7 @@ export {
   useSearchFiltersSpecies,
   useSearchHistory,
   useSearchQuery,
+  useStore,
   useTasks,
   useTasksHandler,
   useTheme,

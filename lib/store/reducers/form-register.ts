@@ -89,6 +89,10 @@ const formRegisterSlice = createSlice({
     setPhoneNumber(state, action: PayloadAction<string>) {
       state.phoneNumber = action.payload
     },
+
+    reset() {
+      return { ...initialState }
+    },
   },
 })
 
@@ -104,6 +108,7 @@ export const {
   setPassword,
   setPasswordConfirm,
   setPhoneNumber,
+  reset,
 } = formRegisterSlice.actions
 
 export default formRegisterSlice.reducer

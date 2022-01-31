@@ -60,6 +60,10 @@ const formProfileSlice = createSlice({
     setProfilePhotoURL(state, action: PayloadAction<PhotoObject>) {
       state.photoURL = action.payload
     },
+
+    reset() {
+      return { ...initialState }
+    },
   },
 })
 
@@ -73,6 +77,7 @@ export const {
   setProfileLocation,
   setProfilePhoneNumber,
   setProfilePhotoURL,
+  reset,
 } = formProfileSlice.actions
 
 export default formProfileSlice.reducer

@@ -26,6 +26,10 @@ const appSettingsSlice = createSlice({
     setNotifications(state, action: PayloadAction<AppSettingsNotifications>) {
       state.notifications = action.payload
     },
+
+    reset() {
+      return { ...initialState }
+    },
   },
 })
 
@@ -33,6 +37,7 @@ export const {
   setAutoRedirectIfLoggedIn,
   setCurrentlyActiveChat,
   setNotifications,
+  reset,
 } = appSettingsSlice.actions
 
 export default appSettingsSlice.reducer

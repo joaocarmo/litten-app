@@ -248,6 +248,7 @@
       "firestoreNetwork": "Rede Firestore",
       "hacks": "Desenvolvimento",
       "network": "Rede",
+      "resetStore": "Store Reset",
       "storybookIntro": "Podes navegar pelos elementos visuais do Litten aqui",
       "toggleFirebaseNetwork": "Alternar Firebase Network",
       "triggerLocalNotification": "Notificação Push Local"

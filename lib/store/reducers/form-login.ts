@@ -46,6 +46,10 @@ const formLoginSlice = createSlice({
     setPassword(state, action: PayloadAction<string>) {
       state.password = action.payload
     },
+
+    reset() {
+      return { ...initialState }
+    },
   },
 })
 
@@ -55,6 +59,7 @@ export const {
   setEmail,
   setErrorAndMessage,
   setPassword,
+  reset,
 } = formLoginSlice.actions
 
 export default formLoginSlice.reducer

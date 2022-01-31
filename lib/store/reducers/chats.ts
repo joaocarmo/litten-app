@@ -23,9 +23,13 @@ const chatsSlice = createSlice({
     setMessages(state, action: PayloadAction<MessagePayload>) {
       state.messages[action.payload.chatUid] = action.payload.messages
     },
+
+    reset() {
+      return { ...initialState }
+    },
   },
 })
 
-export const { setChats, setMessages } = chatsSlice.actions
+export const { setChats, setMessages, reset } = chatsSlice.actions
 
 export default chatsSlice.reducer

@@ -3,7 +3,7 @@ import { Platform, View, StyleSheet } from 'react-native'
 import { useNetInfo } from '@react-native-community/netinfo'
 import { useActionSheet } from '@expo/react-native-action-sheet'
 import FastImage from 'react-native-fast-image'
-import { useLittenTeam, useNotifications } from '@hooks'
+import { useLittenTeam, useNotifications, useStore } from '@hooks'
 import crashlytics from '@db/crashlytics'
 import { simulateNetwork } from '@db/firestore'
 import { UIButton, UIHeader, UISeparator, UIText } from '@ui-elements'
@@ -18,12 +18,14 @@ const [getState, toggleState] = simulateNetwork()
 const HacksUI = () => {
   const [storageCleared, setStorageCleared] = useState(false)
   const [cacheCleared, setCacheCleared] = useState(false)
+  const [storeReset, setStoreReset] = useState(false)
   const [useCrashTestDummy, setUseCrashTestDummy] = useState(false)
   const [fbNetworkActive, setFbNetworkActive] = useState(getState())
   const actionsAreAllowed = useLittenTeam()
   const notifications = useNotifications()
   const { isConnected: networkActive } = useNetInfo()
   const { showActionSheetWithOptions } = useActionSheet()
+  const { reset } = useStore()
 
   const triggerLocalNotification = () => {
     notifications.localNotification(
@@ -56,6 +58,11 @@ const HacksUI = () => {
       debugLog(err)
     }
   }, [])
+
+  const handleResetStore = useCallback(async () => {
+    reset()
+    setStoreReset(true)
+  }, [reset])
 
   const handleAbruptChaos = useCallback(() => {
     const options = [
@@ -139,6 +146,10 @@ const HacksUI = () => {
             <UISeparator invisible small />
             <UIButton onPress={handleClearCache} disabled={cacheCleared} danger>
               {translate('screens.dev.clearImageCache')}
+            </UIButton>
+            <UISeparator invisible small />
+            <UIButton onPress={handleResetStore} disabled={storeReset} danger>
+              {translate('screens.dev.resetStore')}
             </UIButton>
             <UISeparator invisible small />
             <UIButton onPress={handleAbruptChaos} danger>

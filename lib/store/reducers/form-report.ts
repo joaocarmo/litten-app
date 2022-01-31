@@ -28,10 +28,14 @@ const formReportSlice = createSlice({
     setType(state, action: PayloadAction<string>) {
       state.type = action.payload
     },
+
+    reset() {
+      return { ...initialState }
+    },
   },
 })
 
-export const { resetForm, setAttachments, setContent, setType } =
+export const { resetForm, setAttachments, setContent, setType, reset } =
   formReportSlice.actions
 
 export default formReportSlice.reducer

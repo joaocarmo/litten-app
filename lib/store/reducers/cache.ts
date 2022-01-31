@@ -33,10 +33,14 @@ const cacheSlice = createSlice({
     setUsers(state, action: PayloadAction<ObjectById<BasicUser>>) {
       state.users = action.payload
     },
+
+    reset() {
+      return { ...initialState }
+    },
   },
 })
 
-export const { addLitten, addUser, setFeed, setLittens, setUsers } =
+export const { addLitten, addUser, setFeed, setLittens, setUsers, reset } =
   cacheSlice.actions
 
 export default cacheSlice.reducer
