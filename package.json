@@ -120,7 +120,7 @@
     "i18n-js": "^3.7.1",
     "libphonenumber-js": "^1.9.46",
     "react": "17.0.2",
-    "react-native": "0.67.1",
+    "react-native": "0.67.2",
     "react-native-background-fetch": "^4.0.4",
     "react-native-bootsplash": "^4.1.0",
     "react-native-device-info": "^8.4.8",
