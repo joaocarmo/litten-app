@@ -1,5 +1,6 @@
 import { useEffect, useMemo } from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import type { BottomTabNavigationOptions } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack'
 import TabNavigation from '@structure/tab-navigation'
 import FavouritesScreen from '@screens/favourites'
@@ -60,7 +61,7 @@ const TabNavigator = () => {
           name: SCREEN_TAB_NAV_HOME,
           component: HomeScreen,
           options: {
-            tabBarIcon: Home,
+            tabBarIcon: Home as BottomTabNavigationOptions['tabBarIcon'],
             tabBarAccessibilityLabel: translate('accessibility.tabBar.home'),
           },
         },
@@ -69,7 +70,7 @@ const TabNavigator = () => {
           name: SCREEN_TAB_NAV_FAVOURITES,
           component: FavouritesScreen,
           options: {
-            tabBarIcon: Favourites,
+            tabBarIcon: Favourites as BottomTabNavigationOptions['tabBarIcon'],
             tabBarAccessibilityLabel: translate(
               'accessibility.tabBar.favourites',
             ),
@@ -80,7 +81,7 @@ const TabNavigator = () => {
           name: SCREEN_TAB_NAV_NEW,
           component: NewScreen,
           options: {
-            tabBarIcon: New,
+            tabBarIcon: New as BottomTabNavigationOptions['tabBarIcon'],
             tabBarAccessibilityLabel: translate('accessibility.tabBar.newPost'),
           },
         },
@@ -89,7 +90,7 @@ const TabNavigator = () => {
           name: SCREEN_TAB_NAV_MESSAGES,
           component: MessagesScreen,
           options: {
-            tabBarIcon: Messages,
+            tabBarIcon: Messages as BottomTabNavigationOptions['tabBarIcon'],
             tabBarBadge: unreadMessages,
             tabBarAccessibilityLabel: translate(
               'accessibility.tabBar.messages',
@@ -101,7 +102,7 @@ const TabNavigator = () => {
           name: SCREEN_TAB_NAV_PROFILE,
           component: ProfileScreen,
           options: {
-            tabBarIcon: Profile,
+            tabBarIcon: Profile as BottomTabNavigationOptions['tabBarIcon'],
             tabBarAccessibilityLabel: translate('accessibility.tabBar.profile'),
           },
         },

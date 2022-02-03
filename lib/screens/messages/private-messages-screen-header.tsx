@@ -3,7 +3,6 @@ import { useTheme } from '@hooks'
 import ScreenSimpleHeaderTemplate from '@templates/screen-simple-header'
 import { UIAvatar } from '@ui-elements'
 import { ChatOptions } from '@screens/messages/inner-components'
-import { placeholderUser } from '@images'
 import { littenToHeaderTitle, shortenName } from '@utils/functions'
 import {
   PLACEHOLDER_USER_DISPLAY_NAME,
@@ -57,13 +56,7 @@ const MessagePrivateHeader = (props) => {
     <ScreenSimpleHeaderTemplate withGoBack>
       <View style={styles.headerContainer}>
         <UIAvatar
-          source={
-            recipient?.photoURL
-              ? {
-                  uri: recipient.photoURL,
-                }
-              : placeholderUser
-          }
+          source={recipient?.photoURL}
           containerStyle={styles.avatarContainer}
         />
         <View style={styles.titleContainer}>

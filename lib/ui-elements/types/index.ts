@@ -1,11 +1,12 @@
 import type { ComponentType } from 'react'
-import type { ColorValue, ImageStyle } from 'react-native'
+import type { ColorValue, StyleProp, ImageStyle } from 'react-native'
 
 export type IconComponentProps = {
-  height?: number
-  width?: number
   fill?: ColorValue
-  style?: ImageStyle
+  height?: number
+  stroke?: ColorValue
+  style?: StyleProp<ImageStyle>
+  width?: number
 }
 
 export type IconTypeComponent = ComponentType<IconComponentProps>

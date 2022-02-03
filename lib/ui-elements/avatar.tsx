@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native'
 import type { ViewStyle } from 'react-native'
 import UIImage from '@ui-elements/image'
 import type { UIImageProps } from '@ui-elements/image'
+import { placeholderUser } from '@images'
 import {
   USER_AVATAR_SIZE_LARGE,
   USER_AVATAR_SIZE_MEDIUM,
@@ -19,10 +20,13 @@ const UIAvatar = ({
   containerStyle: propsContainerStyle,
   resizeMode = 'cover',
   size = 'mini',
-  source,
+  source: propsSource,
   style,
   ...otherProps
 }: UIAvatarProps) => {
+  const source = useMemo(() => propsSource || placeholderUser, [propsSource])
+  console.log('UIAvatar', source)
+
   const getSize = useCallback(() => {
     switch (size) {
       case 'large':
@@ -45,14 +49,12 @@ const UIAvatar = ({
 
   return (
     <View style={containerStyle}>
-      {source && (
-        <UIImage
-          source={source}
-          resizeMode={resizeMode}
-          style={imageStyle}
-          {...otherProps}
-        />
-      )}
+      <UIImage
+        source={source}
+        resizeMode={resizeMode}
+        style={imageStyle}
+        {...otherProps}
+      />
     </View>
   )
 }

@@ -4,7 +4,6 @@ import { Pressable, Text, View } from 'react-native'
 import { UIAvatar } from '@ui-elements'
 import ScreenTemplate from '@templates/screen'
 import ProfileMainScreen from '@screens/profile/main'
-import { placeholderUser } from '@images'
 import { Cog as CogIcon } from '@images/components/icons'
 import { shortenName } from '@utils/functions'
 import {
@@ -61,15 +60,7 @@ const ProfileIndexScreen = () => {
             }
             style={styles.imageContainer}
           >
-            <UIAvatar
-              source={
-                photoURL
-                  ? {
-                      uri: photoURL,
-                    }
-                  : placeholderUser
-              }
-            />
+            <UIAvatar source={photoURL} />
           </Pressable>
           <Text
             style={styles.headerText}

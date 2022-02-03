@@ -2,7 +2,6 @@ import dayjs from '@utils/day'
 import { View } from 'react-native'
 import { useTheme } from '@hooks'
 import { UIAvatar, UIHeader, UIIcon, UIText } from '@ui-elements'
-import { placeholderUser } from '@images'
 import { getFromListByKey, shortenName } from '@utils/functions'
 import { contactOptions } from '@utils/litten'
 import { PLACEHOLDER_USER_DISPLAY_NAME } from '@utils/constants'
@@ -93,11 +92,7 @@ const UserProfileDetailsScreen = ({
           </View>
         </View>
         <View style={styles.viewProfileRight}>
-          <UIAvatar
-            size="medium"
-            source={photoURL || placeholderUser}
-            style={styles.viewAvatar}
-          />
+          <UIAvatar size="medium" source={photoURL} style={styles.viewAvatar} />
         </View>
       </View>
       <UIHeader subheader>

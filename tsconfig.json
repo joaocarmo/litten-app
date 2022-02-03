@@ -19,6 +19,7 @@
       "@forms/*": ["lib/forms/*"],
       "@hooks": ["lib/hooks/index.ts"],
       "@hooks/*": ["lib/hooks/*"],
+      "@images": ["lib/images/index.ts"],
       "@images/*": ["lib/images/*"],
       "@model/*": ["lib/model/*"],
       "@root/*": ["lib/*"],
