@@ -32,6 +32,7 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/prefer-default-export': 'off',
     'jest/expect-expect': 'off',
+    'no-console': ['error'],
     'no-restricted-syntax': 'off',
     'object-curly-spacing': ['error', 'always'],
     'react/function-component-definition': [

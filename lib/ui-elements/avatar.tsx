@@ -25,7 +25,6 @@ const UIAvatar = ({
   ...otherProps
 }: UIAvatarProps) => {
   const source = useMemo(() => propsSource || placeholderUser, [propsSource])
-  console.log('UIAvatar', source)
 
   const getSize = useCallback(() => {
     switch (size) {

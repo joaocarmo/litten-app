@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useState } from 'react'
 import FastImage from 'react-native-fast-image'
+import type { FastImageProps, Source } from 'react-native-fast-image'
 import UILoader from '@ui-elements/loader'
-import type { FastImageProps } from 'react-native-fast-image'
 import type { ImageSource } from '@ui-elements/types'
 
 export type UIImageProps = {
@@ -23,9 +23,9 @@ const UIImage = ({
   const source = useMemo(
     () =>
       typeof propsSource === 'string'
-        ? {
+        ? ({
             uri: propsSource,
-          }
+          } as Source)
         : propsSource,
     [propsSource],
   )

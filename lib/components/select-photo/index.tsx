@@ -75,7 +75,7 @@ const SelectPhoto = ({
 }
 
 SelectPhoto.defaultProps = {
-  source: placeholderUser as string,
+  source: placeholderUser,
 }
 
 const styles = StyleSheet.create({
