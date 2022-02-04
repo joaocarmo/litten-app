@@ -72,7 +72,7 @@ const UIImage = ({
 
 UIImage.defaultProps = {
   height: undefined,
-  resizeMode: 'cover',
+  resizeMode: 'contain',
   style: undefined,
   width: undefined,
 }
