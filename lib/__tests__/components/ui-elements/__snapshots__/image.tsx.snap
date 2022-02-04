@@ -43,7 +43,7 @@ Array [
     <FastImageView
       onFastImageLoadEnd={[Function]}
       onFastImageLoadStart={[Function]}
-      resizeMode="cover"
+      resizeMode="contain"
       source={
         Object {
           "uri": "https://placeimg.com/140/140/people",
