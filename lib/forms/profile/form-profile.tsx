@@ -3,7 +3,7 @@ import { useCallback, useEffect, useMemo, useState, useRef } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { Alert, Pressable, Keyboard, StyleSheet, View } from 'react-native'
 import type { ImageOrVideo } from 'react-native-image-crop-picker'
-import { useDebouncedCallback, useEmailVerified } from '@hooks'
+import { useCacheUsers, useDebouncedCallback, useEmailVerified } from '@hooks'
 import {
   displayNameValidator,
   emailValidator,
@@ -54,11 +54,9 @@ const FormProfile = ({
   },
   clearProfileForm,
   setExtra,
-  // setLocation,
   setProfileDisplayName,
   setProfileEmail,
   setProfileIsOrganization,
-  // setProfileLocation,
   setProfilePhoneNumber,
   setProfilePhotoURL,
 }) => {
@@ -71,6 +69,7 @@ const FormProfile = ({
   const [isLoading, setIsLoading] = useState(false)
   const [changePromptIsOpen, setChangePromptIsOpen] = useState(false)
   const [deletePromptIsOpen, setDeletePromptIsOpen] = useState(false)
+  const [, , addCacheUser] = useCacheUsers()
   const navigation = useNavigation<FormProfileNavigationProp>()
 
   const closePrompt = () => {
@@ -192,9 +191,11 @@ const FormProfile = ({
 
   const refreshUser = useCallback(async () => {
     await user.get()
-    setExtra(user.toJSON())
+    const userJSON = user.toJSON()
+    setExtra(userJSON)
+    addCacheUser(userJSON)
     clearProfileForm()
-  }, [clearProfileForm, setExtra, user])
+  }, [addCacheUser, clearProfileForm, setExtra, user])
 
   const updateUser = useCallback(async () => {
     setIsLoading(true)
