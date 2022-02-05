@@ -9,7 +9,7 @@ index 0491d34..95f3661 100644
 +      folly::Optional<double> cancelButtonTintColor() const;
        NSString *userInterfaceStyle() const;
        folly::Optional<facebook::react::LazyVector<double>> disabledButtonIndices() const;
- 
+
 @@ -134,6 +135,7 @@ namespace JS {
        NSString *subject() const;
        folly::Optional<double> anchor() const;
@@ -17,7 +17,7 @@ index 0491d34..95f3661 100644
 +      folly::Optional<double> cancelButtonTintColor() const;
        folly::Optional<facebook::react::LazyVector<NSString *>> excludedActivityTypes() const;
        NSString *userInterfaceStyle() const;
- 
+
 @@ -1991,6 +1993,11 @@ inline folly::Optional<double> JS::NativeActionSheetManager::SpecShowActionSheet
    id const p = _v[@"tintColor"];
    return RCTBridgingToOptionalDouble(p);
@@ -252,23 +252,6 @@ index 0000000..3db0d7a
 +
 +} // namespace react
 +} // namespace facebook
-diff --git a/node_modules/react-native/jest/setup.js b/node_modules/react-native/jest/setup.js
-index 7787788..7a85e23 100644
---- a/node_modules/react-native/jest/setup.js
-+++ b/node_modules/react-native/jest/setup.js
-@@ -110,11 +110,7 @@ jest
-       getNativeRef: jest.fn(),
-     }),
-   )
--  .mock('../Libraries/Modal/Modal', () => {
--    const baseComponent = mockComponent('../Libraries/Modal/Modal');
--    const mockModal = jest.requireActual('./mockModal');
--    return mockModal(baseComponent);
--  })
-+  .mock('../Libraries/Modal/Modal', () => mockComponent('../Libraries/Modal/Modal'))
-   .mock('../Libraries/Components/View/View', () =>
-     mockComponent('../Libraries/Components/View/View', MockNativeMethods),
-   )
 diff --git a/node_modules/react-native/scripts/.packager.env b/node_modules/react-native/scripts/.packager.env
 new file mode 100644
 index 0000000..21a13cf

@@ -31,17 +31,15 @@ Array [
     >
       Some text here
     </Text>
-    <AndroidSwitch
-      accessibilityRole="switch"
-      enabled={true}
-      on={true}
-      onChange={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      thumbTintColor="#c4c4c4"
-      trackColorForFalse="#dcdee1"
-      trackColorForTrue="#7239f2"
-      trackTintColor="#7239f2"
+    <Unknown
+      thumbColor="#c4c4c4"
+      trackColor={
+        Object {
+          "false": "#dcdee1",
+          "true": "#7239f2",
+        }
+      }
+      value={true}
     />
   </View>,
   <Text
@@ -99,17 +97,15 @@ exports[`Snapshot test for the "UISwitch" component renders correctly without de
   >
     Some text here
   </Text>
-  <AndroidSwitch
-    accessibilityRole="switch"
-    enabled={true}
-    on={true}
-    onChange={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    thumbTintColor="#c4c4c4"
-    trackColorForFalse="#dcdee1"
-    trackColorForTrue="#7239f2"
-    trackTintColor="#7239f2"
+  <Unknown
+    thumbColor="#c4c4c4"
+    trackColor={
+      Object {
+        "false": "#dcdee1",
+        "true": "#7239f2",
+      }
+    }
+    value={true}
   />
 </View>
 `;
