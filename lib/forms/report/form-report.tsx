@@ -1,5 +1,5 @@
 import Toast from 'react-native-simple-toast'
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Alert, StyleSheet, View } from 'react-native'
 import {
   UIButton,
@@ -97,6 +97,27 @@ const ReportForm = ({
     stateType,
   ])
 
+  const attachmentSelector = useMemo(() => {
+    if (NUM_OF_REPORT_IMAGES > 0) {
+      return (
+        <View style={styles.reportImagesContainer}>
+          {iterateTimes(NUM_IMAGES).map((_, index) => (
+            <AddPhoto
+              // eslint-disable-next-line react/no-array-index-key
+              key={index}
+              ImageComponent={ImageComponent}
+              imageSource={attachments[index]}
+              onChange={(image) => onChangeImage(image, index)}
+              PlaceholderComponent={PlaceholderComponent}
+            />
+          ))}
+        </View>
+      )
+    }
+
+    return null
+  }, [attachments, onChangeImage])
+
   return (
     <>
       <UILoader active={isLoading} transparent />
@@ -108,19 +129,7 @@ const ReportForm = ({
       <UITextArea onChangeText={setContent} rows={6}>
         {stateContent}
       </UITextArea>
-      {NUM_OF_REPORT_IMAGES > 0 && (
-        <View style={styles.reportImagesContainer}>
-          {iterateTimes(NUM_IMAGES).map((index) => (
-            <AddPhoto
-              key={index}
-              ImageComponent={ImageComponent}
-              imageSource={attachments[index]}
-              onChange={(image) => onChangeImage(image, index)}
-              PlaceholderComponent={PlaceholderComponent}
-            />
-          ))}
-        </View>
-      )}
+      {attachmentSelector}
       <UISeparator invisible small />
       <UIButton
         onPress={onSubmit}

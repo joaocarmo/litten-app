@@ -300,24 +300,34 @@ const NewForm = ({
     [type],
   )
 
+  const photoSelector = useMemo(() => {
+    if (NEW_POST_NUM_OF_PHOTOS > 0) {
+      return (
+        <>
+          <UISeparator invisible small />
+          <UIImagePlaceholder.Group>
+            {iterateTimes(NEW_POST_NUM_OF_PHOTOS).map((_, index) => (
+              <AddPhoto
+                // eslint-disable-next-line react/no-array-index-key
+                key={index}
+                imageSource={photos[index]}
+                actionable={index === photos.length}
+                ImageComponent={UIImagePlaceholder.ImageItem}
+                PlaceholderComponent={UIImagePlaceholder.Item}
+                onChange={(image) => handleOnPhotoChange(image, index)}
+              />
+            ))}
+          </UIImagePlaceholder.Group>
+        </>
+      )
+    }
+
+    return null
+  }, [handleOnPhotoChange, photos])
+
   return (
     <>
-      <UISeparator invisible small />
-      <UIImagePlaceholder.Group>
-        {iterateTimes(NEW_POST_NUM_OF_PHOTOS).map((v, idx) => (
-          <AddPhoto
-            // eslint-disable-next-line react/no-array-index-key
-            key={idx}
-            imageSource={photos[idx]}
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore FIXME
-            actionable={idx === photos.length}
-            ImageComponent={UIImagePlaceholder.ImageItem}
-            PlaceholderComponent={UIImagePlaceholder.Item}
-            onChange={(image) => handleOnPhotoChange(image, idx)}
-          />
-        ))}
-      </UIImagePlaceholder.Group>
+      {photoSelector}
       <UISeparator invisible small />
       <UIInput
         placeholder={translate('screens.new.addTitle')}

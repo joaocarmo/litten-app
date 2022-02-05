@@ -23,6 +23,7 @@ module.exports = (api) => {
           safe: false,
           whitelist: [
             'FIREBASE_AUTH_EMULATOR_HOST',
+            'FIREBASE_STORAGE_EMULATOR_HOST',
             'FIRESTORE_EMULATOR_HOST',
             'FIRESTORE_EMULATOR_PERSISTENCE',
             'GOOGLE_API_KEY',

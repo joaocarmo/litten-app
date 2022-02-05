@@ -160,6 +160,10 @@ const authenticatedUserSlice = createSlice({
     setTheme(state, action: PayloadAction<ThemePreferences>) {
       state.preferences.theme = action.payload
     },
+
+    reset() {
+      return { ...initialState }
+    },
   },
 })
 
@@ -189,6 +193,7 @@ export const {
   setPhotoURL,
   setShareMetrics,
   setTheme,
+  reset,
 } = authenticatedUserSlice.actions
 
 export default authenticatedUserSlice.reducer

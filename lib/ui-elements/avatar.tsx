@@ -1,8 +1,9 @@
-import { useCallback } from 'react'
+import { useCallback, useMemo } from 'react'
 import { StyleSheet, View } from 'react-native'
 import type { ViewStyle } from 'react-native'
 import UIImage from '@ui-elements/image'
 import type { UIImageProps } from '@ui-elements/image'
+import { placeholderUser } from '@images'
 import {
   USER_AVATAR_SIZE_LARGE,
   USER_AVATAR_SIZE_MEDIUM,
@@ -16,13 +17,15 @@ type UIAvatarProps = {
 } & UIImageProps
 
 const UIAvatar = ({
-  containerStyle,
+  containerStyle: propsContainerStyle,
   resizeMode = 'cover',
   size = 'mini',
-  source,
+  source: propsSource,
   style,
   ...otherProps
 }: UIAvatarProps) => {
+  const source = useMemo(() => propsSource || placeholderUser, [propsSource])
+
   const getSize = useCallback(() => {
     switch (size) {
       case 'large':
@@ -32,16 +35,25 @@ const UIAvatar = ({
         return styles.uiAvatarSizeMedium
 
       default:
+        // mini
         return styles.uiAvatarSizeMini
     }
   }, [size])
+
+  const containerStyle = useMemo(
+    () => [styles.uiAvatarImageContainer, getSize(), propsContainerStyle],
+    [propsContainerStyle, getSize],
+  )
+  const imageStyle = useMemo(() => [getSize(), style], [getSize, style])
+
   return (
-    <View style={[containerStyle, styles.uiAvatarImageContainer, getSize()]}>
-      {source && (
-        <UIImage
-          {...{ ...otherProps, resizeMode, source, style: [getSize(), style] }}
-        />
-      )}
+    <View style={containerStyle}>
+      <UIImage
+        source={source}
+        resizeMode={resizeMode}
+        style={imageStyle}
+        {...otherProps}
+      />
     </View>
   )
 }

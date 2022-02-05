@@ -1,4 +1,4 @@
-import { ComponentType, useCallback } from 'react'
+import { ComponentType, useCallback, useMemo } from 'react'
 import type { ImageProps } from 'react-native'
 import ImagePicker from 'react-native-image-crop-picker'
 import type { ImageOrVideo } from 'react-native-image-crop-picker'
@@ -9,12 +9,13 @@ import { debugLog } from '@utils/dev'
 import { translate } from '@utils/i18n'
 import type { ImageSource } from '@ui-elements/types'
 
-export type AddPhotoProps = {
-  ImageComponent: ComponentType<any>
+export type AddPhotoProps<T = any> = {
+  ImageComponent: ComponentType<T>
   imageSource: ImageSource
   onChange: (image: ImageOrVideo | null) => void
-  PlaceholderComponent: ComponentType<any>
-} & Omit<ImageProps, 'source'>
+  PlaceholderComponent: ComponentType<T>
+} & T &
+  Omit<ImageProps, 'source'>
 
 const AddPhoto = ({
   ImageComponent,
@@ -25,12 +26,15 @@ const AddPhoto = ({
 }: AddPhotoProps) => {
   const { showActionSheetWithOptions } = useActionSheet()
 
-  const source =
-    imageSource && typeof imageSource === 'string'
-      ? {
-          uri: imageSource,
-        }
-      : imageSource
+  const source = useMemo(
+    () =>
+      imageSource && typeof imageSource === 'string'
+        ? {
+            uri: imageSource,
+          }
+        : imageSource,
+    [imageSource],
+  )
 
   const openCamera = useCallback(async () => {
     try {

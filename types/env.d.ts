@@ -1,5 +1,6 @@
 declare module '@env' {
   export const FIREBASE_AUTH_EMULATOR_HOST: string
+  export const FIREBASE_STORAGE_EMULATOR_HOST: string
   export const FIRESTORE_EMULATOR_HOST: string
   export const FIRESTORE_EMULATOR_PERSISTENCE: string
   export const GOOGLE_API_KEY: string

@@ -244,9 +244,11 @@
       "abruptChaosNative": "Native",
       "abruptChaosReact": "React",
       "clearAsyncStorage": "Clear AsyncStorage",
+      "clearImageCache": "Clear Image Cache",
       "firestoreNetwork": "Firestore Network",
       "hacks": "Developer",
       "network": "Network",
+      "resetStore": "Reset Store",
       "storybookIntro": "You can browse through Litten's UI Elements in this screen",
       "toggleFirebaseNetwork": "Toggle Firebase Network",
       "triggerLocalNotification": "Trigger Local Notification"

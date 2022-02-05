@@ -21,7 +21,7 @@ import {
   HeartOutline,
   Organization as OrganizationIcon,
 } from '@images/components/icons'
-import { placeholderCat, placeholderUser } from '@images'
+import { placeholderCat } from '@images'
 import {
   stringifyLocation,
   getFromListByKey,
@@ -239,7 +239,7 @@ const LittenPostScreen = ({
         ]}
       >
         <View style={styles.littenPostFooterUser}>
-          <UIAvatar source={user.photoURL || placeholderUser} />
+          <UIAvatar source={user.photoURL} />
           <View style={styles.littenPostFooterUserInfo}>
             <View style={styles.littenPostFooterUserName}>
               <UIText numberOfLines={1} small bold noPadding>

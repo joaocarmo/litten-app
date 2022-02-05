@@ -1,6 +1,7 @@
 import type { DBLocationObject } from '@db/schemas/location'
 import type { DBMetadata } from '@db/schemas/common'
-import type { ImageSource } from '@ui-elements/types'
+
+export type ImageSource = string | { uri: string }
 
 export type BasicUser = {
   id?: string

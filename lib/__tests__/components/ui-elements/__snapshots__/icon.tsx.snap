@@ -36,13 +36,37 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
     style={
       Array [
         Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#eff1f3",
+          "flex": 0,
+          "height": "100%",
+          "justifyContent": "center",
+          "minWidth": "100%",
+          "opacity": 1,
+          "position": "absolute",
+          "top": 0,
+          "width": 750,
+          "zIndex": 1,
+        },
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    <ActivityIndicator
+      animating={true}
+      color="#39a4f2"
+      size="small"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
           "overflow": "hidden",
         },
         Array [
-          Object {
-            "height": undefined,
-            "width": undefined,
-          },
           Object {
             "height": "100%",
             "tintColor": "#39a4f2",
@@ -55,6 +79,8 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
     }
   >
     <FastImageView
+      onFastImageLoadEnd={[Function]}
+      onFastImageLoadStart={[Function]}
       resizeMode="contain"
       source={
         Object {

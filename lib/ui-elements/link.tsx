@@ -3,6 +3,7 @@ import { useTheme } from '@hooks'
 
 const UILink = ({ children, underline = true, style, ...otherProps }) => {
   const { createStyles } = useTheme()
+
   const styles = createStyles((theme) => ({
     uiLink: {
       color: theme.colors.secondary,

@@ -10,6 +10,7 @@ import crashlytics from '@db/crashlytics'
  */
 export const logError = (...args: unknown[]) => {
   if (APP_IS_DEV) {
+    // eslint-disable-next-line no-console
     console.warn(...args)
   } else {
     const [err] = args
@@ -27,6 +28,7 @@ export const logError = (...args: unknown[]) => {
  */
 export const debugLog = (...args: unknown[]) => {
   if (APP_IS_DEV) {
+    // eslint-disable-next-line no-console
     console.log(...args)
   }
 }

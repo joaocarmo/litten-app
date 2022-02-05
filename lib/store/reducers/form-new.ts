@@ -74,6 +74,10 @@ const formNewSlice = createSlice({
     updatePhoto(state, action: PayloadAction<PhotoPayload>) {
       state.photos.splice(action.payload.photoIndex, 1, action.payload.photo)
     },
+
+    reset() {
+      return { ...initialState }
+    },
   },
 })
 
@@ -89,6 +93,7 @@ export const {
   setType,
   setUseExtraInfo,
   updatePhoto,
+  reset,
 } = formNewSlice.actions
 
 export default formNewSlice.reducer

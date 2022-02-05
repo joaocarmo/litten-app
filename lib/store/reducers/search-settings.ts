@@ -58,6 +58,10 @@ const searchSettingsSlice = createSlice({
     setUserType(state, action: PayloadAction<string>) {
       state.filters.userType = action.payload
     },
+
+    reset() {
+      return { ...initialState }
+    },
   },
 })
 
@@ -71,6 +75,7 @@ export const {
   setSpecies,
   setType,
   setUserType,
+  reset,
 } = searchSettingsSlice.actions
 
 export default searchSettingsSlice.reducer

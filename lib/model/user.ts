@@ -1,6 +1,6 @@
 /* eslint-disable class-methods-use-this */
-import storage from '@react-native-firebase/storage'
 import firestore from '@db/firestore'
+import storage from '@db/storage'
 import Auth from '@model/auth'
 import Base from '@model/base'
 import Litten from '@model/litten'
@@ -56,27 +56,27 @@ export default class User extends Base {
     this.#contactPreferences = contactPreferences
   }
 
-  static get firestore(): any {
+  static get firestore() {
     return firestore
   }
 
-  static get collection(): any {
+  static get collection() {
     return User.firestore().collection(DB_USER_COLLECTION)
   }
 
-  static get storage(): any {
+  static get storage() {
     return storage
   }
 
-  get firestore(): any {
+  get firestore() {
     return User.firestore
   }
 
-  get collection(): any {
+  get collection() {
     return User.collection
   }
 
-  get storage(): any {
+  get storage() {
     return User.storage
   }
 
@@ -115,17 +115,11 @@ export default class User extends Base {
   }
 
   set photoURL(photoURL: string | undefined) {
-    this.deletePhoto(this.photoURLRef)
+    this.#photoURL = photoURL || ''
+    this.updateOne('photoURL', photoURL)
 
-    if (photoURL) {
-      this.uploadAndSetPhoto(photoURL)
-    } else {
-      this.#photoURL = photoURL || ''
-      this.updateOne('photoURL', photoURL)
-
-      if (this.#currentUser && photoURL) {
-        this.#auth.photoURL = photoURL
-      }
+    if (this.#currentUser && photoURL) {
+      this.#auth.photoURL = photoURL
     }
   }
 
@@ -214,6 +208,8 @@ export default class User extends Base {
 
   async uploadAndSetPhoto(photoURL: string): Promise<void> {
     if (this.#currentUser) {
+      this.deletePhoto(this.photoURLRef)
+
       try {
         this.#photoURL = await this.#auth.uploadAndSetPhoto(photoURL)
         this.updateOne('photoURL', this.#photoURL)
@@ -309,7 +305,7 @@ export default class User extends Base {
           ...newUpdateObject,
         }
       } else {
-        return this.collection.doc(this.id).update(newUpdateObject)
+        this.collection.doc(this.id).update(newUpdateObject)
       }
     }
   }
@@ -322,12 +318,12 @@ export default class User extends Base {
     const updateObject = {
       [field]: value,
     }
-    return this.update(updateObject, updateTimestamp)
+    this.update(updateObject, updateTimestamp)
   }
 
-  async save(): Promise<any> {
+  async save(): Promise<void> {
     if (this.#deferredSave) {
-      return this.collection.doc(this.id).update(this.#deferredSaveObject)
+      this.collection.doc(this.id).update(this.#deferredSaveObject)
     }
   }
 

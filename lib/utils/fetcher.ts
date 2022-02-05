@@ -10,7 +10,7 @@ type RequestInit = Parameters<typeof fetch>[1]
  */
 export const fetchWithTimeout =
   (ms: number) => (url, options?: RequestInit) => {
-    const { signal } = options
+    const { signal } = options || {}
     const abortController = new AbortController()
     const fetchPromise = fetch(url, {
       ...options,
