@@ -813,7 +813,7 @@ PODS:
     - React
   - react-native-maps (0.30.1):
     - React-Core
-  - react-native-netinfo (7.1.9):
+  - react-native-netinfo (7.1.10):
     - React-Core
   - react-native-safe-area-context (3.3.2):
     - React-Core
@@ -891,7 +891,7 @@ PODS:
     - React-perflogger (= 0.67.2)
   - RNBackgroundFetch (4.0.4):
     - React-Core
-  - RNBootSplash (4.1.1):
+  - RNBootSplash (4.1.2):
     - React-Core
   - RNCAsyncStorage (1.12.1):
     - React-Core
@@ -903,36 +903,36 @@ PODS:
     - React-Core
   - RNCPushNotificationIOS (1.10.1):
     - React-Core
-  - RNDeviceInfo (8.4.8):
+  - RNDeviceInfo (8.4.9):
     - React-Core
   - RNFastImage (8.5.11):
     - React-Core
     - SDWebImage (~> 5.11.1)
     - SDWebImageWebPCoder (~> 0.8.4)
-  - RNFBAnalytics (14.3.0):
+  - RNFBAnalytics (14.3.1):
     - Firebase/Analytics (= 8.10.0)
     - React-Core
     - RNFBApp
-  - RNFBApp (14.3.0):
+  - RNFBApp (14.3.1):
     - Firebase/CoreOnly (= 8.10.0)
     - React-Core
-  - RNFBAuth (14.3.0):
+  - RNFBAuth (14.3.1):
     - Firebase/Auth (= 8.10.0)
     - React-Core
     - RNFBApp
-  - RNFBCrashlytics (14.3.0):
+  - RNFBCrashlytics (14.3.1):
     - Firebase/Crashlytics (= 8.10.0)
     - React-Core
     - RNFBApp
-  - RNFBFirestore (14.3.0):
+  - RNFBFirestore (14.3.1):
     - Firebase/Firestore (= 8.10.0)
     - React-Core
     - RNFBApp
-  - RNFBRemoteConfig (14.3.0):
+  - RNFBRemoteConfig (14.3.1):
     - Firebase/RemoteConfig (= 8.10.0)
     - React-Core
     - RNFBApp
-  - RNFBStorage (14.3.0):
+  - RNFBStorage (14.3.1):
     - Firebase/Storage (= 8.10.0)
     - React-Core
     - RNFBApp
@@ -949,7 +949,7 @@ PODS:
     - TOCropViewController
   - RNLocalize (2.1.9):
     - React-Core
-  - RNReanimated (2.3.1):
+  - RNReanimated (2.4.1):
     - DoubleConversion
     - FBLazyVector
     - FBReactNativeSpec
@@ -1307,7 +1307,7 @@ SPEC CHECKSUMS:
   React-logger: 23de8ea0f44fa00ee77e96060273225607fd4d78
   react-native-geolocation-service: c0efb872258ed9240f1003a70fca9e9757e5c785
   react-native-maps: d752b0dd0e1951d815b1336332835aab6b4a836f
-  react-native-netinfo: 87e5bfaf21ea5c6c110941290aa481dd8e849f98
+  react-native-netinfo: ffce84d796bcfd55c76512d66029f4e0d704bf4f
   react-native-safe-area-context: 584dc04881deb49474363f3be89e4ca0e854c057
   react-native-simple-toast: bf002828cf816775a6809f7a9ec3907509bce11f
   react-native-slider: 37e1cf275dab20d3c015e40969aa9f5c309645a8
@@ -1325,25 +1325,25 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 2450b43df7ffe8e805a0b3dcb2abd4282f1f1836
   ReactCommon: d98c6c96b567f9b3a15f9fd4cc302c1eda8e3cf2
   RNBackgroundFetch: 4ba650701219cf06fdc08336cc0b010242d2d024
-  RNBootSplash: adb9a48344896cd30956848e5db27c5d1d98263f
+  RNBootSplash: a4d2c545e1f5d54c12f75d4763b7014758d24287
   RNCAsyncStorage: b03032fdbdb725bea0bd9e5ec5a7272865ae7398
   RNCClipboard: 41d8d918092ae8e676f18adada19104fa3e68495
   RNCMaskedView: 0e1bc4bfa8365eba5fbbb71e07fbdc0555249489
   RNCPicker: cb57c823d5ce8d2d0b5dfb45ad97b737260dc59e
   RNCPushNotificationIOS: 87b8d16d3ede4532745e05b03c42cff33a36cc45
-  RNDeviceInfo: 0400a6d0c94186d1120c3cbd97b23abc022187a9
+  RNDeviceInfo: 4944cf8787b9c5bffaf301fda68cc1a2ec003341
   RNFastImage: 1f2cab428712a4baaf78d6169eaec7f622556dd7
-  RNFBAnalytics: 329c97036182e3c64a55df0efa18db90989a1e4b
-  RNFBApp: b0543401197ebc330f9376150b8eba51aca06396
-  RNFBAuth: 08628cd4f22cc36ef5b3e73ca0d5268933cd262a
-  RNFBCrashlytics: f3055e06c69e5f5d7ca3d7e62f0c34e1c2dd88ce
-  RNFBFirestore: fe242aa0b037da43156e0ee39f8b539a87aced44
-  RNFBRemoteConfig: 563044cc399436558cbf8b93668c0fcbbe7d898c
-  RNFBStorage: 8049855072f1c00c07489cf8b372a219df002d23
+  RNFBAnalytics: a233e67fc9a61d236fe312850a01b06b2b0daed9
+  RNFBApp: 81b68814b60f08bed81c1856bca575bf9c18fff5
+  RNFBAuth: 35b759849bbbefcd712f96dbf6cdc74dac5b0a5d
+  RNFBCrashlytics: 6843d14255fe651a8faec9a3425a254a5e750c6c
+  RNFBFirestore: 8a1d9f32c71a597b8b28a9a93709ccd265b3e903
+  RNFBRemoteConfig: 5e4a938297fc5e842cdb1acf191326a9c0d5f997
+  RNFBStorage: 28bc05599b155f3098b7b9359243324f0bdaf381
   RNGestureHandler: bf572f552ea324acd5b5464b8d30755b2d8c1de6
   RNImageCropPicker: 448d3c6e923fde3466b49caf3c2457c2a0ba02dd
   RNLocalize: 291e5e21b53cd30b5205c10ed95d31b0dc9b8d63
-  RNReanimated: 1326679461fa5d2399d54c18ca1432ba3e816b9e
+  RNReanimated: 32c91e28f5780937b8efc07ddde1bab8d373fe0b
   RNScreens: d6da2b9e29cf523832c2542f47bf1287318b1868
   RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d

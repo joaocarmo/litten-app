@@ -148,17 +148,18 @@ export const getErrorMessage = (type: string, code: string): string => {
  * Parses the user's supplied image URI during the register photo step,
  * if none is supplied, a Gravatar URI is generated based on the user's email
  * @param {string} avatar - URI location of the user's avatar
- * @param {{email: string, size: number}} options - Extra options, e.g. the user's email
+ * @param {{fallback: string, email: string, size: number}} options - Extra options, e.g. the user's email
  * @returns {string}
  */
 export const parseAvatar = (
   avatar: string,
   options?: {
+    fallback?: string
     email?: string
     size?: number
   },
 ): string => {
-  const { email = '', size = 512 } = options || {}
+  const { fallback = 'wavatar', email = '', size = 512 } = options || {}
 
   if (typeof avatar === 'string' && avatar.length > 0) {
     return avatar
@@ -169,7 +170,7 @@ export const parseAvatar = (
     // The Gravatar image service
     const gravatarUrl = 'https://s.gravatar.com/avatar'
     // The size query and default if no gravatar exists
-    const query = `s=${size}&d=mp`
+    const query = `s=${size}&d=${fallback}`
     // Gravatar uses MD5 hashes from an email address (all lowercase)
     const hash = MD5(email.toLowerCase()).toString()
     // The full avatar URL

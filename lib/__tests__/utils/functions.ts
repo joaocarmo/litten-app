@@ -165,7 +165,7 @@ describe('Test the "parseAvatar" function', () => {
     const email = 'someone@domain.com'
     const size = 128
     const gravatarUri =
-      'https://s.gravatar.com/avatar/6262634de06c42c0acf4bb41bc787608?s=128&d=mp'
+      'https://s.gravatar.com/avatar/6262634de06c42c0acf4bb41bc787608?s=128&d=wavatar'
     expect(
       parseAvatar(null, {
         email,
