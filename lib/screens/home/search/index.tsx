@@ -20,24 +20,24 @@ import { debugLog } from '@utils/dev'
 const HomeSearchScreen = () => {
   const [query] = useSearchQuery()
   const [filters] = useSearchFilters()
+  const [getUser] = useCacheUsers()
+  const [allLittens, setAllLittens] = useCacheFeed()
+  const [userCoordinates] = useUserCoordinates()
+  const [littens, setLittens] = useState([])
+  const [lastQuery, setLastQuery] = useState(query)
+  const [hasMore, setHasMore] = useState(true)
+  const [isLoading, setIsLoading] = useState(true)
+  const [isLoadingMore, setIsLoadingMore] = useState(false)
+  const [isRefreshing, setIsRefreshing] = useState(false)
+  const [listIsReady, setListIsReady] = useState(false)
+  const [listIsScrollable, setListIsScrollable] = useState(false)
+
   const filterSettings = useMemo(
     () => ({
       filters,
     }),
     [filters],
   )
-  const [getUser] = useCacheUsers()
-  const [allLittens, setAllLittens] = useCacheFeed()
-  const [hasMore, setHasMore] = useState(true)
-  const [isLoading, setIsLoading] = useState(true)
-  const [isLoadingMore, setIsLoadingMore] = useState(false)
-  const [isRefreshing, setIsRefreshing] = useState(false)
-  const [lastQuery, setLastQuery] = useState(query)
-  const [listIsReady, setListIsReady] = useState(false)
-  const [listIsScrollable, setListIsScrollable] = useState(false)
-  const [littens, setLittens] = useState([])
-  const [userCoordinates] = useUserCoordinates()
-
   const searchRef = useRef(new Search(filterSettings))
   const search = searchRef.current
 
