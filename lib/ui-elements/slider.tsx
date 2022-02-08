@@ -10,8 +10,8 @@ const UISlider = ({ style, ...otherProps }) => {
   return (
     <Slider
       {...otherProps}
-      minimumTrackTintColor={colors.secondaryLight}
-      thumbTintColor={colors.primary}
+      minimumTrackTintColor={String(colors.secondaryLight)}
+      thumbTintColor={String(colors.primary)}
       style={[styles.uiSlider, style]}
     />
   )

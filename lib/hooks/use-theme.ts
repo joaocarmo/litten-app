@@ -9,7 +9,7 @@ import type { Theme } from '@styles/themes'
 import type { Typography } from '@styles/typography'
 import type { ThemePreferences } from '@store/types'
 
-type CreateStyleSheet = ReturnType<typeof StyleSheet.create>
+// type CreateStyleSheet = ReturnType<typeof StyleSheet.create>
 
 type CreateStylesFn = (
   theme: Theme,
@@ -19,7 +19,7 @@ type CreateStylesFn = (
 
 type UseTheme = ThemeConfig & {
   commonStyles: commonStylesConfig.CommonStyles
-  createStyles: (fn: CreateStylesFn) => CreateStyleSheet
+  createStyles: any // (fn: CreateStylesFn) => CreateStyleSheet
   setTheme: (theme: string) => void
 }
 
@@ -59,4 +59,4 @@ const useTheme = (): UseTheme => {
   return { ...themeConfig, commonStyles, createStyles, setTheme }
 }
 
-export default useTheme as any
+export default useTheme

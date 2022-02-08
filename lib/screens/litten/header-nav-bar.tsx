@@ -48,7 +48,9 @@ const LittenHeaderNavBar = ({
   const isAndroid = Platform.OS === 'android'
 
   const backgroundColor =
-    opacity > 0 ? `${colors.secondary}${opacity2Hex(opacity)}` : 'transparent'
+    opacity > 0
+      ? `${String(colors.secondary)}${opacity2Hex(opacity)}`
+      : 'transparent'
 
   return (
     <View

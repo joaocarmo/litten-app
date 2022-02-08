@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import type { TextStyle, ViewStyle } from 'react-native'
 import {
   STRUCTURE_TAB_NAV_HEIGHT,
   STRUCTURE_TEMPLATE_SCREEN_BORDER_RADIUS,
@@ -6,8 +7,13 @@ import {
   STRUCTURE_TEMPLATE_SCREEN_PADDING,
   UI_ELEMENT_BORDER_MARGIN,
 } from '@utils/constants'
+import type { Theme } from '@styles/themes'
 
-export const commonStyles = (theme) => ({
+type CommonStylesWithKey = {
+  [key: string]: TextStyle | ViewStyle
+}
+
+export const commonStyles = (theme: Theme): CommonStylesWithKey => ({
   elevated: {
     shadowColor: theme.colors.backgroundAlt,
     shadowOffset: {
@@ -50,7 +56,7 @@ export const commonStyles = (theme) => ({
   },
 })
 
-export const noAuthFormStyles = () => ({
+export const noAuthFormStyles = (): CommonStylesWithKey => ({
   formContainer: {
     flex: 1,
   },
@@ -76,7 +82,7 @@ export const noAuthFormStyles = () => ({
   },
 })
 
-export const screenTemplateStyles = (theme) => ({
+export const screenTemplateStyles = (theme: Theme): CommonStylesWithKey => ({
   contentView: {
     flex: 1,
     backgroundColor: theme.colors.secondary,
@@ -106,7 +112,7 @@ export const screenTemplateStyles = (theme) => ({
 })
 
 export type CommonStyles = {
-  commonStyles: ReturnType<typeof commonStyles>
-  noAuthFormStyles: ReturnType<typeof noAuthFormStyles>
-  screenTemplateStyles: ReturnType<typeof screenTemplateStyles>
+  commonStyles: CommonStylesWithKey
+  noAuthFormStyles: CommonStylesWithKey
+  screenTemplateStyles: CommonStylesWithKey
 }
