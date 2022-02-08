@@ -5,8 +5,9 @@ import { locationSchema } from '@db/schemas/location'
 import { userSchema } from '@db/schemas/user'
 import { getFavouriteIndex } from '@utils/functions'
 import type {
+  AuthenticatedUser,
   BasicAuthUser,
-  SearchFilters,
+  FavouriteFilter,
   ThemePreferences,
 } from '@store/types'
 import { THEME_SYSTEM } from '@utils/constants'
@@ -14,7 +15,7 @@ import type { BasicLitten } from '@model/types/litten'
 import type { BasicUser } from '@model/types/user'
 import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
 
-const initialState = {
+const initialState: AuthenticatedUser = {
   basic: null,
   extra: userSchema as BasicUser,
   preferences: {
@@ -35,7 +36,7 @@ const authenticatedUserSlice = createSlice({
   name: 'authenticatedUser',
   initialState,
   reducers: {
-    addFavouriteFilter(state, action: PayloadAction<SearchFilters>) {
+    addFavouriteFilter(state, action: PayloadAction<FavouriteFilter>) {
       state.saved.filters.push(action.payload)
     },
 
@@ -63,7 +64,7 @@ const authenticatedUserSlice = createSlice({
 
     removeFavouriteFilter(state, action: PayloadAction<string>) {
       const filterIndex = state.saved.filters.findIndex(
-        ({ key }) => key === action.payload,
+        ({ name }) => name === action.payload,
       )
       state.saved.filters.splice(filterIndex, 1)
     },

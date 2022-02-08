@@ -59,4 +59,4 @@ const useTheme = (): UseTheme => {
   return { ...themeConfig, commonStyles, createStyles, setTheme }
 }
 
-export default useTheme
+export default useTheme as any

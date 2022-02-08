@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { searchQuerySelector } from '@store/selectors'
 import { setQuery } from '@store/actions/search-settings'
 
-const useSearchQuery = () => {
+const useSearchQuery = (): [string, (query: string) => void] => {
   const dispatch = useDispatch()
   const query = useSelector(searchQuerySelector)
 
   const setNewQuery = useCallback(
-    (newQuery) => dispatch(setQuery(newQuery)),
+    (newQuery: string) => dispatch(setQuery(newQuery)),
     [dispatch],
   )
 

@@ -31,19 +31,20 @@ export type AppSettings = {
   notifications: AppSettingsNotifications
 }
 export type BasicAuthUser = {
-  readonly email: string
-  readonly isAnonymous: boolean
-  readonly phoneNumber: string | null
-  readonly refreshToken: string
   readonly displayName: string
+  readonly email: string
   readonly emailVerified: boolean
+  readonly isAnonymous: boolean
+  readonly isOrganization: boolean
   readonly metadata: {
     creationTime: number
     lastSignInTime: number
   }
+  readonly phoneNumber: string | null
   readonly photoURL: string
   readonly providerData: unknown[]
   readonly providerId: string
+  readonly refreshToken: string
   readonly uid: string
 }
 export type ThemePreferences = 'dark' | 'light' | 'system'
@@ -63,13 +64,19 @@ export type IndexedAction = {
 export type FavouriteAction = GenericActionCreator<BasicLitten | null> &
   IndexedAction
 export type SavedSearch = string
-export type SavedFilters = SearchFilters & {
-  key: string
+export type SearchFilters = {
+  littenSpecies: string[]
+  littenType: string[]
+  locationRadius: number
+  userType: string
 }
+export type FavouriteFilter = {
+  name: string
+} & SearchFilters
 export type UserSavedData = {
   activePosts: BasicLitten[]
   favourites: BasicLitten[]
-  filters: SavedFilters[]
+  filters: FavouriteFilter[]
   pastPosts: BasicLitten[]
   searches: SavedSearch[]
 }
@@ -78,12 +85,6 @@ export type AuthenticatedUser = {
   extra: BasicUser
   preferences: UserPreferences
   saved: UserSavedData
-}
-export type SearchFilters = {
-  littenSpecies: string[]
-  littenType: string[]
-  locationRadius: number
-  userType: string
 }
 export type SearchSettings = {
   query: string

@@ -10,7 +10,7 @@ import {
   SearchFilters,
   UserPreferences,
   UserSavedData,
-} from '../types/index'
+} from '../types'
 import { BasicUser } from '../../model/types/user'
 import { BasicMessage } from '../../model/types/message'
 import { BasicLitten } from '../../model/types/litten'
@@ -60,5 +60,5 @@ export const searchFiltersSelector = (state: State): SearchFilters =>
   state.searchSettings.filters
 export const searchQuerySelector = (state: State): string =>
   state.searchSettings.query
-export const searchHistorySelector = (state: State): Array<SavedSearch> =>
+export const searchHistorySelector = (state: State): SavedSearch[] =>
   state.authenticatedUser.saved.searches

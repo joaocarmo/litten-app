@@ -5,18 +5,18 @@ import {
   addFavouriteFilter,
   removeFavouriteFilter,
 } from '@store/actions/authenticated-user'
-import type { SavedFilters, SearchFilters } from '@store/types'
+import type { FavouriteFilter } from '@store/types'
 
 const useSavedFilters = (): [
-  SavedFilters[],
-  (newFilter: SearchFilters) => void,
+  FavouriteFilter[],
+  (newFilter: FavouriteFilter) => void,
   (name: string) => void,
 ] => {
   const dispatch = useDispatch()
   const { filters } = useSelector(userSavedSelector)
 
   const addNewFavouriteFilter = useCallback(
-    (newFilter) => {
+    (newFilter: FavouriteFilter) => {
       dispatch(addFavouriteFilter(newFilter))
     },
     [dispatch],

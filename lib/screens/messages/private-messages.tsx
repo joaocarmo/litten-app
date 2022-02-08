@@ -1,6 +1,7 @@
 import { useCallback, useState, useEffect, useRef } from 'react'
 import type { ReactNode } from 'react'
 import { GiftedChat } from 'react-native-gifted-chat'
+import type { IMessage, User } from 'react-native-gifted-chat'
 import {
   Bubble,
   EmptyChat,
@@ -258,14 +259,14 @@ const PrivateMessages = ({
 
   return (
     <GiftedChat
-      messages={messages}
+      messages={messages as IMessage[]}
       onLoadEarlier={() => {
         onLoadEarlier()
       }}
       onSend={(...args) => {
         onSend(...args)
       }}
-      user={user}
+      user={user as User}
       renderBubble={renderBubble}
       renderChatEmpty={renderChatEmpty}
       renderInputToolbar={InputToolbar}

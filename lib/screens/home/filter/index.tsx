@@ -106,15 +106,17 @@ const HomeFilterScreen = () => {
   }, [resetFilters])
 
   const saveFilters = useCallback(
-    (name) => {
+    (name: string) => {
       addFavouriteFilter({
-        key: name,
+        name,
         ...filters,
       })
       setNamePromptIsOpen(false)
+      Toast.show(translate('screens.favourites.filtersSaved'))
     },
     [addFavouriteFilter, filters],
   )
+
   const saveFiltersWithName = useCallback(() => {
     if (!namePromptIsOpen) {
       const numOfActiveFilters = getNumOfActiveFilters(filters)
