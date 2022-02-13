@@ -16,4 +16,10 @@ export type IconComponentProps = {
 
 export type IconTypeComponent = ComponentType<IconComponentProps>
 
+export type BasicImageSource =
+  | string
+  | {
+      uri: string
+    }
+
 export type ImageSource = string | ImageSourcePropType

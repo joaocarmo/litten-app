@@ -1,7 +1,12 @@
 import { StyleSheet, Text } from 'react-native'
+import type { TextProps } from 'react-native'
 import { useTheme } from '@hooks'
 
-const UILink = ({ children, underline = true, style, ...otherProps }) => {
+export type UILinkProps = {
+  underline?: boolean
+} & TextProps
+
+const UILink = ({ children, underline, style, ...otherProps }: UILinkProps) => {
   const { createStyles } = useTheme()
 
   const styles = createStyles((theme) => ({
@@ -26,6 +31,10 @@ const UILink = ({ children, underline = true, style, ...otherProps }) => {
       {children}
     </Text>
   )
+}
+
+UILink.defaultProps = {
+  underline: true,
 }
 
 export default UILink

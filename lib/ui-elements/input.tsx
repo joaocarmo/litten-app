@@ -4,7 +4,7 @@ import type { TextInputProps } from 'react-native'
 import { useTheme } from '@hooks'
 import inputStyles from '@ui-elements/input.styles'
 
-type UISelectProps = {
+export type UIInputProps = {
   active?: boolean
   error?: boolean
   errorMessage?: string
@@ -22,7 +22,7 @@ const UIInput = ({
   style,
   success,
   ...otherProps
-}: UISelectProps) => {
+}: UIInputProps) => {
   const [isActive, setIsActive] = useState(false)
   const {
     createStyles,

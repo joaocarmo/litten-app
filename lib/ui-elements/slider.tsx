@@ -1,18 +1,29 @@
+import { useMemo } from 'react'
 import { StyleSheet } from 'react-native'
 import Slider from '@react-native-community/slider'
+import type { SliderProps } from '@react-native-community/slider'
 import { useTheme } from '@hooks'
 
-const UISlider = ({ style, ...otherProps }) => {
+export type UISliderProps = {
+  style?: SliderProps['style']
+}
+
+const UISlider = ({ style: propsStyle, ...otherProps }: UISliderProps) => {
   const {
     theme: { colors },
   } = useTheme()
 
+  const style = useMemo<typeof propsStyle>(
+    () => [styles.uiSlider, propsStyle],
+    [propsStyle],
+  )
+
   return (
     <Slider
-      {...otherProps}
       minimumTrackTintColor={colors.secondaryLight}
       thumbTintColor={colors.primary}
-      style={[styles.uiSlider, style]}
+      style={style}
+      {...otherProps}
     />
   )
 }
@@ -22,4 +33,5 @@ const styles = StyleSheet.create({
     height: 80,
   },
 })
+
 export default UISlider

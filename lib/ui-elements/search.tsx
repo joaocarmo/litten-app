@@ -1,20 +1,28 @@
 import { useCallback, useEffect, useState } from 'react'
-
-import { Pressable, TextInput, View } from 'react-native'
+import { Pressable, TextInput, View, ViewProps } from 'react-native'
+import type { TextInputProps } from 'react-native'
 import { UIText } from '@ui-elements'
 import { useTheme } from '@hooks'
 import { RECOMMENDED_MINIMUM_TAPPABLE_SIZE } from '@utils/constants'
 import { translate } from '@utils/i18n'
 
+export type UISearchProps = {
+  clearable?: boolean
+  containerStyle?: ViewProps['style']
+  defaultValue?: string
+  onClear?: () => void
+  onSubmit?: (value: string) => void
+} & TextInputProps
+
 const UISearch = ({
-  clearable = false,
+  clearable,
   containerStyle,
-  defaultValue = '',
+  defaultValue,
   onClear,
   onSubmit,
   style,
   ...otherProps
-}) => {
+}: UISearchProps) => {
   const [searchInput, setSearchInput] = useState(defaultValue)
   const {
     createStyles,
@@ -48,16 +56,25 @@ const UISearch = ({
       fontWeight: typography.fontWeight.light,
     },
   }))
+
   const submit = useCallback(() => {
-    onSubmit(searchInput)
+    if (typeof onSubmit === 'function') {
+      onSubmit(searchInput)
+    }
   }, [onSubmit, searchInput])
+
   const clear = useCallback(() => {
     setSearchInput('')
-    onClear()
+
+    if (typeof onClear === 'function') {
+      onClear()
+    }
   }, [onClear])
+
   useEffect(() => {
     setSearchInput(defaultValue)
   }, [defaultValue])
+
   return (
     <View style={[styles.uiSearchContainer, containerStyle]}>
       <TextInput
@@ -80,6 +97,14 @@ const UISearch = ({
       )}
     </View>
   )
+}
+
+UISearch.defaultProps = {
+  clearable: false,
+  containerStyle: undefined,
+  defaultValue: '',
+  onClear: undefined,
+  onSubmit: undefined,
 }
 
 export default UISearch

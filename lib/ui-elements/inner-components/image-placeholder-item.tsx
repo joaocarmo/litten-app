@@ -1,4 +1,5 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native'
+import type { PressableProps, ViewProps } from 'react-native'
 import { useTheme } from '@hooks'
 import { Camera as CameraIcon } from '@images/components/icons'
 import {
@@ -8,13 +9,19 @@ import {
 } from '@utils/constants'
 import { translate } from '@utils/i18n'
 
+export type UIImagePlaceholderItemProps = {
+  actionable?: boolean
+  onPress?: PressableProps['onPress']
+  onLongPress?: PressableProps['onLongPress']
+} & ViewProps
+
 const UIImagePlaceholderItem = ({
-  actionable = false,
+  actionable,
   onLongPress,
   onPress,
   style,
   ...otherProps
-}) => {
+}: UIImagePlaceholderItemProps) => {
   const {
     createStyles,
     theme: { colors },
@@ -79,8 +86,8 @@ const UIImagePlaceholderItem = ({
       }
     >
       <View
-        {...otherProps}
         style={StyleSheet.compose(uiImagePlaceholderActionableStyle, style)}
+        {...otherProps}
       >
         <CameraIcon
           height={32}
@@ -94,6 +101,10 @@ const UIImagePlaceholderItem = ({
       </View>
     </Pressable>
   )
+}
+
+UIImagePlaceholderItem.defaultProps = {
+  actionable: false,
 }
 
 export default UIImagePlaceholderItem

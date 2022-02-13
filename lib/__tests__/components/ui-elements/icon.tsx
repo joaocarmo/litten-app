@@ -3,15 +3,7 @@ import { UIIcon } from '@ui-elements'
 
 describe('Snapshot test for the "UIText" component', () => {
   it('renders correctly', () => {
-    const element = render(
-      <UIIcon
-        icon={{
-          uri: '',
-        }}
-        elevated
-        circle
-      />,
-    )
+    const element = render(<UIIcon icon="mockIcon" circle />)
 
     expect(element.toJSON()).toMatchSnapshot()
   })

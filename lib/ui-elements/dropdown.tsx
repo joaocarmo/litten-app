@@ -16,15 +16,15 @@ import { UI_DROPDOWN_MARGIN, UI_ICON_SIZE_MICRO } from '@utils/constants'
 
 const { Popover } = renderers
 
-export type UIDropdownValue = string | number
+export type UIDropdownValue = string | number | boolean
 
 export type UIDropdownOption = {
   key: string
   label: string
   value: UIDropdownValue
-  disabled: boolean
-  separator: boolean
-  onSelect: (optionValue: UIDropdownValue) => void
+  disabled?: boolean
+  separator?: boolean
+  onSelect?: (optionValue: UIDropdownValue) => void
 }
 
 export type UIDropdownProps = {

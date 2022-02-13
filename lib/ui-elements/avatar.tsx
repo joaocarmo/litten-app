@@ -11,15 +11,15 @@ import {
 } from '@utils/constants'
 
 type UIAvatarProps = {
-  containerStyle: ViewStyle
-  resizeMode: string
-  size: 'mini' | 'medium' | 'large'
+  containerStyle?: ViewStyle
+  resizeMode?: string
+  size?: 'mini' | 'medium' | 'large'
 } & UIImageProps
 
 const UIAvatar = ({
   containerStyle: propsContainerStyle,
-  resizeMode = 'cover',
-  size = 'mini',
+  resizeMode,
+  size,
   source: propsSource,
   style,
   ...otherProps
@@ -56,6 +56,12 @@ const UIAvatar = ({
       />
     </View>
   )
+}
+
+UIAvatar.defaultProps = {
+  containerStyle: undefined,
+  resizeMode: 'cover',
+  size: 'mini',
 }
 
 const styles = StyleSheet.create({

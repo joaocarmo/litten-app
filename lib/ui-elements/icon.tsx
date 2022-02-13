@@ -3,7 +3,7 @@ import { View } from 'react-native'
 import type { ImageStyle, ViewProps } from 'react-native'
 import { useTheme } from '@hooks'
 import UIImage from '@ui-elements/image'
-import type { IconTypeComponent } from '@ui-elements/types'
+import type { BasicImageSource, IconTypeComponent } from '@ui-elements/types'
 import {
   UI_ICON_SIZE_MEDIUM,
   UI_ICON_SIZE_SMALL,
@@ -13,11 +13,7 @@ import iconStyles from '@ui-elements/icon.styles'
 
 export type UIIconProps = {
   circle?: boolean
-  icon?:
-    | string
-    | {
-        uri: string
-      }
+  icon?: BasicImageSource
   IconComponent?: IconTypeComponent
   iconStyle?: ImageStyle
   selected?: boolean

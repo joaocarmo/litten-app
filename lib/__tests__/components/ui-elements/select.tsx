@@ -1,6 +1,8 @@
 import { render } from '@utils/tests/react-native'
 import { UISelect } from '@ui-elements'
 
+const handleOnChange = jest.fn()
+
 describe('Snapshot test for the "UISelect" component', () => {
   it('renders correctly', () => {
     const items = [
@@ -18,8 +20,9 @@ describe('Snapshot test for the "UISelect" component', () => {
     const selectedValue = 'one'
     const element = render(
       <UISelect
-        placeholder="Some text here"
         items={items}
+        onChange={handleOnChange}
+        placeholder="Some text here"
         selectedValue={selectedValue}
       />,
     )

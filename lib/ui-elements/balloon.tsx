@@ -1,10 +1,20 @@
 import { Pressable, StyleSheet, View } from 'react-native'
 import { useTheme } from '@hooks'
 import UIText from '@ui-elements/text'
+import type { UITextProps } from '@ui-elements/text'
 
-const UIBalloon = ({ children, style, type, ...otherProps }) => {
-  const { createStyles } = useTheme()
+export type UIBalloonProps = {
+  type?: 'info' | 'success' | 'warning' | 'error'
+} & UITextProps
+
+const UIBalloon = ({
+  children,
+  style,
+  type,
+  ...otherProps
+}: UIBalloonProps) => {
   const { onPress, onLongPress } = otherProps
+  const { createStyles } = useTheme()
   const styles = createStyles((theme, typography) => ({
     uiBalloon: {
       padding: 12,
@@ -64,6 +74,7 @@ const UIBalloon = ({ children, style, type, ...otherProps }) => {
     typeof onPress === 'function' || typeof onLongPress === 'function'
       ? Pressable
       : View
+
   return (
     <Container style={[styles.uiBalloon, baloonStyle.container, style]}>
       {typeof children === 'string' ? (

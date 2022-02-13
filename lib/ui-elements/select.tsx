@@ -6,8 +6,8 @@ import UISelectPlatform from '@ui-elements/inner-components/select'
 import { UI_SELECT_OPTION_HEIGHT } from '@utils/constants'
 
 export type UISelectProps = {
-  error: boolean
-  errorMessage: string
+  error?: boolean
+  errorMessage?: string
   items: Array<{ key: string; label: string; value: string | number }>
   onChange: (value: string | number) => void
   placeholder: string
@@ -72,6 +72,11 @@ const UISelect = ({
       />
     </View>
   )
+}
+
+UISelect.defaultProps = {
+  error: false,
+  errorMessage: '',
 }
 
 const styles = StyleSheet.create({
