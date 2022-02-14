@@ -10,9 +10,9 @@ const UIImagePlaceholderGroup = ({
   style,
   withFiller,
   ...otherProps
-}) => (
+}: UIImagePlaceholderGroupProps) => (
   <View
-    style={StyleSheet.compose(styles.groupContainer, style)}
+    style={StyleSheet.compose(styles.groupContainer as typeof style, style)}
     {...otherProps}
   >
     {children}

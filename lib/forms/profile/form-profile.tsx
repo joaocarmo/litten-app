@@ -465,7 +465,7 @@ const FormProfile = ({
           placeholder={translate('forms.name')}
           value={editedDisplayName ?? displayName}
           onChangeText={setProfileDisplayName}
-          autoCompleteType="name"
+          autoComplete="name"
           error={displayNameValidation.error}
           errorMessage={displayNameValidation.errorMessage}
         />
@@ -476,7 +476,7 @@ const FormProfile = ({
           placeholder={translate('forms.email')}
           value={editedEmail ?? email}
           onChangeText={setProfileEmail}
-          autoCompleteType="email"
+          autoComplete="email"
           keyboardType="email-address"
           error={emailValidation.error}
           errorMessage={emailValidation.errorMessage}
@@ -503,7 +503,7 @@ const FormProfile = ({
             editedPhoneNumber ?? phoneNumber,
           )}
           onChangeText={handleChangePhoneNumber}
-          autoCompleteType="tel"
+          autoComplete="tel"
           keyboardType="phone-pad"
           error={phoneNumberValidation.error}
           errorMessage={phoneNumberValidation.errorMessage}

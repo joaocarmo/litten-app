@@ -16,6 +16,7 @@ export type UIButtonProps = {
   disabled?: boolean
   fluid?: boolean
   loading?: boolean
+  primary?: boolean
   secondary?: boolean
   textStyle?: TextProps['style']
 } & PressableProps
@@ -145,6 +146,7 @@ UIButton.defaultProps = {
   disabled: false,
   fluid: false,
   loading: false,
+  primary: true,
   secondary: false,
   textStyle: undefined,
 }

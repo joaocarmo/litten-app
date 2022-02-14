@@ -4,9 +4,7 @@ import Slider from '@react-native-community/slider'
 import type { SliderProps } from '@react-native-community/slider'
 import { useTheme } from '@hooks'
 
-export type UISliderProps = {
-  style?: SliderProps['style']
-}
+export type UISliderProps = Omit<SliderProps, 'ref'>
 
 const UISlider = ({ style: propsStyle, ...otherProps }: UISliderProps) => {
   const {

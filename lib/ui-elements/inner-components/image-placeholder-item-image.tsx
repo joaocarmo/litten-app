@@ -11,8 +11,8 @@ import type { UIImageProps } from '@ui-elements/image'
 
 export type UIImagePlaceholderImageItemProps = {
   source: UIImageProps['source']
-  onPress: PressableProps['onPress']
-  onLongPress: PressableProps['onLongPress']
+  onPress?: PressableProps['onPress']
+  onLongPress?: PressableProps['onLongPress']
 }
 
 const UIImagePlaceholderImageItem = ({
@@ -47,6 +47,11 @@ const UIImagePlaceholderImageItem = ({
       <UIImage source={source} style={styles.uiImagePlaceholderCommon} />
     </Pressable>
   )
+}
+
+UIImagePlaceholderImageItem.defaultProps = {
+  onPress: undefined,
+  onLongPress: undefined,
 }
 
 export default UIImagePlaceholderImageItem

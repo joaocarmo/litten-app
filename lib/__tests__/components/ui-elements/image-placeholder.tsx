@@ -5,13 +5,19 @@ import { iterateTimes } from '@utils/functions'
 
 const allowedNumPhotos = 8
 const photos = []
+const handleOnPress = jest.fn()
+
 describe('Snapshot test for the "UIImagePlaceholder" component', () => {
   it('renders correctly', () => {
     const element = render(
       <UIImagePlaceholder.Group>
         {iterateTimes(allowedNumPhotos).map((v, idx) =>
           photos[idx] ? (
-            <UIImagePlaceholder.ImageItem key={idx} source={photos[idx]} />
+            <UIImagePlaceholder.ImageItem
+              key={idx}
+              source={photos[idx]}
+              onPress={handleOnPress}
+            />
           ) : (
             <UIImagePlaceholder.Item
               key={idx}

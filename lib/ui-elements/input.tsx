@@ -101,11 +101,11 @@ const UIInput = ({
   return (
     <>
       <TextInput
-        {...otherProps}
         onBlur={onBlurHandler}
         onFocus={onFocusHandler}
         placeholderTextColor={placeholderTextColor ?? colors.neutral}
         style={StyleSheet.compose(getStyle(), style)}
+        {...otherProps}
       />
       {error && !!errorMessage && (
         <Text style={styles.errorMessage}>{errorMessage}</Text>

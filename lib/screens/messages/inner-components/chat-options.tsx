@@ -25,6 +25,7 @@ import type { BasicChat } from '@model/types/chat'
 import type { BasicLitten } from '@model/types/litten'
 import type { BasicUser } from '@model/types/user'
 import type { ChatOptionsNavigationProp } from '@utils/types/routes'
+import type { UIDropdownOption } from '@ui-elements/dropdown'
 
 export type ChatOptionsProps = {
   chat: BasicChat
@@ -82,7 +83,7 @@ const ChatOptions = ({ chat, litten, recipient, user }: ChatOptionsProps) => {
     )
   }, [deleteConversation, recipient.displayName])
 
-  const conversationOptions = useMemo(
+  const conversationOptions = useMemo<UIDropdownOption[]>(
     () => [
       {
         key: CONVERSATION_VIEW_LITTEN,
