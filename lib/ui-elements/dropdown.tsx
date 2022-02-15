@@ -13,7 +13,7 @@ import { useTheme } from '@hooks'
 import UISeparator from '@ui-elements/separator'
 import { Right as RightArrow } from '@images/components/arrows'
 import { UI_ICON_SIZE_MICRO } from '@utils/constants'
-import dropdownStyles from '@ui-elements/input.styles'
+import dropdownStyles from '@ui-elements/dropdown.styles'
 
 const { Popover } = renderers
 
