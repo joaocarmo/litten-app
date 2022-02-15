@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react'
 import remoteConfig from '@db/remote-config'
+import type { FirebaseRemoteConfigTypes } from '@react-native-firebase/remote-config'
 
-const useAppConfig = (configKey: string): unknown => {
-  const [configValue, setConfigValue] = useState(null)
+type AppConfigValues = FirebaseRemoteConfigTypes.ConfigValues
+
+const useAppConfig = (configKey?: string): AppConfigValues => {
+  const [configValue, setConfigValue] = useState<AppConfigValues>(null)
 
   useEffect(() => {
     if (configKey) {
-      setConfigValue(remoteConfig.getValue(configKey))
+      setConfigValue({ [configKey]: remoteConfig.getValue(configKey) })
     } else {
       setConfigValue(remoteConfig.getAll())
     }

@@ -9,26 +9,18 @@ import type { Theme } from '@styles/themes'
 import type { Typography } from '@styles/typography'
 import type { ThemePreferences } from '@store/types'
 
-type CreateStyleSheet = ReturnType<typeof StyleSheet.create>
-
 type CreateStylesFn = (
   theme: Theme,
   typography: Typography,
   isDark: boolean,
-) => Parameters<typeof StyleSheet.create>[0]
+) => any
 
-type UseTheme = ThemeConfig & {
-  commonStyles: commonStylesConfig.CommonStyles
-  createStyles: (fn: CreateStylesFn) => CreateStyleSheet
-  setTheme: (theme: string) => void
-}
-
-const useTheme = (): UseTheme => {
-  const themeConfig: ThemeConfig = useContext<ThemeConfig>(ThemeContext)
+const useTheme = () => {
+  const themeConfig = useContext<ThemeConfig>(ThemeContext)
 
   const dispatch = useDispatch()
 
-  const createStyles: UseTheme['createStyles'] = useCallback(
+  const createStyles = useCallback(
     (fn: CreateStylesFn) =>
       StyleSheet.create(
         fn(themeConfig.theme, themeConfig.typography, themeConfig.isDark),

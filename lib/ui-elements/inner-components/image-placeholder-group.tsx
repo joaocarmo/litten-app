@@ -1,19 +1,28 @@
 import { StyleSheet, View } from 'react-native'
+import type { ViewProps } from 'react-native'
+
+export type UIImagePlaceholderGroupProps = {
+  withFiller?: boolean
+} & ViewProps
 
 const UIImagePlaceholderGroup = ({
   children,
   style,
-  withFiller = false,
+  withFiller,
   ...otherProps
-}) => (
+}: UIImagePlaceholderGroupProps) => (
   <View
+    style={StyleSheet.compose(styles.groupContainer as typeof style, style)}
     {...otherProps}
-    style={StyleSheet.compose(styles.groupContainer, style)}
   >
     {children}
     {withFiller && <View style={styles.lastRowFiller} />}
   </View>
 )
+
+UIImagePlaceholderGroup.defaultProps = {
+  withFiller: false,
+}
 
 const styles = StyleSheet.create({
   groupContainer: {
@@ -25,4 +34,5 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
 })
+
 export default UIImagePlaceholderGroup

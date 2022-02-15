@@ -1,6 +1,7 @@
 import Toast from 'react-native-simple-toast'
 import { useCallback, useMemo } from 'react'
 import { FlatList, View } from 'react-native'
+import type { ListRenderItem } from 'react-native'
 import {
   usePaddingBottom,
   useSavedFilters,
@@ -12,6 +13,7 @@ import { UIListItem } from '@ui-elements'
 import { Cross as CrossIcon } from '@images/components/icons'
 import { placeholderEmptyFavouriteSearches } from '@images'
 import { translate } from '@utils/i18n'
+import type { FavouriteFilter, SearchFilters } from '@store/types'
 
 const FavouriteFiltersScreen = () => {
   const withPaddingBottom = usePaddingBottom()
@@ -24,15 +26,15 @@ const FavouriteFiltersScreen = () => {
   } = useTheme()
 
   const applyFilters = useCallback(
-    (filter) => {
+    (filter: SearchFilters) => {
       setFilters(filter)
       Toast.show(translate('screens.favourites.filtersApplied'))
     },
     [setFilters],
   )
 
-  const renderItem = useCallback(
-    ({ item: { key: name, ...filter } }) => (
+  const renderItem: ListRenderItem<FavouriteFilter> = useCallback(
+    ({ item: { name, ...filter } }) => (
       <UIListItem
         IconComponent={CrossIcon}
         iconPosition="right"

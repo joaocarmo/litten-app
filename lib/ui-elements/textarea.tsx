@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 import { TextInput } from 'react-native'
+import type { TextInputProps } from 'react-native'
 import { useTheme } from '@hooks'
 import {
   UI_ELEMENT_BORDER_MARGIN,
@@ -8,14 +9,19 @@ import {
 
 const rowHeight = 64
 
+export type UITextAreaProps = {
+  children?: string
+  rows?: number
+} & TextInputProps
+
 const UITextArea = ({
   children,
-  multiline = true,
+  multiline,
   placeholderTextColor,
-  rows = 3,
+  rows,
   style,
   ...otherProps
-}) => {
+}: UITextAreaProps) => {
   const {
     createStyles,
     theme: { colors },
@@ -44,6 +50,7 @@ const UITextArea = ({
     }),
     [rows],
   )
+
   return (
     <TextInput
       multiline={multiline}
@@ -53,6 +60,11 @@ const UITextArea = ({
       style={[styles.uiTextArea, minHeightStyle, style]}
     />
   )
+}
+
+UITextArea.defaultProps = {
+  multiline: true,
+  rows: 3,
 }
 
 export default UITextArea

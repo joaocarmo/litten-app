@@ -5,18 +5,14 @@ import type { PressableProps } from 'react-native'
 import { useTheme } from '@hooks'
 
 type UITooltipProps = {
-  animated: boolean
+  animated?: boolean
   children: ReactNode
 } & PressableProps
 
 const finalTopPosition = 12
 const finalOpacity = 1
 
-const UITooltip = ({
-  animated = true,
-  children,
-  ...otherProps
-}: UITooltipProps) => {
+const UITooltip = ({ animated, children, ...otherProps }: UITooltipProps) => {
   const {
     createStyles,
     commonStyles: {
@@ -100,6 +96,10 @@ const UITooltip = ({
       </Pressable>
     </Animated.View>
   )
+}
+
+UITooltip.defaultProps = {
+  animated: true,
 }
 
 export default UITooltip

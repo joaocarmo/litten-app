@@ -171,7 +171,7 @@ const HomeFilterSetScreen = ({ filter }) => {
         />
         {useRadiusFilter && (
           <UISlider
-            value={filterValue}
+            value={filterValue as number}
             onValueChange={setRadiusFilter}
             onSlidingComplete={setValue}
             step={1}
@@ -196,7 +196,7 @@ const HomeFilterSetScreen = ({ filter }) => {
         items={userTypes}
         label={translate('screens.searches.selectUserType')}
         description={translate('screens.searches.selectUserTypeDesc')}
-        selectedValue={filterValue}
+        selectedValue={filterValue as string}
         onValueChange={setValue}
       />
     ),

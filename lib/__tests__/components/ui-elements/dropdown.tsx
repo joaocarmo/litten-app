@@ -18,13 +18,17 @@ const messageOptions = [
     value: 'unread',
   },
 ]
+
+const handleOnSelect = jest.fn()
+
 describe('Snapshot test for the "UIDropdown" component', () => {
   it('renders correctly', () => {
     const element = render(
       <UIDropdown
+        onSelect={handleOnSelect}
         options={messageOptions}
-        selectedValue="all"
         placement="bottom"
+        selectedValue="all"
       />,
     )
 

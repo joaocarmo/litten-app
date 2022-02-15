@@ -82,7 +82,7 @@ const FormRecover = ({
           <FormKeyboardAvoidingView factor={6}>
             <UIInput
               autoCapitalize="none"
-              autoCompleteType="email"
+              autoComplete="email"
               autoCorrect={false}
               error={error?.email}
               errorMessage={errorMessage?.email}

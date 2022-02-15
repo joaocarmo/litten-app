@@ -76,6 +76,27 @@ Array [
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -213,6 +234,25 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -346,6 +386,25 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -478,6 +537,25 @@ purpose (injected humour and the like).
             }
           >
             Cat: Snowball
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
           </Text>
         </View>
         <View
@@ -616,6 +694,27 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -753,6 +852,25 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -886,6 +1004,25 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -1018,6 +1155,25 @@ purpose (injected humour and the like).
             }
           >
             Cat: Snowball
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
           </Text>
         </View>
         <View
@@ -1156,6 +1312,27 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -1293,6 +1470,25 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -1426,6 +1622,25 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -1558,6 +1773,25 @@ purpose (injected humour and the like).
             }
           >
             Cat: Snowball
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
           </Text>
         </View>
         <View
@@ -1696,6 +1930,27 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -1833,6 +2088,25 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -1966,6 +2240,25 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -2098,6 +2391,25 @@ purpose (injected humour and the like).
             }
           >
             Cat: Snowball
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
           </Text>
         </View>
         <View
@@ -2236,6 +2548,27 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -2373,6 +2706,25 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -2506,6 +2858,25 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -2638,6 +3009,25 @@ purpose (injected humour and the like).
             }
           >
             Cat: Snowball
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
           </Text>
         </View>
         <View
@@ -2776,6 +3166,27 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -2913,6 +3324,25 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -3046,6 +3476,25 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -3178,6 +3627,25 @@ purpose (injected humour and the like).
             }
           >
             Cat: Snowball
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
           </Text>
         </View>
         <View
@@ -3316,6 +3784,27 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -3453,6 +3942,25 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -3586,6 +4094,25 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -3718,6 +4245,25 @@ purpose (injected humour and the like).
             }
           >
             Cat: Snowball
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
           </Text>
         </View>
         <View
@@ -3856,6 +4402,27 @@ purpose (injected humour and the like).
           >
             Cat: Snowball
           </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+              ]
+            }
+          >
+            52 years ago
+          </Text>
         </View>
         <View
           style={
@@ -3992,6 +4559,25 @@ purpose (injected humour and the like).
             }
           >
             Cat: Snowball
+          </Text>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#000000",
+                  "flex": 1,
+                  "fontSize": 12.444444444444445,
+                  "fontWeight": "200",
+                },
+                Object {
+                  "textAlign": "right",
+                },
+                undefined,
+              ]
+            }
+          >
+            52 years ago
           </Text>
         </View>
         <View

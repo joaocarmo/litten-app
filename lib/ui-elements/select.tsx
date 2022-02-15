@@ -4,15 +4,13 @@ import { useTheme } from '@hooks'
 import UIInput from '@ui-elements/input'
 import UISelectPlatform from '@ui-elements/inner-components/select'
 import { UI_SELECT_OPTION_HEIGHT } from '@utils/constants'
+import type { IOSSelectProps } from '@ui-elements/inner-components/select'
 
 export type UISelectProps = {
-  error: boolean
-  errorMessage: string
-  items: Array<{ key: string; label: string; value: string | number }>
-  onChange: (value: string | number) => void
+  error?: boolean
+  errorMessage?: string
   placeholder: string
-  selectedValue: string | number
-}
+} & IOSSelectProps
 
 const UISelect = ({
   error,
@@ -72,6 +70,11 @@ const UISelect = ({
       />
     </View>
   )
+}
+
+UISelect.defaultProps = {
+  error: false,
+  errorMessage: '',
 }
 
 const styles = StyleSheet.create({

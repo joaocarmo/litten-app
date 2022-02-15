@@ -119,24 +119,24 @@ export default class Chat extends Base {
     return Chat.collection
   }
 
-  get lastMessage(): void | string {
-    return this.#lastMessage
+  get lastMessage(): string {
+    return this.#lastMessage || ''
   }
 
-  get lastMessageBy(): void | string {
-    return this.#lastMessageBy
+  get lastMessageBy(): string {
+    return this.#lastMessageBy || ''
   }
 
-  get littenSpecies(): void | string {
-    return this.#littenSpecies
+  get littenSpecies(): string {
+    return this.#littenSpecies || ''
   }
 
-  get littenType(): void | string {
-    return this.#littenType
+  get littenType(): string {
+    return this.#littenType || ''
   }
 
-  get littenUid(): void | string {
-    return this.#littenUid
+  get littenUid(): string {
+    return this.#littenUid || ''
   }
 
   get participants(): string[] {

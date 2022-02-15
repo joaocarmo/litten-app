@@ -1,10 +1,11 @@
 import type { ComponentType } from 'react'
 import type {
   ColorValue,
-  StyleProp,
-  ImageSourcePropType,
+  ImageRequireSource,
   ImageStyle,
+  StyleProp,
 } from 'react-native'
+import type { Source } from 'react-native-fast-image'
 
 export type IconComponentProps = {
   fill?: ColorValue
@@ -16,4 +17,6 @@ export type IconComponentProps = {
 
 export type IconTypeComponent = ComponentType<IconComponentProps>
 
-export type ImageSource = string | ImageSourcePropType
+export type BasicImageSource = string | Source
+
+export type ImageSource = BasicImageSource | ImageRequireSource

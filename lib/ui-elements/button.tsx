@@ -11,13 +11,14 @@ import {
 import { useCallback } from 'react'
 
 export type UIButtonProps = {
-  compact: boolean
-  danger: boolean
-  disabled: boolean
-  fluid: boolean
-  loading: boolean
-  secondary: boolean
-  textStyle: TextProps['style']
+  compact?: boolean
+  danger?: boolean
+  disabled?: boolean
+  fluid?: boolean
+  loading?: boolean
+  primary?: boolean
+  secondary?: boolean
+  textStyle?: TextProps['style']
 } & PressableProps
 
 const UIButton = ({
@@ -145,7 +146,9 @@ UIButton.defaultProps = {
   disabled: false,
   fluid: false,
   loading: false,
+  primary: true,
   secondary: false,
+  textStyle: undefined,
 }
 
 export default UIButton

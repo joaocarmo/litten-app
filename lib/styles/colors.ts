@@ -1,6 +1,4 @@
-import type { ColorValue } from 'react-native'
-
-const colors: Record<string, ColorValue> = {
+const colors = {
   // Official color palette (light)
   black: '#000000',
   blue: '#39a4f2',

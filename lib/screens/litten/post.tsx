@@ -185,9 +185,8 @@ const LittenPostScreen = ({
             {!preview && (
               <Pressable onPress={toggleFavourite}>
                 <UIIcon
-                  IconComponent={FavIconComponent}
-                  elevated="very"
                   circle
+                  IconComponent={FavIconComponent}
                   iconStyle={styles.favIconStyle}
                 />
               </Pressable>

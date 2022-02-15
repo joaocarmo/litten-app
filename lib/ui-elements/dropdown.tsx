@@ -1,6 +1,6 @@
-import { useCallback } from 'react'
+import { useCallback, useMemo } from 'react'
 import type { ReactNode } from 'react'
-import { Pressable, StyleSheet, Text, View } from 'react-native'
+import { Pressable, Text, View } from 'react-native'
 import type { ViewProps } from 'react-native'
 import {
   Menu,
@@ -12,27 +12,34 @@ import {
 import { useTheme } from '@hooks'
 import UISeparator from '@ui-elements/separator'
 import { Right as RightArrow } from '@images/components/arrows'
-import { UI_DROPDOWN_MARGIN, UI_ICON_SIZE_MICRO } from '@utils/constants'
+import { UI_ICON_SIZE_MICRO } from '@utils/constants'
+import dropdownStyles from '@ui-elements/dropdown.styles'
 
 const { Popover } = renderers
 
-export type UIDropdownValue = string | number
+export type UIDropdownValue = string | number | boolean
 
 export type UIDropdownOption = {
   key: string
-  label: string
-  value: UIDropdownValue
-  disabled: boolean
-  separator: boolean
-  onSelect: (optionValue: UIDropdownValue) => void
+  label?: string
+  value?: UIDropdownValue
+  disabled?: boolean
+  separator?: boolean
+  onSelect?: (optionValue: UIDropdownValue) => void
 }
+
+export type UIDropdownSeparator = {
+  separator?: boolean
+}
+
+export type UIDropdownValidOption = UIDropdownOption & UIDropdownSeparator
 
 export type UIDropdownProps = {
   menuTrigger?: ReactNode
-  onSelect: (optionValue: UIDropdownValue) => void
-  options: UIDropdownOption[]
+  onSelect?: (optionValue: UIDropdownValue) => void
+  options: UIDropdownValidOption[]
   placement?: 'top' | 'right' | 'bottom' | 'left' | 'auto'
-  selectedValue: UIDropdownValue
+  selectedValue?: UIDropdownValue
 } & ViewProps
 
 const UIDropdown = ({
@@ -47,84 +54,85 @@ const UIDropdown = ({
   const {
     createStyles,
     theme: { colors },
-    typography,
   } = useTheme()
 
-  const styles = createStyles((theme) => ({
-    uiDropdownContainer: {
-      flexDirection: 'row',
-      marginTop: UI_DROPDOWN_MARGIN,
-      marginBottom: UI_DROPDOWN_MARGIN,
-    },
-    uiDropdown: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-      padding: 12,
-      borderRadius: 20,
-      backgroundColor: theme.colors.background,
-    },
-    selectedValueText: {
-      fontWeight: typography.fontWeight.bolder,
-      color: theme.colors.secondary,
-    },
-    iconChevron: {
-      transform: [
-        {
-          rotateZ: '90deg',
-        },
-      ],
-    },
-    optionsContainer: {
-      padding: 10,
-      borderRadius: 6,
-      borderWidth: StyleSheet.hairlineWidth,
-      borderColor: theme.colors.neutral,
-      shadowRadius: 0,
-      shadowOffset: {
-        height: 0,
-        width: 0,
-      },
-      backgroundColor: theme.colors.background,
-    },
-    optionWrapper: {
-      paddingTop: 10,
-      paddingBottom: 10,
-      paddingRight: 64,
-    },
-    optionText: {
-      padding: 2,
-      fontWeight: typography.fontWeight.light,
-      color: theme.colors.neutralDark,
-    },
-    optionsTextActive: {
-      color: theme.colors.secondary,
-    },
-    optionsTextDisabled: {
-      color: theme.colors.neutral,
-    },
-    anchorStyle: {
-      backgroundColor: 'transparent',
-    },
-  }))
+  const styles = createStyles(dropdownStyles)
 
-  const translateSelectedValue = useCallback(
+  const translatedSelectedValue = useMemo(
     () => options.find(({ value }) => value === selectedValue)?.label,
     [options, selectedValue],
   )
 
+  const handleOnSelect = useCallback(
+    (optionValue: UIDropdownValue) => {
+      if (typeof onSelect === 'function') {
+        onSelect(optionValue)
+      }
+    },
+    [onSelect],
+  )
+
+  const renderPopover = useCallback(
+    (props) => (
+      <Popover
+        {...props}
+        placement={placement}
+        anchorStyle={styles.anchorStyle}
+      />
+    ),
+    [placement, styles.anchorStyle],
+  )
+
+  const renderOptions = useMemo(
+    () =>
+      options.map(
+        ({
+          key,
+          label,
+          value,
+          disabled,
+          separator,
+          onSelect: onOptionSelect,
+        }) =>
+          separator ? (
+            <UISeparator key={key} small />
+          ) : (
+            <MenuOption
+              key={key}
+              value={value}
+              disabled={disabled}
+              onSelect={() => onOptionSelect(value)}
+              customStyles={{
+                optionWrapper: styles.optionWrapper,
+              }}
+            >
+              <Text
+                style={[
+                  styles.optionText,
+                  selectedValue === value
+                    ? styles.optionsTextActive
+                    : undefined,
+                  disabled ? styles.optionsTextDisabled : undefined,
+                ]}
+              >
+                {label}
+              </Text>
+            </MenuOption>
+          ),
+      ),
+    [
+      options,
+      selectedValue,
+      styles.optionText,
+      styles.optionWrapper,
+      styles.optionsTextActive,
+      styles.optionsTextDisabled,
+    ],
+  )
+
   return (
     <View {...otherProps} style={[styles.uiDropdownContainer, style]}>
-      <Menu
-        renderer={(props) => (
-          <Popover
-            {...props}
-            placement={placement}
-            anchorStyle={styles.anchorStyle}
-          />
-        )}
-        onSelect={(value) => onSelect(value)}
-      >
+      <Menu renderer={renderPopover} onSelect={handleOnSelect}>
         <MenuTrigger
           customStyles={{
             TriggerTouchableComponent: Pressable,
@@ -134,7 +142,7 @@ const UIDropdown = ({
           {!menuTrigger && (
             <View style={styles.uiDropdown}>
               <Text style={styles.selectedValueText}>
-                {translateSelectedValue()}
+                {translatedSelectedValue}
               </Text>
               <RightArrow
                 height={UI_ICON_SIZE_MICRO}
@@ -150,41 +158,7 @@ const UIDropdown = ({
             optionsContainer: styles.optionsContainer,
           }}
         >
-          {options.map(
-            ({
-              key,
-              label,
-              value,
-              disabled,
-              separator,
-              onSelect: onOptionSelect,
-            }) =>
-              separator ? (
-                <UISeparator key={key} small />
-              ) : (
-                <MenuOption
-                  key={key}
-                  value={value}
-                  disabled={disabled}
-                  onSelect={() => onOptionSelect(value)}
-                  customStyles={{
-                    optionWrapper: styles.optionWrapper,
-                  }}
-                >
-                  <Text
-                    style={[
-                      styles.optionText,
-                      selectedValue === value
-                        ? styles.optionsTextActive
-                        : undefined,
-                      disabled ? styles.optionsTextDisabled : undefined,
-                    ]}
-                  >
-                    {label}
-                  </Text>
-                </MenuOption>
-              ),
-          )}
+          {renderOptions}
         </MenuOptions>
       </Menu>
     </View>
@@ -193,7 +167,9 @@ const UIDropdown = ({
 
 UIDropdown.defaultProps = {
   menuTrigger: null,
+  onSelect: undefined,
   placement: 'auto',
+  selectedValue: undefined,
 }
 
 export default UIDropdown

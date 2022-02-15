@@ -6,20 +6,29 @@ import {
   clearSavedSearch,
   removeSavedSearch,
 } from '@store/actions/authenticated-user'
+import { SavedSearch } from '@store/types'
 
-const areEqual = (left, right) => left.length === right.length
+type SetSearchOptions = {
+  remove?: boolean
+}
 
-const useSearchHistory = (): [string[], (query: string) => void] => {
+const areEqual = (left: SavedSearch[], right: SavedSearch[]) =>
+  left.length === right.length
+
+const useSearchHistory = (): [
+  string[],
+  (query?: string, options?: SetSearchOptions) => void,
+] => {
   const dispatch = useDispatch()
   const searchHistory = useSelector(searchHistorySelector, areEqual)
 
   const addSearchToHistory = useCallback(
-    (query) => dispatch(addSavedSearch(query)),
+    (query: string) => dispatch(addSavedSearch(query)),
     [dispatch],
   )
 
   const removeSearchFromHistory = useCallback(
-    (query) => dispatch(removeSavedSearch(query)),
+    (query: string) => dispatch(removeSavedSearch(query)),
     [dispatch],
   )
 
@@ -29,8 +38,10 @@ const useSearchHistory = (): [string[], (query: string) => void] => {
   )
 
   const setSearchHistory = useCallback(
-    (query, { remove = false } = {}) => {
+    (query?: string, options?: SetSearchOptions) => {
       if (query) {
+        const { remove = false } = options || {}
+
         if (remove) {
           removeSearchFromHistory(query)
         } else {

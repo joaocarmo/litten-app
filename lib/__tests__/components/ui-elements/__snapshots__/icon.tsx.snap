@@ -2,7 +2,6 @@
 
 exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
 <View
-  elevated={true}
   style={
     Array [
       Object {
@@ -84,7 +83,7 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
       resizeMode="contain"
       source={
         Object {
-          "uri": "",
+          "uri": "mockIcon",
         }
       }
       style={

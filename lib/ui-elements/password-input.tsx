@@ -1,20 +1,21 @@
-import { useState } from 'react'
-import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet'
+import { useCallback, useState } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import { useTheme } from '@hooks'
 import UIInput from '@ui-elements/input'
 import { Eye as EyeIcon } from '@images/components/icons'
+import type { UIInputProps } from '@ui-elements/input'
+
+export type UIPasswordInputProps = UIInputProps
 
 const UIPasswordInput = ({
   error,
   errorMessage,
   onBlur,
   onFocus,
-  // secureTextEntry,
   style,
-  success = false,
+  success,
   ...otherProps
-}) => {
+}: UIPasswordInputProps) => {
   const [hidePassword, setHidePassword] = useState(true)
   const [isActive, setIsActive] = useState(false)
   const {
@@ -80,7 +81,7 @@ const UIPasswordInput = ({
     styles.uiInputPasswordError,
   )
 
-  const getStyle = (): ViewStyleProp => {
+  const getStyle = () => {
     if (success) {
       return stylesSuccess
     }
@@ -96,21 +97,27 @@ const UIPasswordInput = ({
     return stylesInactive
   }
 
-  const onFocusHandler = () => {
-    setIsActive(true)
+  const onFocusHandler = useCallback(
+    (e) => {
+      setIsActive(true)
 
-    if (typeof onFocus === 'function') {
-      onFocus()
-    }
-  }
+      if (typeof onFocus === 'function') {
+        onFocus(e)
+      }
+    },
+    [onFocus],
+  )
 
-  const onBlurHandler = () => {
-    setIsActive(false)
+  const onBlurHandler = useCallback(
+    (e) => {
+      setIsActive(false)
 
-    if (typeof onBlur === 'function') {
-      onBlur()
-    }
-  }
+      if (typeof onBlur === 'function') {
+        onBlur(e)
+      }
+    },
+    [onBlur],
+  )
 
   return (
     <>
@@ -135,6 +142,10 @@ const UIPasswordInput = ({
       )}
     </>
   )
+}
+
+UIPasswordInput.defaultProps = {
+  success: false,
 }
 
 export default UIPasswordInput

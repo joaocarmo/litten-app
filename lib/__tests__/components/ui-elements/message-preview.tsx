@@ -1,4 +1,3 @@
-/* eslint-disable react/no-array-index-key */
 import { render } from '@utils/tests/react-native'
 import { UIMessage } from '@ui-elements'
 
@@ -21,11 +20,12 @@ describe('Snapshot test for the "UIMessage" component', () => {
       <>
         {[...Array(30)].map((val, idx) => (
           <UIMessage.Preview
+            // eslint-disable-next-line react/no-array-index-key
             key={idx}
             from="johnnyeyelash"
             header="Cat: Snowball"
-            read={idx % 4}
-            favourite={!(idx % 5)}
+            read={Boolean(idx % 4)}
+            lastActivity={1000}
           >
             {ipsumLorem}
           </UIMessage.Preview>

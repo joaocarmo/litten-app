@@ -1,4 +1,5 @@
 import { Pressable } from 'react-native'
+import type { PressableProps } from 'react-native'
 import { useTheme } from '@hooks'
 import UIImage from '@ui-elements/image'
 import {
@@ -6,8 +7,19 @@ import {
   UI_IMAGE_PLACEHOLDER_ITEM_SIZE,
   UI_PRESSED_OPACITY,
 } from '@utils/constants'
+import type { UIImageProps } from '@ui-elements/image'
 
-const UIImagePlaceholderImageItem = ({ source, onPress, onLongPress }) => {
+export type UIImagePlaceholderImageItemProps = {
+  source: UIImageProps['source']
+  onPress?: PressableProps['onPress']
+  onLongPress?: PressableProps['onLongPress']
+}
+
+const UIImagePlaceholderImageItem = ({
+  source,
+  onPress,
+  onLongPress,
+}: UIImagePlaceholderImageItemProps) => {
   const { createStyles } = useTheme()
   const styles = createStyles((theme) => ({
     uiImagePlaceholderCommon: {
@@ -23,6 +35,7 @@ const UIImagePlaceholderImageItem = ({ source, onPress, onLongPress }) => {
       opacity: UI_PRESSED_OPACITY,
     },
   }))
+
   return (
     <Pressable
       onPress={onPress}
@@ -34,6 +47,11 @@ const UIImagePlaceholderImageItem = ({ source, onPress, onLongPress }) => {
       <UIImage source={source} style={styles.uiImagePlaceholderCommon} />
     </Pressable>
   )
+}
+
+UIImagePlaceholderImageItem.defaultProps = {
+  onPress: undefined,
+  onLongPress: undefined,
 }
 
 export default UIImagePlaceholderImageItem

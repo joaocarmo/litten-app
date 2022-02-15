@@ -18,12 +18,7 @@ const SearchHeaderResults = () => {
         onPress={() => (isSelected(key) ? removeSpecies(key) : addSpecies(key))}
         style={styles.searchHeaderIcons}
       >
-        <UIIcon
-          IconComponent={icon}
-          size="medium"
-          selected={isSelected(key)}
-          elevated
-        />
+        <UIIcon IconComponent={icon} size="medium" selected={isSelected(key)} />
         <UIText bold>{label}</UIText>
       </Pressable>
     ),
