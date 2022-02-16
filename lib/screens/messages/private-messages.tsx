@@ -246,6 +246,11 @@ const PrivateMessages = ({
 
   const renderBubble = useCallback((props) => <Bubble {...props} />, [])
 
+  const renderInputToolbar = useCallback(
+    (props) => <InputToolbar {...props} />,
+    [],
+  )
+
   const renderChatEmpty = useCallback(
     (): ReactNode => <EmptyChat litten={litten} />,
     [litten],
@@ -269,7 +274,7 @@ const PrivateMessages = ({
       user={user as User}
       renderBubble={renderBubble}
       renderChatEmpty={renderChatEmpty}
-      renderInputToolbar={InputToolbar}
+      renderInputToolbar={renderInputToolbar}
       renderLoadEarlier={LoadEarlier}
       renderLoading={renderLoading}
       renderSend={Send}

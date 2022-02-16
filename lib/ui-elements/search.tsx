@@ -29,6 +29,7 @@ const UISearch = ({
     theme: { colors },
     typography,
   } = useTheme()
+
   const styles = createStyles((theme) => ({
     uiSearchContainer: {
       position: 'relative',
