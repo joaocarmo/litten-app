@@ -815,7 +815,7 @@ PODS:
     - React-Core
   - react-native-netinfo (8.0.0):
     - React-Core
-  - react-native-safe-area-context (3.3.2):
+  - react-native-safe-area-context (3.4.1):
     - React-Core
   - react-native-simple-toast (1.1.3):
     - React-Core
@@ -938,16 +938,16 @@ PODS:
     - RNFBApp
   - RNGestureHandler (2.2.0):
     - React-Core
-  - RNImageCropPicker (0.37.2):
+  - RNImageCropPicker (0.37.3):
     - React-Core
     - React-RCTImage
-    - RNImageCropPicker/QBImagePickerController (= 0.37.2)
+    - RNImageCropPicker/QBImagePickerController (= 0.37.3)
     - TOCropViewController
-  - RNImageCropPicker/QBImagePickerController (0.37.2):
+  - RNImageCropPicker/QBImagePickerController (0.37.3):
     - React-Core
     - React-RCTImage
     - TOCropViewController
-  - RNLocalize (2.1.9):
+  - RNLocalize (2.2.0):
     - React-Core
   - RNReanimated (2.4.1):
     - DoubleConversion
@@ -977,7 +977,7 @@ PODS:
     - React-RCTText
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNScreens (3.11.1):
+  - RNScreens (3.12.0):
     - React-Core
     - React-RCTImage
   - RNSVG (12.1.1):
@@ -1308,7 +1308,7 @@ SPEC CHECKSUMS:
   react-native-geolocation-service: c0efb872258ed9240f1003a70fca9e9757e5c785
   react-native-maps: d752b0dd0e1951d815b1336332835aab6b4a836f
   react-native-netinfo: ba4ea50d836c60580c59079233c400753fe5bcb6
-  react-native-safe-area-context: 584dc04881deb49474363f3be89e4ca0e854c057
+  react-native-safe-area-context: 9e40fb181dac02619414ba1294d6c2a807056ab9
   react-native-simple-toast: bf002828cf816775a6809f7a9ec3907509bce11f
   react-native-slider: 37e1cf275dab20d3c015e40969aa9f5c309645a8
   react-native-webview: 380c1a03ec94b7ed764dac8db1e7c9952d08c93a
@@ -1341,10 +1341,10 @@ SPEC CHECKSUMS:
   RNFBRemoteConfig: e4d170a7a66203b40a4b2fcf472b0bb8ddbc5419
   RNFBStorage: 765515845b736fe79e3f891ff0d956a19e5229e4
   RNGestureHandler: bf572f552ea324acd5b5464b8d30755b2d8c1de6
-  RNImageCropPicker: 448d3c6e923fde3466b49caf3c2457c2a0ba02dd
-  RNLocalize: 291e5e21b53cd30b5205c10ed95d31b0dc9b8d63
+  RNImageCropPicker: 44e2807bc410741f35d4c45b6586aedfe3da39d2
+  RNLocalize: 6571ea792a7dcb6d217c98c14d9147e9417cef62
   RNReanimated: 32c91e28f5780937b8efc07ddde1bab8d373fe0b
-  RNScreens: 4d83613b50b74ed277026375dc0810893b0c347f
+  RNScreens: 2559f98b0835103cbef3b26ba77fa61d4bb37ae7
   RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SDWebImageWebPCoder: f93010f3f6c031e2f8fb3081ca4ee6966c539815
