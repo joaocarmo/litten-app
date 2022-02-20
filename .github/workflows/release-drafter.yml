@@ -4,7 +4,7 @@ name: Release Drafter
 on:
   push:
     branches:
-      - main
+      - next
 
 jobs:
   update_release_draft:
