@@ -36,8 +36,8 @@
 
 <!-- (add an `x` to `[ ]` if applicable) -->
 
-- [ ] Tests added
-- [ ] Tests passed
+- [ ] Added tests
+- [ ] Passed tests
 - [ ] Coding style respected
 
 <!-- References -->
