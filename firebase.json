@@ -9,13 +9,21 @@
     "ui": {
       "enabled": true,
       "port": 4000
+    },
+    "storage": {
+      "port": 9199
     }
   },
   "firestore": {
     "rules": "firestore.rules"
   },
+  "storage": {
+    "rules": "storage.rules"
+  },
   "react-native": {
     "analytics_auto_collection_enabled": true,
+    "android_task_executor_keep_alive_seconds": 3,
+    "android_task_executor_maximum_pool_size": 10,
     "crashlytics_auto_collection_enabled": true,
     "crashlytics_debug_enabled": false,
     "crashlytics_ndk_enabled": true

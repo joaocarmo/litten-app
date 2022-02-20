@@ -1,6 +1,5 @@
 # This workflow can be manually triggered and will upload an iOS .ipa
 # (iOS App Store Package) file to the Apple iOS App Store
-#
 name: Publish App Store
 
 on:
@@ -16,11 +15,11 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js v14 (LTS)
-      uses: actions/setup-node@v1
+    - name: Use Node.js v16 (LTS)
+      uses: actions/setup-node@v2
       with:
-        node-version: '14'
-    - uses: c-hive/gha-yarn-cache@v1
+        node-version: '16'
+        cache: 'yarn'
     - name: Install dependencies
       run: |
         yarn --frozen-lockfile
@@ -54,7 +53,7 @@ jobs:
         scripts/prepare-release-ios
 
     - name: Build using Xcode
-      uses: yukiarrr/ios-build-action@v1.3.3
+      uses: yukiarrr/ios-build-action@v1
       with:
         project-path: ios/litten.xcodeproj
         workspace-path: ios/litten.xcworkspace

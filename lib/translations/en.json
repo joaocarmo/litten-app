@@ -60,6 +60,7 @@
       "emptyPostsText": "When you heart a post, they will show up in here where you can keep track",
       "emptyPostsTitle": "Start cherishing your favourite pet",
       "filtersApplied": "Your filters were applied",
+      "filtersSaved": "Your filters were saved",
       "tabNavFilters": "Filters",
       "tabNavPosts": "Littens",
       "title": "Favourites"
@@ -207,7 +208,15 @@
       "miscOptions": "Other",
       "shareMetrics": "Share Litten Analytics",
       "shareMetricsDesc": "Analytics are anonymous and allow us to receive automated error reports which we use to improve the overall user experience.",
-      "useMetricUnits": "Use Metric Units"
+      "useMetricUnits": "Use Metric Units",
+      "useMetricUnitsDesc": "You can choose whether to use the metric or the imperial system. By default, the app will use your device's settings.",
+      "theme": "Theme",
+      "themeDesc": "You can change the look of the app by selecting a different theme. By default, the app will use your device's theme.",
+      "scheme": {
+        "dark": "Dark",
+        "light": "Light",
+        "system": "System"
+      }
     },
     "selectLocation": {
       "title": "Select location"
@@ -236,9 +245,11 @@
       "abruptChaosNative": "Native",
       "abruptChaosReact": "React",
       "clearAsyncStorage": "Clear AsyncStorage",
+      "clearImageCache": "Clear Image Cache",
       "firestoreNetwork": "Firestore Network",
       "hacks": "Developer",
       "network": "Network",
+      "resetStore": "Reset Store",
       "storybookIntro": "You can browse through Litten's UI Elements in this screen",
       "toggleFirebaseNetwork": "Toggle Firebase Network",
       "triggerLocalNotification": "Trigger Local Notification"

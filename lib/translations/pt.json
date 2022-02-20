@@ -60,6 +60,7 @@
       "emptyPostsText": "Quando gostas de uma publicação, ela aparece aqui para dares seguimento",
       "emptyPostsTitle": "Começa a aproximar-te do teu animal",
       "filtersApplied": "Os teus filtros foram aplicados",
+      "filtersSaved": "Os teus filtros foram guardados",
       "tabNavFilters": "Filtros",
       "tabNavPosts": "Littens",
       "title": "Favoritos"
@@ -207,7 +208,15 @@
       "miscOptions": "Outros",
       "shareMetrics": "Partilhar Estatísticas",
       "shareMetricsDesc": "As estatísticas são dados anónimos que nos permitem receber relatórios de erros automaticamente e usá-los para melhorar a tua experiência.",
-      "useMetricUnits": "Utilizar Sistema Métrico"
+      "useMetricUnits": "Utilizar Sistema Métrico",
+      "useMetricUnitsDesc": "Podes escolher usar o sistema métrico ou o sistema imperial. Por defeito, a app usa as definições do teu dispositivo.",
+      "theme": "Tema visual",
+      "themeDesc": "Aqui podes alterar o aspecto da app ao escolher um tema visual diferente. Por defeito, o tema respeita as definições do teu dispositivo.",
+      "scheme": {
+        "dark": "Escuro",
+        "light": "Claro",
+        "system": "Sistema"
+      }
     },
     "selectLocation": {
       "title": "Escolher localização"
@@ -236,9 +245,11 @@
       "abruptChaosNative": "Native",
       "abruptChaosReact": "React",
       "clearAsyncStorage": "Limpar AsyncStorage",
+      "clearImageCache": "Limpar Cache Imagens",
       "firestoreNetwork": "Rede Firestore",
       "hacks": "Desenvolvimento",
       "network": "Rede",
+      "resetStore": "Store Reset",
       "storybookIntro": "Podes navegar pelos elementos visuais do Litten aqui",
       "toggleFirebaseNetwork": "Alternar Firebase Network",
       "triggerLocalNotification": "Notificação Push Local"

@@ -1,4 +1,4 @@
-# OSX
+# macOS
 .DS_Store
 
 # Xcode
@@ -11,6 +11,7 @@ build/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
+xcshareddata
 xcuserdata
 *.xccheckout
 *.moved-aside
@@ -25,6 +26,8 @@ build/
 .gradle
 local.properties
 *.iml
+*.hprof
+*.log
 
 # node.js
 node_modules/
@@ -54,6 +57,9 @@ buck-out/
 # CocoaPods
 /ios/Pods/
 
+# Ruby
+vendor/
+
 # Firebase access (iOS)
 GoogleService-Info.plist
 
@@ -67,9 +73,8 @@ google-services.json
 keystore.properties
 secure.properties
 
-# Flow typed
-flow-typed/npm/
-!flow-typed/npm/dayjs_v1.x.x.js
+# ESLint
+.eslintcache
 
 # Firebase persistence
 firebase/

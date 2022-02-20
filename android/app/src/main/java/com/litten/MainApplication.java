@@ -13,7 +13,6 @@ import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 import com.facebook.react.bridge.JSIModulePackage;
 import com.swmansion.reanimated.ReanimatedJSIModulePackage;
-import org.devio.rn.splashscreen.SplashScreenReactPackage;
 
 public class MainApplication extends MultiDexApplication implements ReactApplication {
 

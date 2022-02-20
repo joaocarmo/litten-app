@@ -9,6 +9,12 @@ jest.mock('react-native-gesture-handler', () => mockRNGestureHandlerModule)
 
 jest.mock('@react-native-community/netinfo', () => mockRNCNetInfo)
 
+// Testing react-native-bootsplash requires mocking the native methods
+jest.mock('react-native-bootsplash', () => ({
+  show: jest.fn().mockResolvedValueOnce(),
+  getVisibilityStatus: jest.fn().mockResolvedValue('hidden'),
+}))
+
 jest.mock('react-native-simple-toast', () => ({
   LONG: jest.fn(),
   SHORT: jest.fn(),
@@ -28,3 +34,13 @@ jest.mock('react-native-reanimated', () => {
 //   Animated: `useNativeDriver` is not supported because the native animated
 //   module is missing
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper')
+
+// Fixes the warning:
+// ref: https://github.com/callstack/react-native-testing-library/issues/329
+jest.mock('react-native/Libraries/Components/Switch/Switch', () => {
+  const mockComponent = require('react-native/jest/mockComponent')
+
+  return {
+    default: mockComponent('react-native/Libraries/Components/Switch/Switch'),
+  }
+})

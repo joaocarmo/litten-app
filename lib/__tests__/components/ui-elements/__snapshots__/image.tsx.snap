@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for the "UIImage" component renders correctly 1`] = `
+Array [
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#eff1f3",
+          "flex": 0,
+          "height": "100%",
+          "justifyContent": "center",
+          "minWidth": "100%",
+          "opacity": 1,
+          "position": "absolute",
+          "top": 0,
+          "width": 750,
+          "zIndex": 1,
+        },
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    <ActivityIndicator
+      animating={true}
+      color="#39a4f2"
+      size="small"
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        undefined,
+      ]
+    }
+  >
+    <FastImageView
+      onFastImageLoadEnd={[Function]}
+      onFastImageLoadStart={[Function]}
+      resizeMode="contain"
+      source={
+        Object {
+          "uri": "https://placeimg.com/140/140/people",
+        }
+      }
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    />
+  </View>,
+]
+`;

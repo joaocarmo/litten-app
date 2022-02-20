@@ -1,0 +1,228 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
+<Modal
+  animationType="none"
+  hardwareAccelerated={false}
+  onHide={[Function]}
+  renderToHardwareTextureAndroid={true}
+  transparent={true}
+  useNativeDriver={false}
+  visible={true}
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "black",
+        "bottom": 0,
+        "left": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+  <View
+    collapsable={false}
+    needsOffscreenAlphaCompositing={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "opacity": 0,
+        "transform": Array [
+          Object {
+            "scale": 0.3,
+          },
+        ],
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "marginTop": 22,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            null,
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              null,
+              undefined,
+            ]
+          }
+        >
+          <Text
+            style={
+              Array [
+                null,
+                undefined,
+              ]
+            }
+          >
+            Title
+          </Text>
+          <Text
+            style={
+              Array [
+                null,
+                undefined,
+              ]
+            }
+          >
+            Message
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              null,
+              undefined,
+            ]
+          }
+        >
+          <TextInput
+            autoCapitalize="none"
+            autoFocus={true}
+            onChangeText={[Function]}
+            placeholder="Password"
+            placeholderTextColor={
+              Object {
+                "resource_paths": Array [
+                  "@android:color/hint_foreground_light",
+                ],
+              }
+            }
+            secureTextEntry={true}
+            style={
+              Array [
+                null,
+                undefined,
+                Object {
+                  "height": 18,
+                },
+              ]
+            }
+            underlineColorAndroid={
+              Object {
+                "resource_paths": Array [
+                  "@android:color/hint_foreground_light",
+                ],
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              null,
+              undefined,
+            ]
+          }
+        >
+          <View
+            accessibilityState={
+              Object {
+                "disabled": false,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  null,
+                  Object {
+                    "color": "#169689",
+                    "fontWeight": "normal",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              Cancel
+            </Text>
+          </View>
+          <View
+            accessibilityState={
+              Object {
+                "disabled": false,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  null,
+                  Object {
+                    "color": "#e30000",
+                    "fontWeight": "normal",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              Confirm
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</Modal>
+`;

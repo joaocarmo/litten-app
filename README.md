@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/joaocarmo/litten-app/master/lib/images/logo/blue.png" width="264" alt="litten">
+  <img src="https://raw.githubusercontent.com/joaocarmo/litten-app/main/lib/images/logo/blue.png" width="264" alt="litten">
 </p>
 
 # Litten
@@ -27,7 +27,7 @@ yarn lint
 # Run Prettier
 yarn pretty
 
-# Run the Flow type checker
+# Run the type checker (TypeScript)
 yarn type-check
 
 # Run the tests

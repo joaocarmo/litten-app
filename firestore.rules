@@ -5,6 +5,10 @@ service cloud.firestore {
       return request.auth.token.email_verified == true;
     }
 
+    function chatExists(chatUid) {
+      return exists(/databases/$(database)/documents/chats/$(chatUid));
+    }
+
     function littenExists(littenUid) {
       return exists(/databases/$(database)/documents/littens/$(littenUid));
     }
@@ -18,8 +22,8 @@ service cloud.firestore {
     }
 
     match /chats/{chatUid} {
-      allow read, update, delete: if isAuthenticated();
       allow create: if isAuthenticated() && littenExists(request.resource.data.littenUid);
+      allow read, update, delete: if isAuthenticated();
     }
 
     match /littens/{littenUid} {
@@ -33,7 +37,8 @@ service cloud.firestore {
     }
 
     match /messages/{messageUid} {
-      allow create, read, delete: if isAuthenticated();
+      allow create: if isAuthenticated() && chatExists(request.resource.data.chatUid);
+      allow read, delete: if isAuthenticated();
       allow update: if false
     }
 

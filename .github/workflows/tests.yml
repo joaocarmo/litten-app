@@ -1,40 +1,28 @@
 # This workflow will do a clean install of node dependencies, build the source
 # code and run the available tests
-#
 name: Tests
 
 on:
   push:
-    branches: [ master, next ]
+    branches: [ main, next ]
   pull_request:
-    branches: [ master, next ]
+    branches: [ main, next ]
 
 jobs:
   test:
     environment: development
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
-
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - name: Use Node.js v16 (LTS)
+      uses: actions/setup-node@v2
       with:
-        node-version: ${{ matrix.node-version }}
-
+        node-version: '16'
+        cache: 'yarn'
     - name: Create .env file
       run: cp .env.example .env
-
-    - uses: c-hive/gha-yarn-cache@v1
     - name: Install dependencies
       run: yarn --frozen-lockfile
-    - name: Install typings
-      run: yarn flow-typed install
-    - name: Temporary workaround (for the @react-navigation types)
-      run: rm -rf flow-typed/npm/@react-navigation/
-
     - name: Lint the source files
       run: yarn lint
     - name: Type check
@@ -47,7 +35,6 @@ jobs:
       run: yarn test:firestore:rules
     - name: Execute the firebase model tests
       run: yarn test:firestore:model
-
     - name: Cache firebase emulators
       uses: actions/cache@v2
       with:

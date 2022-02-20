@@ -12,7 +12,6 @@
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
         <uses-permission tools:node="remove" android:name="android.permission.READ_EXTERNAL_STORAGE" />
         <uses-permission tools:node="remove" android:name="android.permission.READ_PHONE_STATE" />
-        <uses-permission tools:node="remove" android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         <uses-permission tools:node="remove" android:name="android.vending.CHECK_LICENSE" />
 
         <uses-feature
@@ -28,7 +27,7 @@
             android:icon="@mipmap/ic_launcher"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:allowBackup="false"
-            android:theme="@style/AppTheme">
+            android:theme="@style/BootTheme">
             <meta-data
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/maps_api_key" />
@@ -40,7 +39,9 @@
                 android:resource="@color/notification_color" />
             <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationActions" />
             <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationPublisher" />
-            <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationBootEventReceiver">
+            <receiver
+                android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationBootEventReceiver"
+                android:exported="false">
                 <intent-filter>
                     <action android:name="android.intent.action.BOOT_COMPLETED" />
                     <action android:name="android.intent.action.QUICKBOOT_POWERON" />
@@ -49,7 +50,7 @@
             </receiver>
             <service
                 android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationListenerService"
-                android:exported="false" >
+                android:exported="false">
                 <intent-filter>
                     <action android:name="com.google.firebase.MESSAGING_EVENT" />
                 </intent-filter>
@@ -60,7 +61,8 @@
                 android:screenOrientation="portrait"
                 android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
                 android:launchMode="singleTask"
-                android:windowSoftInputMode="adjustPan">
+                android:windowSoftInputMode="adjustPan"
+                android:exported="true">
                 <intent-filter>
                     <action android:name="android.intent.action.MAIN" />
                     <category android:name="android.intent.category.LAUNCHER" />

@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "aspectRatio": 1,
+        "backgroundColor": "#ffffff",
+        "borderRadius": 4,
+      },
+      Object {
+        "height": 40,
+        "padding": 10,
+      },
+      Object {
+        "borderRadius": 20,
+      },
+      Object {
+        "elevation": 8,
+        "shadowColor": "#000000",
+        "shadowOffset": Object {
+          "height": 10,
+          "width": 0,
+        },
+        "shadowOpacity": 0.1,
+        "shadowRadius": 6,
+      },
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#eff1f3",
+          "flex": 0,
+          "height": "100%",
+          "justifyContent": "center",
+          "minWidth": "100%",
+          "opacity": 1,
+          "position": "absolute",
+          "top": 0,
+          "width": 750,
+          "zIndex": 1,
+        },
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    <ActivityIndicator
+      animating={true}
+      color="#39a4f2"
+      size="small"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Array [
+          Object {
+            "height": "100%",
+            "tintColor": "#39a4f2",
+            "width": "100%",
+          },
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <FastImageView
+      onFastImageLoadEnd={[Function]}
+      onFastImageLoadStart={[Function]}
+      resizeMode="contain"
+      source={
+        Object {
+          "uri": "mockIcon",
+        }
+      }
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    />
+  </View>
+</View>
+`;

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for the "UIBalloon" component renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "borderRadius": 12,
+        "borderWidth": 0.5,
+        "padding": 12,
+      },
+      Object {
+        "backgroundColor": "#e0effb",
+        "borderColor": "#84bff1",
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Array [
+          Object {
+            "color": "#000000",
+            "fontSize": 14,
+            "fontWeight": "200",
+          },
+          Array [
+            Object {
+              "fontWeight": "400",
+            },
+            Object {
+              "color": "#6a6767",
+            },
+          ],
+        ],
+        Object {
+          "marginBottom": 8,
+          "marginTop": 8,
+          "paddingBottom": 6,
+          "paddingTop": 6,
+        },
+        undefined,
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    Some text here
+  </Text>
+</View>
+`;
