@@ -9,6 +9,10 @@ on:
         description: 'The track in which you want to assign the uploaded app. Default: internal. Possible: alpha, beta, internal, production.'
         required: false
         default: 'internal'
+      status:
+        description: 'Release status. This can be set to draft to complete the release at some other time. Default: completed. Possible: completed, inProgress, draft, halted.'
+        required: false
+        default: 'completed'
 
 env:
   GOOGLE_SERVICES_PATH: android/app/google-services.json
@@ -94,5 +98,6 @@ jobs:
         serviceAccountJson: ${{ env.SERVICE_ACCOUNT_PATH }}
         packageName: com.litten
         releaseFiles: ${{ env.OUTPUT_PATH }}
-        track: ${{ github.event.inputs.track }}
         whatsNewDirectory: ${{ env.WHATS_NEW_PATH }}
+        track: ${{ github.event.inputs.track }}
+        status: ${{ github.event.inputs.status }}
