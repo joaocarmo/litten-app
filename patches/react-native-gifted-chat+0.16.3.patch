@@ -10,8 +10,37 @@ index 414eefc..7cf98e3 100644
    renderChatFooter?: () => React.Node,
    renderInputToolbar?: InputToolbarProps => React.Node,
    renderComposer?: ComposerProps => React.Node,
+diff --git a/node_modules/react-native-gifted-chat/lib/InputToolbar.d.ts b/node_modules/react-native-gifted-chat/lib/InputToolbar.d.ts
+index 03f2a63..00095b7 100644
+--- a/node_modules/react-native-gifted-chat/lib/InputToolbar.d.ts
++++ b/node_modules/react-native-gifted-chat/lib/InputToolbar.d.ts
+@@ -1,6 +1,13 @@
+ import PropTypes from 'prop-types';
+ import React from 'react';
+-import { EmitterSubscription, StyleProp, ViewStyle } from 'react-native';
++import {
++  ColorValue,
++  EmitterSubscription,
++  StyleProp,
++  TextInputProps,
++  TextStyle,
++  ViewStyle,
++} from 'react-native';
+ import Composer from './Composer';
+ import Send from './Send';
+ import Actions from './Actions';
+@@ -12,6 +19,9 @@ export interface InputToolbarProps {
+     containerStyle?: StyleProp<ViewStyle>;
+     primaryStyle?: StyleProp<ViewStyle>;
+     accessoryStyle?: StyleProp<ViewStyle>;
++    textInputStyle?: TextInputProps['style'];
++    placeholderTextColor?: ColorValue;
++    textStyle?: StyleProp<TextStyle>;
+     renderAccessory?(props: InputToolbarProps): React.ReactNode;
+     renderActions?(props: Actions['props']): React.ReactNode;
+     renderSend?(props: Send['props']): React.ReactNode;
 diff --git a/node_modules/react-native-gifted-chat/lib/MessageContainer.js b/node_modules/react-native-gifted-chat/lib/MessageContainer.js
-index 193772a..79bd4af 100644
+index 193772a..8061264 100644
 --- a/node_modules/react-native-gifted-chat/lib/MessageContainer.js
 +++ b/node_modules/react-native-gifted-chat/lib/MessageContainer.js
 @@ -52,21 +52,24 @@ export default class MessageContainer extends React.PureComponent {
