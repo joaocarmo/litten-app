@@ -47,6 +47,7 @@ describe('Test the User model', () => {
     await user.save()
 
     expect(user.displayName).toBe(newDisplayName)
+
     const updatedUser = new User({
       id,
     })

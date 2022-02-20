@@ -323,7 +323,7 @@ export default class User extends Base {
 
   async save(): Promise<void> {
     if (this.#deferredSave) {
-      this.collection.doc(this.id).update(this.#deferredSaveObject)
+      return this.collection.doc(this.id).update(this.#deferredSaveObject)
     }
   }
 
