@@ -24,7 +24,6 @@ jobs:
         cache: 'yarn'
     - name: Create .env file
       run: cp .env.example .env
-    - uses: c-hive/gha-yarn-cache@v1
     - name: Install dependencies
       run: yarn --frozen-lockfile
     - name: Android build
