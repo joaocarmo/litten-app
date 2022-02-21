@@ -19,6 +19,7 @@ exports[`Snapshot test for the "UIModal" component renders correctly 1`] = `
   <Modal
     animationType="slide"
     hardwareAccelerated={false}
+    onRequestClose={[Function]}
     supportedOrientations={
       Array [
         "portrait",
@@ -58,7 +59,8 @@ exports[`Snapshot test for the "UIModal" component renders correctly 1`] = `
       style={
         Object {
           "backgroundColor": "#eff1f3",
-          "borderRadius": 26,
+          "borderTopLeftRadius": 26,
+          "borderTopRightRadius": 26,
           "minHeight": 215,
           "overflow": "hidden",
           "paddingBottom": 26,
