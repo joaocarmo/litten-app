@@ -254,9 +254,7 @@ const LittenPostScreen = ({
                 />
               )}
             </View>
-            <UIText noPadding>
-              {dayjs(litten.createdAt as number).fromNow()}
-            </UIText>
+            <UIText noPadding>{dayjs(litten.createdAt).fromNow()}</UIText>
           </View>
         </View>
         {typeLabel && (

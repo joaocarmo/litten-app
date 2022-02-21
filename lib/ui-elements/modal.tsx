@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import { Modal, Pressable, View } from 'react-native'
 import type { ColorValue, ModalProps, PressableProps } from 'react-native'
 import { useTheme } from '@hooks'
@@ -15,15 +16,13 @@ export type UIModalProps = {
 const UIModal = ({
   children,
   onClickOutside,
-  // FIXME
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  style,
   transparent,
   visible,
   backgroundColor,
   ...otherProps
 }: UIModalProps) => {
   const { createStyles } = useTheme()
+
   const styles = createStyles((theme) => ({
     uiModalContainer: {
       position: 'absolute',
@@ -43,27 +42,36 @@ const UIModal = ({
       paddingRight: 18,
       paddingTop: 26,
       paddingBottom: 26,
-      borderRadius: STRUCTURE_TEMPLATE_SCREEN_BORDER_RADIUS,
+      borderTopLeftRadius: STRUCTURE_TEMPLATE_SCREEN_BORDER_RADIUS,
+      borderTopRightRadius: STRUCTURE_TEMPLATE_SCREEN_BORDER_RADIUS,
       backgroundColor: theme.colors.neutralLight,
       overflow: 'hidden',
     },
   }))
+
+  const outerStyle = useMemo(
+    () => [
+      styles.uiModalContainer,
+      transparent
+        ? styles.uiModalContainerTransparentBackground
+        : {
+            backgroundColor,
+          },
+    ],
+    [
+      backgroundColor,
+      styles.uiModalContainer,
+      styles.uiModalContainerTransparentBackground,
+      transparent,
+    ],
+  )
 
   if (!visible) {
     return null
   }
 
   return (
-    <View
-      style={[
-        styles.uiModalContainer,
-        transparent
-          ? styles.uiModalContainerTransparentBackground
-          : {
-              backgroundColor,
-            },
-      ]}
-    >
+    <View style={outerStyle}>
       <Modal
         animationType="slide"
         supportedOrientations={['portrait']}
