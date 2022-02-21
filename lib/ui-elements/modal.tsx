@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useCallback, useMemo } from 'react'
 import { Modal, Pressable, View } from 'react-native'
 import type { ColorValue, ModalProps, PressableProps } from 'react-native'
 import { useTheme } from '@hooks'
@@ -22,6 +22,10 @@ const UIModal = ({
   ...otherProps
 }: UIModalProps) => {
   const { createStyles } = useTheme()
+
+  const onRequestClose = useCallback(() => {
+    onClickOutside(null)
+  }, [onClickOutside])
 
   const styles = createStyles((theme) => ({
     uiModalContainer: {
@@ -77,6 +81,7 @@ const UIModal = ({
         supportedOrientations={['portrait']}
         transparent={transparent}
         visible={visible}
+        onRequestClose={onRequestClose}
         {...otherProps}
       >
         <Pressable onPress={onClickOutside} style={styles.uiModalTopContent}>
