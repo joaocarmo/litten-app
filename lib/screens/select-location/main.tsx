@@ -2,17 +2,27 @@ import { useCallback } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch } from 'react-redux'
 import SelectLocationMapScreen from '@screens/select-location/map'
+import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
+
+export type SelectLocationIndexScreenProps = {
+  route: {
+    params: {
+      initialCoordinates: DBCoordinateObject
+      dispatchToAction: string
+    }
+  }
+}
 
 const SelectLocationIndexScreen = ({
   route: {
     params: { initialCoordinates, dispatchToAction },
   },
-}) => {
+}: SelectLocationIndexScreenProps) => {
   const dispatch = useDispatch()
   const navigation = useNavigation()
 
   const setLocationToAction = useCallback(
-    (payload) =>
+    (payload: DBLocationObject) =>
       dispatch({
         type: dispatchToAction,
         payload,
@@ -21,7 +31,7 @@ const SelectLocationIndexScreen = ({
   )
 
   const onLocationChange = useCallback(
-    (newLoc) => {
+    (newLoc: DBLocationObject) => {
       if (dispatchToAction && newLoc) {
         setLocationToAction(newLoc)
       }

@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState, useRef } from 'react'
 import { StyleSheet, View } from 'react-native'
 import MapView, { Marker } from 'react-native-maps'
+import type { Region } from 'react-native-maps'
 import { UIButton, UILink, UILoader, UISeparator, UIText } from '@ui-elements'
 import { useAppState } from '@hooks'
 import Empty from '@components/empty'
@@ -11,18 +12,21 @@ import { getReverseGeoInformation } from '@utils/network'
 import { parseGoogleMapResponse, mapGoogleLocationKeys } from '@utils/functions'
 import { UI_MAP_BORDER_RADIUS, UI_MAP_MIN_HEIGHT } from '@utils/constants'
 import { translate } from '@utils/i18n'
+import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
+
+export type SelectLocationMapScreenProps = {
+  onLocationChange: (newLoc: DBLocationObject) => void
+  initialCoordinates: DBCoordinateObject
+}
 
 const SelectLocationMapScreen = ({
   onLocationChange,
-  initialCoordinates = {
-    latitude: null,
-    longitude: null,
-  },
-}) => {
+  initialCoordinates,
+}: SelectLocationMapScreenProps) => {
   const [isLoading, setIsLoading] = useState(true)
   const [hasPermission, setHasPermission] = useState(false)
   const [goneToSettings, setGoneToSettings] = useState(false)
-  const [region, setRegion] = useState({
+  const [region, setRegion] = useState<Region>({
     ...initialRegion,
     ...initialCoordinates,
   })
@@ -34,7 +38,7 @@ const SelectLocationMapScreen = ({
     setIsLoading(false)
   }, [])
 
-  const setRegionCoordinate = useCallback((newRegion) => {
+  const setRegionCoordinate = useCallback((newRegion: Region) => {
     const { latitude, longitude } = newRegion
     setRegion(newRegion)
     setCoordinates({
@@ -76,6 +80,7 @@ const SelectLocationMapScreen = ({
 
   const setLocation = useCallback(async () => {
     setIsLoading(true)
+
     const data = await getReverseGeoInformation(coordinates)
 
     if (data) {
@@ -83,8 +88,17 @@ const SelectLocationMapScreen = ({
 
       if (first) {
         const parsed = mapGoogleLocationKeys(parseGoogleMapResponse(first))
-        const newLocation = { ...parsed, coordinates }
-        onLocationChange(newLocation)
+
+        if (parsed) {
+          const newLocation: DBLocationObject = {
+            ...parsed,
+            coordinates,
+            administrativeArea3: '',
+            street: '',
+          }
+
+          onLocationChange(newLocation)
+        }
       }
     }
 
@@ -183,6 +197,14 @@ const SelectLocationMapScreen = ({
       </View>
     </View>
   )
+}
+
+SelectLocationMapScreen.defaultProps = {
+  onLocationChange: () => null,
+  initialCoordinates: {
+    latitude: null,
+    longitude: null,
+  },
 }
 
 const styles = StyleSheet.create({
