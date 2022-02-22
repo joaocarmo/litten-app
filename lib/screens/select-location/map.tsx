@@ -7,7 +7,7 @@ import { useAppState } from '@hooks'
 import Empty from '@components/empty'
 import { ANIMATE_TIME, initialRegion } from '@config/location/initial-region'
 import { locationSchema } from '@db/schemas/location'
-import { getLocation, hasLocationPermission, openSetting } from '@utils/setup'
+import { getLocation, hasLocationPermission, openSettings } from '@utils/setup'
 import { getReverseGeoInformation } from '@utils/network'
 import { parseGoogleMapResponse, mapGoogleLocationKeys } from '@utils/functions'
 import { UI_MAP_BORDER_RADIUS, UI_MAP_MIN_HEIGHT } from '@utils/constants'
@@ -48,7 +48,9 @@ const SelectLocationMapScreen = ({
   }, [])
 
   const setCurrentLocation = useCallback(
-    async ({ forceUpdate = false, animateToRegion = false } = {}) => {
+    async (options?: { forceUpdate?: boolean; animateToRegion?: boolean }) => {
+      const { forceUpdate = false, animateToRegion = false } = options || {}
+
       if (
         !initialCoordinates.latitude ||
         !initialCoordinates.longitude ||
@@ -119,24 +121,32 @@ const SelectLocationMapScreen = ({
 
   const checkPermission = useCallback(async () => {
     const isPermissionGranted = await hasLocationPermission()
+
     setHasPermission(isPermissionGranted)
-    return isPermissionGranted
   }, [])
 
   const handleGoToSettings = useCallback(() => {
     setGoneToSettings(true)
-    openSetting()
+    openSettings()
   }, [])
 
-  useAppState((appState) => {
-    if (goneToSettings && appState === 'active') {
-      setGoneToSettings(false)
+  const onStateChange = useCallback(
+    async (appState: string) => {
+      if (goneToSettings && appState === 'active') {
+        setGoneToSettings(false)
 
-      if (checkPermission()) {
-        setCurrentLocation()
+        const isPermissionGranted = await hasLocationPermission()
+
+        if (isPermissionGranted) {
+          setCurrentLocation()
+          setHasPermission(isPermissionGranted)
+        }
       }
-    }
-  })
+    },
+    [goneToSettings, setCurrentLocation],
+  )
+
+  useAppState(onStateChange)
 
   useEffect(() => {
     setCurrentLocation()

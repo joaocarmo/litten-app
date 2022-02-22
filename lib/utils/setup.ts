@@ -22,7 +22,7 @@ import type { BasicUser } from '@model/types/user'
 import type { BasicLitten } from '@model/types/litten'
 import appConfig from '../../app.json'
 
-export const openSetting = () => {
+export const openSettings = () => {
   Linking.openSettings().catch(() => {
     Toast.show(translate('feedback.system.cantOpenSettings'))
   })
@@ -48,7 +48,7 @@ export const hasLocationPermissionIOS = async (): Promise<boolean> => {
       [
         {
           text: translate('feedback.system.goToSettings'),
-          onPress: openSetting,
+          onPress: openSettings,
         },
         {
           text: translate('feedback.system.dontUseLocation'),
