@@ -1,4 +1,4 @@
-import { useCallback } from 'react'
+import { useCallback, useMemo } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch } from 'react-redux'
 import SelectLocationMapScreen from '@screens/select-location/map'
@@ -15,11 +15,16 @@ export type SelectLocationIndexScreenProps = {
 
 const SelectLocationIndexScreen = ({
   route: {
-    params: { initialCoordinates, dispatchToAction },
+    params: { initialCoordinates: propsInitialCoordinates, dispatchToAction },
   },
 }: SelectLocationIndexScreenProps) => {
   const dispatch = useDispatch()
   const navigation = useNavigation()
+
+  const initialCoordinates = useMemo(
+    () => propsInitialCoordinates,
+    [propsInitialCoordinates],
+  )
 
   const setLocationToAction = useCallback(
     (payload: DBLocationObject) =>

@@ -32,7 +32,7 @@ const SelectLocationMapScreen = ({
   })
   const [coordinates, setCoordinates] = useState(initialCoordinates)
 
-  const mapRef = useRef(null)
+  const mapRef = useRef<MapView>(null)
 
   const handleOnMapReady = useCallback(() => {
     setIsLoading(false)
@@ -138,21 +138,25 @@ const SelectLocationMapScreen = ({
         const isPermissionGranted = await hasLocationPermission()
 
         if (isPermissionGranted) {
-          setCurrentLocation()
           setHasPermission(isPermissionGranted)
         }
       }
     },
-    [goneToSettings, setCurrentLocation],
+    [goneToSettings],
   )
 
   useAppState(onStateChange)
 
   useEffect(() => {
-    setCurrentLocation()
     checkPermission()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  useEffect(() => {
+    if (hasPermission) {
+      setCurrentLocation()
+    }
+  }, [hasPermission, setCurrentLocation])
 
   if (hasPermission === false) {
     return (
