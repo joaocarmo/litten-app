@@ -11,6 +11,8 @@ import {
   TEL_URI,
 } from '@utils/constants'
 import { translate } from '@utils/i18n'
+import { TextStyle } from 'react-native'
+import type { ParseShape } from 'react-native-parsed-text'
 import type { UseParsePatternsNavigationProp } from '@utils/types/routes'
 
 const useParsePatterns = () => {
@@ -76,7 +78,7 @@ const useParsePatterns = () => {
   )
 
   const parsePatterns = useCallback(
-    (linkStyle) => [
+    (linkStyle: TextStyle): ParseShape[] => [
       {
         type: 'url',
         style: [linkStyle, styles.link],

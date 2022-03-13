@@ -1,6 +1,6 @@
-import { Send as GFSend } from 'react-native-gifted-chat'
+import { Send as EZSend } from 'react-native-easy-chat'
 import { translate } from '@utils/i18n'
 
-const Send = (props) => <GFSend label={translate('cta.send')} {...props} />
+const Send = (props) => <EZSend label={translate('cta.send')} {...props} />
 
 export default Send

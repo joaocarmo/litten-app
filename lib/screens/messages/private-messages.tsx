@@ -1,7 +1,7 @@
 import { useCallback, useState, useEffect, useRef } from 'react'
 import type { ReactNode } from 'react'
-import { GiftedChat } from 'react-native-gifted-chat'
-import type { IMessage, User } from 'react-native-gifted-chat'
+import { EasyChat } from 'react-native-easy-chat'
+import type { IMessage, User } from 'react-native-easy-chat'
 import {
   Bubble,
   EmptyChat,
@@ -263,7 +263,7 @@ const PrivateMessages = ({
   }
 
   return (
-    <GiftedChat
+    <EasyChat
       messages={messages as IMessage[]}
       onLoadEarlier={() => {
         onLoadEarlier()

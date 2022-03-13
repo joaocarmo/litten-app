@@ -2,7 +2,7 @@ import { useCallback } from 'react'
 import { useTheme } from '@hooks'
 import { useActionSheet } from '@expo/react-native-action-sheet'
 import Clipboard from '@react-native-community/clipboard'
-import { Bubble as GCBubble } from 'react-native-gifted-chat'
+import { Bubble as EZBubble } from 'react-native-easy-chat'
 import { translate } from '@utils/i18n'
 import bubbleStyles from './bubble.styles'
 
@@ -34,7 +34,7 @@ const Bubble = (props) => {
   )
 
   return (
-    <GCBubble
+    <EZBubble
       {...props}
       textStyle={{
         left: styles.textStyle,
