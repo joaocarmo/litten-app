@@ -7,6 +7,7 @@ const ScrollToBottomComponent = () => {
   const {
     theme: { colors },
   } = useTheme()
+
   return (
     <RightArrow
       height={UI_ICON_SIZE_MICRO}

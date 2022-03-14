@@ -258,6 +258,11 @@ const PrivateMessages = ({
 
   const renderLoading = useCallback(() => <UILoader active />, [])
 
+  const renderScrollToBottomComponent = useCallback(
+    () => <ScrollToBottomComponent />,
+    [],
+  )
+
   if (isLoading) {
     return renderLoading()
   }
@@ -278,7 +283,7 @@ const PrivateMessages = ({
       renderLoadEarlier={LoadEarlier}
       renderLoading={renderLoading}
       renderSend={Send}
-      scrollToBottomComponent={ScrollToBottomComponent}
+      scrollToBottomComponent={renderScrollToBottomComponent}
       timeTextStyle={{
         left: styles.timeTextStyle,
         right: styles.timeTextStyle,
