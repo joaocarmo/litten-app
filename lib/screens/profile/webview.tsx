@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react'
-import { StyleSheet, View } from 'react-native'
+import { useCallback, useMemo, useRef, useState } from 'react'
+import { Linking, StyleSheet, View } from 'react-native'
 import { usePaddingBottom, useTheme } from '@hooks'
 import { UIContainer, UIHeader, UILoader, UIText } from '@ui-elements'
 import { WebView } from 'react-native-webview'
@@ -17,14 +17,97 @@ const WebViewScreen = ({ path }) => {
   const { scheme } = useTheme()
   const withPaddingBottom = usePaddingBottom(0.85)
 
-  const params = useMemo(() => `?inapp=true&theme=${scheme}`, [scheme])
+  const style = useMemo(
+    () => [styles.container, withPaddingBottom],
+    [withPaddingBottom],
+  )
 
-  const stopLoading = () => {
+  const webviewRef = useRef(null)
+
+  const params = useMemo(() => `?inapp=true&theme=${scheme}`, [scheme])
+  const source = useMemo(
+    () => ({ uri: `${WEB_APP_BASE}${path}${params}` }),
+    [params, path],
+  )
+  const originWhitelist = useMemo(
+    () => ['http://*', 'https://*', 'mailto:*'],
+    [],
+  )
+
+  const stopLoading = useCallback(() => {
     setTimeout(() => setIsLoading(false), DEBOUNCE_TIMEOUT)
-  }
+  }, [])
+
+  const handleOnError = useCallback(() => {
+    debugLog(`[WEBVIEW] WebView Error at ${path}.`)
+    stopLoading()
+    setShowError(true)
+  }, [path, stopLoading])
+
+  const handleOnHttpError = useCallback(
+    (syntheticEvent) => {
+      const { nativeEvent } = syntheticEvent
+
+      debugLog(
+        `[WEBVIEW] WebView HTTP Error at ${path} Status Code: `,
+        nativeEvent.statusCode,
+      )
+      stopLoading()
+      setShowError(true)
+    },
+    [path, stopLoading],
+  )
+
+  const handleExternalLink = useCallback(async (url) => {
+    let supported = false
+
+    try {
+      supported = await Linking.canOpenURL(url)
+    } catch (error) {
+      debugLog(`[WEBVIEW] Could not determine if supported ${url}`)
+    }
+
+    if (supported) {
+      try {
+        await Linking.openURL(url)
+      } catch (error) {
+        debugLog(`[WEBVIEW] Could not open ${url}`)
+      }
+    } else {
+      debugLog(`[WEBVIEW] External link not supported: ${url}`)
+    }
+  }, [])
+
+  const handleOnNavigationStateChange = useCallback(
+    (navState) => {
+      const { url } = navState
+
+      if (!url) {
+        return
+      }
+
+      if (url.includes(WEB_APP_BASE)) {
+        if (url.includes(params)) {
+          return
+        }
+
+        // Append the params to the url
+        const newURL = `${url}${params}`
+        const redirectTo = `window.location = "${newURL}"`
+        webviewRef.current.injectJavaScript(redirectTo)
+      } else {
+        // Don't load external links
+        webviewRef.current.stopLoading()
+
+        // Handle them natively
+        handleExternalLink(url)
+      }
+    },
+    [handleExternalLink, params],
+  )
 
   return (
-    <View style={[styles.container, withPaddingBottom]}>
+    <View style={style}>
       <UILoader active={isLoading} />
       {showError && (
         <View style={styles.centeredContainer}>
@@ -40,24 +123,13 @@ const WebViewScreen = ({ path }) => {
       )}
       {!showError && (
         <WebView
-          source={{
-            uri: `${WEB_APP_BASE}${path}${params}`,
-          }}
-          onError={() => {
-            debugLog(`[WEBVIEW] WebView Error at ${path}.`)
-            stopLoading()
-            setShowError(true)
-          }}
-          onHttpError={(syntheticEvent) => {
-            const { nativeEvent } = syntheticEvent
-            debugLog(
-              `[WEBVIEW] WebView HTTP Error at ${path} Status Code: `,
-              nativeEvent.statusCode,
-            )
-            stopLoading()
-            setShowError(true)
-          }}
+          source={source}
+          originWhitelist={originWhitelist}
+          onError={handleOnError}
+          onHttpError={handleOnHttpError}
           onLoadEnd={stopLoading}
+          onNavigationStateChange={handleOnNavigationStateChange}
+          ref={webviewRef}
         />
       )}
     </View>

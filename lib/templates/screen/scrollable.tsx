@@ -73,6 +73,7 @@ const ScrollableScreenTemplate = ({
 ScrollableScreenTemplate.defaultProps = {
   header: null,
   showsVerticalScrollIndicator: false,
+  tabs: null,
 }
 
 export default ScrollableScreenTemplate

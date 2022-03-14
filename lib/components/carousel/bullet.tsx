@@ -6,7 +6,7 @@ import type { ViewProps } from 'react-native'
 export type BulletProps = {
   active?: boolean
   contrast?: boolean
-  style: ViewProps['style']
+  style?: ViewProps['style']
 }
 
 const Bullet = ({ active, contrast, style }: BulletProps) => {

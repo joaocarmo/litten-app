@@ -1,7 +1,7 @@
 import {
-  InputToolbar as GFInputToolbar,
+  InputToolbar as EZInputToolbar,
   InputToolbarProps,
-} from 'react-native-gifted-chat'
+} from 'react-native-easy-chat'
 import { useTheme } from '@hooks'
 import { UI_MESSAGE_MIN_INPUT_TOOLBAR_HEIGHT } from '@utils/constants'
 
@@ -40,7 +40,7 @@ const InputToolbar = (props: InputToolbarProps) => {
   }))
 
   return (
-    <GFInputToolbar
+    <EZInputToolbar
       {...props}
       containerStyle={styles.inputToolbar}
       primaryStyle={styles.inputToolbarPrimary}

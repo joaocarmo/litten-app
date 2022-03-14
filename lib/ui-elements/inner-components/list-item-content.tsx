@@ -148,6 +148,8 @@ UIListItemContent.defaultProps = {
   badgeActive: false,
   badgeNum: null,
   hasExtra: false,
+  icon: '',
+  IconComponent: null,
   iconPosition: 'left',
   onPressIcon: undefined,
 }

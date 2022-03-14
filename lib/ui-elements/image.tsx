@@ -6,7 +6,9 @@ import type { ImageSource } from '@ui-elements/types'
 
 export type UIImageProps = {
   height?: number
+  resizeMode?: FastImageProps['resizeMode']
   source: ImageSource
+  style?: FastImageProps['style']
   width?: number
 } & FastImageProps
 

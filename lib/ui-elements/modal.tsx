@@ -9,8 +9,10 @@ import {
 } from '@utils/constants'
 
 export type UIModalProps = {
-  onClickOutside: PressableProps['onPress']
   backgroundColor?: ColorValue
+  onClickOutside: PressableProps['onPress']
+  transparent?: ModalProps['transparent']
+  visible?: ModalProps['visible']
 } & ModalProps
 
 const UIModal = ({
@@ -94,6 +96,7 @@ const UIModal = ({
 }
 
 UIModal.defaultProps = {
+  backgroundColor: undefined,
   transparent: true,
   visible: false,
 }

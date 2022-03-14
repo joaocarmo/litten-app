@@ -21,10 +21,10 @@ type ErrorMessageType = {
 
 export type CountryPhoneSelectorProps = {
   callingCode: string
-  callingCodeEditable: boolean
+  callingCodeEditable?: boolean
   country: string
-  error: ErrorType
-  errorMessage: ErrorMessageType
+  error?: ErrorType
+  errorMessage?: ErrorMessageType
   onCallingCodeChange: UIInputProps['onChangeText']
   onCountryChange: UISelectProps['onValueChange']
   onPhoneNumberChange: UIInputProps['onChangeText']

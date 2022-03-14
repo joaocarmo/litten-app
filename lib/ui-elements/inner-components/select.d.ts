@@ -1,5 +1,7 @@
+/* eslint-disable react/no-unused-prop-types */
 /* eslint-disable react/prefer-stateless-function */
-// eslint-disable-next-line max-classes-per-file
+/* eslint-disable react/require-default-props */
+/* eslint-disable-next-line max-classes-per-file */
 import { Component } from 'react'
 import type { Constructor, NativeMethodsMixin } from 'react-native'
 import type { PickerProps } from '@react-native-picker/picker'

@@ -1,7 +1,7 @@
 import { useCallback, useState, useEffect, useRef } from 'react'
 import type { ReactNode } from 'react'
-import { GiftedChat } from 'react-native-gifted-chat'
-import type { IMessage, User } from 'react-native-gifted-chat'
+import { EasyChat } from 'react-native-easy-chat'
+import type { IMessage, User } from 'react-native-easy-chat'
 import {
   Bubble,
   EmptyChat,
@@ -258,12 +258,17 @@ const PrivateMessages = ({
 
   const renderLoading = useCallback(() => <UILoader active />, [])
 
+  const renderScrollToBottomComponent = useCallback(
+    () => <ScrollToBottomComponent />,
+    [],
+  )
+
   if (isLoading) {
     return renderLoading()
   }
 
   return (
-    <GiftedChat
+    <EasyChat
       messages={messages as IMessage[]}
       onLoadEarlier={() => {
         onLoadEarlier()
@@ -278,7 +283,7 @@ const PrivateMessages = ({
       renderLoadEarlier={LoadEarlier}
       renderLoading={renderLoading}
       renderSend={Send}
-      scrollToBottomComponent={ScrollToBottomComponent}
+      scrollToBottomComponent={renderScrollToBottomComponent}
       timeTextStyle={{
         left: styles.timeTextStyle,
         right: styles.timeTextStyle,

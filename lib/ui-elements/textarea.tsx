@@ -11,6 +11,7 @@ const rowHeight = 64
 
 export type UITextAreaProps = {
   children?: string
+  multiline?: TextInputProps['multiline']
   rows?: number
 } & TextInputProps
 
@@ -63,6 +64,7 @@ const UITextArea = ({
 }
 
 UITextArea.defaultProps = {
+  children: null,
   multiline: true,
   rows: 3,
 }
