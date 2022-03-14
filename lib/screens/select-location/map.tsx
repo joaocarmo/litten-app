@@ -15,8 +15,8 @@ import { translate } from '@utils/i18n'
 import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
 
 export type SelectLocationMapScreenProps = {
-  onLocationChange: (newLoc: DBLocationObject) => void
-  initialCoordinates: DBCoordinateObject
+  onLocationChange?: (newLoc: DBLocationObject) => void
+  initialCoordinates?: DBCoordinateObject
 }
 
 const SelectLocationMapScreen = ({

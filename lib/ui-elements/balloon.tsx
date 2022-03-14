@@ -91,4 +91,8 @@ const UIBalloon = ({
   )
 }
 
+UIBalloon.defaultProps = {
+  type: '',
+}
+
 export default UIBalloon

@@ -116,7 +116,6 @@ Carousel.defaultProps = {
   bulletContrast: false,
   bulletStyle: undefined,
   fill: false,
-  items: [],
   placeholder: null,
 }
 

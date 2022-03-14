@@ -106,6 +106,7 @@ UIListItemContentMain.defaultProps = {
   isPressed: false,
   noFeedback: false,
   selected: false,
+  style: undefined,
 }
 
 export default UIListItemContentMain

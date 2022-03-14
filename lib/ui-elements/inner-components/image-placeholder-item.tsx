@@ -11,8 +11,8 @@ import { translate } from '@utils/i18n'
 
 export type UIImagePlaceholderItemProps = {
   actionable?: boolean
-  onPress?: PressableProps['onPress']
   onLongPress?: PressableProps['onLongPress']
+  onPress?: PressableProps['onPress']
 } & ViewProps
 
 const UIImagePlaceholderItem = ({
@@ -105,6 +105,8 @@ const UIImagePlaceholderItem = ({
 
 UIImagePlaceholderItem.defaultProps = {
   actionable: false,
+  onLongPress: undefined,
+  onPress: undefined,
 }
 
 export default UIImagePlaceholderItem
