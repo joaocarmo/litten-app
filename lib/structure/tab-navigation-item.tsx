@@ -12,7 +12,7 @@ import {
 import type { IconTypeComponent } from '@ui-elements/types'
 
 type TabNavigationItemOptions = {
-  tabBarIcon: IconTypeComponent
+  tabBarIcon?: IconTypeComponent
   tabBarBadge?: number
 }
 
@@ -20,14 +20,14 @@ export type TabNavigationItemProps = {
   isFocused?: boolean
   onPress?: PressableProps['onPress']
   onLongPress?: PressableProps['onLongPress']
-  options: TabNavigationItemOptions
+  options?: TabNavigationItemOptions
 }
 
 const TabNavigationItem = ({
   isFocused,
   onLongPress,
   onPress,
-  options: { tabBarIcon: TabBarIconComponent, tabBarBadge = 0 },
+  options: { tabBarIcon: TabBarIconComponent, tabBarBadge },
 }: TabNavigationItemProps) => {
   const { insetBottom } = usePaddingBottom()
   const {

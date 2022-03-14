@@ -169,13 +169,6 @@ const ChatOptions = ({ chat, litten, recipient, user }: ChatOptionsProps) => {
   )
 }
 
-ChatOptions.defaultProps = {
-  chat: {},
-  litten: {},
-  recipient: {},
-  user: {},
-}
-
 const styles = StyleSheet.create({
   menuContainer: {
     marginTop: 0,

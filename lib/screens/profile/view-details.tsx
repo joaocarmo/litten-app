@@ -10,8 +10,10 @@ import type { BasicUser } from '@model/types/user'
 
 export type UserProfileDetailsScreenProps = { user: BasicUser }
 
-const UserProfileDetailsScreen = ({
-  user: {
+const UserProfileDetailsScreen = ({ user }: UserProfileDetailsScreenProps) => {
+  const { createStyles } = useTheme()
+
+  const {
     contactPreferences,
     displayName,
     isOrganization,
@@ -19,9 +21,14 @@ const UserProfileDetailsScreen = ({
       createdAt: { seconds },
     },
     photoURL,
-  },
-}: UserProfileDetailsScreenProps) => {
-  const { createStyles } = useTheme()
+  } = {
+    contactPreferences: [],
+    displayName: '',
+    isOrganization: false,
+    metadata: { createdAt: { seconds: 0 } },
+    photoURL: '',
+    ...user,
+  }
 
   const styles = createStyles((theme) => ({
     viewProfileContainer: {
@@ -100,16 +107,6 @@ const UserProfileDetailsScreen = ({
       </UIHeader>
     </>
   )
-}
-
-UserProfileDetailsScreen.defaultProps = {
-  user: {
-    contactPreferences: [],
-    displayName: '',
-    isOrganization: false,
-    metadata: { createdAt: { seconds: 0 } },
-    photoURL: '',
-  },
 }
 
 export default UserProfileDetailsScreen

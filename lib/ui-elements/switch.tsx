@@ -35,4 +35,8 @@ const UISwitch = ({
   )
 }
 
+UISwitch.defaultProps = {
+  description: '',
+}
+
 export default UISwitch

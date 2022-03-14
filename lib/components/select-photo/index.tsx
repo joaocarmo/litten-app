@@ -15,7 +15,7 @@ export type SelectPhotoProps = {
     maxHeight?: number
   }
   onChange: AlertButton['onPress']
-  source: UIImageProps['source']
+  source?: UIImageProps['source']
 } & PressableProps
 
 const SelectPhoto = ({

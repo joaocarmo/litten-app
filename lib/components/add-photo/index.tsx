@@ -12,7 +12,7 @@ import type { ImageSource } from '@ui-elements/types'
 export type AddPhotoProps<T = any> = {
   ImageComponent: ComponentType<T>
   imageSource: ImageSource
-  onChange: (image: ImageOrVideo | null) => void
+  onChange?: (image: ImageOrVideo | null) => void
   PlaceholderComponent: ComponentType<T>
 } & T &
   Omit<ImageProps, 'source'>

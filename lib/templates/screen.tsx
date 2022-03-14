@@ -8,7 +8,10 @@ import StaticScreenTemplate from '@templates/screen/static'
 import type { StaticScreenTemplateProps } from '@templates/screen/static'
 
 export type ScreenTemplateProps = {
+  children?: ScrollableScreenTemplateProps['children']
+  header?: ScrollableScreenTemplateProps['header']
   scrollable?: boolean
+  tabs?: ScrollableScreenTemplateProps['tabs']
 } & ScrollableScreenTemplateProps &
   StaticScreenTemplateProps
 
