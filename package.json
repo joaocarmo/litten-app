@@ -1,7 +1,7 @@
 {
   "name": "litten",
   "description": "Finding new friends for furry friends",
-  "version": "1.2.0-rc.5",
+  "version": "1.2.0-rc.6",
   "private": true,
   "main": "./index.js",
   "directories": {
