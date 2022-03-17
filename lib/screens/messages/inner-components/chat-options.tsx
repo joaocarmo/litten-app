@@ -28,10 +28,10 @@ import type { ChatOptionsNavigationProp } from '@utils/types/routes'
 import type { UIDropdownOption } from '@ui-elements/dropdown'
 
 export type ChatOptionsProps = {
-  chat: BasicChat
-  litten: BasicLitten
-  recipient: BasicUser
-  user: BasicUser
+  chat?: BasicChat
+  litten?: BasicLitten
+  recipient?: BasicUser
+  user?: BasicUser
 }
 
 const ChatOptions = ({ chat, litten, recipient, user }: ChatOptionsProps) => {
@@ -167,6 +167,13 @@ const ChatOptions = ({ chat, litten, recipient, user }: ChatOptionsProps) => {
       style={styles.menuContainer}
     />
   )
+}
+
+ChatOptions.defaultProps = {
+  chat: {},
+  litten: {},
+  recipient: {},
+  user: {},
 }
 
 const styles = StyleSheet.create({
