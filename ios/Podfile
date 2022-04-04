@@ -1,6 +1,10 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
+# Toggle this to true for the no-ad-tracking Analytics subspec. Useful at minimum for Kids category apps.
+# See: https://firebase.google.com/support/release-notes/ios#analytics - requires firebase-ios-sdk 7.11.0+
+$RNFirebaseAnalyticsWithoutAdIdSupport = true
+
 # Override Firebase SDK Version
 $FirebaseSDKVersion = '8.10.0'
 
@@ -16,7 +20,7 @@ target 'litten' do
   use_react_native!(
     :path => config[:reactNativePath],
     # to enable hermes on iOS, change `false` to `true` and then install pods
-    :hermes_enabled => flags[:hermes_enabled],
+    :hermes_enabled => true, # flags[:hermes_enabled],
     :fabric_enabled => flags[:fabric_enabled],
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
