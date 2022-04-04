@@ -9,7 +9,7 @@ index 0491d34..95f3661 100644
 +      folly::Optional<double> cancelButtonTintColor() const;
        NSString *userInterfaceStyle() const;
        folly::Optional<facebook::react::LazyVector<double>> disabledButtonIndices() const;
-
+ 
 @@ -134,6 +135,7 @@ namespace JS {
        NSString *subject() const;
        folly::Optional<double> anchor() const;
@@ -17,7 +17,7 @@ index 0491d34..95f3661 100644
 +      folly::Optional<double> cancelButtonTintColor() const;
        folly::Optional<facebook::react::LazyVector<NSString *>> excludedActivityTypes() const;
        NSString *userInterfaceStyle() const;
-
+ 
 @@ -1991,6 +1993,11 @@ inline folly::Optional<double> JS::NativeActionSheetManager::SpecShowActionSheet
    id const p = _v[@"tintColor"];
    return RCTBridgingToOptionalDouble(p);
