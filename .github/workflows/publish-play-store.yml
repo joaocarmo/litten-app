@@ -19,6 +19,7 @@ env:
   KEYSTORE_PATH: android/app/litten.keystore
   KEYSTORE_PROPERTIES_PATH: android/keystore.properties
   OUTPUT_PATH: android/app/build/outputs/bundle/release/app-release.aab
+  SECURE_PROPERTIES_PATH: android/secure.properties
   SERVICE_ACCOUNT_PATH: android/service-account.json
   WHATS_NEW_PATH: dist/whatsnew
 
@@ -42,6 +43,10 @@ jobs:
 
     - name: Create .env file
       run: cp .env.example .env
+
+    - name: Create secure.properties
+      run: |
+        echo "${{ secrets.ANDROID_SECURE_PROPERTIES }}" | base64 --decode > ${{ env.SECURE_PROPERTIES_PATH }}
 
     - name: Create service-account.json
       run: |
