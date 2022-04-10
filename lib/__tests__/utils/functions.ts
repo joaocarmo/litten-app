@@ -86,9 +86,11 @@ describe('Test the "convertLength" function', () => {
   })
 
   it(`returns the value in '${MEASURE_MI}' if not using metric units`, () => {
-    expect(convertLength(1, false)).toBe(2)
-    expect(convertLength(35, false)).toBe(57)
-    expect(convertLength(100, false)).toBe(161)
+    expect(convertLength(1, false)).toBe(1)
+    expect(convertLength(2, false)).toBe(2)
+    expect(convertLength(3, false)).toBe(2)
+    expect(convertLength(35, false)).toBe(22)
+    expect(convertLength(100, false)).toBe(63)
   })
 })
 
