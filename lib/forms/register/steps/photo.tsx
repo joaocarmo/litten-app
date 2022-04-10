@@ -42,6 +42,10 @@ const StepPhoto = ({
       }
     } catch (err) {
       debugLog(err)
+
+      if (err.message.includes('permission')) {
+        Alert.alert(translate('feedback.errorMessages.noCameraPermissions'))
+      }
     }
   }, [setAvatar])
 
@@ -54,6 +58,10 @@ const StepPhoto = ({
       })
     } catch (err) {
       debugLog(err)
+
+      if (err.message.includes('permission')) {
+        Alert.alert(translate('feedback.errorMessages.noLibraryPermissions'))
+      }
     }
   }, [setAvatar])
 

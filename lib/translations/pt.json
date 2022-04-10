@@ -323,6 +323,8 @@
       "networkProblem": "Existe um problema de ligação",
       "newErrorTitle": "Erro ao criar",
       "newUnverifiefEmail": "Precisas de verificar o teu endereço de email antes de criar um novo litten! Isto pode ser feito nas tuas definições de perfil.",
+      "noCameraPermissions": "Sem permissões de acesso à câmara. Por favor, verifica as definições de acesso da Litten à tua câmara.",
+      "noLibraryPermissions": "Sem permissões de acesso à galeria de fotografias. Por favor, verifica as definições de acesso da Litten à tua galeria de fotografias.",
       "noPhoneNumberDesc": "Ainda não introduziste um número de telemóvel, mas podes fazê-lo no teu perfil",
       "noPhoneNumberTitle": "Sem telemóvel",
       "notImplemented": "Essa funcionalidade está inactiva",

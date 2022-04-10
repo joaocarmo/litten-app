@@ -1,4 +1,5 @@
 import { ComponentType, useCallback, useMemo } from 'react'
+import { Alert } from 'react-native'
 import type { ImageProps } from 'react-native'
 import ImagePicker from 'react-native-image-crop-picker'
 import type { ImageOrVideo } from 'react-native-image-crop-picker'
@@ -46,6 +47,10 @@ const AddPhoto = ({
       }
     } catch (err) {
       debugLog(err)
+
+      if (err.message.includes('permission')) {
+        Alert.alert(translate('feedback.errorMessages.noCameraPermissions'))
+      }
     }
   }, [onChange])
 
@@ -55,6 +60,10 @@ const AddPhoto = ({
       onChange(image)
     } catch (err) {
       debugLog(err)
+
+      if (err.message.includes('permission')) {
+        Alert.alert(translate('feedback.errorMessages.noLibraryPermissions'))
+      }
     }
   }, [onChange])
 

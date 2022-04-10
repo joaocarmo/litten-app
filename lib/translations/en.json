@@ -323,6 +323,8 @@
       "networkProblem": "There is a network problem",
       "newErrorTitle": "Error creating",
       "newUnverifiefEmail": "You need to verify your email address before you can create a new litten! This can be done in your profile settings. You can click this message to go there now.",
+      "noCameraPermissions": "We can't access your camera. Please give Litten access to your camera. You can do so on your device's definitions.",
+      "noLibraryPermissions": "We can't access your library. Please give Litten access to your library. You can do so on your device's definitions.",
       "noPhoneNumberDesc": "You haven't specified a phone number yet, but you can do so in your profile.",
       "noPhoneNumberTitle": "No Phone Number",
       "notImplemented": "That feature isn't active yet",
