@@ -58,7 +58,7 @@ export const convertLength = (
   }
 
   if (!useMetricUnits) {
-    value = km * KM_PER_MI
+    value = km / KM_PER_MI
   }
 
   return parseInt(Math.ceil(value).toFixed(round), 10)
