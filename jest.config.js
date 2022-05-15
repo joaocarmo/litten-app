@@ -21,7 +21,9 @@ module.exports = {
       preset: 'react-native',
       displayName: 'default',
       setupFiles: ['<rootDir>/jest.setup.js'],
-      timers: 'fake',
+      fakeTimers: {
+        enableGlobally: true,
+      },
       haste: {
         defaultPlatform: 'android',
         platforms: ['android', 'ios', 'native'],
@@ -31,7 +33,6 @@ module.exports = {
     {
       displayName: 'model',
       testEnvironment: 'node',
-      timers: 'real',
       testMatch: [
         '**/__model__tests__/**/*.[jt]s?(x)',
         '**/?(*.)+(model-spec|model-test).[jt]s?(x)',
@@ -41,7 +42,6 @@ module.exports = {
     {
       displayName: 'rules',
       testEnvironment: 'node',
-      timers: 'real',
       testMatch: [
         '**/__rules__tests__/**/*.[jt]s?(x)',
         '**/?(*.)+(rules-spec|rules-test).[jt]s?(x)',
