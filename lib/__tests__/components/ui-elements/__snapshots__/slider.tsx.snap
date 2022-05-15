@@ -9,6 +9,7 @@ exports[`Snapshot test for the "UISlider" component renders correctly 1`] = `
   minimumTrackTintColor="#84bff1"
   minimumValue={1}
   onChange={null}
+  onRNCSliderAccessibilityAction={null}
   onRNCSliderSlidingComplete={null}
   onRNCSliderSlidingStart={null}
   onRNCSliderValueChange={null}
