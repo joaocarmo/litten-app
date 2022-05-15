@@ -796,7 +796,7 @@ PODS:
     - glog
   - react-native-geolocation-service (5.3.0-beta.4):
     - React
-  - react-native-maps (0.30.1):
+  - react-native-maps (0.31.1):
     - React-Core
   - react-native-netinfo (8.3.0):
     - React-Core
@@ -1295,7 +1295,7 @@ SPEC CHECKSUMS:
   React-jsinspector: c5989c77cb89ae6a69561095a61cce56a44ae8e8
   React-logger: a0833912d93b36b791b7a521672d8ee89107aff1
   react-native-geolocation-service: c0efb872258ed9240f1003a70fca9e9757e5c785
-  react-native-maps: d752b0dd0e1951d815b1336332835aab6b4a836f
+  react-native-maps: 8b8bfada2c86205a7f5a07dd1f92f29b33ea83aa
   react-native-netinfo: 3671b091c4843fda5e153612866ef4024b8f5d62
   react-native-safe-area-context: ebf8c413eb8b5f7c392a036a315eb7b46b96845f
   react-native-simple-toast: bf002828cf816775a6809f7a9ec3907509bce11f
