@@ -9,6 +9,8 @@ jest.mock('react-native-gesture-handler', () => mockRNGestureHandlerModule)
 
 jest.mock('@react-native-community/netinfo', () => mockRNCNetInfo)
 
+jest.mock('react-native-webview', () => 'react-native-webview')
+
 // Testing react-native-bootsplash requires mocking the native methods
 jest.mock('react-native-bootsplash', () => ({
   show: jest.fn().mockResolvedValueOnce(),
