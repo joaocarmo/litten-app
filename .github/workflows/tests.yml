@@ -36,7 +36,7 @@ jobs:
     - name: Execute the firebase model tests
       run: yarn test:firestore:model
     - name: Cache firebase emulators
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: ~/.cache/firebase/emulators/
         key: ${{ runner.os }}-firebase-emulators-${{ hashFiles('~/.cache/firebase/emulators/**') }}
