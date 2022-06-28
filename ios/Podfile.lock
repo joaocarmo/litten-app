@@ -802,7 +802,7 @@ PODS:
     - React-Core
   - react-native-maps (0.31.1):
     - React-Core
-  - react-native-netinfo (9.2.0):
+  - react-native-netinfo (9.3.0):
     - React-Core
   - react-native-safe-area-context (4.3.1):
     - RCT-Folly
@@ -1310,7 +1310,7 @@ SPEC CHECKSUMS:
   react-native-geolocation-service: f32ef48fa665bd710207a3ac39bc127cac9cb993
   react-native-get-random-values: a6ea6a8a65dc93e96e24a11105b1a9c8cfe1d72a
   react-native-maps: 8b8bfada2c86205a7f5a07dd1f92f29b33ea83aa
-  react-native-netinfo: dc0d72a0c7b62f29d063afc2d7e20b91364a96ae
+  react-native-netinfo: 129bd99f607a2dc5bb096168f3e5c150fd1f1c95
   react-native-safe-area-context: 6c12e3859b6f27b25de4fee8201cfb858432d8de
   react-native-simple-toast: bf002828cf816775a6809f7a9ec3907509bce11f
   react-native-slider: 98b724cd3e44c3454a6d0724e796d4e9c52189ce
