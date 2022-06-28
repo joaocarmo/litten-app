@@ -1,3 +1,4 @@
+import 'react-native-get-random-values'
 import 'react-native-gesture-handler'
 import { useCallback, useState, useRef } from 'react'
 import { Provider as StoreProvider } from 'react-redux'
