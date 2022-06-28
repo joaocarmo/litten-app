@@ -802,7 +802,7 @@ PODS:
     - React-Core
   - react-native-maps (0.31.1):
     - React-Core
-  - react-native-netinfo (9.1.0):
+  - react-native-netinfo (9.2.0):
     - React-Core
   - react-native-safe-area-context (4.3.1):
     - RCT-Folly
@@ -883,6 +883,8 @@ PODS:
     - React-jsi (= 0.69.0)
     - React-logger (= 0.69.0)
     - React-perflogger (= 0.69.0)
+  - RNBackgroundFetch (4.1.1):
+    - React-Core
   - RNBootSplash (4.2.2):
     - React-Core
   - RNCAsyncStorage (1.17.7):
@@ -1051,6 +1053,7 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - RNBackgroundFetch (from `../node_modules/react-native-background-fetch`)
   - RNBootSplash (from `../node_modules/react-native-bootsplash`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
   - "RNCClipboard (from `../node_modules/@react-native-community/clipboard`)"
@@ -1201,6 +1204,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/runtimeexecutor"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNBackgroundFetch:
+    :path: "../node_modules/react-native-background-fetch"
   RNBootSplash:
     :path: "../node_modules/react-native-bootsplash"
   RNCAsyncStorage:
@@ -1305,7 +1310,7 @@ SPEC CHECKSUMS:
   react-native-geolocation-service: f32ef48fa665bd710207a3ac39bc127cac9cb993
   react-native-get-random-values: a6ea6a8a65dc93e96e24a11105b1a9c8cfe1d72a
   react-native-maps: 8b8bfada2c86205a7f5a07dd1f92f29b33ea83aa
-  react-native-netinfo: 994c55f16653b46e044018c3624478e5b79eb917
+  react-native-netinfo: dc0d72a0c7b62f29d063afc2d7e20b91364a96ae
   react-native-safe-area-context: 6c12e3859b6f27b25de4fee8201cfb858432d8de
   react-native-simple-toast: bf002828cf816775a6809f7a9ec3907509bce11f
   react-native-slider: 98b724cd3e44c3454a6d0724e796d4e9c52189ce
@@ -1322,6 +1327,7 @@ SPEC CHECKSUMS:
   React-RCTVibration: 7549ef7b07aad1cc629f4c6d88c325366f26423c
   React-runtimeexecutor: 7ad268dee53d001697e13264c6bc8e95a902352e
   ReactCommon: 74a3b8ee497c6d50ce86ef57e15c4c5bf654b83d
+  RNBackgroundFetch: 6209185b5d93263e38fe5cd6ca3798f8d350a202
   RNBootSplash: b59b9140af7ac429a8b417559c70dce8a26d41c1
   RNCAsyncStorage: d81ee5c3db1060afd49ea7045ad460eff82d2b7d
   RNCClipboard: 41d8d918092ae8e676f18adada19104fa3e68495
