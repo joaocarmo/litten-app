@@ -5,24 +5,26 @@ caseSensitive: false
 # Array of labels to be applied to the PR [default: []]
 # - Finds the `text` within the PR title and body and applies the `label`
 customLabels:
+  - text: "- [x] a11y"
+    label: "a11y"
+  - text: "- [x] Chore"
+    label: "chore"
+  - text: "- [x] DevOps"
+    label: "devops"
+  - text: "- [x] Documentation"
+    label: "documentation"
   - text: "- [x] Feature"
     label: "feature"
   - text: "- [x] Fix"
     label: "fix"
-  - text: "- [x] Tests"
-    label: "tests"
-  - text: "- [x] Refactor"
-    label: "refactor"
-  - text: "- [x] DevOps"
-    label: "devops"
   - text: "- [x] i18n"
     label: "i18n"
-  - text: "- [x] a11y"
-    label: "a11y"
-  - text: "- [x] Documentation"
-    label: "documentation"
+  - text: "- [x] Refactor"
+    label: "refactor"
   - text: "- [x] Release"
     label: "release"
+  - text: "- [x] Tests"
+    label: "tests"
 # Search the body of the PR for the `text` [default: true]
 searchBody: true
 # Search the title of the PR for the `text` [default: true]
