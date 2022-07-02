@@ -8,6 +8,10 @@ on:
   pull_request:
     branches: [ main, next ]
 
+env:
+  CI: true
+  FIREBASE_EMULATORS_PATH: $GITHUB_WORKSPACE/emulator-cache
+
 jobs:
   test:
     environment: development
@@ -19,6 +23,8 @@ jobs:
       with:
         node-version: '16'
         cache: 'yarn'
+    - name: Install firebase-tools globally
+      run: yarn global add firebase-tools
     - name: Create .env file
       run: cp .env.example .env
     - name: Install dependencies
@@ -38,6 +44,6 @@ jobs:
     - name: Cache firebase emulators
       uses: actions/cache@v3
       with:
-        path: ~/.cache/firebase/emulators/
-        key: ${{ runner.os }}-firebase-emulators-${{ hashFiles('~/.cache/firebase/emulators/**') }}
+        path: ${{ env.FIREBASE_EMULATORS_PATH }}
+        key: ${{ runner.os }}-firebase-emulators-${{ hashFiles('emulator-cache/*.{jar,zip}') }}
       continue-on-error: true
