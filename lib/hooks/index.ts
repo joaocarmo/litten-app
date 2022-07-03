@@ -29,8 +29,6 @@ import useSearchFiltersSpecies from '@hooks/use-search-filters-species'
 import useSearchHistory from '@hooks/use-search-history'
 import useSearchQuery from '@hooks/use-search-query'
 import useStore from '@hooks/use-store'
-import useTasks from '@hooks/use-tasks'
-import useTasksHandler from '@hooks/use-tasks-handler'
 import useTheme from '@hooks/use-theme'
 import useUnit from '@hooks/use-unit'
 import useUnreadMessages from '@hooks/use-unread-messages'
@@ -71,8 +69,6 @@ export {
   useSearchHistory,
   useSearchQuery,
   useStore,
-  useTasks,
-  useTasksHandler,
   useTheme,
   useUnit,
   useUnreadMessages,

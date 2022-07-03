@@ -4,10 +4,23 @@ import {
 } from '@utils/constants'
 import { debugLog } from '@utils/dev'
 
-const channelCallback = (channelId) => (created: boolean) =>
-  debugLog('[NOTIFICATION SERVICE]', channelId, 'created:', created)
+type ChannelCallback = (created: boolean) => void
 
-export default [
+type Channel = {
+  channelId: string
+  channelName: string
+  channelDescription: string
+  soundName: string
+  importance: number
+  vibrate: boolean
+}
+
+const channelCallback =
+  (channelId: string): ChannelCallback =>
+  (created: boolean) =>
+    debugLog('[NOTIFICATION SERVICE]', channelId, 'created:', created)
+
+const channels: [Channel, ChannelCallback][] = [
   [
     {
       channelId: CHANNELS_GENERAL_MESSAGES_ID,
@@ -17,7 +30,7 @@ export default [
       importance: 4,
       vibrate: true,
     },
-    channelCallback(CHANNELS_GENERAL_MESSAGES_ID) as (created: boolean) => void,
+    channelCallback(CHANNELS_GENERAL_MESSAGES_ID),
   ],
   [
     {
@@ -28,6 +41,8 @@ export default [
       importance: 4,
       vibrate: true,
     },
-    channelCallback(CHANNELS_PRIVATE_MESSAGES_ID) as (created: boolean) => void,
+    channelCallback(CHANNELS_PRIVATE_MESSAGES_ID),
   ],
 ]
+
+export default channels

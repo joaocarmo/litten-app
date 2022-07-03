@@ -8,7 +8,6 @@ import {
   useAppSettings,
   useAuthUser,
   useConnectionStatus,
-  useTasks,
   useUserCoordinates,
   useUserInfo,
   useUserPosts,
@@ -36,8 +35,6 @@ const Litten = () => {
   const appConfig = useAppConfig()
   const [isAppBlocked, setIsAppblocked] = useState('')
 
-  // Use the background service to run periodic tasks
-  useTasks()
   // Show a toast when the connection is lost
   useConnectionStatus()
 
