@@ -31,7 +31,7 @@ jobs:
     - name: iOS build
       run: yarn bundle:ios
     - name: Archive production artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: dist-${{ github.event.inputs.tag }}
         path: dist
