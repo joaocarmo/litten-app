@@ -78,6 +78,11 @@ as well as the `google-services.json` file to `android/app`.
 Additionally, you should install, configure and integrate the
 [Local Emulator Suite][emulator].
 
+```sh
+# Install the Firebase Tools
+npm install -g firebase-tools
+```
+
 ### Current API dependecies
 
 - [Google Maps (Geocoding)][googleapikey]
