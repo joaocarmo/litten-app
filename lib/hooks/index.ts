@@ -17,7 +17,6 @@ import useEmailVerified from '@hooks/use-email-verified'
 import useFavourite from '@hooks/use-favourite'
 import useFavouriteFn from '@hooks/use-favourite-fn'
 import useFavourites from '@hooks/use-favourites'
-import useIsMounted from '@hooks/use-is-mounted'
 import useLittenTeam from '@hooks/use-litten-team'
 import useNotificationHandler from '@hooks/use-notification-handler'
 import useNotifications from '@hooks/use-notifications'
@@ -57,7 +56,6 @@ export {
   useFavourite,
   useFavouriteFn,
   useFavourites,
-  useIsMounted,
   useLittenTeam,
   useNotificationHandler,
   useNotifications,
