@@ -1,12 +1,13 @@
 import { useCallback } from 'react'
 import { useTheme } from '@hooks'
 import { useActionSheet } from '@expo/react-native-action-sheet'
-import Clipboard from '@react-native-community/clipboard'
+import { useClipboard } from '@react-native-community/clipboard'
 import { Bubble as EZBubble } from 'react-native-easy-chat'
 import { translate } from '@utils/i18n'
 import bubbleStyles from './bubble.styles'
 
 const Bubble = (props) => {
+  const [, setString] = useClipboard()
   const { showActionSheetWithOptions } = useActionSheet()
   const { createStyles } = useTheme()
 
@@ -24,13 +25,13 @@ const Bubble = (props) => {
           },
           (buttonIndex) => {
             if (buttonIndex === 0) {
-              Clipboard.setString(currentMessage.text)
+              setString(currentMessage.text)
             }
           },
         )
       }
     },
-    [showActionSheetWithOptions],
+    [setString, showActionSheetWithOptions],
   )
 
   return (
