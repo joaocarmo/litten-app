@@ -1,4 +1,5 @@
 import useAuthUser from '@hooks/use-auth-user'
+import { LITTEN_TEAM_EMAIL_SUFFIX } from '@utils/constants'
 
 const useLittenTeam = (): boolean => {
   const [authUser] = useAuthUser()
@@ -6,7 +7,7 @@ const useLittenTeam = (): boolean => {
   if (authUser) {
     const { email = '', emailVerified = false } = authUser
 
-    return emailVerified && email.endsWith('@litten.app')
+    return emailVerified && email.endsWith(LITTEN_TEAM_EMAIL_SUFFIX)
   }
 
   return false
