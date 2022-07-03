@@ -2,7 +2,6 @@ import useActiveChats from '@hooks/use-active-chats'
 import useAppConfig from '@hooks/use-app-config'
 import useAppNotifications from '@hooks/use-app-notifications'
 import useAppSettings from '@hooks/use-app-settings'
-import useAppState from '@hooks/use-app-state'
 import useAuthUser from '@hooks/use-auth-user'
 import useCacheFeed from '@hooks/use-cache-feed'
 import useCacheLittens from '@hooks/use-cache-littens'
@@ -41,7 +40,6 @@ export {
   useAppConfig,
   useAppNotifications,
   useAppSettings,
-  useAppState,
   useAuthUser,
   useCacheFeed,
   useCacheLittens,
