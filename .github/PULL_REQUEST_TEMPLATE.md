@@ -4,15 +4,16 @@
 
 <!-- (add an `x` to `[ ]` if applicable and the issue number if available) -->
 
+- [ ] a11y
+- [ ] Chore
+- [ ] DevOps
+- [ ] Documentation
 - [ ] Feature
 - [ ] Fix
-- [ ] Tests
-- [ ] Refactor
-- [ ] DevOps
 - [ ] i18n
-- [ ] a11y
-- [ ] Documentation
+- [ ] Refactor
 - [ ] Release
+- [ ] Tests
 
 ### Summary
 
