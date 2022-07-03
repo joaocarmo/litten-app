@@ -52,10 +52,6 @@ allprojects {
                 excludeGroup "com.facebook.react"
             }
         }
-        maven {
-            // react-native-background-fetch
-            url("${project(':react-native-background-fetch').projectDir}/libs")
-        }
 
         google()
         maven { url 'https://maven.google.com' }

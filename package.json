@@ -120,7 +120,6 @@
     "libphonenumber-js": "^1.10.7",
     "react": "18.2.0",
     "react-native": "0.69.1",
-    "react-native-background-fetch": "^4.1.1",
     "react-native-bootsplash": "^4.2.3",
     "react-native-device-info": "^9.0.2",
     "react-native-dialog": "^9.2.2",

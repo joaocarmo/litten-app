@@ -10,7 +10,6 @@
 #import <Firebase.h>
 #import <RNCPushNotificationIOS.h>
 #import <UserNotifications/UserNotifications.h>
-#import <TSBackgroundFetch/TSBackgroundFetch.h>
 #import "RNBootSplash.h"
 
 #if RCT_NEW_ARCH_ENABLED
@@ -89,8 +88,6 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
   // Define UNUserNotificationCenter
   UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
   center.delegate = self;
-  // [REQUIRED] Register BackgroundFetch
-  [[TSBackgroundFetch sharedInstance] didFinishLaunching];
 
   return YES;
 }
