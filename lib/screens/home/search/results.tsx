@@ -1,5 +1,4 @@
 import { useCallback, useMemo } from 'react'
-
 import { FlatList, View } from 'react-native'
 import {
   useFavouriteFn,

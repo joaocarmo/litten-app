@@ -2,14 +2,15 @@ import { useCallback, useEffect, useState, useRef } from 'react'
 import { StyleSheet, View } from 'react-native'
 import MapView, { Marker } from 'react-native-maps'
 import type { Region } from 'react-native-maps'
+import { useAppState } from '@react-native-community/hooks'
+import type { AppStateStatus } from '@react-native-community/hooks'
 import { UIButton, UILink, UILoader, UISeparator, UIText } from '@ui-elements'
-import { useAppState } from '@hooks'
 import Empty from '@components/empty'
 import { ANIMATE_TIME, initialRegion } from '@config/location/initial-region'
 import { locationSchema } from '@db/schemas/location'
 import { getLocation, hasLocationPermission, openSettings } from '@utils/setup'
 import { getReverseGeoInformation } from '@utils/network'
-import { parseGoogleMapResponse, mapGoogleLocationKeys } from '@utils/functions'
+import { mapGoogleLocationKeys, parseGoogleMapResponse } from '@utils/functions'
 import { UI_MAP_BORDER_RADIUS, UI_MAP_MIN_HEIGHT } from '@utils/constants'
 import { translate } from '@utils/i18n'
 import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
@@ -25,7 +26,6 @@ const SelectLocationMapScreen = ({
 }: SelectLocationMapScreenProps) => {
   const [isLoading, setIsLoading] = useState(true)
   const [hasPermission, setHasPermission] = useState(false)
-  const [goneToSettings, setGoneToSettings] = useState(false)
   const [region, setRegion] = useState<Region>({
     ...initialRegion,
     ...initialCoordinates,
@@ -33,6 +33,8 @@ const SelectLocationMapScreen = ({
   const [coordinates, setCoordinates] = useState(initialCoordinates)
 
   const mapRef = useRef<MapView>(null)
+
+  const currentAppState = useAppState()
 
   const handleOnMapReady = useCallback(() => {
     setIsLoading(false)
@@ -126,15 +128,12 @@ const SelectLocationMapScreen = ({
   }, [])
 
   const handleGoToSettings = useCallback(() => {
-    setGoneToSettings(true)
     openSettings()
   }, [])
 
   const onStateChange = useCallback(
-    async (appState: string) => {
-      if (goneToSettings && appState === 'active') {
-        setGoneToSettings(false)
-
+    async (appState: AppStateStatus) => {
+      if (!hasPermission && appState === 'active') {
         const isPermissionGranted = await hasLocationPermission()
 
         if (isPermissionGranted) {
@@ -142,10 +141,12 @@ const SelectLocationMapScreen = ({
         }
       }
     },
-    [goneToSettings],
+    [hasPermission],
   )
 
-  useAppState(onStateChange)
+  useEffect(() => {
+    onStateChange(currentAppState)
+  }, [currentAppState, onStateChange])
 
   useEffect(() => {
     checkPermission()

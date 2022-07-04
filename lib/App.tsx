@@ -21,7 +21,7 @@ import { preSetup } from '@utils/setup'
 const App = () => {
   const [initializingStore, setInitializingStore] = useState(true)
   const [onNotification] = useNotificationHandler()
-  const notifications = useRef(new NotificationService(onNotification)).current
+  const notificationService = useRef(new NotificationService(onNotification))
 
   const onBeforeLift = useCallback(async () => {
     await preSetup()
@@ -38,7 +38,7 @@ const App = () => {
       >
         <ThemeProvider>
           <ErrorBoundary>
-            <NotificationsProvider value={notifications}>
+            <NotificationsProvider value={notificationService.current}>
               <NavigationContainer linking={linkingConfig} ref={navigationRef}>
                 <ActionSheetProvider>
                   <SafeAreaProvider>

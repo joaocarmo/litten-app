@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
+import type { Dispatch, SetStateAction } from 'react'
 import { DEBOUNCE_TIMEOUT } from '@utils/constants'
 
-const useDebouncedState = <S>(
-  initialValue: (() => S) | S,
-  delay: number = DEBOUNCE_TIMEOUT,
-): [S, (arg0: ((arg1: S) => S) | S) => void] => {
-  const [value, setValue] = useState<S>(initialValue)
+const useDebouncedState = <T>(
+  initialValue: T,
+  delay?: number,
+): [T, Dispatch<SetStateAction<T>>] => {
+  const [value, setValue] = useState<T>(initialValue)
   const timerId = useRef(null)
 
   const clearTimer = () => {
@@ -23,7 +24,7 @@ const useDebouncedState = <S>(
 
       timerId.current = setTimeout(() => {
         setValue(newValue)
-      }, delay)
+      }, delay || DEBOUNCE_TIMEOUT)
     },
     [delay],
   )
