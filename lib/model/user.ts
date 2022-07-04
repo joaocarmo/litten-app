@@ -41,7 +41,7 @@ export default class User extends Base {
 
   #deferredSaveObject = {}
 
-  constructor(basicUser: BasicUser) {
+  constructor(basicUser: Partial<BasicUser>) {
     super()
     const { id = '', contactPreferences = [USER_PREFERENCES_CONTACT_INAPP] } =
       basicUser
@@ -223,7 +223,7 @@ export default class User extends Base {
     }
   }
 
-  buildObject(): BasicUser {
+  buildObject(): Omit<BasicUser, 'id'> {
     const userObject = {
       contactPreferences: this.#contactPreferences,
       displayName: this.#displayName,
@@ -234,6 +234,7 @@ export default class User extends Base {
       photoURL: this.#photoURL,
       metadata: this.buildMetadata(),
     }
+
     return userObject
   }
 
@@ -245,14 +246,14 @@ export default class User extends Base {
     phoneNumber = '',
     photoURL = '',
     ...otherProps
-  }: BasicUser): void {
+  }: Partial<BasicUser>): void {
     super.mapCommonProps(otherProps)
     this.#contactPreferences = contactPreferences
     this.#displayName = displayName
     this.#email = email
     this.#isOrganization = isOrganization
     this.#phoneNumber = phoneNumber
-    this.#photoURL = typeof photoURL === 'string' ? photoURL : photoURL?.uri
+    this.#photoURL = photoURL
   }
 
   async reauthenticate(password: string): Promise<void> {

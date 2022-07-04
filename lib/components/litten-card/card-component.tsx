@@ -204,7 +204,6 @@ LittenCardComponent.defaultProps = {
   editable: false,
   isFavourite: false,
   litten: {},
-  user: {},
 }
 
 export default memo<LittenCardComponentProps>(LittenCardComponent, areEqual)
