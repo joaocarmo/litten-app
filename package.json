@@ -54,7 +54,7 @@
     "clear-cache:xcode": "rm -rf ios/litten.xcworkspace/xcshareddata/ ios/litten.xcworkspace/xcuserdata/",
     "clear-cache": "watchman watch-del-all && rm -rf /tmp/metro-* && yarn start --reset-cache",
     "firestore:seed": "firebase emulators:exec './scripts/firestore-seed.js' --import=./firebase --export-on-exit",
-    "generate-data": "./scripts/generate-data",
+    "generate-data": "./scripts/generate-data.sh",
     "ios:device:production": "react-native run-ios --configuration Release --device $IOS_DEVICE_NAME",
     "ios:device": "react-native run-ios --device $IOS_DEVICE_NAME",
     "ios": "test -z \"$IOS_SIMULATOR_NAME\" && react-native run-ios --simulator \"$IOS_SIMULATOR_NAME\" || react-native run-ios",
@@ -77,16 +77,16 @@
     "react-devtools": "react-devtools",
     "redux-devtools": "(adb reverse tcp:8000 tcp:8000 || true) && redux-devtools --hostname=localhost --port=8000",
     "sanity-check": "yarn lint && yarn pretty && yarn type-check && yarn test",
-    "sort-data": "./scripts/sort-data",
+    "sort-data": "./scripts/sort-data.js",
     "start:android": "yarn android && yarn start:firebase",
-    "start:firebase:script": "firebase use default && firebase emulators:exec './scripts/setup-emulator' --import=./firebase --export-on-exit --ui",
+    "start:firebase:script": "firebase use default && firebase emulators:exec './scripts/setup-emulator.js' --import=./firebase --export-on-exit --ui",
     "start:firebase": "firebase emulators:start --import=./firebase --export-on-exit",
     "start:ios": "yarn ios && yarn start:firebase",
     "start": "react-native start",
     "test:firestore:model": "firebase emulators:exec 'jest --runInBand --selectProjects model --forceExit'",
     "test:firestore:rules": "firebase emulators:exec 'jest --selectProjects rules --forceExit'",
     "test": "jest --selectProjects default --forceExit",
-    "translations-check": "./scripts/validate-translations",
+    "translations-check": "./scripts/validate-translations.js",
     "type-check": "tsc --noEmit"
   },
   "lint-staged": {
@@ -199,6 +199,7 @@
     "react-native-version": "^4.0.0",
     "react-test-renderer": "18.2.0",
     "remote-redux-devtools": "^0.5.16",
+    "ts-node": "^10.8.2",
     "typescript": "^4.7.4",
     "world-countries": "^4.0.0"
   }
