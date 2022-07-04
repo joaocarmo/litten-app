@@ -97,17 +97,10 @@ const authenticatedUserSlice = createSlice({
     },
 
     setContactPreferences(state, action: PayloadAction<string>) {
-      let newContactPreferences = [...(state.extra.contactPreferences || [])]
-
-      if (newContactPreferences.includes(action.payload)) {
-        newContactPreferences = newContactPreferences.filter(
-          (value) => value !== action.payload,
-        )
-      } else {
-        newContactPreferences.push(action.payload)
+      state.extra.contactPreferences = {
+        ...state.extra.contactPreferences,
+        [action.payload]: !state.extra.contactPreferences[action.payload],
       }
-
-      state.extra.contactPreferences = newContactPreferences
     },
 
     setDisplayName(state, action: PayloadAction<string>) {

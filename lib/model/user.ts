@@ -10,12 +10,12 @@ import { deleteAllChatForUser } from '@db/maintenance'
 import { locationSchema } from '@db/schemas/location'
 import {
   DB_USER_COLLECTION,
+  DEFAULT_CONTACT_PREFERENCES,
   STORAGE_IGNORED_ERRORS,
   STORAGE_USER_AVATAR,
-  USER_PREFERENCES_CONTACT_INAPP,
 } from '@utils/constants'
 import { debugLog, logError } from '@utils/dev'
-import type { BasicUser } from '@model/types/user'
+import type { BasicUser, ContactPreferences } from '@model/types/user'
 import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
 
 export default class User extends Base {
@@ -43,7 +43,7 @@ export default class User extends Base {
 
   constructor(basicUser: Partial<BasicUser>) {
     super()
-    const { id = '', contactPreferences = [USER_PREFERENCES_CONTACT_INAPP] } =
+    const { id = '', contactPreferences = DEFAULT_CONTACT_PREFERENCES } =
       basicUser
     this.mapDocToProps(basicUser)
     this.#search = new Search({
@@ -172,34 +172,21 @@ export default class User extends Base {
     this.updateOne('isOrganization', isOrganization)
   }
 
-  get contactPreferences(): string[] {
+  get contactPreferences(): ContactPreferences {
     return this.#contactPreferences
   }
 
-  set contactPreferences(value: string | string[] | void) {
-    if (Array.isArray(value)) {
-      this.#contactPreferences = value
-    } else if (value) {
-      let newContactPreferences: string[] = [...this.#contactPreferences]
-
-      if (this.#contactPreferences.includes(value)) {
-        newContactPreferences = this.#contactPreferences.filter(
-          (element) => element !== value,
-        )
-        this.updateOne(
-          'contactPreferences',
-          firestore.FieldValue.arrayRemove(value),
-        )
-      } else {
-        newContactPreferences.push(value)
-        this.updateOne(
-          'contactPreferences',
-          firestore.FieldValue.arrayUnion(value),
-        )
+  set contactPreferences(value: string | ContactPreferences) {
+    if (typeof value === 'string') {
+      this.#contactPreferences = {
+        ...this.#contactPreferences,
+        [value]: !this.#contactPreferences[value],
       }
-
-      this.#contactPreferences = newContactPreferences
+    } else {
+      this.#contactPreferences = value || DEFAULT_CONTACT_PREFERENCES
     }
+
+    this.updateOne('contactPreferences', this.#contactPreferences)
   }
 
   set deferredSave(deferredSave: boolean) {
@@ -239,7 +226,7 @@ export default class User extends Base {
   }
 
   mapDocToProps({
-    contactPreferences = [],
+    contactPreferences = DEFAULT_CONTACT_PREFERENCES,
     displayName = '',
     email = '',
     isOrganization = false,
