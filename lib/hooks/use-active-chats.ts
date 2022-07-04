@@ -10,7 +10,9 @@ const areEqual = ([firstLeft], [firstRight]) =>
 
 const useActiveChats = (): [BasicChat[], (arg0: BasicChat[]) => void] => {
   const dispatch = useDispatch()
+
   const active = useSelector(activeChatsSelector, areEqual)
+
   const setNewChats = useCallback(
     (newChats) => {
       dispatch(setChats(newChats))
