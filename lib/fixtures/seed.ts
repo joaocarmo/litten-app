@@ -1,15 +1,21 @@
-const faker = require('@withshepherd/faker')
+import faker from '@withshepherd/faker'
+import {
+  DEFAULT_CONTACT_PREFERENCES,
+  LITTEN_SPECIES_BIRD,
+  LITTEN_SPECIES_CAT,
+  LITTEN_SPECIES_DOG,
+  LITTEN_SPECIES_OTHER,
+  LITTEN_SPECIES_RABBIT,
+  LITTEN_SPECIES_RODENT,
+  LITTEN_TYPE_ADOPT,
+  LITTEN_TYPE_FOUND,
+  LITTEN_TYPE_LOST,
+} from '../utils/constants/app'
 
 const NUM_RECORDS = 100
 const MIN_PHOTOS = 1
 const MAX_PHOTOS = 8
-const USER_PREFERENCES_CONTACT_INAPP = 'USER_PREFERENCES_CONTACT_INAPP'
-const LITTEN_SPECIES_DOG = 'LITTEN_SPECIES_DOG'
-const LITTEN_SPECIES_CAT = 'LITTEN_SPECIES_CAT'
-const LITTEN_SPECIES_BIRD = 'LITTEN_SPECIES_BIRD'
-const LITTEN_SPECIES_RABBIT = 'LITTEN_SPECIES_RABBIT'
-const LITTEN_SPECIES_RODENT = 'LITTEN_SPECIES_RODENT'
-const LITTEN_SPECIES_OTHER = 'LITTEN_SPECIES_OTHER'
+
 const LITTEN_SPECIES = [
   LITTEN_SPECIES_DOG,
   LITTEN_SPECIES_CAT,
@@ -18,15 +24,12 @@ const LITTEN_SPECIES = [
   LITTEN_SPECIES_RODENT,
   LITTEN_SPECIES_OTHER,
 ]
-const LITTEN_TYPE_ADOPT = 'LITTEN_TYPE_ADOPT'
-const LITTEN_TYPE_LOST = 'LITTEN_TYPE_LOST'
-const LITTEN_TYPE_FOUND = 'LITTEN_TYPE_FOUND'
 const LITTEN_TYPES = [LITTEN_TYPE_ADOPT, LITTEN_TYPE_LOST, LITTEN_TYPE_FOUND]
 
-const getRandInt = (min, max) =>
+const getRandInt = (min: number, max: number): number =>
   Math.floor(Math.random() * (max - min + 1) + min)
 
-const getUid = () => faker.datatype.uuid().replaceAll('-', '')
+const getUid = () => faker.datatype.uuid()
 
 const getLocation = () => ({
   administrativeArea1: faker.address.state(),
@@ -43,7 +46,7 @@ const getLocation = () => ({
   street: faker.address.streetAddress(),
 })
 
-const getPhotos = (min, max, generator) =>
+const getPhotos = (min: number, max: number, generator: () => string) =>
   [...Array(getRandInt(min, max))].map(() => `${generator()}?token=${getUid()}`)
 
 const getSpecies = () =>
@@ -53,7 +56,7 @@ const getType = () => LITTEN_TYPES[getRandInt(0, LITTEN_TYPES.length - 1)]
 
 const getTags = () => faker.lorem.words().split(' ')
 
-const getObjectFromObjects = (objects) =>
+const getObjectFromObjects = <T>(objects: T[]): T =>
   objects[getRandInt(0, objects.length - 1)]
 
 const authUser = {
@@ -67,7 +70,7 @@ const authUser = {
 }
 
 const authUserRecord = {
-  contactPreferences: [USER_PREFERENCES_CONTACT_INAPP],
+  contactPreferences: DEFAULT_CONTACT_PREFERENCES,
   displayName: authUser.displayName,
   email: authUser.email,
   isOrganization: true,
@@ -90,10 +93,10 @@ const authUserRecord = {
 }
 
 const users = [...Array(NUM_RECORDS)].map(() => ({
-  contactPreferences: [USER_PREFERENCES_CONTACT_INAPP],
+  contactPreferences: DEFAULT_CONTACT_PREFERENCES,
   displayName: faker.name.findName(),
   email: faker.internet.email(),
-  id: getUid().replaceAll('-', ''),
+  id: getUid(),
   isOrganization: faker.datatype.boolean(),
   location: getLocation(),
   phoneNumber: faker.phone.phoneNumber(),
@@ -143,11 +146,4 @@ const messages = [...Array(NUM_RECORDS * 10)].map(() => {
   }
 })
 
-module.exports = {
-  authUser,
-  authUserRecord,
-  chats,
-  littens,
-  messages,
-  users,
-}
+export { authUser, authUserRecord, chats, littens, messages, users }

@@ -53,7 +53,7 @@
     "clear-cache:babel": "rm -rf node_modules/.cache/babel-loader/*",
     "clear-cache:xcode": "rm -rf ios/litten.xcworkspace/xcshareddata/ ios/litten.xcworkspace/xcuserdata/",
     "clear-cache": "watchman watch-del-all && rm -rf /tmp/metro-* && yarn start --reset-cache",
-    "firestore:seed": "firebase emulators:exec './scripts/firestore-seed.js' --import=./firebase --export-on-exit",
+    "firestore:seed": "firebase emulators:exec 'ts-node ./scripts/firestore-seed.ts' --import=./firebase --export-on-exit",
     "generate-data": "./scripts/generate-data.sh",
     "ios:device:production": "react-native run-ios --configuration Release --device $IOS_DEVICE_NAME",
     "ios:device": "react-native run-ios --device $IOS_DEVICE_NAME",

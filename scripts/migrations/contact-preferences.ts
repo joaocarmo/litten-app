@@ -15,11 +15,12 @@ import {
 } from '../../lib/utils/constants/app'
 import type { ContactPreferences } from '../../lib/model/types/user'
 
-const dryRun = true
+const dryRun = false
 
 const projectId = 'litten-app'
 
 const print = (message: string) => console.log(message)
+const printError = (message: string) => console.error(message)
 
 const convertPreferences = (preferences: string[]): ContactPreferences => {
   const result: ContactPreferences = {
@@ -65,14 +66,16 @@ const migrateContactPreferences = async (
     print(`  Old preferences: ${JSON.stringify(oldPreferences)}`)
     print(`  New preferences: ${JSON.stringify(newPreferences)}`)
 
-    if (!dryRun) {
-      const writeRes = await documentSnapshot.ref.update({
-        contactPreferences: {
-          ...DEFAULT_CONTACT_PREFERENCES,
-          ...newPreferences,
-        },
-      })
+    if (dryRun) {
+      return
     }
+
+    await documentSnapshot.ref.update({
+      contactPreferences: {
+        ...DEFAULT_CONTACT_PREFERENCES,
+        ...newPreferences,
+      },
+    })
   } catch (error) {
     print(
       `Error migrating contact preferences for user '${documentSnapshot.id}': ${error}`,
@@ -81,24 +84,34 @@ const migrateContactPreferences = async (
 }
 
 const main = async () => {
-  print(`Initialising project '${projectId}'`)
+  try {
+    print(`Initialising project '${projectId}'`)
 
-  const app = initializeApp({ projectId })
+    const app = initializeApp({ projectId })
 
-  const db = getFirestore(app)
+    const db = getFirestore(app)
 
-  print(`Using collection '${DB_USER_COLLECTION}'`)
-  const dbUsers = db.collection(DB_USER_COLLECTION)
+    print(`Using collection '${DB_USER_COLLECTION}'`)
+    const dbUsers = db.collection(DB_USER_COLLECTION)
 
-  const querySnapshot = await dbUsers.get()
+    const querySnapshot = await dbUsers.get()
 
-  if (!querySnapshot.empty) {
-    print(`Migrating contact preferences${dryRun ? ' [dry run]' : ''}...`)
+    if (!querySnapshot.empty) {
+      print(`Migrating contact preferences${dryRun ? ' [dry run]' : ''}...`)
 
-    querySnapshot.forEach(migrateContactPreferences)
+      querySnapshot.forEach(migrateContactPreferences)
+    }
+
+    await Promise.resolve(() => {
+      console.log('Done')
+      process.exit(0)
+    })
+  } catch (error) {
+    printError(`Error: ${error}`)
+    setImmediate(() => {
+      process.exit(1)
+    })
   }
-
-  console.log('Done')
 }
 
 main()

@@ -1,38 +1,40 @@
-#!/usr/bin/env node
-const admin = require('firebase-admin')
-const firebase = require('firebase/compat/app')
-const { initializeTestEnvironment } = require('@firebase/rules-unit-testing')
-const {
+#!/usr/bin/env ts-node
+import { deleteApp, getApps, initializeApp } from 'firebase-admin/app'
+import { getAuth } from 'firebase-admin/auth'
+import { FieldValue, getFirestore, GeoPoint } from 'firebase-admin/firestore'
+import { initializeTestEnvironment } from '@firebase/rules-unit-testing'
+import {
   authUser,
   authUserRecord,
   chats,
   littens,
   messages,
   users,
-} = require('../lib/fixtures/seed')
+} from '../lib/fixtures/seed'
+import {
+  DB_CHAT_COLLECTION,
+  DB_LITTEN_COLLECTION,
+  DB_MESSAGE_COLLECTION,
+  DB_USER_COLLECTION,
+} from '../lib/utils/constants/app'
 
 const projectId = 'litten-app'
 
-const DB_CHAT_COLLECTION = 'chats'
-const DB_LITTEN_COLLECTION = 'littens'
-const DB_MESSAGE_COLLECTION = 'messages'
-const DB_USER_COLLECTION = 'users'
+const print = (message: string) => console.log(message)
 
-admin.initializeApp({ projectId })
-
-const parseDataDoc = (origObj) => {
+const parseDataDoc = (origObj: Record<string, any>) => {
   const obj = { ...origObj }
 
   if (obj?.location?.coordinates?.latitude) {
-    obj.location.coordinates = new admin.firestore.GeoPoint(
+    obj.location.coordinates = new GeoPoint(
       +obj.location.coordinates.latitude,
       +obj.location.coordinates.longitude,
     )
   }
 
   obj.metadata = {
-    createdAt: admin.firestore.FieldValue.serverTimestamp(),
-    updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+    createdAt: FieldValue.serverTimestamp(),
+    updatedAt: FieldValue.serverTimestamp(),
   }
 
   return obj
@@ -43,41 +45,45 @@ const cleanup = async () => {
     projectId,
   })
 
-  console.log('Clearing existing apps...')
-  await Promise.all(firebase.apps.map((app) => app.delete()))
+  print('Clearing existing apps...')
+  await Promise.all(getApps().map((app) => deleteApp(app))).catch(console.error)
 
-  console.log('Clearing previous data...')
+  print('Clearing previous data...')
   await testEnv.clearFirestore()
 }
 
 const main = async () => {
-  const auth = admin.auth()
-  const db = admin.firestore()
+  print(`Seeding the Firestore DB project '${projectId}'...`)
+
+  await cleanup()
+
+  const app = initializeApp({ projectId })
+  const auth = getAuth(app)
+  const db = getFirestore(app)
+
   db.settings({ ignoreUndefinedProperties: true })
+
   const dbChats = db.collection(DB_CHAT_COLLECTION)
   const dbLittens = db.collection(DB_LITTEN_COLLECTION)
   const dbMessages = db.collection(DB_MESSAGE_COLLECTION)
   const dbUsers = db.collection(DB_USER_COLLECTION)
 
-  console.log(`Seeding the Firestore DB project '${projectId}'...`)
-
-  await cleanup()
-
-  console.log('Clearing previous auth accounts...')
-  const authList = await admin.auth().listUsers()
-  const usersToDelete = []
+  print('Clearing previous auth accounts...')
+  const authList = await auth.listUsers()
+  const usersToDelete: string[] = []
   authList.users.forEach((user) => {
     usersToDelete.push(user.uid)
   })
   for (const userUidToDelete of usersToDelete) {
-    await admin.auth().deleteUser(userUidToDelete)
+    await auth.deleteUser(userUidToDelete)
   }
 
-  console.log(`Creating the auth account '${authUser.displayName}'...`)
+  print(`Creating the auth account '${authUser.displayName}'...`)
   const createdAuthUser = await auth.createUser(authUser)
   const authUserUid = createdAuthUser.uid
 
-  console.log(`Adding the user account '${authUserRecord.displayName}'...`)
+  print(`Adding the user account '${authUserRecord.displayName}'...`)
+  // @ts-ignore
   users.push({ ...authUserRecord, id: authUserUid })
 
   for (const user of users) {
@@ -86,7 +92,7 @@ const main = async () => {
     await dbUsers.doc(userId).set(userDoc)
   }
 
-  console.log(`Added ${users.length} users`)
+  print(`Added ${users.length} users`)
 
   for (const litten of littens) {
     const { id: littenId, ...littenObj } = litten
@@ -94,7 +100,7 @@ const main = async () => {
     await dbLittens.doc(littenId).set(littenDoc)
   }
 
-  console.log(`Added ${littens.length} littens`)
+  print(`Added ${littens.length} littens`)
 
   for (const chat of chats) {
     const { id: chatId, ...chatObj } = chat
@@ -102,7 +108,7 @@ const main = async () => {
     await dbChats.doc(chatId).set(chatDoc)
   }
 
-  console.log(`Added ${chats.length} chats`)
+  print(`Added ${chats.length} chats`)
 
   for (const message of messages) {
     const { id: messageId, ...messageObj } = message
@@ -110,10 +116,12 @@ const main = async () => {
     await dbMessages.doc(messageId).set(messageDoc)
   }
 
-  console.log(`Added ${messages.length} messages`)
+  print(`Added ${messages.length} messages`)
 
-  console.log('Done')
-  process.exit(0)
+  await Promise.resolve(() => {
+    print('Done')
+    process.exit(0)
+  })
 }
 
 main()
