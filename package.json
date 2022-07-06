@@ -109,7 +109,7 @@
     "@react-native-firebase/remote-config": "^14.11.1",
     "@react-native-firebase/storage": "^14.11.1",
     "@react-native-picker/picker": "^2.4.2",
-    "@react-navigation/bottom-tabs": "^6.1.0",
+    "@react-navigation/bottom-tabs": "^6.3.2",
     "@react-navigation/native": "^6.0.7",
     "@react-navigation/stack": "^6.1.0",
     "@reduxjs/toolkit": "^1.8.3",
