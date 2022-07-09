@@ -79,7 +79,6 @@
     "sanity-check": "yarn lint && yarn pretty && yarn type-check && yarn test",
     "sort-data": "./scripts/sort-data.js",
     "start:android": "yarn android && yarn start:firebase",
-    "start:firebase:script": "firebase use default && firebase emulators:exec './scripts/setup-emulator.js' --import=./firebase --export-on-exit --ui",
     "start:firebase": "firebase emulators:start --import=./firebase --export-on-exit",
     "start:ios": "yarn ios && yarn start:firebase",
     "start": "react-native start",

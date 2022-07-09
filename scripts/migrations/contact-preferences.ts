@@ -15,7 +15,7 @@ import {
 } from '../../lib/utils/constants/app'
 import type { ContactPreferences } from '../../lib/model/types/user'
 
-const dryRun = false
+const dryRun = true
 
 const projectId = 'litten-app'
 
