@@ -1,10 +1,14 @@
-import dayjs from '@utils/day'
+import { useMemo } from 'react'
 import { View } from 'react-native'
+import dayjs from '@utils/day'
 import { useTheme } from '@hooks'
 import { UIAvatar, UIHeader, UIIcon, UIText } from '@ui-elements'
 import { getFromListByKey, shortenName } from '@utils/functions'
 import { contactOptions } from '@utils/litten'
-import { PLACEHOLDER_USER_DISPLAY_NAME } from '@utils/constants'
+import {
+  DEFAULT_CONTACT_PREFERENCES,
+  PLACEHOLDER_USER_DISPLAY_NAME,
+} from '@utils/constants'
 import { translate } from '@utils/i18n'
 import type { BasicUser } from '@model/types/user'
 
@@ -22,13 +26,20 @@ const UserProfileDetailsScreen = ({ user }: UserProfileDetailsScreenProps) => {
     },
     photoURL,
   } = {
-    contactPreferences: [],
+    contactPreferences: DEFAULT_CONTACT_PREFERENCES,
     displayName: '',
     isOrganization: false,
     metadata: { createdAt: { seconds: 0 } },
     photoURL: '',
     ...user,
   }
+  const contactPreferencesEnabled = useMemo(
+    () =>
+      Object.entries(contactPreferences)
+        .map(([k, v]) => v && k)
+        .filter(Boolean),
+    [contactPreferences],
+  )
 
   const styles = createStyles((theme) => ({
     viewProfileContainer: {
@@ -95,7 +106,7 @@ const UserProfileDetailsScreen = ({ user }: UserProfileDetailsScreenProps) => {
             })}
           </UIText>
           <View style={styles.viewContactPreference}>
-            {contactPreferences.map(renderContactPreference)}
+            {contactPreferencesEnabled.map(renderContactPreference)}
           </View>
         </View>
         <View style={styles.viewProfileRight}>

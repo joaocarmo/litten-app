@@ -1,9 +1,15 @@
 import { locationSchema } from '@db/schemas/location'
 import { LITTEN_SPECIES_CAT, LITTEN_TYPE_ADOPT } from '@utils/constants'
+import type { BasicChat } from '@model/types/chat'
+import type { BasicMessage } from '@model/types/message'
+import type { BasicLitten } from '@model/types/litten'
+import type { BasicUser } from '@model/types/user'
 
 export const messageText1 = 'Have you come here for forgiveness?'
+
 export const messageText2 = 'Have you come to raise the dead?'
-export const users = [
+
+export const users: Partial<BasicUser>[] = [
   {
     id: 'superFakeUserId1',
     displayName: 'Luke Skywalker',
@@ -21,7 +27,8 @@ export const users = [
     location: { ...locationSchema, country: 'US' },
   },
 ]
-export const littens = [
+
+export const littens: BasicLitten[] = [
   {
     active: true,
     id: 'superFakeLittenId1',
@@ -47,7 +54,8 @@ export const littens = [
     tags: ['general', 'grievous'],
   },
 ]
-export const chats = [
+
+export const chats: BasicChat[] = [
   {
     id: 'superFakeChatId1',
     lastMessage: messageText1,
@@ -69,7 +77,8 @@ export const chats = [
     read: [users[0].id, users[1].id],
   },
 ]
-export const messages = [
+
+export const messages: BasicMessage[] = [
   {
     id: 'superFakeMessageId1',
     chatUid: chats[0].id,
@@ -83,6 +92,7 @@ export const messages = [
     userUid: littens[1].id,
   },
 ]
+
 export const database = {
   chats,
   littens,

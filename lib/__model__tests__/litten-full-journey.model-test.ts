@@ -85,7 +85,7 @@ describe('Performs an end-to-end user and litten journey', () => {
     })
     await littenOwner.get()
     expect(littenOwner.displayName).not.toHaveLength(0)
-    expect(littenOwner.contactPreferences).not.toHaveLength(0)
+    expect(Object.keys(littenOwner.contactPreferences)).not.toHaveLength(0)
   })
 
   it('user messages the litten owner', async () => {
