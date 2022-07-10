@@ -1,11 +1,11 @@
-#!/usr/bin/env node
-const camelCase = require('camelcase')
-const fs = require('fs')
-const glob = require('glob')
-const path = require('path')
-const util = require('util')
-const { Validator } = require('jsonschema')
-const baseSchema = require('../lib/translations/schemas/base.json')
+#!/usr/bin/env ts-node
+import camelCase from 'camelcase'
+import fs from 'fs'
+import glob from 'glob'
+import path from 'path'
+import util from 'util'
+import { Validator } from 'jsonschema'
+import baseSchema from '../lib/translations/schemas/base.json'
 
 const pathToTranslations = path.resolve(
   path.join(__dirname, '../lib/translations'),
@@ -17,12 +17,12 @@ const validatorOptions = { required: true }
 const outputFormat = '%s %s'
 const outputPadding = 24
 
-const pascalCase = (str) => camelCase(str, { pascalCase: true })
-const print = console.log
+const pascalCase = (str: string) => camelCase(str, { pascalCase: true })
+const print = (message: string) => console.log(message)
 
-const globAsync = (...args) =>
+const globAsync = (pattern: string): Promise<string[]> =>
   new Promise((resolve, reject) => {
-    glob(...args, (err, matches) => {
+    glob(pattern, (err, matches) => {
       if (err) {
         reject(err)
       }
@@ -30,18 +30,21 @@ const globAsync = (...args) =>
     })
   })
 
-const readFileAsync = (...args) =>
+const readFileAsync = (
+  path: fs.PathOrFileDescriptor,
+  options?: BufferEncoding,
+): Promise<string> =>
   new Promise((resolve, reject) => {
-    fs.readFile(...args, (err, data) => {
+    fs.readFile(path, options, (err, data) => {
       if (err) {
         reject(err)
       }
-      resolve(data)
+      resolve(data.toString())
     })
   })
 
 const getAllSchemas = async () => {
-  const allSchemas = []
+  const allSchemas: { schema: any; schemaRef: string }[] = []
   const schemas = await globAsync(`${pathToSchemas}/*.json`)
 
   for (const schemaFile of schemas) {
@@ -64,7 +67,7 @@ const getAllSchemas = async () => {
 }
 
 const main = async () => {
-  const results = {
+  const results: { valid: string[]; invalid: string[] } = {
     valid: [],
     invalid: [],
   }
