@@ -1,7 +1,10 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const { readFileSync } = require('fs')
-const testing = require('@firebase/rules-unit-testing')
-const {
+import { readFileSync } from 'fs'
+import {
+  assertFails,
+  assertSucceeds,
+  initializeTestEnvironment,
+} from '@firebase/rules-unit-testing'
+import {
   addDoc,
   collection,
   deleteDoc,
@@ -11,9 +14,7 @@ const {
   setDoc,
   setLogLevel,
   updateDoc,
-} = require('firebase/firestore')
-
-const { assertFails, assertSucceeds, initializeTestEnvironment } = testing
+} from 'firebase/firestore'
 
 const projectId = 'litten-app'
 
