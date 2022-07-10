@@ -73,22 +73,22 @@ const ProfileSettingsScreen = () => {
   }))
 
   const contactCall = useMemo(
-    () => user.contactPreferences.includes(USER_PREFERENCES_CONTACT_CALL),
+    () => user.contactPreferences[USER_PREFERENCES_CONTACT_CALL],
     [user.contactPreferences],
   )
 
   const contactEmail = useMemo(
-    () => user.contactPreferences.includes(USER_PREFERENCES_CONTACT_EMAIL),
+    () => user.contactPreferences[USER_PREFERENCES_CONTACT_EMAIL],
     [user.contactPreferences],
   )
 
   const contactInApp = useMemo(
-    () => user.contactPreferences.includes(USER_PREFERENCES_CONTACT_INAPP),
+    () => user.contactPreferences[USER_PREFERENCES_CONTACT_INAPP],
     [user.contactPreferences],
   )
 
   const contactSMS = useMemo(
-    () => user.contactPreferences.includes(USER_PREFERENCES_CONTACT_SMS),
+    () => user.contactPreferences[USER_PREFERENCES_CONTACT_SMS],
     [user.contactPreferences],
   )
 

@@ -8,5 +8,5 @@ export interface SearchClass {
 export interface SearchSettings {
   query?: string
   filters?: SearchFilters
-  user?: BasicUser
+  user?: Partial<BasicUser>
 }

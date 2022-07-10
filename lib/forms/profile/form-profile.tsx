@@ -158,11 +158,11 @@ const FormProfile = ({
           user.phoneNumber = ''
 
           // Clear these preferences if the phone number is cleared
-          if (user.contactPreferences.includes(USER_PREFERENCES_CONTACT_CALL)) {
+          if (user.contactPreferences?.[USER_PREFERENCES_CONTACT_CALL]) {
             user.contactPreferences = USER_PREFERENCES_CONTACT_CALL
           }
 
-          if (user.contactPreferences.includes(USER_PREFERENCES_CONTACT_SMS)) {
+          if (user.contactPreferences?.[USER_PREFERENCES_CONTACT_SMS]) {
             user.contactPreferences = USER_PREFERENCES_CONTACT_SMS
           }
         }

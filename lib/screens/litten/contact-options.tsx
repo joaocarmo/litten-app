@@ -1,4 +1,4 @@
-import { useCallback, useRef } from 'react'
+import { useCallback, useMemo, useRef } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { Pressable, View } from 'react-native'
 import type { GestureResponderEvent } from 'react-native'
@@ -37,7 +37,11 @@ const LittenContactOptions = ({
   const user: BasicUser = useRef(
     userProp instanceof User ? userProp.toJSON() : userProp,
   ).current
-  const { id: userUid, displayName } = user
+  const { id: userUid, contactPreferences, displayName } = user
+  const contactPreferencesEnabled = useMemo(
+    () => Object.values(contactPreferences).filter(Boolean).length > 0,
+    [contactPreferences],
+  )
   const navigation = useNavigation<LittenContactOptionsNavigationProp>()
   const {
     createStyles,
@@ -103,7 +107,7 @@ const LittenContactOptions = ({
     (contactOption: ListOfContactOptions) => {
       const { key, label, icon } = contactOption
 
-      if (user.contactPreferences.includes(key)) {
+      if (contactPreferences?.[key]) {
         return (
           <Pressable
             onPress={(e) => handleContact(e, contactOption)}
@@ -125,16 +129,16 @@ const LittenContactOptions = ({
       return null
     },
     [
+      contactPreferences,
       handleContact,
       styles.contactOptionContainer,
       styles.contactOptionContainerPressed,
-      user.contactPreferences,
       veryElevatedStyle,
     ],
   )
 
   const renderContactOptions = useCallback(() => {
-    if (!user?.contactPreferences?.length) {
+    if (!contactPreferencesEnabled) {
       return (
         <UIBalloon type="info" style={styles.contactOptionsEmpty}>
           {translate('screens.littenPost.emptyContactOptions', {
@@ -157,10 +161,10 @@ const LittenContactOptions = ({
     return contactOptions.map(renderContactOption)
   }, [
     authenticatedUserUid,
+    contactPreferencesEnabled,
     displayName,
     renderContactOption,
     styles.contactOptionsEmpty,
-    user?.contactPreferences?.length,
     userUid,
   ])
 

@@ -1,16 +1,21 @@
 import type { DBLocationObject } from '@db/schemas/location'
 import type { DBMetadata } from '@db/schemas/common'
 
-export type ImageSource = string | { uri: string }
+export type ContactPreferences = {
+  call: boolean
+  email: boolean
+  inApp: boolean
+  sms: boolean
+}
 
-export type BasicUser = {
-  id?: string
-  contactPreferences?: string[]
-  displayName?: string
-  email?: string
-  isOrganization?: boolean
-  location?: DBLocationObject
-  metadata?: DBMetadata
-  phoneNumber?: string
-  photoURL?: ImageSource
+export interface BasicUser {
+  id: string
+  contactPreferences: ContactPreferences
+  displayName: string
+  email: string
+  isOrganization: boolean
+  location: DBLocationObject
+  metadata: DBMetadata
+  phoneNumber: string
+  photoURL: string
 }

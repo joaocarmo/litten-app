@@ -7,6 +7,7 @@ import { distanceBetween } from '@utils/functions'
 import { translate } from '@utils/i18n'
 import { debugLog } from '@utils/dev'
 import type { LittenCardComponentProps } from '@components/litten-card/types'
+import type { BasicUser } from '@model/types/user'
 
 export type LittenSmartCardProps = Pick<
   LittenCardComponentProps,
@@ -19,7 +20,7 @@ const LittenSmartCard = ({
   onPressAction,
 }: LittenSmartCardProps) => {
   const [getUser] = useCacheUsers()
-  const [user, setUser] = useState({})
+  const [user, setUser] = useState<BasicUser>()
   const [isLoading, setIsLoading] = useState(true)
   const [distance, setDistance] = useState(0)
   const litten = useRef(
@@ -52,6 +53,10 @@ const LittenSmartCard = ({
   }, [])
 
   if (isLoading) {
+    return null
+  }
+
+  if (!user?.id) {
     return null
   }
 
