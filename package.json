@@ -77,7 +77,7 @@
     "react-devtools": "react-devtools",
     "redux-devtools": "(adb reverse tcp:8000 tcp:8000 || true) && redux-devtools --hostname=localhost --port=8000",
     "sanity-check": "yarn lint && yarn pretty && yarn type-check && yarn test",
-    "sort-data": "./scripts/sort-data.js",
+    "sort-data": "ts-node ./scripts/sort-data.ts",
     "start:android": "yarn android && yarn start:firebase",
     "start:firebase": "firebase emulators:start --import=./firebase --export-on-exit",
     "start:ios": "yarn ios && yarn start:firebase",
