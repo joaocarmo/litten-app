@@ -9,6 +9,9 @@ const DATA_COLUMN = 'Content'
 
 const parserOptions = undefined
 
+const print = (message: string) => console.log(message)
+const printError = (message: string) => console.error(message)
+
 const args = process.argv.slice(2)
 
 const getFileFromArgs = () => {
@@ -32,7 +35,7 @@ const getFileContents = (file) => {
     try {
       return fs.readFileSync(file, 'utf8')
     } catch (err) {
-      console.log(err)
+      printError(err)
     }
   }
 
@@ -52,14 +55,14 @@ const main = async () => {
   const isReverse = getReverseFromArgs()
 
   if (!file) {
-    console.error('ERROR: Expected one argument, none given')
+    printError('ERROR: Expected one argument, none given')
     process.exit(1)
   }
 
   const fileContents = getFileContents(file)
 
   if (!fileContents) {
-    console.error('ERROR: The file appears to be invalid')
+    printError('ERROR: The file appears to be invalid')
     process.exit(1)
   }
 
@@ -70,7 +73,7 @@ const main = async () => {
     )
 
     if (errors.length > 0) {
-      console.error(errors)
+      printError(errors)
       process.exit(1)
     }
 
@@ -78,7 +81,7 @@ const main = async () => {
     const flatContent = untransposeContent(transposedContent)
     const jsonContent = flatten.unflatten(flatContent)
 
-    console.log(JSON.stringify(jsonContent, null, 2))
+    print(JSON.stringify(jsonContent, null, 2))
   } else {
     const flatContent = flatten(JSON.parse(fileContents))
     const transposedContent = transposeContent(flatContent)

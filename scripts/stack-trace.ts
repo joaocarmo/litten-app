@@ -1,6 +1,6 @@
-#!/usr/bin/env node
-const fs = require('fs')
-const { SourceMapConsumer } = require('source-map')
+#!/usr/bin/env ts-node
+import fs from 'fs'
+import { SourceMapConsumer } from 'source-map'
 
 const main = async () => {
   const args = process.argv.slice(2)

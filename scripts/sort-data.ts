@@ -8,6 +8,8 @@ type Country = {
   }
 }
 
+const printError = (message: string) => console.error(message)
+
 const rootDir = process.cwd()
 const countriesFile = path.join(rootDir, 'lib/data/countries.json')
 
@@ -32,11 +34,11 @@ const main = () => {
 
       fs.writeFileSync(countriesFile, stringData, 'utf8')
     } catch (err) {
-      console.error(`ERROR: ${err.message}`)
+      printError(`ERROR: ${err.message}`)
       process.exit(1)
     }
   } else {
-    console.error(`ERROR: The file '${countriesFile}' doesn't exist`)
+    printError(`ERROR: The file '${countriesFile}' doesn't exist`)
     process.exit(1)
   }
 }

@@ -19,6 +19,7 @@ const outputPadding = 24
 
 const pascalCase = (str: string) => camelCase(str, { pascalCase: true })
 const print = (message: string) => console.log(message)
+const printError = (message: string) => console.error(message)
 
 const globAsync = (pattern: string): Promise<string[]> =>
   new Promise((resolve, reject) => {
@@ -113,12 +114,14 @@ const main = async () => {
             util.format(outputFormat, fileName.padEnd(outputPadding), isValid),
           )
         } catch (readErr) {
-          print(`Could not read the JSON file ${fileName}: ${readErr}`)
+          printError(`Could not read the JSON file ${fileName}: ${readErr}`)
         }
       }
     }
   } catch (globErr) {
-    print(`Could not read the JSON files in ${pathToTranslations}: ${globErr}`)
+    printError(
+      `Could not read the JSON files in ${pathToTranslations}: ${globErr}`,
+    )
   }
 }
 
