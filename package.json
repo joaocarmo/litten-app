@@ -160,7 +160,7 @@
     "@types/react-native": "^0.69.2",
     "@types/react-test-renderer": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
-    "@typescript-eslint/parser": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.6",
     "@withshepherd/faker": "^5.5.5",
     "babel-jest": "^28.1.2",
     "babel-loader": "^8.2.5",
