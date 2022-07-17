@@ -107,26 +107,26 @@ const LittenContactOptions = ({
     (contactOption: ListOfContactOptions) => {
       const { key, label, icon } = contactOption
 
-      if (contactPreferences?.[key]) {
-        return (
-          <Pressable
-            onPress={(e) => handleContact(e, contactOption)}
-            style={({ pressed }) => [
-              veryElevatedStyle,
-              styles.contactOptionContainer,
-              pressed ? styles.contactOptionContainerPressed : undefined,
-            ]}
-            key={key}
-          >
-            <UIText bold noPadding>
-              {label}
-            </UIText>
-            <UIIcon IconComponent={icon} circle selected />
-          </Pressable>
-        )
+      if (!contactPreferences?.[key]) {
+        return null
       }
 
-      return null
+      return (
+        <Pressable
+          onPress={(e) => handleContact(e, contactOption)}
+          style={({ pressed }) => [
+            veryElevatedStyle,
+            styles.contactOptionContainer,
+            pressed ? styles.contactOptionContainerPressed : undefined,
+          ]}
+          key={key}
+        >
+          <UIText bold noPadding>
+            {label}
+          </UIText>
+          <UIIcon IconComponent={icon} circle selected />
+        </Pressable>
+      )
     },
     [
       contactPreferences,
