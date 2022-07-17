@@ -51,6 +51,7 @@
     "bundle:ios": "react-native bundle --dev false --platform ios --entry-file index.js --bundle-output dist/index.ios.bundle --sourcemap-output dist/index.ios.bundle.map",
     "clear-cache:all": "watchman watch-del-all && rimraf /tmp/metro-* && rimraf node_modules/ && yarn install && yarn start --reset-cache",
     "clear-cache:babel": "rimraf node_modules/.cache/babel-loader/*",
+    "clear-cache:gradlew": "cd android && ./gradlew clean && cd -",
     "clear-cache:xcode": "rimraf ios/litten.xcworkspace/xcshareddata/ ios/litten.xcworkspace/xcuserdata/",
     "clear-cache": "watchman watch-del-all && rimraf /tmp/metro-* && yarn start --reset-cache",
     "firestore:seed": "firebase emulators:exec 'ts-node ./scripts/firestore-seed.ts' --import=./firebase --export-on-exit",
