@@ -1,17 +1,26 @@
-#!/usr/bin/env node
-const fs = require('fs')
-const path = require('path')
+#!/usr/bin/env ts-node
+import fs from 'fs'
+import path from 'path'
+
+type Country = {
+  name: {
+    common: string
+  }
+}
+
+const printError = (message: string) => console.error(message)
 
 const rootDir = process.cwd()
 const countriesFile = path.join(rootDir, 'lib/data/countries.json')
 
-const sortByLC = (firstEl, secondEl) => {
+const sortByLC = (firstEl: Country, secondEl: Country) => {
   const {
     name: { common: firstName },
   } = firstEl
   const {
     name: { common: secondName },
   } = secondEl
+
   return Intl.Collator().compare(firstName, secondName)
 }
 
@@ -22,13 +31,14 @@ const main = () => {
       const jsonData = JSON.parse(data)
       const sortedData = jsonData.sort(sortByLC)
       const stringData = JSON.stringify(sortedData)
+
       fs.writeFileSync(countriesFile, stringData, 'utf8')
     } catch (err) {
-      console.error(`ERROR: ${err.message}`)
+      printError(`ERROR: ${err.message}`)
       process.exit(1)
     }
   } else {
-    console.error(`ERROR: The file '${countriesFile}' doesn't exist`)
+    printError(`ERROR: The file '${countriesFile}' doesn't exist`)
     process.exit(1)
   }
 }

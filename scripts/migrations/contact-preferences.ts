@@ -92,6 +92,7 @@ const main = async () => {
     const db = getFirestore(app)
 
     print(`Using collection '${DB_USER_COLLECTION}'`)
+
     const dbUsers = db.collection(DB_USER_COLLECTION)
 
     const querySnapshot = await dbUsers.get()

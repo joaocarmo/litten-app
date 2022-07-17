@@ -1,13 +1,16 @@
-#!/usr/bin/env node
-const fs = require('fs')
-const flatten = require('flat')
-const Papa = require('papaparse')
+#!/usr/bin/env ts-node
+import fs from 'fs'
+import flatten from 'flat'
+import Papa from 'papaparse'
 
 const ARG_REVERSE = '--reverse'
 const KEY_COLUMN = "Identifiers (Don't change!)"
 const DATA_COLUMN = 'Content'
 
 const parserOptions = undefined
+
+const print = (message: string) => console.log(message)
+const printError = (message: string) => console.error(message)
 
 const args = process.argv.slice(2)
 
@@ -32,47 +35,45 @@ const getFileContents = (file) => {
     try {
       return fs.readFileSync(file, 'utf8')
     } catch (err) {
-      console.log(err)
+      printError(err)
     }
   }
 
   return null
 }
 
-const transposeContent = Object.entries
+const transposeContent: any = Object.entries
 
-const untransposeContent = Object.fromEntries
+const untransposeContent: any = Object.fromEntries
 
-const addHeaders = (content) => [[KEY_COLUMN, DATA_COLUMN], ...content]
+const addHeaders = (content: any[]) => [[KEY_COLUMN, DATA_COLUMN], ...content]
 
-const removeHeaders = ([headers, ...content]) => content
+const removeHeaders = ([headers, ...content]: any[]) => content
 
 const main = async () => {
   const file = getFileFromArgs()
   const isReverse = getReverseFromArgs()
 
   if (!file) {
-    console.error('ERROR: Expected one argument, none given')
+    printError('ERROR: Expected one argument, none given')
     process.exit(1)
   }
 
   const fileContents = getFileContents(file)
 
   if (!fileContents) {
-    console.error('ERROR: The file appears to be invalid')
+    printError('ERROR: The file appears to be invalid')
     process.exit(1)
   }
 
-  let output = ''
-
   if (isReverse) {
-    const { data: contentWithHeaders, errors } = Papa.parse(
+    const { data: contentWithHeaders, errors }: any = Papa.parse(
       fileContents,
       parserOptions,
     )
 
     if (errors.length > 0) {
-      console.error(errors)
+      printError(errors)
       process.exit(1)
     }
 
@@ -80,7 +81,7 @@ const main = async () => {
     const flatContent = untransposeContent(transposedContent)
     const jsonContent = flatten.unflatten(flatContent)
 
-    console.log(JSON.stringify(jsonContent, null, 2))
+    print(JSON.stringify(jsonContent, null, 2))
   } else {
     const flatContent = flatten(JSON.parse(fileContents))
     const transposedContent = transposeContent(flatContent)
