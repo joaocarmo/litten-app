@@ -28,7 +28,7 @@ export const users: Partial<BasicUser>[] = [
   },
 ]
 
-export const littens: BasicLitten[] = [
+export const littens: Partial<BasicLitten>[] = [
   {
     active: true,
     id: 'superFakeLittenId1',

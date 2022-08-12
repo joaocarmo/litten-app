@@ -53,11 +53,13 @@ export type UserPreferences = {
   useMetricUnits: boolean
   shareMetrics: boolean
 }
-export type LittenFeedObject = BasicLitten & {
-  distance?: number
-  isFromOrganization?: boolean
-  user?: BasicUser
-}
+export type LittenFeedObject = Partial<
+  BasicLitten & {
+    distance: number
+    isFromOrganization: boolean
+    user: BasicUser
+  }
+>
 export type IndexedAction = {
   index: number | null
 }

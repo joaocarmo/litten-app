@@ -1,13 +1,15 @@
-import type { BasicLitten } from '@model/types/litten'
+import type { AugmentedLitten } from '@model/types/litten'
 import type { BasicUser } from '@model/types/user'
 
 export type LittenCardComponentProps = {
   distance: number
   editable?: boolean
   isFavourite?: boolean
-  litten: BasicLitten & {
-    distance?: number
-  }
-  onPressAction?: (litten: BasicLitten) => void
+  litten: Partial<
+    AugmentedLitten & {
+      distance: number
+    }
+  >
+  onPressAction?: (litten: Partial<AugmentedLitten>) => void
   user: BasicUser
 }

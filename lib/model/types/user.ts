@@ -1,7 +1,7 @@
 import type { DBLocationObject } from '@db/schemas/location'
 import type { DBMetadata } from '@db/schemas/common'
 
-export type ContactPreferences = {
+export interface ContactPreferences {
   call: boolean
   email: boolean
   inApp: boolean
