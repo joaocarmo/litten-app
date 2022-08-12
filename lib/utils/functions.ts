@@ -471,7 +471,7 @@ export const getImagePath = (image: Image): string => {
  * @returns {string}
  */
 export const prepareReportMessage = (
-  chat: BasicChat,
+  chat: Partial<BasicChat>,
   user: BasicUser,
 ): string => {
   const chatUid = chat?.id ?? ''
