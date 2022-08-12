@@ -55,7 +55,7 @@ export const littens: Partial<BasicLitten>[] = [
   },
 ]
 
-export const chats: BasicChat[] = [
+export const chats: Partial<BasicChat>[] = [
   {
     id: 'superFakeChatId1',
     lastMessage: messageText1,
@@ -78,7 +78,7 @@ export const chats: BasicChat[] = [
   },
 ]
 
-export const messages: BasicMessage[] = [
+export const messages: Partial<BasicMessage>[] = [
   {
     id: 'superFakeMessageId1',
     chatUid: chats[0].id,

@@ -1,5 +1,6 @@
 import Auth from '@model/auth'
-import Chat, { ChatError } from '@model/chat'
+import Chat from '@model/chat'
+import { ChatError } from '@model/error/chat'
 import User from '@model/user'
 import { locationSchema } from '@db/schemas/location'
 import { debugLog, logError } from '@utils/dev'
