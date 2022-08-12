@@ -30,8 +30,12 @@ const LittenSmartCard = ({
   const [authenticatedUserCoordinates] = useUserCoordinates()
   const distanceKM = useMemo(
     () =>
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       littenProp.distance ??
       distanceBetween(litten.coordinates, authenticatedUserCoordinates),
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     [authenticatedUserCoordinates, litten.coordinates, littenProp.distance],
   )
 

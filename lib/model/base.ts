@@ -4,7 +4,7 @@ import { locationSchema } from '@db/schemas/location'
 import type { DBLocationObject, DBCoordinateObject } from '@db/schemas/location'
 import type { DBMetadata, DBTimestamp } from '@db/schemas/common'
 
-export default class Base {
+export default abstract class Base {
   #id
 
   #location

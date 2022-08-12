@@ -1,5 +1,6 @@
 /* eslint-disable class-methods-use-this */
-import firestore from '@db/firestore'
+import DataLoader from 'dataloader'
+import firestore, { batchLoaderFactory } from '@db/firestore'
 import storage from '@db/storage'
 import Auth from '@model/auth'
 import Base from '@model/base'
@@ -41,10 +42,14 @@ export default class User extends Base {
 
   #deferredSaveObject = {}
 
+  private dataLoader: DataLoader<string, BasicUser>
+
   constructor(basicUser: Partial<BasicUser>) {
     super()
+
     const { id = '', contactPreferences = DEFAULT_CONTACT_PREFERENCES } =
       basicUser
+
     this.mapDocToProps(basicUser)
     this.#search = new Search({
       user: {
@@ -54,6 +59,8 @@ export default class User extends Base {
     this.#auth = new Auth()
     this.#currentUser = this.#auth.currentUser
     this.#contactPreferences = contactPreferences
+
+    this.dataLoader = new DataLoader(User.loadAll)
   }
 
   static get firestore() {
@@ -78,6 +85,12 @@ export default class User extends Base {
 
   get storage() {
     return User.storage
+  }
+
+  private static loadAll = batchLoaderFactory<BasicUser>(this.collection)
+
+  private getById(id: string) {
+    return this.dataLoader.load(id)
   }
 
   get displayName(): string | undefined {
@@ -251,14 +264,10 @@ export default class User extends Base {
   }
 
   async get(): Promise<void> {
-    let user
-
-    if (this.id) {
-      user = await this.collection.doc(this.id).get()
-    }
+    const user = await this.getById(this.id)
 
     if (user) {
-      this.mapDocToProps({ ...user.data(), id: user?.id })
+      this.mapDocToProps(user)
     }
   }
 

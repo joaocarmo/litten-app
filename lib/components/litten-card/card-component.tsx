@@ -25,7 +25,6 @@ import cardComponentStyles from '@components/litten-card/card-component.styles'
 import type { LittenCardComponentProps } from '@components/litten-card/types'
 import type { IconTypeComponent } from '@ui-elements/types'
 import type { LittenCardComponentNavigationProp } from '@utils/types/routes'
-import type { BasicLitten } from '@model/types/litten'
 
 const UI_ICON_SIZE_MICRO_MINI_AVG = (UI_ICON_SIZE_MICRO + UI_ICON_SIZE_MINI) / 2
 
@@ -92,7 +91,7 @@ const LittenCardComponent = ({
 
   const handleOnPressLitten = useCallback(() => {
     navigation.navigate(SCREEN_LITTEN_POST, {
-      litten: litten as BasicLitten,
+      litten: litten.toJSON(),
       user,
     })
   }, [litten, navigation, user])
@@ -207,7 +206,6 @@ const LittenCardComponent = ({
 LittenCardComponent.defaultProps = {
   editable: false,
   isFavourite: false,
-  litten: {},
 }
 
 export default memo<LittenCardComponentProps>(LittenCardComponent, areEqual)

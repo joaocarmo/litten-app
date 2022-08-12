@@ -1,7 +1,8 @@
 /* eslint-disable class-methods-use-this */
-/* eslint-disable max-classes-per-file */
-import firestore from '@db/firestore'
+import DataLoader from 'dataloader'
+import firestore, { batchLoaderFactory } from '@db/firestore'
 import Base from '@model/base'
+import { ChatError } from '@model/error/chat'
 import Message from '@model/message'
 import type { BasicChat } from '@model/types/chat'
 import {
@@ -9,19 +10,6 @@ import {
   DB_CHAT_COLLECTION,
 } from '@utils/constants'
 import { logError } from '@utils/dev'
-
-export class ChatError extends Error {
-  constructor(...args: string[]) {
-    super(...args)
-
-    // Maintains proper stack trace for where the error was thrown
-    if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, ChatError)
-    }
-
-    this.name = 'ChatError'
-  }
-}
 
 export default class Chat extends Base {
   static #cursor = null
@@ -42,9 +30,14 @@ export default class Chat extends Base {
 
   #read
 
-  constructor(basicChat: BasicChat) {
+  private dataLoader: DataLoader<string, BasicChat>
+
+  constructor(basicChat: Partial<BasicChat>) {
     super()
+
     this.mapDocToProps(basicChat)
+
+    this.dataLoader = new DataLoader(Chat.loadAll)
   }
 
   static get firestore(): any {
@@ -53,6 +46,12 @@ export default class Chat extends Base {
 
   static get collection(): any {
     return Chat.firestore().collection(DB_CHAT_COLLECTION)
+  }
+
+  private static loadAll = batchLoaderFactory<BasicChat>(this.collection)
+
+  private getById(id: string) {
+    return this.dataLoader.load(id)
   }
 
   static clearCursor() {
@@ -147,7 +146,7 @@ export default class Chat extends Base {
     return this.#read
   }
 
-  buildObject(): BasicChat {
+  buildObject(): Omit<BasicChat, 'id'> {
     const chatObject = {
       lastMessage: this.#lastMessage,
       lastMessageBy: this.#lastMessageBy,
@@ -158,6 +157,7 @@ export default class Chat extends Base {
       read: this.#read,
       metadata: this.buildMetadata(),
     }
+
     return chatObject
   }
 
@@ -170,7 +170,7 @@ export default class Chat extends Base {
     participants = [],
     read = [],
     ...otherProps
-  }: BasicChat) {
+  }: Partial<BasicChat>) {
     super.mapCommonProps(otherProps)
     this.#lastMessage = lastMessage
     this.#lastMessageBy = lastMessageBy

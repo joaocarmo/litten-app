@@ -1,12 +1,13 @@
 /* eslint-disable class-methods-use-this */
-import firestore from '@db/firestore'
+import DataLoader from 'dataloader'
+import firestore, { batchLoaderFactory } from '@db/firestore'
 import storage, { uploadAndGetDownloadUrl } from '@db/storage'
 import Base from '@model/base'
 import { LittenError } from '@model/error/litten'
 import { string2tags } from '@utils/functions'
 import { logError } from '@utils/dev'
 import { DB_LITTEN_COLLECTION, STORAGE_LITTEN_PHOTOS } from '@utils/constants'
-import type { BasicLitten } from '@model/types/litten'
+import type { AugmentedLitten, BasicLitten } from '@model/types/litten'
 import type { BasicUser } from '@model/types/user'
 import type { PhotoObject } from '@store/types'
 
@@ -29,11 +30,16 @@ export default class Litten extends Base {
 
   #tags
 
-  constructor({ user = null, ...basicLitten }: BasicLitten) {
+  private dataLoader: DataLoader<string, BasicLitten>
+
+  constructor({ user = null, ...basicLitten }: Partial<AugmentedLitten>) {
     super()
+
     this.mapDocToProps(basicLitten)
     this.#user = user
     this.#userUid = this.#userUid || this.#user?.id
+
+    this.dataLoader = new DataLoader(Litten.loadAll)
   }
 
   static get firestore(): any {
@@ -66,6 +72,12 @@ export default class Litten extends Base {
     }
 
     return ''
+  }
+
+  private static loadAll = batchLoaderFactory<BasicLitten>(this.collection)
+
+  private getById(id: string) {
+    return this.dataLoader.load(id)
   }
 
   get active(): (boolean & (void | boolean)) | boolean {
@@ -164,7 +176,7 @@ export default class Litten extends Base {
     return [...new Set(tags)]
   }
 
-  buildObject(): BasicLitten {
+  buildObject(): Omit<BasicLitten, 'id'> {
     const littenObject = {
       active: this.#active,
       location: this.buildLocation(),
@@ -177,6 +189,7 @@ export default class Litten extends Base {
       tags: this.#tags,
       metadata: this.buildMetadata(),
     }
+
     return littenObject
   }
 
@@ -190,7 +203,7 @@ export default class Litten extends Base {
     userUid = '',
     tags = [],
     ...otherProps
-  }: BasicLitten): void {
+  }: Partial<BasicLitten>): void {
     super.mapCommonProps(otherProps)
     this.#active = active
     this.#photos = photos
@@ -203,12 +216,10 @@ export default class Litten extends Base {
   }
 
   async get(): Promise<void> {
-    if (this.id) {
-      const litten = await this.collection.doc(this.id).get()
+    const litten = await this.getById(this.id)
 
-      if (litten) {
-        this.mapDocToProps({ ...litten.data(), id: litten.id })
-      }
+    if (litten) {
+      this.mapDocToProps(litten)
     }
   }
 
