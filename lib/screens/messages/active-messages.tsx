@@ -9,7 +9,6 @@ import {
   usePaddingBottom,
   useActiveChats,
   useAppNotifications,
-  useCacheLittens,
   useCurrentlyActiveChat,
   useDebouncedCallback,
   useTheme,
@@ -18,6 +17,8 @@ import {
 import { Alert } from 'react-native'
 import { SwipeListView } from 'react-native-swipe-list-view'
 import Chat from '@model/chat'
+import Litten from '@model/litten'
+import User from '@model/user'
 import BottomLoader, {
   ListFooterComponentStyle,
 } from '@components/bottom-loader'
@@ -38,7 +39,6 @@ import {
 } from '@utils/constants'
 import { translate } from '@utils/i18n'
 import type { ActiveMessagesNavigationProp } from '@utils/types/routes'
-import User from '@model/user'
 
 const ActiveMessages = () => {
   const [chats, setChats] = useActiveChats()
@@ -48,7 +48,6 @@ const ActiveMessages = () => {
   const [isLoadingMore, setIsLoadingMore] = useState(false)
   const [lastChat, setLastChat] = useState(null)
   const [listIsScrollable, setListIsScrollable] = useState(false)
-  const [getLitten] = useCacheLittens()
   const userUid = useUserUid()
   const [currentlyActiveChat] = useCurrentlyActiveChat()
   const navigation = useNavigation<ActiveMessagesNavigationProp>()
@@ -107,7 +106,8 @@ const ActiveMessages = () => {
       for (const chat of chats) {
         const recipientUid = chat.participants.find((id) => id !== userUid)
 
-        littensToFetch.push(getLitten(chat.littenUid))
+        const littenModel = new Litten({ id: chat.littenUid })
+        littensToFetch.push(littenModel.get())
 
         const userModel = new User({ id: recipientUid })
         recipientsToFetch.push(userModel.get())
@@ -136,7 +136,7 @@ const ActiveMessages = () => {
     }
 
     setIsLoading(false)
-  }, [chats, getLitten, handleChatNotifications, userUid])
+  }, [chats, handleChatNotifications, userUid])
 
   const [updateChats] = useDebouncedCallback(
     useCallback(

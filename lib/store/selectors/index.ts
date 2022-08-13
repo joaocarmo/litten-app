@@ -13,7 +13,6 @@ import {
 } from '../types'
 import { BasicUser } from '../../model/types/user'
 import { BasicMessage } from '../../model/types/message'
-import { BasicLitten } from '../../model/types/litten'
 import { BasicChat } from '../../model/types/chat'
 import { DBCoordinateObject } from '../../db/schemas/location'
 
@@ -28,8 +27,6 @@ export const activeChatsSelector = (state: State): Array<BasicChat> =>
   state.chats.active
 export const cacheFeedSelector = (state: State): Array<LittenFeedObject> =>
   state.cache.feed
-export const cacheLittenSelector = (state: State): ObjectById<BasicLitten> =>
-  state.cache.littens
 export const chatSelector = (state: State): Chats => state.chats
 export const currentlyActiveChatSelector = (state: State): string =>
   state.appSettings.currentlyActiveChat
