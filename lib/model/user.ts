@@ -13,6 +13,7 @@ import {
   STORAGE_USER_AVATAR,
 } from '@utils/constants'
 import { debugLog, logError } from '@utils/dev'
+import type { FirebaseAuthTypes } from '@react-native-firebase/auth'
 import type { BasicUser, ContactPreferences } from '@model/types/user'
 import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
 
@@ -21,27 +22,27 @@ export default class User extends Base<BasicUser> {
 
   private dataLoader: DataLoader<string, BasicUser>
 
-  #auth
+  #auth: Auth
 
-  #contactPreferences
+  #contactPreferences: ContactPreferences
 
-  #currentUser
+  #currentUser: FirebaseAuthTypes.User
 
-  #displayName
+  #displayName: string
 
-  #email
+  #email: string
 
-  #isOrganization
+  #isOrganization: boolean
 
-  #phoneNumber
+  #phoneNumber: string
 
-  #photoURL
+  #photoURL: string
 
-  #search
+  #search: Search
 
   #deferredSave = false
 
-  #deferredSaveObject = {}
+  #deferredSaveObject: Partial<BasicUser> = {}
 
   constructor(basicUser: Partial<BasicUser>) {
     super()

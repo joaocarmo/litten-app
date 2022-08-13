@@ -86,7 +86,7 @@ export default class Message extends Base<BasicMessage> {
     this.#userUid = userUid
   }
 
-  subscribeToChat(): any {
+  subscribeToChat() {
     let chatMessages = this.collection.where('chatUid', '==', this.#chatUid)
     chatMessages = chatMessages.limit(this.#numOfItemsPerPage)
     chatMessages = chatMessages.orderBy(

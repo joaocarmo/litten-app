@@ -135,7 +135,7 @@ describe('Performs an end-to-end user and litten journey', () => {
     const chatMessages = await newMessage.subscribeToChat().get()
     expect(chatMessages.size).toBe(1)
     const [newChatMessage] = chatMessages.docs
-    expect(new Message(newChatMessage)).toEqual(newMessage)
+    expect(new Message(newChatMessage.data())).toEqual(newMessage)
     await newChat.get()
     expect(newChat.read).toHaveLength(1)
     expect(newChat.read).toContain(userUid)
