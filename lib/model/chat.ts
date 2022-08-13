@@ -264,6 +264,7 @@ export default class Chat extends Base {
         }
       }
 
+      this.dataLoader.clear(this.id)
       return this.collection.doc(this.id).update(newUpdateObject)
     }
   }

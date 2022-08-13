@@ -303,6 +303,7 @@ export default class User extends Base {
           ...newUpdateObject,
         }
       } else {
+        this.dataLoader.clear(this.id)
         this.collection.doc(this.id).update(newUpdateObject)
       }
     }
@@ -321,6 +322,7 @@ export default class User extends Base {
 
   async save(): Promise<void> {
     if (this.#deferredSave) {
+      this.dataLoader.clear(this.id)
       return this.collection.doc(this.id).update(this.#deferredSaveObject)
     }
   }

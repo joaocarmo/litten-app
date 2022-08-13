@@ -257,6 +257,7 @@ export default class Litten extends Base {
       logError(err)
     }
 
+    this.dataLoader.clear(this.id)
     await doc.update({
       photos,
     })
