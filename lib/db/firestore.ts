@@ -1,4 +1,5 @@
-import type { BatchLoadFn } from 'dataloader'
+import DataLoaderBase from 'dataloader'
+import type { BatchLoadFn, Options } from 'dataloader'
 import {
   APP_IS_DEV,
   FIRESTORE_EMULATOR_HOST,
@@ -62,6 +63,14 @@ export const clearPersistence = async () => {
     } catch (err) {
       debugLog(err)
     }
+  }
+}
+
+const cacheMap = new Map()
+
+export class DataLoader<K, V, C = K> extends DataLoaderBase<K, V, C> {
+  constructor(batchLoadFn: BatchLoadFn<K, V>, options?: Options<K, V, C>) {
+    super(batchLoadFn, { ...options, cacheMap })
   }
 }
 

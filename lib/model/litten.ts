@@ -1,6 +1,5 @@
 /* eslint-disable class-methods-use-this */
-import DataLoader from 'dataloader'
-import firestore, { batchLoaderFactory } from '@db/firestore'
+import firestore, { batchLoaderFactory, DataLoader } from '@db/firestore'
 import storage, { uploadAndGetDownloadUrl } from '@db/storage'
 import Base from '@model/base'
 import { LittenError } from '@model/error/litten'
@@ -39,7 +38,9 @@ export default class Litten extends Base {
     this.#user = user
     this.#userUid = this.#userUid || this.#user?.id
 
-    this.dataLoader = new DataLoader(Litten.loadAll)
+    this.dataLoader = new DataLoader(Litten.loadAll, {
+      cacheKeyFn: Litten.keyFn,
+    })
   }
 
   static get firestore(): any {
@@ -75,6 +76,8 @@ export default class Litten extends Base {
   }
 
   private static loadAll = batchLoaderFactory<BasicLitten>(this.collection)
+
+  private static keyFn = (id: string) => `${DB_LITTEN_COLLECTION}/${id}`
 
   private getById(id: string) {
     return this.dataLoader.load(id)

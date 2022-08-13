@@ -1,6 +1,5 @@
 /* eslint-disable class-methods-use-this */
-import DataLoader from 'dataloader'
-import firestore, { batchLoaderFactory } from '@db/firestore'
+import firestore, { batchLoaderFactory, DataLoader } from '@db/firestore'
 import storage from '@db/storage'
 import Auth from '@model/auth'
 import Base from '@model/base'
@@ -60,7 +59,7 @@ export default class User extends Base {
     this.#currentUser = this.#auth.currentUser
     this.#contactPreferences = contactPreferences
 
-    this.dataLoader = new DataLoader(User.loadAll)
+    this.dataLoader = new DataLoader(User.loadAll, { cacheKeyFn: User.keyFn })
   }
 
   static get firestore() {
@@ -88,6 +87,8 @@ export default class User extends Base {
   }
 
   private static loadAll = batchLoaderFactory<BasicUser>(this.collection)
+
+  private static keyFn = (id: string) => `${DB_USER_COLLECTION}/${id}`
 
   private getById(id: string) {
     return this.dataLoader.load(id)

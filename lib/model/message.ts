@@ -1,6 +1,5 @@
 /* eslint-disable class-methods-use-this */
-import DataLoader from 'dataloader'
-import firestore, { batchLoaderFactory } from '@db/firestore'
+import firestore, { batchLoaderFactory, DataLoader } from '@db/firestore'
 import Base from '@model/base'
 import { MessageError } from '@model/error/message'
 import { debugLog } from '@utils/dev'
@@ -28,7 +27,9 @@ export default class Message extends Base {
 
     this.mapDocToProps(basicMessage)
 
-    this.dataLoader = new DataLoader(Message.loadAll)
+    this.dataLoader = new DataLoader(Message.loadAll, {
+      cacheKeyFn: Message.keyFn,
+    })
   }
 
   static get firestore(): any {
@@ -48,6 +49,8 @@ export default class Message extends Base {
   }
 
   private static loadAll = batchLoaderFactory<BasicMessage>(this.collection)
+
+  private static keyFn = (id: string) => `${DB_MESSAGE_COLLECTION}/${id}`
 
   private getById(id: string) {
     return this.dataLoader.load(id)
