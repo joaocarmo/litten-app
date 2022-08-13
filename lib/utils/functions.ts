@@ -471,7 +471,7 @@ export const getImagePath = (image: Image): string => {
  * @returns {string}
  */
 export const prepareReportMessage = (
-  chat: BasicChat,
+  chat: Partial<BasicChat>,
   user: BasicUser,
 ): string => {
   const chatUid = chat?.id ?? ''
@@ -512,7 +512,7 @@ export const littenToHeaderTitle = ({
   species = '',
   type = '',
   title = '',
-}: BasicLitten = {}): string => {
+}: Partial<BasicLitten> = {}): string => {
   const speciesLabel = getFromListByKey(littenSpeciesList, species)?.labelOne
   const typeLabel = getFromListByKey(littenTypes, type)?.label
 
@@ -531,7 +531,10 @@ export const littenToHeaderTitle = ({
  * @param {boolean} [univeral=false] - Whether to generate a universal link
  * @returns {string}
  */
-export const buildShareURI = (litten: BasicLitten, univeral = true): string => {
+export const buildShareURI = (
+  litten: Partial<BasicLitten>,
+  univeral = true,
+): string => {
   if (litten?.id) {
     if (!univeral) {
       return `litten://litten/${litten.id}`

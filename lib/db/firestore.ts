@@ -1,3 +1,5 @@
+import DataLoaderBase from 'dataloader'
+import type { BatchLoadFn, Options } from 'dataloader'
 import {
   APP_IS_DEV,
   FIRESTORE_EMULATOR_HOST,
@@ -6,6 +8,7 @@ import {
 } from '@utils/env'
 import { debugLog } from '@utils/dev'
 import firestore from '@react-native-firebase/firestore'
+import type { FirebaseFirestoreTypes } from '@react-native-firebase/firestore'
 
 /**
  * Use Local Emulator Suite during development
@@ -62,5 +65,33 @@ export const clearPersistence = async () => {
     }
   }
 }
+
+const cacheMap = new Map()
+
+export class DataLoader<K, V, C = K> extends DataLoaderBase<K, V, C> {
+  constructor(batchLoadFn: BatchLoadFn<K, V>, options?: Options<K, V, C>) {
+    super(batchLoadFn, { ...options, cacheMap })
+  }
+}
+
+interface BaseRecord {
+  id: string
+}
+
+export const batchLoaderFactory =
+  <T extends BaseRecord = BaseRecord>(
+    collection: FirebaseFirestoreTypes.CollectionReference,
+  ): BatchLoadFn<string, T> =>
+  async (ids: readonly string[]) => {
+    const results = await collection
+      .where(firestore.FieldPath.documentId(), 'in', ids)
+      .get()
+
+    if (results.empty) {
+      return []
+    }
+
+    return results.docs.map((user) => ({ id: user.id, ...user.data() } as T))
+  }
 
 export default firestore

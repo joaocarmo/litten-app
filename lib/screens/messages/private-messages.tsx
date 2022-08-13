@@ -20,6 +20,7 @@ import {
 } from '@hooks'
 import Chat from '@model/chat'
 import Message from '@model/message'
+import type { BasicMessage } from '@model/types/message'
 import type { BasicChat } from '@model/types/chat'
 import type { BasicLitten } from '@model/types/litten'
 import type { BasicUser } from '@model/types/user'
@@ -215,7 +216,7 @@ const PrivateMessages = ({
   const immediatelyAppend = useCallback(
     ({ text }) => {
       debugLog('[MESSAGES] immediatelyAppend', text)
-      const previousMessages = [...messages]
+      const previousMessages = [...messages] as Partial<BasicMessage>[]
       previousMessages.push(
         messageMapper({
           id: new Date().getTime(),
@@ -269,7 +270,7 @@ const PrivateMessages = ({
 
   return (
     <EasyChat
-      messages={messages as IMessage[]}
+      messages={messages as unknown as IMessage[]}
       onLoadEarlier={() => {
         onLoadEarlier()
       }}
