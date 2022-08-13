@@ -90,7 +90,10 @@ const LittenCardComponent = ({
   )
 
   const handleOnPressLitten = useCallback(() => {
-    navigation.navigate(SCREEN_LITTEN_POST, { litten, user })
+    navigation.navigate(SCREEN_LITTEN_POST, {
+      litten: litten.toJSON(),
+      user,
+    })
   }, [litten, navigation, user])
 
   const handleOnPressAction = useCallback(() => {
@@ -203,7 +206,6 @@ const LittenCardComponent = ({
 LittenCardComponent.defaultProps = {
   editable: false,
   isFavourite: false,
-  litten: {},
 }
 
 export default memo<LittenCardComponentProps>(LittenCardComponent, areEqual)

@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-import firestore from '@db/firestore'
+import firestore, { batchLoaderFactory, DataLoader } from '@db/firestore'
 import Base from '@model/base'
 import { MessageError } from '@model/error/message'
 import { debugLog } from '@utils/dev'
@@ -20,9 +20,16 @@ export default class Message extends Base {
 
   #userUid
 
-  constructor(basicMessage: BasicMessage) {
+  private dataLoader: DataLoader<string, BasicMessage>
+
+  constructor(basicMessage: Partial<BasicMessage>) {
     super()
+
     this.mapDocToProps(basicMessage)
+
+    this.dataLoader = new DataLoader(Message.loadAll, {
+      cacheKeyFn: Message.keyFn,
+    })
   }
 
   static get firestore(): any {
@@ -39,6 +46,14 @@ export default class Message extends Base {
 
   get collection(): any {
     return Message.collection
+  }
+
+  private static loadAll = batchLoaderFactory<BasicMessage>(this.collection)
+
+  private static keyFn = (id: string) => `${DB_MESSAGE_COLLECTION}/${id}`
+
+  private getById(id: string) {
+    return this.dataLoader.load(id)
   }
 
   get chatUid(): string {
@@ -65,13 +80,14 @@ export default class Message extends Base {
     this.#userUid = userUid
   }
 
-  buildObject(): BasicMessage {
+  buildObject(): Omit<BasicMessage, 'id'> {
     const messageObject = {
       chatUid: this.#chatUid,
       text: this.#text,
       userUid: this.#userUid,
       metadata: this.buildMetadata(),
     }
+
     return messageObject
   }
 
@@ -80,7 +96,7 @@ export default class Message extends Base {
     text = '',
     userUid = '',
     ...otherProps
-  }: BasicMessage) {
+  }: Partial<BasicMessage>) {
     super.mapCommonProps(otherProps)
     this.#chatUid = chatUid
     this.#text = text
@@ -103,15 +119,13 @@ export default class Message extends Base {
   }
 
   async get() {
-    if (this.id) {
-      const message = await this.collection.doc(this.id).get()
+    const message = await this.getById(this.id)
 
-      if (message) {
-        this.mapDocToProps({ ...message.data(), id: message.id })
-      }
-    } else {
+    if (!message) {
       throw new MessageError('Needs a message uid to get')
     }
+
+    this.mapDocToProps(message)
   }
 
   async getAll() {
