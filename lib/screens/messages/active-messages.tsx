@@ -9,8 +9,6 @@ import {
   usePaddingBottom,
   useActiveChats,
   useAppNotifications,
-  useCacheLittens,
-  useCacheUsers,
   useCurrentlyActiveChat,
   useDebouncedCallback,
   useTheme,
@@ -19,6 +17,8 @@ import {
 import { Alert } from 'react-native'
 import { SwipeListView } from 'react-native-swipe-list-view'
 import Chat from '@model/chat'
+import Litten from '@model/litten'
+import User from '@model/user'
 import BottomLoader, {
   ListFooterComponentStyle,
 } from '@components/bottom-loader'
@@ -48,8 +48,6 @@ const ActiveMessages = () => {
   const [isLoadingMore, setIsLoadingMore] = useState(false)
   const [lastChat, setLastChat] = useState(null)
   const [listIsScrollable, setListIsScrollable] = useState(false)
-  const [getLitten] = useCacheLittens()
-  const [getUser] = useCacheUsers()
   const userUid = useUserUid()
   const [currentlyActiveChat] = useCurrentlyActiveChat()
   const navigation = useNavigation<ActiveMessagesNavigationProp>()
@@ -108,8 +106,11 @@ const ActiveMessages = () => {
       for (const chat of chats) {
         const recipientUid = chat.participants.find((id) => id !== userUid)
 
-        littensToFetch.push(getLitten(chat.littenUid))
-        recipientsToFetch.push(getUser(recipientUid))
+        const littenModel = new Litten({ id: chat.littenUid })
+        littensToFetch.push(littenModel.get())
+
+        const userModel = new User({ id: recipientUid })
+        recipientsToFetch.push(userModel.get())
       }
 
       const [littens, recipients] = await Promise.all([
@@ -135,7 +136,7 @@ const ActiveMessages = () => {
     }
 
     setIsLoading(false)
-  }, [chats, getLitten, getUser, handleChatNotifications, userUid])
+  }, [chats, handleChatNotifications, userUid])
 
   const [updateChats] = useDebouncedCallback(
     useCallback(
@@ -247,7 +248,8 @@ const ActiveMessages = () => {
       debugLog('[CHATS] confirmDeleteConversation')
       const { participants } = chat
       const recipientUid = participants.find((id) => id !== userUid)
-      const recipient = await getUser(recipientUid)
+      const recipient = new User({ id: recipientUid })
+      await recipient.get()
       Alert.alert(
         translate('cta.deleteConversation'),
         translate('feedback.confirmMessages.deleteConversation', {
@@ -266,7 +268,7 @@ const ActiveMessages = () => {
         ],
       )
     },
-    [deleteConversation, getUser, userUid],
+    [deleteConversation, userUid],
   )
 
   const hiddenOptions = useMemo(
