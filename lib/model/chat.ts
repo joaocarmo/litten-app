@@ -193,7 +193,7 @@ export default class Chat extends Base {
     }
   }
 
-  async get(userUid?: string) {
+  async get(userUid?: string): Promise<BasicChat | undefined> {
     let chat
 
     if (this.id) {
@@ -213,6 +213,7 @@ export default class Chat extends Base {
 
     if (chat) {
       this.mapDocToProps({ ...chat.data(), id: chat?.id })
+      return this.toJSON()
     }
   }
 

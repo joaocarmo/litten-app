@@ -1,7 +1,1 @@
-export {
-  addLitten,
-  addUser,
-  setFeed,
-  setLittens,
-  setUsers,
-} from '@store/reducers/cache'
+export { addLitten, setFeed, setLittens } from '@store/reducers/cache'

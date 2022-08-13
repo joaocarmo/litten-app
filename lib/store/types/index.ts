@@ -150,5 +150,4 @@ export type Chats = {
 export type Cache = {
   feed: LittenFeedObject[]
   littens: ObjectById<BasicLitten>
-  users: ObjectById<BasicUser>
 }

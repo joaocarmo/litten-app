@@ -218,11 +218,12 @@ export default class Litten extends Base {
     this.#tags = tags
   }
 
-  async get(): Promise<void> {
+  async get(): Promise<BasicLitten | undefined> {
     const litten = await this.getById(this.id)
 
     if (litten) {
       this.mapDocToProps(litten)
+      return this.toJSON()
     }
   }
 

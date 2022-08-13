@@ -30,8 +30,6 @@ export const cacheFeedSelector = (state: State): Array<LittenFeedObject> =>
   state.cache.feed
 export const cacheLittenSelector = (state: State): ObjectById<BasicLitten> =>
   state.cache.littens
-export const cacheUserSelector = (state: State): ObjectById<BasicUser> =>
-  state.cache.users
 export const chatSelector = (state: State): Chats => state.chats
 export const currentlyActiveChatSelector = (state: State): string =>
   state.appSettings.currentlyActiveChat

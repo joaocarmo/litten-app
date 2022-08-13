@@ -5,7 +5,6 @@ import useAppSettings from '@hooks/use-app-settings'
 import useAuthUser from '@hooks/use-auth-user'
 import useCacheFeed from '@hooks/use-cache-feed'
 import useCacheLittens from '@hooks/use-cache-littens'
-import useCacheUsers from '@hooks/use-cache-users'
 import useChatMessages from '@hooks/use-chat-messages'
 import useConnectionStatus from '@hooks/use-connection-status'
 import useCrashlytics from '@hooks/use-crashlytics'
@@ -43,7 +42,6 @@ export {
   useAuthUser,
   useCacheFeed,
   useCacheLittens,
-  useCacheUsers,
   useChatMessages,
   useConnectionStatus,
   useCrashlytics,

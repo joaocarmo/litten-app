@@ -264,11 +264,12 @@ export default class User extends Base {
     await this.#currentUser.reauthenticateWithCredential(authCredential)
   }
 
-  async get(): Promise<void> {
+  async get(): Promise<BasicUser | undefined> {
     const user = await this.getById(this.id)
 
     if (user) {
       this.mapDocToProps(user)
+      return this.toJSON()
     }
   }
 
