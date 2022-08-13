@@ -7,6 +7,8 @@ categories:
     label: "fix"
   - title: "♻ Refactoring"
     label: "refactor"
+  - title: "🧹 Chores"
+    label: "chore"
   - title: "🚧 Testing"
     label: "tests"
   - title: "🧑‍💻 DevOps"
