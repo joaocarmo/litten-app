@@ -1,18 +1,25 @@
-/* eslint-disable class-methods-use-this */
 import firestore from '@db/firestore'
+import Services from '@model/services'
+import { BaseModel } from '@model/types/base'
 import { locationSchema } from '@db/schemas/location'
 import type { DBLocationObject, DBCoordinateObject } from '@db/schemas/location'
 import type { DBMetadata, DBTimestamp } from '@db/schemas/common'
 
-export default abstract class Base {
-  #id
+export default abstract class Base<
+  T extends BaseModel = BaseModel,
+> extends Services {
+  #id: string | undefined
 
-  #location
+  #location: DBLocationObject = locationSchema
 
-  #metadata
+  #metadata: DBMetadata | undefined
 
-  get firestore(): any {
-    return firestore
+  constructor(object?: Partial<T>) {
+    super()
+
+    if (object) {
+      this.mapCommonProps(object)
+    }
   }
 
   get id(): string | undefined {
@@ -35,6 +42,7 @@ export default abstract class Base {
     const {
       coordinates: { latitude, longitude, _latitude, _longitude },
     } = this.#location ?? {}
+
     return {
       latitude: latitude ?? _latitude ?? null,
       longitude: longitude ?? _longitude ?? null,
@@ -60,6 +68,7 @@ export default abstract class Base {
     if (this.#metadata?.createdAt) {
       const { seconds, _seconds } = this.#metadata.createdAt
       const s = seconds ?? _seconds
+
       return s ? s * 1000 : s
     }
   }
@@ -68,25 +77,22 @@ export default abstract class Base {
     if (this.#metadata?.updatedAt) {
       const { seconds, _seconds } = this.#metadata.updatedAt
       const s = seconds ?? _seconds
+
       return s ? s * 1000 : s
     }
   }
 
-  mapCommonProps({
-    id = '',
-    location = locationSchema,
-    metadata = {
+  mapCommonProps({ id, location, metadata }: Partial<T>): void {
+    this.#id = id || ''
+    this.#metadata = {
       createdAt: {},
       updatedAt: {},
-    },
-  }: {
-    id?: string
-    location?: DBLocationObject
-    metadata?: DBMetadata
-  }): void {
-    this.#id = id
-    this.#location = { ...locationSchema, ...location }
-    this.#metadata = metadata
+      ...metadata,
+    }
+
+    if (location) {
+      this.#location = { ...locationSchema, ...location }
+    }
   }
 
   buildLocation(): DBLocationObject {
@@ -101,10 +107,7 @@ export default abstract class Base {
     }
   }
 
-  buildMetadata(): {
-    createdAt: DBTimestamp
-    updatedAt: DBTimestamp
-  } {
+  buildMetadata(): DBMetadata {
     const createdAt = this.#metadata?.createdAt?.seconds
       ? (this.#metadata?.createdAt as DBTimestamp)
       : (firestore.FieldValue.serverTimestamp() as DBTimestamp)
@@ -116,11 +119,14 @@ export default abstract class Base {
     }
   }
 
-  buildObject(): any {
-    return {}
+  buildObject(): Omit<T, 'id'> {
+    return {
+      location: this.buildLocation(),
+      metadata: this.buildMetadata(),
+    } as Omit<T, 'id'>
   }
 
-  toJSON(): any {
+  toJSON(): T {
     const object = this.buildObject()
 
     if (object.location?.coordinates) {
@@ -143,8 +149,7 @@ export default abstract class Base {
 
     return {
       id: this.#id,
-      key: this.#id,
       ...object,
-    }
+    } as T
   }
 }

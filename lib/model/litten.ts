@@ -1,6 +1,6 @@
 /* eslint-disable class-methods-use-this */
 import firestore, { batchLoaderFactory, DataLoader } from '@db/firestore'
-import storage, { uploadAndGetDownloadUrl } from '@db/storage'
+import { uploadAndGetDownloadUrl } from '@db/storage'
 import Base from '@model/base'
 import { LittenError } from '@model/error/litten'
 import { string2tags } from '@utils/functions'
@@ -10,7 +10,11 @@ import type { AugmentedLitten, BasicLitten } from '@model/types/litten'
 import type { BasicUser } from '@model/types/user'
 import type { PhotoObject } from '@store/types'
 
-export default class Litten extends Base {
+export default class Litten extends Base<BasicLitten> {
+  static COLLECTION_NAME = DB_LITTEN_COLLECTION
+
+  private dataLoader: DataLoader<string, BasicLitten>
+
   #active
 
   #photos
@@ -29,12 +33,11 @@ export default class Litten extends Base {
 
   #tags
 
-  private dataLoader: DataLoader<string, BasicLitten>
-
   constructor({ user = null, ...basicLitten }: Partial<AugmentedLitten>) {
     super()
 
     this.mapDocToProps(basicLitten)
+
     this.#user = user
     this.#userUid = this.#userUid || this.#user?.id
 
@@ -43,44 +46,20 @@ export default class Litten extends Base {
     })
   }
 
-  static get firestore(): any {
-    return firestore
+  private static loadAll = batchLoaderFactory<BasicLitten>(this.collection)
+
+  private static keyFn = (id: string) => `${Litten.COLLECTION_NAME}/${id}`
+
+  private getById(id: string) {
+    return this.dataLoader.load(id)
   }
 
-  static get collection(): any {
-    return Litten.firestore().collection(DB_LITTEN_COLLECTION)
-  }
-
-  static get storage(): any {
-    return storage
-  }
-
-  get firestore(): any {
-    return Litten.firestore
-  }
-
-  get collection(): any {
-    return Litten.collection
-  }
-
-  get storage(): any {
-    return Litten.storage
-  }
-
-  get storageRef(): string {
+  get storagePath(): string {
     if (this.id) {
       return `${STORAGE_LITTEN_PHOTOS}/${this.id}`
     }
 
     return ''
-  }
-
-  private static loadAll = batchLoaderFactory<BasicLitten>(this.collection)
-
-  private static keyFn = (id: string) => `${DB_LITTEN_COLLECTION}/${id}`
-
-  private getById(id: string) {
-    return this.dataLoader.load(id)
   }
 
   get active(): (boolean & (void | boolean)) | boolean {
@@ -180,7 +159,7 @@ export default class Litten extends Base {
   }
 
   buildObject(): Omit<BasicLitten, 'id'> {
-    const littenObject = {
+    return {
       active: this.#active,
       location: this.buildLocation(),
       photos: this.#photos,
@@ -192,8 +171,6 @@ export default class Litten extends Base {
       tags: this.#tags,
       metadata: this.buildMetadata(),
     }
-
-    return littenObject
   }
 
   mapDocToProps({
@@ -223,6 +200,7 @@ export default class Litten extends Base {
 
     if (litten) {
       this.mapDocToProps(litten)
+
       return this.toJSON()
     }
   }
@@ -316,7 +294,7 @@ export default class Litten extends Base {
 
   async deletePhotos(): Promise<void> {
     try {
-      const storageRef = this.storage().ref(this.storageRef)
+      const storageRef = this.storageRef()
       const filesRef = await storageRef.listAll()
 
       for (const fileRef of filesRef.items) {

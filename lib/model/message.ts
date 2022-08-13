@@ -1,4 +1,3 @@
-/* eslint-disable class-methods-use-this */
 import firestore, { batchLoaderFactory, DataLoader } from '@db/firestore'
 import Base from '@model/base'
 import { MessageError } from '@model/error/message'
@@ -9,18 +8,20 @@ import {
   DB_MESSAGE_BATCH_AMOUNT,
 } from '@utils/constants'
 
-export default class Message extends Base {
+export default class Message extends Base<BasicMessage> {
+  static COLLECTION_NAME = DB_MESSAGE_COLLECTION
+
+  private dataLoader: DataLoader<string, BasicMessage>
+
   #cursor = null
 
   #numOfItemsPerPage = DB_MESSAGE_BATCH_AMOUNT
 
-  #chatUid
+  #chatUid: string
 
-  #text
+  #text: string
 
-  #userUid
-
-  private dataLoader: DataLoader<string, BasicMessage>
+  #userUid: string
 
   constructor(basicMessage: Partial<BasicMessage>) {
     super()
@@ -32,25 +33,9 @@ export default class Message extends Base {
     })
   }
 
-  static get firestore(): any {
-    return firestore
-  }
-
-  static get collection(): any {
-    return Message.firestore().collection(DB_MESSAGE_COLLECTION)
-  }
-
-  get firestore(): any {
-    return Message.firestore
-  }
-
-  get collection(): any {
-    return Message.collection
-  }
-
   private static loadAll = batchLoaderFactory<BasicMessage>(this.collection)
 
-  private static keyFn = (id: string) => `${DB_MESSAGE_COLLECTION}/${id}`
+  private static keyFn = (id: string) => `${Message.COLLECTION_NAME}/${id}`
 
   private getById(id: string) {
     return this.dataLoader.load(id)
@@ -81,14 +66,12 @@ export default class Message extends Base {
   }
 
   buildObject(): Omit<BasicMessage, 'id'> {
-    const messageObject = {
+    return {
       chatUid: this.#chatUid,
       text: this.#text,
       userUid: this.#userUid,
       metadata: this.buildMetadata(),
     }
-
-    return messageObject
   }
 
   mapDocToProps({
@@ -126,6 +109,7 @@ export default class Message extends Base {
     }
 
     this.mapDocToProps(message)
+
     return this.toJSON()
   }
 
@@ -145,9 +129,10 @@ export default class Message extends Base {
     return this.subscribeToChat().get()
   }
 
-  async append(): Promise<BasicMessage> {
+  async append() {
     if (!this.id && this.#chatUid && this.#text && this.#userUid) {
       const messageObject = this.buildObject()
+
       return this.collection.add(messageObject)
     } else {
       throw new MessageError(
@@ -158,8 +143,10 @@ export default class Message extends Base {
 
   async create(): Promise<BasicMessage> {
     const message = await this.append()
+
     this.id = message.id
-    return message
+
+    return this.toJSON()
   }
 
   async delete() {

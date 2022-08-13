@@ -1,4 +1,3 @@
-/* eslint-disable class-methods-use-this */
 import firestore, { batchLoaderFactory, DataLoader } from '@db/firestore'
 import Base from '@model/base'
 import { ChatError } from '@model/error/chat'
@@ -10,10 +9,14 @@ import {
 } from '@utils/constants'
 import { logError } from '@utils/dev'
 
-export default class Chat extends Base {
+export default class Chat extends Base<BasicChat> {
+  static COLLECTION_NAME = DB_CHAT_COLLECTION
+
   static #cursor = null
 
   static #numOfItemsPerPage = CHATS_INITIAL_NUM_TO_RENDER
+
+  private dataLoader: DataLoader<string, BasicChat>
 
   #lastMessage
 
@@ -29,8 +32,6 @@ export default class Chat extends Base {
 
   #read
 
-  private dataLoader: DataLoader<string, BasicChat>
-
   constructor(basicChat: Partial<BasicChat>) {
     super()
 
@@ -39,21 +40,13 @@ export default class Chat extends Base {
     this.dataLoader = new DataLoader(Chat.loadAll, { cacheKeyFn: Chat.keyFn })
   }
 
-  static get firestore(): any {
-    return firestore
-  }
-
-  static get collection(): any {
-    return Chat.firestore().collection(DB_CHAT_COLLECTION)
-  }
-
   private static loadAll = batchLoaderFactory<BasicChat>(this.collection)
 
-  private static keyFn = (id: string) => `${DB_CHAT_COLLECTION}/${id}`
+  private static keyFn = (id: string) => `${Chat.COLLECTION_NAME}/${id}`
 
-  private getById(id: string) {
-    return this.dataLoader.load(id)
-  }
+  // private getById(id: string) {
+  //   return this.dataLoader.load(id)
+  // }
 
   static clearCursor() {
     this.#cursor = null
@@ -111,14 +104,6 @@ export default class Chat extends Base {
     return unreadDocs.length
   }
 
-  get firestore(): any {
-    return Chat.firestore
-  }
-
-  get collection(): any {
-    return Chat.collection
-  }
-
   get lastMessage(): string {
     return this.#lastMessage || ''
   }
@@ -148,7 +133,7 @@ export default class Chat extends Base {
   }
 
   buildObject(): Omit<BasicChat, 'id'> {
-    const chatObject = {
+    return {
       lastMessage: this.#lastMessage,
       lastMessageBy: this.#lastMessageBy,
       littenSpecies: this.#littenSpecies,
@@ -158,8 +143,6 @@ export default class Chat extends Base {
       read: this.#read,
       metadata: this.buildMetadata(),
     }
-
-    return chatObject
   }
 
   mapDocToProps({
@@ -213,6 +196,7 @@ export default class Chat extends Base {
 
     if (chat) {
       this.mapDocToProps({ ...chat.data(), id: chat?.id })
+
       return this.toJSON()
     }
   }

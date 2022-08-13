@@ -1,6 +1,4 @@
-/* eslint-disable class-methods-use-this */
 import firestore, { batchLoaderFactory, DataLoader } from '@db/firestore'
-import storage from '@db/storage'
 import Auth from '@model/auth'
 import Base from '@model/base'
 import Litten from '@model/litten'
@@ -18,7 +16,11 @@ import { debugLog, logError } from '@utils/dev'
 import type { BasicUser, ContactPreferences } from '@model/types/user'
 import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
 
-export default class User extends Base {
+export default class User extends Base<BasicUser> {
+  static COLLECTION_NAME = DB_USER_COLLECTION
+
+  private dataLoader: DataLoader<string, BasicUser>
+
   #auth
 
   #contactPreferences
@@ -41,8 +43,6 @@ export default class User extends Base {
 
   #deferredSaveObject = {}
 
-  private dataLoader: DataLoader<string, BasicUser>
-
   constructor(basicUser: Partial<BasicUser>) {
     super()
 
@@ -50,6 +50,7 @@ export default class User extends Base {
       basicUser
 
     this.mapDocToProps(basicUser)
+
     this.#search = new Search({
       user: {
         id,
@@ -62,33 +63,9 @@ export default class User extends Base {
     this.dataLoader = new DataLoader(User.loadAll, { cacheKeyFn: User.keyFn })
   }
 
-  static get firestore() {
-    return firestore
-  }
-
-  static get collection() {
-    return User.firestore().collection(DB_USER_COLLECTION)
-  }
-
-  static get storage() {
-    return storage
-  }
-
-  get firestore() {
-    return User.firestore
-  }
-
-  get collection() {
-    return User.collection
-  }
-
-  get storage() {
-    return User.storage
-  }
-
   private static loadAll = batchLoaderFactory<BasicUser>(this.collection)
 
-  private static keyFn = (id: string) => `${DB_USER_COLLECTION}/${id}`
+  private static keyFn = (id: string) => `${User.COLLECTION_NAME}/${id}`
 
   private getById(id: string) {
     return this.dataLoader.load(id)
@@ -225,7 +202,7 @@ export default class User extends Base {
   }
 
   buildObject(): Omit<BasicUser, 'id'> {
-    const userObject = {
+    return {
       contactPreferences: this.#contactPreferences,
       displayName: this.#displayName,
       email: this.#email,
@@ -235,8 +212,6 @@ export default class User extends Base {
       photoURL: this.#photoURL,
       metadata: this.buildMetadata(),
     }
-
-    return userObject
   }
 
   mapDocToProps({
@@ -269,6 +244,7 @@ export default class User extends Base {
 
     if (user) {
       this.mapDocToProps(user)
+
       return this.toJSON()
     }
   }
