@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
-import { useCacheLittens, useCacheUsers } from '@hooks'
 import { UILoader } from '@ui-elements'
 import PostScreen from '@screens/litten/post'
 import Litten from '@model/litten'
@@ -14,32 +13,29 @@ const LittenPostSharedScreen = ({
   },
 }: LittenPostSharedScreenProps) => {
   const [littenUid, setLittenUid] = useState(littenUidProp)
-  const [getLitten] = useCacheLittens()
-  const [getUser] = useCacheUsers()
   const [litten, setLitten] = useState({})
   const [user, setUser] = useState({})
   const [isLoading, setIsLoading] = useState(true)
   const navigation = useNavigation()
 
-  const fetchLittenAndUser = useCallback(
-    async (littenId) => {
-      const sharedLittenObject = await getLitten(littenId)
+  const fetchLittenAndUser = useCallback(async (littenId) => {
+    const sharedLittenObject = new Litten({ id: littenId })
+    await sharedLittenObject.get()
 
-      if (sharedLittenObject && sharedLittenObject.userUid) {
-        debugLog('[SHARED] Litten was found')
-        const sharedLitten = new Litten(sharedLittenObject)
-        const sharedUser = new User(await getUser(sharedLitten.userUid))
-        setLitten(sharedLitten)
-        setUser(sharedUser)
-      } else {
-        debugLog('[SHARED] Litten is missing')
-        setLittenUid('')
-      }
+    if (sharedLittenObject && sharedLittenObject.userUid) {
+      debugLog('[SHARED] Litten was found')
+      const sharedLitten = new Litten(sharedLittenObject)
+      const sharedUser = new User({ id: sharedLitten.userUid })
+      await sharedUser.get()
+      setLitten(sharedLitten)
+      setUser(sharedUser)
+    } else {
+      debugLog('[SHARED] Litten is missing')
+      setLittenUid('')
+    }
 
-      setIsLoading(false)
-    },
-    [getLitten, getUser],
-  )
+    setIsLoading(false)
+  }, [])
 
   useEffect(() => {
     if (littenUid) {

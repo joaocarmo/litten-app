@@ -1,11 +1,12 @@
 import Toast from 'react-native-simple-toast'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { useCacheUsers, useFavourite, useUserCoordinates } from '@hooks'
+import { useFavourite, useUserCoordinates } from '@hooks'
 import LittenCardComponent from '@components/litten-card/card-component'
 import Litten from '@model/litten'
 import { distanceBetween } from '@utils/functions'
 import { translate } from '@utils/i18n'
 import { debugLog } from '@utils/dev'
+import User from '@model/user'
 import type { LittenCardComponentProps } from '@components/litten-card/types'
 import type { BasicUser } from '@model/types/user'
 
@@ -19,7 +20,6 @@ const LittenSmartCard = ({
   editable,
   onPressAction,
 }: LittenSmartCardProps) => {
-  const [getUser] = useCacheUsers()
   const [user, setUser] = useState<BasicUser>()
   const [isLoading, setIsLoading] = useState(true)
   const [distance, setDistance] = useState(0)
@@ -43,12 +43,13 @@ const LittenSmartCard = ({
 
   const setUp = useCallback(
     async (item) => {
-      const userInfo = await getUser(item.userUid)
-      setUser(userInfo)
+      const userModel = new User({ id: item.userUid })
+      await userModel.get()
+      setUser(userModel.toJSON())
       setDistance(distanceKM)
       setIsLoading(false)
     },
-    [distanceKM, getUser],
+    [distanceKM],
   )
 
   useEffect(() => {
