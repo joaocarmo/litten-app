@@ -118,7 +118,7 @@ export default class Message extends Base {
     return chatMessages
   }
 
-  async get() {
+  async get(): Promise<BasicMessage | undefined> {
     const message = await this.getById(this.id)
 
     if (!message) {
@@ -126,6 +126,7 @@ export default class Message extends Base {
     }
 
     this.mapDocToProps(message)
+    return this.toJSON()
   }
 
   async getAll() {

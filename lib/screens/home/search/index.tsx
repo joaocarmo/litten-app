@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import {
   useCacheFeed,
-  useCacheUsers,
   useSearchFilters,
   useSearchQuery,
   useUserCoordinates,
 } from '@hooks'
+import User from '@model/user'
 import Litten from '@model/litten'
 import Search from '@model/search'
 import SearchResults from '@screens/home/search/results'
@@ -20,7 +20,6 @@ import { debugLog } from '@utils/dev'
 const HomeSearchScreen = () => {
   const [query] = useSearchQuery()
   const [filters] = useSearchFilters()
-  const [getUser] = useCacheUsers()
   const [allLittens, setAllLittens] = useCacheFeed()
   const [userCoordinates] = useUserCoordinates()
   const [littens, setLittens] = useState([])
@@ -50,7 +49,8 @@ const HomeSearchScreen = () => {
       const usersToFetch = []
 
       for (const litten of data) {
-        usersToFetch.push(getUser(litten.userUid))
+        const user = new User({ id: litten.userUid })
+        usersToFetch.push(user.get())
       }
 
       const users = await Promise.all(usersToFetch)
@@ -73,7 +73,7 @@ const HomeSearchScreen = () => {
 
       return augmentedData
     },
-    [getUser, userCoordinates],
+    [userCoordinates],
   )
 
   const getFeed = useCallback(
