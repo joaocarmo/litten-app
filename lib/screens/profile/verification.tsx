@@ -38,6 +38,7 @@ const ProfileVerificationScreen = ({
 
       await auth.currentUser.reload()
       await auth.currentUser.getIdToken(true)
+
       setAuthUser(auth.currentUser)
     }
 

@@ -1,13 +1,19 @@
 /* eslint-disable class-methods-use-this */
+import auth from '@db/auth'
 import firestore from '@db/firestore'
 import storage from '@db/storage'
 
 export default abstract class Services {
+  static AUTH_PROVIDER = auth.EmailAuthProvider
+
   static COLLECTION_NAME = ''
+
+  AUTH_PROVIDER: typeof auth.EmailAuthProvider
 
   COLLECTION_NAME: string
 
   constructor() {
+    this.AUTH_PROVIDER = (this.constructor as typeof Services).AUTH_PROVIDER
     this.COLLECTION_NAME = (this.constructor as typeof Services).COLLECTION_NAME
   }
 
@@ -17,6 +23,14 @@ export default abstract class Services {
 
   static get collection() {
     return Services.firestore().collection(this.COLLECTION_NAME)
+  }
+
+  static get auth() {
+    return auth()
+  }
+
+  get auth() {
+    return auth()
   }
 
   get firestore() {

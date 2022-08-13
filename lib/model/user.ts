@@ -233,9 +233,10 @@ export default class User extends Base<BasicUser> {
   }
 
   async reauthenticate(password: string): Promise<void> {
-    const provider = this.#auth.EmailAuthProvider
+    const provider = this.AUTH_PROVIDER
     const email = this.#email
     const authCredential = provider.credential(email, password)
+
     await this.#currentUser.reauthenticateWithCredential(authCredential)
   }
 

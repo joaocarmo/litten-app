@@ -1,30 +1,28 @@
 /* eslint-disable class-methods-use-this */
 import { USE_GRAVATAR } from '@utils/env'
-import auth from '@db/auth'
+import Services from '@model/services'
 import { AuthError } from '@model/error/auth'
 import { parseAvatar } from '@utils/functions'
 import { uploadUserAvatar } from '@db/storage'
 import { actionCodeSettings } from '@config/auth'
 import type { AuthSettings } from '@model/types/auth'
 
-export default class Auth {
-  EmailAuthProvider = auth.EmailAuthProvider
+export default class Auth extends Services {
+  #id: string
 
-  #id
+  #photoURL: string
 
-  #photoURL
+  #callingCode: string
 
-  #callingCode
+  #country: string
 
-  #country
+  #displayName: string
 
-  #displayName
+  #email: string
 
-  #email
+  #password: string
 
-  #password
-
-  #phoneNumber
+  #phoneNumber: string
 
   constructor({
     id = '',
@@ -36,6 +34,8 @@ export default class Auth {
     password = '',
     phoneNumber = '',
   }: AuthSettings = {}) {
+    super()
+
     const user = this.currentUser
 
     if (user) {
@@ -56,23 +56,15 @@ export default class Auth {
     }
   }
 
-  static get auth(): any {
-    return auth()
-  }
-
-  static signOut(): Promise<any> {
+  static signOut() {
     return this.auth.signOut()
   }
 
-  get auth(): any {
-    return Auth.auth
-  }
-
-  get signOut(): any {
+  get signOut() {
     return Auth.signOut
   }
 
-  get currentUser(): any {
+  get currentUser() {
     return this.auth.currentUser
   }
 
@@ -142,7 +134,7 @@ export default class Auth {
     return this.#photoURL
   }
 
-  async updateOne(field: string, value: any): Promise<void> {
+  async updateOne(field: string, value: string): Promise<void> {
     if (this.currentUser) {
       return this.currentUser.updateProfile({
         [field]: value,
@@ -150,7 +142,7 @@ export default class Auth {
     }
   }
 
-  async signIn(): Promise<any> {
+  async signIn() {
     if (this.#email && this.#password) {
       await this.auth.signInWithEmailAndPassword(this.#email, this.#password)
       this.#id = this.currentUser.uid
@@ -159,7 +151,7 @@ export default class Auth {
     }
   }
 
-  async sendPasswordResetEmail(): Promise<any> {
+  async sendPasswordResetEmail() {
     if (this.#email) {
       await this.auth.sendPasswordResetEmail(this.#email)
     } else {
@@ -167,21 +159,21 @@ export default class Auth {
     }
   }
 
-  async checkActionCode(actionCode: string): Promise<any> {
+  async checkActionCode(actionCode: string) {
     return this.auth.checkActionCode(actionCode)
   }
 
-  async applyActionCode(actionCode: string): Promise<any> {
+  async applyActionCode(actionCode: string) {
     return this.auth.applyActionCode(actionCode)
   }
 
-  async sendEmailVerification(): Promise<any> {
+  async sendEmailVerification() {
     if (this.currentUser) {
       await this.currentUser.sendEmailVerification(actionCodeSettings)
     }
   }
 
-  async create(): Promise<any> {
+  async create() {
     if (this.#email && this.#password) {
       // Create the basic auth user
       await this.auth.createUserWithEmailAndPassword(

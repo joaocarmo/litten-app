@@ -35,16 +35,16 @@ export type BasicAuthUser = {
   readonly email: string
   readonly emailVerified: boolean
   readonly isAnonymous: boolean
-  readonly isOrganization: boolean
+  readonly isOrganization?: boolean
   readonly metadata: {
-    creationTime: number
-    lastSignInTime: number
+    creationTime?: string
+    lastSignInTime?: string
   }
   readonly phoneNumber: string | null
   readonly photoURL: string
   readonly providerData: unknown[]
   readonly providerId: string
-  readonly refreshToken: string
+  readonly refreshToken?: string
   readonly uid: string
 }
 export type ThemePreferences = 'dark' | 'light' | 'system'
