@@ -1,11 +1,10 @@
-/* eslint-disable class-methods-use-this */
-import firestore, { batchLoaderFactory, DataLoader } from '@db/firestore'
 import { uploadAndGetDownloadUrl } from '@db/storage'
 import Base from '@model/base'
 import { LittenError } from '@model/error/litten'
 import { string2tags } from '@utils/functions'
 import { logError } from '@utils/dev'
 import { DB_LITTEN_COLLECTION, STORAGE_LITTEN_PHOTOS } from '@utils/constants'
+import type { FirebaseFirestoreTypes } from '@react-native-firebase/firestore'
 import type { AugmentedLitten, BasicLitten } from '@model/types/litten'
 import type { BasicUser } from '@model/types/user'
 import type { PhotoObject } from '@store/types'
@@ -13,25 +12,23 @@ import type { PhotoObject } from '@store/types'
 export default class Litten extends Base<BasicLitten> {
   static COLLECTION_NAME = DB_LITTEN_COLLECTION
 
-  private dataLoader: DataLoader<string, BasicLitten>
+  #active: boolean
 
-  #active
+  #photos: PhotoObject[]
 
-  #photos
+  #species: string
 
-  #species
+  #story: string
 
-  #story
+  #title: string
 
-  #title
+  #type: string
 
-  #type
+  #user: BasicUser | null
 
-  #user
+  #userUid: string
 
-  #userUid
-
-  #tags
+  #tags: string[]
 
   constructor({ user = null, ...basicLitten }: Partial<AugmentedLitten>) {
     super()
@@ -40,18 +37,6 @@ export default class Litten extends Base<BasicLitten> {
 
     this.#user = user
     this.#userUid = this.#userUid || this.#user?.id
-
-    this.dataLoader = new DataLoader(Litten.loadAll, {
-      cacheKeyFn: Litten.keyFn,
-    })
-  }
-
-  private static loadAll = batchLoaderFactory<BasicLitten>(this.collection)
-
-  private static keyFn = (id: string) => `${Litten.COLLECTION_NAME}/${id}`
-
-  private getById(id: string) {
-    return this.dataLoader.load(id)
   }
 
   get storagePath(): string {
@@ -130,8 +115,8 @@ export default class Litten extends Base<BasicLitten> {
     this.#user = user
   }
 
-  get contactPreferences(): string[] {
-    return this.#user?.contactPreferences || []
+  get contactPreferences(): Partial<BasicUser['contactPreferences']> {
+    return this.#user?.contactPreferences ?? {}
   }
 
   get tags(): string[] {
@@ -195,8 +180,8 @@ export default class Litten extends Base<BasicLitten> {
     this.#tags = tags
   }
 
-  async get(): Promise<BasicLitten | undefined> {
-    const litten = await this.getById(this.id)
+  async get() {
+    const litten = await this.services.litten.get(this.id)
 
     if (litten) {
       this.mapDocToProps(litten)
@@ -205,22 +190,28 @@ export default class Litten extends Base<BasicLitten> {
     }
   }
 
+  // eslint-disable-next-line class-methods-use-this
   async savePhoto(fileURI: string, docId: string): Promise<string> {
     const filename = fileURI.split('/').pop()
     const strRef = `${STORAGE_LITTEN_PHOTOS}/${docId}/${filename}`
     const downloadURL = await uploadAndGetDownloadUrl(strRef, fileURI)
+
     return downloadURL
   }
 
-  async savePhotos(doc): Promise<void> {
+  async savePhotos(
+    doc: FirebaseFirestoreTypes.DocumentReference<FirebaseFirestoreTypes.DocumentData>,
+  ) {
     const docId = doc.id
     const photos = []
 
     const photosToSave = []
 
     for (const photo of this.#photos) {
-      if (typeof photo?.uri === 'string') {
-        photosToSave.push(this.savePhoto(photo?.uri, docId))
+      const photoUri = typeof photo === 'string' ? photo : photo.uri
+
+      if (typeof photoUri === 'string') {
+        photosToSave.push(this.savePhoto(photoUri, docId))
       }
     }
 
@@ -236,7 +227,6 @@ export default class Litten extends Base<BasicLitten> {
       logError(err)
     }
 
-    this.dataLoader.clear(this.id)
     await doc.update({
       photos,
     })
@@ -244,37 +234,40 @@ export default class Litten extends Base<BasicLitten> {
     this.#photos = photos
   }
 
-  async create(): Promise<any> {
+  async create() {
     try {
       const littenObject = this.buildObject()
-      const litten = await this.collection.add(littenObject)
-      this.id = litten.id
 
-      await this.savePhotos(litten)
+      const littenRef = await this.services.litten.create(littenObject)
 
-      return litten
+      if (littenRef) {
+        this.id = littenRef.id
+
+        await this.savePhotos(littenRef)
+
+        return littenRef
+      }
     } catch (err) {
       throw new LittenError(err)
     }
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  async update(): Promise<void> {}
+  // eslint-disable-next-line @typescript-eslint/no-empty-function, class-methods-use-this
+  async update() {}
 
-  async save(): Promise<void> {
+  save() {
     if (this.id) {
-      await this.update()
+      return this.update()
     } else {
-      await this.create()
+      return this.create()
     }
   }
 
-  async toggleActive(active = true): Promise<void> {
+  async toggleActive(active = true) {
     if (this.id) {
       try {
-        await this.collection.doc(this.id).update({
+        await this.services.litten.update(this.id, {
           active,
-          'metadata.updatedAt': firestore.FieldValue.serverTimestamp(),
         })
       } catch (err) {
         throw new LittenError(err)
@@ -284,12 +277,12 @@ export default class Litten extends Base<BasicLitten> {
     }
   }
 
-  async archive(): Promise<void> {
-    await this.toggleActive(false)
+  archive() {
+    return this.toggleActive(false)
   }
 
-  async activate(): Promise<void> {
-    await this.toggleActive(true)
+  activate() {
+    return this.toggleActive(true)
   }
 
   async deletePhotos(): Promise<void> {
@@ -308,7 +301,8 @@ export default class Litten extends Base<BasicLitten> {
   async delete(): Promise<void> {
     if (this.id) {
       try {
-        await this.collection.doc(this.id).delete()
+        await this.services.litten.delete(this.id)
+
         this.deletePhotos()
       } catch (err) {
         throw new LittenError(err)

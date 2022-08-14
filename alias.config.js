@@ -10,6 +10,7 @@ module.exports = {
   '@model': './lib/model',
   '@root': './lib',
   '@screens': './lib/screens',
+  '@services': './lib/services',
   '@store': './lib/store',
   '@structure': './lib/structure',
   '@styles': './lib/styles',

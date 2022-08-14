@@ -1,4 +1,4 @@
-import firestore, { batchLoaderFactory, DataLoader } from '@db/firestore'
+import firestore from '@db/firestore'
 import Base from '@model/base'
 import { MessageError } from '@model/error/message'
 import { debugLog } from '@utils/dev'
@@ -10,8 +10,6 @@ import {
 
 export default class Message extends Base<BasicMessage> {
   static COLLECTION_NAME = DB_MESSAGE_COLLECTION
-
-  private dataLoader: DataLoader<string, BasicMessage>
 
   #cursor = null
 
@@ -27,18 +25,6 @@ export default class Message extends Base<BasicMessage> {
     super()
 
     this.mapDocToProps(basicMessage)
-
-    this.dataLoader = new DataLoader(Message.loadAll, {
-      cacheKeyFn: Message.keyFn,
-    })
-  }
-
-  private static loadAll = batchLoaderFactory<BasicMessage>(this.collection)
-
-  private static keyFn = (id: string) => `${Message.COLLECTION_NAME}/${id}`
-
-  private getById(id: string) {
-    return this.dataLoader.load(id)
   }
 
   get chatUid(): string {
@@ -101,16 +87,14 @@ export default class Message extends Base<BasicMessage> {
     return chatMessages
   }
 
-  async get(): Promise<BasicMessage | undefined> {
-    const message = await this.getById(this.id)
+  async get() {
+    const message = await this.services.message.get(this.id)
 
-    if (!message) {
-      throw new MessageError('Needs a message uid to get')
+    if (message) {
+      this.mapDocToProps(message)
+
+      return this.toJSON()
     }
-
-    this.mapDocToProps(message)
-
-    return this.toJSON()
   }
 
   async getAll() {
@@ -133,7 +117,7 @@ export default class Message extends Base<BasicMessage> {
     if (!this.id && this.#chatUid && this.#text && this.#userUid) {
       const messageObject = this.buildObject()
 
-      return this.collection.add(messageObject)
+      return this.services.message.create(messageObject)
     } else {
       throw new MessageError(
         'Message does not meet all the requirements for creation',
@@ -141,17 +125,19 @@ export default class Message extends Base<BasicMessage> {
     }
   }
 
-  async create(): Promise<BasicMessage> {
-    const message = await this.append()
+  async create() {
+    const messageRef = await this.append()
 
-    this.id = message.id
+    if (messageRef) {
+      this.id = messageRef.id
 
-    return this.toJSON()
+      return this.toJSON()
+    }
   }
 
   async delete() {
     if (this.id) {
-      await this.collection.doc(this.id).delete()
+      await this.services.message.delete(this.id)
     } else {
       throw new MessageError('Needs a message uid to delete')
     }
@@ -160,11 +146,15 @@ export default class Message extends Base<BasicMessage> {
   async deleteAll() {
     if (this.#chatUid) {
       const messagesQuerySnapshot = await this.getAll()
+
       const batch = firestore().batch()
+
       messagesQuerySnapshot.forEach((documentSnapshot) => {
         batch.delete(documentSnapshot.ref)
       })
+
       await batch.commit()
+
       debugLog('[MESSAGE] DELETED MESSAGES', messagesQuerySnapshot.size)
     } else {
       throw new MessageError('Needs a chat uid to delete all')

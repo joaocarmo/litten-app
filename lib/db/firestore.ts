@@ -74,7 +74,7 @@ export class DataLoader<K, V, C = K> extends DataLoaderBase<K, V, C> {
   }
 }
 
-interface BaseRecord {
+export interface BaseRecord {
   id: string
 }
 
@@ -88,7 +88,7 @@ export const batchLoaderFactory =
       .get()
 
     if (results.empty) {
-      return []
+      return ids.map(() => undefined)
     }
 
     return results.docs.map((user) => ({ id: user.id, ...user.data() } as T))

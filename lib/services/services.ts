@@ -1,9 +1,14 @@
-/* eslint-disable class-methods-use-this */
 import auth from '@db/auth'
 import firestore from '@db/firestore'
 import storage from '@db/storage'
+import { ServiceError } from '@services/error'
+import type { BaseRecord } from '@db/firestore'
 
-export default abstract class Services {
+export interface UpdateOptions {
+  updateTimestamp?: boolean
+}
+
+export default abstract class Services<T extends BaseRecord = BaseRecord> {
   static AUTH_PROVIDER = auth.EmailAuthProvider
 
   static COLLECTION_NAME = ''
@@ -29,10 +34,12 @@ export default abstract class Services {
     return auth()
   }
 
+  // eslint-disable-next-line class-methods-use-this
   get auth() {
     return auth()
   }
 
+  // eslint-disable-next-line class-methods-use-this
   get firestore() {
     return firestore
   }
@@ -45,21 +52,37 @@ export default abstract class Services {
     return storage
   }
 
+  // eslint-disable-next-line class-methods-use-this
   get storage() {
     return storage
   }
 
+  // eslint-disable-next-line class-methods-use-this
   get storagePath(): string {
     return ''
   }
 
   storageRef() {
     if (!this.storagePath) {
-      throw new Error(
+      throw new ServiceError(
         "Storage ref not found, please implement a 'get storagePath()' method",
       )
     }
 
     return this.storage().ref(this.storagePath)
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  updateMetadata(data: Partial<T>, options?: UpdateOptions) {
+    const { updateTimestamp = true } = options || {}
+
+    if (updateTimestamp) {
+      return {
+        ...data,
+        'metadata.updatedAt': firestore.FieldValue.serverTimestamp(),
+      }
+    }
+
+    return data
   }
 }

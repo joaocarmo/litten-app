@@ -198,6 +198,7 @@ describe('Test the Chat model', () => {
     expect(chat.participants).toHaveLength(1)
 
     await chat.deleteForUser(userUid)
+
     const updatedChat = new Chat({
       id: chat.id,
     })

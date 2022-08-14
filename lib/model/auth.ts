@@ -1,6 +1,6 @@
 /* eslint-disable class-methods-use-this */
 import { USE_GRAVATAR } from '@utils/env'
-import Services from '@model/services'
+import Services from '@services/services'
 import { AuthError } from '@model/error/auth'
 import { parseAvatar } from '@utils/functions'
 import { uploadUserAvatar } from '@db/storage'

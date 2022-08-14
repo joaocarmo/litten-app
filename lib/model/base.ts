@@ -1,5 +1,6 @@
 import firestore from '@db/firestore'
-import Services from '@model/services'
+import Services from '@services/services'
+import ServicesProvider from '@services/provider'
 import { BaseModel } from '@model/types/base'
 import { locationSchema } from '@db/schemas/location'
 import type { DBLocationObject, DBCoordinateObject } from '@db/schemas/location'
@@ -7,7 +8,9 @@ import type { DBMetadata, DBTimestamp } from '@db/schemas/common'
 
 export default abstract class Base<
   T extends BaseModel = BaseModel,
-> extends Services {
+> extends Services<T> {
+  services: ServicesProvider
+
   #id: string | undefined
 
   #location: DBLocationObject = locationSchema
@@ -20,6 +23,8 @@ export default abstract class Base<
     if (object) {
       this.mapCommonProps(object)
     }
+
+    this.services = new ServicesProvider()
   }
 
   get id(): string | undefined {

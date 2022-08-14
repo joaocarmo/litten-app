@@ -4,12 +4,12 @@ import {
   DB_LITTEN_COLLECTION,
   SEARCH_INITIAL_NUM_TO_RENDER,
 } from '@utils/constants'
-import Services from '@model/services'
+import Services from '@services/services'
 import type { FirebaseFirestoreTypes } from '@react-native-firebase/firestore'
 import type { BasicLitten } from '@model/types/litten'
 import type { SearchSettings } from '@model/types/search'
 
-export default class Search extends Services {
+export default class Search extends Services<BasicLitten> {
   static COLLECTION_NAME = DB_LITTEN_COLLECTION
 
   #cursor = null
@@ -69,11 +69,11 @@ export default class Search extends Services {
     return feed
   }
 
-  startAfter(doc: any): void {
+  startAfter(doc) {
     this.#cursor = doc
   }
 
-  clearCursor(): void {
+  clearCursor() {
     this.#cursor = null
   }
 

@@ -1,4 +1,4 @@
-import firestore, { batchLoaderFactory, DataLoader } from '@db/firestore'
+import firestore from '@db/firestore'
 import Auth from '@model/auth'
 import Base from '@model/base'
 import Litten from '@model/litten'
@@ -19,8 +19,6 @@ import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
 
 export default class User extends Base<BasicUser> {
   static COLLECTION_NAME = DB_USER_COLLECTION
-
-  private dataLoader: DataLoader<string, BasicUser>
 
   #auth: Auth
 
@@ -60,16 +58,6 @@ export default class User extends Base<BasicUser> {
     this.#auth = new Auth()
     this.#currentUser = this.#auth.currentUser
     this.#contactPreferences = contactPreferences
-
-    this.dataLoader = new DataLoader(User.loadAll, { cacheKeyFn: User.keyFn })
-  }
-
-  private static loadAll = batchLoaderFactory<BasicUser>(this.collection)
-
-  private static keyFn = (id: string) => `${User.COLLECTION_NAME}/${id}`
-
-  private getById(id: string) {
-    return this.dataLoader.load(id)
   }
 
   get displayName(): string | undefined {
@@ -241,8 +229,8 @@ export default class User extends Base<BasicUser> {
     await this.#currentUser.reauthenticateWithCredential(authCredential)
   }
 
-  async get(): Promise<BasicUser | undefined> {
-    const user = await this.getById(this.id)
+  async get() {
+    const user = await this.services.user.get(this.id)
 
     if (user) {
       this.mapDocToProps(user)
@@ -254,55 +242,41 @@ export default class User extends Base<BasicUser> {
   async create(): Promise<BasicUser | null> {
     if (this.id) {
       const userObject = this.buildObject()
-      await this.collection.doc(this.id).set(userObject)
-      const newUserObject = { ...userObject, id: this.id }
-      return newUserObject
+
+      await this.services.user.create(userObject, { id: this.id })
+
+      return this.toJSON()
     }
 
     return null
   }
 
-  async update(
-    updateObject: Record<string, unknown>,
-    updateTimestamp = true,
-  ): Promise<void> {
+  update(updateObject: Partial<BasicUser>, updateTimestamp = true) {
     if (this.id) {
-      let newUpdateObject = updateObject
-
-      if (updateTimestamp) {
-        newUpdateObject = {
-          ...updateObject,
-          'metadata.updatedAt': firestore.FieldValue.serverTimestamp(),
-        }
-      }
-
       if (this.#deferredSave) {
         this.#deferredSaveObject = {
           ...this.#deferredSaveObject,
-          ...newUpdateObject,
+          ...updateObject,
         }
       } else {
-        this.dataLoader.clear(this.id)
-        this.collection.doc(this.id).update(newUpdateObject)
+        return this.services.user.update(this.id, updateObject, {
+          updateTimestamp,
+        })
       }
     }
   }
 
-  async updateOne(
-    field: string,
-    value: unknown,
-    updateTimestamp = true,
-  ): Promise<void> {
+  updateOne(field: string, value: unknown, updateTimestamp = true) {
     const updateObject = {
       [field]: value,
     }
-    this.update(updateObject, updateTimestamp)
+
+    return this.update(updateObject, updateTimestamp)
   }
 
-  async save(): Promise<void> {
+  save() {
     if (this.#deferredSave) {
-      this.dataLoader.clear(this.id)
-      return this.collection.doc(this.id).update(this.#deferredSaveObject)
+      return this.services.user.update(this.id, this.#deferredSaveObject)
     }
   }
 
@@ -354,9 +328,9 @@ export default class User extends Base<BasicUser> {
     }
   }
 
-  async deleteUser(): Promise<void> {
+  deleteUser() {
     if (this.id) {
-      await this.collection.doc(this.id).delete()
+      return this.services.user.delete(this.id)
     }
   }
 
