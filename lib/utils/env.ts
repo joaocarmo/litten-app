@@ -15,8 +15,8 @@ import {
   USE_REDUX_DEVTOOLS_LOCAL_SERVER as USE_REDUX_DEVTOOLS_LOCAL_SERVER_STR,
 } from '@env'
 
-export const APP_IS_DEV = process.env.NODE_ENV === 'development'
-export const BUILD_TIME = preval`module.exports = new Date().valueOf()`
+export const APP_IS_DEV = __DEV__ ?? process.env.NODE_ENV === 'development'
+export const BUILD_TIME: string = preval`module.exports = new Date().valueOf()`
 export const FIREBASE_AUTH_EMULATOR_HOST = FIREBASE_AUTH_EMULATOR_HOST_STR
 export const FIREBASE_STORAGE_EMULATOR_HOST = FIREBASE_STORAGE_EMULATOR_HOST_STR
 export const FIRESTORE_EMULATOR_HOST = FIRESTORE_EMULATOR_HOST_STR

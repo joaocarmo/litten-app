@@ -4,7 +4,6 @@ import { actionCodeSettings } from '@config/auth'
 import { parseAvatar } from '@utils/functions'
 import { USE_GRAVATAR } from '@utils/env'
 import { STORAGE_IGNORED_ERRORS, STORAGE_USER_AVATAR } from '@utils/constants'
-import { logError } from '@utils/dev'
 import type { BaseRecord } from '@db/firestore'
 import type { FirebaseAuthTypes } from '@react-native-firebase/auth'
 
@@ -35,7 +34,11 @@ export default class AuthService<
       throw new ServiceError('Email and password are required to create')
     }
 
+    this.logger.debug('Creating auth user', { email })
+
     await this.auth.createUserWithEmailAndPassword(email, password)
+
+    this.logger.debug('Creating db user', profile)
 
     await this.update(profile)
   }
@@ -46,16 +49,24 @@ export default class AuthService<
       let uploadedPhotoURL: string
 
       if (email) {
+        this.logger.debug('Updating user email', { email })
+
         await this.currentUser().updateEmail(email)
       }
 
       if (password) {
+        this.logger.debug('Updating user password')
+
         await this.currentUser().updatePassword(password)
       }
 
       if (photoURL || USE_GRAVATAR) {
+        this.logger.debug('Updating user photoURL')
+
         uploadedPhotoURL = await this.uploadPhoto(data)
       }
+
+      this.logger.debug('Updating user profile', profile)
 
       await this.currentUser().updateProfile({
         ...profile,
@@ -69,6 +80,9 @@ export default class AuthService<
 
     try {
       const storageRef = this.storageRef()
+
+      this.logger.debug('Uploading user photo', { photoURL })
+
       const task = await storageRef.putFile(photoURL)
 
       if (task.state === 'success') {
@@ -82,7 +96,7 @@ export default class AuthService<
       }
     } catch (error) {
       if (STORAGE_IGNORED_ERRORS.includes(error.code)) {
-        logError(error)
+        this.logger.error(error)
       } else {
         throw error
       }
@@ -96,10 +110,12 @@ export default class AuthService<
       const storageRef = this.storageRef()
 
       try {
+        this.logger.debug('Deleting user photo')
+
         return storageRef.delete()
       } catch (error) {
         if (STORAGE_IGNORED_ERRORS.includes(error.code)) {
-          logError(error)
+          this.logger.error(error)
         } else {
           throw error
         }
@@ -109,6 +125,8 @@ export default class AuthService<
 
   delete() {
     if (this.currentUser()) {
+      this.logger.debug('Deleting auth user')
+
       return this.currentUser().delete()
     }
   }
@@ -136,10 +154,14 @@ export default class AuthService<
       throw new ServiceError('Email and password are required to sign in')
     }
 
+    this.logger.debug('Signing in', { email })
+
     return this.auth.signInWithEmailAndPassword(email, password)
   }
 
   signOut() {
+    this.logger.debug('Signing out')
+
     return this.auth.signOut()
   }
 
@@ -150,20 +172,28 @@ export default class AuthService<
       throw new ServiceError('Email is required to recover password')
     }
 
+    this.logger.debug('Sending password reset email', { email })
+
     return this.auth.sendPasswordResetEmail(email)
   }
 
   sendEmailVerification() {
     if (this.currentUser()) {
+      this.logger.debug('Sending email verification')
+
       return this.currentUser().sendEmailVerification(actionCodeSettings)
     }
   }
 
   applyActionCode(actionCode: string) {
+    this.logger.debug('Applying action code', { actionCode })
+
     return this.auth.applyActionCode(actionCode)
   }
 
   checkActionCode(actionCode: string) {
+    this.logger.debug('Checking action code', { actionCode })
+
     return this.auth.checkActionCode(actionCode)
   }
 
@@ -179,6 +209,8 @@ export default class AuthService<
     if (this.currentUser()) {
       const provider = this.AUTH_PROVIDER
       const authCredential = provider.credential(email, password)
+
+      this.logger.debug('Reauthenticating', { email })
 
       return this.currentUser().reauthenticateWithCredential(authCredential)
     }

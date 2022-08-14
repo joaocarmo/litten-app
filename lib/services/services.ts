@@ -1,8 +1,10 @@
+import { createLogger } from '@config/logger'
 import auth from '@db/auth'
 import firestore from '@db/firestore'
 import storage from '@db/storage'
 import { ServiceError } from '@services/error'
 import type { BaseRecord } from '@db/firestore'
+import type { Logger } from '@config/logger'
 
 export interface UpdateOptions {
   updateTimestamp?: boolean
@@ -17,9 +19,13 @@ export default abstract class Services<T extends BaseRecord = BaseRecord> {
 
   COLLECTION_NAME: string
 
+  logger: Logger
+
   constructor() {
     this.AUTH_PROVIDER = (this.constructor as typeof Services).AUTH_PROVIDER
     this.COLLECTION_NAME = (this.constructor as typeof Services).COLLECTION_NAME
+
+    this.logger = createLogger()
   }
 
   static get firestore() {

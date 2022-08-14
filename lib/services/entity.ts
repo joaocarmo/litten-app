@@ -20,11 +20,15 @@ export default abstract class EntityService<
   }
 
   get(id: string) {
+    this.logger.debug(`Getting ${this.COLLECTION_NAME} with id: ${id}`)
+
     return this.dataLoader.load(id)
   }
 
   create(data: Omit<T, 'id'>, options?: CreateOptions) {
     const { id } = options || {}
+
+    this.logger.debug(`Creating ${this.COLLECTION_NAME} with id: ${id}`)
 
     if (id) {
       return this.collection.doc(id).set(data)
@@ -38,11 +42,15 @@ export default abstract class EntityService<
 
     this.dataLoader.clear(id)
 
+    this.logger.debug(`Updating ${this.COLLECTION_NAME} with id: ${id}`)
+
     return this.collection.doc(id).update(updateData)
   }
 
   delete(id: string) {
     this.dataLoader.clear(id)
+
+    this.logger.debug(`Deleting ${this.COLLECTION_NAME} with id: ${id}`)
 
     return this.collection.doc(id).delete()
   }
