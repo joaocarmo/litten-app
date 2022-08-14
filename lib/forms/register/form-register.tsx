@@ -22,7 +22,7 @@ import { openURL } from '@utils/ui'
 import { getExternalGeoInformation } from '@utils/network'
 import { getErrorMessage } from '@utils/functions'
 import { WEB_APP_BASE, WEB_APP_TERMS_AND_CONDITIONS } from '@utils/constants'
-import { logError } from '@utils/dev'
+import { debugLog, logError } from '@utils/dev'
 import { translate } from '@utils/i18n'
 
 const RegisterForm = (props) => {
@@ -232,6 +232,8 @@ const RegisterForm = (props) => {
       Alert.alert(fbErrorMessage)
       setDoneStatus('error')
       setAutoRedirectIfLoggedIn(true)
+      // Log the actual error
+      debugLog(err)
     } finally {
       setIsLoading(false)
     }

@@ -1,20 +1,12 @@
-/* eslint-disable class-methods-use-this */
-import { USE_GRAVATAR } from '@utils/env'
-import Services from '@services/services'
-import { AuthError } from '@model/error/auth'
-import { parseAvatar } from '@utils/functions'
-import { uploadUserAvatar } from '@db/storage'
-import { actionCodeSettings } from '@config/auth'
+import ServicesProvider from '@services/provider'
 import type { AuthSettings } from '@model/types/auth'
 
-export default class Auth extends Services {
+export default class Auth {
+  services: ServicesProvider
+
   #id: string
 
   #photoURL: string
-
-  #callingCode: string
-
-  #country: string
 
   #displayName: string
 
@@ -22,50 +14,30 @@ export default class Auth extends Services {
 
   #password: string
 
-  #phoneNumber: string
-
   constructor({
     id = '',
     photoURL = '',
-    callingCode = '',
-    country = '',
     displayName = '',
     email = '',
     password = '',
-    phoneNumber = '',
-  }: AuthSettings = {}) {
-    super()
+  }: Partial<AuthSettings>) {
+    this.services = new ServicesProvider()
 
-    const user = this.currentUser
+    const user = this.services.auth.currentUser()
 
-    if (user) {
-      this.#id = user.uid
-      this.#photoURL = user.photoURL
-      this.#displayName = user.displayName
-      this.#email = user.email
-      this.#phoneNumber = user.phoneNumber
-    } else {
-      this.#id = id
-      this.#photoURL = photoURL
-      this.#callingCode = callingCode
-      this.#country = country
-      this.#displayName = displayName
-      this.#email = email
-      this.#password = password
-      this.#phoneNumber = phoneNumber
-    }
+    this.#id = user?.uid || id
+    this.#photoURL = user?.photoURL || photoURL
+    this.#displayName = user?.displayName || displayName
+    this.#email = user?.email || email
+    this.#password = password
   }
 
-  static signOut() {
-    return this.auth.signOut()
-  }
-
-  get signOut() {
-    return Auth.signOut
+  signOut() {
+    return this.services.auth.signOut()
   }
 
   get currentUser() {
-    return this.auth.currentUser
+    return this.services.auth.currentUser()
   }
 
   get id(): string {
@@ -82,15 +54,7 @@ export default class Auth extends Services {
 
   set displayName(displayName: string) {
     this.#displayName = displayName
-    this.updateOne('displayName', this.#displayName)
-  }
-
-  get phoneNumber(): string {
-    return this.#phoneNumber ? `${this.#callingCode}${this.#phoneNumber}` : ''
-  }
-
-  get country(): string {
-    return this.#country
+    this.services.auth.update({ displayName })
   }
 
   get photoURL(): string {
@@ -98,12 +62,9 @@ export default class Auth extends Services {
   }
 
   set photoURL(photoURL: string) {
-    if (photoURL) {
-      this.uploadAndSetPhoto(photoURL)
-    } else {
-      this.#photoURL = photoURL
-      this.updateOne('photoURL', this.#photoURL)
-    }
+    this.#photoURL = photoURL || this.#photoURL
+
+    this.services.auth.update({ photoURL: photoURL || this.#photoURL })
   }
 
   get email(): string {
@@ -112,87 +73,52 @@ export default class Auth extends Services {
 
   set email(email: string) {
     this.#email = email
-    this.currentUser.updateEmail(email)
+    this.services.auth.update({ email })
   }
 
   get emailVerified(): boolean {
-    if (this.currentUser) {
-      return this.currentUser.emailVerified
-    }
-
-    return false
+    return this.services.auth.emailVerified()
   }
 
-  async uploadAndSetPhoto(photoURL: string): Promise<string> {
-    const downloadURL = await uploadUserAvatar(photoURL, {
-      userAuthUid: this.#id,
-    })
-    this.#photoURL = parseAvatar(downloadURL, {
+  updateOne(field: string, value: string): Promise<void> {
+    return this.services.auth.update({ [field]: value })
+  }
+
+  signIn() {
+    return this.services.auth.signIn({
       email: this.#email,
+      password: this.#password,
     })
-    this.updateOne('photoURL', this.#photoURL)
-    return this.#photoURL
   }
 
-  async updateOne(field: string, value: string): Promise<void> {
-    if (this.currentUser) {
-      return this.currentUser.updateProfile({
-        [field]: value,
-      })
-    }
+  sendPasswordResetEmail() {
+    return this.services.auth.sendPasswordResetEmail({ email: this.#email })
   }
 
-  async signIn() {
-    if (this.#email && this.#password) {
-      await this.auth.signInWithEmailAndPassword(this.#email, this.#password)
-      this.#id = this.currentUser.uid
-    } else {
-      throw new AuthError('Email and password are required to sign in')
-    }
+  checkActionCode(actionCode: string) {
+    return this.services.auth.checkActionCode(actionCode)
   }
 
-  async sendPasswordResetEmail() {
-    if (this.#email) {
-      await this.auth.sendPasswordResetEmail(this.#email)
-    } else {
-      throw new AuthError('Email is required to recover password')
-    }
+  applyActionCode(actionCode: string) {
+    return this.services.auth.applyActionCode(actionCode)
   }
 
-  async checkActionCode(actionCode: string) {
-    return this.auth.checkActionCode(actionCode)
-  }
-
-  async applyActionCode(actionCode: string) {
-    return this.auth.applyActionCode(actionCode)
-  }
-
-  async sendEmailVerification() {
-    if (this.currentUser) {
-      await this.currentUser.sendEmailVerification(actionCodeSettings)
-    }
+  sendEmailVerification() {
+    return this.services.auth.sendEmailVerification()
   }
 
   async create() {
-    if (this.#email && this.#password) {
-      // Create the basic auth user
-      await this.auth.createUserWithEmailAndPassword(
-        this.#email,
-        this.#password,
-      )
-      this.#id = this.currentUser.uid
-      // Update the Auth user info
-      this.displayName = this.#displayName
+    await this.services.auth.create({
+      displayName: this.#displayName,
+      email: this.#email,
+      password: this.#password,
+      photoURL: this.#photoURL,
+    })
 
-      if (this.#photoURL || USE_GRAVATAR) {
-        this.#photoURL = await this.uploadAndSetPhoto(this.#photoURL)
-      }
-    } else {
-      throw new AuthError('Email and password are required to register')
-    }
+    this.#id = this.services.auth.currentUserId()
   }
 
-  async delete(): Promise<void> {
-    return this.currentUser.delete()
+  delete() {
+    return this.services.auth.delete()
   }
 }

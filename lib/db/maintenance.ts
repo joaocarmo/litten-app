@@ -20,17 +20,20 @@ export const createNewUser = async ({
   email,
   password,
   phoneNumber,
-}: AuthSettings): Promise<BasicUser | null> => {
+}: Partial<
+  AuthSettings & {
+    callingCode: string
+    phoneNumber: string
+  }
+>): Promise<BasicUser | null> => {
   debugLog('[AUTH] Creating new user...')
 
   const userAuth = new Auth({
     photoURL,
-    callingCode,
     country,
     displayName,
     email,
     password,
-    phoneNumber,
   })
 
   await userAuth.create()
@@ -40,11 +43,12 @@ export const createNewUser = async ({
     id: userAuth.id,
     displayName: userAuth.displayName,
     email: userAuth.email,
-    phoneNumber: userAuth.phoneNumber,
+    phoneNumber: `${callingCode}${phoneNumber}`,
     photoURL: userAuth.photoURL,
-    location: { ...locationSchema, country: userAuth.country },
+    location: { ...locationSchema, country },
   })
-  let newUser = null
+
+  let newUser: BasicUser = null
 
   try {
     debugLog('[USER] Creating new user...')

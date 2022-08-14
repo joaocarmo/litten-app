@@ -1,30 +1,21 @@
 import firestore from '@db/firestore'
-import Auth from '@model/auth'
 import Base from '@model/base'
 import Litten from '@model/litten'
 import Search from '@model/search'
-import { UserError } from '@model/error/user'
 import { deleteAllChatForUser } from '@db/maintenance'
 import { locationSchema } from '@db/schemas/location'
 import {
   DB_USER_COLLECTION,
   DEFAULT_CONTACT_PREFERENCES,
-  STORAGE_IGNORED_ERRORS,
-  STORAGE_USER_AVATAR,
 } from '@utils/constants'
-import { debugLog, logError } from '@utils/dev'
-import type { FirebaseAuthTypes } from '@react-native-firebase/auth'
+import { debugLog } from '@utils/dev'
 import type { BasicUser, ContactPreferences } from '@model/types/user'
 import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
 
 export default class User extends Base<BasicUser> {
   static COLLECTION_NAME = DB_USER_COLLECTION
 
-  #auth: Auth
-
   #contactPreferences: ContactPreferences
-
-  #currentUser: FirebaseAuthTypes.User
 
   #displayName: string
 
@@ -55,8 +46,7 @@ export default class User extends Base<BasicUser> {
         id,
       },
     })
-    this.#auth = new Auth()
-    this.#currentUser = this.#auth.currentUser
+
     this.#contactPreferences = contactPreferences
   }
 
@@ -68,10 +58,6 @@ export default class User extends Base<BasicUser> {
     if (displayName) {
       this.#displayName = displayName || ''
       this.updateOne('displayName', displayName)
-
-      if (this.#currentUser) {
-        this.#auth.displayName = displayName
-      }
     }
   }
 
@@ -83,10 +69,6 @@ export default class User extends Base<BasicUser> {
     if (email) {
       this.#email = email || ''
       this.updateOne('email', email)
-
-      if (this.#currentUser) {
-        this.#auth.email = email || ''
-      }
     }
   }
 
@@ -97,10 +79,6 @@ export default class User extends Base<BasicUser> {
   set photoURL(photoURL: string | undefined) {
     this.#photoURL = photoURL || ''
     this.updateOne('photoURL', photoURL)
-
-    if (this.#currentUser && photoURL) {
-      this.#auth.photoURL = photoURL
-    }
   }
 
   get location(): DBLocationObject {
@@ -123,15 +101,6 @@ export default class User extends Base<BasicUser> {
       'location.coordinates',
       new firestore.GeoPoint(latitude, longitude),
     )
-  }
-
-  get photoURLRef(): string {
-    if (this.id) {
-      const fileExt = 'jpg'
-      return `${STORAGE_USER_AVATAR}/${this.id}.${fileExt}`
-    }
-
-    return ''
   }
 
   get phoneNumber(): string | undefined {
@@ -174,20 +143,15 @@ export default class User extends Base<BasicUser> {
   }
 
   async uploadAndSetPhoto(photoURL: string): Promise<void> {
-    if (this.#currentUser) {
-      this.deletePhoto(this.photoURLRef)
+    await this.services.auth.deletePhoto()
 
-      try {
-        this.#photoURL = await this.#auth.uploadAndSetPhoto(photoURL)
-        this.updateOne('photoURL', this.#photoURL)
-      } catch (err) {
-        if (STORAGE_IGNORED_ERRORS.includes(err.code)) {
-          debugLog(err)
-        } else {
-          logError(err)
-        }
-      }
-    }
+    await this.services.auth.update({ photoURL })
+
+    const newPhotoURL = this.services.auth.currentUserPhotoUrl()
+
+    await this.updateOne('photoURL', newPhotoURL)
+
+    this.#photoURL = newPhotoURL
   }
 
   buildObject(): Omit<BasicUser, 'id'> {
@@ -221,12 +185,11 @@ export default class User extends Base<BasicUser> {
     this.#photoURL = photoURL
   }
 
-  async reauthenticate(password: string): Promise<void> {
-    const provider = this.AUTH_PROVIDER
-    const email = this.#email
-    const authCredential = provider.credential(email, password)
-
-    await this.#currentUser.reauthenticateWithCredential(authCredential)
+  reauthenticate(password: string) {
+    return this.services.auth.reauthenticate({
+      email: this.#email,
+      password,
+    })
   }
 
   async get() {
@@ -251,7 +214,7 @@ export default class User extends Base<BasicUser> {
     return null
   }
 
-  update(updateObject: Partial<BasicUser>, updateTimestamp = true) {
+  async update(updateObject: Partial<BasicUser>, updateTimestamp = true) {
     if (this.id) {
       if (this.#deferredSave) {
         this.#deferredSaveObject = {
@@ -259,8 +222,14 @@ export default class User extends Base<BasicUser> {
           ...updateObject,
         }
       } else {
-        return this.services.user.update(this.id, updateObject, {
+        await this.services.user.update(this.id, updateObject, {
           updateTimestamp,
+        })
+
+        await this.services.auth.update({
+          displayName: updateObject.displayName,
+          email: updateObject.email,
+          photoURL: updateObject.photoURL,
         })
       }
     }
@@ -314,18 +283,8 @@ export default class User extends Base<BasicUser> {
     }
   }
 
-  async deletePhoto(photoURLRef = ''): Promise<void> {
-    const fileRef = this.storage().ref(photoURLRef || this.photoURLRef)
-
-    try {
-      await fileRef.delete()
-    } catch (err) {
-      if (STORAGE_IGNORED_ERRORS.includes(err.code)) {
-        debugLog(err)
-      } else {
-        throw new UserError(err)
-      }
-    }
+  deletePhoto() {
+    return this.services.auth.deletePhoto()
   }
 
   deleteUser() {
@@ -334,10 +293,8 @@ export default class User extends Base<BasicUser> {
     }
   }
 
-  async deleteAuth(): Promise<void> {
-    if (this.#currentUser) {
-      await this.#currentUser.delete()
-    }
+  deleteAuth() {
+    return this.services.auth.delete()
   }
 
   async delete(): Promise<void> {

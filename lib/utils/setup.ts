@@ -153,7 +153,7 @@ export const setupUserInfo = async (
     })
 
     await retry(
-      async (bail, retryNum) => {
+      async (_bail, retryNum) => {
         debugLog('[SETUP] UPDATING USER INFO... ATTEMPT', retryNum)
         await user.get()
 

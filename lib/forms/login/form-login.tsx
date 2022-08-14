@@ -16,6 +16,7 @@ import { emailValidator, passwordValidator } from '@utils/validators'
 import { getErrorMessage } from '@utils/functions'
 import { SCREEN_NOAUTH_RECOVER } from '@utils/constants'
 import { translate } from '@utils/i18n'
+import { debugLog } from '@utils/dev'
 import type { LoginFormNavigationProp } from '@utils/types/routes'
 
 const LoginForm = ({
@@ -71,8 +72,10 @@ const LoginForm = ({
       // Allow the user to recover the account
       setShowForgotPassword(true)
       setIsLoading(false)
+      // Log the actual error
+      debugLog(err)
     }
-  }, [email, password, setIsLoading])
+  }, [email, password])
 
   const validateStep = useCallback(() => {
     const isStepValid = validateFields()
