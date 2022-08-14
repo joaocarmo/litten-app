@@ -1,6 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import preval from 'preval.macro'
 import {
+  DEBUG_LEVEL as DEBUG_LEVEL_STR,
   FIREBASE_AUTH_EMULATOR_HOST as FIREBASE_AUTH_EMULATOR_HOST_STR,
   FIREBASE_STORAGE_EMULATOR_HOST as FIREBASE_STORAGE_EMULATOR_HOST_STR,
   FIRESTORE_EMULATOR_HOST as FIRESTORE_EMULATOR_HOST_STR,
@@ -17,6 +18,7 @@ import {
 
 export const APP_IS_DEV = __DEV__ ?? process.env.NODE_ENV === 'development'
 export const BUILD_TIME: string = preval`module.exports = new Date().valueOf()`
+export const DEBUG_LEVEL = DEBUG_LEVEL_STR || 'debug'
 export const FIREBASE_AUTH_EMULATOR_HOST = FIREBASE_AUTH_EMULATOR_HOST_STR
 export const FIREBASE_STORAGE_EMULATOR_HOST = FIREBASE_STORAGE_EMULATOR_HOST_STR
 export const FIRESTORE_EMULATOR_HOST = FIRESTORE_EMULATOR_HOST_STR

@@ -22,6 +22,7 @@ module.exports = (api) => {
           path: '.env',
           safe: false,
           whitelist: [
+            'DEBUG_LEVEL',
             'FIREBASE_AUTH_EMULATOR_HOST',
             'FIREBASE_STORAGE_EMULATOR_HOST',
             'FIRESTORE_EMULATOR_HOST',

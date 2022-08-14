@@ -77,32 +77,33 @@ export default class AuthService<
 
   async uploadPhoto(data: Partial<AuthProfile>) {
     const { email, photoURL } = data || {}
+    let downloadURL: string
 
-    try {
-      const storageRef = this.storageRef()
+    if (photoURL) {
+      try {
+        const storageRef = this.storageRef()
 
-      this.logger.debug('Uploading user photo', { photoURL })
+        this.logger.debug('Uploading user photo', { photoURL })
 
-      const task = await storageRef.putFile(photoURL)
+        const task = await storageRef.putFile(photoURL)
 
-      if (task.state === 'success') {
-        const downloadURL = await storageRef.getDownloadURL()
-
-        return parseAvatar(downloadURL, {
-          email,
-        })
-      } else {
-        throw new ServiceError(task.error.message)
-      }
-    } catch (error) {
-      if (STORAGE_IGNORED_ERRORS.includes(error.code)) {
-        this.logger.error(error)
-      } else {
-        throw error
+        if (task.state === 'success') {
+          downloadURL = await storageRef.getDownloadURL()
+        } else {
+          throw new ServiceError(task.error.message)
+        }
+      } catch (error) {
+        if (STORAGE_IGNORED_ERRORS.includes(error.code)) {
+          this.logger.error(error)
+        } else {
+          throw error
+        }
       }
     }
 
-    return photoURL
+    return parseAvatar(downloadURL || photoURL, {
+      email,
+    })
   }
 
   deletePhoto() {
