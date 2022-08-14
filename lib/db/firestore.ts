@@ -66,11 +66,11 @@ export const clearPersistence = async () => {
   }
 }
 
-const cacheMap = new Map()
+export const dataLoaderCacheMap = new Map()
 
 export class DataLoader<K, V, C = K> extends DataLoaderBase<K, V, C> {
   constructor(batchLoadFn: BatchLoadFn<K, V>, options?: Options<K, V, C>) {
-    super(batchLoadFn, { ...options, cacheMap })
+    super(batchLoadFn, { ...options, cacheMap: dataLoaderCacheMap })
   }
 }
 

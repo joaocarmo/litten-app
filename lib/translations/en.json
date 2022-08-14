@@ -245,6 +245,7 @@
       "abruptChaosNative": "Native",
       "abruptChaosReact": "React",
       "clearAsyncStorage": "Clear AsyncStorage",
+      "clearDbCache": "Clear Database Cache",
       "clearImageCache": "Clear Image Cache",
       "firestoreNetwork": "Firestore Network",
       "hacks": "Developer",

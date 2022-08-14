@@ -5,7 +5,7 @@ import { useActionSheet } from '@expo/react-native-action-sheet'
 import FastImage from 'react-native-fast-image'
 import { useLittenTeam, useNotifications, useStore } from '@hooks'
 import crashlytics from '@db/crashlytics'
-import { simulateNetwork } from '@db/firestore'
+import { dataLoaderCacheMap, simulateNetwork } from '@db/firestore'
 import { UIButton, UIHeader, UISeparator, UIText } from '@ui-elements'
 import ScreenTemplate from '@templates/screen'
 import ScreenSimpleHeaderTemplate from '@templates/screen-simple-header'
@@ -17,7 +17,8 @@ const [getState, toggleState] = simulateNetwork()
 
 const HacksUI = () => {
   const [storageCleared, setStorageCleared] = useState(false)
-  const [cacheCleared, setCacheCleared] = useState(false)
+  const [cacheDbCleared, setCacheDbCleared] = useState(false)
+  const [cacheImageCleared, setCacheImageCleared] = useState(false)
   const [storeReset, setStoreReset] = useState(false)
   const [useCrashTestDummy, setUseCrashTestDummy] = useState(false)
   const [fbNetworkActive, setFbNetworkActive] = useState(getState())
@@ -49,11 +50,20 @@ const HacksUI = () => {
     setStorageCleared(hasStorageCleared)
   }, [])
 
-  const handleClearCache = useCallback(async () => {
+  const handleClearDbCache = useCallback(async () => {
+    try {
+      dataLoaderCacheMap.clear()
+      setCacheDbCleared(true)
+    } catch (err) {
+      debugLog(err)
+    }
+  }, [])
+
+  const handleClearImageCache = useCallback(async () => {
     try {
       await FastImage.clearMemoryCache()
       await FastImage.clearDiskCache()
-      setCacheCleared(true)
+      setCacheImageCleared(true)
     } catch (err) {
       debugLog(err)
     }
@@ -144,7 +154,19 @@ const HacksUI = () => {
               {translate('screens.dev.clearAsyncStorage')}
             </UIButton>
             <UISeparator invisible small />
-            <UIButton onPress={handleClearCache} disabled={cacheCleared} danger>
+            <UIButton
+              onPress={handleClearDbCache}
+              disabled={cacheDbCleared}
+              danger
+            >
+              {translate('screens.dev.clearDbCache')}
+            </UIButton>
+            <UISeparator invisible small />
+            <UIButton
+              onPress={handleClearImageCache}
+              disabled={cacheImageCleared}
+              danger
+            >
               {translate('screens.dev.clearImageCache')}
             </UIButton>
             <UISeparator invisible small />
