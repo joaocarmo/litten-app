@@ -59,7 +59,7 @@ export default class Chat extends Base<BasicChat> {
     return userChats
   }
 
-  static async getPreviousChats(userUid: string, lastChat: any) {
+  static async getPreviousChats(userUid: string, lastChat) {
     if (lastChat) {
       this.#cursor = lastChat
     }
@@ -200,7 +200,7 @@ export default class Chat extends Base<BasicChat> {
     return this.#read.includes(userUid)
   }
 
-  async setReadBy(userUid: string): Promise<void> {
+  async setReadBy(userUid: string): Promise<BasicChat> {
     await this.get()
 
     if (!this.readBy(userUid)) {
@@ -216,7 +216,7 @@ export default class Chat extends Base<BasicChat> {
   }: {
     lastMessage: string
     lastMessageBy: string
-  }): Promise<void> {
+  }): Promise<BasicChat> {
     if (lastMessage) {
       this.#lastMessage = lastMessage
       this.#lastMessageBy = lastMessageBy
@@ -233,7 +233,7 @@ export default class Chat extends Base<BasicChat> {
   async update(
     updateObject: Record<string, unknown>,
     updateTimestamp = true,
-  ): Promise<void> {
+  ): Promise<BasicChat> {
     if (this.id) {
       return this.services.chat.update(this.id, updateObject, {
         updateTimestamp,
@@ -245,7 +245,7 @@ export default class Chat extends Base<BasicChat> {
     field: string,
     value: unknown,
     updateTimestamp = true,
-  ): Promise<void> {
+  ): Promise<BasicChat> {
     const updateObject = {
       [field]: value,
     }
@@ -253,7 +253,7 @@ export default class Chat extends Base<BasicChat> {
     return this.update(updateObject, updateTimestamp)
   }
 
-  async deleteForUser(userUid: string): Promise<void> {
+  async deleteForUser(userUid: string): Promise<BasicChat | void> {
     if (this.#participants.length > 1) {
       const participants: string[] = this.#participants.filter(
         (id) => id !== userUid,

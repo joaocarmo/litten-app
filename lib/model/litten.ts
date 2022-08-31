@@ -4,7 +4,6 @@ import { LittenError } from '@model/error/litten'
 import { string2tags } from '@utils/functions'
 import { logError } from '@utils/dev'
 import { DB_LITTEN_COLLECTION, STORAGE_LITTEN_PHOTOS } from '@utils/constants'
-import type { FirebaseFirestoreTypes } from '@react-native-firebase/firestore'
 import type { AugmentedLitten, BasicLitten } from '@model/types/litten'
 import type { BasicUser } from '@model/types/user'
 import type { PhotoObject } from '@store/types'
@@ -199,9 +198,7 @@ export default class Litten extends Base<BasicLitten> {
     return downloadURL
   }
 
-  async savePhotos(
-    doc: FirebaseFirestoreTypes.DocumentReference<FirebaseFirestoreTypes.DocumentData>,
-  ) {
+  async savePhotos(doc: BasicLitten) {
     const docId = doc.id
     const photos = []
 
@@ -227,7 +224,7 @@ export default class Litten extends Base<BasicLitten> {
       logError(err)
     }
 
-    await doc.update({
+    await this.services.litten.update(docId, {
       photos,
     })
 
@@ -238,14 +235,14 @@ export default class Litten extends Base<BasicLitten> {
     try {
       const littenObject = this.buildObject()
 
-      const littenRef = await this.services.litten.create(littenObject)
+      const littenDoc = await this.services.litten.create(littenObject)
 
-      if (littenRef) {
-        this.id = littenRef.id
+      if (littenDoc) {
+        this.id = littenDoc.id
 
-        await this.savePhotos(littenRef)
+        await this.savePhotos(littenDoc)
 
-        return littenRef
+        return littenDoc
       }
     } catch (err) {
       throw new LittenError(err)

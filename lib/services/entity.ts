@@ -19,39 +19,56 @@ export default abstract class EntityService<
     })
   }
 
-  get(id: string) {
+  get(id: string): Promise<T> {
     this.logger.debug(`Getting ${this.COLLECTION_NAME} with id: ${id}`)
 
     return this.dataLoader.load(id)
   }
 
-  create(data: Omit<T, 'id'>, options?: CreateOptions) {
-    const { id } = options || {}
-
-    this.logger.debug(`Creating ${this.COLLECTION_NAME} with id: ${id}`)
+  async create(data: Omit<T, 'id'>, options?: CreateOptions): Promise<T> {
+    let { id } = options || {}
 
     if (id) {
-      return this.collection.doc(id).set(data)
+      await this.collection.doc(id).set(data)
+    } else {
+      await this.collection.add(data)
+
+      id = this.collection.doc().id
     }
 
-    return this.collection.add(data)
+    const createdObject = {
+      id,
+      ...data,
+    } as T
+
+    this.dataLoader.clear(id).prime(id, createdObject)
+
+    this.logger.debug(`Created ${this.COLLECTION_NAME} with id: ${id}`)
+
+    return createdObject
   }
 
-  update(id: string, data: Partial<T>, options?: UpdateOptions) {
+  async update(
+    id: string,
+    data: Partial<T>,
+    options?: UpdateOptions,
+  ): Promise<T> {
     const updateData = this.updateMetadata(data, options)
 
+    await this.collection.doc(id).update(updateData)
+
     this.dataLoader.clear(id)
 
-    this.logger.debug(`Updating ${this.COLLECTION_NAME} with id: ${id}`)
+    this.logger.debug(`Updated ${this.COLLECTION_NAME} with id: ${id}`)
 
-    return this.collection.doc(id).update(updateData)
+    return this.dataLoader.load(id)
   }
 
-  delete(id: string) {
+  async delete(id: string): Promise<void> {
+    await this.collection.doc(id).delete()
+
     this.dataLoader.clear(id)
 
-    this.logger.debug(`Deleting ${this.COLLECTION_NAME} with id: ${id}`)
-
-    return this.collection.doc(id).delete()
+    this.logger.debug(`Deleted ${this.COLLECTION_NAME} with id: ${id}`)
   }
 }
