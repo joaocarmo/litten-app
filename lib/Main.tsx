@@ -174,6 +174,8 @@ const stackScreens = [
 const Stack = createStackNavigator<RootStackParamList>()
 
 const allStackScreens = stackScreens.map(({ key, name, component }) => (
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore FIXME
   <Stack.Screen key={key} name={name} component={component} />
 ))
 
