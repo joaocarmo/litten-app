@@ -295,6 +295,9 @@ dependencies {
 
     implementation 'androidx.multidex:multidex:2.0.1'
 
+    // see: https://stackoverflow.com/a/70974248/8713532
+    implementation 'androidx.work:work-runtime:2.7.1'
+
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.fbjni'
     }
