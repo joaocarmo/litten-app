@@ -1,5 +1,6 @@
 import { render } from '@utils/tests/react-native'
 import { UIMessage } from '@ui-elements'
+import dayjs from '@utils/day'
 
 const ipsumLorem = `\
 It is a long established fact that a reader will be distracted by
@@ -25,7 +26,7 @@ describe('Snapshot test for the "UIMessage" component', () => {
             from="johnnyeyelash"
             header="Cat: Snowball"
             read={Boolean(idx % 4)}
-            lastActivity={1000}
+            lastActivity={dayjs().subtract(2, 'day').valueOf()}
           >
             {ipsumLorem}
           </UIMessage.Preview>
