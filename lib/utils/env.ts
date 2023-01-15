@@ -17,6 +17,7 @@ import {
 } from '@env'
 
 export const APP_IS_DEV = __DEV__ ?? process.env.NODE_ENV === 'development'
+export const APP_IS_TEST = process.env.NODE_ENV === 'test'
 export const BUILD_TIME: string = preval`module.exports = new Date().valueOf()`
 export const DEBUG_LEVEL = DEBUG_LEVEL_STR || 'debug'
 export const FIREBASE_AUTH_EMULATOR_HOST = FIREBASE_AUTH_EMULATOR_HOST_STR

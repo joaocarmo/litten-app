@@ -4,6 +4,7 @@ const storage = () => ({
   })),
   putFile: jest.fn(() => Promise.resolve(true)),
   getDownloadURL: jest.fn(() => Promise.resolve(true)),
+  useEmulator: jest.fn(),
 })
 
 export default storage
