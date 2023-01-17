@@ -83,8 +83,8 @@
     "start:firebase": "firebase emulators:start --import=./firebase --export-on-exit",
     "start:ios": "yarn ios && yarn start:firebase",
     "start": "react-native start",
-    "test:firestore:model": "firebase emulators:exec 'jest --runInBand --selectProjects model --forceExit'",
-    "test:firestore:rules": "firebase emulators:exec 'jest --selectProjects rules --forceExit'",
+    "test:firestore:integration": "firebase emulators:exec --only firestore 'jest --runInBand --selectProjects model --forceExit'",
+    "test:firestore:rules": "firebase emulators:exec --only firestore 'jest --selectProjects rules --forceExit'",
     "test": "jest --selectProjects default --forceExit",
     "translations-check": "ts-node ./scripts/validate-translations.ts",
     "type-check": "tsc --noEmit"

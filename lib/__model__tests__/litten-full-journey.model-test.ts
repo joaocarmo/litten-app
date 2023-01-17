@@ -6,11 +6,11 @@ import User from '@model/user'
 import { littens, messages, users } from '@fixtures/tests'
 import { cleanFirestore } from '@utils/tests'
 
-afterAll(async () => {
-  await cleanFirestore()
-})
-
 describe('Performs an end-to-end user and litten journey', () => {
+  beforeAll(async () => {
+    await cleanFirestore()
+  })
+
   it(`creates ${users.length} new users`, async () => {
     const usersCollection = await User.collection.get()
     expect(usersCollection.size).toBe(0)
@@ -31,11 +31,15 @@ describe('Performs an end-to-end user and litten journey', () => {
     const littensCollection = await Litten.collection.get()
     expect(littensCollection.size).toBe(0)
 
-    for await (const litten of littens) {
-      litten.userUid = userUid
-      const newLitten = new Litten(litten)
-      await newLitten.create()
-    }
+    const littensToCreate = littens.map((litten) => {
+      const newLitten = new Litten({
+        ...litten,
+        userUid,
+      })
+      return newLitten.create()
+    })
+
+    await Promise.all(littensToCreate)
 
     const newLittensCollection = await Litten.collection.get()
     expect(newLittensCollection.size).toBe(littens.length)
