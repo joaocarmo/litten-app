@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 import { useTheme } from '@hooks'
 import { useActionSheet } from '@expo/react-native-action-sheet'
-import { useClipboard } from '@react-native-community/clipboard'
+import { useClipboard } from '@react-native-clipboard/clipboard'
 import { Bubble as EZBubble } from 'react-native-easy-chat'
 import { translate } from '@utils/i18n'
 import bubbleStyles from './bubble.styles'
