@@ -1,4 +1,4 @@
-import { APP_IS_DEV } from '@utils/env'
+import { APP_IS_DEV, APP_IS_TEST } from '@utils/env'
 import crashlytics from '@db/crashlytics'
 
 /**
@@ -9,6 +9,10 @@ import crashlytics from '@db/crashlytics'
  * @returns {void}
  */
 export const logError = (...args: unknown[]) => {
+  if (APP_IS_TEST) {
+    return
+  }
+
   if (APP_IS_DEV) {
     // eslint-disable-next-line no-console
     console.warn(...args)
@@ -27,6 +31,10 @@ export const logError = (...args: unknown[]) => {
  * @returns {void}
  */
 export const debugLog = (...args: unknown[]) => {
+  if (APP_IS_TEST) {
+    return
+  }
+
   if (APP_IS_DEV) {
     // eslint-disable-next-line no-console
     console.log(...args)

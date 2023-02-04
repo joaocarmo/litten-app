@@ -1,5 +1,4 @@
-/* eslint-disable class-methods-use-this */
-import firestore, { batchLoaderFactory, DataLoader } from '@db/firestore'
+import firestore from '@db/firestore'
 import Base from '@model/base'
 import { MessageError } from '@model/error/message'
 import { debugLog } from '@utils/dev'
@@ -9,51 +8,23 @@ import {
   DB_MESSAGE_BATCH_AMOUNT,
 } from '@utils/constants'
 
-export default class Message extends Base {
+export default class Message extends Base<BasicMessage> {
+  static COLLECTION_NAME = DB_MESSAGE_COLLECTION
+
   #cursor = null
 
   #numOfItemsPerPage = DB_MESSAGE_BATCH_AMOUNT
 
-  #chatUid
+  #chatUid: string
 
-  #text
+  #text: string
 
-  #userUid
-
-  private dataLoader: DataLoader<string, BasicMessage>
+  #userUid: string
 
   constructor(basicMessage: Partial<BasicMessage>) {
     super()
 
     this.mapDocToProps(basicMessage)
-
-    this.dataLoader = new DataLoader(Message.loadAll, {
-      cacheKeyFn: Message.keyFn,
-    })
-  }
-
-  static get firestore(): any {
-    return firestore
-  }
-
-  static get collection(): any {
-    return Message.firestore().collection(DB_MESSAGE_COLLECTION)
-  }
-
-  get firestore(): any {
-    return Message.firestore
-  }
-
-  get collection(): any {
-    return Message.collection
-  }
-
-  private static loadAll = batchLoaderFactory<BasicMessage>(this.collection)
-
-  private static keyFn = (id: string) => `${DB_MESSAGE_COLLECTION}/${id}`
-
-  private getById(id: string) {
-    return this.dataLoader.load(id)
   }
 
   get chatUid(): string {
@@ -81,14 +52,12 @@ export default class Message extends Base {
   }
 
   buildObject(): Omit<BasicMessage, 'id'> {
-    const messageObject = {
+    return {
       chatUid: this.#chatUid,
       text: this.#text,
       userUid: this.#userUid,
       metadata: this.buildMetadata(),
     }
-
-    return messageObject
   }
 
   mapDocToProps({
@@ -103,7 +72,7 @@ export default class Message extends Base {
     this.#userUid = userUid
   }
 
-  subscribeToChat(): any {
+  subscribeToChat() {
     let chatMessages = this.collection.where('chatUid', '==', this.#chatUid)
     chatMessages = chatMessages.limit(this.#numOfItemsPerPage)
     chatMessages = chatMessages.orderBy(
@@ -118,15 +87,14 @@ export default class Message extends Base {
     return chatMessages
   }
 
-  async get(): Promise<BasicMessage | undefined> {
-    const message = await this.getById(this.id)
+  async get() {
+    const message = await this.services.message.get(this.id)
 
-    if (!message) {
-      throw new MessageError('Needs a message uid to get')
+    if (message) {
+      this.mapDocToProps(message)
+
+      return this.toJSON()
     }
-
-    this.mapDocToProps(message)
-    return this.toJSON()
   }
 
   async getAll() {
@@ -145,10 +113,11 @@ export default class Message extends Base {
     return this.subscribeToChat().get()
   }
 
-  async append(): Promise<BasicMessage> {
+  async append() {
     if (!this.id && this.#chatUid && this.#text && this.#userUid) {
       const messageObject = this.buildObject()
-      return this.collection.add(messageObject)
+
+      return this.services.message.create(messageObject)
     } else {
       throw new MessageError(
         'Message does not meet all the requirements for creation',
@@ -156,15 +125,19 @@ export default class Message extends Base {
     }
   }
 
-  async create(): Promise<BasicMessage> {
-    const message = await this.append()
-    this.id = message.id
-    return message
+  async create() {
+    const messageRef = await this.append()
+
+    if (messageRef) {
+      this.id = messageRef.id
+
+      return this.toJSON()
+    }
   }
 
   async delete() {
     if (this.id) {
-      await this.collection.doc(this.id).delete()
+      await this.services.message.delete(this.id)
     } else {
       throw new MessageError('Needs a message uid to delete')
     }
@@ -173,11 +146,15 @@ export default class Message extends Base {
   async deleteAll() {
     if (this.#chatUid) {
       const messagesQuerySnapshot = await this.getAll()
+
       const batch = firestore().batch()
+
       messagesQuerySnapshot.forEach((documentSnapshot) => {
         batch.delete(documentSnapshot.ref)
       })
+
       await batch.commit()
+
       debugLog('[MESSAGE] DELETED MESSAGES', messagesQuerySnapshot.size)
     } else {
       throw new MessageError('Needs a chat uid to delete all')

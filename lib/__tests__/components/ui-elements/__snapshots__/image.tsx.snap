@@ -41,6 +41,7 @@ Array [
     }
   >
     <FastImageView
+      defaultSource={null}
       onFastImageLoadEnd={[Function]}
       onFastImageLoadStart={[Function]}
       resizeMode="contain"

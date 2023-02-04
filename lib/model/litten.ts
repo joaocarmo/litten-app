@@ -1,6 +1,4 @@
-/* eslint-disable class-methods-use-this */
-import firestore, { batchLoaderFactory, DataLoader } from '@db/firestore'
-import storage, { uploadAndGetDownloadUrl } from '@db/storage'
+import { uploadAndGetDownloadUrl } from '@db/storage'
 import Base from '@model/base'
 import { LittenError } from '@model/error/litten'
 import { string2tags } from '@utils/functions'
@@ -10,77 +8,42 @@ import type { AugmentedLitten, BasicLitten } from '@model/types/litten'
 import type { BasicUser } from '@model/types/user'
 import type { PhotoObject } from '@store/types'
 
-export default class Litten extends Base {
-  #active
+export default class Litten extends Base<BasicLitten> {
+  static COLLECTION_NAME = DB_LITTEN_COLLECTION
 
-  #photos
+  #active: boolean
 
-  #species
+  #photos: PhotoObject[]
 
-  #story
+  #species: string
 
-  #title
+  #story: string
 
-  #type
+  #title: string
 
-  #user
+  #type: string
 
-  #userUid
+  #user: BasicUser | null
 
-  #tags
+  #userUid: string
 
-  private dataLoader: DataLoader<string, BasicLitten>
+  #tags: string[]
 
   constructor({ user = null, ...basicLitten }: Partial<AugmentedLitten>) {
     super()
 
     this.mapDocToProps(basicLitten)
+
     this.#user = user
     this.#userUid = this.#userUid || this.#user?.id
-
-    this.dataLoader = new DataLoader(Litten.loadAll, {
-      cacheKeyFn: Litten.keyFn,
-    })
   }
 
-  static get firestore(): any {
-    return firestore
-  }
-
-  static get collection(): any {
-    return Litten.firestore().collection(DB_LITTEN_COLLECTION)
-  }
-
-  static get storage(): any {
-    return storage
-  }
-
-  get firestore(): any {
-    return Litten.firestore
-  }
-
-  get collection(): any {
-    return Litten.collection
-  }
-
-  get storage(): any {
-    return Litten.storage
-  }
-
-  get storageRef(): string {
+  get storagePath(): string {
     if (this.id) {
       return `${STORAGE_LITTEN_PHOTOS}/${this.id}`
     }
 
     return ''
-  }
-
-  private static loadAll = batchLoaderFactory<BasicLitten>(this.collection)
-
-  private static keyFn = (id: string) => `${DB_LITTEN_COLLECTION}/${id}`
-
-  private getById(id: string) {
-    return this.dataLoader.load(id)
   }
 
   get active(): (boolean & (void | boolean)) | boolean {
@@ -151,8 +114,8 @@ export default class Litten extends Base {
     this.#user = user
   }
 
-  get contactPreferences(): string[] {
-    return this.#user?.contactPreferences || []
+  get contactPreferences(): Partial<BasicUser['contactPreferences']> {
+    return this.#user?.contactPreferences ?? {}
   }
 
   get tags(): string[] {
@@ -180,7 +143,7 @@ export default class Litten extends Base {
   }
 
   buildObject(): Omit<BasicLitten, 'id'> {
-    const littenObject = {
+    return {
       active: this.#active,
       location: this.buildLocation(),
       photos: this.#photos,
@@ -192,8 +155,6 @@ export default class Litten extends Base {
       tags: this.#tags,
       metadata: this.buildMetadata(),
     }
-
-    return littenObject
   }
 
   mapDocToProps({
@@ -218,31 +179,36 @@ export default class Litten extends Base {
     this.#tags = tags
   }
 
-  async get(): Promise<BasicLitten | undefined> {
-    const litten = await this.getById(this.id)
+  async get() {
+    const litten = await this.services.litten.get(this.id)
 
     if (litten) {
       this.mapDocToProps(litten)
+
       return this.toJSON()
     }
   }
 
+  // eslint-disable-next-line class-methods-use-this
   async savePhoto(fileURI: string, docId: string): Promise<string> {
     const filename = fileURI.split('/').pop()
     const strRef = `${STORAGE_LITTEN_PHOTOS}/${docId}/${filename}`
     const downloadURL = await uploadAndGetDownloadUrl(strRef, fileURI)
+
     return downloadURL
   }
 
-  async savePhotos(doc): Promise<void> {
+  async savePhotos(doc: BasicLitten) {
     const docId = doc.id
     const photos = []
 
     const photosToSave = []
 
     for (const photo of this.#photos) {
-      if (typeof photo?.uri === 'string') {
-        photosToSave.push(this.savePhoto(photo?.uri, docId))
+      const photoUri = typeof photo === 'string' ? photo : photo.uri
+
+      if (typeof photoUri === 'string') {
+        photosToSave.push(this.savePhoto(photoUri, docId))
       }
     }
 
@@ -258,45 +224,47 @@ export default class Litten extends Base {
       logError(err)
     }
 
-    this.dataLoader.clear(this.id)
-    await doc.update({
+    await this.services.litten.update(docId, {
       photos,
     })
 
     this.#photos = photos
   }
 
-  async create(): Promise<any> {
+  async create() {
     try {
       const littenObject = this.buildObject()
-      const litten = await this.collection.add(littenObject)
-      this.id = litten.id
 
-      await this.savePhotos(litten)
+      const littenDoc = await this.services.litten.create(littenObject)
 
-      return litten
+      if (littenDoc) {
+        this.id = littenDoc.id
+
+        await this.savePhotos(littenDoc)
+
+        return littenDoc
+      }
     } catch (err) {
       throw new LittenError(err)
     }
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  async update(): Promise<void> {}
+  // eslint-disable-next-line @typescript-eslint/no-empty-function, class-methods-use-this
+  async update() {}
 
-  async save(): Promise<void> {
+  save() {
     if (this.id) {
-      await this.update()
+      return this.update()
     } else {
-      await this.create()
+      return this.create()
     }
   }
 
-  async toggleActive(active = true): Promise<void> {
+  async toggleActive(active = true) {
     if (this.id) {
       try {
-        await this.collection.doc(this.id).update({
+        await this.services.litten.update(this.id, {
           active,
-          'metadata.updatedAt': firestore.FieldValue.serverTimestamp(),
         })
       } catch (err) {
         throw new LittenError(err)
@@ -306,17 +274,17 @@ export default class Litten extends Base {
     }
   }
 
-  async archive(): Promise<void> {
-    await this.toggleActive(false)
+  archive() {
+    return this.toggleActive(false)
   }
 
-  async activate(): Promise<void> {
-    await this.toggleActive(true)
+  activate() {
+    return this.toggleActive(true)
   }
 
   async deletePhotos(): Promise<void> {
     try {
-      const storageRef = this.storage().ref(this.storageRef)
+      const storageRef = this.storageRef()
       const filesRef = await storageRef.listAll()
 
       for (const fileRef of filesRef.items) {
@@ -330,7 +298,8 @@ export default class Litten extends Base {
   async delete(): Promise<void> {
     if (this.id) {
       try {
-        await this.collection.doc(this.id).delete()
+        await this.services.litten.delete(this.id)
+
         this.deletePhotos()
       } catch (err) {
         throw new LittenError(err)

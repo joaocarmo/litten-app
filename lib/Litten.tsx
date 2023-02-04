@@ -12,7 +12,7 @@ import {
   useUserInfo,
   useUserPosts,
 } from '@hooks'
-import Auth from '@model/auth'
+import Services from '@services/services'
 import Main from '@root/Main'
 import Onboard from '@root/Onboard'
 import BlockedScreen from '@screens/blocked'
@@ -50,7 +50,7 @@ const Litten = () => {
       } = await setUpApp(basicAuthUser)
 
       if (error) {
-        await Auth.signOut()
+        await Services.auth.signOut()
 
         setActiveChats([])
         clearBasic()
@@ -100,7 +100,7 @@ const Litten = () => {
 
   // Handle authentication state changes
   useEffect(() => {
-    const authStateSubscriber = Auth.auth.onAuthStateChanged(
+    const authStateSubscriber = Services.auth.onAuthStateChanged(
       onAuthStateChangeHandler,
     )
     // Unsubscribe on unmount

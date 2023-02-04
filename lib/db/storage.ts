@@ -64,11 +64,12 @@ export const uploadAndGetDownloadUrl = async (
  */
 export const uploadUserAvatar = async (
   photoURL: string,
-  { userAuthUid = '' },
+  { userAuthUid = '' }: { userAuthUid: string },
 ): Promise<string> => {
   const fileExt = 'jpg'
   const strRef = `${STORAGE_USER_AVATAR}/${userAuthUid}.${fileExt}`
   const downloadURL = await uploadAndGetDownloadUrl(strRef, photoURL)
+
   return downloadURL
 }
 

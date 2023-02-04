@@ -8,6 +8,7 @@ import FormStatusTemplate from '@templates/form-status'
 import { emailValidator } from '@utils/validators'
 import { getErrorMessage } from '@utils/functions'
 import { translate } from '@utils/i18n'
+import { debugLog } from '@utils/dev'
 
 const FormRecover = ({
   formLogin: { email, error, errorMessage },
@@ -50,6 +51,8 @@ const FormRecover = ({
     } catch (err) {
       const fbErrorMessage = getErrorMessage('firebase', err.code)
       Alert.alert(fbErrorMessage)
+      // Log the actual error
+      debugLog(err)
     } finally {
       setIsLoading(false)
     }

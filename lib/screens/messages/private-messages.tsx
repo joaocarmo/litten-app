@@ -193,11 +193,10 @@ const PrivateMessages = ({
   useEffect(() => {
     if (chatUid) {
       debugLog('[MESSAGES] useEffect subscribeToChat', chatUid)
-      const subscriber = message
-        .subscribeToChat()
-        .onSnapshot((querySnapshot, error) =>
-          updateMessages(querySnapshot, error),
-        )
+      const subscriber = message.subscribeToChat().onSnapshot(
+        (querySnapshot) => updateMessages(querySnapshot, null),
+        (error) => updateMessages(null, error),
+      )
       return () => {
         debugLog('[MESSAGES] useEffect un-subscribeToChat', chatUid)
         subscriber()

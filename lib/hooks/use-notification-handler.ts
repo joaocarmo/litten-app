@@ -6,6 +6,8 @@ const useNotificationHandler = () => {
   const onNotification = useCallback(
     ({ foreground, data: { screen, ...data }, userInteraction }) => {
       if (screen) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore FIXME
         RootNavigation.navigate(screen)
       } else if (foreground && userInteraction) {
         const { chat, litten, recipient } = data

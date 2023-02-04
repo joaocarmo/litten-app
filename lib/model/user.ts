@@ -1,47 +1,37 @@
-/* eslint-disable class-methods-use-this */
-import firestore, { batchLoaderFactory, DataLoader } from '@db/firestore'
-import storage from '@db/storage'
-import Auth from '@model/auth'
+import firestore from '@db/firestore'
 import Base from '@model/base'
 import Litten from '@model/litten'
 import Search from '@model/search'
-import { UserError } from '@model/error/user'
 import { deleteAllChatForUser } from '@db/maintenance'
 import { locationSchema } from '@db/schemas/location'
 import {
   DB_USER_COLLECTION,
   DEFAULT_CONTACT_PREFERENCES,
-  STORAGE_IGNORED_ERRORS,
-  STORAGE_USER_AVATAR,
 } from '@utils/constants'
-import { debugLog, logError } from '@utils/dev'
+import { debugLog } from '@utils/dev'
 import type { BasicUser, ContactPreferences } from '@model/types/user'
 import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
 
-export default class User extends Base {
-  #auth
+export default class User extends Base<BasicUser> {
+  static COLLECTION_NAME = DB_USER_COLLECTION
 
-  #contactPreferences
+  #contactPreferences: ContactPreferences
 
-  #currentUser
+  #displayName: string
 
-  #displayName
+  #email: string
 
-  #email
+  #isOrganization: boolean
 
-  #isOrganization
+  #phoneNumber: string
 
-  #phoneNumber
+  #photoURL: string
 
-  #photoURL
-
-  #search
+  #search: Search
 
   #deferredSave = false
 
-  #deferredSaveObject = {}
-
-  private dataLoader: DataLoader<string, BasicUser>
+  #deferredSaveObject: Partial<BasicUser> = {}
 
   constructor(basicUser: Partial<BasicUser>) {
     super()
@@ -50,48 +40,14 @@ export default class User extends Base {
       basicUser
 
     this.mapDocToProps(basicUser)
+
     this.#search = new Search({
       user: {
         id,
       },
     })
-    this.#auth = new Auth()
-    this.#currentUser = this.#auth.currentUser
+
     this.#contactPreferences = contactPreferences
-
-    this.dataLoader = new DataLoader(User.loadAll, { cacheKeyFn: User.keyFn })
-  }
-
-  static get firestore() {
-    return firestore
-  }
-
-  static get collection() {
-    return User.firestore().collection(DB_USER_COLLECTION)
-  }
-
-  static get storage() {
-    return storage
-  }
-
-  get firestore() {
-    return User.firestore
-  }
-
-  get collection() {
-    return User.collection
-  }
-
-  get storage() {
-    return User.storage
-  }
-
-  private static loadAll = batchLoaderFactory<BasicUser>(this.collection)
-
-  private static keyFn = (id: string) => `${DB_USER_COLLECTION}/${id}`
-
-  private getById(id: string) {
-    return this.dataLoader.load(id)
   }
 
   get displayName(): string | undefined {
@@ -102,10 +58,6 @@ export default class User extends Base {
     if (displayName) {
       this.#displayName = displayName || ''
       this.updateOne('displayName', displayName)
-
-      if (this.#currentUser) {
-        this.#auth.displayName = displayName
-      }
     }
   }
 
@@ -117,10 +69,6 @@ export default class User extends Base {
     if (email) {
       this.#email = email || ''
       this.updateOne('email', email)
-
-      if (this.#currentUser) {
-        this.#auth.email = email || ''
-      }
     }
   }
 
@@ -131,10 +79,6 @@ export default class User extends Base {
   set photoURL(photoURL: string | undefined) {
     this.#photoURL = photoURL || ''
     this.updateOne('photoURL', photoURL)
-
-    if (this.#currentUser && photoURL) {
-      this.#auth.photoURL = photoURL
-    }
   }
 
   get location(): DBLocationObject {
@@ -157,15 +101,6 @@ export default class User extends Base {
       'location.coordinates',
       new firestore.GeoPoint(latitude, longitude),
     )
-  }
-
-  get photoURLRef(): string {
-    if (this.id) {
-      const fileExt = 'jpg'
-      return `${STORAGE_USER_AVATAR}/${this.id}.${fileExt}`
-    }
-
-    return ''
   }
 
   get phoneNumber(): string | undefined {
@@ -208,24 +143,19 @@ export default class User extends Base {
   }
 
   async uploadAndSetPhoto(photoURL: string): Promise<void> {
-    if (this.#currentUser) {
-      this.deletePhoto(this.photoURLRef)
+    await this.services.auth.deletePhoto()
 
-      try {
-        this.#photoURL = await this.#auth.uploadAndSetPhoto(photoURL)
-        this.updateOne('photoURL', this.#photoURL)
-      } catch (err) {
-        if (STORAGE_IGNORED_ERRORS.includes(err.code)) {
-          debugLog(err)
-        } else {
-          logError(err)
-        }
-      }
-    }
+    await this.services.auth.update({ photoURL })
+
+    const newPhotoURL = this.services.auth.currentUserPhotoUrl()
+
+    await this.updateOne('photoURL', newPhotoURL)
+
+    this.#photoURL = newPhotoURL
   }
 
   buildObject(): Omit<BasicUser, 'id'> {
-    const userObject = {
+    return {
       contactPreferences: this.#contactPreferences,
       displayName: this.#displayName,
       email: this.#email,
@@ -235,8 +165,6 @@ export default class User extends Base {
       photoURL: this.#photoURL,
       metadata: this.buildMetadata(),
     }
-
-    return userObject
   }
 
   mapDocToProps({
@@ -257,18 +185,19 @@ export default class User extends Base {
     this.#photoURL = photoURL
   }
 
-  async reauthenticate(password: string): Promise<void> {
-    const provider = this.#auth.EmailAuthProvider
-    const email = this.#email
-    const authCredential = provider.credential(email, password)
-    await this.#currentUser.reauthenticateWithCredential(authCredential)
+  reauthenticate(password: string) {
+    return this.services.auth.reauthenticate({
+      email: this.#email,
+      password,
+    })
   }
 
-  async get(): Promise<BasicUser | undefined> {
-    const user = await this.getById(this.id)
+  async get() {
+    const user = await this.services.user.get(this.id)
 
     if (user) {
       this.mapDocToProps(user)
+
       return this.toJSON()
     }
   }
@@ -276,55 +205,47 @@ export default class User extends Base {
   async create(): Promise<BasicUser | null> {
     if (this.id) {
       const userObject = this.buildObject()
-      await this.collection.doc(this.id).set(userObject)
-      const newUserObject = { ...userObject, id: this.id }
-      return newUserObject
+
+      await this.services.user.create(userObject, { id: this.id })
+
+      return this.toJSON()
     }
 
     return null
   }
 
-  async update(
-    updateObject: Record<string, unknown>,
-    updateTimestamp = true,
-  ): Promise<void> {
+  async update(updateObject: Partial<BasicUser>, updateTimestamp = true) {
     if (this.id) {
-      let newUpdateObject = updateObject
-
-      if (updateTimestamp) {
-        newUpdateObject = {
-          ...updateObject,
-          'metadata.updatedAt': firestore.FieldValue.serverTimestamp(),
-        }
-      }
-
       if (this.#deferredSave) {
         this.#deferredSaveObject = {
           ...this.#deferredSaveObject,
-          ...newUpdateObject,
+          ...updateObject,
         }
       } else {
-        this.dataLoader.clear(this.id)
-        this.collection.doc(this.id).update(newUpdateObject)
+        await this.services.user.update(this.id, updateObject, {
+          updateTimestamp,
+        })
+
+        await this.services.auth.update({
+          displayName: updateObject.displayName,
+          email: updateObject.email,
+          photoURL: updateObject.photoURL,
+        })
       }
     }
   }
 
-  async updateOne(
-    field: string,
-    value: unknown,
-    updateTimestamp = true,
-  ): Promise<void> {
+  updateOne(field: string, value: unknown, updateTimestamp = true) {
     const updateObject = {
       [field]: value,
     }
-    this.update(updateObject, updateTimestamp)
+
+    return this.update(updateObject, updateTimestamp)
   }
 
-  async save(): Promise<void> {
+  save() {
     if (this.#deferredSave) {
-      this.dataLoader.clear(this.id)
-      return this.collection.doc(this.id).update(this.#deferredSaveObject)
+      return this.services.user.update(this.id, this.#deferredSaveObject)
     }
   }
 
@@ -362,30 +283,18 @@ export default class User extends Base {
     }
   }
 
-  async deletePhoto(photoURLRef = ''): Promise<void> {
-    const fileRef = this.storage().ref(photoURLRef || this.photoURLRef)
-
-    try {
-      await fileRef.delete()
-    } catch (err) {
-      if (STORAGE_IGNORED_ERRORS.includes(err.code)) {
-        debugLog(err)
-      } else {
-        throw new UserError(err)
-      }
-    }
+  deletePhoto() {
+    return this.services.auth.deletePhoto()
   }
 
-  async deleteUser(): Promise<void> {
+  deleteUser() {
     if (this.id) {
-      await this.collection.doc(this.id).delete()
+      return this.services.user.delete(this.id)
     }
   }
 
-  async deleteAuth(): Promise<void> {
-    if (this.#currentUser) {
-      await this.#currentUser.delete()
-    }
+  deleteAuth() {
+    return this.services.auth.delete()
   }
 
   async delete(): Promise<void> {

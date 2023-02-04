@@ -66,15 +66,15 @@ export const clearPersistence = async () => {
   }
 }
 
-const cacheMap = new Map()
+export const dataLoaderCacheMap = new Map()
 
 export class DataLoader<K, V, C = K> extends DataLoaderBase<K, V, C> {
   constructor(batchLoadFn: BatchLoadFn<K, V>, options?: Options<K, V, C>) {
-    super(batchLoadFn, { ...options, cacheMap })
+    super(batchLoadFn, { ...options, cacheMap: dataLoaderCacheMap })
   }
 }
 
-interface BaseRecord {
+export interface BaseRecord {
   id: string
 }
 
@@ -88,7 +88,7 @@ export const batchLoaderFactory =
       .get()
 
     if (results.empty) {
-      return []
+      return ids.map(() => undefined)
     }
 
     return results.docs.map((user) => ({ id: user.id, ...user.data() } as T))

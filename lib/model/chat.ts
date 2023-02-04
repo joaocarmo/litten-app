@@ -1,5 +1,4 @@
-/* eslint-disable class-methods-use-this */
-import firestore, { batchLoaderFactory, DataLoader } from '@db/firestore'
+import firestore from '@db/firestore'
 import Base from '@model/base'
 import { ChatError } from '@model/error/chat'
 import Message from '@model/message'
@@ -10,60 +9,42 @@ import {
 } from '@utils/constants'
 import { logError } from '@utils/dev'
 
-export default class Chat extends Base {
+export default class Chat extends Base<BasicChat> {
+  static COLLECTION_NAME = DB_CHAT_COLLECTION
+
   static #cursor = null
 
   static #numOfItemsPerPage = CHATS_INITIAL_NUM_TO_RENDER
 
-  #lastMessage
+  #lastMessage: string
 
-  #lastMessageBy
+  #lastMessageBy: string
 
-  #littenSpecies
+  #littenSpecies: string
 
-  #littenType
+  #littenType: string
 
-  #littenUid
+  #littenUid: string
 
-  #participants
+  #participants: string[]
 
-  #read
-
-  private dataLoader: DataLoader<string, BasicChat>
+  #read: string[]
 
   constructor(basicChat: Partial<BasicChat>) {
     super()
 
     this.mapDocToProps(basicChat)
-
-    this.dataLoader = new DataLoader(Chat.loadAll, { cacheKeyFn: Chat.keyFn })
-  }
-
-  static get firestore(): any {
-    return firestore
-  }
-
-  static get collection(): any {
-    return Chat.firestore().collection(DB_CHAT_COLLECTION)
-  }
-
-  private static loadAll = batchLoaderFactory<BasicChat>(this.collection)
-
-  private static keyFn = (id: string) => `${DB_CHAT_COLLECTION}/${id}`
-
-  private getById(id: string) {
-    return this.dataLoader.load(id)
   }
 
   static clearCursor() {
     this.#cursor = null
   }
 
-  static queryForUser(userUid: string): any {
+  static queryForUser(userUid: string) {
     return this.collection.where('participants', 'array-contains', userUid)
   }
 
-  static subscribeForUser(userUid: string): any {
+  static subscribeForUser(userUid: string) {
     let userChats = this.queryForUser(userUid)
     userChats = userChats.limit(this.#numOfItemsPerPage)
     userChats = userChats.orderBy(
@@ -78,7 +59,7 @@ export default class Chat extends Base {
     return userChats
   }
 
-  static async getPreviousChats(userUid: string, lastChat: any): Promise<any> {
+  static async getPreviousChats(userUid: string, lastChat) {
     if (lastChat) {
       this.#cursor = lastChat
     }
@@ -99,7 +80,7 @@ export default class Chat extends Base {
     const results = await unreadChats.get()
     const unreadDocs = []
     results.forEach((documentSnapshot) => {
-      const read = documentSnapshot.get('read')
+      const read = documentSnapshot.get<BasicChat['read']>('read')
 
       if (!read.includes(userUid)) {
         unreadDocs.push({
@@ -109,14 +90,6 @@ export default class Chat extends Base {
       }
     })
     return unreadDocs.length
-  }
-
-  get firestore(): any {
-    return Chat.firestore
-  }
-
-  get collection(): any {
-    return Chat.collection
   }
 
   get lastMessage(): string {
@@ -148,7 +121,7 @@ export default class Chat extends Base {
   }
 
   buildObject(): Omit<BasicChat, 'id'> {
-    const chatObject = {
+    return {
       lastMessage: this.#lastMessage,
       lastMessageBy: this.#lastMessageBy,
       littenSpecies: this.#littenSpecies,
@@ -158,8 +131,6 @@ export default class Chat extends Base {
       read: this.#read,
       metadata: this.buildMetadata(),
     }
-
-    return chatObject
   }
 
   mapDocToProps({
@@ -182,22 +153,27 @@ export default class Chat extends Base {
     this.#read = read
   }
 
-  async create(): Promise<any> {
+  async create() {
     if (!this.id) {
       const chatObject = this.buildObject()
-      const chat = await this.collection.add(chatObject)
-      this.id = chat.id
-      return chat
+
+      const chatRef = await this.services.chat.create(chatObject)
+
+      if (chatRef) {
+        this.id = chatRef.id
+
+        return this.toJSON()
+      }
     } else {
       throw new ChatError(`Chat already exists with id ${this.id}`)
     }
   }
 
   async get(userUid?: string): Promise<BasicChat | undefined> {
-    let chat
+    let chat: BasicChat
 
     if (this.id) {
-      chat = await this.collection.doc(this.id).get()
+      chat = await this.services.chat.get(this.id)
     } else if (this.#littenUid && userUid) {
       const results = await this.collection
         .where('littenUid', '==', this.#littenUid)
@@ -206,13 +182,16 @@ export default class Chat extends Base {
         .get()
 
       if (!results.empty) {
-        // eslint-disable-next-line prefer-destructuring
-        chat = results.docs[0]
+        chat = {
+          ...results.docs[0].data(),
+          id: results.docs[0].id,
+        } as BasicChat
       }
     }
 
     if (chat) {
-      this.mapDocToProps({ ...chat.data(), id: chat?.id })
+      this.mapDocToProps(chat)
+
       return this.toJSON()
     }
   }
@@ -221,7 +200,7 @@ export default class Chat extends Base {
     return this.#read.includes(userUid)
   }
 
-  async setReadBy(userUid: string): Promise<void> {
+  async setReadBy(userUid: string): Promise<BasicChat> {
     await this.get()
 
     if (!this.readBy(userUid)) {
@@ -237,7 +216,7 @@ export default class Chat extends Base {
   }: {
     lastMessage: string
     lastMessageBy: string
-  }): Promise<void> {
+  }): Promise<BasicChat> {
     if (lastMessage) {
       this.#lastMessage = lastMessage
       this.#lastMessageBy = lastMessageBy
@@ -254,39 +233,33 @@ export default class Chat extends Base {
   async update(
     updateObject: Record<string, unknown>,
     updateTimestamp = true,
-  ): Promise<void> {
+  ): Promise<BasicChat> {
     if (this.id) {
-      let newUpdateObject = updateObject
-
-      if (updateTimestamp) {
-        newUpdateObject = {
-          ...updateObject,
-          'metadata.updatedAt': firestore.FieldValue.serverTimestamp(),
-        }
-      }
-
-      this.dataLoader.clear(this.id)
-      return this.collection.doc(this.id).update(newUpdateObject)
+      return this.services.chat.update(this.id, updateObject, {
+        updateTimestamp,
+      })
     }
   }
 
   async updateOne(
     field: string,
-    value: any,
+    value: unknown,
     updateTimestamp = true,
-  ): Promise<void> {
+  ): Promise<BasicChat> {
     const updateObject = {
       [field]: value,
     }
+
     return this.update(updateObject, updateTimestamp)
   }
 
-  async deleteForUser(userUid: string): Promise<void> {
+  async deleteForUser(userUid: string): Promise<BasicChat | void> {
     if (this.#participants.length > 1) {
       const participants: string[] = this.#participants.filter(
         (id) => id !== userUid,
       )
       this.#participants = participants
+
       return this.updateOne('participants', this.#participants)
     } else {
       return this.delete()
@@ -301,7 +274,7 @@ export default class Chat extends Base {
 
       try {
         await message.deleteAll()
-        await this.collection.doc(this.id).delete()
+        await this.services.chat.delete(this.id)
       } catch (err) {
         logError(err)
         throw new ChatError('Could not delete the chat and all its messages')

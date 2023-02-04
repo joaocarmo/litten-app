@@ -4,7 +4,7 @@ import { usePaddingBottom, useUserPosts, useTheme } from '@hooks'
 import { useNavigation } from '@react-navigation/native'
 import { useActionSheet } from '@expo/react-native-action-sheet'
 import { Alert, SectionList, View } from 'react-native'
-import Auth from '@model/auth'
+import Services from '@services/services'
 import { UIListItem, UIText } from '@ui-elements'
 import {
   SCREEN_DEV_HACKS,
@@ -48,7 +48,7 @@ const ProfileMainScreen = () => {
     },
   }))
 
-  const signout = useCallback(() => Auth.signOut(), [])
+  const signout = useCallback(() => Services.auth.signOut(), [])
 
   const showActionSheetFeedback = useCallback(() => {
     const reportTypesLabels = reportTypes.map(({ label }) => label)

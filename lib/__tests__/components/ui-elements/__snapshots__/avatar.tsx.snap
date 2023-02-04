@@ -64,6 +64,7 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
     }
   >
     <FastImageView
+      defaultSource={null}
       onFastImageLoadEnd={[Function]}
       onFastImageLoadStart={[Function]}
       resizeMode="cover"

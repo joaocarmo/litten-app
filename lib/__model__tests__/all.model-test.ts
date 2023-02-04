@@ -5,11 +5,11 @@ import User from '@model/user'
 import { chats, littens, messages, users } from '@fixtures/tests'
 import { cleanFirestore, mapName } from '@utils/tests'
 
-afterAll(async () => {
-  await cleanFirestore()
-})
-
 describe('Test the User model', () => {
+  beforeAll(async () => {
+    await cleanFirestore()
+  })
+
   const testUsers = users.map(mapName('displayName'))
 
   it.each(testUsers)('creates the user "%s"', async (user) => {
@@ -63,8 +63,7 @@ describe('Test the Litten model', () => {
 
   it.each(testLittens)(
     'creates the litten "%s"',
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    async ({ id, ...newLittenObject }) => {
+    async ({ id: _, ...newLittenObject }) => {
       const newLitten = new Litten(newLittenObject)
       const res = await newLitten.create()
 
@@ -89,8 +88,7 @@ describe('Test the Chat model', () => {
 
   it.each(testChats)(
     'creates the chat "%s"',
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    async ({ id, ...newChatObject }) => {
+    async ({ id: _, ...newChatObject }) => {
       const newChat = new Chat(newChatObject)
       const res = await newChat.create()
 
@@ -198,6 +196,7 @@ describe('Test the Chat model', () => {
     expect(chat.participants).toHaveLength(1)
 
     await chat.deleteForUser(userUid)
+
     const updatedChat = new Chat({
       id: chat.id,
     })
@@ -219,8 +218,7 @@ describe('Test the Message model', () => {
 
   it.each(testMessages)(
     'creates the message "%s"',
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    async ({ id, ...newMessageObject }) => {
+    async ({ id: _, ...newMessageObject }) => {
       const newMessage = new Message(newMessageObject)
       const res = await newMessage.create()
 

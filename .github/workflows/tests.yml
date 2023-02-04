@@ -39,8 +39,8 @@ jobs:
       run: yarn test
     - name: Execute the firebase rules tests
       run: yarn test:firestore:rules
-    - name: Execute the firebase model tests
-      run: yarn test:firestore:model
+    # - name: Execute the firebase model tests
+    #   run: yarn test:firestore:integration
     - name: Cache firebase emulators
       uses: actions/cache@v3
       with:

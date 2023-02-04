@@ -1,14 +1,17 @@
-/* eslint-disable class-methods-use-this */
 import firestore from '@db/firestore'
 import { string2tags } from '@utils/functions'
 import {
   DB_LITTEN_COLLECTION,
   SEARCH_INITIAL_NUM_TO_RENDER,
 } from '@utils/constants'
+import Services from '@services/services'
+import type { FirebaseFirestoreTypes } from '@react-native-firebase/firestore'
 import type { BasicLitten } from '@model/types/litten'
 import type { SearchSettings } from '@model/types/search'
 
-export default class Search {
+export default class Search extends Services<BasicLitten> {
+  static COLLECTION_NAME = DB_LITTEN_COLLECTION
+
   #cursor = null
 
   #filters = {}
@@ -22,20 +25,14 @@ export default class Search {
   #user = null
 
   constructor({ query, filters, user }: SearchSettings) {
+    super()
+
     this.#filters = filters || this.#filters
     this.#query = query || this.#query
     this.#user = user || this.#user
   }
 
-  get firestore(): any {
-    return firestore
-  }
-
-  get collection(): any {
-    return this.firestore().collection(DB_LITTEN_COLLECTION)
-  }
-
-  get query(): any {
+  get query(): string {
     if (this.#query.length > this.#minQueryLength) {
       return this.#query
     }
@@ -51,8 +48,9 @@ export default class Search {
     return string2tags(this.query).slice(0, 10)
   }
 
-  get homeFeed(): any {
-    let feed
+  get homeFeed() {
+    let feed: FirebaseFirestoreTypes.Query<FirebaseFirestoreTypes.DocumentData>
+
     feed = this.collection.where('active', '==', true)
     feed = feed.limit(this.#numOfItemsPerPage)
     feed = feed.orderBy(
@@ -71,11 +69,11 @@ export default class Search {
     return feed
   }
 
-  startAfter(doc: any): void {
+  startAfter(doc) {
     this.#cursor = doc
   }
 
-  clearCursor(): void {
+  clearCursor() {
     this.#cursor = null
   }
 
@@ -103,7 +101,7 @@ export default class Search {
     return data
   }
 
-  userPostsQuery(active = true): any {
+  userPostsQuery(active = true) {
     return this.collection
       .where('userUid', '==', this.#user?.id)
       .where('active', '==', active)

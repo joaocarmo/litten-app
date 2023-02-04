@@ -6,6 +6,9 @@ const esModules = [
 ].join('|')
 
 const globalConfig = {
+  globals: {
+    __DEV__: true,
+  },
   transformIgnorePatterns: [`node_modules/(?!(${esModules}))`],
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
