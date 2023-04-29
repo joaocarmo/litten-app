@@ -45,7 +45,7 @@ module.exports = (api) => {
         },
       ],
       ['macros'],
-      'react-native-reanimated/plugin',
+      ['react-native-reanimated/plugin'],
     ],
   }
 }
