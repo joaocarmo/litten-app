@@ -1122,7 +1122,7 @@ PODS:
     - React-Core
   - react-native-netinfo (9.3.0):
     - React-Core
-  - react-native-safe-area-context (4.5.0):
+  - react-native-safe-area-context (4.5.1):
     - RCT-Folly
     - RCTRequired
     - RCTTypeSafety
@@ -1262,7 +1262,7 @@ PODS:
     - Firebase/Storage (= 8.15.0)
     - React-Core
     - RNFBApp
-  - RNGestureHandler (2.6.0):
+  - RNGestureHandler (2.9.0):
     - React-Core
   - RNImageCropPicker (0.38.0):
     - React-Core
@@ -1275,7 +1275,7 @@ PODS:
     - TOCropViewController
   - RNLocalize (2.2.3):
     - React-Core
-  - RNReanimated (2.10.0):
+  - RNReanimated (2.17.0):
     - DoubleConversion
     - FBLazyVector
     - FBReactNativeSpec
@@ -1302,7 +1302,7 @@ PODS:
     - React-RCTText
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNScreens (3.17.0):
+  - RNScreens (3.20.0):
     - React-Core
     - React-RCTImage
   - RNSVG (12.4.4):
@@ -1643,7 +1643,7 @@ SPEC CHECKSUMS:
   react-native-get-random-values: a6ea6a8a65dc93e96e24a11105b1a9c8cfe1d72a
   react-native-maps: f4067ffa5044ade5bf98d6dde15014318a537c2f
   react-native-netinfo: 129bd99f607a2dc5bb096168f3e5c150fd1f1c95
-  react-native-safe-area-context: 39c2d8be3328df5d437ac1700f4f3a4f75716acc
+  react-native-safe-area-context: f5549f36508b1b7497434baa0cd97d7e470920d4
   react-native-simple-toast: 8ee5d23f0b92b935ab7434cdb65159ce12dfb4b7
   react-native-slider: 33b8d190b59d4f67a541061bb91775d53d617d9d
   react-native-webview: e771bc375f789ebfa02a26939a57dbc6fa897336
@@ -1674,11 +1674,11 @@ SPEC CHECKSUMS:
   RNFBFirestore: 70f47946084f6ce68c827c4a770613e0adb46da3
   RNFBRemoteConfig: 6942909a1232c22cadfe8a7061b5bea5273bb02b
   RNFBStorage: 814adb8c5bf4ff86a0b0641d750a64d6d48d9a75
-  RNGestureHandler: 920eb17f5b1e15dae6e5ed1904045f8f90e0b11e
+  RNGestureHandler: 071d7a9ad81e8b83fe7663b303d132406a7d8f39
   RNImageCropPicker: ffbba608264885c241cbf3a8f78eb7aeeb978241
   RNLocalize: a64514b46a01375fdfae9349036b4dc7130333b5
-  RNReanimated: 94a78eea625198e7bfbd31e78738eaa78b5b257c
-  RNScreens: 0df01424e9e0ed7827200d6ed1087ddd06c493f9
+  RNReanimated: f186e85d9f28c9383d05ca39e11dd194f59093ec
+  RNScreens: 218801c16a2782546d30bd2026bb625c0302d70f
   RNSVG: ecd661f380a07ba690c9c5929c475a44f432d674
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SDWebImageWebPCoder: 908b83b6adda48effe7667cd2b7f78c897e5111d
