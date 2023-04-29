@@ -4,8 +4,8 @@
 
 #import <React/RCTLinkingManager.h>
 #import <Firebase.h>
-#import <RNCPushNotificationIOS.h>
 #import <UserNotifications/UserNotifications.h>
+#import <RNCPushNotificationIOS.h>
 #import "RNBootSplash.h"
 
 @implementation AppDelegate
@@ -37,6 +37,7 @@
   }
 
   // Show splash screen
+  UIView *rootView = self.window.rootViewController.view;
   [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView];
   // Define UNUserNotificationCenter
   UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
