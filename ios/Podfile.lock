@@ -1131,7 +1131,7 @@ PODS:
   - react-native-simple-toast (1.1.4):
     - React-Core
     - Toast (~> 4.0.0)
-  - react-native-slider (4.3.1):
+  - react-native-slider (4.4.2):
     - React-Core
   - react-native-webview (11.23.0):
     - React-Core
@@ -1225,7 +1225,7 @@ PODS:
     - React-Core
   - RNCClipboard (1.11.1):
     - React-Core
-  - RNCPicker (2.4.4):
+  - RNCPicker (2.4.10):
     - React-Core
   - RNCPushNotificationIOS (1.10.1):
     - React-Core
@@ -1645,7 +1645,7 @@ SPEC CHECKSUMS:
   react-native-netinfo: 129bd99f607a2dc5bb096168f3e5c150fd1f1c95
   react-native-safe-area-context: 39c2d8be3328df5d437ac1700f4f3a4f75716acc
   react-native-simple-toast: 8ee5d23f0b92b935ab7434cdb65159ce12dfb4b7
-  react-native-slider: d3ae4270cf8a8cc45a69912db0cc42b151560d5a
+  react-native-slider: 33b8d190b59d4f67a541061bb91775d53d617d9d
   react-native-webview: e771bc375f789ebfa02a26939a57dbc6fa897336
   React-perflogger: c7ccda3d1d1da837f7ff4e54e816022a6803ee87
   React-RCTActionSheet: 01c125aebbad462a24228f68c584c7a921d6c28e
@@ -1663,7 +1663,7 @@ SPEC CHECKSUMS:
   RNBootSplash: 5f346163977573d6b2aeba1b25df9d2245c0d73c
   RNCAsyncStorage: 0c357f3156fcb16c8589ede67cc036330b6698ca
   RNCClipboard: 2834e1c4af68697089cdd455ee4a4cdd198fa7dd
-  RNCPicker: 0b65be85fe7954fbb2062ef079e3d1cde252d888
+  RNCPicker: 0bc2f0a29abcca7b7ed44a2d036aac9ab6d25700
   RNCPushNotificationIOS: 87b8d16d3ede4532745e05b03c42cff33a36cc45
   RNDeviceInfo: 0a7c1d2532aa7691f9b9925a27e43af006db4dae
   RNFastImage: 72a2d5802adef70f8e42fce486f78878f8b47dae
