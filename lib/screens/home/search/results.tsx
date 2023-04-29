@@ -10,6 +10,7 @@ import BottomLoader, {
   ListFooterComponentStyle,
 } from '@components/bottom-loader'
 import Litten from '@model/litten'
+import { BasicLitten } from '@model/types/litten'
 import LittenDumbCard from '@components/litten-card/dumb'
 import SearchHeaderResults from '@screens/home/search/header-results'
 import SearchEmptyResults from '@screens/home/search/empty-results'
@@ -66,7 +67,7 @@ const SearchResults = ({
       return (
         <LittenDumbCard
           onPressAction={toggleFavourite}
-          isFavourite={isFavourite(litten)}
+          isFavourite={isFavourite(litten as BasicLitten)}
           item={{
             distance,
             litten,

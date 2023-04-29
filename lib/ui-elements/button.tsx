@@ -1,3 +1,5 @@
+import { useCallback } from 'react'
+import type { ReactNode } from 'react'
 import { Pressable, StyleSheet, Text } from 'react-native'
 import type { PressableProps, TextProps } from 'react-native'
 import { useTheme } from '@hooks'
@@ -8,7 +10,6 @@ import {
   UI_BUTTON_FIXED_WIDTH,
   UI_PRESSED_OPACITY,
 } from '@utils/constants'
-import { useCallback } from 'react'
 
 export type UIButtonProps = {
   compact?: boolean
@@ -133,7 +134,7 @@ const UIButton = ({
       <UILoader active={loading} transparent={100} />
       {!loading && (
         <Text style={StyleSheet.compose(styles.uiButtonText, textStyle)}>
-          {children}
+          {children as ReactNode}
         </Text>
       )}
     </Pressable>

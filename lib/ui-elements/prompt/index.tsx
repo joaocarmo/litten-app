@@ -1,14 +1,7 @@
-/* eslint-disable react/no-unused-prop-types */
-/* eslint-disable react/prefer-stateless-function */
 /* eslint-disable react/require-default-props */
-/* eslint-disable-next-line max-classes-per-file */
-import type { Component } from 'react'
-import type {
-  AlertButton,
-  AlertStatic,
-  Constructor,
-  NativeMethodsMixin,
-} from 'react-native'
+import { FC, lazy, Suspense } from 'react'
+import { Platform, View } from 'react-native'
+import type { AlertButton, AlertStatic } from 'react-native'
 
 export type CallbackOrButtons = Parameters<AlertStatic['prompt']>[2]
 
@@ -29,9 +22,14 @@ export type UIPromptProps = {
   type?: AlertStaticParameters[3]
 }
 
-declare class PromptComponent extends Component<UIPromptProps> {}
+const PromptComponent = lazy(() =>
+  Platform.OS === 'ios' ? import('./prompt.ios') : import('./prompt.android'),
+)
 
-declare const PromptBase: Constructor<NativeMethodsMixin> &
-  typeof PromptComponent
+const Prompt: FC<UIPromptProps> = (props) => (
+  <Suspense fallback={<View />}>
+    <PromptComponent {...props} />
+  </Suspense>
+)
 
-export default class Prompt extends PromptBase {}
+export default Prompt

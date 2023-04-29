@@ -3,8 +3,8 @@ import { Pressable, StyleSheet, View } from 'react-native'
 import { useTheme } from '@hooks'
 import UIInput from '@ui-elements/input'
 import UISelectPlatform from '@ui-elements/inner-components/select'
-import { UI_SELECT_OPTION_HEIGHT } from '@utils/constants'
 import type { IOSSelectProps } from '@ui-elements/inner-components/select'
+import { UI_SELECT_OPTION_HEIGHT } from '@utils/constants'
 
 export type UISelectProps = {
   error?: boolean

@@ -1,6 +1,6 @@
 import { Modal, Pressable, View } from 'react-native'
 import { useTheme } from '@hooks'
-import UISelectPicker from '@ui-elements/inner-components/select-picker'
+import UISelectPicker from '@ui-elements/inner-components/select/picker'
 import type { IOSSelectProps } from '@ui-elements/inner-components/select'
 import { UI_MODAL_MIN_HEIGHT } from '@utils/constants'
 

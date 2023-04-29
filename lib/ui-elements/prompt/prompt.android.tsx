@@ -2,6 +2,7 @@ import { useCallback, useState } from 'react'
 import Dialog from 'react-native-dialog'
 import { useTheme } from '@hooks'
 import { translate } from '@utils/i18n'
+import type { UIPromptProps } from '@ui-elements/prompt'
 
 const UIPrompt = ({
   cancelLabel,
@@ -14,7 +15,7 @@ const UIPrompt = ({
   open = false,
   title,
   type,
-}) => {
+}: UIPromptProps) => {
   const [inputText, setInputText] = useState(defaultValue)
   const {
     theme: { colors },
@@ -23,8 +24,16 @@ const UIPrompt = ({
   const secureTextEntry = type === 'secure-text'
 
   const handleOnPress = useCallback(() => {
-    onConfirm(inputText)
+    if (typeof onConfirm === 'function') {
+      onConfirm(inputText)
+    }
   }, [inputText, onConfirm])
+
+  const handleOnCancel = useCallback(() => {
+    if (typeof onCancel === 'function') {
+      onCancel(inputText)
+    }
+  }, [inputText, onCancel])
 
   if (!open) {
     return null
@@ -41,7 +50,7 @@ const UIPrompt = ({
         secureTextEntry={secureTextEntry}
         autoCapitalize={secureTextEntry ? 'none' : undefined}
       />
-      <Dialog.Button label={cancelLabel} onPress={onCancel} />
+      <Dialog.Button label={cancelLabel} onPress={handleOnCancel} />
       <Dialog.Button
         label={confirmLabel}
         onPress={handleOnPress}
@@ -49,6 +58,12 @@ const UIPrompt = ({
       />
     </Dialog.Container>
   )
+}
+
+UIPrompt.defaultProps = {
+  defaultValue: '',
+  isDestructive: false,
+  open: false,
 }
 
 export default UIPrompt
