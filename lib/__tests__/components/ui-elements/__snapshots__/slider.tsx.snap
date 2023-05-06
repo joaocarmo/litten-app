@@ -17,14 +17,14 @@ exports[`Snapshot test for the "UISlider" component renders correctly 1`] = `
   onStartShouldSetResponder={[Function]}
   step={1}
   style={
-    Array [
-      Array [
-        Object {
+    [
+      [
+        {
           "height": 80,
         },
         undefined,
       ],
-      Object {},
+      {},
     ]
   }
   tapToSeek={false}

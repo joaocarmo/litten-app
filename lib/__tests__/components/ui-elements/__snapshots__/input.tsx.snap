@@ -8,8 +8,8 @@ exports[`Snapshot test for the "UIInput" component renders correctly 1`] = `
   placeholder="Some text here"
   placeholderTextColor="#c4c4c4"
   style={
-    Array [
-      Object {
+    [
+      {
         "borderBottomWidth": 2,
         "color": "#000000",
         "fontSize": 19.93359375,
@@ -19,7 +19,7 @@ exports[`Snapshot test for the "UIInput" component renders correctly 1`] = `
         "marginTop": 10,
         "width": "100%",
       },
-      Object {
+      {
         "borderBottomColor": "#c4c4c4",
       },
     ]

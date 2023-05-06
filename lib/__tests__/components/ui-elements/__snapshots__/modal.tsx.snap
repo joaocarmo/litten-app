@@ -3,14 +3,14 @@
 exports[`Snapshot test for the "UIModal" component renders correctly 1`] = `
 <View
   style={
-    Array [
-      Object {
+    [
+      {
         "height": "100%",
         "minWidth": "100%",
         "position": "absolute",
         "width": 750,
       },
-      Object {
+      {
         "backgroundColor": "#00000050",
       },
     ]
@@ -21,7 +21,7 @@ exports[`Snapshot test for the "UIModal" component renders correctly 1`] = `
     hardwareAccelerated={false}
     onRequestClose={[Function]}
     supportedOrientations={
-      Array [
+      [
         "portrait",
       ]
     }
@@ -30,7 +30,7 @@ exports[`Snapshot test for the "UIModal" component renders correctly 1`] = `
   >
     <View
       accessibilityState={
-        Object {
+        {
           "busy": undefined,
           "checked": undefined,
           "disabled": undefined,
@@ -39,7 +39,7 @@ exports[`Snapshot test for the "UIModal" component renders correctly 1`] = `
         }
       }
       accessibilityValue={
-        Object {
+        {
           "max": undefined,
           "min": undefined,
           "now": undefined,
@@ -59,14 +59,14 @@ exports[`Snapshot test for the "UIModal" component renders correctly 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={
-        Object {
+        {
           "flex": 1,
         }
       }
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
@@ -74,7 +74,7 @@ exports[`Snapshot test for the "UIModal" component renders correctly 1`] = `
     </View>
     <View
       style={
-        Object {
+        {
           "backgroundColor": "#eff1f3",
           "borderTopLeftRadius": 26,
           "borderTopRightRadius": 26,
@@ -89,13 +89,13 @@ exports[`Snapshot test for the "UIModal" component renders correctly 1`] = `
     >
       <Text
         style={
-          Array [
-            Object {
+          [
+            {
               "color": "#000000",
               "fontSize": 14,
               "fontWeight": "200",
             },
-            Object {
+            {
               "marginBottom": 8,
               "marginTop": 8,
               "paddingBottom": 6,

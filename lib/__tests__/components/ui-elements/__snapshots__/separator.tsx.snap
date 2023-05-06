@@ -3,13 +3,13 @@
 exports[`Snapshot test for the "UISeparator" component renders correctly 1`] = `
 <View
   style={
-    Array [
-      Array [
-        Object {
+    [
+      [
+        {
           "marginBottom": 20,
           "marginTop": 20,
         },
-        Object {
+        {
           "backgroundColor": "#c4c4c4",
           "height": 0.5,
         },

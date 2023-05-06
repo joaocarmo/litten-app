@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot test for the "UIMessage" component renders correctly 1`] = `
-Array [
+[
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -16,13 +16,13 @@ Array [
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
         undefined,
-        Object {
+        {
           "backgroundColor": "#39a4f2",
         },
         undefined,
@@ -31,7 +31,7 @@ Array [
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -41,14 +41,14 @@ Array [
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -57,18 +57,18 @@ Array [
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -79,17 +79,17 @@ Array [
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -100,7 +100,7 @@ Array [
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -110,14 +110,14 @@ Array [
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -137,13 +137,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -156,7 +156,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -166,8 +166,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -178,7 +178,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -191,7 +191,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -201,14 +201,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -217,15 +217,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -237,14 +237,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -256,7 +256,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -266,8 +266,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -291,8 +291,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -308,7 +308,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -318,8 +318,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -330,7 +330,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -343,7 +343,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -353,14 +353,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -369,15 +369,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -389,14 +389,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -408,7 +408,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -418,8 +418,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -443,8 +443,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -460,7 +460,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -470,8 +470,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -482,7 +482,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -495,7 +495,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -505,14 +505,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -521,15 +521,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -541,14 +541,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -560,7 +560,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -570,8 +570,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -595,8 +595,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -612,7 +612,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -622,8 +622,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -634,13 +634,13 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
         undefined,
-        Object {
+        {
           "backgroundColor": "#39a4f2",
         },
         undefined,
@@ -649,7 +649,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -659,14 +659,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -675,18 +675,18 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -697,17 +697,17 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -718,7 +718,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -728,14 +728,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -755,13 +755,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -774,7 +774,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -784,8 +784,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -796,7 +796,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -809,7 +809,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -819,14 +819,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -835,15 +835,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -855,14 +855,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -874,7 +874,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -884,8 +884,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -909,8 +909,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -926,7 +926,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -936,8 +936,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -948,7 +948,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -961,7 +961,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -971,14 +971,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -987,15 +987,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -1007,14 +1007,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -1026,7 +1026,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -1036,8 +1036,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -1061,8 +1061,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -1078,7 +1078,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -1088,8 +1088,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -1100,7 +1100,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -1113,7 +1113,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -1123,14 +1123,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -1139,15 +1139,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -1159,14 +1159,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -1178,7 +1178,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -1188,8 +1188,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -1213,8 +1213,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -1230,7 +1230,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -1240,8 +1240,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -1252,13 +1252,13 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
         undefined,
-        Object {
+        {
           "backgroundColor": "#39a4f2",
         },
         undefined,
@@ -1267,7 +1267,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -1277,14 +1277,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -1293,18 +1293,18 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -1315,17 +1315,17 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -1336,7 +1336,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -1346,14 +1346,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -1373,13 +1373,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -1392,7 +1392,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -1402,8 +1402,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -1414,7 +1414,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -1427,7 +1427,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -1437,14 +1437,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -1453,15 +1453,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -1473,14 +1473,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -1492,7 +1492,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -1502,8 +1502,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -1527,8 +1527,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -1544,7 +1544,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -1554,8 +1554,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -1566,7 +1566,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -1579,7 +1579,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -1589,14 +1589,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -1605,15 +1605,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -1625,14 +1625,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -1644,7 +1644,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -1654,8 +1654,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -1679,8 +1679,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -1696,7 +1696,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -1706,8 +1706,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -1718,7 +1718,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -1731,7 +1731,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -1741,14 +1741,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -1757,15 +1757,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -1777,14 +1777,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -1796,7 +1796,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -1806,8 +1806,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -1831,8 +1831,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -1848,7 +1848,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -1858,8 +1858,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -1870,13 +1870,13 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
         undefined,
-        Object {
+        {
           "backgroundColor": "#39a4f2",
         },
         undefined,
@@ -1885,7 +1885,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -1895,14 +1895,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -1911,18 +1911,18 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -1933,17 +1933,17 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -1954,7 +1954,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -1964,14 +1964,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -1991,13 +1991,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -2010,7 +2010,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -2020,8 +2020,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -2032,7 +2032,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -2045,7 +2045,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -2055,14 +2055,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -2071,15 +2071,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -2091,14 +2091,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -2110,7 +2110,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -2120,8 +2120,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -2145,8 +2145,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -2162,7 +2162,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -2172,8 +2172,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -2184,7 +2184,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -2197,7 +2197,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -2207,14 +2207,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -2223,15 +2223,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -2243,14 +2243,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -2262,7 +2262,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -2272,8 +2272,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -2297,8 +2297,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -2314,7 +2314,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -2324,8 +2324,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -2336,7 +2336,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -2349,7 +2349,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -2359,14 +2359,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -2375,15 +2375,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -2395,14 +2395,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -2414,7 +2414,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -2424,8 +2424,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -2449,8 +2449,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -2466,7 +2466,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -2476,8 +2476,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -2488,13 +2488,13 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
         undefined,
-        Object {
+        {
           "backgroundColor": "#39a4f2",
         },
         undefined,
@@ -2503,7 +2503,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -2513,14 +2513,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -2529,18 +2529,18 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -2551,17 +2551,17 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -2572,7 +2572,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -2582,14 +2582,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -2609,13 +2609,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -2628,7 +2628,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -2638,8 +2638,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -2650,7 +2650,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -2663,7 +2663,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -2673,14 +2673,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -2689,15 +2689,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -2709,14 +2709,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -2728,7 +2728,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -2738,8 +2738,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -2763,8 +2763,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -2780,7 +2780,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -2790,8 +2790,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -2802,7 +2802,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -2815,7 +2815,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -2825,14 +2825,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -2841,15 +2841,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -2861,14 +2861,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -2880,7 +2880,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -2890,8 +2890,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -2915,8 +2915,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -2932,7 +2932,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -2942,8 +2942,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -2954,7 +2954,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -2967,7 +2967,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -2977,14 +2977,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -2993,15 +2993,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -3013,14 +3013,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -3032,7 +3032,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -3042,8 +3042,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -3067,8 +3067,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -3084,7 +3084,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -3094,8 +3094,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -3106,13 +3106,13 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
         undefined,
-        Object {
+        {
           "backgroundColor": "#39a4f2",
         },
         undefined,
@@ -3121,7 +3121,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -3131,14 +3131,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -3147,18 +3147,18 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -3169,17 +3169,17 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -3190,7 +3190,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -3200,14 +3200,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -3227,13 +3227,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -3246,7 +3246,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -3256,8 +3256,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -3268,7 +3268,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -3281,7 +3281,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -3291,14 +3291,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -3307,15 +3307,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -3327,14 +3327,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -3346,7 +3346,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -3356,8 +3356,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -3381,8 +3381,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -3398,7 +3398,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -3408,8 +3408,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -3420,7 +3420,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -3433,7 +3433,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -3443,14 +3443,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -3459,15 +3459,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -3479,14 +3479,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -3498,7 +3498,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -3508,8 +3508,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -3533,8 +3533,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -3550,7 +3550,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -3560,8 +3560,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -3572,7 +3572,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -3585,7 +3585,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -3595,14 +3595,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -3611,15 +3611,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -3631,14 +3631,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -3650,7 +3650,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -3660,8 +3660,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -3685,8 +3685,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -3702,7 +3702,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -3712,8 +3712,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -3724,13 +3724,13 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
         undefined,
-        Object {
+        {
           "backgroundColor": "#39a4f2",
         },
         undefined,
@@ -3739,7 +3739,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -3749,14 +3749,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -3765,18 +3765,18 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -3787,17 +3787,17 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -3808,7 +3808,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -3818,14 +3818,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -3845,13 +3845,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -3864,7 +3864,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -3874,8 +3874,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -3886,7 +3886,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -3899,7 +3899,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -3909,14 +3909,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -3925,15 +3925,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -3945,14 +3945,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -3964,7 +3964,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -3974,8 +3974,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -3999,8 +3999,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -4016,7 +4016,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -4026,8 +4026,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -4038,7 +4038,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -4051,7 +4051,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -4061,14 +4061,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -4077,15 +4077,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -4097,14 +4097,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -4116,7 +4116,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -4126,8 +4126,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -4151,8 +4151,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -4168,7 +4168,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -4178,8 +4178,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -4190,7 +4190,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -4203,7 +4203,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -4213,14 +4213,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -4229,15 +4229,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -4249,14 +4249,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -4268,7 +4268,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -4278,8 +4278,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -4303,8 +4303,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -4320,7 +4320,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -4330,8 +4330,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -4342,13 +4342,13 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
         },
         undefined,
-        Object {
+        {
           "backgroundColor": "#39a4f2",
         },
         undefined,
@@ -4357,7 +4357,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -4367,14 +4367,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -4383,18 +4383,18 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -4405,17 +4405,17 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -4426,7 +4426,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -4436,14 +4436,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -4463,13 +4463,13 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
                 },
-                Object {
+                {
                   "color": "#ffffff",
                 },
               ]
@@ -4482,7 +4482,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",
@@ -4492,8 +4492,8 @@ purpose (injected humour and the like).
   </View>,
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 6,
           "flex": 1,
@@ -4504,7 +4504,7 @@ purpose (injected humour and the like).
           "paddingLeft": 20,
           "paddingRight": 20,
         },
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "space-between",
@@ -4517,7 +4517,7 @@ purpose (injected humour and the like).
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
@@ -4527,14 +4527,14 @@ purpose (injected humour and the like).
     >
       <View
         style={
-          Object {
+          {
             "flex": 1,
           }
         }
       >
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
             }
@@ -4543,15 +4543,15 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 14,
                   "fontWeight": "500",
                   "paddingBottom": 3,
                 },
-                Object {
+                {
                   "fontWeight": "700",
                 },
                 undefined,
@@ -4563,14 +4563,14 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
                   "fontWeight": "200",
                 },
-                Object {
+                {
                   "textAlign": "right",
                 },
                 undefined,
@@ -4582,7 +4582,7 @@ purpose (injected humour and the like).
         </View>
         <View
           style={
-            Object {
+            {
               "flexDirection": "row",
               "justifyContent": "space-between",
               "paddingTop": 3,
@@ -4592,8 +4592,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "flex": 1,
                   "fontSize": 12.444444444444445,
@@ -4617,8 +4617,8 @@ purpose (injected humour and the like).
           <Text
             numberOfLines={1}
             style={
-              Array [
-                Object {
+              [
+                {
                   "color": "#000000",
                   "fontSize": 12.444444444444445,
                   "fontWeight": "700",
@@ -4634,7 +4634,7 @@ purpose (injected humour and the like).
     </View>
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "flexDirection": "row",
           "justifyContent": "center",

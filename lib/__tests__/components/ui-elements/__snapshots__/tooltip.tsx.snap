@@ -4,7 +4,7 @@ exports[`Snapshot test for the "UITooltip" component renders correctly 1`] = `
 <View
   collapsable={false}
   style={
-    Object {
+    {
       "opacity": 0,
       "position": "absolute",
       "top": 0,
@@ -14,7 +14,7 @@ exports[`Snapshot test for the "UITooltip" component renders correctly 1`] = `
 >
   <View
     accessibilityState={
-      Object {
+      {
         "busy": undefined,
         "checked": undefined,
         "disabled": undefined,
@@ -23,7 +23,7 @@ exports[`Snapshot test for the "UITooltip" component renders correctly 1`] = `
       }
     }
     accessibilityValue={
-      Object {
+      {
         "max": undefined,
         "min": undefined,
         "now": undefined,
@@ -43,18 +43,18 @@ exports[`Snapshot test for the "UITooltip" component renders correctly 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Array [
-        Object {
+      [
+        {
           "elevation": 6,
           "shadowColor": "#000000",
-          "shadowOffset": Object {
+          "shadowOffset": {
             "height": 4,
             "width": 0,
           },
           "shadowOpacity": 0.1,
           "shadowRadius": 2,
         },
-        Object {
+        {
           "backgroundColor": "#84bff1",
           "borderRadius": 16,
           "paddingBottom": 6,
@@ -68,7 +68,7 @@ exports[`Snapshot test for the "UITooltip" component renders correctly 1`] = `
   >
     <Text
       style={
-        Object {
+        {
           "color": "#ffffff",
           "fontWeight": "700",
         }

@@ -3,7 +3,7 @@
 exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 1`] = `
 <View
   style={
-    Object {
+    {
       "flexDirection": "row",
       "flexWrap": "wrap",
       "justifyContent": "space-between",
@@ -12,7 +12,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
 >
   <View
     accessibilityState={
-      Object {
+      {
         "busy": undefined,
         "checked": undefined,
         "disabled": undefined,
@@ -21,7 +21,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
       }
     }
     accessibilityValue={
-      Object {
+      {
         "max": undefined,
         "min": undefined,
         "now": undefined,
@@ -43,9 +43,9 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
   >
     <View
       style={
-        Array [
-          Array [
-            Object {
+        [
+          [
+            {
               "aspectRatio": 1,
               "borderColor": "#e5e5e5",
               "borderRadius": 10,
@@ -54,12 +54,12 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
               "marginBottom": 3.75,
               "marginTop": 3.75,
             },
-            Object {
+            {
               "alignItems": "center",
               "justifyContent": "center",
             },
           ],
-          Object {
+          {
             "backgroundColor": "#39a4f2",
           },
         ]
@@ -69,7 +69,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
         fill="#ffffff"
         height={32}
         style={
-          Object {
+          {
             "height": 32,
             "margin": 8,
             "tintColor": "#ffffff",
@@ -80,7 +80,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
       />
       <Text
         style={
-          Object {
+          {
             "color": "#ffffff",
             "fontSize": 9.832647462277093,
             "fontWeight": "700",
@@ -93,8 +93,8 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "aspectRatio": 1,
           "borderColor": "#e5e5e5",
           "borderRadius": 10,
@@ -103,7 +103,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
           "marginBottom": 3.75,
           "marginTop": 3.75,
         },
-        Object {
+        {
           "alignItems": "center",
           "justifyContent": "center",
         },
@@ -112,8 +112,8 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
   />
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "aspectRatio": 1,
           "borderColor": "#e5e5e5",
           "borderRadius": 10,
@@ -122,7 +122,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
           "marginBottom": 3.75,
           "marginTop": 3.75,
         },
-        Object {
+        {
           "alignItems": "center",
           "justifyContent": "center",
         },
@@ -131,8 +131,8 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
   />
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "aspectRatio": 1,
           "borderColor": "#e5e5e5",
           "borderRadius": 10,
@@ -141,7 +141,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
           "marginBottom": 3.75,
           "marginTop": 3.75,
         },
-        Object {
+        {
           "alignItems": "center",
           "justifyContent": "center",
         },
@@ -150,8 +150,8 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
   />
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "aspectRatio": 1,
           "borderColor": "#e5e5e5",
           "borderRadius": 10,
@@ -160,7 +160,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
           "marginBottom": 3.75,
           "marginTop": 3.75,
         },
-        Object {
+        {
           "alignItems": "center",
           "justifyContent": "center",
         },
@@ -169,8 +169,8 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
   />
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "aspectRatio": 1,
           "borderColor": "#e5e5e5",
           "borderRadius": 10,
@@ -179,7 +179,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
           "marginBottom": 3.75,
           "marginTop": 3.75,
         },
-        Object {
+        {
           "alignItems": "center",
           "justifyContent": "center",
         },
@@ -188,8 +188,8 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
   />
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "aspectRatio": 1,
           "borderColor": "#e5e5e5",
           "borderRadius": 10,
@@ -198,7 +198,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
           "marginBottom": 3.75,
           "marginTop": 3.75,
         },
-        Object {
+        {
           "alignItems": "center",
           "justifyContent": "center",
         },
@@ -207,8 +207,8 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
   />
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "aspectRatio": 1,
           "borderColor": "#e5e5e5",
           "borderRadius": 10,
@@ -217,7 +217,7 @@ exports[`Snapshot test for the "UIImagePlaceholder" component renders correctly 
           "marginBottom": 3.75,
           "marginTop": 3.75,
         },
-        Object {
+        {
           "alignItems": "center",
           "justifyContent": "center",
         },

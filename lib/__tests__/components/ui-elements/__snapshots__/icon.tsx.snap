@@ -3,23 +3,23 @@
 exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
 <View
   style={
-    Array [
-      Object {
+    [
+      {
         "aspectRatio": 1,
         "backgroundColor": "#ffffff",
         "borderRadius": 4,
       },
-      Object {
+      {
         "height": 40,
         "padding": 10,
       },
-      Object {
+      {
         "borderRadius": 20,
       },
-      Object {
+      {
         "elevation": 8,
         "shadowColor": "#000000",
-        "shadowOffset": Object {
+        "shadowOffset": {
           "height": 10,
           "width": 0,
         },
@@ -33,8 +33,8 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "alignItems": "center",
           "alignSelf": "center",
           "backgroundColor": "#eff1f3",
@@ -61,12 +61,12 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Array [
-          Object {
+        [
+          {
             "height": "100%",
             "tintColor": "#39a4f2",
             "width": "100%",
@@ -83,12 +83,12 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
       onFastImageLoadStart={[Function]}
       resizeMode="contain"
       source={
-        Object {
+        {
           "uri": "mockIcon",
         }
       }
       style={
-        Object {
+        {
           "bottom": 0,
           "left": 0,
           "position": "absolute",

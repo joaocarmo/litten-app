@@ -3,13 +3,13 @@
 exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
 <View
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "justifyContent": "center",
         "overflow": "hidden",
       },
-      Object {
+      {
         "borderRadius": 36,
         "height": 36,
         "width": 36,
@@ -20,8 +20,8 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "alignItems": "center",
           "alignSelf": "center",
           "backgroundColor": "#eff1f3",
@@ -48,12 +48,12 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "overflow": "hidden",
         },
-        Array [
-          Object {
+        [
+          {
             "borderRadius": 36,
             "height": 36,
             "width": 36,
@@ -69,12 +69,12 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
       onFastImageLoadStart={[Function]}
       resizeMode="cover"
       source={
-        Object {
+        {
           "uri": "https://placeimg.com/140/140/people",
         }
       }
       style={
-        Object {
+        {
           "bottom": 0,
           "left": 0,
           "position": "absolute",
