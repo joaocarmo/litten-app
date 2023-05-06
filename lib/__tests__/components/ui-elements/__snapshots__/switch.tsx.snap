@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Snapshot test for the "UISwitch" component renders correctly with description 1`] = `
-Array [
+[
   <View
     style={
-      Object {
+      {
         "alignItems": "center",
         "borderBottomColor": "#c4c4c4",
         "borderBottomWidth": 0.5,
@@ -21,7 +21,7 @@ Array [
     <Text
       numberOfLines={1}
       style={
-        Object {
+        {
           "color": "#000000",
           "flex": 1,
           "fontSize": 15.75,
@@ -34,7 +34,7 @@ Array [
     <Unknown
       thumbColor="#c4c4c4"
       trackColor={
-        Object {
+        {
           "false": "#dcdee1",
           "true": "#7239f2",
         }
@@ -44,14 +44,14 @@ Array [
   </View>,
   <Text
     style={
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "color": "#000000",
             "fontSize": 14,
             "fontWeight": "200",
           },
-          Object {
+          {
             "marginTop": 8,
           },
         ],
@@ -70,7 +70,7 @@ Array [
 exports[`Snapshot test for the "UISwitch" component renders correctly without description 1`] = `
 <View
   style={
-    Object {
+    {
       "alignItems": "center",
       "borderBottomColor": "#c4c4c4",
       "borderBottomWidth": 0.5,
@@ -87,7 +87,7 @@ exports[`Snapshot test for the "UISwitch" component renders correctly without de
   <Text
     numberOfLines={1}
     style={
-      Object {
+      {
         "color": "#000000",
         "flex": 1,
         "fontSize": 15.75,
@@ -100,7 +100,7 @@ exports[`Snapshot test for the "UISwitch" component renders correctly without de
   <Unknown
     thumbColor="#c4c4c4"
     trackColor={
-      Object {
+      {
         "false": "#dcdee1",
         "true": "#7239f2",
       }

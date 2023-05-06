@@ -1,6 +1,10 @@
 import { render } from '@utils/tests/react-native'
 import { UIOption } from '@ui-elements'
 
+jest.mock('react-native/Libraries/Utilities/Platform', () => ({
+  OS: 'ios',
+}))
+
 describe('Snapshot test for the "UISwitch" component', () => {
   const items = [
     {

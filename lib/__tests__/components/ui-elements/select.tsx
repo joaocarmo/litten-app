@@ -1,6 +1,10 @@
 import { render } from '@utils/tests/react-native'
 import { UISelect } from '@ui-elements'
 
+jest.mock('react-native/Libraries/Utilities/Platform', () => ({
+  OS: 'ios',
+}))
+
 const handleOnValueChange = jest.fn()
 
 describe('Snapshot test for the "UISelect" component', () => {
