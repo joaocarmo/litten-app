@@ -18,10 +18,10 @@ jobs:
       with:
         token: ${{ secrets.GH_PAT }}
         ref: 'main'
-    - name: Use Node.js v18 (LTS)
+    - name: Setup node
       uses: actions/setup-node@v3
       with:
-        node-version: '18'
+        node-version: '20'
         cache: 'yarn'
     - name: Install dependencies
       run: |

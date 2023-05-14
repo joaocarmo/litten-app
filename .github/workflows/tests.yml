@@ -18,10 +18,10 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js v18 (LTS)
+    - name: Setup node
       uses: actions/setup-node@v3
       with:
-        node-version: '18'
+        node-version: '20'
         cache: 'yarn'
     - name: Install firebase-tools globally
       run: yarn global add firebase-tools
