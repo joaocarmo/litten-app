@@ -2,6 +2,23 @@
 
 exports[`Snapshot test for the "TabNavigationItem" component renders correctly 1`] = `
 <View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
   accessible={true}
   collapsable={false}
   focusable={true}
@@ -15,8 +32,8 @@ exports[`Snapshot test for the "TabNavigationItem" component renders correctly 1
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "height": "100%",
         "justifyContent": "center",
@@ -24,7 +41,7 @@ exports[`Snapshot test for the "TabNavigationItem" component renders correctly 1
         "minWidth": 44,
         "width": "12%",
       },
-      Object {
+      {
         "paddingBottom": 0,
       },
     ]
@@ -32,7 +49,7 @@ exports[`Snapshot test for the "TabNavigationItem" component renders correctly 1
 >
   <View
     style={
-      Object {
+      {
         "position": "relative",
       }
     }
@@ -41,8 +58,8 @@ exports[`Snapshot test for the "TabNavigationItem" component renders correctly 1
   </View>
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "backgroundColor": "#ffffff",
           "borderRadius": 3,
           "height": 6,

@@ -3,7 +3,7 @@ import Litten from '@model/litten'
 import Message from '@model/message'
 import User from '@model/user'
 import { chats, littens, messages, users } from '@fixtures/tests'
-import { cleanFirestore, mapName } from '@utils/tests'
+import { cleanFirestore, mapName } from './utils'
 
 describe('Test the User model', () => {
   beforeAll(async () => {

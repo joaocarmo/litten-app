@@ -46,7 +46,6 @@ import defaultConfig, {
   MAINTENANCE_MODE,
   VERSION_DISABLED,
 } from '@config/remote-config/defaults'
-import { getRandInt } from '@utils/tests'
 import type { FirebaseRemoteConfigTypes } from '@react-native-firebase/remote-config'
 import type { LittenFeedObject, SearchFilters } from '@store/types'
 import type { DBCoordinateObject, DBLocationObject } from '@db/schemas/location'
@@ -54,6 +53,9 @@ import type { BasicChat } from '@model/types/chat'
 import type { BasicLitten } from '@model/types/litten'
 import type { BasicUser } from '@model/types/user'
 import reverseGeocodingResponse from './responses/reverse-geocoding-response.json'
+
+const getRandInt = (min: number, max: number): number =>
+  Math.floor(Math.random() * (max - min + 1) + min)
 
 jest.mock('utils/env', () => ({
   IS_BETA_RELASE: true,

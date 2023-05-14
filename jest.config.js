@@ -3,6 +3,7 @@ const esModules = [
   '@react-native-picker',
   '@react-native',
   'react-native',
+  'uuid',
 ].join('|')
 
 const globalConfig = {

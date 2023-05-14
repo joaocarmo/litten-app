@@ -3,8 +3,8 @@
 exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
 <View
   style={
-    Array [
-      Object {
+    [
+      {
         "backgroundColor": "#ffffff",
         "borderRadius": 6,
         "flex": 1,
@@ -15,7 +15,7 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
         "paddingLeft": 20,
         "paddingRight": 20,
       },
-      Object {
+      {
         "alignItems": "center",
         "flexDirection": "row",
         "justifyContent": "space-between",
@@ -28,7 +28,7 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
 >
   <View
     style={
-      Object {
+      {
         "alignItems": "center",
         "flex": 1,
         "flexDirection": "row",
@@ -38,8 +38,8 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
   >
     <Text
       style={
-        Array [
-          Object {
+        [
+          {
             "color": "#000000",
             "fontSize": 14,
             "fontWeight": "500",
@@ -55,7 +55,7 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
   </View>
   <View
     style={
-      Object {
+      {
         "alignItems": "center",
         "flexDirection": "row",
         "justifyContent": "center",
@@ -64,7 +64,7 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
   >
     <View
       style={
-        Object {
+        {
           "alignItems": "center",
           "backgroundColor": "#eff1f3",
           "borderRadius": 8,
@@ -78,8 +78,8 @@ exports[`Snapshot test for the "UIText" component renders correctly 1`] = `
     >
       <Text
         style={
-          Array [
-            Object {
+          [
+            {
               "color": "#000000",
               "fontSize": 9.832647462277093,
               "fontWeight": "700",

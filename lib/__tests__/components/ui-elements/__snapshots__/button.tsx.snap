@@ -2,6 +2,23 @@
 
 exports[`Snapshot test for the "UIButton" component renders correctly 1`] = `
 <View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
   accessible={true}
   collapsable={false}
   focusable={true}
@@ -16,15 +33,15 @@ exports[`Snapshot test for the "UIButton" component renders correctly 1`] = `
   onStartShouldSetResponder={[Function]}
   primary={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "backgroundColor": "#7239f2",
         "borderRadius": 24,
         "justifyContent": "center",
         "minHeight": 44,
       },
-      Object {
+      {
         "width": 577.5,
       },
       undefined,
@@ -34,7 +51,7 @@ exports[`Snapshot test for the "UIButton" component renders correctly 1`] = `
 >
   <Text
     style={
-      Object {
+      {
         "color": "#ffffff",
         "fontSize": 15.75,
         "fontWeight": "700",

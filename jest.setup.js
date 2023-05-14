@@ -46,3 +46,6 @@ jest.mock('react-native/Libraries/Components/Switch/Switch', () => {
     default: mockComponent('react-native/Libraries/Components/Switch/Switch'),
   }
 })
+
+// Silence console.log during tests
+global.console.log = jest.fn()

@@ -3,8 +3,8 @@
 exports[`Snapshot test for the "UILoader" component renders correctly when active 1`] = `
 <View
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "center",
         "backgroundColor": "#eff1f3",

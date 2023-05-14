@@ -1,7 +1,9 @@
-# macOS
+# OSX
+#
 .DS_Store
 
 # Xcode
+#
 build/
 *.pbxuser
 !default.pbxuser
@@ -22,6 +24,7 @@ DerivedData
 ios/.xcode.env.local
 
 # Android/IntelliJ
+#
 build/
 .idea
 .gradle
@@ -29,17 +32,15 @@ local.properties
 *.iml
 *.hprof
 *.log
+.cxx/
+*.keystore
+!debug.keystore
 
 # node.js
+#
 node_modules/
 *-debug.log
 yarn-error.log
-
-# BUCK
-buck-out/
-\.buckd/
-*.keystore
-!debug.keystore
 
 # fastlane
 #
@@ -59,6 +60,9 @@ buck-out/
 # Ruby / CocoaPods
 /ios/Pods/
 /vendor/bundle/
+
+# Temporary files created by Metro to check the health of the file watcher
+.metro-health-check*
 
 # Ruby
 vendor/

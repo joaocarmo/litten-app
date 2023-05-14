@@ -1,17 +1,10 @@
 import { render } from '@utils/tests/react-native'
-import { UIPrompt } from '@ui-elements'
+import UIPromptAndroid from '@ui-elements/prompt/prompt.android'
 
-beforeAll(() => {
-  jest.mock('react-native/Libraries/Utilities/Platform', () => ({
-    OS: 'android',
-    select: () => null,
-  }))
-})
-
-describe('Snapshot test for the "UIPrompt" component', () => {
-  it('renders correctly', () => {
+describe('Snapshot test for the "UIPrompt" component [android]', () => {
+  it('renders correctly [android]', () => {
     const element = render(
-      <UIPrompt
+      <UIPromptAndroid
         open
         title="Title"
         message="Message"

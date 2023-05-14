@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
+exports[`Snapshot test for the "UIPrompt" component [android] renders correctly [android] 1`] = `
 <Modal
   animationType="none"
   hardwareAccelerated={false}
@@ -11,6 +11,15 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
   visible={true}
 >
   <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
     accessible={true}
     collapsable={false}
     focusable={true}
@@ -22,7 +31,7 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "backgroundColor": "black",
         "bottom": 0,
         "left": 0,
@@ -38,13 +47,13 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
     needsOffscreenAlphaCompositing={true}
     pointerEvents="box-none"
     style={
-      Object {
+      {
         "alignItems": "center",
         "flex": 1,
         "justifyContent": "center",
         "opacity": 0,
-        "transform": Array [
-          Object {
+        "transform": [
+          {
             "scale": 0.3,
           },
         ],
@@ -54,31 +63,54 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
     <View
       onLayout={[Function]}
       style={
-        Object {
+        {
           "marginTop": 22,
         }
       }
     >
       <View
         style={
-          Array [
-            null,
+          [
+            {
+              "backgroundColor": {
+                "resource_paths": [
+                  "?attr/colorBackgroundFloating",
+                ],
+              },
+              "borderRadius": 3,
+              "elevation": 4,
+              "flexDirection": "column",
+              "margin": 16,
+              "minWidth": 300,
+              "overflow": "hidden",
+              "padding": 16,
+            },
             undefined,
           ]
         }
       >
         <View
           style={
-            Array [
-              null,
+            [
+              {
+                "margin": 12,
+              },
               undefined,
             ]
           }
         >
           <Text
             style={
-              Array [
-                null,
+              [
+                {
+                  "color": {
+                    "resource_paths": [
+                      "@android:color/primary_text_light",
+                    ],
+                  },
+                  "fontSize": 18,
+                  "fontWeight": "500",
+                },
                 undefined,
               ]
             }
@@ -87,8 +119,16 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
           </Text>
           <Text
             style={
-              Array [
-                null,
+              [
+                {
+                  "color": {
+                    "resource_paths": [
+                      "@android:color/secondary_text_light",
+                    ],
+                  },
+                  "fontSize": 16,
+                  "marginTop": 10,
+                },
                 undefined,
               ]
             }
@@ -98,8 +138,11 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
         </View>
         <View
           style={
-            Array [
-              null,
+            [
+              {
+                "marginBottom": 20,
+                "marginHorizontal": 10,
+              },
               undefined,
             ]
           }
@@ -110,25 +153,33 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
             onChangeText={[Function]}
             placeholder="Password"
             placeholderTextColor={
-              Object {
-                "resource_paths": Array [
+              {
+                "resource_paths": [
                   "@android:color/hint_foreground_light",
                 ],
               }
             }
             secureTextEntry={true}
             style={
-              Array [
-                null,
+              [
+                {
+                  "color": {
+                    "resource_paths": [
+                      "@android:color/primary_text_light",
+                    ],
+                  },
+                  "marginLeft": -4,
+                  "paddingLeft": 4,
+                },
                 undefined,
-                Object {
-                  "height": 18,
+                {
+                  "height": 40,
                 },
               ]
             }
             underlineColorAndroid={
-              Object {
-                "resource_paths": Array [
+              {
+                "resource_paths": [
                   "@android:color/hint_foreground_light",
                 ],
               }
@@ -137,9 +188,12 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
         </View>
         <View
           style={
-            Array [
-              Object {
+            [
+              {
+                "alignItems": "center",
                 "flexDirection": "row",
+                "justifyContent": "flex-end",
+                "marginTop": 4,
               },
               null,
               undefined,
@@ -148,8 +202,20 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
         >
           <View
             accessibilityState={
-              Object {
+              {
+                "busy": undefined,
+                "checked": undefined,
                 "disabled": false,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
               }
             }
             accessible={true}
@@ -163,16 +229,29 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
+              {
+                "alignItems": "center",
+                "justifyContent": "center",
                 "opacity": 1,
               }
             }
           >
             <Text
               style={
-                Array [
-                  null,
-                  Object {
+                [
+                  {
+                    "backgroundColor": "transparent",
+                    "color": {
+                      "resource_paths": [
+                        "@android:color/link_text_dark_light",
+                      ],
+                    },
+                    "fontSize": 14,
+                    "padding": 8,
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  },
+                  {
                     "color": "#169689",
                     "fontWeight": "normal",
                   },
@@ -185,8 +264,20 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
           </View>
           <View
             accessibilityState={
-              Object {
+              {
+                "busy": undefined,
+                "checked": undefined,
                 "disabled": false,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
               }
             }
             accessible={true}
@@ -200,16 +291,29 @@ exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
+              {
+                "alignItems": "center",
+                "justifyContent": "center",
                 "opacity": 1,
               }
             }
           >
             <Text
               style={
-                Array [
-                  null,
-                  Object {
+                [
+                  {
+                    "backgroundColor": "transparent",
+                    "color": {
+                      "resource_paths": [
+                        "@android:color/link_text_dark_light",
+                      ],
+                    },
+                    "fontSize": 14,
+                    "padding": 8,
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  },
+                  {
                     "color": "#e30000",
                     "fontWeight": "normal",
                   },

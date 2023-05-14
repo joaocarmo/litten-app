@@ -3,8 +3,8 @@
 exports[`Snapshot test for the "UISlider" component renders correctly 1`] = `
 <RNCSlider
   disabled={false}
-  enabled={true}
   inverted={false}
+  lowerLimit={-9007199254740991}
   maximumValue={100}
   minimumTrackTintColor="#84bff1"
   minimumValue={1}
@@ -17,19 +17,19 @@ exports[`Snapshot test for the "UISlider" component renders correctly 1`] = `
   onStartShouldSetResponder={[Function]}
   step={1}
   style={
-    Array [
-      Object {},
-      Array [
-        Object {
+    [
+      [
+        {
           "height": 80,
         },
         undefined,
       ],
+      {},
     ]
   }
   tapToSeek={false}
-  thumbImage={null}
   thumbTintColor="#7239f2"
+  upperLimit={9007199254740991}
   value={35}
 />
 `;

@@ -3,8 +3,8 @@
 exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
 <View
   style={
-    Array [
-      Object {
+    [
+      {
         "flexDirection": "row",
         "marginBottom": 6,
         "marginTop": 6,
@@ -19,11 +19,11 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
   >
     <MenuTrigger
       customStyles={
-        Object {
-          "TriggerTouchableComponent": Object {
+        {
+          "TriggerTouchableComponent": {
             "$$typeof": Symbol(react.memo),
             "compare": null,
-            "type": Object {
+            "type": {
               "$$typeof": Symbol(react.forward_ref),
               "render": [Function],
             },
@@ -33,7 +33,7 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
     >
       <View
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#ffffff",
             "borderRadius": 20,
@@ -45,7 +45,7 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
       >
         <Text
           style={
-            Object {
+            {
               "color": "#39a4f2",
               "fontWeight": "700",
             }
@@ -57,9 +57,9 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
           fill="#474545"
           height={12}
           style={
-            Object {
-              "transform": Array [
-                Object {
+            {
+              "transform": [
+                {
                   "rotateZ": "90deg",
                 },
               ],
@@ -71,14 +71,14 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
     </MenuTrigger>
     <MenuOptions
       customStyles={
-        Object {
-          "optionsContainer": Object {
+        {
+          "optionsContainer": {
             "backgroundColor": "#ffffff",
             "borderColor": "#c4c4c4",
             "borderRadius": 6,
             "borderWidth": 0.5,
             "padding": 10,
-            "shadowOffset": Object {
+            "shadowOffset": {
               "height": 0,
               "width": 0,
             },
@@ -89,8 +89,8 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
     >
       <MenuOption
         customStyles={
-          Object {
-            "optionWrapper": Object {
+          {
+            "optionWrapper": {
               "paddingBottom": 10,
               "paddingRight": 64,
               "paddingTop": 10,
@@ -102,13 +102,13 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
       >
         <Text
           style={
-            Array [
-              Object {
+            [
+              {
                 "color": "#6a6767",
                 "fontWeight": "400",
                 "padding": 2,
               },
-              Object {
+              {
                 "color": "#39a4f2",
               },
               undefined,
@@ -120,8 +120,8 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
       </MenuOption>
       <MenuOption
         customStyles={
-          Object {
-            "optionWrapper": Object {
+          {
+            "optionWrapper": {
               "paddingBottom": 10,
               "paddingRight": 64,
               "paddingTop": 10,
@@ -133,8 +133,8 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
       >
         <Text
           style={
-            Array [
-              Object {
+            [
+              {
                 "color": "#6a6767",
                 "fontWeight": "400",
                 "padding": 2,
@@ -149,8 +149,8 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
       </MenuOption>
       <MenuOption
         customStyles={
-          Object {
-            "optionWrapper": Object {
+          {
+            "optionWrapper": {
               "paddingBottom": 10,
               "paddingRight": 64,
               "paddingTop": 10,
@@ -162,8 +162,8 @@ exports[`Snapshot test for the "UIDropdown" component renders correctly 1`] = `
       >
         <Text
           style={
-            Array [
-              Object {
+            [
+              {
                 "color": "#6a6767",
                 "fontWeight": "400",
                 "padding": 2,

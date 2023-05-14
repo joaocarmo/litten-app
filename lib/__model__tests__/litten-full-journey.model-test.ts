@@ -4,7 +4,7 @@ import Message from '@model/message'
 import Search from '@model/search'
 import User from '@model/user'
 import { littens, messages, users } from '@fixtures/tests'
-import { cleanFirestore } from '@utils/tests'
+import { cleanFirestore } from './utils'
 
 describe('Performs an end-to-end user and litten journey', () => {
   beforeAll(async () => {

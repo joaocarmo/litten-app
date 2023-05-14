@@ -1,8 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot test for the "UISwitch" component renders correctly with description 1`] = `
-Array [
+exports[`Snapshot test for the "UISwitch" component platform android renders correctly with description 1`] = `
+[
   <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
     accessible={true}
     collapsable={false}
     focusable={true}
@@ -16,7 +33,7 @@ Array [
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignItems": "center",
         "borderBottomColor": "#c4c4c4",
         "borderBottomWidth": 0.5,
@@ -33,7 +50,7 @@ Array [
     <Text
       numberOfLines={1}
       style={
-        Object {
+        {
           "color": "#000000",
           "flex": 1,
           "fontSize": 15.75,
@@ -45,8 +62,8 @@ Array [
     </Text>
     <Text
       style={
-        Array [
-          Object {
+        [
+          {
             "color": "#000000",
             "fontSize": 14,
             "fontWeight": "200",
@@ -63,14 +80,14 @@ Array [
   </View>,
   <Text
     style={
-      Array [
-        Array [
-          Object {
+      [
+        [
+          {
             "color": "#000000",
             "fontSize": 14,
             "fontWeight": "200",
           },
-          Object {
+          {
             "marginTop": 8,
           },
         ],
@@ -85,21 +102,21 @@ Array [
   </Text>,
   <RNCAndroidDialogPicker
     items={
-      Array [
-        Object {
+      [
+        {
           "color": null,
           "enabled": true,
           "label": "One",
-          "style": Object {
+          "style": {
             "backgroundColor": null,
             "color": null,
           },
         },
-        Object {
+        {
           "color": null,
           "enabled": true,
           "label": "Two",
-          "style": Object {
+          "style": {
             "backgroundColor": null,
             "color": null,
           },
@@ -109,7 +126,7 @@ Array [
     onSelect={[Function]}
     selected={0}
     style={
-      Object {
+      {
         "height": 2000,
         "position": "absolute",
         "top": 0,
@@ -120,9 +137,26 @@ Array [
 ]
 `;
 
-exports[`Snapshot test for the "UISwitch" component renders correctly without description 1`] = `
-Array [
+exports[`Snapshot test for the "UISwitch" component platform android renders correctly without description 1`] = `
+[
   <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
     accessible={true}
     collapsable={false}
     focusable={true}
@@ -136,7 +170,7 @@ Array [
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Object {
+      {
         "alignItems": "center",
         "borderBottomColor": "#c4c4c4",
         "borderBottomWidth": 0.5,
@@ -153,7 +187,7 @@ Array [
     <Text
       numberOfLines={1}
       style={
-        Object {
+        {
           "color": "#000000",
           "flex": 1,
           "fontSize": 15.75,
@@ -165,8 +199,8 @@ Array [
     </Text>
     <Text
       style={
-        Array [
-          Object {
+        [
+          {
             "color": "#000000",
             "fontSize": 14,
             "fontWeight": "200",
@@ -183,21 +217,21 @@ Array [
   </View>,
   <RNCAndroidDialogPicker
     items={
-      Array [
-        Object {
+      [
+        {
           "color": null,
           "enabled": true,
           "label": "One",
-          "style": Object {
+          "style": {
             "backgroundColor": null,
             "color": null,
           },
         },
-        Object {
+        {
           "color": null,
           "enabled": true,
           "label": "Two",
-          "style": Object {
+          "style": {
             "backgroundColor": null,
             "color": null,
           },
@@ -207,13 +241,219 @@ Array [
     onSelect={[Function]}
     selected={0}
     style={
-      Object {
+      {
         "height": 2000,
         "position": "absolute",
         "top": 0,
         "width": 2000,
       }
     }
+  />,
+]
+`;
+
+exports[`Snapshot test for the "UISwitch" component platform ios renders correctly with description 1`] = `
+[
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "borderBottomColor": "#c4c4c4",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginTop": 12,
+        "paddingBottom": 12,
+        "paddingLeft": 8,
+        "paddingRight": 8,
+        "paddingTop": 12,
+      }
+    }
+  >
+    <Text
+      numberOfLines={1}
+      style={
+        {
+          "color": "#000000",
+          "flex": 1,
+          "fontSize": 15.75,
+          "fontWeight": "400",
+        }
+      }
+    >
+      Some text here
+    </Text>
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontSize": 14,
+            "fontWeight": "200",
+          },
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+        ]
+      }
+    >
+      One
+    </Text>
+  </View>,
+  <Text
+    style={
+      [
+        [
+          {
+            "color": "#000000",
+            "fontSize": 14,
+            "fontWeight": "200",
+          },
+          {
+            "marginTop": 8,
+          },
+        ],
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    Some more text here
+  </Text>,
+  <Modal
+    animationType="slide"
+    hardwareAccelerated={false}
+    supportedOrientations={
+      [
+        "portrait",
+      ]
+    }
+    transparent={true}
+    visible={false}
+  />,
+]
+`;
+
+exports[`Snapshot test for the "UISwitch" component platform ios renders correctly without description 1`] = `
+[
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "borderBottomColor": "#c4c4c4",
+        "borderBottomWidth": 0.5,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginTop": 12,
+        "paddingBottom": 12,
+        "paddingLeft": 8,
+        "paddingRight": 8,
+        "paddingTop": 12,
+      }
+    }
+  >
+    <Text
+      numberOfLines={1}
+      style={
+        {
+          "color": "#000000",
+          "flex": 1,
+          "fontSize": 15.75,
+          "fontWeight": "400",
+        }
+      }
+    >
+      Some text here
+    </Text>
+    <Text
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontSize": 14,
+            "fontWeight": "200",
+          },
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+        ]
+      }
+    >
+      One
+    </Text>
+  </View>,
+  <Modal
+    animationType="slide"
+    hardwareAccelerated={false}
+    supportedOrientations={
+      [
+        "portrait",
+      ]
+    }
+    transparent={true}
+    visible={false}
   />,
 ]
 `;
