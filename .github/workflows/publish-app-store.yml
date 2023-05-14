@@ -56,7 +56,7 @@ jobs:
         scripts/prepare-release-ios.sh
 
     - name: Build using Xcode
-      uses: yukiarrr/ios-build-action@v1.9.1
+      uses: yukiarrr/ios-build-action@v1.11.0
       with:
         project-path: ios/litten.xcodeproj
         workspace-path: ios/litten.xcworkspace
