@@ -1,3 +1,332 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot test for the "UIPrompt" component renders correctly 1`] = `<View />`;
+exports[`Snapshot test for the "UIPrompt" component [android] renders correctly [android] 1`] = `
+<Modal
+  animationType="none"
+  hardwareAccelerated={false}
+  onHide={[Function]}
+  renderToHardwareTextureAndroid={true}
+  transparent={true}
+  useNativeDriver={false}
+  visible={true}
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "backgroundColor": "black",
+        "bottom": 0,
+        "left": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  />
+  <View
+    collapsable={false}
+    needsOffscreenAlphaCompositing={true}
+    pointerEvents="box-none"
+    style={
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "opacity": 0,
+        "transform": [
+          {
+            "scale": 0.3,
+          },
+        ],
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      style={
+        {
+          "marginTop": 22,
+        }
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "backgroundColor": {
+                "resource_paths": [
+                  "?attr/colorBackgroundFloating",
+                ],
+              },
+              "borderRadius": 3,
+              "elevation": 4,
+              "flexDirection": "column",
+              "margin": 16,
+              "minWidth": 300,
+              "overflow": "hidden",
+              "padding": 16,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            [
+              {
+                "margin": 12,
+              },
+              undefined,
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": {
+                    "resource_paths": [
+                      "@android:color/primary_text_light",
+                    ],
+                  },
+                  "fontSize": 18,
+                  "fontWeight": "500",
+                },
+                undefined,
+              ]
+            }
+          >
+            Title
+          </Text>
+          <Text
+            style={
+              [
+                {
+                  "color": {
+                    "resource_paths": [
+                      "@android:color/secondary_text_light",
+                    ],
+                  },
+                  "fontSize": 16,
+                  "marginTop": 10,
+                },
+                undefined,
+              ]
+            }
+          >
+            Message
+          </Text>
+        </View>
+        <View
+          style={
+            [
+              {
+                "marginBottom": 20,
+                "marginHorizontal": 10,
+              },
+              undefined,
+            ]
+          }
+        >
+          <TextInput
+            autoCapitalize="none"
+            autoFocus={true}
+            onChangeText={[Function]}
+            placeholder="Password"
+            placeholderTextColor={
+              {
+                "resource_paths": [
+                  "@android:color/hint_foreground_light",
+                ],
+              }
+            }
+            secureTextEntry={true}
+            style={
+              [
+                {
+                  "color": {
+                    "resource_paths": [
+                      "@android:color/primary_text_light",
+                    ],
+                  },
+                  "marginLeft": -4,
+                  "paddingLeft": 4,
+                },
+                undefined,
+                {
+                  "height": 40,
+                },
+              ]
+            }
+            underlineColorAndroid={
+              {
+                "resource_paths": [
+                  "@android:color/hint_foreground_light",
+                ],
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            [
+              {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "flex-end",
+                "marginTop": 4,
+              },
+              null,
+              undefined,
+            ]
+          }
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": false,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "opacity": 1,
+              }
+            }
+          >
+            <Text
+              style={
+                [
+                  {
+                    "backgroundColor": "transparent",
+                    "color": {
+                      "resource_paths": [
+                        "@android:color/link_text_dark_light",
+                      ],
+                    },
+                    "fontSize": 14,
+                    "padding": 8,
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  },
+                  {
+                    "color": "#169689",
+                    "fontWeight": "normal",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              Cancel
+            </Text>
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": false,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "opacity": 1,
+              }
+            }
+          >
+            <Text
+              style={
+                [
+                  {
+                    "backgroundColor": "transparent",
+                    "color": {
+                      "resource_paths": [
+                        "@android:color/link_text_dark_light",
+                      ],
+                    },
+                    "fontSize": 14,
+                    "padding": 8,
+                    "textAlign": "center",
+                    "textTransform": "uppercase",
+                  },
+                  {
+                    "color": "#e30000",
+                    "fontWeight": "normal",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              Confirm
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</Modal>
+`;

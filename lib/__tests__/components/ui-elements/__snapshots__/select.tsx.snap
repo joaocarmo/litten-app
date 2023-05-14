@@ -1,15 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot test for the "UISelect" component renders correctly 1`] = `
+exports[`Snapshot test for the "UISelect" component platform android renders correctly 1`] = `
 <View
   style={
-    Object {
+    {
       "borderWidth": 0,
       "width": "100%",
     }
   }
 >
   <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
     accessible={true}
     collapsable={false}
     focusable={true}
@@ -32,9 +49,9 @@ exports[`Snapshot test for the "UISelect" component renders correctly 1`] = `
       placeholder="Some text here"
       placeholderTextColor="#c4c4c4"
       style={
-        Array [
-          Array [
-            Object {
+        [
+          [
+            {
               "borderBottomWidth": 2,
               "color": "#000000",
               "fontSize": 19.93359375,
@@ -44,11 +61,11 @@ exports[`Snapshot test for the "UISelect" component renders correctly 1`] = `
               "marginTop": 10,
               "width": "100%",
             },
-            Object {
+            {
               "borderBottomColor": "#c4c4c4",
             },
           ],
-          Object {
+          {
             "height": 60,
             "width": "100%",
           },
@@ -59,21 +76,21 @@ exports[`Snapshot test for the "UISelect" component renders correctly 1`] = `
   </View>
   <RNCAndroidDialogPicker
     items={
-      Array [
-        Object {
+      [
+        {
           "color": null,
           "enabled": true,
           "label": "One",
-          "style": Object {
+          "style": {
             "backgroundColor": null,
             "color": null,
           },
         },
-        Object {
+        {
           "color": null,
           "enabled": true,
           "label": "Two",
-          "style": Object {
+          "style": {
             "backgroundColor": null,
             "color": null,
           },
@@ -83,13 +100,101 @@ exports[`Snapshot test for the "UISelect" component renders correctly 1`] = `
     onSelect={[Function]}
     selected={0}
     style={
-      Object {
+      {
         "height": 2000,
         "position": "absolute",
         "top": 0,
         "width": 2000,
       }
     }
+  />
+</View>
+`;
+
+exports[`Snapshot test for the "UISelect" component platform ios renders correctly 1`] = `
+<View
+  style={
+    {
+      "borderWidth": 0,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onTouchStart={[Function]}
+  >
+    <TextInput
+      active={false}
+      editable={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      placeholder="Some text here"
+      placeholderTextColor="#c4c4c4"
+      style={
+        [
+          [
+            {
+              "borderBottomWidth": 2,
+              "color": "#000000",
+              "fontSize": 19.93359375,
+              "fontWeight": "700",
+              "height": 60,
+              "marginBottom": 10,
+              "marginTop": 10,
+              "width": "100%",
+            },
+            {
+              "borderBottomColor": "#c4c4c4",
+            },
+          ],
+          {
+            "height": 60,
+            "width": "100%",
+          },
+        ]
+      }
+      value="One"
+    />
+  </View>
+  <Modal
+    animationType="slide"
+    hardwareAccelerated={false}
+    supportedOrientations={
+      [
+        "portrait",
+      ]
+    }
+    transparent={true}
+    visible={false}
   />
 </View>
 `;
