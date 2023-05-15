@@ -1,14 +1,11 @@
-import {
-  SCREEN_LITTEN_POST_SHARED,
-  SCREEN_PROFILE_VERIFICATION,
-} from '@utils/constants'
+import { Routes } from '@utils/constants'
 
 const linkingConfig = {
   prefixes: ['https://litten.app/open', 'litten://'],
   config: {
     screens: {
-      [SCREEN_LITTEN_POST_SHARED]: 'litten/:littenUid',
-      [SCREEN_PROFILE_VERIFICATION]: 'verification',
+      [Routes.SCREEN_LITTEN_POST_SHARED]: 'litten/:littenUid',
+      [Routes.SCREEN_PROFILE_VERIFICATION]: 'verification',
     },
   },
 }

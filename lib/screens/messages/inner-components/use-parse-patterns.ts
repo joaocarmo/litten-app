@@ -3,13 +3,7 @@ import { useNavigation } from '@react-navigation/native'
 import { useActionSheet } from '@expo/react-native-action-sheet'
 import { useSearchQuery, useTheme } from '@hooks'
 import { openURL } from '@utils/ui'
-import {
-  MAILTO_URI,
-  SCREEN_TAB_NAV_INDEX,
-  SCREEN_TAB_NAV_HOME,
-  SMS_URI,
-  TEL_URI,
-} from '@utils/constants'
+import { MAILTO_URI, SMS_URI, TEL_URI, Routes } from '@utils/constants'
 import { translate } from '@utils/i18n'
 import { TextStyle } from 'react-native'
 import type { ParseShape } from 'react-native-parsed-text'
@@ -69,8 +63,8 @@ const useParsePatterns = () => {
   const handleHashtagPress = useCallback(
     (hastag) => {
       setQuery(hastag)
-      navigation.navigate(SCREEN_TAB_NAV_INDEX, {
-        screen: SCREEN_TAB_NAV_HOME,
+      navigation.navigate(Routes.SCREEN_TAB_NAV_INDEX, {
+        screen: Routes.SCREEN_TAB_NAV_HOME,
         initial: false,
       })
     },

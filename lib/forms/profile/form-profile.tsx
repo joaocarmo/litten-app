@@ -34,7 +34,7 @@ import {
 import { logError } from '@utils/dev'
 import {
   FORM_PROFILE_SET_LOCATION,
-  SCREEN_NEW_LOCATION,
+  Routes,
   USER_AVATAR_SIZE_LARGE,
   USER_PREFERENCES_CONTACT_CALL,
   USER_PREFERENCES_CONTACT_SMS,
@@ -512,7 +512,7 @@ const FormProfile = ({
         <UISeparator invisible />
         <UIListItem
           onPress={() =>
-            navigation.navigate(SCREEN_NEW_LOCATION, {
+            navigation.navigate(Routes.SCREEN_NEW_LOCATION, {
               initialCoordinates: location?.coordinates,
               dispatchToAction: FORM_PROFILE_SET_LOCATION,
             })

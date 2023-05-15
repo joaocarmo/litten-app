@@ -15,7 +15,7 @@ import {
   LITTEN_FILTER_SPECIES,
   LITTEN_FILTER_TYPE,
   LITTEN_FILTER_USER_TYPE,
-  SCREEN_HOME_FILTER_SET,
+  Routes,
 } from '@utils/constants'
 import {
   convertLength,
@@ -137,7 +137,7 @@ const HomeFilterScreen = () => {
     ({ item: { key, label, storeKey } }) => (
       <UIListItem
         onPress={() =>
-          navigation.navigate(SCREEN_HOME_FILTER_SET, {
+          navigation.navigate(Routes.SCREEN_HOME_FILTER_SET, {
             title: label,
             filter: key,
           })

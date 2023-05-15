@@ -14,7 +14,7 @@ import {
 } from '@ui-elements'
 import { emailValidator, passwordValidator } from '@utils/validators'
 import { getErrorMessage } from '@utils/functions'
-import { SCREEN_NOAUTH_RECOVER } from '@utils/constants'
+import { Routes } from '@utils/constants'
 import { translate } from '@utils/i18n'
 import { debugLog } from '@utils/dev'
 import type { LoginFormNavigationProp } from '@utils/types/routes'
@@ -119,7 +119,9 @@ const LoginForm = ({
             <>
               <UISeparator invisible />
               <UILink
-                onPress={() => navigation.navigate(SCREEN_NOAUTH_RECOVER)}
+                onPress={() =>
+                  navigation.navigate(Routes.SCREEN_NOAUTH_RECOVER)
+                }
                 style={styles.forgotPassword}
               >
                 {translate('cta.forgotPassword')}

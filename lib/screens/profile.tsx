@@ -9,16 +9,7 @@ import Settings from '@screens/profile/settings'
 import WebView from '@screens/profile/webview'
 import DevHacks from '@screens/dev/hacks'
 import { translate } from '@utils/i18n'
-import {
-  SCREEN_DEV_HACKS,
-  SCREEN_PROFILE_ABOUT,
-  SCREEN_PROFILE_EDIT,
-  SCREEN_PROFILE_INDEX,
-  SCREEN_PROFILE_POSTS,
-  SCREEN_PROFILE_REPORT,
-  SCREEN_PROFILE_SETTINGS,
-  SCREEN_PROFILE_WEBVIEW,
-} from '@utils/constants'
+import { Routes } from '@utils/constants'
 import type { ProfileStackParamList } from '@utils/types/routes'
 
 const EditScreen = () => (
@@ -68,43 +59,43 @@ const AboutScreen = () => (
 
 const stackScreens = [
   {
-    key: SCREEN_PROFILE_INDEX,
-    name: SCREEN_PROFILE_INDEX,
+    key: Routes.SCREEN_PROFILE_INDEX,
+    name: Routes.SCREEN_PROFILE_INDEX,
     component: Profile,
   },
   {
-    key: SCREEN_PROFILE_EDIT,
-    name: SCREEN_PROFILE_EDIT,
+    key: Routes.SCREEN_PROFILE_EDIT,
+    name: Routes.SCREEN_PROFILE_EDIT,
     component: EditScreen,
   },
   {
-    key: SCREEN_PROFILE_POSTS,
-    name: SCREEN_PROFILE_POSTS,
+    key: Routes.SCREEN_PROFILE_POSTS,
+    name: Routes.SCREEN_PROFILE_POSTS,
     component: PostsScreen,
   },
   {
-    key: SCREEN_PROFILE_SETTINGS,
-    name: SCREEN_PROFILE_SETTINGS,
+    key: Routes.SCREEN_PROFILE_SETTINGS,
+    name: Routes.SCREEN_PROFILE_SETTINGS,
     component: SettingsScreen,
   },
   {
-    key: SCREEN_PROFILE_REPORT,
-    name: SCREEN_PROFILE_REPORT,
+    key: Routes.SCREEN_PROFILE_REPORT,
+    name: Routes.SCREEN_PROFILE_REPORT,
     component: ReportScreen,
   },
   {
-    key: SCREEN_PROFILE_WEBVIEW,
-    name: SCREEN_PROFILE_WEBVIEW,
+    key: Routes.SCREEN_PROFILE_WEBVIEW,
+    name: Routes.SCREEN_PROFILE_WEBVIEW,
     component: WebViewScreen,
   },
   {
-    key: SCREEN_PROFILE_ABOUT,
-    name: SCREEN_PROFILE_ABOUT,
+    key: Routes.SCREEN_PROFILE_ABOUT,
+    name: Routes.SCREEN_PROFILE_ABOUT,
     component: AboutScreen,
   },
   {
-    key: SCREEN_DEV_HACKS,
-    name: SCREEN_DEV_HACKS,
+    key: Routes.SCREEN_DEV_HACKS,
+    name: Routes.SCREEN_DEV_HACKS,
     component: DevHacks,
   },
 ] as const

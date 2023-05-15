@@ -1,5 +1,5 @@
 import { createNavigationContainerRef } from '@react-navigation/native'
-import { SCREEN_NOAUTH_WELCOME } from '@utils/constants'
+import { Routes } from '@utils/constants'
 
 export const navigationRef = createNavigationContainerRef()
 
@@ -26,7 +26,7 @@ export const resetToRoot = () => {
     index: 0,
     routes: [
       {
-        name: SCREEN_NOAUTH_WELCOME,
+        name: Routes.SCREEN_NOAUTH_WELCOME,
       },
     ],
   })

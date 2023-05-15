@@ -11,7 +11,7 @@ import { openURL } from '@utils/ui'
 import { shortenName } from '@utils/functions'
 import {
   LITTEN_URI,
-  SCREEN_MESSAGE_PRIVATE,
+  Routes,
   STRUCTURE_TEMPLATE_SCREEN_PADDING,
   UI_ELEMENT_BORDER_MARGIN,
 } from '@utils/constants'
@@ -77,7 +77,7 @@ const LittenContactOptions = ({
     (e: GestureResponderEvent) => {
       onClickOutside(e)
 
-      navigation.navigate(SCREEN_MESSAGE_PRIVATE, {
+      navigation.navigate(Routes.SCREEN_MESSAGE_PRIVATE, {
         recipient: user,
         litten,
       })

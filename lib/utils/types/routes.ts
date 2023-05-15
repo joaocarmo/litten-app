@@ -87,7 +87,7 @@ export type TabularStackParamList = Record<string, undefined>
  * Routes
  */
 
-export type Routes = string
+export type RoutesScreenName = string
 
 /**
  * Screen navigation param types

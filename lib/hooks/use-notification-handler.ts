@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 import * as RootNavigation from '@config/navigation/root'
-import { SCREEN_MESSAGE_PRIVATE } from '@utils/constants'
+import { Routes } from '@utils/constants'
 
 const useNotificationHandler = () => {
   const onNotification = useCallback(
@@ -15,7 +15,7 @@ const useNotificationHandler = () => {
         if (chat && litten && recipient) {
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore FIXME
-          RootNavigation.navigate(SCREEN_MESSAGE_PRIVATE, {
+          RootNavigation.navigate(Routes.SCREEN_MESSAGE_PRIVATE, {
             chat,
             recipient,
             litten,

@@ -13,12 +13,9 @@ import {
   CONVERSATION_VIEW_PROFILE,
   FEEDBACK_TYPE_ABUSE,
   RECOMMENDED_MINIMUM_TAPPABLE_SIZE,
-  SCREEN_LITTEN_POST,
-  SCREEN_PROFILE_REPORT,
-  SCREEN_TAB_NAV_PROFILE,
-  SCREEN_PROFILE_VIEW,
   UI_DROPDOWN_MARGIN,
   UI_EXTRA_OPTION_SIZE,
+  Routes,
 } from '@utils/constants'
 import { translate } from '@utils/i18n'
 import type { BasicChat } from '@model/types/chat'
@@ -90,7 +87,7 @@ const ChatOptions = ({ chat, litten, recipient, user }: ChatOptionsProps) => {
         label: translate('screens.messages.options.viewLitten'),
         value: CONVERSATION_VIEW_LITTEN,
         onSelect: () =>
-          navigation.navigate(SCREEN_LITTEN_POST, {
+          navigation.navigate(Routes.SCREEN_LITTEN_POST, {
             litten,
             user: litten.userUid === recipient.id ? recipient : user,
           }),
@@ -101,7 +98,7 @@ const ChatOptions = ({ chat, litten, recipient, user }: ChatOptionsProps) => {
         label: translate('screens.messages.options.viewProfile'),
         value: CONVERSATION_VIEW_PROFILE,
         onSelect: () =>
-          navigation.navigate(SCREEN_PROFILE_VIEW, {
+          navigation.navigate(Routes.SCREEN_PROFILE_VIEW, {
             user: recipient,
           }),
         disabled: !recipientExists,
@@ -115,8 +112,8 @@ const ChatOptions = ({ chat, litten, recipient, user }: ChatOptionsProps) => {
         label: translate('screens.messages.options.reportConversation'),
         value: CONVERSATION_REPORT_CONVERSATION,
         onSelect: () =>
-          navigation.navigate(SCREEN_TAB_NAV_PROFILE, {
-            screen: SCREEN_PROFILE_REPORT,
+          navigation.navigate(Routes.SCREEN_TAB_NAV_PROFILE, {
+            screen: Routes.SCREEN_PROFILE_REPORT,
             params: {
               type: FEEDBACK_TYPE_ABUSE,
               initialContent: prepareReportMessage(

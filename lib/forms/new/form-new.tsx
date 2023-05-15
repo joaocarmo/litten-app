@@ -39,10 +39,7 @@ import { translate } from '@utils/i18n'
 import {
   FORM_NEW_SET_LOCATION,
   NEW_POST_NUM_OF_PHOTOS,
-  SCREEN_LITTEN_POST,
-  SCREEN_NEW_LOCATION,
-  SCREEN_PROFILE_EDIT,
-  SCREEN_TAB_NAV_PROFILE,
+  Routes,
 } from '@utils/constants'
 import { littenSpeciesList, littenTypes } from '@utils/litten'
 import type { NewFormNavigationProp } from '@utils/types/routes'
@@ -177,7 +174,7 @@ const NewForm = ({
       },
       (buttonIndex) => {
         if (buttonIndex === 0) {
-          navigation.navigate(SCREEN_NEW_LOCATION, {
+          navigation.navigate(Routes.SCREEN_NEW_LOCATION, {
             initialCoordinates: location?.coordinates,
             dispatchToAction: FORM_NEW_SET_LOCATION,
           })
@@ -284,8 +281,8 @@ const NewForm = ({
   ])
 
   const goToEditProfile = useCallback(() => {
-    navigation.navigate(SCREEN_TAB_NAV_PROFILE, {
-      screen: SCREEN_PROFILE_EDIT,
+    navigation.navigate(Routes.SCREEN_TAB_NAV_PROFILE, {
+      screen: Routes.SCREEN_PROFILE_EDIT,
       initial: false,
     })
   }, [navigation])
@@ -364,7 +361,7 @@ const NewForm = ({
       <UISeparator invisible small />
       <UIButton
         onPress={() =>
-          navigation.navigate(SCREEN_LITTEN_POST, {
+          navigation.navigate(Routes.SCREEN_LITTEN_POST, {
             preview: true,
             litten,
             user,

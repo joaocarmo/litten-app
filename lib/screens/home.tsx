@@ -5,11 +5,7 @@ import Home from '@screens/home/main'
 import Filter from '@screens/home/filter'
 import FilterSet from '@screens/home/filter/set'
 import { translate } from '@utils/i18n'
-import {
-  SCREEN_HOME_INDEX,
-  SCREEN_HOME_FILTER,
-  SCREEN_HOME_FILTER_SET,
-} from '@utils/constants'
+import { Routes } from '@utils/constants'
 import type { HomeStackParamList } from '@utils/types/routes'
 
 const HomeStack = createStackNavigator<HomeStackParamList>()
@@ -44,9 +40,12 @@ const HomeScreen = () => (
       headerShown: false,
     }}
   >
-    <HomeStack.Screen name={SCREEN_HOME_INDEX} component={Home} />
-    <HomeStack.Screen name={SCREEN_HOME_FILTER} component={HomeFilter} />
-    <HomeStack.Screen name={SCREEN_HOME_FILTER_SET} component={HomeFilterSet} />
+    <HomeStack.Screen name={Routes.SCREEN_HOME_INDEX} component={Home} />
+    <HomeStack.Screen name={Routes.SCREEN_HOME_FILTER} component={HomeFilter} />
+    <HomeStack.Screen
+      name={Routes.SCREEN_HOME_FILTER_SET}
+      component={HomeFilterSet}
+    />
   </HomeStack.Navigator>
 )
 
