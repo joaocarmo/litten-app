@@ -21,7 +21,7 @@ import StepPhoto from '@forms/register/steps/photo'
 import { openURL } from '@utils/ui'
 import { getExternalGeoInformation } from '@utils/network'
 import { getErrorMessage } from '@utils/functions'
-import { WEB_APP_BASE, WEB_APP_TERMS_AND_CONDITIONS } from '@utils/constants'
+import { WEB_APP_BASE, WebViews } from '@utils/constants'
 import { debugLog, logError } from '@utils/dev'
 import { translate } from '@utils/i18n'
 
@@ -260,7 +260,7 @@ const RegisterForm = (props) => {
         {
           text: translate('cta.read'),
           onPress: () =>
-            openURL(`${WEB_APP_BASE}${WEB_APP_TERMS_AND_CONDITIONS}`),
+            openURL(`${WEB_APP_BASE}${WebViews.WEB_APP_TERMS_AND_CONDITIONS}`),
         },
         {
           text: translate('cta.cancel'),

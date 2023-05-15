@@ -29,3 +29,9 @@ export enum Routes {
   SCREEN_TAB_NAV_NEW = 'tabnav/new',
   SCREEN_TAB_NAV_PROFILE = 'tabnav/profile',
 }
+
+export enum WebViews {
+  WEB_APP_HELP_AND_CONTACT = '/faq',
+  WEB_APP_TERMS_AND_CONDITIONS = '/terms-and-conditions',
+  WEB_APP_PRIVACY_POLICY = '/privacy-policy',
+}

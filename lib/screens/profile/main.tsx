@@ -6,12 +6,7 @@ import { useActionSheet } from '@expo/react-native-action-sheet'
 import { Alert, SectionList, View } from 'react-native'
 import Services from '@services/services'
 import { UIListItem, UIText } from '@ui-elements'
-import {
-  Routes,
-  WEB_APP_HELP_AND_CONTACT,
-  WEB_APP_PRIVACY_POLICY,
-  WEB_APP_TERMS_AND_CONDITIONS,
-} from '@utils/constants'
+import { Routes, WebViews } from '@utils/constants'
 import { getListItemLayout } from '@utils/functions'
 import { reportTypes } from '@utils/litten'
 import { translate } from '@utils/i18n'
@@ -148,7 +143,7 @@ const ProfileMainScreen = () => {
               path: Routes.SCREEN_PROFILE_WEBVIEW,
               options: {
                 title: translate('screens.profile.help'),
-                path: WEB_APP_HELP_AND_CONTACT,
+                path: WebViews.WEB_APP_HELP_AND_CONTACT,
               },
             },
             otherProps: {
@@ -170,7 +165,7 @@ const ProfileMainScreen = () => {
               path: Routes.SCREEN_PROFILE_WEBVIEW,
               options: {
                 title: translate('screens.profile.termsAndConditions'),
-                path: WEB_APP_TERMS_AND_CONDITIONS,
+                path: WebViews.WEB_APP_TERMS_AND_CONDITIONS,
               },
             },
             otherProps: {
@@ -184,7 +179,7 @@ const ProfileMainScreen = () => {
               path: Routes.SCREEN_PROFILE_WEBVIEW,
               options: {
                 title: translate('screens.profile.privacyPolicy'),
-                path: WEB_APP_PRIVACY_POLICY,
+                path: WebViews.WEB_APP_PRIVACY_POLICY,
               },
             },
             otherProps: {
