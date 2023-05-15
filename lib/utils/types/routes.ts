@@ -11,74 +11,75 @@ import type { BasicChat } from '@model/types/chat'
 import type { BasicLitten } from '@model/types/litten'
 import type { BasicUser } from '@model/types/user'
 import type { DBCoordinateObject } from '@db/schemas/location'
+import { Routes } from '@utils/constants'
 
 /**
  * Root navigation param types
  */
 
 export type OnboardStackParamList = {
-  'noauth/login': undefined
-  'noauth/recover': undefined
-  'noauth/register': undefined
-  'noauth/welcome': undefined
+  [Routes.SCREEN_NOAUTH_LOGIN]: undefined
+  [Routes.SCREEN_NOAUTH_RECOVER]: undefined
+  [Routes.SCREEN_NOAUTH_REGISTER]: undefined
+  [Routes.SCREEN_NOAUTH_WELCOME]: undefined
 }
 
 export type HomeStackParamList = {
-  'home/filter': undefined
-  'home/filter/set': {
+  [Routes.SCREEN_HOME_FILTER]: undefined
+  [Routes.SCREEN_HOME_FILTER_SET]: {
     title: string
     filter: string
   }
-  'home/index': undefined
+  [Routes.SCREEN_HOME_INDEX]: undefined
 }
 
 export type ProfileStackParamList = {
-  'dev/hacks': undefined
-  'profile/about': undefined
-  'profile/edit': undefined
-  'profile/index': undefined
-  'profile/posts': undefined
-  'profile/report': {
+  [Routes.SCREEN_DEV_HACKS]: undefined
+  [Routes.SCREEN_PROFILE_ABOUT]: undefined
+  [Routes.SCREEN_PROFILE_EDIT]: undefined
+  [Routes.SCREEN_PROFILE_INDEX]: undefined
+  [Routes.SCREEN_PROFILE_POSTS]: undefined
+  [Routes.SCREEN_PROFILE_REPORT]: {
     type: string
     initialContent?: string
   }
-  'profile/settings': undefined
-  'profile/webview': undefined
+  [Routes.SCREEN_PROFILE_SETTINGS]: undefined
+  [Routes.SCREEN_PROFILE_WEBVIEW]: undefined
 }
 
 export type RootTabParamList = {
-  'tabnav/favourites': undefined
-  'tabnav/favourites/posts': undefined
-  'tabnav/favourites/searches': undefined
-  'tabnav/home': NavigatorScreenParams<HomeStackParamList>
-  'tabnav/messages': undefined
-  'tabnav/new': undefined
-  'tabnav/profile': NavigatorScreenParams<ProfileStackParamList>
+  [Routes.SCREEN_TAB_NAV_FAVOURITES]: undefined
+  [Routes.SCREEN_TAB_NAV_FAVOURITES_POSTS]: undefined
+  [Routes.SCREEN_TAB_NAV_FAVOURITES_SEARCHES]: undefined
+  [Routes.SCREEN_TAB_NAV_HOME]: NavigatorScreenParams<HomeStackParamList>
+  [Routes.SCREEN_TAB_NAV_MESSAGES]: undefined
+  [Routes.SCREEN_TAB_NAV_NEW]: undefined
+  [Routes.SCREEN_TAB_NAV_PROFILE]: NavigatorScreenParams<ProfileStackParamList>
 }
 
 export type RootStackParamList = {
-  'litten/post': {
+  [Routes.SCREEN_LITTEN_POST]: {
     litten: BasicLitten
     preview?: boolean
     user: BasicUser
   }
-  'litten/post/shared': {
+  [Routes.SCREEN_LITTEN_POST_SHARED]: {
     littenUid: string
   }
-  'message/private': {
+  [Routes.SCREEN_MESSAGE_PRIVATE]: {
     chat?: BasicChat
     recipient: BasicUser
     litten: BasicLitten
   }
-  'new/location': {
+  [Routes.SCREEN_NEW_LOCATION]: {
     initialCoordinates: DBCoordinateObject
     dispatchToAction: string
   }
-  'profile/verification': undefined
-  'profile/view': {
+  [Routes.SCREEN_PROFILE_VERIFICATION]: undefined
+  [Routes.SCREEN_PROFILE_VIEW]: {
     user: BasicUser
   }
-  'tabnav/index': NavigatorScreenParams<RootTabParamList>
+  [Routes.SCREEN_TAB_NAV_INDEX]: NavigatorScreenParams<RootTabParamList>
 }
 
 export type TabularStackParamList = Record<string, undefined>
@@ -94,124 +95,124 @@ export type RoutesScreenName = string
  */
 
 export type ProfileIndexScreenNavigationProp = CompositeNavigationProp<
-  StackNavigationProp<RootStackParamList, 'tabnav/index'>,
+  StackNavigationProp<RootStackParamList, Routes.SCREEN_TAB_NAV_INDEX>,
   CompositeNavigationProp<
-    BottomTabNavigationProp<RootTabParamList, 'tabnav/profile'>,
-    StackNavigationProp<ProfileStackParamList, 'profile/index'>
+    BottomTabNavigationProp<RootTabParamList, Routes.SCREEN_TAB_NAV_PROFILE>,
+    StackNavigationProp<ProfileStackParamList, Routes.SCREEN_PROFILE_INDEX>
   >
 >
 
 export type ProfileMainScreenNavigationProp = CompositeNavigationProp<
-  StackNavigationProp<RootStackParamList, 'tabnav/index'>,
+  StackNavigationProp<RootStackParamList, Routes.SCREEN_TAB_NAV_INDEX>,
   CompositeNavigationProp<
-    BottomTabNavigationProp<RootTabParamList, 'tabnav/profile'>,
-    StackNavigationProp<ProfileStackParamList, 'profile/index'>
+    BottomTabNavigationProp<RootTabParamList, Routes.SCREEN_TAB_NAV_PROFILE>,
+    StackNavigationProp<ProfileStackParamList, Routes.SCREEN_PROFILE_INDEX>
   >
 >
 
 export type ProfileAboutScreenNavigationProp = CompositeNavigationProp<
-  StackNavigationProp<RootStackParamList, 'tabnav/index'>,
+  StackNavigationProp<RootStackParamList, Routes.SCREEN_TAB_NAV_INDEX>,
   CompositeNavigationProp<
-    BottomTabNavigationProp<RootTabParamList, 'tabnav/profile'>,
-    StackNavigationProp<ProfileStackParamList, 'profile/about'>
+    BottomTabNavigationProp<RootTabParamList, Routes.SCREEN_TAB_NAV_PROFILE>,
+    StackNavigationProp<ProfileStackParamList, Routes.SCREEN_PROFILE_ABOUT>
   >
 >
 
 export type MessagePrivateScreenProps = StackScreenProps<
   RootStackParamList,
-  'message/private'
+  Routes.SCREEN_MESSAGE_PRIVATE
 >
 
 export type UseParsePatternsNavigationProp = CompositeNavigationProp<
-  StackNavigationProp<RootStackParamList, 'tabnav/index'>,
-  BottomTabNavigationProp<RootTabParamList, 'tabnav/messages'>
+  StackNavigationProp<RootStackParamList, Routes.SCREEN_TAB_NAV_INDEX>,
+  BottomTabNavigationProp<RootTabParamList, Routes.SCREEN_TAB_NAV_MESSAGES>
 >
 
 export type ChatOptionsNavigationProp = CompositeNavigationProp<
-  StackNavigationProp<RootStackParamList, 'tabnav/index'>,
-  BottomTabNavigationProp<RootTabParamList, 'tabnav/messages'>
+  StackNavigationProp<RootStackParamList, Routes.SCREEN_TAB_NAV_INDEX>,
+  BottomTabNavigationProp<RootTabParamList, Routes.SCREEN_TAB_NAV_MESSAGES>
 >
 
 export type ActiveMessagesNavigationProp = CompositeNavigationProp<
-  StackNavigationProp<RootStackParamList, 'tabnav/index'>,
-  BottomTabNavigationProp<RootTabParamList, 'tabnav/messages'>
+  StackNavigationProp<RootStackParamList, Routes.SCREEN_TAB_NAV_INDEX>,
+  BottomTabNavigationProp<RootTabParamList, Routes.SCREEN_TAB_NAV_MESSAGES>
 >
 
 export type LittenPostScreenProps = StackScreenProps<
   RootStackParamList,
-  'litten/post'
+  Routes.SCREEN_LITTEN_POST
 >
 
 export type LittenPostSharedScreenProps = StackScreenProps<
   RootStackParamList,
-  'litten/post/shared'
+  Routes.SCREEN_LITTEN_POST_SHARED
 >
 
 export type LittenContactOptionsNavigationProp = StackNavigationProp<
   RootStackParamList,
-  'litten/post'
+  Routes.SCREEN_LITTEN_POST
 >
 
 export type HomeIndexHeaderNavigationProp = CompositeNavigationProp<
-  StackNavigationProp<RootStackParamList, 'tabnav/index'>,
+  StackNavigationProp<RootStackParamList, Routes.SCREEN_TAB_NAV_INDEX>,
   CompositeNavigationProp<
-    BottomTabNavigationProp<RootTabParamList, 'tabnav/home'>,
-    StackNavigationProp<HomeStackParamList, 'home/index'>
+    BottomTabNavigationProp<RootTabParamList, Routes.SCREEN_TAB_NAV_HOME>,
+    StackNavigationProp<HomeStackParamList, Routes.SCREEN_HOME_FILTER>
   >
 >
 
 export type HomeFilterScreenNavigationProp = CompositeNavigationProp<
-  StackNavigationProp<RootStackParamList, 'tabnav/index'>,
+  StackNavigationProp<RootStackParamList, Routes.SCREEN_TAB_NAV_INDEX>,
   CompositeNavigationProp<
-    BottomTabNavigationProp<RootTabParamList, 'tabnav/home'>,
-    StackNavigationProp<HomeStackParamList, 'home/filter'>
+    BottomTabNavigationProp<RootTabParamList, Routes.SCREEN_TAB_NAV_HOME>,
+    StackNavigationProp<HomeStackParamList, Routes.SCREEN_HOME_FILTER>
   >
 >
 
 export type UseSafeNavigationProp = StackNavigationProp<
   RootStackParamList,
-  'tabnav/index'
+  Routes.SCREEN_TAB_NAV_INDEX
 >
 
 export type RootNavigationProp = StackScreenProps<
   RootStackParamList,
-  'tabnav/index'
+  Routes.SCREEN_TAB_NAV_INDEX
 >
 
 export type FormProfileNavigationProp = CompositeNavigationProp<
-  StackNavigationProp<RootStackParamList, 'tabnav/index'>,
+  StackNavigationProp<RootStackParamList, Routes.SCREEN_TAB_NAV_INDEX>,
   CompositeNavigationProp<
-    BottomTabNavigationProp<RootTabParamList, 'tabnav/profile'>,
-    StackNavigationProp<ProfileStackParamList, 'profile/edit'>
+    BottomTabNavigationProp<RootTabParamList, Routes.SCREEN_TAB_NAV_PROFILE>,
+    StackNavigationProp<ProfileStackParamList, Routes.SCREEN_PROFILE_EDIT>
   >
 >
 
 export type NewFormNavigationProp = CompositeNavigationProp<
-  StackNavigationProp<RootStackParamList, 'tabnav/index'>,
-  BottomTabNavigationProp<RootTabParamList, 'tabnav/new'>
+  StackNavigationProp<RootStackParamList, Routes.SCREEN_TAB_NAV_INDEX>,
+  BottomTabNavigationProp<RootTabParamList, Routes.SCREEN_TAB_NAV_NEW>
 >
 
 export type LoginFormNavigationProp = StackNavigationProp<
   OnboardStackParamList,
-  'noauth/login'
+  Routes.SCREEN_NOAUTH_LOGIN
 >
 
 export type CreateNewCTANavigationProp = StackNavigationProp<
   OnboardStackParamList,
-  'noauth/welcome'
+  Routes.SCREEN_NOAUTH_WELCOME
 >
 
 export type SignInCTANavigationProp = StackNavigationProp<
   OnboardStackParamList,
-  'noauth/welcome'
+  Routes.SCREEN_NOAUTH_WELCOME
 >
 
 export type ActionsNavigationProp = StackNavigationProp<
   OnboardStackParamList,
-  'noauth/welcome'
+  Routes.SCREEN_NOAUTH_WELCOME
 >
 
 export type LittenCardComponentNavigationProp = StackNavigationProp<
   RootStackParamList,
-  'tabnav/index'
+  Routes.SCREEN_TAB_NAV_INDEX
 >
