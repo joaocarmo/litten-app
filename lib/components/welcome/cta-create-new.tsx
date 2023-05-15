@@ -2,10 +2,7 @@ import { useNavigation } from '@react-navigation/native'
 import { StyleSheet, View } from 'react-native'
 import { UILink, UIText } from '@ui-elements'
 import { translate } from '@utils/i18n'
-import {
-  SCREEN_NOAUTH_REGISTER,
-  UI_SCREEN_NOAUTH_CTA_HEIGHT,
-} from '@utils/constants'
+import { Routes, UI_SCREEN_NOAUTH_CTA_HEIGHT } from '@utils/constants'
 import { CreateNewCTANavigationProp } from '@utils/types/routes'
 
 const CreateNewCTA = () => {
@@ -14,7 +11,9 @@ const CreateNewCTA = () => {
   return (
     <View style={styles.cta}>
       <UIText noPadding>{`${translate('welcome.newAccount')} `}</UIText>
-      <UILink onPress={() => navigation.navigate(SCREEN_NOAUTH_REGISTER)}>
+      <UILink
+        onPress={() => navigation.navigate(Routes.SCREEN_NOAUTH_REGISTER)}
+      >
         {translate('cta.signUp')}
       </UILink>
     </View>

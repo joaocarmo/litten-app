@@ -2,10 +2,7 @@ import { useNavigation } from '@react-navigation/native'
 import { StyleSheet, View } from 'react-native'
 import { UILink, UIText } from '@ui-elements'
 import { translate } from '@utils/i18n'
-import {
-  SCREEN_NOAUTH_LOGIN,
-  UI_SCREEN_NOAUTH_CTA_HEIGHT,
-} from '@utils/constants'
+import { Routes, UI_SCREEN_NOAUTH_CTA_HEIGHT } from '@utils/constants'
 import { SignInCTANavigationProp } from '@utils/types/routes'
 
 const SignInCTA = () => {
@@ -13,7 +10,7 @@ const SignInCTA = () => {
   return (
     <View style={styles.cta}>
       <UIText noPadding>{`${translate('welcome.hasAccount')} `}</UIText>
-      <UILink onPress={() => navigation.navigate(SCREEN_NOAUTH_LOGIN)}>
+      <UILink onPress={() => navigation.navigate(Routes.SCREEN_NOAUTH_LOGIN)}>
         {translate('cta.signIn')}
       </UILink>
     </View>

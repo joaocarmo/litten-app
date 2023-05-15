@@ -8,7 +8,7 @@ import { translate } from '@utils/i18n'
 import { BUILD_TIME, IS_BETA_RELASE } from '@utils/env'
 import {
   NUM_TAPS_FOR_SURPRISE,
-  SCREEN_DEV_HACKS,
+  Routes,
   STRUCTURE_TEMPLATE_SCREEN_PADDING,
   UI_ABOUT_LOGO_HEIGHT,
   UI_ABOUT_LOGO_WIDTH,
@@ -35,7 +35,7 @@ const ProfileAboutScreen = () => {
 
     if (nextTick === NUM_TAPS_FOR_SURPRISE) {
       setAboutCounter(0)
-      navigation.navigate(SCREEN_DEV_HACKS)
+      navigation.navigate(Routes.SCREEN_DEV_HACKS)
     } else {
       setAboutCounter(nextTick)
     }

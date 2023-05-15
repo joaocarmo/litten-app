@@ -8,7 +8,7 @@ import { getNumOfActiveFilters } from '@utils/functions'
 import { translate } from '@utils/i18n'
 import {
   RECOMMENDED_MINIMUM_TAPPABLE_SIZE,
-  SCREEN_HOME_FILTER,
+  Routes,
   STRUCTURE_TEMPLATE_SCREEN_PADDING,
 } from '@utils/constants'
 import type { HomeIndexHeaderNavigationProp } from '@utils/types/routes'
@@ -58,7 +58,7 @@ const HomeIndexHeader = ({
       hideSearchHistory()
       Keyboard.dismiss()
     } else {
-      navigation.navigate(SCREEN_HOME_FILTER)
+      navigation.navigate(Routes.SCREEN_HOME_FILTER)
     }
   }, [searchHistoryVisisble, hideSearchHistory, navigation])
 

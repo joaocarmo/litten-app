@@ -12,11 +12,7 @@ import {
   Organization as OrganizationIcon,
 } from '@images/components/icons'
 import { littenSpeciesList, littenTypes } from '@utils/litten'
-import {
-  SCREEN_LITTEN_POST,
-  UI_ICON_SIZE_MICRO,
-  UI_ICON_SIZE_MINI,
-} from '@utils/constants'
+import { Routes, UI_ICON_SIZE_MICRO, UI_ICON_SIZE_MINI } from '@utils/constants'
 import dayjs from '@utils/day'
 import { convertLength, getFromListByKey, shortenName } from '@utils/functions'
 import I18n from '@utils/i18n'
@@ -90,7 +86,7 @@ const LittenCardComponent = ({
   )
 
   const handleOnPressLitten = useCallback(() => {
-    navigation.navigate(SCREEN_LITTEN_POST, {
+    navigation.navigate(Routes.SCREEN_LITTEN_POST, {
       litten: litten.toJSON(),
       user,
     })

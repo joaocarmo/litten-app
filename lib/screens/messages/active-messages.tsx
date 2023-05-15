@@ -34,7 +34,7 @@ import {
 import {
   CHATS_INITIAL_NUM_TO_RENDER,
   PLACEHOLDER_USER_DISPLAY_NAME,
-  SCREEN_MESSAGE_PRIVATE,
+  Routes,
   UI_HIDDEN_OPTION_WIDTH,
 } from '@utils/constants'
 import { translate } from '@utils/i18n'
@@ -304,7 +304,7 @@ const ActiveMessages = () => {
           header={header}
           lastActivity={chat.updatedAt}
           onPress={() =>
-            navigation.navigate(SCREEN_MESSAGE_PRIVATE, {
+            navigation.navigate(Routes.SCREEN_MESSAGE_PRIVATE, {
               chat: chatObject,
               recipient,
               litten,

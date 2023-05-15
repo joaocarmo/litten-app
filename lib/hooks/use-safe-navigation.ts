@@ -1,16 +1,19 @@
 import { useEffect } from 'react'
 import { useNavigation, useNavigationState } from '@react-navigation/native'
-import { SCREEN_TAB_NAV_HOME } from '@utils/constants'
+import { Routes } from '@utils/constants'
 import linkingConfig from '@config/navigation/linking'
-import type { Routes, UseSafeNavigationProp } from '@utils/types/routes'
+import type {
+  RoutesScreenName,
+  UseSafeNavigationProp,
+} from '@utils/types/routes'
 
 type UseSafeNavigationParams = {
-  fallbackScreen?: Routes
+  fallbackScreen?: RoutesScreenName
 }
 
 const useSafeNavigation = (
   { fallbackScreen }: UseSafeNavigationParams = {
-    fallbackScreen: SCREEN_TAB_NAV_HOME,
+    fallbackScreen: Routes.SCREEN_TAB_NAV_HOME,
   },
 ) => {
   const navIndex = useNavigationState(({ index }) => index)

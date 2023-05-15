@@ -1,8 +1,3 @@
-// WebViews
-export const WEB_APP_HELP_AND_CONTACT = '/faq'
-export const WEB_APP_TERMS_AND_CONDITIONS = '/terms-and-conditions'
-export const WEB_APP_PRIVACY_POLICY = '/privacy-policy'
-
 // Messages
 export const CONVERSATION_DELETE_CONVERSATION =
   'CONVERSATION_DELETE_CONVERSATION'

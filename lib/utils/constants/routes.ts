@@ -1,29 +1,37 @@
-export const SCREEN_DEV_HACKS = 'dev/hacks'
-export const SCREEN_HOME_FILTER = 'home/filter'
-export const SCREEN_HOME_FILTER_SET = 'home/filter/set'
-export const SCREEN_HOME_INDEX = 'home/index'
-export const SCREEN_LITTEN_POST = 'litten/post'
-export const SCREEN_LITTEN_POST_SHARED = 'litten/post/shared'
-export const SCREEN_MESSAGE_PRIVATE = 'message/private'
-export const SCREEN_NEW_LOCATION = 'new/location'
-export const SCREEN_NOAUTH_LOGIN = 'noauth/login'
-export const SCREEN_NOAUTH_RECOVER = 'noauth/recover'
-export const SCREEN_NOAUTH_REGISTER = 'noauth/register'
-export const SCREEN_NOAUTH_WELCOME = 'noauth/welcome'
-export const SCREEN_PROFILE_ABOUT = 'profile/about'
-export const SCREEN_PROFILE_EDIT = 'profile/edit'
-export const SCREEN_PROFILE_INDEX = 'profile/index'
-export const SCREEN_PROFILE_POSTS = 'profile/posts'
-export const SCREEN_PROFILE_REPORT = 'profile/report'
-export const SCREEN_PROFILE_SETTINGS = 'profile/settings'
-export const SCREEN_PROFILE_VERIFICATION = 'profile/verification'
-export const SCREEN_PROFILE_VIEW = 'profile/view'
-export const SCREEN_PROFILE_WEBVIEW = 'profile/webview'
-export const SCREEN_TAB_NAV_FAVOURITES = 'tabnav/favourites'
-export const SCREEN_TAB_NAV_FAVOURITES_POSTS = 'tabnav/favourites/posts'
-export const SCREEN_TAB_NAV_FAVOURITES_SEARCHES = 'tabnav/favourites/searches'
-export const SCREEN_TAB_NAV_HOME = 'tabnav/home'
-export const SCREEN_TAB_NAV_INDEX = 'tabnav/index'
-export const SCREEN_TAB_NAV_MESSAGES = 'tabnav/messages'
-export const SCREEN_TAB_NAV_NEW = 'tabnav/new'
-export const SCREEN_TAB_NAV_PROFILE = 'tabnav/profile'
+export enum Routes {
+  SCREEN_DEV_HACKS = 'dev/hacks',
+  SCREEN_HOME_FILTER = 'home/filter',
+  SCREEN_HOME_FILTER_SET = 'home/filter/set',
+  SCREEN_HOME_INDEX = 'home/index',
+  SCREEN_LITTEN_POST = 'litten/post',
+  SCREEN_LITTEN_POST_SHARED = 'litten/post/shared',
+  SCREEN_MESSAGE_PRIVATE = 'message/private',
+  SCREEN_NEW_LOCATION = 'new/location',
+  SCREEN_NOAUTH_LOGIN = 'noauth/login',
+  SCREEN_NOAUTH_RECOVER = 'noauth/recover',
+  SCREEN_NOAUTH_REGISTER = 'noauth/register',
+  SCREEN_NOAUTH_WELCOME = 'noauth/welcome',
+  SCREEN_PROFILE_ABOUT = 'profile/about',
+  SCREEN_PROFILE_EDIT = 'profile/edit',
+  SCREEN_PROFILE_INDEX = 'profile/index',
+  SCREEN_PROFILE_POSTS = 'profile/posts',
+  SCREEN_PROFILE_REPORT = 'profile/report',
+  SCREEN_PROFILE_SETTINGS = 'profile/settings',
+  SCREEN_PROFILE_VERIFICATION = 'profile/verification',
+  SCREEN_PROFILE_VIEW = 'profile/view',
+  SCREEN_PROFILE_WEBVIEW = 'profile/webview',
+  SCREEN_TAB_NAV_FAVOURITES = 'tabnav/favourites',
+  SCREEN_TAB_NAV_FAVOURITES_POSTS = 'tabnav/favourites/posts',
+  SCREEN_TAB_NAV_FAVOURITES_SEARCHES = 'tabnav/favourites/searches',
+  SCREEN_TAB_NAV_HOME = 'tabnav/home',
+  SCREEN_TAB_NAV_INDEX = 'tabnav/index',
+  SCREEN_TAB_NAV_MESSAGES = 'tabnav/messages',
+  SCREEN_TAB_NAV_NEW = 'tabnav/new',
+  SCREEN_TAB_NAV_PROFILE = 'tabnav/profile',
+}
+
+export enum WebViews {
+  WEB_APP_HELP_AND_CONTACT = '/faq',
+  WEB_APP_TERMS_AND_CONDITIONS = '/terms-and-conditions',
+  WEB_APP_PRIVACY_POLICY = '/privacy-policy',
+}

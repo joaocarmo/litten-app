@@ -8,8 +8,7 @@ import { Cog as CogIcon } from '@images/components/icons'
 import { shortenName } from '@utils/functions'
 import {
   PLACEHOLDER_USER_DISPLAY_NAME,
-  SCREEN_PROFILE_EDIT,
-  SCREEN_PROFILE_VIEW,
+  Routes,
   STRUCTURE_TEMPLATE_SCREEN_HEADER_PROFILE_WIDTH,
   UI_ICON_SIZE_MINI,
 } from '@utils/constants'
@@ -54,7 +53,7 @@ const ProfileIndexScreen = () => {
         <View style={styles.header}>
           <Pressable
             onPress={() =>
-              navigation.navigate(SCREEN_PROFILE_VIEW, {
+              navigation.navigate(Routes.SCREEN_PROFILE_VIEW, {
                 user,
               })
             }
@@ -70,7 +69,7 @@ const ProfileIndexScreen = () => {
             {shortenName(displayName) || PLACEHOLDER_USER_DISPLAY_NAME}
           </Text>
           <Pressable
-            onPress={() => navigation.navigate(SCREEN_PROFILE_EDIT)}
+            onPress={() => navigation.navigate(Routes.SCREEN_PROFILE_EDIT)}
             style={styles.imageContainer}
           >
             <CogIcon

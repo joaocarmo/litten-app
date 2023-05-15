@@ -6,18 +6,7 @@ import { useActionSheet } from '@expo/react-native-action-sheet'
 import { Alert, SectionList, View } from 'react-native'
 import Services from '@services/services'
 import { UIListItem, UIText } from '@ui-elements'
-import {
-  SCREEN_DEV_HACKS,
-  SCREEN_PROFILE_ABOUT,
-  SCREEN_PROFILE_POSTS,
-  SCREEN_PROFILE_REPORT,
-  SCREEN_PROFILE_SETTINGS,
-  SCREEN_PROFILE_WEBVIEW,
-  SCREEN_TAB_NAV_NEW,
-  WEB_APP_HELP_AND_CONTACT,
-  WEB_APP_PRIVACY_POLICY,
-  WEB_APP_TERMS_AND_CONDITIONS,
-} from '@utils/constants'
+import { Routes, WebViews } from '@utils/constants'
 import { getListItemLayout } from '@utils/functions'
 import { reportTypes } from '@utils/litten'
 import { translate } from '@utils/i18n'
@@ -63,7 +52,7 @@ const ProfileMainScreen = () => {
         const type = reportTypes[buttonIndex]?.key
 
         if (type) {
-          navigation.navigate(SCREEN_PROFILE_REPORT, {
+          navigation.navigate(Routes.SCREEN_PROFILE_REPORT, {
             type,
           })
         }
@@ -99,14 +88,14 @@ const ProfileMainScreen = () => {
             key: 'newPost',
             title: translate('screens.profile.newPost'),
             navigateTo: {
-              path: SCREEN_TAB_NAV_NEW,
+              path: Routes.SCREEN_TAB_NAV_NEW,
             },
           },
           {
             key: 'activePosts',
             title: translate('screens.profile.activePosts'),
             navigateTo: {
-              path: SCREEN_PROFILE_POSTS,
+              path: Routes.SCREEN_PROFILE_POSTS,
               options: {
                 active: true,
               },
@@ -121,7 +110,7 @@ const ProfileMainScreen = () => {
             key: 'pastPosts',
             title: translate('screens.profile.pastPosts'),
             navigateTo: {
-              path: SCREEN_PROFILE_POSTS,
+              path: Routes.SCREEN_PROFILE_POSTS,
               options: {
                 active: false,
               },
@@ -141,7 +130,7 @@ const ProfileMainScreen = () => {
             key: 'settings',
             title: translate('screens.profile.settings'),
             navigateTo: {
-              path: SCREEN_PROFILE_SETTINGS,
+              path: Routes.SCREEN_PROFILE_SETTINGS,
             },
             otherProps: {
               hasExtra: true,
@@ -151,10 +140,10 @@ const ProfileMainScreen = () => {
             key: 'help',
             title: translate('screens.profile.help'),
             navigateTo: {
-              path: SCREEN_PROFILE_WEBVIEW,
+              path: Routes.SCREEN_PROFILE_WEBVIEW,
               options: {
                 title: translate('screens.profile.help'),
-                path: WEB_APP_HELP_AND_CONTACT,
+                path: WebViews.WEB_APP_HELP_AND_CONTACT,
               },
             },
             otherProps: {
@@ -173,10 +162,10 @@ const ProfileMainScreen = () => {
             key: 'termsAndConditions',
             title: translate('screens.profile.termsAndConditions'),
             navigateTo: {
-              path: SCREEN_PROFILE_WEBVIEW,
+              path: Routes.SCREEN_PROFILE_WEBVIEW,
               options: {
                 title: translate('screens.profile.termsAndConditions'),
-                path: WEB_APP_TERMS_AND_CONDITIONS,
+                path: WebViews.WEB_APP_TERMS_AND_CONDITIONS,
               },
             },
             otherProps: {
@@ -187,10 +176,10 @@ const ProfileMainScreen = () => {
             key: 'privacyPolicy',
             title: translate('screens.profile.privacyPolicy'),
             navigateTo: {
-              path: SCREEN_PROFILE_WEBVIEW,
+              path: Routes.SCREEN_PROFILE_WEBVIEW,
               options: {
                 title: translate('screens.profile.privacyPolicy'),
-                path: WEB_APP_PRIVACY_POLICY,
+                path: WebViews.WEB_APP_PRIVACY_POLICY,
               },
             },
             otherProps: {
@@ -201,7 +190,7 @@ const ProfileMainScreen = () => {
             key: 'about',
             title: translate('screens.profile.about'),
             navigateTo: {
-              path: SCREEN_PROFILE_ABOUT,
+              path: Routes.SCREEN_PROFILE_ABOUT,
             },
             otherProps: {
               hasExtra: true,
@@ -211,7 +200,7 @@ const ProfileMainScreen = () => {
             key: 'hacks',
             title: translate('screens.dev.hacks'),
             navigateTo: {
-              path: SCREEN_DEV_HACKS,
+              path: Routes.SCREEN_DEV_HACKS,
             },
             otherProps: {
               hasExtra: true,

@@ -22,20 +22,7 @@ import {
   Profile,
 } from '@images/components/menu'
 import { useNotifications, useUnreadMessages } from '@hooks'
-import {
-  SCREEN_LITTEN_POST_SHARED,
-  SCREEN_LITTEN_POST,
-  SCREEN_MESSAGE_PRIVATE,
-  SCREEN_NEW_LOCATION,
-  SCREEN_PROFILE_VERIFICATION,
-  SCREEN_TAB_NAV_FAVOURITES,
-  SCREEN_TAB_NAV_HOME,
-  SCREEN_TAB_NAV_INDEX,
-  SCREEN_TAB_NAV_MESSAGES,
-  SCREEN_TAB_NAV_NEW,
-  SCREEN_TAB_NAV_PROFILE,
-  SCREEN_PROFILE_VIEW,
-} from '@utils/constants'
+import { Routes } from '@utils/constants'
 import { translate } from '@utils/i18n'
 import type { RootStackParamList, RootTabParamList } from '@utils/types/routes'
 
@@ -57,8 +44,8 @@ const TabNavigator = () => {
     () =>
       [
         {
-          key: SCREEN_TAB_NAV_HOME,
-          name: SCREEN_TAB_NAV_HOME,
+          key: Routes.SCREEN_TAB_NAV_HOME,
+          name: Routes.SCREEN_TAB_NAV_HOME,
           component: HomeScreen,
           options: {
             tabBarIcon: Home as BottomTabNavigationOptions['tabBarIcon'],
@@ -66,8 +53,8 @@ const TabNavigator = () => {
           },
         },
         {
-          key: SCREEN_TAB_NAV_FAVOURITES,
-          name: SCREEN_TAB_NAV_FAVOURITES,
+          key: Routes.SCREEN_TAB_NAV_FAVOURITES,
+          name: Routes.SCREEN_TAB_NAV_FAVOURITES,
           component: FavouritesScreen,
           options: {
             tabBarIcon: Favourites as BottomTabNavigationOptions['tabBarIcon'],
@@ -77,8 +64,8 @@ const TabNavigator = () => {
           },
         },
         {
-          key: SCREEN_TAB_NAV_NEW,
-          name: SCREEN_TAB_NAV_NEW,
+          key: Routes.SCREEN_TAB_NAV_NEW,
+          name: Routes.SCREEN_TAB_NAV_NEW,
           component: NewScreen,
           options: {
             tabBarIcon: New as BottomTabNavigationOptions['tabBarIcon'],
@@ -86,8 +73,8 @@ const TabNavigator = () => {
           },
         },
         {
-          key: SCREEN_TAB_NAV_MESSAGES,
-          name: SCREEN_TAB_NAV_MESSAGES,
+          key: Routes.SCREEN_TAB_NAV_MESSAGES,
+          name: Routes.SCREEN_TAB_NAV_MESSAGES,
           component: MessagesScreen,
           options: {
             tabBarIcon: Messages as BottomTabNavigationOptions['tabBarIcon'],
@@ -98,8 +85,8 @@ const TabNavigator = () => {
           },
         },
         {
-          key: SCREEN_TAB_NAV_PROFILE,
-          name: SCREEN_TAB_NAV_PROFILE,
+          key: Routes.SCREEN_TAB_NAV_PROFILE,
+          name: Routes.SCREEN_TAB_NAV_PROFILE,
           component: ProfileScreen,
           options: {
             tabBarIcon: Profile as BottomTabNavigationOptions['tabBarIcon'],
@@ -135,38 +122,38 @@ const TabNavigator = () => {
 
 const stackScreens = [
   {
-    key: SCREEN_TAB_NAV_INDEX,
-    name: SCREEN_TAB_NAV_INDEX,
+    key: Routes.SCREEN_TAB_NAV_INDEX,
+    name: Routes.SCREEN_TAB_NAV_INDEX,
     component: TabNavigator,
   },
   {
-    key: SCREEN_MESSAGE_PRIVATE,
-    name: SCREEN_MESSAGE_PRIVATE,
+    key: Routes.SCREEN_MESSAGE_PRIVATE,
+    name: Routes.SCREEN_MESSAGE_PRIVATE,
     component: PrivateMessagesScreen,
   },
   {
-    key: SCREEN_LITTEN_POST_SHARED,
-    name: SCREEN_LITTEN_POST_SHARED,
+    key: Routes.SCREEN_LITTEN_POST_SHARED,
+    name: Routes.SCREEN_LITTEN_POST_SHARED,
     component: LittenPostSharedScreen,
   },
   {
-    key: SCREEN_LITTEN_POST,
-    name: SCREEN_LITTEN_POST,
+    key: Routes.SCREEN_LITTEN_POST,
+    name: Routes.SCREEN_LITTEN_POST,
     component: LittenPostScreen,
   },
   {
-    key: SCREEN_PROFILE_VIEW,
-    name: SCREEN_PROFILE_VIEW,
+    key: Routes.SCREEN_PROFILE_VIEW,
+    name: Routes.SCREEN_PROFILE_VIEW,
     component: UserProfileScreen,
   },
   {
-    key: SCREEN_NEW_LOCATION,
-    name: SCREEN_NEW_LOCATION,
+    key: Routes.SCREEN_NEW_LOCATION,
+    name: Routes.SCREEN_NEW_LOCATION,
     component: SelectLocation,
   },
   {
-    key: SCREEN_PROFILE_VERIFICATION,
-    name: SCREEN_PROFILE_VERIFICATION,
+    key: Routes.SCREEN_PROFILE_VERIFICATION,
+    name: Routes.SCREEN_PROFILE_VERIFICATION,
     component: ProfileVerificationScreen,
   },
 ] as const
