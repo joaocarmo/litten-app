@@ -1,17 +1,20 @@
 import { useCallback, useMemo, useState } from 'react'
+import type { StyleProp } from 'react-native'
 import FastImage from 'react-native-fast-image'
-import type { FastImageProps, Source } from 'react-native-fast-image'
+import type {
+  FastImageProps,
+  ImageStyle,
+  ResizeMode,
+  Source,
+} from 'react-native-fast-image'
 import UILoader from '@ui-elements/loader'
 import type { ImageSource } from '@ui-elements/types'
 
 export interface UIImageProps extends Omit<FastImageProps, 'source'> {
   height?: number
-  resizeMode?: FastImageProps['resizeMode']
+  resizeMode?: ResizeMode
   source: ImageSource
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore FIX ME
-  // style?: FastImageProps['style']
-  style?: any
+  style?: StyleProp<ImageStyle>
   width?: number
 }
 
@@ -25,15 +28,13 @@ const UIImage = ({
 }: UIImageProps) => {
   const [isLoading, setIsLoading] = useState(true)
 
-  const source = useMemo(
-    () =>
-      typeof propsSource === 'string'
-        ? ({
-            uri: propsSource,
-          } as Source)
-        : propsSource,
-    [propsSource],
-  )
+  const source = useMemo<ImageSource>(() => {
+    if (typeof propsSource === 'string') {
+      return { uri: propsSource }
+    }
+
+    return propsSource
+  }, [propsSource])
 
   const handleOnLoadStart = useCallback(() => {
     setIsLoading(true)
@@ -43,7 +44,7 @@ const UIImage = ({
     setIsLoading(false)
   }, [])
 
-  const styles = useMemo(() => {
+  const styles = useMemo<StyleProp<ImageStyle>>(() => {
     if (!height && !width) {
       return style
     }
@@ -64,7 +65,7 @@ const UIImage = ({
     <>
       {isLoading && <UILoader active={isLoading} size="small" />}
       <FastImage
-        source={source}
+        source={source as Source}
         resizeMode={FastImage.resizeMode[resizeMode]}
         style={styles}
         onLoadStart={handleOnLoadStart}
