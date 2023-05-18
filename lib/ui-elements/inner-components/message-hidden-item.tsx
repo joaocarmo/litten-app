@@ -1,27 +1,12 @@
 import { Pressable, Text } from 'react-native'
 import { useTheme } from '@hooks'
-import { UI_HIDDEN_OPTION_WIDTH, UI_PRESSED_OPACITY } from '@utils/constants'
+import uiMessageHiddenItemComponentStyles from '@ui-elements/inner-components/message-hidden-item.styles'
 
 const UIMessageHiddenItem = ({ children, style, ...otherProps }) => {
   const { createStyles } = useTheme()
-  const styles = createStyles((theme, typography) => ({
-    uiMessageHiddenItem: {
-      minWidth: UI_HIDDEN_OPTION_WIDTH,
-      height: 64,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: theme.colors.neutralDark,
-      opacity: 1,
-    },
-    uiMessageHiddenItemText: {
-      color: theme.colors.textAlt,
-      fontSize: typography.fontSize.base,
-      fontWeight: typography.fontWeight.bolder,
-    },
-    uiMessageHiddenItemPressed: {
-      opacity: UI_PRESSED_OPACITY,
-    },
-  }))
+
+  const styles = createStyles(uiMessageHiddenItemComponentStyles)
+
   return (
     <Pressable
       style={({ pressed }) => [

@@ -3,15 +3,16 @@ import {
   UI_ICON_SIZE_SMALL,
   UI_ICON_SIZE_MINI,
 } from '@utils/constants'
+import type { ThemeFunction } from '@styles/types'
 
-const styles = (theme) => ({
+const styles: ThemeFunction = ({ colors }) => ({
   uiIconContainer: {
     aspectRatio: 1,
     borderRadius: 4,
-    backgroundColor: theme.colors.background,
+    backgroundColor: colors.background,
   },
   uiIconContainerMainSelected: {
-    backgroundColor: theme.colors.secondary,
+    backgroundColor: colors.secondary,
   },
   uiIconContainerMainMedium: {
     height: UI_ICON_SIZE_MEDIUM,
@@ -37,10 +38,10 @@ const styles = (theme) => ({
   uiIcon: {
     height: '100%',
     width: '100%',
-    tintColor: theme.colors.secondary,
+    tintColor: colors.secondary,
   },
   uiIconSelected: {
-    tintColor: theme.colors.background,
+    tintColor: colors.background,
   },
 })
 

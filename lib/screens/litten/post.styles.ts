@@ -6,11 +6,12 @@ import {
   STRUCTURE_TAB_NAV_HEIGHT,
   STRUCTURE_TEMPLATE_SCREEN_BORDER_RADIUS,
 } from '@utils/constants'
+import type { ThemeFunction } from '@styles/types'
 
-const styles = (theme) => ({
+const styles: ThemeFunction = ({ colors }) => ({
   littenPostContainer: {
     flex: 1,
-    backgroundColor: theme.colors.neutralLight,
+    backgroundColor: colors.neutralLight,
   },
   littenPost: {
     flex: 1,
@@ -34,7 +35,7 @@ const styles = (theme) => ({
   mainImagePlaceholder: {
     width: '100%',
     height: '100%',
-    backgroundColor: theme.colors.secondaryLight,
+    backgroundColor: colors.secondaryLight,
   },
   littenPostContent: {
     minHeight: vh((1 - STRUCTURE_LITTEN_POST_IMAGE_TO_CONTENT_RATIO) * 100),
@@ -42,7 +43,7 @@ const styles = (theme) => ({
     paddingBottom: STRUCTURE_TAB_NAV_HEIGHT * STRUCTURE_PADDING_MULTIPLIER,
     borderTopLeftRadius: STRUCTURE_TEMPLATE_SCREEN_BORDER_RADIUS,
     borderTopRightRadius: STRUCTURE_TEMPLATE_SCREEN_BORDER_RADIUS,
-    backgroundColor: theme.colors.neutralLight,
+    backgroundColor: colors.neutralLight,
     padding: vw(6),
   },
   littenPostContentHeader: {
@@ -77,7 +78,7 @@ const styles = (theme) => ({
     paddingRight: 20,
     borderTopLeftRadius: STRUCTURE_TAB_NAV_BORDER_RADIUS,
     borderTopRightRadius: STRUCTURE_TAB_NAV_BORDER_RADIUS,
-    backgroundColor: theme.colors.background,
+    backgroundColor: colors.background,
     zIndex: 1,
   },
   littenPostFooterUser: {
@@ -102,7 +103,7 @@ const styles = (theme) => ({
     backgroundColor: 'yellow',
   },
   favIconStyle: {
-    tintColor: theme.colors.danger,
+    tintColor: colors.danger,
   },
 })
 

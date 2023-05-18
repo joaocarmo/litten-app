@@ -5,10 +5,11 @@ import {
   UI_ELEMENT_LIST_HEIGHT,
   UI_ICON_SIZE_MINI,
 } from '@utils/constants'
+import type { ThemeFunction } from '@styles/types'
 
 const ICON_MARGIN = 16
 
-const styles = (theme, typography) => ({
+const styles: ThemeFunction = ({ colors, typography }) => ({
   uiListItemCommon: {
     flex: 1,
     minHeight: UI_ELEMENT_LIST_HEIGHT,
@@ -17,11 +18,11 @@ const styles = (theme, typography) => ({
     paddingRight: 20,
     marginTop: UI_ELEMENT_BORDER_MARGIN,
     marginBottom: UI_ELEMENT_BORDER_MARGIN,
-    backgroundColor: theme.colors.background,
+    backgroundColor: colors.background,
     overflow: 'hidden',
   },
   uiListItemCommonSelected: {
-    backgroundColor: theme.colors.secondary,
+    backgroundColor: colors.secondary,
   },
   uiListItemContainer: {
     flexDirection: 'row',
@@ -47,10 +48,10 @@ const styles = (theme, typography) => ({
     marginRight: ICON_MARGIN,
   },
   uiListItemIconSelected: {
-    tintColor: theme.colors.textAlt,
+    tintColor: colors.textAlt,
   },
   uiListItemCommonPressed: {
-    backgroundColor: theme.colors.secondaryLighter,
+    backgroundColor: colors.secondaryLighter,
   },
   uiListItemExtra: {
     flexDirection: 'row',
@@ -65,15 +66,15 @@ const styles = (theme, typography) => ({
     borderRadius: 8,
     padding: 4,
     marginRight: 4,
-    backgroundColor: theme.colors.neutralLight,
+    backgroundColor: colors.neutralLight,
   },
   uiListItemExtraBadgeText: {
-    color: theme.colors.text,
+    color: colors.text,
     fontSize: typography.fontSize.xxsmall,
     fontWeight: typography.fontWeight.bolder,
   },
   uiListItemExtraBadgeTextActive: {
-    color: theme.colors.secondary,
+    color: colors.secondary,
   },
 })
 

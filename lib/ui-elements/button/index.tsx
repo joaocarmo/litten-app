@@ -4,12 +4,7 @@ import { Pressable, StyleSheet, Text } from 'react-native'
 import type { PressableProps, TextProps } from 'react-native'
 import { useTheme } from '@hooks'
 import UILoader from '@ui-elements/loader'
-import {
-  RECOMMENDED_MINIMUM_TAPPABLE_SIZE,
-  UI_BUTTON_BORDER_RADIUS,
-  UI_BUTTON_FIXED_WIDTH,
-  UI_PRESSED_OPACITY,
-} from '@utils/constants'
+import uiButtonStyles from '@ui-elements/button/index.styles'
 
 export type UIButtonProps = {
   compact?: boolean
@@ -37,43 +32,7 @@ const UIButton = ({
 }: UIButtonProps) => {
   const { createStyles } = useTheme()
 
-  const styles = createStyles((theme, typography) => ({
-    uiButton: {
-      minHeight: RECOMMENDED_MINIMUM_TAPPABLE_SIZE,
-      borderRadius: UI_BUTTON_BORDER_RADIUS,
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: theme.colors.primary,
-    },
-    fluid: {
-      flex: 1,
-      width: '100%',
-    },
-    notFluid: {
-      width: UI_BUTTON_FIXED_WIDTH,
-    },
-    compact: {
-      paddingLeft: 32,
-      paddingRight: 32,
-    },
-    uiButtonText: {
-      color: theme.colors.textAlt,
-      fontSize: typography.fontSize.large,
-      fontWeight: typography.fontWeight.bolder,
-    },
-    secondary: {
-      backgroundColor: theme.colors.secondary,
-    },
-    danger: {
-      backgroundColor: theme.colors.danger,
-    },
-    pressedStyle: {
-      opacity: UI_PRESSED_OPACITY,
-    },
-    disabled: {
-      opacity: 0.3,
-    },
-  }))
+  const styles = createStyles(uiButtonStyles)
 
   const primaryStyle = styles.uiButton
   const primaryDisabledStyle = StyleSheet.compose(primaryStyle, styles.disabled)
@@ -124,12 +83,14 @@ const UIButton = ({
     <Pressable
       {...otherProps}
       onPress={disabled ? null : onPress}
-      style={({ pressed }) => [
-        getStyle(),
-        compact ? styles.compact : fluidity,
-        style,
-        pressed && !disabled && !loading ? styles.pressedStyle : undefined,
-      ]}
+      style={({ pressed }) =>
+        [
+          getStyle(),
+          compact ? styles.compact : fluidity,
+          style,
+          pressed && !disabled && !loading ? styles.pressedStyle : undefined,
+        ] as any
+      }
     >
       <UILoader active={loading} transparent={100} />
       {!loading && (

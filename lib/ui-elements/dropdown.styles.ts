@@ -1,7 +1,8 @@
 import { StyleSheet } from 'react-native'
 import { UI_DROPDOWN_MARGIN } from '@utils/constants'
+import type { ThemeFunction } from '@styles/types'
 
-const styles = (theme, typography) => ({
+const styles: ThemeFunction = ({ colors, typography }) => ({
   uiDropdownContainer: {
     flexDirection: 'row',
     marginTop: UI_DROPDOWN_MARGIN,
@@ -13,11 +14,11 @@ const styles = (theme, typography) => ({
     justifyContent: 'space-between',
     padding: 12,
     borderRadius: 20,
-    backgroundColor: theme.colors.background,
+    backgroundColor: colors.background,
   },
   selectedValueText: {
     fontWeight: typography.fontWeight.bolder,
-    color: theme.colors.secondary,
+    color: colors.secondary,
   },
   iconChevron: {
     transform: [
@@ -30,13 +31,13 @@ const styles = (theme, typography) => ({
     padding: 10,
     borderRadius: 6,
     borderWidth: StyleSheet.hairlineWidth,
-    borderColor: theme.colors.neutral,
+    borderColor: colors.neutral,
     shadowRadius: 0,
     shadowOffset: {
       height: 0,
       width: 0,
     },
-    backgroundColor: theme.colors.background,
+    backgroundColor: colors.background,
   },
   optionWrapper: {
     paddingTop: 10,
@@ -46,13 +47,13 @@ const styles = (theme, typography) => ({
   optionText: {
     padding: 2,
     fontWeight: typography.fontWeight.light,
-    color: theme.colors.neutralDark,
+    color: colors.neutralDark,
   },
   optionsTextActive: {
-    color: theme.colors.secondary,
+    color: colors.secondary,
   },
   optionsTextDisabled: {
-    color: theme.colors.neutral,
+    color: colors.neutral,
   },
   anchorStyle: {
     backgroundColor: 'transparent',

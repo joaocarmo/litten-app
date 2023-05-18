@@ -1,11 +1,12 @@
-import { Pressable, StyleSheet, View } from 'react-native'
+import { Pressable, View } from 'react-native'
 import { useTheme } from '@hooks'
 import UIText from '@ui-elements/text'
 import type { UITextProps } from '@ui-elements/text'
+import uiBalloonStyles from '@ui-elements/balloon/index.styles'
 
-export type UIBalloonProps = {
+export interface UIBalloonProps extends UITextProps {
   type?: 'info' | 'success' | 'warning' | 'error'
-} & UITextProps
+}
 
 const UIBalloon = ({
   children,
@@ -15,37 +16,7 @@ const UIBalloon = ({
 }: UIBalloonProps) => {
   const { onPress, onLongPress } = otherProps
   const { createStyles } = useTheme()
-  const styles = createStyles((theme, typography) => ({
-    uiBalloon: {
-      padding: 12,
-      borderRadius: 12,
-      borderWidth: StyleSheet.hairlineWidth,
-    },
-    uiBalloonError: {
-      borderColor: theme.colors.dangerDark,
-      backgroundColor: theme.colors.dangerLight,
-    },
-    uiBalloonNormalError: {
-      color: theme.colors.dangerDark,
-    },
-    uiBalloonInfo: {
-      borderColor: theme.colors.secondaryLight,
-      backgroundColor: theme.colors.secondaryLighter,
-    },
-    uiBalloonNormalInfo: {
-      color: theme.colors.neutralDark,
-    },
-    uiBalloonNormal: {
-      borderColor: theme.colors.neutralDark,
-      backgroundColor: theme.colors.neutralLight,
-    },
-    uiBalloonNormalText: {
-      color: theme.colors.text,
-    },
-    uiBalloonText: {
-      fontWeight: typography.fontWeight.light,
-    },
-  }))
+  const styles = createStyles(uiBalloonStyles)
 
   const getColorScheme = () => {
     switch (type) {

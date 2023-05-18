@@ -1,6 +1,7 @@
 import { StyleSheet, Text } from 'react-native'
 import type { TextProps } from 'react-native'
 import { useTheme } from '@hooks'
+import textComponentStyles from '@ui-elements/text/index.styles'
 
 export type UITextProps = {
   bold?: boolean
@@ -20,28 +21,7 @@ const UIText = ({
 }: UITextProps) => {
   const { createStyles } = useTheme()
 
-  const styles = createStyles((theme, typography) => ({
-    uiText: {
-      color: theme.colors.text,
-      fontSize: typography.fontSize.base,
-      fontWeight: typography.fontWeight.lighter,
-    },
-    uiTextSpacing: {
-      paddingTop: 6,
-      paddingBottom: 6,
-      marginTop: 8,
-      marginBottom: 8,
-    },
-    uiTextBold: {
-      fontWeight: typography.fontWeight.bolder,
-    },
-    uiTextCentered: {
-      textAlign: 'center',
-    },
-    uiTextSmall: {
-      fontSize: typography.fontSize.small,
-    },
-  }))
+  const styles = createStyles(textComponentStyles)
 
   if (typeof children !== 'string') {
     return null

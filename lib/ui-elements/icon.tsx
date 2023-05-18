@@ -1,6 +1,7 @@
 import { useCallback, useMemo } from 'react'
 import { View } from 'react-native'
 import type { ImageStyle, ViewProps } from 'react-native'
+import type { ImageStyle as FastImageStyle } from 'react-native-fast-image'
 import { useTheme } from '@hooks'
 import UIImage from '@ui-elements/image'
 import type { BasicImageSource, IconTypeComponent } from '@ui-elements/types'
@@ -115,7 +116,7 @@ const UIIcon = ({
       {icon && !IconComponent && (
         <UIImage
           source={icon}
-          style={[styles.uiIcon, iconSelected, iconStyle]}
+          style={[styles.uiIcon, iconSelected, iconStyle as FastImageStyle]}
         />
       )}
       {!icon && IconComponent && (

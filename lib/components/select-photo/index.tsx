@@ -9,19 +9,20 @@ import { UI_ICON_SIZE_MINI, USER_AVATAR_SIZE_LARGE } from '@utils/constants'
 import { translate } from '@utils/i18n'
 import type { UIImageProps } from '@ui-elements/image'
 
-export type SelectPhotoProps = {
-  imageStyle: UIImageProps['style'] & {
-    height?: number
-    maxHeight?: number
-  }
+export interface SelectPhotoProps extends PressableProps {
+  imageStyle: UIImageProps['style']
   onChange: AlertButton['onPress']
   source?: UIImageProps['source']
-} & PressableProps
+  height?: number
+  maxHeight?: number
+}
 
 const SelectPhoto = ({
   imageStyle,
   onChange,
   source,
+  height,
+  maxHeight,
   ...otherProps
 }: SelectPhotoProps) => {
   const {
@@ -46,10 +47,10 @@ const SelectPhoto = ({
   }, [onChange])
 
   const getEditIconOffset = useCallback(() => {
-    const size =
-      imageStyle?.maxHeight || imageStyle?.height || USER_AVATAR_SIZE_LARGE
+    const size = maxHeight || height || USER_AVATAR_SIZE_LARGE
+
     return 0.07 * size
-  }, [imageStyle])
+  }, [height, maxHeight])
 
   return (
     <Pressable
@@ -76,6 +77,8 @@ const SelectPhoto = ({
 
 SelectPhoto.defaultProps = {
   source: placeholderUser,
+  height: 0,
+  maxHeight: 0,
 }
 
 const styles = StyleSheet.create({

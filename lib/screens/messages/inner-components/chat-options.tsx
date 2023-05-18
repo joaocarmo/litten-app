@@ -1,4 +1,5 @@
 import { useCallback, useMemo } from 'react'
+import type { FC } from 'react'
 import { Alert, StyleSheet, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { useCurrentlyActiveChat, useTheme } from '@hooks'
@@ -24,14 +25,19 @@ import type { BasicUser } from '@model/types/user'
 import type { ChatOptionsNavigationProp } from '@utils/types/routes'
 import type { UIDropdownOption } from '@ui-elements/dropdown'
 
-export type ChatOptionsProps = {
+export interface ChatOptionsProps {
   chat?: BasicChat
   litten?: BasicLitten
   recipient?: BasicUser
   user?: BasicUser
 }
 
-const ChatOptions = ({ chat, litten, recipient, user }: ChatOptionsProps) => {
+const ChatOptions: FC<ChatOptionsProps> = ({
+  chat,
+  litten,
+  recipient,
+  user,
+}) => {
   const navigation = useNavigation<ChatOptionsNavigationProp>()
   const [currentlyActiveChat] = useCurrentlyActiveChat()
   const {
@@ -167,10 +173,10 @@ const ChatOptions = ({ chat, litten, recipient, user }: ChatOptionsProps) => {
 }
 
 ChatOptions.defaultProps = {
-  chat: {},
-  litten: {},
-  recipient: {},
-  user: {},
+  chat: {} as BasicChat,
+  litten: {} as BasicLitten,
+  recipient: {} as BasicUser,
+  user: {} as BasicUser,
 }
 
 const styles = StyleSheet.create({

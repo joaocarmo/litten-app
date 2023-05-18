@@ -98,6 +98,8 @@ const StepPhoto = ({
           source={avatar}
           onChange={changeAvatar}
           imageStyle={styles.imageStyle}
+          height={Number(styles.imageStyle.height)}
+          maxHeight={Number(styles.imageStyle.maxHeight)}
         />
       )}
     </View>

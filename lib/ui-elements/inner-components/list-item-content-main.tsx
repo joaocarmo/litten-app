@@ -1,6 +1,8 @@
+import type { FC } from 'react'
 import { Text, View } from 'react-native'
 import type { TextProps } from 'react-native'
 import { useTheme } from '@hooks'
+import uiListItemContentMainStyles from '@ui-elements/inner-components/list-item-content-main.styles'
 
 export type UIListItemContentMainProps = {
   caption?: string
@@ -11,41 +13,17 @@ export type UIListItemContentMainProps = {
   style?: TextProps['style']
 }
 
-const UIListItemContentMain = ({
+const UIListItemContentMain: FC<UIListItemContentMainProps> = ({
   caption,
   children,
   isPressed,
   noFeedback,
   selected,
   style,
-}: UIListItemContentMainProps) => {
+}) => {
   const { createStyles } = useTheme()
 
-  const styles = createStyles((theme, typography) => ({
-    uiListItemContentMainContainer: {
-      flex: 1,
-    },
-    uiListItemText: {
-      fontSize: typography.fontSize.base,
-      fontWeight: typography.fontWeight.regular,
-      color: theme.colors.text,
-    },
-    uiListItemTextSelected: {
-      color: theme.colors.textAlt,
-    },
-    uiListItemTextPressed: {
-      color: theme.colors.secondary,
-    },
-    uiListItemCaption: {
-      fontSize: typography.fontSize.small,
-      fontWeight: typography.fontWeight.lighter,
-      paddingTop: 3,
-      color: theme.colors.text,
-    },
-    uiListItemPadding: {
-      paddingBottom: 3,
-    },
-  }))
+  const styles = createStyles(uiListItemContentMainStyles)
 
   if (
     caption &&

@@ -6,6 +6,7 @@ import { useTheme } from '@hooks'
 import type { StackNavigationProp } from '@react-navigation/stack'
 import type { Tab } from '@templates/types'
 import type { TabularStackParamList } from '@utils/types/routes'
+import screenTabularNavStyles from '@templates/screen/tabular-nav.styles'
 
 export type ScreenTabularNavProps = {
   tabs?: Tab[]
@@ -19,27 +20,7 @@ const ScreenTabularNav = ({ tabs, style }: ScreenTabularNavProps) => {
   const navigation = useNavigation<ScreenTabularNavNavigationProp>()
   const { createStyles } = useTheme()
 
-  const styles = createStyles((theme, typography) => ({
-    container: {
-      flexDirection: 'row',
-      alignItems: 'flex-start',
-      justifyContent: 'space-around',
-    },
-    tab: {
-      flex: 1,
-      height: '100%',
-      alignItems: 'center',
-      justifyContent: 'flex-start',
-    },
-    activeTab: {
-      borderBottomWidth: 2,
-      borderBottomColor: theme.colors.text,
-    },
-    text: {
-      fontSize: typography.fontSize.small,
-      fontWeight: typography.fontWeight.bolder,
-    },
-  }))
+  const styles = createStyles(screenTabularNavStyles)
 
   const navIdx = useNavigationState((state) => state?.index)
 

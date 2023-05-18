@@ -4,13 +4,13 @@ import { useTheme } from '@hooks'
 import UIInput from '@ui-elements/input'
 import UISelectPlatform from '@ui-elements/inner-components/select'
 import type { IOSSelectProps } from '@ui-elements/inner-components/select'
-import { UI_SELECT_OPTION_HEIGHT } from '@utils/constants'
+import uiSelectStyles from '@ui-elements/select/index.styles'
 
-export type UISelectProps = {
+export interface UISelectProps extends IOSSelectProps {
   error?: boolean
   errorMessage?: string
   placeholder: string
-} & IOSSelectProps
+}
 
 const UISelect = ({
   error,
@@ -33,16 +33,14 @@ const UISelect = ({
     [items, selectedValue],
   )
 
-  const styledOpenSelector = createStyles((theme) => ({
-    borderBottomColor: theme.colors.text,
-  }))
+  const styles = createStyles(uiSelectStyles)
 
   const inputStyle = useMemo(
     () =>
       selectorOpen
-        ? StyleSheet.compose(styles.selectInput, styledOpenSelector)
+        ? StyleSheet.compose(styles.selectInput, styles.selectOpen)
         : styles.selectInput,
-    [selectorOpen, styledOpenSelector],
+    [selectorOpen, styles.selectInput, styles.selectOpen],
   )
 
   return (
@@ -76,16 +74,5 @@ UISelect.defaultProps = {
   error: false,
   errorMessage: '',
 }
-
-const styles = StyleSheet.create({
-  selectContainer: {
-    width: '100%',
-    borderWidth: 0,
-  },
-  selectInput: {
-    height: UI_SELECT_OPTION_HEIGHT,
-    width: '100%',
-  },
-})
 
 export default UISelect

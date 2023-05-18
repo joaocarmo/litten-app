@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import { Animated, Pressable, Text } from 'react-native'
 import type { PressableProps } from 'react-native'
 import { useTheme } from '@hooks'
+import tooltipComponentStyles from '@ui-elements/tooltip/index.styles'
 
 type UITooltipProps = {
   animated?: boolean
@@ -23,29 +24,7 @@ const UITooltip = ({ animated, children, ...otherProps }: UITooltipProps) => {
   const fadeAnim = useRef(new Animated.Value(0)).current
   const descendAnim = useRef(new Animated.Value(0)).current
 
-  const styles = createStyles((theme, typography) => ({
-    uiTooltipContainer: {
-      position: 'absolute',
-      top: 0,
-      opacity: 0,
-      zIndex: 1,
-    },
-    uiTooltip: {
-      paddingTop: 6,
-      paddingBottom: 6,
-      paddingLeft: 14,
-      paddingRight: 14,
-      borderRadius: 16,
-      backgroundColor: theme.colors.secondaryLight,
-    },
-    uiTooltipPressed: {
-      backgroundColor: theme.colors.secondaryLighter,
-    },
-    uiTooltipText: {
-      fontWeight: typography.fontWeight.bolder,
-      color: theme.colors.textAlt,
-    },
-  }))
+  const styles = createStyles(tooltipComponentStyles)
 
   const appearIn = useCallback(() => {
     const duration = 250
