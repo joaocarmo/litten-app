@@ -5,15 +5,8 @@ import { setTheme as setThemeAction } from '@store/actions/authenticated-user'
 import type { ThemeConfig } from '@components/theme'
 import { ThemeContext } from '@components/theme'
 import * as commonStylesConfig from '@styles/common'
-import type { Theme } from '@styles/themes'
-import type { Typography } from '@styles/typography'
+import type { ThemeFunction } from '@styles/types'
 import type { ThemePreferences } from '@store/types'
-
-type CreateStylesFn = (
-  theme: Theme,
-  typography: Typography,
-  isDark: boolean,
-) => any
 
 const useTheme = () => {
   const themeConfig = useContext<ThemeConfig>(ThemeContext)
@@ -21,15 +14,20 @@ const useTheme = () => {
   const dispatch = useDispatch()
 
   const createStyles = useCallback(
-    (fn: CreateStylesFn) =>
-      StyleSheet.create(
-        fn(themeConfig.theme, themeConfig.typography, themeConfig.isDark),
-      ),
+    (fn: ThemeFunction) => {
+      const style = fn({
+        colors: themeConfig.theme.colors,
+        isDark: themeConfig.isDark,
+        typography: themeConfig.typography,
+      })
+
+      return StyleSheet.create(style)
+    },
     [themeConfig.isDark, themeConfig.theme, themeConfig.typography],
   )
 
-  const commonStyles: commonStylesConfig.CommonStyles = useMemo(() => {
-    const themedCommonStyles: any = {}
+  const commonStyles = useMemo<commonStylesConfig.CommonStyles>(() => {
+    const themedCommonStyles = {} as commonStylesConfig.CommonStyles
 
     for (const key in commonStylesConfig) {
       if (Object.prototype.hasOwnProperty.call(commonStylesConfig, key)) {
