@@ -14,8 +14,8 @@ const useTheme = () => {
   const dispatch = useDispatch()
 
   const createStyles = useCallback(
-    (fn: ThemeFunction) => {
-      const style = fn({
+    (themeFn: ThemeFunction) => {
+      const style = themeFn({
         colors: themeConfig.theme.colors,
         isDark: themeConfig.isDark,
         typography: themeConfig.typography,
