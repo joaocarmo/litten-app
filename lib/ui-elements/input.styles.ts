@@ -1,7 +1,9 @@
+import type { ThemeFunction } from '@styles/types'
+
 const UI_INPUT_HEIGHT = 60
 const UI_INPUT_MARGIN = 10
 
-const styles = (theme, typography) => ({
+const styles: ThemeFunction = ({ colors, typography }) => ({
   uiInput: {
     height: UI_INPUT_HEIGHT,
     width: '100%',
@@ -10,20 +12,20 @@ const styles = (theme, typography) => ({
     marginTop: UI_INPUT_MARGIN,
     marginBottom: UI_INPUT_MARGIN,
     borderBottomWidth: 2,
-    color: theme.colors.text,
+    color: colors.text,
   },
   uiInputActive: {
-    borderBottomColor: theme.colors.text,
+    borderBottomColor: colors.text,
   },
   uiInputInactive: {
-    borderBottomColor: theme.colors.neutral,
+    borderBottomColor: colors.neutral,
   },
   uiInputSuccess: {
-    borderBottomColor: theme.colors.primary,
+    borderBottomColor: colors.primary,
   },
   uiInputError: {
-    color: theme.colors.danger,
-    borderBottomColor: theme.colors.danger,
+    color: colors.danger,
+    borderBottomColor: colors.danger,
   },
   uiInputSmall: {
     height: UI_INPUT_HEIGHT * 0.5,
@@ -34,7 +36,7 @@ const styles = (theme, typography) => ({
   errorMessage: {
     width: '100%',
     fontSize: typography.fontSize.small,
-    color: theme.colors.danger,
+    color: colors.danger,
     marginTop: -4,
   },
 })

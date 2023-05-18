@@ -1,6 +1,7 @@
 import { vh, vw } from 'react-native-expo-viewport-units'
+import type { ThemeFunction } from '@styles/types'
 
-const styles = (theme, typography) => ({
+const styles: ThemeFunction = ({ colors, typography }) => ({
   container: {
     flex: 1,
     alignItems: 'center',
@@ -11,7 +12,7 @@ const styles = (theme, typography) => ({
     width: vw(85),
     maxHeight: 180,
     maxWidth: 330,
-    borderColor: theme.colors.neutralLight,
+    borderColor: colors.neutralLight,
     borderWidth: 2.5,
     borderRadius: 10,
     alignItems: 'center',
@@ -21,7 +22,7 @@ const styles = (theme, typography) => ({
     margin: 5,
   },
   text: {
-    color: theme.colors.neutralDark,
+    color: colors.neutralDark,
     fontSize: typography.fontSize.large,
     fontWeight: typography.fontWeight.bolder,
     margin: 5,

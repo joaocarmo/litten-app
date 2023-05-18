@@ -4,13 +4,16 @@ import type { FastImageProps, Source } from 'react-native-fast-image'
 import UILoader from '@ui-elements/loader'
 import type { ImageSource } from '@ui-elements/types'
 
-export type UIImageProps = {
+export interface UIImageProps extends Omit<FastImageProps, 'source'> {
   height?: number
   resizeMode?: FastImageProps['resizeMode']
   source: ImageSource
-  style?: FastImageProps['style']
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore FIX ME
+  // style?: FastImageProps['style']
+  style?: any
   width?: number
-} & FastImageProps
+}
 
 const UIImage = ({
   height,

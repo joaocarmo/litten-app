@@ -1,4 +1,4 @@
-import { STRUCTURE_TEMPLATE_SCREEN_PADDING } from '@utils/constants'
+import { STRUCTURE_TAB_NAV_HEIGHT } from '@utils/constants'
 import type { ThemeFunction } from '@styles/types'
 
 const styles: ThemeFunction = ({ colors }) => ({
@@ -6,15 +6,19 @@ const styles: ThemeFunction = ({ colors }) => ({
     flex: 1,
     backgroundColor: colors.neutralLight,
   },
-  contentContainer: {
+  header: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingLeft: 2 * STRUCTURE_TEMPLATE_SCREEN_PADDING,
-    paddingRight: 2 * STRUCTURE_TEMPLATE_SCREEN_PADDING,
   },
-  centeredText: {
-    textAlign: 'center',
+  intro: {
+    flex: 6,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  actions: {
+    alignItems: 'center',
+    marginBottom: STRUCTURE_TAB_NAV_HEIGHT / 2,
   },
 })
 

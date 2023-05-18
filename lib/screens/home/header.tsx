@@ -6,12 +6,9 @@ import SearchForm from '@forms/search'
 import { UIBadge } from '@ui-elements'
 import { getNumOfActiveFilters } from '@utils/functions'
 import { translate } from '@utils/i18n'
-import {
-  RECOMMENDED_MINIMUM_TAPPABLE_SIZE,
-  Routes,
-  STRUCTURE_TEMPLATE_SCREEN_PADDING,
-} from '@utils/constants'
+import { Routes } from '@utils/constants'
 import type { HomeIndexHeaderNavigationProp } from '@utils/types/routes'
+import homeIndexHeaderComponentStyles from '@screens/home/header.styles'
 
 const HomeIndexHeader = ({
   showSearchHistory: searchHistoryVisisble,
@@ -21,27 +18,7 @@ const HomeIndexHeader = ({
   const navigation = useNavigation<HomeIndexHeaderNavigationProp>()
   const { createStyles } = useTheme()
 
-  const styles = createStyles((theme, typography) => ({
-    header: {
-      flex: 1,
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: STRUCTURE_TEMPLATE_SCREEN_PADDING,
-    },
-    filtersContainer: {
-      flexGrow: 1,
-      minHeight: RECOMMENDED_MINIMUM_TAPPABLE_SIZE,
-      minWidth: RECOMMENDED_MINIMUM_TAPPABLE_SIZE,
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    filtersText: {
-      color: theme.colors.textAlt,
-      fontSize: typography.fontSize.xlarge,
-      fontWeight: typography.fontWeight.bolder,
-    },
-  }))
+  const styles = createStyles(homeIndexHeaderComponentStyles)
 
   const showSearchHistory = useCallback(
     () => setShowSearchHistory(true),

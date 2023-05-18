@@ -7,11 +7,12 @@ import {
   UI_LITTEN_CARD_IMAGE_TO_CONTENT_RATIO,
   UI_LITTEN_CARD_SPACING,
 } from '@utils/constants'
+import type { ThemeFunction } from '@styles/types'
 
 const UI_ICON_MARGIN = 8
 const UI_ICON_SIZE_MICRO_MINI_AVG = (UI_ICON_SIZE_MICRO + UI_ICON_SIZE_MINI) / 2
 
-const styles = (theme) => ({
+const styles: ThemeFunction = ({ colors }) => ({
   cardContainer: {
     height: UI_LITTEN_CARD_HEIGHT,
     width: '100%',
@@ -25,7 +26,7 @@ const styles = (theme) => ({
     height: '100%',
     width: `${UI_LITTEN_CARD_IMAGE_TO_CONTENT_RATIO * 100}%`,
     borderRadius: UI_LITTEN_CARD_BORDER_RADIUS,
-    backgroundColor: theme.colors.neutral,
+    backgroundColor: colors.neutral,
     overflow: 'hidden',
   },
   cardImage: {
@@ -34,7 +35,7 @@ const styles = (theme) => ({
     borderRadius: UI_LITTEN_CARD_BORDER_RADIUS,
   },
   cardImagePlaceholder: {
-    backgroundColor: theme.colors.secondaryLight,
+    backgroundColor: colors.secondaryLight,
   },
   cardContentContainer: {
     flex: 1,
@@ -45,7 +46,7 @@ const styles = (theme) => ({
     height: `${UI_LITTEN_CARD_CONTENT_TO_CONTAINER_RATIO * 100}%`,
     padding: 12,
     paddingLeft: 18,
-    backgroundColor: theme.colors.background,
+    backgroundColor: colors.background,
     borderTopRightRadius: UI_LITTEN_CARD_BORDER_RADIUS,
     borderBottomRightRadius: UI_LITTEN_CARD_BORDER_RADIUS,
   },
@@ -69,13 +70,13 @@ const styles = (theme) => ({
     justifyContent: 'space-evenly',
   },
   cardContentFooterAction: {
-    backgroundColor: theme.colors.neutralLight,
+    backgroundColor: colors.neutralLight,
     shadowOpacity: 0.08,
     marginLeft: 14,
     marginRight: UI_ICON_MARGIN - UI_ICON_SIZE_MICRO_MINI_AVG / 4,
   },
   cardContentFooterActionIcon: {
-    tintColor: theme.colors.text,
+    tintColor: colors.text,
   },
   cardContentFooterUserInfo: {
     flex: 1,

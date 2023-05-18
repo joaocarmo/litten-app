@@ -4,6 +4,7 @@ import { useTheme } from '@hooks'
 import dayjs from '@utils/day'
 import UIListItem from '@ui-elements/list-item'
 import type { UIListItemProps } from '@ui-elements/list-item'
+import messagePreviewComponentStyles from '@ui-elements/inner-components/message-preview.styles'
 
 export type UIMessagePreviewProps = {
   children: string
@@ -31,50 +32,7 @@ const UIMessagePreview = ({
 }: UIMessagePreviewProps) => {
   const { createStyles } = useTheme()
 
-  const styles = createStyles((theme, typography) => ({
-    uiMessagePreviewUnread: {
-      backgroundColor: theme.colors.primary,
-    },
-    uiMessagePreviewContentMainContainer: {
-      flex: 1,
-    },
-    uiMessagePreviewHeader: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-    },
-    uiMessagePreviewMessageContainer: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      paddingTop: 3,
-    },
-    uiMessagePreviewText: {
-      flex: 1,
-      fontSize: typography.fontSize.base,
-      fontWeight: typography.fontWeight.regular,
-      color: theme.colors.text,
-      paddingBottom: 3,
-    },
-    uiMessagePreviewTextUnread: {
-      color: theme.colors.textAlt,
-    },
-    uiMessagePreviewTitle: {
-      fontWeight: typography.fontWeight.bolder,
-    },
-    uiMessagePreviewFrom: {
-      fontSize: typography.fontSize.small,
-      fontWeight: typography.fontWeight.bolder,
-      color: theme.colors.text,
-    },
-    uiMessagePreviewMessage: {
-      flex: 1,
-      fontSize: typography.fontSize.small,
-      fontWeight: typography.fontWeight.lighter,
-      color: theme.colors.text,
-    },
-    uiMessagePreviewLastActivity: {
-      textAlign: 'right',
-    },
-  }))
+  const styles = createStyles(messagePreviewComponentStyles)
 
   const messageUnreadStyle = useMemo(
     () => (read ? undefined : styles.uiMessagePreviewTextUnread),

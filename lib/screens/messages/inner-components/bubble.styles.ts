@@ -1,24 +1,25 @@
 import { StyleSheet } from 'react-native'
+import type { ThemeFunction } from '@styles/types'
 
-const styles = (theme, typography, isDark) => ({
+const styles: ThemeFunction = ({ colors, typography, isDark }) => ({
   tickStyle: {
-    color: theme.colors.neutralDark,
+    color: colors.neutralDark,
   },
   textStyle: {
-    color: isDark ? theme.colors.textAlt : theme.colors.text,
+    color: isDark ? colors.textAlt : colors.text,
     fontWeight: typography.fontWeight.lighter,
   },
   wrapperCommonStyle: {
     borderWidth: StyleSheet.hairlineWidth,
-    borderColor: theme.colors.neutral,
+    borderColor: colors.neutral,
     marginTop: 1,
     marginBottom: 1,
   },
   wrapperStyleLeft: {
-    backgroundColor: theme.colors.background,
+    backgroundColor: colors.background,
   },
   wrapperStyleRight: {
-    backgroundColor: `${theme.colors.secondaryLight}10`,
+    backgroundColor: `${colors.secondaryLight}10`,
   },
 })
 

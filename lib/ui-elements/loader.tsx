@@ -50,7 +50,7 @@ const UILoader = ({
     if (Number.isInteger(transparent)) {
       const opacity = opacity2Hex(100 - +transparent)
       return {
-        backgroundColor: `${styles.uiLoader.backgroundColor}${opacity}`,
+        backgroundColor: `${String(styles.uiLoader.backgroundColor)}${opacity}`,
       }
     }
   }, [styles.uiLoader.backgroundColor, styles.uiLoaderTransparent, transparent])

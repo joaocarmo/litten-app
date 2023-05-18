@@ -8,6 +8,7 @@ import { translate } from '@utils/i18n'
 import { TextStyle } from 'react-native'
 import type { ParseShape } from 'react-native-parsed-text'
 import type { UseParsePatternsNavigationProp } from '@utils/types/routes'
+import parsePatternsStyles from '@screens/messages/inner-components/use-parse-patterns.styles'
 
 const useParsePatterns = () => {
   const [, setQuery] = useSearchQuery()
@@ -15,23 +16,12 @@ const useParsePatterns = () => {
   const { showActionSheetWithOptions } = useActionSheet()
   const { createStyles } = useTheme()
 
-  const styles = createStyles((theme, typography) => ({
-    link: {
-      fontWeight: typography.fontWeight.light,
-      color: theme.colors.secondary,
-      textDecorationLine: 'underline',
-    },
-    clickable: {
-      fontWeight: typography.fontWeight.light,
-      color: theme.colors.secondary,
-      textDecorationLine: 'none',
-    },
-  }))
+  const styles = createStyles(parsePatternsStyles)
 
-  const handleUrlPress = useCallback((url) => openURL(url), [])
+  const handleUrlPress = useCallback((url: string) => openURL(url), [])
 
   const handlePhonePress = useCallback(
-    (phoneNumber) => {
+    (phoneNumber: string) => {
       const options = [
         translate('screens.settings.contactCall'),
         translate('screens.settings.contactSMS'),
@@ -56,12 +46,12 @@ const useParsePatterns = () => {
   )
 
   const handleEmailPress = useCallback(
-    (email) => openURL(`${MAILTO_URI}${email}`),
+    (email: string) => openURL(`${MAILTO_URI}${email}`),
     [],
   )
 
   const handleHashtagPress = useCallback(
-    (hastag) => {
+    (hastag: string) => {
       setQuery(hastag)
       navigation.navigate(Routes.SCREEN_TAB_NAV_INDEX, {
         screen: Routes.SCREEN_TAB_NAV_HOME,

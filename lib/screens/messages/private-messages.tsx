@@ -33,6 +33,7 @@ import {
   PLACEHOLDER_USER_DISPLAY_NAME,
   UI_MESSAGE_MIN_INPUT_TOOLBAR_HEIGHT,
 } from '@utils/constants'
+import privateMessagesComponentStyles from '@screens/messages/private-messages.styles'
 
 export type PrivateMessagesProps = {
   chat: BasicChat
@@ -72,12 +73,7 @@ const PrivateMessages = ({
   const [currentlyActiveChat, setCurrentlyActiveChat] = useCurrentlyActiveChat()
   const { createStyles } = useTheme()
 
-  const styles = createStyles((theme, typography, isDark) => ({
-    timeTextStyle: {
-      fontWeight: typography.fontWeight.lighter,
-      color: isDark ? theme.colors.secondaryLight : theme.colors.neutralDark,
-    },
-  }))
+  const styles = createStyles(privateMessagesComponentStyles)
 
   const user = useRef({
     _id: userUid || 1,

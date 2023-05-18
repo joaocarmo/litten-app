@@ -1,6 +1,7 @@
 import { StyleSheet, Text } from 'react-native'
 import type { TextProps } from 'react-native'
 import { useTheme } from '@hooks'
+import uiHeaderStyles from '@ui-elements/header/index.styles'
 
 export type UIHeaderProps = {
   centered?: boolean
@@ -17,26 +18,8 @@ const UIHeader = ({
   ...otherProps
 }: UIHeaderProps) => {
   const { createStyles } = useTheme()
-  const styles = createStyles((theme, typography) => ({
-    uiHeader: {
-      fontSize: typography.fontSize.xxxxlarge,
-      fontWeight: typography.fontWeight.bolder,
-      color: theme.colors.text,
-      paddingTop: 2,
-      paddingBottom: 2,
-      marginTop: 2,
-      marginBottom: 2,
-    },
-    uiHeaderThin: {
-      fontWeight: typography.fontWeight.lighter,
-    },
-    uiSubHeader: {
-      fontSize: typography.fontSize.large,
-    },
-    uiHeaderCentered: {
-      textAlign: 'center',
-    },
-  }))
+
+  const styles = createStyles(uiHeaderStyles)
 
   if (!children) {
     return null
