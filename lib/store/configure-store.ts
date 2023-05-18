@@ -13,10 +13,12 @@ const setupStore = () => {
   const persistedReducer = persistReducer(persistConfig, rootReducer)
   const store = configureStore({
     reducer: persistedReducer,
+    // @ts-ignore
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({
         serializableCheck: false,
       }),
+    // @ts-ignore
     enhancers: [devToolsEnhancer(devToolsConfig)],
   })
   const persistor = persistStore(store)
