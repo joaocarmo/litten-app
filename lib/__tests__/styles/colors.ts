@@ -1,4 +1,6 @@
-import colors from '@styles/colors'
+import { Colors } from '@styles/colors'
+
+const colors = Colors
 
 describe('Test the style colors object', () => {
   it('should be a "[x: string]: string" type object', () => {

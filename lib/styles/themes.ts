@@ -1,64 +1,84 @@
-import colors from './colors'
+import { Colors } from './colors'
 
-/**
- * @type {Object.<string, string>}
- */
-const lightTheme = {
+type ColorKeys =
+  | 'text'
+  | 'textAlt'
+  | 'background'
+  | 'backgroundAlt'
+  | 'backgroundElement'
+  | 'backgroundElementLight'
+  | 'primary'
+  | 'secondary'
+  | 'secondaryLight'
+  | 'secondaryLighter'
+  | 'danger'
+  | 'dangerDark'
+  | 'dangerLight'
+  | 'neutral'
+  | 'neutralDark'
+  | 'neutralDarker'
+  | 'neutralLight'
+  | 'neutralLighter'
+
+export type ThemeColors = Record<ColorKeys, Colors>
+
+export interface Theme {
+  colors: ThemeColors
+}
+
+export type ColorScheme = 'light' | 'dark'
+
+type Themes = Record<ColorScheme, Theme>
+
+export const lightTheme: Theme = {
   colors: {
-    text: colors.black,
-    textAlt: colors.white,
-    background: colors.white,
-    backgroundAlt: colors.black,
-    backgroundElement: colors.iosGray,
-    backgroundElementLight: colors.iosLightGray,
-    primary: colors.purple,
-    secondary: colors.blue,
-    secondaryLight: colors.lightBlue,
-    secondaryLighter: colors.lighterBlue,
-    danger: colors.red,
-    dangerDark: colors.darkRed,
-    dangerLight: colors.lightRed,
-    neutral: colors.gray,
-    neutralDark: colors.darkGray,
-    neutralDarker: colors.darkerGray,
-    neutralLight: colors.lightGray,
-    neutralLighter: colors.lighterGray,
+    text: Colors.Black,
+    textAlt: Colors.White,
+    background: Colors.White,
+    backgroundAlt: Colors.Black,
+    backgroundElement: Colors.IosGray,
+    backgroundElementLight: Colors.IosLightGray,
+    primary: Colors.Purple,
+    secondary: Colors.Blue,
+    secondaryLight: Colors.LightBlue,
+    secondaryLighter: Colors.LighterBlue,
+    danger: Colors.Red,
+    dangerDark: Colors.DarkRed,
+    dangerLight: Colors.LightRed,
+    neutral: Colors.Gray,
+    neutralDark: Colors.DarkGray,
+    neutralDarker: Colors.DarkerGray,
+    neutralLight: Colors.LightGray,
+    neutralLighter: Colors.LighterGray,
   },
 }
 
-/**
- * @type {Object.<string, string>}
- */
-const darkTheme = {
+export const darkTheme: Theme = {
   colors: {
-    text: colors.sepia,
-    textAlt: colors.white,
-    background: colors.lighterBlack,
-    backgroundAlt: colors.darkGray,
-    backgroundElement: colors.iosGray,
-    backgroundElementLight: colors.iosLightGray,
-    primary: colors.lightBlue,
-    secondary: colors.darkOrange,
-    secondaryLight: colors.lightDarkOrange,
-    secondaryLighter: colors.lighterDarkOrange,
-    danger: colors.darkRed,
-    dangerDark: colors.darkRed,
-    dangerLight: colors.lightRed,
-    neutral: colors.invertedGray,
-    neutralDark: colors.darkGray,
-    neutralDarker: colors.darkerGray,
-    neutralLight: colors.lightBlack,
-    neutralLighter: colors.lighterBlack,
+    text: Colors.Sepia,
+    textAlt: Colors.White,
+    background: Colors.LighterBlack,
+    backgroundAlt: Colors.DarkGray,
+    backgroundElement: Colors.IosGray,
+    backgroundElementLight: Colors.IosLightGray,
+    primary: Colors.LightBlue,
+    secondary: Colors.DarkOrange,
+    secondaryLight: Colors.LightDarkOrange,
+    secondaryLighter: Colors.LighterDarkOrange,
+    danger: Colors.DarkRed,
+    dangerDark: Colors.DarkRed,
+    dangerLight: Colors.LightRed,
+    neutral: Colors.InvertedGray,
+    neutralDark: Colors.DarkGray,
+    neutralDarker: Colors.DarkerGray,
+    neutralLight: Colors.LightBlack,
+    neutralLighter: Colors.LighterBlack,
   },
 }
 
-const themes = {
+const themes: Themes = {
   light: lightTheme,
   dark: darkTheme,
 }
-
-export type Theme = typeof lightTheme
-
-export { lightTheme, darkTheme }
 
 export default themes
