@@ -1,10 +1,10 @@
 import type { ImageStyle, TextStyle, ViewStyle } from 'react-native'
-import type { Theme } from '@styles/themes'
+import type { ThemeColors } from '@styles/themes'
 import type { Typography } from '@styles/typography'
 import type { ImageStyle as FastImageStyle } from 'react-native-fast-image'
 
 export type CreateStylesFn<T> = (theme: {
-  colors: Theme['colors']
+  colors: ThemeColors
   isDark: boolean
   typography: Typography
 }) => T

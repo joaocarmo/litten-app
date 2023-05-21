@@ -3,6 +3,7 @@ import { BasicLitten } from '@model/types/litten'
 import { BasicMessage } from '@model/types/message'
 import { BasicUser } from '@model/types/user'
 import { DBLocationObject } from '@db/schemas/location'
+import type { ColorScheme } from '@styles/themes'
 
 export type GenericActionObject = {
   type: string
@@ -47,7 +48,7 @@ export type BasicAuthUser = {
   readonly refreshToken?: string
   readonly uid: string
 }
-export type ThemePreferences = 'dark' | 'light' | 'system'
+export type ThemePreferences = ColorScheme | 'system'
 export type UserPreferences = {
   theme: ThemePreferences
   useMetricUnits: boolean

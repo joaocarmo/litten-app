@@ -64,9 +64,9 @@ export const USER_TYPE_INDIVIDUAL = 'USER_TYPE_INDIVIDUAL'
 export const USER_TYPE_ORGANIZATION = 'USER_TYPE_ORGANIZATION'
 
 // Themes
-export const THEME_DARK = 'dark'
-export const THEME_LIGHT = 'light'
-export const THEME_SYSTEM = 'system'
+export const THEME_DARK = 'dark' as const
+export const THEME_LIGHT = 'light' as const
+export const THEME_SYSTEM = 'system' as const
 
 // Universal constans
 export const EARTH_CIRCUMFERENCE_EQUATOR = 40075 // km
