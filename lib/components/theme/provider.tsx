@@ -24,8 +24,8 @@ const ThemeProvider = ({ children }) => {
     return userScheme
   }, [systemScheme, userScheme])
 
-  const theme = useMemo(
-    (): ThemeConfig => ({
+  const theme = useMemo<ThemeConfig>(
+    () => ({
       colors: Object(Colors),
       isDark: scheme === THEME_DARK,
       scheme,
