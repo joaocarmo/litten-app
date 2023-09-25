@@ -101,7 +101,7 @@ jobs:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
     - name: Upload To Play Store
-      uses: r0adkll/upload-google-play@v1.1.1
+      uses: r0adkll/upload-google-play@v1.1.2
       with:
         serviceAccountJson: ${{ env.SERVICE_ACCOUNT_PATH }}
         packageName: com.litten
