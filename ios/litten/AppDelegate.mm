@@ -1,7 +1,5 @@
 #import "AppDelegate.h"
-
 #import <React/RCTBundleURLProvider.h>
-
 #import <React/RCTLinkingManager.h>
 #import <Firebase.h>
 #import <UserNotifications/UserNotifications.h>
@@ -32,9 +30,7 @@
   // They will be passed down to the ViewController used by React Native.
   self.initialProps = @{};
 
-  if(![FIRApp defaultApp]) {
-    [FIRApp configure];
-  }
+  [FIRApp configure];
 
   // Show splash screen
   UIView *rootView = self.window.rootViewController.view;
