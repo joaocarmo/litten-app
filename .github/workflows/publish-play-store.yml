@@ -74,13 +74,13 @@ jobs:
         echo "LITTEN_UPLOAD_KEY_PASSWORD=${{ secrets.ANDROID_SIGNING_KEY_PASSWORD }}" >> ${{ env.KEYSTORE_PROPERTIES_PATH }}
 
     - name: Cache Gradle Wrapper
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ~/.gradle/wrapper
         key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('android/gradle/wrapper/gradle-wrapper.properties') }}
 
     - name: Cache Gradle Dependencies
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ~/.gradle/caches
         key: ${{ runner.os }}-gradle-caches-${{ hashFiles('android/gradle/wrapper/gradle-wrapper.properties') }}
