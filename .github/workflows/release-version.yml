@@ -42,13 +42,13 @@ jobs:
         git push
 
     - name: Trigger the App Store build and release
-      uses: benc-uk/workflow-dispatch@v1.2.2
+      uses: benc-uk/workflow-dispatch@v1.2.3
       with:
         workflow: Publish App Store
         token: ${{ secrets.GH_PAT }}
 
     - name: Trigger the Play Store build and release
-      uses: benc-uk/workflow-dispatch@v1.2.2
+      uses: benc-uk/workflow-dispatch@v1.2.3
       with:
         workflow: Publish Play Store
         token: ${{ secrets.GH_PAT }}
